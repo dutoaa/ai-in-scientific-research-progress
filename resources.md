@@ -1,6 +1,6 @@
 # AI scientific research Progress Public Resources
 
-Generated: 2026-05-30
+Generated: 2026-05-31
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. IGA-ODIL: Optimizing DIscretre robust Loss with Isogeometric Analysis to solve forward and inverse problems faster using machine learning tools
