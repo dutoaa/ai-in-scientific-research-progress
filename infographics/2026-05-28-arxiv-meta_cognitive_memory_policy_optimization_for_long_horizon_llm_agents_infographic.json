@@ -1,24 +1,24 @@
 {
-  "key_insight": "The paper argues that long-horizon LLM agents fail when recursive memory summaries become ambiguous, and proposes optimizing memory quality by minimizing the uncertainty those summaries induce about the latent task state.",
-  "engineering_relevance": "For building reliable agents, this suggests memory policies should be trained with fine-grained uncertainty-aware feedback, not just sparse task success signals.",
+  "key_insight": "Instead of optimizing memory summaries only for final task success, the paper trains them to preserve a clear internal belief about the latent task state by minimizing belief entropy.",
+  "engineering_relevance": "This offers a practical way to make long-horizon LLM agents more reliable by improving intermediate memory quality, reducing drift, and preserving useful context at very large token scales.",
   "method": [
-    "Define Belief Entropy as a self-supervised proxy for uncertainty about the latent task state given current memory.",
-    "Use Metacognitive Memory Policy Optimization (MMPO) to penalize summaries that create high epistemic uncertainty.",
-    "Provide memory-specific supervision to reduce semantic noise and belief deviation during recursive summarization."
+    "Defines Belief Entropy as a self-supervised proxy for how uncertain the model is about the hidden task state from its current memory.",
+    "Introduces Metacognitive Memory Policy Optimization (MMPO), which penalizes memory summaries that induce high epistemic uncertainty.",
+    "Provides fine-grained supervision at the memory level rather than relying only on sparse outcome-based reinforcement learning."
   ],
-  "evidence_signal": "The abstract reports that MMPO outperforms prior methods on diverse long-horizon tasks and retains 97.1% performance even at 1.75M-token context length.",
-  "watch_item": "Belief-entropy estimates may be sensitive to proxy quality and implementation details, so the method’s robustness depends on how well uncertainty is calibrated.",
+  "evidence_signal": "The abstract reports that MMPO outperforms prior methods on diverse long-horizon tasks and retains 97.1% performance even at 1.75M-token contexts.",
+  "watch_item": "Belief entropy is only a proxy for latent-state clarity, so its effectiveness may depend on how well the proxy aligns with the true task state and on the cost of computing it at scale.",
   "hashtags": [
     "#LLMAgents",
     "#MemoryOptimization",
     "#LongHorizonReasoning",
     "#ReinforcementLearning",
-    "#UncertaintyAwareAI"
+    "#BeliefEntropy"
   ],
   "paper_id": "2026-05-28-arxiv-meta_cognitive_memory_policy_optimization_for_long_horizon_llm_agents",
   "paper_title": "Meta-Cognitive Memory Policy Optimization for Long-Horizon LLM Agents",
   "paper_date": "2026-05-28",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-05-31T02:39:39",
+  "generated_at": "2026-05-31T15:19:50",
   "generator": "openai"
 }

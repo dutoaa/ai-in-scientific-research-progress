@@ -39,12 +39,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30272v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30272v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> IGA-ODIL replaces neural-network parameterization with smooth B-spline bases and robust residual minimization, enabling much faster and better-conditioned PDE solving than standard PINNs.</p>
-          <p><b>Engineering relevance:</b> This makes forward and inverse simulation for difficult PDEs more practical in engineering workflows by improving speed, sparsity, and solver robustness.</p>
-          <ul><li>Represent unknown fields with B-spline / isogeometric basis functions instead of neural nets</li><li>Minimize a robust discrete residual using weighted Gram-operator loss</li><li>Solve the resulting sparse system efficiently with Gauss-Newton optimization</li></ul>
-          <p><b>Evidence signal:</b> The method was benchmarked on Poisson, advection-diffusion, Helmholtz, Allen-Cahn, and inverse Helmholtz problems, with reported orders-of-magnitude speedups over PINNs and CRVPINNs while preserving high accuracy.</p>
-          <p><b>Watch item:</b> Performance depends on spline-space setup and Gauss-Newton convergence, so implementation details and problem conditioning may still affect robustness.</p>
-          <div class="tags"><span>#ScientificMachineLearning</span> <span>#PINNs</span> <span>#IsogeometricAnalysis</span> <span>#PDEs</span> <span>#GaussNewton</span></div>
+          <p><b>Key insight:</b> IGA-ODIL replaces neural-network PINN parameterizations with smooth B-spline/isogeometric bases and a robust residual loss, enabling faster and better-conditioned Gauss-Newton optimization for PDE solving.</p>
+          <p><b>Engineering relevance:</b> This offers a practical scientific machine learning approach for forward and inverse PDE problems where speed, sparsity, and numerical robustness matter in engineering workflows.</p>
+          <ul><li>Represent the unknown field with B-spline basis functions from isogeometric analysis.</li><li>Minimize a robust weighted residual using Gram-operator-based formulations.</li><li>Exploit sparse structured Jacobians for efficient Gauss-Newton optimization.</li></ul>
+          <p><b>Evidence signal:</b> The method is benchmarked on Poisson, advection-diffusion, Helmholtz, Allen-Cahn, and inverse Helmholtz problems, showing orders-of-magnitude speedups over PINNs and CRVPINNs while keeping high accuracy.</p>
+          <p><b>Watch item:</b> Performance depends on spline discretization and problem setup, so implementation complexity and tuning of basis resolution/weights may still affect robustness on new PDEs.</p>
+          <div class="tags"><span>#ScientificMachineLearning</span> <span>#IsogeometricAnalysis</span> <span>#PINNs</span> <span>#PDEs</span> <span>#Optimization</span></div>
         </section>
       </article>
     
@@ -58,12 +58,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30329v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30329v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> SoundnessBench shows that frontier LLMs often overrate weak research ideas, revealing an optimism bias that makes them unreliable as first-pass judges of methodological soundness.</p>
-          <p><b>Engineering relevance:</b> For AI-assisted research workflows, this means LLMs should be used as aids to screening and critique, not as standalone gatekeepers for deciding which ideas deserve compute and development time.</p>
-          <ul><li>Built SoundnessBench from 1,099 ML research proposals reconstructed from ICLR submissions.</li><li>Annotated proposals with reviewer soundness sub-scores and audited them against source papers.</li><li>Evaluated 12 frontier LLMs under standard and aggressive prompting, plus controls for contamination and surface cues.</li></ul>
-          <p><b>Evidence signal:</b> The benchmark uses 1,099 reconstructed proposals with reviewer soundness labels, and the evaluation across 12 frontier LLMs found systematic false positives under standard prompting.</p>
-          <p><b>Watch item:</b> SoundnessBench targets recoverable proposal-stage soundness, so it should not be treated as a direct predictor of full-paper review outcomes.</p>
-          <div class="tags"><span>#AIResearch</span> <span>#ScientificDiscovery</span> <span>#LLMBenchmark</span> <span>#ResearchEvaluation</span> <span>#ScientificRigor</span></div>
+          <p><b>Key insight:</b> SoundnessBench shows that frontier LLMs are still unreliable at judging whether a research idea is methodologically sound, with a strong tendency toward optimistic false positives.</p>
+          <p><b>Engineering relevance:</b> For AI research agents, this means automated idea screening cannot yet serve as a dependable first gate for scientific rigor without human oversight.</p>
+          <ul><li>Built SoundnessBench from 1,099 ML research proposals reconstructed from ICLR submissions.</li><li>Labeled proposals using reviewer soundness sub-scores and audited them against source papers.</li><li>Benchmarked 12 frontier LLMs under standard and aggressive prompting, plus confounder controls.</li></ul>
+          <p><b>Evidence signal:</b> The benchmark evaluates recoverable proposal-stage soundness rather than full-paper review outcomes, using 1,099 proposals and 12 LLMs to measure bias and error shifts.</p>
+          <p><b>Watch item:</b> Because the dataset is reconstructed from submissions and reviewer scores, results may not generalize perfectly to all scientific domains or real-world proposal workflows.</p>
+          <div class="tags"><span>#LLM</span> <span>#ScientificDiscovery</span> <span>#Benchmarking</span> <span>#AIResearchAgents</span> <span>#ResearchSoundness</span></div>
         </section>
       </article>
     
@@ -77,12 +77,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30159v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30159v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> The paper argues that long-horizon LLM agents fail when recursive memory summaries become ambiguous, and proposes optimizing memory quality by minimizing the uncertainty those summaries induce about the latent task state.</p>
-          <p><b>Engineering relevance:</b> For building reliable agents, this suggests memory policies should be trained with fine-grained uncertainty-aware feedback, not just sparse task success signals.</p>
-          <ul><li>Define Belief Entropy as a self-supervised proxy for uncertainty about the latent task state given current memory.</li><li>Use Metacognitive Memory Policy Optimization (MMPO) to penalize summaries that create high epistemic uncertainty.</li><li>Provide memory-specific supervision to reduce semantic noise and belief deviation during recursive summarization.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports that MMPO outperforms prior methods on diverse long-horizon tasks and retains 97.1% performance even at 1.75M-token context length.</p>
-          <p><b>Watch item:</b> Belief-entropy estimates may be sensitive to proxy quality and implementation details, so the method’s robustness depends on how well uncertainty is calibrated.</p>
-          <div class="tags"><span>#LLMAgents</span> <span>#MemoryOptimization</span> <span>#LongHorizonReasoning</span> <span>#ReinforcementLearning</span> <span>#UncertaintyAwareAI</span></div>
+          <p><b>Key insight:</b> Instead of optimizing memory summaries only for final task success, the paper trains them to preserve a clear internal belief about the latent task state by minimizing belief entropy.</p>
+          <p><b>Engineering relevance:</b> This offers a practical way to make long-horizon LLM agents more reliable by improving intermediate memory quality, reducing drift, and preserving useful context at very large token scales.</p>
+          <ul><li>Defines Belief Entropy as a self-supervised proxy for how uncertain the model is about the hidden task state from its current memory.</li><li>Introduces Metacognitive Memory Policy Optimization (MMPO), which penalizes memory summaries that induce high epistemic uncertainty.</li><li>Provides fine-grained supervision at the memory level rather than relying only on sparse outcome-based reinforcement learning.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports that MMPO outperforms prior methods on diverse long-horizon tasks and retains 97.1% performance even at 1.75M-token contexts.</p>
+          <p><b>Watch item:</b> Belief entropy is only a proxy for latent-state clarity, so its effectiveness may depend on how well the proxy aligns with the true task state and on the cost of computing it at scale.</p>
+          <div class="tags"><span>#LLMAgents</span> <span>#MemoryOptimization</span> <span>#LongHorizonReasoning</span> <span>#ReinforcementLearning</span> <span>#BeliefEntropy</span></div>
         </section>
       </article>
     
@@ -96,12 +96,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30345v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30345v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> SchGen shows that PCB schematics can be generated by LLMs when the design is recast into a semantically grounded code representation instead of geometry-heavy tool syntax.</p>
-          <p><b>Engineering relevance:</b> This could make PCB schematic drafting faster and more accessible by turning natural-language hardware intent into editable, connectivity-correct schematics.</p>
-          <ul><li>Defines schematic editing primitives with relative placement and pin-name-based wiring.</li><li>Converts generation from geometry-driven drawing to semantics-driven matching for LLMs.</li><li>Builds a large-scale prompt-schematic dataset from open-source hardware via a human-agent collaborative pipeline.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports that SchGen outperforms alternative representations and larger general-purpose LLMs on wire connectivity accuracy and functional correctness.</p>
-          <p><b>Watch item:</b> Performance likely depends on the quality of the new representation and dataset coverage, so unusual component topologies or tool-specific constraints may still be challenging.</p>
-          <div class="tags"><span>#PCBDesign</span> <span>#LLM</span> <span>#GenerativeAI</span> <span>#HardwareDesign</span> <span>#RepresentationLearning</span></div>
+          <p><b>Key insight:</b> SchGen shows that PCB schematics can be generated from natural-language intent by using a semantically grounded code representation instead of geometry-heavy schematic syntax.</p>
+          <p><b>Engineering relevance:</b> This enables more editable, automation-friendly PCB design workflows and points to representation design as a key lever for hardware-generating LLMs.</p>
+          <ul><li>Encode schematics with editing primitives, relative placement, and pin-name-based wiring.</li><li>Transform the task from geometry-driven drawing to semantics-driven matching for LLM generation.</li><li>Build a large-scale prompt–schematic dataset using a human-agent pipeline over open-source hardware designs.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports that SchGen outperforms alternative representations and even larger general-purpose LLMs on wire connectivity accuracy and functional correctness.</p>
+          <p><b>Watch item:</b> Results depend on the quality and coverage of the new representation and dataset, so generalization to unseen design styles or edge-case PCB conventions may still require validation.</p>
+          <div class="tags"><span>#PCBDesign</span> <span>#LLM</span> <span>#GenerativeAI</span> <span>#HardwareAI</span> <span>#SchematicGeneration</span></div>
         </section>
       </article>
     
@@ -115,12 +115,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30284v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30284v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> ProjectionBench measures how well LLMs generate scientific hypotheses as progressively more experimental information is revealed, separating novelty under sparse context from grounded reasoning under full context.</p>
-          <p><b>Engineering relevance:</b> The benchmark offers a practical way to compare and improve AI scientist systems for materials and other discovery workflows, especially when models must reason from incomplete problem statements.</p>
-          <ul><li>Start with only a paper’s topic and research question.</li><li>Reveal details stepwise up to the classical null-hypothesis test.</li><li>Score model hypotheses against paper conclusions using semantic similarity over atomic claims.</li></ul>
-          <p><b>Evidence signal:</b> The authors evaluated GPT-5, GPT-5.4, Gemini 2.5 Pro, and Gemini 3.1 Pro Preview on 45 papers across bioactive materials, mechanical materials, and nanomaterials, and report GPT-5.4 reached about 0.7 F1 alignment with ground-truth conclusions even under minimal context.</p>
-          <p><b>Watch item:</b> Semantic-similarity scoring may miss scientifically valid but differently framed hypotheses, so the benchmark should be used with care when comparing models that express conclusions in diverse ways.</p>
-          <div class="tags"><span>#ScientificDiscovery</span> <span>#LLMEvaluation</span> <span>#AIforScience</span> <span>#HypothesisGeneration</span> <span>#MaterialsInformatics</span></div>
+          <p><b>Key insight:</b> ProjectionBench tests whether LLMs can generate scientific hypotheses that stay creative under minimal context and become more grounded as experimental details are progressively disclosed.</p>
+          <p><b>Engineering relevance:</b> The benchmark offers a practical way to measure whether AI assistants can support scientific discovery, from early-stage ideation to evidence-aligned reasoning, for future AI scientist systems.</p>
+          <ul><li>Start with only the paper topic and research question.</li><li>Reveal technical details in stages and ask the model to generate hypotheses at each step.</li><li>Compare generated hypotheses against the paper’s conclusions using automated semantic similarity over atomic claims.</li></ul>
+          <p><b>Evidence signal:</b> The authors evaluated GPT-5, GPT-5.4, Gemini 2.5 Pro, and Gemini 3.1 Pro Preview across 45 papers and reported that GPT-5.4 retained about 0.7 F1 alignment with ground-truth conclusions even under minimal context.</p>
+          <p><b>Watch item:</b> Automated semantic similarity may miss subtle scientific nuance, so benchmark scores should be interpreted as a proxy rather than a full measure of discovery quality.</p>
+          <div class="tags"><span>#ScientificDiscovery</span> <span>#LLMEvaluation</span> <span>#Benchmarking</span> <span>#AIforScience</span> <span>#HypothesisGeneration</span></div>
         </section>
       </article>
     
@@ -134,12 +134,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30227v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30227v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> The paper decomposes multi-agent prompt optimization into temporal and structural credit assignment so LLM systems can pinpoint which rounds and which agents are causing failures.</p>
-          <p><b>Engineering relevance:</b> This offers a more sample-efficient, interpretable way to tune multi-agent LLM workflows by updating only the weakest links instead of doing broad black-box search.</p>
-          <ul><li>Temporal credit: use state-space bottlenecks to identify critical rounds in the interaction trajectory.</li><li>Structural credit: use stationary role policies to isolate each agent’s contribution to the outcome.</li><li>Optimization: alternate verbalized block coordinate descent over role prompts and aggregation protocols with LLM-generated proxy gradients.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports evaluation across diverse reasoning benchmarks, showing lower query complexity while improving performance.</p>
-          <p><b>Watch item:</b> The approach depends on reliable proxy gradients and decomposed credit signals, which may be sensitive to prompt design and harder to stabilize in complex MAS settings.</p>
-          <div class="tags"><span>#LLM</span> <span>#MultiAgentSystems</span> <span>#PromptOptimization</span> <span>#CreditAssignment</span> <span>#AIResearch</span></div>
+          <p><b>Key insight:</b> The paper proposes decomposing multi-agent LLM optimization into temporal credit assignment for critical rounds and structural credit assignment for agent roles to make sparse, discrete feedback tractable.</p>
+          <p><b>Engineering relevance:</b> This offers a practical, interpretable way to reduce query cost and stabilize self-improvement in LLM-based multi-agent systems by updating only the weakest components.</p>
+          <ul><li>Use state-space bottlenecks to identify temporally critical interaction rounds.</li><li>Use stationary role policies to separate and score individual agent contributions.</li><li>Apply verbalized block coordinate descent to alternate between optimizing role prompts and aggregation protocols with LLM-generated proxy gradients.</li></ul>
+          <p><b>Evidence signal:</b> The method is evaluated across diverse reasoning benchmarks, where the abstract reports lower query complexity and improved performance.</p>
+          <p><b>Watch item:</b> Because it relies on LLM-generated proxy gradients and discrete coordinate updates, performance may be sensitive to prompt quality and optimization stability.</p>
+          <div class="tags"><span>#LLM</span> <span>#MultiAgentSystems</span> <span>#CreditAssignment</span> <span>#PromptOptimization</span> <span>#AIResearch</span></div>
         </section>
       </article>
     
@@ -153,12 +153,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30188v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30188v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> CalArena shows that post-hoc calibration methods need standardized, large-scale evaluation, and that smooth, calibration-specific approaches consistently outperform simple binning-based methods.</p>
-          <p><b>Engineering relevance:</b> For deployed ML systems that rely on trustworthy probabilities, the benchmark helps practitioners choose calibration methods that improve reliability without undermining predictive performance.</p>
-          <ul><li>Aggregated nearly 2000 experiments across tabular and vision tasks, spanning binary, multiclass, and large-scale classification.</li><li>Benchmarked predictions from classical models, deep networks, and foundation models using a common reproducible framework.</li><li>Compared dozens of post-hoc calibration methods with Post-Hoc Improvement (PHI) in proper scoring rules as the primary evaluation criterion.</li></ul>
-          <p><b>Evidence signal:</b> The study compiles a large, standardized benchmark with nearly 2000 experiments and unified implementations across diverse datasets, models, and calibration settings.</p>
-          <p><b>Watch item:</b> Results depend on the quality of the underlying predictions and on careful multiclass handling, so generic calibration methods may fail in high-dimensional settings.</p>
-          <div class="tags"><span>#Calibration</span> <span>#MachineLearning</span> <span>#Benchmark</span> <span>#ProbabilisticForecasting</span> <span>#AIResearch</span></div>
+          <p><b>Key insight:</b> CalArena shows that post-hoc calibration works best when using smooth, calibration-aware methods, especially for multiclass and large-scale classification.</p>
+          <p><b>Engineering relevance:</b> For deployed ML systems, the benchmark helps choose calibration methods that improve probability reliability without sacrificing predictive performance.</p>
+          <ul><li>Standardized nearly 2000 post-hoc calibration experiments across tabular and computer vision tasks.</li><li>Compared binary, multiclass, and large-scale classifiers from classical models, deep networks, and foundation models.</li><li>Evaluated dozens of calibration methods in one reproducible framework using Post-Hoc Improvement (PHI).</li></ul>
+          <p><b>Evidence signal:</b> The benchmark aggregates predictions from diverse models across nearly 2000 experiments and uses PHI in proper scoring rules to assess both calibration quality and any degradation in predictive performance.</p>
+          <p><b>Watch item:</b> Results are benchmark-dependent, so method rankings may shift with task mix, model family, or scoring rule choices.</p>
+          <div class="tags"><span>#Calibration</span> <span>#MachineLearning</span> <span>#Benchmark</span> <span>#Reliability</span> <span>#AIResearch</span></div>
         </section>
       </article>
     
@@ -172,12 +172,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30289v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30289v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> The paper turns numeric tabular datasets into comparable statistical embeddings, enabling retrieval and interpretable cross-dataset alignment even when feature names and conventions differ.</p>
-          <p><b>Engineering relevance:</b> This offers a practical way to match unknown datasets to prior examples for data-driven model selection, simulation initialization, and retrieval-augmented workflows.</p>
-          <ul><li>Compute structured exploratory-data-analysis descriptors for each dataset.</li><li>Embed descriptors into a shared vector space with a pretrained sentence transformer, then measure similarity with CCA.</li><li>Use penalized CCA to recover sparse, interpretable variable-level correspondences; optionally add differential privacy before embedding.</li></ul>
-          <p><b>Evidence signal:</b> Across 15 datasets, the method achieved a total P@1 of 0.9, with nearest-neighbor retrieval and clustering remaining robust under embedding ablations and differential privacy budgets.</p>
-          <p><b>Watch item:</b> Descriptor quality, CCA sparsity settings, and privacy budget choices may materially affect alignment stability and interpretability on new datasets.</p>
-          <div class="tags"><span>#TabularAI</span> <span>#StatisticalEmbeddings</span> <span>#CanonicalCorrelation</span> <span>#DifferentialPrivacy</span> <span>#ScientificML</span></div>
+          <p><b>Key insight:</b> The paper turns numeric tabular datasets into comparable statistical embeddings, enabling similarity search and interpretable alignment even when datasets share no variable names.</p>
+          <p><b>Engineering relevance:</b> This offers a practical way to retrieve related datasets, support model selection, and initialize simulation workflows from heterogeneous scientific tables while preserving context.</p>
+          <ul><li>Compute exploratory-data-analysis descriptors for each numeric dataset.</li><li>Embed descriptors with a pretrained sentence transformer into a shared vector space and compare datasets with CCA.</li><li>Use penalized CCA to recover sparse, interpretable variable-level correspondences; optionally add differential privacy to descriptors.</li></ul>
+          <p><b>Evidence signal:</b> Across 15 datasets, the method achieved a total P@1 of 0.9, with nearest-neighbor retrieval and cluster structure remaining robust under embedding ablations and differential privacy budgets.</p>
+          <p><b>Watch item:</b> Interpretability depends on the quality and stability of the chosen descriptors, and privacy or embedding choices may reduce alignment fidelity in some settings.</p>
+          <div class="tags"><span>#ScientificML</span> <span>#TabularData</span> <span>#DataRetrieval</span> <span>#CCA</span> <span>#DifferentialPrivacy</span></div>
         </section>
       </article>
     
@@ -191,12 +191,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30273v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30273v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> LLUMI shows that smaller open-source LLMs can be improved for mental-health support by learning from community preference signals and human safety-focused feedback.</p>
-          <p><b>Engineering relevance:</b> The work offers a privacy-preserving, in-house alternative to proprietary cloud models for deploying mental-health writing assistance in protected environments.</p>
-          <ul><li>Build a two-part system: a generation model (GM) for drafting supportive replies and an improvement model (IM) for revising human-written responses.</li><li>Use Reddit mental-health community feedback (upvotes/downvotes) to form chosen-rejected pairs for SFT and DPO.</li><li>Align outputs with human ratings on readability, empathy, connection, actionability, and safety.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports that LLUMI achieves comparable performance to proprietary GPT-based models in linguistic analyses and human evaluations using community-derived preference data.</p>
-          <p><b>Watch item:</b> Community votes are an imperfect proxy for clinical quality, so deployment still needs careful safety review and domain oversight.</p>
-          <div class="tags"><span>#LLM</span> <span>#MentalHealthAI</span> <span>#OpenSourceAI</span> <span>#PreferenceLearning</span> <span>#PrivacyPreserving</span></div>
+          <p><b>Key insight:</b> LLUMI shows that smaller open-source LLMs can be improved with community feedback to generate safer, more empathetic mental health support responses.</p>
+          <p><b>Engineering relevance:</b> The paper offers a privacy-preserving, in-house deployment path for mental health assistance systems using SFT and DPO on preference data mined from online communities.</p>
+          <ul><li>Build two modules: a generation model (GM) for drafting responses and an improvement model (IM) for revising human-written responses.</li><li>Convert Reddit mental-health community signals (e.g., upvotes/downvotes) into chosen-rejected pairs for supervised fine-tuning and direct preference optimization.</li><li>Align outputs with human evaluation on readability, empathy, connection, actionability, and safety.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports that LLUMI performs comparably to proprietary GPT-based models across linguistic analyses and human evaluations after training on community-derived preference signals.</p>
+          <p><b>Watch item:</b> Community endorsement signals may be noisy or biased, so careful filtering and safety review are needed before deployment in sensitive settings.</p>
+          <div class="tags"><span>#LLM</span> <span>#MentalHealthAI</span> <span>#PreferenceLearning</span> <span>#OpenSourceAI</span> <span>#AISafety</span></div>
         </section>
       </article>
     
@@ -210,12 +210,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30201v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30201v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> Hysteretic Policy Optimization (HPO) stabilizes sparse-reward RL by down-weighting negative-advantage updates and using mean-length normalization, with Adaptive HPO (A-HPO) automatically setting that balance from batch statistics.</p>
-          <p><b>Engineering relevance:</b> This offers a simple drop-in change to GRPO-style training that can improve sample efficiency and early-stage learning when rewards are sparse and verifiable.</p>
-          <ul><li>Reduce the update weight for negative-advantage responses instead of treating all advantages symmetrically.</li><li>Replace per-response length normalization with mean-length normalization to decouple update magnitude from output length.</li><li>Use A-HPO to adapt the hysteretic weight from batch-level advantage-sign statistics, removing manual tuning.</li></ul>
-          <p><b>Evidence signal:</b> In TeleLogs and Countdown experiments, A-HPO improved reward per update over GRPO, with the biggest gains in early sparse-reward regimes and a final TeleLogs reward of 0.84.</p>
-          <p><b>Watch item:</b> The adaptive hysteretic rule may depend on reliable batch advantage-sign statistics, so behavior could vary with batch size, reward sparsity, and task-specific reward noise.</p>
-          <div class="tags"><span>#ReinforcementLearning</span> <span>#SparseReward</span> <span>#PolicyOptimization</span> <span>#GRPO</span> <span>#AIResearch</span></div>
+          <p><b>Key insight:</b> HPO stabilizes sparse-reward RL by down-weighting negative-advantage updates and using mean-length normalization, with A-HPO automatically adapting that balance from batch statistics.</p>
+          <p><b>Engineering relevance:</b> It offers a minimal drop-in change to GRPO-style training that can improve early-stage learning efficiency without requiring a separate fixed hysteretic hyperparameter.</p>
+          <ul><li>Reduce the update weight for negative-advantage responses to avoid destabilizing early sparse-reward training.</li><li>Replace per-response length normalization with mean-length normalization to decouple update scale from output length.</li><li>Use adaptive hysteresis (A-HPO) to set the negative-update weight from batch-level advantage-sign statistics.</li></ul>
+          <p><b>Evidence signal:</b> In TeleLogs and Countdown experiments, A-HPO improved reward per update, reaching 0.84 final reward on TeleLogs and showing the largest gains in early, difficult sparse-reward settings across 1.5B–7B models.</p>
+          <p><b>Watch item:</b> Results come from sparse-verifiable-reward benchmarks, so the gains may depend on the reward sparsity pattern and on careful implementation of the hysteretic weighting and normalization scheme.</p>
+          <div class="tags"><span>#ReinforcementLearning</span> <span>#SparseRewards</span> <span>#PolicyOptimization</span> <span>#LLMTraining</span> <span>#AdaptiveAlgorithms</span></div>
         </section>
       </article>
     
@@ -229,12 +229,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30154v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30154v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> RL2ML shows that finite-rollout training can be reframed as a family of surrogate objectives that exactly match the gradient of the sampled update, bridging reinforcement learning and maximum-likelihood-style training without objective-gradient mismatch.</p>
-          <p><b>Engineering relevance:</b> For practical LLM training with limited rollout budgets, the framework helps choose update rules based on metric sensitivity and variance, not just on whether the objective looks more like RL or MLE.</p>
-          <ul><li>Defines a continuum of finite-rollout surrogate objectives spanning RL, MLE-like, and beyond-MLE behavior.</li><li>Derives a closed-form, exactly unbiased gradient estimator aligned with the sampled rollout update.</li><li>Introduces group-level update scale and uses metric-gain plus variance analysis to reduce objective choice to a 1D optimization problem.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports calibrated metric-gain analysis and exact variance decomposition, showing the best surrogate depends jointly on evaluation metric, local sensitivity, and estimator variance.</p>
-          <p><b>Watch item:</b> The framework is theoretically elegant, but selecting the optimal surrogate still requires reliable estimates of local metric sensitivity and variance, which may be noisy or task-dependent in practice.</p>
-          <div class="tags"><span>#ScientificMachineLearning</span> <span>#ReinforcementLearning</span> <span>#MaximumLikelihood</span> <span>#LLMTraining</span> <span>#UnbiasedGradient</span></div>
+          <p><b>Key insight:</b> RL2ML shows that finite-rollout reinforcement learning and maximum-likelihood-style training can be linked by a family of surrogate objectives with exactly unbiased gradients, so the right objective depends on rollout-level update geometry rather than just the population objective.</p>
+          <p><b>Engineering relevance:</b> This gives practitioners a principled way to choose and tune training objectives under a fixed rollout budget, improving stability and metric alignment in reward-based language-model training.</p>
+          <ul><li>Defines a finite-rollout surrogate objective family spanning RL, ML-like, and beyond-ML regimes</li><li>Derives a closed-form, exactly unbiased gradient estimator for rollout-group updates</li><li>Introduces group-level update scale plus calibrated metric-gain and variance analysis to select the best surrogate</li></ul>
+          <p><b>Evidence signal:</b> The paper uses theoretical analysis of estimator-objective alignment, exact variance decomposition, and calibrated metric-gain reasoning under finite rollout groups rather than reporting a new benchmark dataset.</p>
+          <p><b>Watch item:</b> The optimal surrogate is metric- and variance-dependent, so implementing it requires careful evaluation choice and variance estimation; the one-dimensional tuning problem still needs reliable calibration.</p>
+          <div class="tags"><span>#ScientificMachineLearning</span> <span>#ReinforcementLearning</span> <span>#MaximumLikelihood</span> <span>#LanguageModels</span> <span>#Optimization</span></div>
         </section>
       </article>
     
@@ -248,12 +248,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30337v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30337v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> HullFT makes test-time finetuning faster and better by selecting a sparse, diverse support set with convex geometry, then reusing gradients across repeated examples.</p>
-          <p><b>Engineering relevance:</b> The method targets a practical deployment bottleneck in per-query LLM adaptation, improving the quality–runtime tradeoff for retrieval-and-finetune pipelines.</p>
-          <ul><li>Use Frank-Wolfe to approximate the query as a sparse convex combination of training sequence embeddings.</li><li>Integerize the fractional weights into a multiset for finetuning, creating repeated examples.</li><li>Apply Gradient Reuse to amortize forward-backward cost across those repetitions.</li></ul>
+          <p><b>Key insight:</b> HullFT speeds up test-time finetuning by selecting a small, diverse support set through convex geometry and then reusing gradients across repeated examples.</p>
+          <p><b>Engineering relevance:</b> It makes per-query adaptation of LLMs more practical by reducing both retrieval overhead and finetuning cost, improving the quality–latency tradeoff.</p>
+          <ul><li>Represent the query as a sparse convex combination of training sequences using Frank-Wolfe optimization.</li><li>Convert fractional convex weights into an exact integer multiset for finetuning.</li><li>Reuse gradients for repeated examples to amortize forward-backward computation.</li></ul>
           <p><b>Evidence signal:</b> The abstract reports lower bits-per-byte at substantially lower total runtime than current state-of-the-art TTFT methods.</p>
-          <p><b>Watch item:</b> Performance depends on efficient nearest-neighbor retrieval, stable convex optimization, and correct handling of repeated-example gradient caching at inference time.</p>
-          <div class="tags"><span>#LLM</span> <span>#TestTimeFinetuning</span> <span>#GradientCaching</span> <span>#FrankWolfe</span> <span>#EfficientAI</span></div>
+          <p><b>Watch item:</b> The approach depends on efficient retrieval, convex optimization, and careful integerization, so implementation complexity and approximation quality may affect real-world gains.</p>
+          <div class="tags"><span>#LLM</span> <span>#TestTimeFinetuning</span> <span>#GradientCaching</span> <span>#FrankWolfe</span> <span>#EfficientML</span></div>
         </section>
       </article>
     
@@ -267,12 +267,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30260v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30260v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> LoRA can be treated as a controllable probe for exact parametric memory, and the paper identifies a robust power-law relationship between memory gain, effective parameters, and sequence length.</p>
-          <p><b>Engineering relevance:</b> The results provide a quantitative rule for allocating fine-tuning budget more efficiently when updating LLM knowledge, especially under tight compute or memory constraints.</p>
-          <ul><li>Use LoRA as a controlled memory-capacity probe in latent space.</li><li>Fit a Parametric Memory Law linking loss reduction (ΔL) to effective parameters and sequence length.</li><li>Design MemFT to shift training toward sub-threshold tokens using a prediction-probability threshold.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports systematic quantitative analysis at both sequence and token levels, including a deterministic phase transition and empirical evaluation showing improved memory fidelity and efficiency with MemFT.</p>
-          <p><b>Watch item:</b> The p &gt; 0.5 greedy-decoding threshold and the observed law may depend on model, data, and finetuning setup, so transferability should be validated before deployment.</p>
-          <div class="tags"><span>#LoRA</span> <span>#LLMFinetuning</span> <span>#MemoryCapacity</span> <span>#ParametricLaw</span> <span>#MemFT</span></div>
+          <p><b>Key insight:</b> LoRA can be treated as a controlled probe of exact parametric memory, revealing a power-law scaling between memory gain, effective parameters, and sequence length.</p>
+          <p><b>Engineering relevance:</b> The paper offers a practical way to predict and improve LLM finetuning memory retention, which can make continual knowledge updates more efficient and reliable.</p>
+          <ul><li>Quantify exact parametric memory using LoRA in the latent space.</li><li>Fit a Parametric Memory Law: loss reduction ΔL follows a robust power law with effective parameters and sequence length.</li><li>Use token-level analysis to identify a phase transition and guide MemFT to focus training on sub-threshold tokens.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports empirical evaluations showing that MemFT improves both memory fidelity and training efficiency.</p>
+          <p><b>Watch item:</b> The threshold rule p &gt; 0.5 is derived under greedy decoding, so behavior may differ with other decoding settings or non-verbatim tasks.</p>
+          <div class="tags"><span>#LoRA</span> <span>#LLMFinetuning</span> <span>#MemoryLaw</span> <span>#ParametricMemory</span> <span>#MemFT</span></div>
         </section>
       </article>
     
@@ -286,12 +286,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30323v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30323v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> A transformer can infer reward preferences from a few demonstrations, but robust adaptation to unseen human preference domains requires an added signal such as response time.</p>
-          <p><b>Engineering relevance:</b> This enables more flexible RLHF systems that can generalize across heterogeneous user values without retraining a separate reward model for every new domain.</p>
-          <ul><li>Use in-context preference demonstrations to infer latent reward structure on the fly.</li><li>Augment the transformer input with human response time as an auxiliary signal.</li><li>Compare standard transformer behavior against the adapted model to assess unseen-domain generalization.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports characterizing an asymptotic bias in a standard transformer and showing that adding response time enables successful adaptation to previously unseen preference domains.</p>
-          <p><b>Watch item:</b> Response time must be reliably measured and may introduce sensitivity to noisy or context-dependent human interaction signals.</p>
-          <div class="tags"><span>#RLHF</span> <span>#PreferenceModeling</span> <span>#InContextLearning</span> <span>#TransformerModels</span> <span>#HumanAIAlignment</span></div>
+          <p><b>Key insight:</b> A transformer can adapt reward modeling to new human preference domains in context, but it needs an extra cue—human response time—to overcome bias and generalize robustly.</p>
+          <p><b>Engineering relevance:</b> This enables more scalable RLHF systems that handle heterogeneous, previously unseen preference distributions without retraining separate reward models.</p>
+          <ul><li>Use a transformer-based in-context reward learner fed with a small set of preference demonstrations.</li><li>Condition the model on human response time as an auxiliary signal to infer latent reward structure.</li><li>Test adaptation to unseen preference domains rather than only fixed known domains.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports a characterizable asymptotic bias for a standard transformer, and shows that adding response time allows successful adaptation to previously unseen preference domains.</p>
+          <p><b>Watch item:</b> Performance may depend on the availability and quality of response-time signals, which can be noisy or hard to capture consistently in deployment.</p>
+          <div class="tags"><span>#RLHF</span> <span>#PreferenceModeling</span> <span>#InContextLearning</span> <span>#Transformers</span> <span>#HumanAIAlignment</span></div>
         </section>
       </article>
     
@@ -305,12 +305,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30190v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30190v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> MF-Diffuser makes offline multi-agent diffusion planning scalable by modeling many-agent behavior in mean-field trajectory-distribution space instead of the full joint trajectory space.</p>
-          <p><b>Engineering relevance:</b> This enables offline training and deployment of large-scale coordination policies for systems with thousands of agents while retaining theoretical guarantees on approximation error and equilibrium quality.</p>
-          <ul><li>Lift trajectory planning to Wasserstein space over trajectory distributions.</li><li>Use a value-weighted chaotic entropy objective to balance return maximization and generative fidelity.</li><li>Apply a hierarchical coarse-to-fine denoising scheme that gradually expands the agent population.</li></ul>
-          <p><b>Evidence signal:</b> Across three mean-field RL benchmarks covering stage games, sequential dynamics, and adversarial team competition, the method achieves the best return in most settings, especially with suboptimal offline data and at scales of N &gt;= 10^3.</p>
-          <p><b>Watch item:</b> Performance depends on the quality of the mean-field approximation and offline data coverage, so systems with weak representative-agent structure or severe distribution mismatch may be harder to scale reliably.</p>
-          <div class="tags"><span>#MultiAgentRL</span> <span>#DiffusionModels</span> <span>#OfflineRL</span> <span>#MeanField</span> <span>#ScalableAI</span></div>
+          <p><b>Key insight:</b> MF-Diffuser makes offline multi-agent planning scalable by diffusing over trajectory distributions in Wasserstein space, using mean-field structure to approximate thousands of agents with strong theoretical guarantees.</p>
+          <p><b>Engineering relevance:</b> This provides a practical path to deploy offline MARL in large-scale engineered systems where joint-state planning is otherwise intractable, while preserving stability and performance bounds.</p>
+          <ul><li>Lifts planning from joint trajectories to trajectory distributions in Wasserstein space.</li><li>Uses a value-weighted chaotic entropy objective to balance return maximization and generative fidelity.</li><li>Applies a hierarchical coarse-to-fine denoising strategy that grows the agent population progressively.</li></ul>
+          <p><b>Evidence signal:</b> On three mean-field RL benchmarks spanning stage games, sequential dynamics, and adversarial team competition, MF-Diffuser achieved the best return in most settings, especially with suboptimal offline data and at scales of N ≥ 10^3.</p>
+          <p><b>Watch item:</b> The approach relies on mean-field assumptions and propagation-of-chaos behavior, so performance may degrade when agent interactions are highly non-exchangeable or the representative subset is poorly chosen.</p>
+          <div class="tags"><span>#OfflineMARL</span> <span>#MeanField</span> <span>#DiffusionModel</span> <span>#WassersteinSpace</span> <span>#ScalableAI</span></div>
         </section>
       </article>
     
@@ -324,12 +324,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30277v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30277v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> A hybrid reduced-order plus neural-operator framework can accelerate CFD-like thermal-hydraulic prediction for SMR digital twins while preserving key flow dynamics in a helical coil steam generator.</p>
-          <p><b>Engineering relevance:</b> This enables faster transient simulation for reactor monitoring and decision support, with model choice guided by whether the target is instantaneous vortex-resolved fields or mean-flow/pressure-drop estimation.</p>
-          <ul><li>ROM + DeepONet on unstructured mesh data using an MLP autoencoder to form L-DeepONet</li><li>ROM + DeepONet on structured mesh data using a convolutional autoencoder to form L-DeepONet</li><li>Fourier neural operator (FNO) and multi-scale variants for comparison and spectral-bias mitigation</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports that the multi-scale L-DeepONet captured instantaneous periodic vortex dynamics in velocity and pressure, while FNO variants predicted mean flow and pressure drop reliably.</p>
-          <p><b>Watch item:</b> Performance depends on CFD data type and target fidelity; operator models may still struggle with fine transient details if training data are limited or the flow regime shifts.</p>
-          <div class="tags"><span>#DigitalTwin</span> <span>#SmallModularReactors</span> <span>#CFD</span> <span>#NeuralOperators</span> <span>#SurrogateModel</span></div>
+          <p><b>Key insight:</b> A neural-operator surrogate combined with reduced-order latent models can approximate transient CFD for an SMR helical coil steam generator, with different architectures excelling at different flow-resolution goals.</p>
+          <p><b>Engineering relevance:</b> This enables faster thermal-hydraulic prediction for digital twins in small modular reactors, supporting real-time monitoring and design decisions without full CFD cost.</p>
+          <ul><li>Built ROM encoders for CFD data: MLP autoencoder for unstructured meshes and convolutional autoencoder for structured meshes.</li><li>Coupled the latent spaces with DeepONet to form L-DeepONet; compared against Fourier Neural Operator (FNO).</li><li>Added a multi-scale strategy to reduce spectral bias and better capture Kármán vortex street dynamics.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports that multi-scale L-DeepONet captured instantaneous periodic vortex dynamics in velocity and pressure, while FNO variants were more reliable for mean flow and pressure-drop prediction.</p>
+          <p><b>Watch item:</b> Performance appears architecture- and data-type-dependent, so selecting the wrong surrogate for a DT objective could miss either transient vortex details or accurate mean-flow/pressure-drop behavior.</p>
+          <div class="tags"><span>#DigitalTwin</span> <span>#CFD</span> <span>#NeuralOperator</span> <span>#SMR</span> <span>#SurrogateModel</span></div>
         </section>
       </article>
     
@@ -343,12 +343,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30219v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30219v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> Large language models need explicit contextual belief management: they should update, retain, or ignore information depending on evidence, and vanilla prompting often fails at this.</p>
-          <p><b>Engineering relevance:</b> For long-horizon AI systems, the results suggest that state management should be designed and trained explicitly, because reinforcement learning and representation steering can substantially improve reliability.</p>
-          <ul><li>Introduced Contextual Belief Management (CBM) as a framework for belief update/retain/ignore decisions.</li><li>Built BeliefTrack, a closed-world benchmark with finite belief spaces and symbolic verifiers for exact turn-level scoring.</li><li>Compared vanilla LLMs, belief-tracking prompts, reinforcement learning with belief-state rewards, and representation-level steering.</li></ul>
-          <p><b>Evidence signal:</b> BeliefTrack evaluates turn-by-turn performance on two tasks—Rule Discovery and Circuit Diagnosis—and reports that RL with belief-state rewards reduces CBM failure rates by 70.9% on average.</p>
-          <p><b>Watch item:</b> Because the benchmark is closed-world with symbolic verification, gains may not fully transfer to open-ended real-world settings where belief states are ambiguous and evidence is noisier.</p>
-          <div class="tags"><span>#LLM</span> <span>#BeliefTracking</span> <span>#LongHorizonReasoning</span> <span>#ReinforcementLearning</span> <span>#ScientificDiscovery</span></div>
+          <p><b>Key insight:</b> Large language models struggle to maintain the right belief state over long interactions, and explicit belief-aware training can substantially reduce errors in when to update, preserve, or ignore information.</p>
+          <p><b>Engineering relevance:</b> For deployed AI systems, this suggests that robust long-horizon assistants may need structured state management and reward signals tied to belief consistency, not just better prompting.</p>
+          <ul><li>Defines Contextual Belief Management (CBM) as maintaining evidence-aligned beliefs while filtering irrelevant noise.</li><li>Introduces BeliefTrack, a closed-world benchmark with finite belief states and symbolic verifiers for exact turn-level scoring.</li><li>Tests vanilla LLMs, belief-tracking prompts, reinforcement learning with belief-state rewards, and representation-level steering.</li></ul>
+          <p><b>Evidence signal:</b> BeliefTrack covers Rule Discovery and Circuit Diagnosis, enabling exact turn-level evaluation and revealing that RL with belief-state rewards cuts failure rates by 70.9% on average.</p>
+          <p><b>Watch item:</b> Results come from closed-world tasks with symbolic verification, so gains may not transfer directly to open-ended real-world dialogue or discovery settings.</p>
+          <div class="tags"><span>#LLM</span> <span>#BeliefTracking</span> <span>#ScientificDiscovery</span> <span>#ReinforcementLearning</span> <span>#LongContext</span></div>
         </section>
       </article>
     
@@ -362,12 +362,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30187v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30187v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> The paper argues that educational LLM assistants should be modular and agentic rather than monolithic so they can better support responsible, pedagogically aligned learning.</p>
-          <p><b>Engineering relevance:</b> For AI education systems, the proposed modular architecture offers a more controllable and transparent way to embed targeted teaching strategies into student-facing exercise-solving tools.</p>
-          <ul><li>Identify desiderata for responsible LLM-based educational systems.</li><li>Analyze why out-of-the-box monolithic chatbots are structurally insufficient.</li><li>Propose stage-specific modules for exercise-solving that can incorporate pedagogical guidance.</li></ul>
-          <p><b>Evidence signal:</b> This is a conceptual design paper grounded in a literature- and theory-based analysis rather than in reported experiments or benchmark results in the abstract.</p>
-          <p><b>Watch item:</b> A modular agentic system may be harder to implement consistently across stages and still requires careful oversight to ensure pedagogical advice is applied correctly.</p>
-          <div class="tags"><span>#LLM</span> <span>#EdTech</span> <span>#ResponsibleAI</span> <span>#AgenticAI</span> <span>#PedagogicalAI</span></div>
+          <p><b>Key insight:</b> The paper argues that educational chatbots should be built as modular agentic systems so they can better align exercise help with pedagogical goals like transfer, critical thinking, and creativity.</p>
+          <p><b>Engineering relevance:</b> For AI-in-education deployments, modularizing the chatbot workflow makes behavior more controllable, transparent, and easier to tune for responsible learning assistance.</p>
+          <ul><li>Identify desiderata for responsible LLM-based educational systems.</li><li>Analyze why monolithic, out-of-the-box LLM solutions are structurally insufficient.</li><li>Propose stage-specific modules for exercise solving that can embed targeted pedagogical guidance.</li></ul>
+          <p><b>Evidence signal:</b> The abstract describes a conceptual architecture and motivation paper, not an empirical evaluation or benchmark result.</p>
+          <p><b>Watch item:</b> A modular design may improve oversight, but its real educational impact still depends on careful integration, testing, and alignment of each module with teaching practice.</p>
+          <div class="tags"><span>#AIinEducation</span> <span>#LLMAgents</span> <span>#ResponsibleAI</span> <span>#LearningScience</span> <span>#EdTech</span></div>
         </section>
       </article>
     
@@ -381,11 +381,11 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30160v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30160v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> In chaotic dynamical systems, distributional reinforcement learning can be better conditioned than standard value-based RL because the return distribution evolves more smoothly than individual trajectories under the 1-Wasserstein metric.</p>
-          <p><b>Engineering relevance:</b> This suggests a more stable learning objective for control and optimization problems in science and engineering domains where chaos makes expected-return RL highly unstable.</p>
-          <ul><li>Analyze RL in chaotic systems through the geometry of return distributions rather than scalar value estimates.</li><li>Use the 1-Wasserstein distance to show that distributional Bellman updates can remain smoother under chaos.</li><li>Provide a principled theoretical explanation for why distributional methods may outperform standard RL when trajectories diverge rapidly.</li></ul>
-          <p><b>Evidence signal:</b> The paper is primarily theoretical: the abstract reports a mild statistical stability assumption and a 1-Wasserstein analysis, but does not mention experiments or benchmark data.</p>
-          <p><b>Watch item:</b> The claimed advantage depends on statistical stability assumptions, so practical gains may weaken if the system violates those assumptions or if the Wasserstein-based update is expensive to estimate.</p>
+          <p><b>Key insight:</b> In chaotic dynamical systems, distributional reinforcement learning can be better conditioned than standard expected-return RL because return distributions evolve more smoothly than individual trajectories under the 1-Wasserstein metric.</p>
+          <p><b>Engineering relevance:</b> This suggests a more stable learning objective for control and decision-making in high-sensitivity domains such as fluid dynamics, climate modeling, and multi-agent systems.</p>
+          <ul><li>Analyze RL in chaotic environments through the geometry of return distributions rather than scalar value estimates.</li><li>Use the 1-Wasserstein metric to characterize smoother evolution of return distributions under mild statistical stability assumptions.</li><li>Motivate distributional Bellman updates as a better-conditioned objective than expectation-based optimization.</li></ul>
+          <p><b>Evidence signal:</b> The paper provides a theoretical, abstract-level argument under mild statistical stability assumptions; no empirical dataset or benchmark results are stated in the abstract.</p>
+          <p><b>Watch item:</b> The benefit depends on the stated statistical stability assumptions, so performance may degrade if the chaotic system or approximation scheme violates them.</p>
           <div class="tags"><span>#ReinforcementLearning</span> <span>#DistributionalRL</span> <span>#ChaoticSystems</span> <span>#WassersteinDistance</span> <span>#ScientificML</span></div>
         </section>
       </article>
@@ -400,12 +400,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2605.30200v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2605.30200v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> A triadic LLM-teacher-student workflow can improve K-12 writing by using the LLM for scalable idea generation while the teacher filters, guides, and validates feedback.</p>
-          <p><b>Engineering relevance:</b> The paper offers a deployable collaboration design and evaluation pipeline for building education-grade LLM systems that reduce teacher workload without sacrificing feedback quality.</p>
-          <ul><li>Built a triadic collaboration system for K-12 writing support.</li><li>Used a multidimensional evaluation framework grounded in Systemic Functional Linguistics.</li><li>Traced suggestion trajectories to study how LLM and teacher feedback affect student revisions.</li></ul>
-          <p><b>Evidence signal:</b> The study analyzes 57,954 essays from 10,195 students across 120 schools over two years, providing large-scale empirical evidence for the system.</p>
-          <p><b>Watch item:</b> The reported ceiling effect suggests that more linguistic expansion from the LLM can yield diminishing returns, so adaptation to student proficiency is necessary.</p>
-          <div class="tags"><span>#LLMInEducation</span> <span>#K12Writing</span> <span>#HumanAITeamwork</span> <span>#TeacherInTheLoop</span> <span>#AIEvaluation</span></div>
+          <p><b>Key insight:</b> A triadic LLM–teacher–student workflow can improve K-12 writing at scale when the LLM generates ideas and the teacher filters and contextualizes feedback.</p>
+          <p><b>Engineering relevance:</b> This paper shows that practical educational AI systems should use role-specialized human-AI collaboration rather than fully automated feedback, especially in high-stakes K-12 settings.</p>
+          <ul><li>Built a triadic collaboration system for K-12 writing support</li><li>Used a multidimensional evaluation framework grounded in Systemic Functional Linguistics</li><li>Traced suggestion trajectories to measure how LLM and teacher feedback affect writing development</li></ul>
+          <p><b>Evidence signal:</b> The study analyzes 57,954 essays from 10,195 students across 120 schools over two years, providing large-scale empirical evidence of writing improvement.</p>
+          <p><b>Watch item:</b> The reported ceiling effect suggests that more linguistic expansion from the LLM can eventually provide diminishing returns, so feedback must adapt to student proficiency.</p>
+          <div class="tags"><span>#LLM</span> <span>#K12Education</span> <span>#AIEducation</span> <span>#HumanAICollaboration</span> <span>#WritingAnalytics</span></div>
         </section>
       </article>
     </section>

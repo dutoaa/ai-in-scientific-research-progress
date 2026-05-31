@@ -1,24 +1,24 @@
 {
-  "key_insight": "A hybrid reduced-order plus neural-operator framework can accelerate CFD-like thermal-hydraulic prediction for SMR digital twins while preserving key flow dynamics in a helical coil steam generator.",
-  "engineering_relevance": "This enables faster transient simulation for reactor monitoring and decision support, with model choice guided by whether the target is instantaneous vortex-resolved fields or mean-flow/pressure-drop estimation.",
+  "key_insight": "A neural-operator surrogate combined with reduced-order latent models can approximate transient CFD for an SMR helical coil steam generator, with different architectures excelling at different flow-resolution goals.",
+  "engineering_relevance": "This enables faster thermal-hydraulic prediction for digital twins in small modular reactors, supporting real-time monitoring and design decisions without full CFD cost.",
   "method": [
-    "ROM + DeepONet on unstructured mesh data using an MLP autoencoder to form L-DeepONet",
-    "ROM + DeepONet on structured mesh data using a convolutional autoencoder to form L-DeepONet",
-    "Fourier neural operator (FNO) and multi-scale variants for comparison and spectral-bias mitigation"
+    "Built ROM encoders for CFD data: MLP autoencoder for unstructured meshes and convolutional autoencoder for structured meshes.",
+    "Coupled the latent spaces with DeepONet to form L-DeepONet; compared against Fourier Neural Operator (FNO).",
+    "Added a multi-scale strategy to reduce spectral bias and better capture Kármán vortex street dynamics."
   ],
-  "evidence_signal": "The abstract reports that the multi-scale L-DeepONet captured instantaneous periodic vortex dynamics in velocity and pressure, while FNO variants predicted mean flow and pressure drop reliably.",
-  "watch_item": "Performance depends on CFD data type and target fidelity; operator models may still struggle with fine transient details if training data are limited or the flow regime shifts.",
+  "evidence_signal": "The abstract reports that multi-scale L-DeepONet captured instantaneous periodic vortex dynamics in velocity and pressure, while FNO variants were more reliable for mean flow and pressure-drop prediction.",
+  "watch_item": "Performance appears architecture- and data-type-dependent, so selecting the wrong surrogate for a DT objective could miss either transient vortex details or accurate mean-flow/pressure-drop behavior.",
   "hashtags": [
     "#DigitalTwin",
-    "#SmallModularReactors",
     "#CFD",
-    "#NeuralOperators",
+    "#NeuralOperator",
+    "#SMR",
     "#SurrogateModel"
   ],
   "paper_id": "2026-05-28-arxiv-neural_operator_based_surrogate_model_for_cfd_helical_coil_steam_generator_in_small_modula",
   "paper_title": "Neural Operator-Based Surrogate Model for CFD:Helical Coil Steam Generator in Small Modular Reactor",
   "paper_date": "2026-05-28",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-05-31T02:40:28",
+  "generated_at": "2026-05-31T15:20:25",
   "generator": "openai"
 }

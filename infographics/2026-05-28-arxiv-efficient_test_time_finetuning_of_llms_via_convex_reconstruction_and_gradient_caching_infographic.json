@@ -1,24 +1,24 @@
 {
-  "key_insight": "HullFT makes test-time finetuning faster and better by selecting a sparse, diverse support set with convex geometry, then reusing gradients across repeated examples.",
-  "engineering_relevance": "The method targets a practical deployment bottleneck in per-query LLM adaptation, improving the quality–runtime tradeoff for retrieval-and-finetune pipelines.",
+  "key_insight": "HullFT speeds up test-time finetuning by selecting a small, diverse support set through convex geometry and then reusing gradients across repeated examples.",
+  "engineering_relevance": "It makes per-query adaptation of LLMs more practical by reducing both retrieval overhead and finetuning cost, improving the quality–latency tradeoff.",
   "method": [
-    "Use Frank-Wolfe to approximate the query as a sparse convex combination of training sequence embeddings.",
-    "Integerize the fractional weights into a multiset for finetuning, creating repeated examples.",
-    "Apply Gradient Reuse to amortize forward-backward cost across those repetitions."
+    "Represent the query as a sparse convex combination of training sequences using Frank-Wolfe optimization.",
+    "Convert fractional convex weights into an exact integer multiset for finetuning.",
+    "Reuse gradients for repeated examples to amortize forward-backward computation."
   ],
   "evidence_signal": "The abstract reports lower bits-per-byte at substantially lower total runtime than current state-of-the-art TTFT methods.",
-  "watch_item": "Performance depends on efficient nearest-neighbor retrieval, stable convex optimization, and correct handling of repeated-example gradient caching at inference time.",
+  "watch_item": "The approach depends on efficient retrieval, convex optimization, and careful integerization, so implementation complexity and approximation quality may affect real-world gains.",
   "hashtags": [
     "#LLM",
     "#TestTimeFinetuning",
     "#GradientCaching",
     "#FrankWolfe",
-    "#EfficientAI"
+    "#EfficientML"
   ],
   "paper_id": "2026-05-28-arxiv-efficient_test_time_finetuning_of_llms_via_convex_reconstruction_and_gradient_caching",
   "paper_title": "Efficient Test-Time Finetuning of LLMs via Convex Reconstruction and Gradient Caching",
   "paper_date": "2026-05-28",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-05-31T02:40:18",
+  "generated_at": "2026-05-31T15:20:16",
   "generator": "openai"
 }

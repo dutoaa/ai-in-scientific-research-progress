@@ -1,24 +1,24 @@
 {
-  "key_insight": "Hysteretic Policy Optimization (HPO) stabilizes sparse-reward RL by down-weighting negative-advantage updates and using mean-length normalization, with Adaptive HPO (A-HPO) automatically setting that balance from batch statistics.",
-  "engineering_relevance": "This offers a simple drop-in change to GRPO-style training that can improve sample efficiency and early-stage learning when rewards are sparse and verifiable.",
+  "key_insight": "HPO stabilizes sparse-reward RL by down-weighting negative-advantage updates and using mean-length normalization, with A-HPO automatically adapting that balance from batch statistics.",
+  "engineering_relevance": "It offers a minimal drop-in change to GRPO-style training that can improve early-stage learning efficiency without requiring a separate fixed hysteretic hyperparameter.",
   "method": [
-    "Reduce the update weight for negative-advantage responses instead of treating all advantages symmetrically.",
-    "Replace per-response length normalization with mean-length normalization to decouple update magnitude from output length.",
-    "Use A-HPO to adapt the hysteretic weight from batch-level advantage-sign statistics, removing manual tuning."
+    "Reduce the update weight for negative-advantage responses to avoid destabilizing early sparse-reward training.",
+    "Replace per-response length normalization with mean-length normalization to decouple update scale from output length.",
+    "Use adaptive hysteresis (A-HPO) to set the negative-update weight from batch-level advantage-sign statistics."
   ],
-  "evidence_signal": "In TeleLogs and Countdown experiments, A-HPO improved reward per update over GRPO, with the biggest gains in early sparse-reward regimes and a final TeleLogs reward of 0.84.",
-  "watch_item": "The adaptive hysteretic rule may depend on reliable batch advantage-sign statistics, so behavior could vary with batch size, reward sparsity, and task-specific reward noise.",
+  "evidence_signal": "In TeleLogs and Countdown experiments, A-HPO improved reward per update, reaching 0.84 final reward on TeleLogs and showing the largest gains in early, difficult sparse-reward settings across 1.5B–7B models.",
+  "watch_item": "Results come from sparse-verifiable-reward benchmarks, so the gains may depend on the reward sparsity pattern and on careful implementation of the hysteretic weighting and normalization scheme.",
   "hashtags": [
     "#ReinforcementLearning",
-    "#SparseReward",
+    "#SparseRewards",
     "#PolicyOptimization",
-    "#GRPO",
-    "#AIResearch"
+    "#LLMTraining",
+    "#AdaptiveAlgorithms"
   ],
   "paper_id": "2026-05-28-arxiv-hpo_hysteretic_policy_optimization_for_stable_and_efficient_training_under_sparse_reward_r",
   "paper_title": "HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime",
   "paper_date": "2026-05-28",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-05-31T02:39:56",
+  "generated_at": "2026-05-31T15:20:07",
   "generator": "openai"
 }

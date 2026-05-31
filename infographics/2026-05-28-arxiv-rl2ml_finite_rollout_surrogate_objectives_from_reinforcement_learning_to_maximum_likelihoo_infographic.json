@@ -1,24 +1,24 @@
 {
-  "key_insight": "RL2ML shows that finite-rollout training can be reframed as a family of surrogate objectives that exactly match the gradient of the sampled update, bridging reinforcement learning and maximum-likelihood-style training without objective-gradient mismatch.",
-  "engineering_relevance": "For practical LLM training with limited rollout budgets, the framework helps choose update rules based on metric sensitivity and variance, not just on whether the objective looks more like RL or MLE.",
+  "key_insight": "RL2ML shows that finite-rollout reinforcement learning and maximum-likelihood-style training can be linked by a family of surrogate objectives with exactly unbiased gradients, so the right objective depends on rollout-level update geometry rather than just the population objective.",
+  "engineering_relevance": "This gives practitioners a principled way to choose and tune training objectives under a fixed rollout budget, improving stability and metric alignment in reward-based language-model training.",
   "method": [
-    "Defines a continuum of finite-rollout surrogate objectives spanning RL, MLE-like, and beyond-MLE behavior.",
-    "Derives a closed-form, exactly unbiased gradient estimator aligned with the sampled rollout update.",
-    "Introduces group-level update scale and uses metric-gain plus variance analysis to reduce objective choice to a 1D optimization problem."
+    "Defines a finite-rollout surrogate objective family spanning RL, ML-like, and beyond-ML regimes",
+    "Derives a closed-form, exactly unbiased gradient estimator for rollout-group updates",
+    "Introduces group-level update scale plus calibrated metric-gain and variance analysis to select the best surrogate"
   ],
-  "evidence_signal": "The abstract reports calibrated metric-gain analysis and exact variance decomposition, showing the best surrogate depends jointly on evaluation metric, local sensitivity, and estimator variance.",
-  "watch_item": "The framework is theoretically elegant, but selecting the optimal surrogate still requires reliable estimates of local metric sensitivity and variance, which may be noisy or task-dependent in practice.",
+  "evidence_signal": "The paper uses theoretical analysis of estimator-objective alignment, exact variance decomposition, and calibrated metric-gain reasoning under finite rollout groups rather than reporting a new benchmark dataset.",
+  "watch_item": "The optimal surrogate is metric- and variance-dependent, so implementing it requires careful evaluation choice and variance estimation; the one-dimensional tuning problem still needs reliable calibration.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#ReinforcementLearning",
     "#MaximumLikelihood",
-    "#LLMTraining",
-    "#UnbiasedGradient"
+    "#LanguageModels",
+    "#Optimization"
   ],
   "paper_id": "2026-05-28-arxiv-rl2ml_finite_rollout_surrogate_objectives_from_reinforcement_learning_to_maximum_likelihoo",
   "paper_title": "RL2ML: Finite-Rollout Surrogate Objectives from Reinforcement Learning to Maximum Likelihood",
   "paper_date": "2026-05-28",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-05-31T02:40:16",
+  "generated_at": "2026-05-31T15:20:09",
   "generator": "openai"
 }
