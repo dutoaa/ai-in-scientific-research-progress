@@ -1,693 +1,326 @@
 [
   {
-    "id": "2026-05-28-arxiv-iga_odil_optimizing_discretre_robust_loss_with_isogeometric_analysis_to_solve_forward_and",
-    "arxiv_id": "2605.30272v1",
-    "date": "2026-05-28",
-    "title": "IGA-ODIL: Optimizing DIscretre robust Loss with Isogeometric Analysis to solve forward and inverse problems faster using machine learning tools",
-    "authors": "Maciej Paszyński, Tomasz Służalec",
-    "abstract": "Physics-informed neural networks (PINNs) formulate the solution of partial differential equations as residual minimization problems over neural network parameterizations. Although highly flexible, optimization of PINNs using modern variants of Stochastic Gradient Descent algorithms is expensive. On the other hand, iterative computation of PINN parameterization using the Gauss-Newton method suffers from convergence difficulties, dense Jacobian structures, and poor conditioning that limit the effectiveness of second-order optimization methods. In this work, we introduce IGA-ODIL, a spline-based residual minimization framework combining ideas from Optimizing DIscrete Loss (ODIL), robust variational residual minimization, and Isogeometric Analysis (IGA). Instead of neural-network parameterizations of PINNs, the unknown solution is represented by smooth B-spline basis functions, leading to sparse structured Jacobians and efficient Gauss--Newton optimization. We also derive robust residual formulations based on weighted Gram operators, making the loss function related with the true error. The resulting systems inherit locality, sparsity, and approximation-theoretic properties of classical finite element and isogeometric methods while preserving the residual-learning philosophy of scientific machine learning. The proposed methodology is evaluated on several benchmark problems, including Poisson equations, convection-dominated advection--diffusion equations, Helmholtz problems with highly oscillatory solutions, nonlinear Allen--Cahn equations, and inverse Helmholtz parameter identification. Numerical experiments demonstrate orders-of-magnitude speedups compared with PINNs and CRVPINNs while maintaining high accuracy and robustness.",
+    "id": "2026-05-29-arxiv-gpu_forecasters_language_models_as_selective_surrogates_for_kernel_runtime_optimization",
+    "arxiv_id": "2605.31464v1",
+    "date": "2026-05-29",
+    "title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization",
+    "authors": "Zaid Khan, Justin Chih-Yao Chen, Jaemin Cho, Elias Stengel-Eskin, Mohit Bansal",
+    "abstract": "GPU kernels are the workhorse of modern deep learning, and optimizing them (via evolutionary search or coding agents) usually requires repeated measurement on target hardware. While these measurements provide the ground-truth signal necessary for kernel search, they are costly, because each evaluation of a kernel requires compilation and repeated execution on a GPU. As improvements in LLM inference reduce the cost of writing novel kernels and LLM-driven searches scale to large search budgets, on-device evaluation becomes a bottleneck. To address this, we study how LLMs can serve as selective GPU surrogates for kernel evaluation, by forecasting the performance of proposed kernels. A useful surrogate should be accurate, and it should be selective, by knowing when it could be wrong, and deferring to the GPU. To evaluate surrogates, we measure whether their forecasts are accurate, calibrated, and practically useful for recovering fast kernels under limited GPU-measurement budgets. Next, we study whether reinforcement learning can improve forecast accuracy and confidence calibration. Our experiments demonstrate that LLMs can accurately forecast relative kernel performance, that their utility can be improved through reinforcement learning. Used inside a kernel search, the surrogate lets the search consider several times as many candidates under the same GPU evaluation budget, and that leads to finding faster kernels than an equal-budget baseline. These results suggest that LLMs can play a broader role in kernel optimization, by acting as virtual models of a GPU rather than solely as kernel generators for search.",
     "category": "Scientific Machine Learning",
     "source": "arXiv",
-    "published": "2026-05-28T17:30:08Z",
-    "updated": "2026-05-28T17:30:08Z",
-    "primary_category": "math.NA",
-    "categories": [
-      "math.NA"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30272v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30272v1"
-      }
-    ],
-    "score": 89,
-    "infographic": {
-      "key_insight": "IGA-ODIL replaces neural-network PINN parameterizations with smooth B-spline/isogeometric bases and a robust residual loss, enabling faster and better-conditioned Gauss-Newton optimization for PDE solving.",
-      "engineering_relevance": "This offers a practical scientific machine learning approach for forward and inverse PDE problems where speed, sparsity, and numerical robustness matter in engineering workflows.",
-      "method": [
-        "Represent the unknown field with B-spline basis functions from isogeometric analysis.",
-        "Minimize a robust weighted residual using Gram-operator-based formulations.",
-        "Exploit sparse structured Jacobians for efficient Gauss-Newton optimization."
-      ],
-      "evidence_signal": "The method is benchmarked on Poisson, advection-diffusion, Helmholtz, Allen-Cahn, and inverse Helmholtz problems, showing orders-of-magnitude speedups over PINNs and CRVPINNs while keeping high accuracy.",
-      "watch_item": "Performance depends on spline discretization and problem setup, so implementation complexity and tuning of basis resolution/weights may still affect robustness on new PDEs.",
-      "hashtags": [
-        "#ScientificMachineLearning",
-        "#IsogeometricAnalysis",
-        "#PINNs",
-        "#PDEs",
-        "#Optimization"
-      ],
-      "paper_id": "2026-05-28-arxiv-iga_odil_optimizing_discretre_robust_loss_with_isogeometric_analysis_to_solve_forward_and",
-      "paper_title": "IGA-ODIL: Optimizing DIscretre robust Loss with Isogeometric Analysis to solve forward and inverse problems faster using machine learning tools",
-      "paper_date": "2026-05-28",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-05-31T15:19:45",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-soundnessbench_can_your_ai_scientist_really_tell_good_research_ideas_from_bad_ones",
-    "arxiv_id": "2605.30329v1",
-    "date": "2026-05-28",
-    "title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
-    "authors": "Sy-Tuyen Ho, Minghui Liu, Huy Nghiem, Furong Huang",
-    "abstract": "Autonomous AI research agents aim to accelerate scientific discovery by automating the research pipeline, from hypothesis generation to peer review. However, existing benchmarks rarely test a fundamental bottleneck: whether Large Language Models can judge the methodological viability of a research idea before expending time and computational resources. We introduce SoundnessBench, a curated benchmark of 1,099 machine-learning research proposals reconstructed from ICLR submissions, labeled with reviewer soundness sub-scores, and audited against source papers. SoundnessBench should be interpreted as a benchmark for recoverable proposal-stage soundness rather than exact prediction of full-paper review outcomes. Across 12 frontier LLMs, we find a pervasive optimism bias: under standard prompting, models frequently rate low-soundness proposals as sound, while aggressive prompting largely shifts errors from false positives to false negatives. Additional controls for public-corpus contamination, paper-identifying phrases, surface features, and human audit quality suggest that this behavior is not explained by a single confounder. Our results indicate that current LLMs are not yet reliable as standalone first-gate evaluators for scientific rigor.",
-    "category": "Scientific Discovery",
-    "source": "arXiv",
-    "published": "2026-05-28T17:57:37Z",
-    "updated": "2026-05-28T17:57:37Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30329v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30329v1"
-      }
-    ],
-    "score": 87,
-    "infographic": {
-      "key_insight": "SoundnessBench shows that frontier LLMs are still unreliable at judging whether a research idea is methodologically sound, with a strong tendency toward optimistic false positives.",
-      "engineering_relevance": "For AI research agents, this means automated idea screening cannot yet serve as a dependable first gate for scientific rigor without human oversight.",
-      "method": [
-        "Built SoundnessBench from 1,099 ML research proposals reconstructed from ICLR submissions.",
-        "Labeled proposals using reviewer soundness sub-scores and audited them against source papers.",
-        "Benchmarked 12 frontier LLMs under standard and aggressive prompting, plus confounder controls."
-      ],
-      "evidence_signal": "The benchmark evaluates recoverable proposal-stage soundness rather than full-paper review outcomes, using 1,099 proposals and 12 LLMs to measure bias and error shifts.",
-      "watch_item": "Because the dataset is reconstructed from submissions and reviewer scores, results may not generalize perfectly to all scientific domains or real-world proposal workflows.",
-      "hashtags": [
-        "#LLM",
-        "#ScientificDiscovery",
-        "#Benchmarking",
-        "#AIResearchAgents",
-        "#ResearchSoundness"
-      ],
-      "paper_id": "2026-05-28-arxiv-soundnessbench_can_your_ai_scientist_really_tell_good_research_ideas_from_bad_ones",
-      "paper_title": "SoundnessBench: Can Your AI Scientist Really Tell Good Research Ideas from Bad Ones?",
-      "paper_date": "2026-05-28",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-05-31T15:19:47",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-meta_cognitive_memory_policy_optimization_for_long_horizon_llm_agents",
-    "arxiv_id": "2605.30159v1",
-    "date": "2026-05-28",
-    "title": "Meta-Cognitive Memory Policy Optimization for Long-Horizon LLM Agents",
-    "authors": "Ziyan Liu, Zhezheng Hao, Yeqiu Chen, Hong Wang, Jingren Hou, Ruiyi Ding",
-    "abstract": "Memory-augmented LLM agents tackle complex long-horizon tasks by recursively summarizing interaction trajectories into compact memory. However, existing approaches typically train these memory policies using outcome-based reinforcement learning, failing to localize where intermediate memory quality degrades. As interactions unfold, ambiguous recursive summaries progressively discard task-relevant information and introduce semantic noise. This exacerbates belief deviation, obscuring the agent's estimate of the latent task state and ultimately derailing long-horizon reasoning. We therefore argue that memory optimization should focus not merely on trajectory-level success, but on the clarity of the belief induced by intermediate summaries. To this end, we introduce Belief Entropy, a self-supervised proxy that probes how uncertain the model remains about the latent task state given its current memory. Based on this proxy, we propose Metacognitive Memory Policy Optimization (MMPO). Instead of relying only on sparse outcome-based signals, MMPO provides fine-grained, memory-specific supervision via explicitly penalizing summaries that induce high epistemic uncertainty. Experiments show that MMPO consistently outperforms existing methods on diverse long-horizon tasks, maintaining 97.1% performance even when scaled to 1.75M-token contexts.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-05-28T16:17:19Z",
-    "updated": "2026-05-28T16:17:19Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30159v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30159v1"
-      }
-    ],
-    "score": 78,
-    "infographic": {
-      "key_insight": "Instead of optimizing memory summaries only for final task success, the paper trains them to preserve a clear internal belief about the latent task state by minimizing belief entropy.",
-      "engineering_relevance": "This offers a practical way to make long-horizon LLM agents more reliable by improving intermediate memory quality, reducing drift, and preserving useful context at very large token scales.",
-      "method": [
-        "Defines Belief Entropy as a self-supervised proxy for how uncertain the model is about the hidden task state from its current memory.",
-        "Introduces Metacognitive Memory Policy Optimization (MMPO), which penalizes memory summaries that induce high epistemic uncertainty.",
-        "Provides fine-grained supervision at the memory level rather than relying only on sparse outcome-based reinforcement learning."
-      ],
-      "evidence_signal": "The abstract reports that MMPO outperforms prior methods on diverse long-horizon tasks and retains 97.1% performance even at 1.75M-token contexts.",
-      "watch_item": "Belief entropy is only a proxy for latent-state clarity, so its effectiveness may depend on how well the proxy aligns with the true task state and on the cost of computing it at scale.",
-      "hashtags": [
-        "#LLMAgents",
-        "#MemoryOptimization",
-        "#LongHorizonReasoning",
-        "#ReinforcementLearning",
-        "#BeliefEntropy"
-      ],
-      "paper_id": "2026-05-28-arxiv-meta_cognitive_memory_policy_optimization_for_long_horizon_llm_agents",
-      "paper_title": "Meta-Cognitive Memory Policy Optimization for Long-Horizon LLM Agents",
-      "paper_date": "2026-05-28",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-05-31T15:19:50",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-schgen_pcb_schematic_generation_with_semantic_grounded_code_representations",
-    "arxiv_id": "2605.30345v1",
-    "date": "2026-05-28",
-    "title": "SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations",
-    "authors": "Qinpei Luo, Ruichun Ma, Xinyu Zhang, Lili Qiu",
-    "abstract": "Printed circuit board (PCB) schematic design defines nearly all electronic hardware, but it remains manual and expertise-intensive. While generative AI has advanced digital and analog IC design, PCB schematic generation from natural-language intent is largely unexplored. This paper presents SchGen, the first large language model that generates editable PCB schematics from natural-language requests. The key challenge lies in the lack of an LLM-suited representation and a large-scale dataset. Current schematic formats are dominated by verbose, tool-specific syntax and geometry-heavy descriptions, making them difficult to generate reliably. We introduce a semantically grounded code representation that encodes schematic editing primitives with relative placement and pin-name-based wiring, transforming a geometry-driven generation problem into a semantics-driven matching task amenable to LLMs. We further construct a large-scale dataset of PCB schematics paired with user prompts via a human-agent collaborative pipeline that converts open-source hardware designs into our representation. Experiments show that SchGen significantly outperforms alternative representations and even larger general-purpose LLMs on wire connectivity accuracy and functional correctness. Our results highlight the critical role of representation design in enabling generative models for complex hardware design tasks.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-05-28T17:59:50Z",
-    "updated": "2026-05-28T17:59:50Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30345v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30345v1"
-      }
-    ],
-    "score": 76,
-    "infographic": {
-      "key_insight": "SchGen shows that PCB schematics can be generated from natural-language intent by using a semantically grounded code representation instead of geometry-heavy schematic syntax.",
-      "engineering_relevance": "This enables more editable, automation-friendly PCB design workflows and points to representation design as a key lever for hardware-generating LLMs.",
-      "method": [
-        "Encode schematics with editing primitives, relative placement, and pin-name-based wiring.",
-        "Transform the task from geometry-driven drawing to semantics-driven matching for LLM generation.",
-        "Build a large-scale prompt–schematic dataset using a human-agent pipeline over open-source hardware designs."
-      ],
-      "evidence_signal": "The abstract reports that SchGen outperforms alternative representations and even larger general-purpose LLMs on wire connectivity accuracy and functional correctness.",
-      "watch_item": "Results depend on the quality and coverage of the new representation and dataset, so generalization to unseen design styles or edge-case PCB conventions may still require validation.",
-      "hashtags": [
-        "#PCBDesign",
-        "#LLM",
-        "#GenerativeAI",
-        "#HardwareAI",
-        "#SchematicGeneration"
-      ],
-      "paper_id": "2026-05-28-arxiv-schgen_pcb_schematic_generation_with_semantic_grounded_code_representations",
-      "paper_title": "SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations",
-      "paper_date": "2026-05-28",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-05-31T15:19:53",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-projectionbench_evaluating_scientific_hypothesis_generation_in_llms_under_progressive_info",
-    "arxiv_id": "2605.30284v1",
-    "date": "2026-05-28",
-    "title": "ProjectionBench: Evaluating Scientific Hypothesis Generation in LLMs Under Progressive Information Disclosure",
-    "authors": "A. J. Lew, Y. Cao, M. J. Buehler",
-    "abstract": "Scientific discovery is an inherently creative and uncertain process, requiring reasoning beyond the recall of known knowledge. While many benchmarks have been proposed to evaluate large language model (LLM) performance on deep research tasks via multi-hop retrieval, their innovative reasoning abilities essential for true scientific discovery remain largely untested. We introduce a benchmark framework for evaluating model performance in scientific discovery and reasoning, building up from a raw problem to the classical null hypothesis test. In our framework, models initially receive only the topic and research question from a recent paper, with technical details progressively revealed. At each stage of information disclosure, the model is tasked with generating hypotheses that address the research question, which is compared with the conclusions from the original paper and evaluated via automated semantic similarity of constituent atomic claims. This progressive evaluation of semantic divergence from ground-truth conclusions enables assessment of a model's innovativeness (under minimal information) to grounded reasoning capabilities (under full experimental details), both critical for using LLMs for scientific discovery purposes. Our framework provides a foundation for systematically evaluating scientific reasoning and discovery capabilities in LLMs, crucial for advancing the development of next-generation AI scientist/co-scientist systems. Specifically, here we evaluate GPT-5, GPT-5.4, Gemini 2.5 pro, and Gemini 3.1 pro preview across 45 papers spanning bioactive materials, mechanical materials, and nanomaterials. We find that GPT-5.4 and Gemini 3.1 pro outperform their previous generation counterparts as expected, and GPT-5.4 in particular maintains 0.7 F1 score alignment with ground truth conclusions even under minimal context.",
-    "category": "Scientific Discovery",
-    "source": "arXiv",
-    "published": "2026-05-28T17:38:19Z",
-    "updated": "2026-05-28T17:38:19Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30284v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30284v1"
-      }
-    ],
-    "score": 75,
-    "infographic": {
-      "key_insight": "ProjectionBench tests whether LLMs can generate scientific hypotheses that stay creative under minimal context and become more grounded as experimental details are progressively disclosed.",
-      "engineering_relevance": "The benchmark offers a practical way to measure whether AI assistants can support scientific discovery, from early-stage ideation to evidence-aligned reasoning, for future AI scientist systems.",
-      "method": [
-        "Start with only the paper topic and research question.",
-        "Reveal technical details in stages and ask the model to generate hypotheses at each step.",
-        "Compare generated hypotheses against the paper’s conclusions using automated semantic similarity over atomic claims."
-      ],
-      "evidence_signal": "The authors evaluated GPT-5, GPT-5.4, Gemini 2.5 Pro, and Gemini 3.1 Pro Preview across 45 papers and reported that GPT-5.4 retained about 0.7 F1 alignment with ground-truth conclusions even under minimal context.",
-      "watch_item": "Automated semantic similarity may miss subtle scientific nuance, so benchmark scores should be interpreted as a proxy rather than a full measure of discovery quality.",
-      "hashtags": [
-        "#ScientificDiscovery",
-        "#LLMEvaluation",
-        "#Benchmarking",
-        "#AIforScience",
-        "#HypothesisGeneration"
-      ],
-      "paper_id": "2026-05-28-arxiv-projectionbench_evaluating_scientific_hypothesis_generation_in_llms_under_progressive_info",
-      "paper_title": "ProjectionBench: Evaluating Scientific Hypothesis Generation in LLMs Under Progressive Information Disclosure",
-      "paper_date": "2026-05-28",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-05-31T15:19:56",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-unifying_temporal_and_structural_credit_assignment_in_llm_based_multi_agent_prompt_optimiz",
-    "arxiv_id": "2605.30227v1",
-    "date": "2026-05-28",
-    "title": "Unifying Temporal and Structural Credit Assignment in LLM-Based Multi-Agent Prompt Optimization",
-    "authors": "Wenwu Li, Yuran Song, Mingze Zhao, Bo Jin, Wenhao Li",
-    "abstract": "While Multi-Agent Systems (MAS) empower Large Language Models to tackle complex reasoning tasks through collaborative interaction, optimizing their dynamics remains a formidable challenge due to the discrete, non-differentiable nature of the computation graph and the sparsity of global supervisory signals. Existing black-box optimizers struggle to attribute trajectory-level failure to specific local components, resulting in inefficient, high-variance exploration. We argue that tractable MAS optimization needs structural inductive biases to disentangle error signals. We propose temporal and structural credit assignment, which decomposes the objective along two axes: (i) temporal credit, using state-space bottlenecks to identify critical rounds, and (ii) structural credit, using stationary role policies to isolate agent contributions. Leveraging these decomposed signals, we introduce a discrete, verbalized block coordinate descent algorithm for iterative refinement. Rather than indiscriminate global updates, it alternates between optimizing role prompts and aggregation protocols, using LLM-generated \"proxy gradients\" to target only the identified weak links. Across diverse reasoning benchmarks, our approach substantially reduces query complexity while improving performance, providing a principled and interpretable path toward self-improving MAS.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-05-28T16:57:57Z",
-    "updated": "2026-05-28T16:57:57Z",
-    "primary_category": "cs.MA",
-    "categories": [
-      "cs.MA",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30227v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30227v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "The paper proposes decomposing multi-agent LLM optimization into temporal credit assignment for critical rounds and structural credit assignment for agent roles to make sparse, discrete feedback tractable.",
-      "engineering_relevance": "This offers a practical, interpretable way to reduce query cost and stabilize self-improvement in LLM-based multi-agent systems by updating only the weakest components.",
-      "method": [
-        "Use state-space bottlenecks to identify temporally critical interaction rounds.",
-        "Use stationary role policies to separate and score individual agent contributions.",
-        "Apply verbalized block coordinate descent to alternate between optimizing role prompts and aggregation protocols with LLM-generated proxy gradients."
-      ],
-      "evidence_signal": "The method is evaluated across diverse reasoning benchmarks, where the abstract reports lower query complexity and improved performance.",
-      "watch_item": "Because it relies on LLM-generated proxy gradients and discrete coordinate updates, performance may be sensitive to prompt quality and optimization stability.",
-      "hashtags": [
-        "#LLM",
-        "#MultiAgentSystems",
-        "#CreditAssignment",
-        "#PromptOptimization",
-        "#AIResearch"
-      ],
-      "paper_id": "2026-05-28-arxiv-unifying_temporal_and_structural_credit_assignment_in_llm_based_multi_agent_prompt_optimiz",
-      "paper_title": "Unifying Temporal and Structural Credit Assignment in LLM-Based Multi-Agent Prompt Optimization",
-      "paper_date": "2026-05-28",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-05-31T15:19:58",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-calarena_a_large_scale_post_hoc_calibration_benchmark",
-    "arxiv_id": "2605.30188v1",
-    "date": "2026-05-28",
-    "title": "CalArena: A Large-Scale Post-Hoc Calibration Benchmark",
-    "authors": "Eugène Berta, David Holzmüller, Francis Bach, Michael I. Jordan",
-    "abstract": "Reliable probability estimates are critical in many machine learning applications, yet modern classifiers are often poorly calibrated. Post-hoc calibration provides a simple and widely used solution, but the large number of proposed methods, combined with small-scale and inconsistent evaluations, makes it difficult to determine which approaches are truly effective in practice. We introduce a large-scale, standardized benchmark for post-hoc calibration, covering nearly 2000 experiments across tabular and computer vision tasks, including binary, multiclass, and large-scale classification settings. Our benchmark aggregates predictions from a diverse set of classical models, modern deep learning architectures, and foundation models, and provides unified, reproducible implementations of dozens of calibration methods within a common evaluation framework. We argue that Post-Hoc Improvement (PHI) in proper scoring rules offers a principled alternative to traditional calibration error estimators for comparing post-hoc methods, capturing both calibration quality and potential degradation to the model's predictive performance. Using this framework, we conduct the most comprehensive empirical study of post-hoc calibration to date. Our results reveal consistent patterns across domains: smooth calibration functions outperform binning-based approaches, dedicated multiclass methods are essential in high-dimensional settings, and generic machine learning models are not competitive without calibration-specific design. To facilitate future research, we release all data, code, and evaluation tools, providing a plug-and-play benchmark for developing and comparing calibration methods.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-05-28T16:31:36Z",
-    "updated": "2026-05-28T16:31:36Z",
+    "published": "2026-05-29T15:56:08Z",
+    "updated": "2026-05-29T15:56:08Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG",
-      "cs.AI",
-      "stat.ML"
+      "cs.AI"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30188v1"
+        "url": "https://arxiv.org/abs/2605.31464v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30188v1"
+        "url": "https://arxiv.org/pdf/2605.31464v1"
+      }
+    ],
+    "score": 80,
+    "infographic": {
+      "key_insight": "GPU kernels are the workhorse of modern deep learning, and optimizing them (via evolutionary search or coding agents) usually requires repeated measurement on target hardware.",
+      "engineering_relevance": "Potential relevance: scientific machine learning workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-gpu_forecasters_language_models_as_selective_surrogates_for_kernel_runtime_optimization",
+      "paper_title": "GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization",
+      "paper_date": "2026-05-29",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-06-01T19:22:25",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-general_purpose_llms_as_constrained_crystal_composition_generators",
+    "arxiv_id": "2605.31495v1",
+    "date": "2026-05-29",
+    "title": "General-purpose LLMs as Constrained Crystal Composition Generators",
+    "authors": "Hedda Oschinski, Maximilian L. Ach, Konstantin S. Jakob, Christian Carbogno, Karsten Reuter",
+    "abstract": "The targeted discovery of inorganic materials remains challenging due to the vastness of compositional design spaces and the high cost of exhaustive screening. Task-specific generative artificial intelligence represents a particularly efficient alternative to screening, yet demands tedious collection of training data before providing real benefit. General-purpose large language models (LLMs) have recently shown tremendous potential for the targeted generation of single, optimal materials compositions without the need for task-specific fine-tuning. However, it is unclear whether LLMs generally pose an advantage compared to specialized generative models, in particular in large design spaces. Here, we demonstrate that such models are capable of covering entire regions of the targeted property space effectively and systematically. Using Elpasolite materials as an established benchmark for generative tasks in large chemical spaces, we find that an iterative prompt-and-response framework is able to recover on average 96% of all low-energy Elpasolites in the target region. This performance, driven mainly by iterative in-context learning, surpasses the generative abilities of previous, task-specific models. Our results establish general-purpose LLMs as flexible and accessible components for inverse materials design workflows.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-05-29T16:16:30Z",
+    "updated": "2026-05-29T16:16:30Z",
+    "primary_category": "cond-mat.mtrl-sci",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31495v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31495v1"
       }
     ],
     "score": 71,
     "infographic": {
-      "key_insight": "CalArena shows that post-hoc calibration works best when using smooth, calibration-aware methods, especially for multiclass and large-scale classification.",
-      "engineering_relevance": "For deployed ML systems, the benchmark helps choose calibration methods that improve probability reliability without sacrificing predictive performance.",
+      "key_insight": "The targeted discovery of inorganic materials remains challenging due to the vastness of compositional design spaces and the high cost of exhaustive screening.",
+      "engineering_relevance": "Potential relevance: scientific discovery workflows and research evaluation.",
       "method": [
-        "Standardized nearly 2000 post-hoc calibration experiments across tabular and computer vision tasks.",
-        "Compared binary, multiclass, and large-scale classifiers from classical models, deep networks, and foundation models.",
-        "Evaluated dozens of calibration methods in one reproducible framework using Post-Hoc Improvement (PHI)."
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "The benchmark aggregates predictions from diverse models across nearly 2000 experiments and uses PHI in proper scoring rules to assess both calibration quality and any degradation in predictive performance.",
-      "watch_item": "Results are benchmark-dependent, so method rankings may shift with task mix, model family, or scoring rule choices.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#Calibration",
-        "#MachineLearning",
-        "#Benchmark",
-        "#Reliability",
-        "#AIResearch"
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-calarena_a_large_scale_post_hoc_calibration_benchmark",
-      "paper_title": "CalArena: A Large-Scale Post-Hoc Calibration Benchmark",
-      "paper_date": "2026-05-28",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-05-31T15:20:00",
+      "paper_id": "2026-05-29-arxiv-general_purpose_llms_as_constrained_crystal_composition_generators",
+      "paper_title": "General-purpose LLMs as Constrained Crystal Composition Generators",
+      "paper_date": "2026-05-29",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-06-01T19:22:26",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-05-28-arxiv-statistical_embeddings_for_similarity_retrieval_and_interpretable_alignment_of_numeric_tab",
-    "arxiv_id": "2605.30289v1",
-    "date": "2026-05-28",
-    "title": "Statistical Embeddings for Similarity, Retrieval, and Interpretable Alignment of Numeric Tabular Datasets",
-    "authors": "M. Ross Kunz, John Merickel, Keith Wilson",
-    "abstract": "Numeric tabular datasets are the dominant data format in scientific practice, yet large language models lack native mechanisms for representing numeric datasets in a meaningful way across heterogeneous feature spaces. Existing approaches either target predictive modeling over individual datasets, which requires a shared set of variable definitions, or lack mechanisms for interpretable cross-dataset alignment. The proposed methodology characterizes numeric tabular datasets through structured exploratory data analysis descriptors, embeds those descriptors into a shared vector space using a pretrained sentence transformer, and quantifies cross-dataset similarity via Canonical Correlation Analysis (CCA). Furthermore, a penalized formulation of CCA is applied to recover sparse, interpretable variable-level correspondences between datasets, identifying which statistical descriptors or variable-level quantities drive cross-dataset alignment without requiring shared variable names or feature conventions. Differential privacy is optionally applied to the descriptor set prior to embedding, supporting deployment in sensitive data contexts without requiring access to raw observations at time of comparison. The methodology is evaluated across 15 datasets spanning general-purpose benchmarks, materials informatics, and nuclear-grade graphite characterization. Results demonstrate a total P@1 score of 0.9, with known nearest-neighbor retrieval and cluster structure remaining robust across embedding ablations and differential privacy budgets. The proposed framework provides a principled pathway for integrating heterogeneous numeric data into retrieval-augmented generation pipelines while preserving statistical context, with direct applications to data-driven algorithm selection and simulation model initialization for unknown datasets.",
+    "id": "2026-05-29-arxiv-the_dynamic_probabilistic_consistency_gap_in_chaotic_surrogate_modeling",
+    "arxiv_id": "2605.31547v1",
+    "date": "2026-05-29",
+    "title": "The Dynamic-Probabilistic Consistency Gap in Chaotic Surrogate Modeling",
+    "authors": "Andre Herz, Matthijs Pals, Daniel Durstewitz, Georgia Koppe",
+    "abstract": "Dynamical systems reconstruction (DSR) aims to learn surrogate models that capture the dynamics underlying time-series data. Reliably deploying these surrogates requires uncertainty estimates consistent with the learned dynamics. We expose a dynamic-probabilistic consistency (DPC) gap: the pursuit of finite-horizon probabilistic objectives can degrade dynamics or decouple predictive uncertainty from the local tangent dynamics it ought to reflect. We isolate three mechanisms behind this gap: core collapse, noise masking, and blind uncertainty. Specifically, we show that open-loop Gaussian rollout objectives can penalize Jacobian-generated covariance growth in chaotic systems, encouraging optimization shortcuts that weaken physical expansion or decouple uncertainty from it. To mitigate this gap, we propose KAFFEE (Kalman-Aware Framework For Ergodic Emulation), a differentiable extended Kalman filter-based training framework that evaluates likelihood on local predictive residuals (innovations) while transporting covariance through learned local Jacobians. On stochastic hyperchaotic Lorenz-96, KAFFEE reduces the identified failure modes, improves reconstruction of dynamical invariants relative to open-loop objectives, and maintains competitive predictive scores. We further show that the DPC gap appears when probabilistically adapting a DSR foundation model across 13 chaotic systems, where KAFFEE enables in-context Bayesian filtering while largely preserving zero-shot dynamics.",
     "category": "Modeling and Simulation",
     "source": "arXiv",
-    "published": "2026-05-28T17:40:42Z",
-    "updated": "2026-05-28T17:40:42Z",
+    "published": "2026-05-29T17:04:15Z",
+    "updated": "2026-05-29T17:04:15Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG",
-      "stat.AP",
+      "math.DS",
       "stat.ML"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30289v1"
+        "url": "https://arxiv.org/abs/2605.31547v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30289v1"
+        "url": "https://arxiv.org/pdf/2605.31547v1"
       }
     ],
-    "score": 67,
+    "score": 70,
     "infographic": {
-      "key_insight": "The paper turns numeric tabular datasets into comparable statistical embeddings, enabling similarity search and interpretable alignment even when datasets share no variable names.",
-      "engineering_relevance": "This offers a practical way to retrieve related datasets, support model selection, and initialize simulation workflows from heterogeneous scientific tables while preserving context.",
+      "key_insight": "Dynamical systems reconstruction (DSR) aims to learn surrogate models that capture the dynamics underlying time-series data.",
+      "engineering_relevance": "Potential relevance: modeling and simulation workflows and research evaluation.",
       "method": [
-        "Compute exploratory-data-analysis descriptors for each numeric dataset.",
-        "Embed descriptors with a pretrained sentence transformer into a shared vector space and compare datasets with CCA.",
-        "Use penalized CCA to recover sparse, interpretable variable-level correspondences; optionally add differential privacy to descriptors."
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "Across 15 datasets, the method achieved a total P@1 of 0.9, with nearest-neighbor retrieval and cluster structure remaining robust under embedding ablations and differential privacy budgets.",
-      "watch_item": "Interpretability depends on the quality and stability of the chosen descriptors, and privacy or embedding choices may reduce alignment fidelity in some settings.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#ScientificML",
-        "#TabularData",
-        "#DataRetrieval",
-        "#CCA",
-        "#DifferentialPrivacy"
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-statistical_embeddings_for_similarity_retrieval_and_interpretable_alignment_of_numeric_tab",
-      "paper_title": "Statistical Embeddings for Similarity, Retrieval, and Interpretable Alignment of Numeric Tabular Datasets",
-      "paper_date": "2026-05-28",
+      "paper_id": "2026-05-29-arxiv-the_dynamic_probabilistic_consistency_gap_in_chaotic_surrogate_modeling",
+      "paper_title": "The Dynamic-Probabilistic Consistency Gap in Chaotic Surrogate Modeling",
+      "paper_date": "2026-05-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-05-31T15:20:02",
+      "generated_at": "2026-06-01T19:22:27",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-05-28-arxiv-llumi_improving_llm_writing_assistance_for_mental_health_support_with_online_community_fee",
-    "arxiv_id": "2605.30273v1",
-    "date": "2026-05-28",
-    "title": "LLUMI: Improving LLM Writing Assistance for Mental Health Support with Online Community Feedback",
-    "authors": "Jiwon Kim, Maya Ajit, Sherry Gong, Soorya Ram Shimgekar, Dong Whi Yoo, Eshwar Chandrasekharan",
-    "abstract": "Large language models (LLMs) show promise in generating supportive responses for mental health queries, but improving their usefulness, empathy, and safety often requires substantial compute, expert input, and labeled data. At the same time, deploying proprietary, cloud-based models for mental health-related interactions raises important privacy and data-governance concerns, given the sensitivities. To address this challenge, we introduce LLUMI setup that can be hosted in-house within protected environments. LLUMI consists of two complementary components: a generation model (GM), which drafts supportive responses to mental health queries, and an improvement model (IM), which revises an initial human-crafted response. We leverage feedback signals from Reddit mental health communities, using community endorsement patterns such as upvotes and downvotes to construct chosen-rejected response pairs for Supervised Fine Tuning (SFT) and Direct Preference Optimization (DPO). We further align LLUMI using human evaluation across five dimensions: readability, empathy, connection, actionability, and safety. Our results show that, despite relying on smaller open-source models rather than proprietary cloud-based GPT models, LLUMI achieves comparable performance across linguistic analyses and human evaluations. These findings suggest that open-source models, when trained with community-derived preference signals, can support high-quality mental health support assistance while offering a more privacy-preserving alternative for sensitive support contexts.",
-    "category": "Literature and Knowledge Mining",
+    "id": "2026-05-29-arxiv-drift_decoupled_rollouts_and_importance_weighted_fine_tuning_for_efficient_multi_turn_opti",
+    "arxiv_id": "2605.31455v1",
+    "date": "2026-05-29",
+    "title": "DRIFT: Decoupled Rollouts and Importance-Weighted Fine-Tuning for Efficient Multi-Turn Optimization",
+    "authors": "Jian Mu, Tianyi Lin, Chengwei Qin, Zhongxiang Dai, Yao Shu",
+    "abstract": "Large language models are increasingly deployed in multi-turn interactive settings where users or environments can iteratively provide lightweight feedback. Unfortunately, optimizing such behavior presents a sharp dilemma in practice: online reinforcement learning is able to effectively address multi-turn dynamics but is prohibitively expensive due to the cost of generating full correction trajectories at every update, whereas offline supervised fine-tuning (SFT) is efficient but suffers from distribution shift and behavioral collapse. To this end, we novelly propose DRIFT (Decoupled Rollouts and Importance-Weighted Fine-Tuning), a framework that operationalizes the theoretical insight that the KL-regularized RL objective is equivalent to importance-weighted supervised learning. DRIFT decouples rollout from optimization by sampling offline interaction trajectories from a fixed reference policy, deriving return-based importance weights, and optimizing the policy via weighted SFT on the resulting dataset. Empirically, we demonstrate that DRIFT matches or exceeds the performance of multi-turn reinforcement learning baselines while maintaining the training efficiency and simplicity of standard supervised fine-tuning. Code is available at https://github.com/2020-qqtcg/DRIFT.",
+    "category": "Modeling and Simulation",
     "source": "arXiv",
-    "published": "2026-05-28T17:30:57Z",
-    "updated": "2026-05-28T17:30:57Z",
-    "primary_category": "cs.HC",
+    "published": "2026-05-29T15:49:13Z",
+    "updated": "2026-05-29T15:49:13Z",
+    "primary_category": "cs.LG",
     "categories": [
-      "cs.HC",
-      "cs.AI",
-      "cs.CL",
-      "cs.CY",
-      "cs.SI"
+      "cs.LG",
+      "cs.CL"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30273v1"
+        "url": "https://arxiv.org/abs/2605.31455v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30273v1"
+        "url": "https://arxiv.org/pdf/2605.31455v1"
       }
     ],
-    "score": 67,
+    "score": 66,
     "infographic": {
-      "key_insight": "LLUMI shows that smaller open-source LLMs can be improved with community feedback to generate safer, more empathetic mental health support responses.",
-      "engineering_relevance": "The paper offers a privacy-preserving, in-house deployment path for mental health assistance systems using SFT and DPO on preference data mined from online communities.",
+      "key_insight": "Large language models are increasingly deployed in multi-turn interactive settings where users or environments can iteratively provide lightweight feedback.",
+      "engineering_relevance": "Potential relevance: modeling and simulation workflows and research evaluation.",
       "method": [
-        "Build two modules: a generation model (GM) for drafting responses and an improvement model (IM) for revising human-written responses.",
-        "Convert Reddit mental-health community signals (e.g., upvotes/downvotes) into chosen-rejected pairs for supervised fine-tuning and direct preference optimization.",
-        "Align outputs with human evaluation on readability, empathy, connection, actionability, and safety."
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "The abstract reports that LLUMI performs comparably to proprietary GPT-based models across linguistic analyses and human evaluations after training on community-derived preference signals.",
-      "watch_item": "Community endorsement signals may be noisy or biased, so careful filtering and safety review are needed before deployment in sensitive settings.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#LLM",
-        "#MentalHealthAI",
-        "#PreferenceLearning",
-        "#OpenSourceAI",
-        "#AISafety"
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-llumi_improving_llm_writing_assistance_for_mental_health_support_with_online_community_fee",
-      "paper_title": "LLUMI: Improving LLM Writing Assistance for Mental Health Support with Online Community Feedback",
-      "paper_date": "2026-05-28",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-05-31T15:20:04",
+      "paper_id": "2026-05-29-arxiv-drift_decoupled_rollouts_and_importance_weighted_fine_tuning_for_efficient_multi_turn_opti",
+      "paper_title": "DRIFT: Decoupled Rollouts and Importance-Weighted Fine-Tuning for Efficient Multi-Turn Optimization",
+      "paper_date": "2026-05-29",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-06-01T19:22:27",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-05-28-arxiv-hpo_hysteretic_policy_optimization_for_stable_and_efficient_training_under_sparse_reward_r",
-    "arxiv_id": "2605.30201v1",
-    "date": "2026-05-28",
-    "title": "HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime",
-    "authors": "Mohamed Sana, Nicola Piovesan, Antonio De Domenico, Fadhel Ayed, Haozhe Zhang",
-    "abstract": "We investigate a narrow but common failure mode of GRPO-style reinforcement learning in the context of sparse verifiable rewards: early updates contain more responses with negative advantages than those with positive advantages, while response-level length normalization ties the magnitude of the update to the length of the output. We propose Hysteretic Policy Optimization (HPO), a minimal modification of GRPO that reduces the weight of negative-advantage updates and replaces per-response length normalization with mean-length normalization. We further introduce Adaptive HPO (A-HPO), which sets the hysteretic weight based on batch-level advantage-sign statistics, thereby removing the need for tuning a fixed hysteretic weight. In our TeleLogs and Countdown experiments, A-HPO improves the reward per update compared to GRPO, with the largest gains in early sparse reward regimes. On TeleLogs, A-HPO achieves a final reward of 0.84, outperforming SAPO by 5%, GSPO by 11%, and GRPO by 15%, while maintaining a comparable response-length. On Countdown, A-HPO achieves the largest gains in initial and most difficult configurations across 1.5B-7B models. Ablation studies on the hysteretic weight show that the gains of A-HPO come from better balancing the contributions of positive and negative advantages compared to positive-only or fully symmetric updates.",
+    "id": "2026-05-29-arxiv-inconsistency_aware_minimization_improving_generalization_with_unlabeled_data",
+    "arxiv_id": "2605.31324v1",
+    "date": "2026-05-29",
+    "title": "Inconsistency-Aware Minimization: Improving Generalization with Unlabeled Data",
+    "authors": "Hee-Sung Kim, Hyeonseong Kim, Sungyoon Lee",
+    "abstract": "Estimating the generalization gap and developing optimization methods that improve generalization are crucial for deep learning models, for both theoretical understanding and practical applications. Leveraging unlabeled data for these purposes offers significant advantages in real-world scenarios. This paper introduces a novel generalization measure, local inconsistency, derived from an information-geometric perspective on the parameter space of neural networks. A key feature of local inconsistency is that it can be computed without explicit labels. We establish theoretical underpinnings by connecting local inconsistency to the Fisher information matrix and the loss Hessian. Empirically, we demonstrate that local inconsistency correlates with the generalization gap. Based on these findings, we propose Inconsistency-Aware Minimization (IAM), which incorporates local inconsistency into the training objective. We demonstrate that in standard supervised learning settings, IAM enhances generalization, achieving performance comparable to that of existing methods such as Sharpness-Aware Minimization. Furthermore, IAM exhibits efficacy in semi- and self-supervised learning scenarios, where the local inconsistency is computed from unlabeled data.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-05-29T13:56:17Z",
+    "updated": "2026-05-29T13:56:17Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31324v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31324v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "Estimating the generalization gap and developing optimization methods that improve generalization are crucial for deep learning models, for both theoretical understanding and practical applications.",
+      "engineering_relevance": "Potential relevance: literature and knowledge mining workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-inconsistency_aware_minimization_improving_generalization_with_unlabeled_data",
+      "paper_title": "Inconsistency-Aware Minimization: Improving Generalization with Unlabeled Data",
+      "paper_date": "2026-05-29",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-01T19:22:28",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-softsign_smooth_sign_in_your_optimizer_for_better_parameter_heterogeneity_handling",
+    "arxiv_id": "2605.31371v1",
+    "date": "2026-05-29",
+    "title": "Softsign: Smooth Sign in Your Optimizer For Better Parameter Heterogeneity Handling",
+    "authors": "Dmitrii Feoktistov, Timofey Belinsky, Andrey Veprikov, Amir Zainullin, Aleksandr Beznosikov",
+    "abstract": "Sign-based and LMO-inspired optimizers have recently attracted substantial attention in deep learning due to their strong performance and low memory footprint. However, their fixed-magnitude updates can hurt terminal convergence: they decouple update mechanisms from gradient magnitudes and fail to account for parameter heterogeneity, often leading to oscillation rather than convergence. We propose SoftSignum, a smooth relaxation of sign-based optimization that replaces the hard sign map with a temperature-controlled soft-sign transformation, enabling a parameter-wise transition from sign-like updates to magnitude-sensitive SGD-like steps. We complement it with an adaptive quantile-based temperature schedule and extend the same principle to matrix-valued optimizers, obtaining SoftMuon. We also develop a generalized geometry-relaxation framework based on strongly convex regularizers and Fenchel conjugates, proving convergence in stochastic non-convex setting. Experiments on diverse deep learning tasks, including LLM pretraining, show that SoftSignum and SoftMuon consistently improve over their hard sign-based counterparts and standard AdamW.",
     "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-05-28T16:38:21Z",
-    "updated": "2026-05-28T16:38:21Z",
+    "published": "2026-05-29T14:41:36Z",
+    "updated": "2026-05-29T14:41:36Z",
     "primary_category": "cs.LG",
     "categories": [
-      "cs.LG",
-      "cs.AI"
+      "cs.LG"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30201v1"
+        "url": "https://arxiv.org/abs/2605.31371v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30201v1"
+        "url": "https://arxiv.org/pdf/2605.31371v1"
       }
     ],
-    "score": 66,
+    "score": 65,
     "infographic": {
-      "key_insight": "HPO stabilizes sparse-reward RL by down-weighting negative-advantage updates and using mean-length normalization, with A-HPO automatically adapting that balance from batch statistics.",
-      "engineering_relevance": "It offers a minimal drop-in change to GRPO-style training that can improve early-stage learning efficiency without requiring a separate fixed hysteretic hyperparameter.",
+      "key_insight": "Sign-based and LMO-inspired optimizers have recently attracted substantial attention in deep learning due to their strong performance and low memory footprint.",
+      "engineering_relevance": "Potential relevance: ai scientific research workflows and research evaluation.",
       "method": [
-        "Reduce the update weight for negative-advantage responses to avoid destabilizing early sparse-reward training.",
-        "Replace per-response length normalization with mean-length normalization to decouple update scale from output length.",
-        "Use adaptive hysteresis (A-HPO) to set the negative-update weight from batch-level advantage-sign statistics."
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "In TeleLogs and Countdown experiments, A-HPO improved reward per update, reaching 0.84 final reward on TeleLogs and showing the largest gains in early, difficult sparse-reward settings across 1.5B–7B models.",
-      "watch_item": "Results come from sparse-verifiable-reward benchmarks, so the gains may depend on the reward sparsity pattern and on careful implementation of the hysteretic weighting and normalization scheme.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#ReinforcementLearning",
-        "#SparseRewards",
-        "#PolicyOptimization",
-        "#LLMTraining",
-        "#AdaptiveAlgorithms"
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-hpo_hysteretic_policy_optimization_for_stable_and_efficient_training_under_sparse_reward_r",
-      "paper_title": "HPO: Hysteretic Policy Optimization for Stable and Efficient Training under Sparse-Reward Regime",
-      "paper_date": "2026-05-28",
+      "paper_id": "2026-05-29-arxiv-softsign_smooth_sign_in_your_optimizer_for_better_parameter_heterogeneity_handling",
+      "paper_title": "Softsign: Smooth Sign in Your Optimizer For Better Parameter Heterogeneity Handling",
+      "paper_date": "2026-05-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-05-31T15:20:07",
+      "generated_at": "2026-06-01T19:22:28",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-05-28-arxiv-rl2ml_finite_rollout_surrogate_objectives_from_reinforcement_learning_to_maximum_likelihoo",
-    "arxiv_id": "2605.30154v1",
-    "date": "2026-05-28",
-    "title": "RL2ML: Finite-Rollout Surrogate Objectives from Reinforcement Learning to Maximum Likelihood",
-    "authors": "Yifu Zheng",
-    "abstract": "Correctness-based Reinforcement Learning with Verifiable Rewards (RLVR) trains language models from binary feedback on sampled outputs, but the objective optimized in expectation and the stochastic update geometry induced by finite rollout groups are often conflated. This paper develops RL2ML, a family of finite-rollout surrogate objectives with a closed-form, exactly unbiased gradient estimator. The family continuously connects standard reinforcement learning, maximum-likelihood-like training, and beyond-maximum-likelihood objectives while preserving estimator-objective alignment under a fixed rollout budget. We introduce the group-level update scale to characterize how a rollout group is reweighted after its empirical success count is observed, revealing a subcritical-supercritical update-scale transition that is hidden by population-level objective notation alone. Building on this distinction, calibrated metric-gain analysis and exact variance decomposition show that the best choice of surrogate objective is determined neither by proximity to maximum likelihood nor by the population-level weight alone. Instead, it depends jointly on the evaluation metric, local sensitivity, and estimator variance. The remaining degree of freedom in the surrogate objective family can therefore be formulated as a one-dimensional optimization problem rather than treated as an unconstrained hyperparameter.",
-    "category": "Scientific Machine Learning",
+    "id": "2026-05-29-arxiv-on_efficient_scaling_of_gnns_via_io_aware_layers_implementations",
+    "arxiv_id": "2605.31500v1",
+    "date": "2026-05-29",
+    "title": "On Efficient Scaling of GNNs via IO-Aware Layers Implementations",
+    "authors": "Daria Fomina, Daniil Krasylnikov, Alexey Boykov, Andrey Dolgovyazov, Vyacheslav Zhdanovskiy, Fedor Velikonivtsev",
+    "abstract": "Graph Neural Networks (GNNs) are bottlenecked by sparse, irregular memory access. Popular frameworks such as DGL and PyTorch Geometric support general message passing, but complex layers often materialize edge-wise intermediates, increasing memory traffic and limiting scalability on large graphs. We take an I/O- and arithmetic-intensity--centric view and show that widely used layers fall into three kernel families: SpMM-based convolutions, reduction-based aggregations, and attention-based layers (GATv2/Graph Transformer). For each family, we develop GPU kernels that reduce data movement, improve locality, and remain robust across realistic graphs. We also study graph reordering and find that its impact depends on the kernel mapping: it benefits neighbor-parallel (gather-dominated) kernels more consistently than feature-parallel designs. Empirically, our fused attention kernels reach up to $\\textbf{3.9}\\times$ speedup for Graph Transformer (median $\\textbf{1.6}\\times$), with Tensor Core (block-sparse) variants up to $\\textbf{7.3}\\times$ on locally dense graphs; for GATv2 we reach up to $\\textbf{8.5}\\times$ speedup (median $\\textbf{2.0}\\times$) while reducing peak memory by up to $\\textbf{76}\\times$ (median $\\textbf{6}\\times$). Our degree-aware reduction kernels achieve up to $\\textbf{10}\\times$ speedup (median $\\textbf{2.6}\\times$). For SpMM-based layers, properly cached cuSPARSE achieves up to $\\textbf{8}\\times$ speedup over DGL and outperforms evaluated custom baselines in the majority of evaluations. We release our implementations as drop-in replacements to support reproducible, hardware-aware GNN acceleration.",
+    "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-05-28T16:14:45Z",
-    "updated": "2026-05-28T16:14:45Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30154v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30154v1"
-      }
-    ],
-    "score": 66,
-    "infographic": {
-      "key_insight": "RL2ML shows that finite-rollout reinforcement learning and maximum-likelihood-style training can be linked by a family of surrogate objectives with exactly unbiased gradients, so the right objective depends on rollout-level update geometry rather than just the population objective.",
-      "engineering_relevance": "This gives practitioners a principled way to choose and tune training objectives under a fixed rollout budget, improving stability and metric alignment in reward-based language-model training.",
-      "method": [
-        "Defines a finite-rollout surrogate objective family spanning RL, ML-like, and beyond-ML regimes",
-        "Derives a closed-form, exactly unbiased gradient estimator for rollout-group updates",
-        "Introduces group-level update scale plus calibrated metric-gain and variance analysis to select the best surrogate"
-      ],
-      "evidence_signal": "The paper uses theoretical analysis of estimator-objective alignment, exact variance decomposition, and calibrated metric-gain reasoning under finite rollout groups rather than reporting a new benchmark dataset.",
-      "watch_item": "The optimal surrogate is metric- and variance-dependent, so implementing it requires careful evaluation choice and variance estimation; the one-dimensional tuning problem still needs reliable calibration.",
-      "hashtags": [
-        "#ScientificMachineLearning",
-        "#ReinforcementLearning",
-        "#MaximumLikelihood",
-        "#LanguageModels",
-        "#Optimization"
-      ],
-      "paper_id": "2026-05-28-arxiv-rl2ml_finite_rollout_surrogate_objectives_from_reinforcement_learning_to_maximum_likelihoo",
-      "paper_title": "RL2ML: Finite-Rollout Surrogate Objectives from Reinforcement Learning to Maximum Likelihood",
-      "paper_date": "2026-05-28",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-05-31T15:20:09",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-efficient_test_time_finetuning_of_llms_via_convex_reconstruction_and_gradient_caching",
-    "arxiv_id": "2605.30337v1",
-    "date": "2026-05-28",
-    "title": "Efficient Test-Time Finetuning of LLMs via Convex Reconstruction and Gradient Caching",
-    "authors": "Alaa Khamis, Alaa Maalouf",
-    "abstract": "Test-time finetuning (TTFT) is a rapidly evolving paradigm that adapts a language model to each prompt by retrieving related sequences, updating the model on them, and then evaluating the prompt. However, TTFT is only practical if it is fast: selection and finetuning both happen per query, making each a direct bottleneck. Existing methods trade speed for quality: fast retrieval is often redundant, while stronger diversity-aware selection adds prohibitive per-query cost. We introduce HullFT, a geometric approach to TTFT that addresses both bottlenecks. Given a query, HullFT first represents the query embedding as a sparse convex combination of few training sequences, using efficient projection-free Frank-Wolfe optimization. This yields a support set that is inherently relevant and diverse. We then convert the fractional convex weights into an exact integer multiset for finetuning through a geometric integerization procedure. The resulting multiplicities naturally create repeated examples, which we exploit with Gradient Reuse to amortize forward-backward computation across repeated finetuning steps. Our experiments show that HullFT improves the quality-efficiency tradeoff over current state-of-the-art TTFT methods, achieving lower bits-per-byte at substantially lower total runtime.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-05-28T17:59:01Z",
-    "updated": "2026-05-28T17:59:01Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30337v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30337v1"
-      }
-    ],
-    "score": 65,
-    "infographic": {
-      "key_insight": "HullFT speeds up test-time finetuning by selecting a small, diverse support set through convex geometry and then reusing gradients across repeated examples.",
-      "engineering_relevance": "It makes per-query adaptation of LLMs more practical by reducing both retrieval overhead and finetuning cost, improving the quality–latency tradeoff.",
-      "method": [
-        "Represent the query as a sparse convex combination of training sequences using Frank-Wolfe optimization.",
-        "Convert fractional convex weights into an exact integer multiset for finetuning.",
-        "Reuse gradients for repeated examples to amortize forward-backward computation."
-      ],
-      "evidence_signal": "The abstract reports lower bits-per-byte at substantially lower total runtime than current state-of-the-art TTFT methods.",
-      "watch_item": "The approach depends on efficient retrieval, convex optimization, and careful integerization, so implementation complexity and approximation quality may affect real-world gains.",
-      "hashtags": [
-        "#LLM",
-        "#TestTimeFinetuning",
-        "#GradientCaching",
-        "#FrankWolfe",
-        "#EfficientML"
-      ],
-      "paper_id": "2026-05-28-arxiv-efficient_test_time_finetuning_of_llms_via_convex_reconstruction_and_gradient_caching",
-      "paper_title": "Efficient Test-Time Finetuning of LLMs via Convex Reconstruction and Gradient Caching",
-      "paper_date": "2026-05-28",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-05-31T15:20:16",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-how_lora_remembers_a_parametric_memory_law_for_llm_finetuning",
-    "arxiv_id": "2605.30260v1",
-    "date": "2026-05-28",
-    "title": "How LoRA Remembers? A Parametric Memory Law for LLM Finetuning",
-    "authors": "Ziwen Xu, Haiwen Hong, Linsong Yu, Benglei Cui, Longtao Huang, Hui Xue",
-    "abstract": "Large Language Models (LLMs) must continuously learn and update knowledge to remain effective in dynamic real-world environments. While Low-Rank Adaptation (LoRA) is widely used for such memory updates, existing studies mainly rely on qualitative downstream evaluations, leaving the quantitative capacity limits and underlying dynamics of exact parametric memory largely unexplored. To bridge this gap, we employ LoRA as a controlled memory capacity probe within the latent space to systematically quantify exact parametric memory. We introduce the Parametric Memory Law, a robust power law linking loss reduction Delta L to effective parameters and sequence length. At the token level, fine-grained analysis reveals a deterministic phase transition, demonstrating that a prediction probability of p > 0.5 constitutes a sufficient condition for verbatim recall under greedy decoding. Driven by these insights, we introduce MemFT, a threshold-guided optimization strategy that dynamically redistributes the training budget toward sub-threshold tokens. Empirical evaluations demonstrate that MemFT can enhance memory fidelity and efficiency. Code will be released at https://github.com/zjunlp/ParametricMemoryLaw.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-05-28T17:22:24Z",
-    "updated": "2026-05-28T17:22:24Z",
-    "primary_category": "cs.CL",
-    "categories": [
-      "cs.CL",
-      "cs.AI",
-      "cs.CV",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30260v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30260v1"
-      }
-    ],
-    "score": 65,
-    "infographic": {
-      "key_insight": "LoRA can be treated as a controlled probe of exact parametric memory, revealing a power-law scaling between memory gain, effective parameters, and sequence length.",
-      "engineering_relevance": "The paper offers a practical way to predict and improve LLM finetuning memory retention, which can make continual knowledge updates more efficient and reliable.",
-      "method": [
-        "Quantify exact parametric memory using LoRA in the latent space.",
-        "Fit a Parametric Memory Law: loss reduction ΔL follows a robust power law with effective parameters and sequence length.",
-        "Use token-level analysis to identify a phase transition and guide MemFT to focus training on sub-threshold tokens."
-      ],
-      "evidence_signal": "The abstract reports empirical evaluations showing that MemFT improves both memory fidelity and training efficiency.",
-      "watch_item": "The threshold rule p > 0.5 is derived under greedy decoding, so behavior may differ with other decoding settings or non-verbatim tasks.",
-      "hashtags": [
-        "#LoRA",
-        "#LLMFinetuning",
-        "#MemoryLaw",
-        "#ParametricMemory",
-        "#MemFT"
-      ],
-      "paper_id": "2026-05-28-arxiv-how_lora_remembers_a_parametric_memory_law_for_llm_finetuning",
-      "paper_title": "How LoRA Remembers? A Parametric Memory Law for LLM Finetuning",
-      "paper_date": "2026-05-28",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-05-31T15:20:18",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-in_context_reward_adaptation_for_robust_preference_modeling",
-    "arxiv_id": "2605.30323v1",
-    "date": "2026-05-28",
-    "title": "In-Context Reward Adaptation for Robust Preference Modeling",
-    "authors": "Zhenyu Sun, Zheng Xu, Ermin Wei",
-    "abstract": "Reinforcement Learning from Human Feedback (RLHF) typically relies on static reward models to align Large Language Models with human preferences. However, human values are inherently diverse and heterogeneous, and a single reward model often lacks the robustness required to generalize to unseen preference domains. While existing multi-reward frameworks attempt to address this, they are often restricted to a fixed set of known domains and fail to adapt to unseen human distributions without costly retraining. In this work, we propose In-Context Reward Adaptation, a transformer-based framework designed to model diverse and unseen human preferences on the fly. By leveraging the in-context learning capabilities of transformers, our approach adaptively infers the underlying reward structure from a small set of preference demonstrations. We demonstrate that while a standard transformer architecture is insufficient for this task by characterizing an asymptotic bias to the ground-truth, incorporating human response time as an auxiliary input signal enables the model to successfully adapt to preferences from previously unseen domains. Our findings show that this approach provides a more robust foundation for preference modeling, allowing for the representation of heterogeneous rewards and preference distribution shift, and offering a scalable path toward more flexible human-AI alignment.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-05-28T17:56:54Z",
-    "updated": "2026-05-28T17:56:54Z",
+    "published": "2026-05-29T16:22:45Z",
+    "updated": "2026-05-29T16:22:45Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG",
@@ -696,258 +329,416 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30323v1"
+        "url": "https://arxiv.org/abs/2605.31500v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30323v1"
-      }
-    ],
-    "score": 64,
-    "infographic": {
-      "key_insight": "A transformer can adapt reward modeling to new human preference domains in context, but it needs an extra cue—human response time—to overcome bias and generalize robustly.",
-      "engineering_relevance": "This enables more scalable RLHF systems that handle heterogeneous, previously unseen preference distributions without retraining separate reward models.",
-      "method": [
-        "Use a transformer-based in-context reward learner fed with a small set of preference demonstrations.",
-        "Condition the model on human response time as an auxiliary signal to infer latent reward structure.",
-        "Test adaptation to unseen preference domains rather than only fixed known domains."
-      ],
-      "evidence_signal": "The abstract reports a characterizable asymptotic bias for a standard transformer, and shows that adding response time allows successful adaptation to previously unseen preference domains.",
-      "watch_item": "Performance may depend on the availability and quality of response-time signals, which can be noisy or hard to capture consistently in deployment.",
-      "hashtags": [
-        "#RLHF",
-        "#PreferenceModeling",
-        "#InContextLearning",
-        "#Transformers",
-        "#HumanAIAlignment"
-      ],
-      "paper_id": "2026-05-28-arxiv-in_context_reward_adaptation_for_robust_preference_modeling",
-      "paper_title": "In-Context Reward Adaptation for Robust Preference Modeling",
-      "paper_date": "2026-05-28",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-05-31T15:20:20",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-mean_field_diffuser_scaling_offline_marl_to_thousands_of_agents",
-    "arxiv_id": "2605.30190v1",
-    "date": "2026-05-28",
-    "title": "Mean-Field Diffuser: Scaling Offline MARL to Thousands of Agents",
-    "authors": "Wenhao Li, Xiangfeng Wang, Bo Jin",
-    "abstract": "Diffusion-based planning has achieved strong results in single-agent offline reinforcement learning, yet scaling to many-agent systems remains intractable due to the curse of dimensionality in the joint trajectory space. We introduce MF-Diffuser, a framework that lifts trajectory planning to the Wasserstein space of trajectory distributions, where the propagation of chaos ensures a small representative subset of agents captures the full population dynamics. Our approach features a value-weighted chaotic entropy objective that reconciles generative fidelity with return maximization, and a hierarchical coarse-to-fine strategy that progressively grows the agent population during denoising. We establish end-to-end suboptimality bounds with four interpretable terms, revealing that mean-field approximation error scales as $O(H^2/\\sqrt{N})$ while offline distribution shift provably does not grow with population size $N$, and prove the generated policy is an approximate mean-field Nash equilibrium with explicit convergence guarantees. Experiments on three mean-field RL benchmarks -- spanning stage games, sequential dynamics, and adversarial team competition -- show MF-Diffuser achieves the best return in the majority of settings, with the largest gains on suboptimal offline data and at extreme scales ($N \\geq 10^3$).",
-    "category": "Modeling and Simulation",
-    "source": "arXiv",
-    "published": "2026-05-28T16:32:56Z",
-    "updated": "2026-05-28T16:32:56Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30190v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30190v1"
-      }
-    ],
-    "score": 64,
-    "infographic": {
-      "key_insight": "MF-Diffuser makes offline multi-agent planning scalable by diffusing over trajectory distributions in Wasserstein space, using mean-field structure to approximate thousands of agents with strong theoretical guarantees.",
-      "engineering_relevance": "This provides a practical path to deploy offline MARL in large-scale engineered systems where joint-state planning is otherwise intractable, while preserving stability and performance bounds.",
-      "method": [
-        "Lifts planning from joint trajectories to trajectory distributions in Wasserstein space.",
-        "Uses a value-weighted chaotic entropy objective to balance return maximization and generative fidelity.",
-        "Applies a hierarchical coarse-to-fine denoising strategy that grows the agent population progressively."
-      ],
-      "evidence_signal": "On three mean-field RL benchmarks spanning stage games, sequential dynamics, and adversarial team competition, MF-Diffuser achieved the best return in most settings, especially with suboptimal offline data and at scales of N ≥ 10^3.",
-      "watch_item": "The approach relies on mean-field assumptions and propagation-of-chaos behavior, so performance may degrade when agent interactions are highly non-exchangeable or the representative subset is poorly chosen.",
-      "hashtags": [
-        "#OfflineMARL",
-        "#MeanField",
-        "#DiffusionModel",
-        "#WassersteinSpace",
-        "#ScalableAI"
-      ],
-      "paper_id": "2026-05-28-arxiv-mean_field_diffuser_scaling_offline_marl_to_thousands_of_agents",
-      "paper_title": "Mean-Field Diffuser: Scaling Offline MARL to Thousands of Agents",
-      "paper_date": "2026-05-28",
-      "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-05-31T15:20:23",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-neural_operator_based_surrogate_model_for_cfd_helical_coil_steam_generator_in_small_modula",
-    "arxiv_id": "2605.30277v1",
-    "date": "2026-05-28",
-    "title": "Neural Operator-Based Surrogate Model for CFD:Helical Coil Steam Generator in Small Modular Reactor",
-    "authors": "Minseo Lee, Seongmin Oh, Chaehyeon Song, Bumjin Cho, Shilaj Baral, Sangam Khanal",
-    "abstract": "Real-time thermal-hydraulic simulation is essential for digital twin (DT) technology that supports the safe and efficient operation of small modular reactors (SMRs). Computational fluid dynamics (CFD) provides high-fidelity flow analysis, but its computational cost prevents direct use in DT applications. AI-based surrogate modeling has been actively investigated to address this limitation, yet neural operator--based surrogates for CFD-level transient analysis of SMR-specific geometries have not been reported. This study presents an integrated framework that combines a reduced-order model (ROM) with neural operators, applied to the helical coil steam generator (HCSG) of the System-integrated Modular Advanced Reactor (SMART). Two ROM strategies tailored to each CFD data type were compared, an MLP-based autoencoder (AE) for unstructured mesh data and a convolutional autoencoder (CAE) for structured mesh data, and each was coupled with the deep operator network (DeepONet) to construct the latent DeepONet (L-DeepONet). The Fourier neural operator (FNO) was additionally adopted for comparison. A multi-scale technique was incorporated into both frameworks to mitigate spectral bias and improve the prediction of Kármán vortex streets developing inside the HCSG. The multi-scale L-DeepONet captured the instantaneous periodic vortex dynamics in both velocity and pressure fields, while the FNO and its multi-scale variant predicted the time-averaged mean flow and provided reliable pressure drop estimates. These complementary characteristics provide a practical model-selection guideline that links each architecture to specific DT objectives based on CFD data type and the required level of flow resolution.",
-    "category": "Modeling and Simulation",
-    "source": "arXiv",
-    "published": "2026-05-28T17:33:22Z",
-    "updated": "2026-05-28T17:33:22Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "physics.flu-dyn"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30277v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30277v1"
-      }
-    ],
-    "score": 63,
-    "infographic": {
-      "key_insight": "A neural-operator surrogate combined with reduced-order latent models can approximate transient CFD for an SMR helical coil steam generator, with different architectures excelling at different flow-resolution goals.",
-      "engineering_relevance": "This enables faster thermal-hydraulic prediction for digital twins in small modular reactors, supporting real-time monitoring and design decisions without full CFD cost.",
-      "method": [
-        "Built ROM encoders for CFD data: MLP autoencoder for unstructured meshes and convolutional autoencoder for structured meshes.",
-        "Coupled the latent spaces with DeepONet to form L-DeepONet; compared against Fourier Neural Operator (FNO).",
-        "Added a multi-scale strategy to reduce spectral bias and better capture Kármán vortex street dynamics."
-      ],
-      "evidence_signal": "The abstract reports that multi-scale L-DeepONet captured instantaneous periodic vortex dynamics in velocity and pressure, while FNO variants were more reliable for mean flow and pressure-drop prediction.",
-      "watch_item": "Performance appears architecture- and data-type-dependent, so selecting the wrong surrogate for a DT objective could miss either transient vortex details or accurate mean-flow/pressure-drop behavior.",
-      "hashtags": [
-        "#DigitalTwin",
-        "#CFD",
-        "#NeuralOperator",
-        "#SMR",
-        "#SurrogateModel"
-      ],
-      "paper_id": "2026-05-28-arxiv-neural_operator_based_surrogate_model_for_cfd_helical_coil_steam_generator_in_small_modula",
-      "paper_title": "Neural Operator-Based Surrogate Model for CFD:Helical Coil Steam Generator in Small Modular Reactor",
-      "paper_date": "2026-05-28",
-      "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-05-31T15:20:25",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-05-28-arxiv-when_should_models_change_their_minds_contextual_belief_management_in_large_language_model",
-    "arxiv_id": "2605.30219v1",
-    "date": "2026-05-28",
-    "title": "When Should Models Change Their Minds? Contextual Belief Management in Large Language Models",
-    "authors": "Haoming Xu, Weihong Xu, Zongrui Li, Mengru Wang, Yunzhi Yao, Chiyu Wu",
-    "abstract": "Long-horizon interactions require language models to manage accumulating information: when to update their state, when to preserve their state, and what to ignore. We study this challenge as \\textbf{Contextual Belief Management (CBM)}: maintaining a predicted belief state aligned with formal evidence while isolating task-irrelevant noise. To make CBM measurable, we introduce BeliefTrack, a closed-world benchmark spanning Rule Discovery and Circuit Diagnosis, where a finite belief space and symbolic verifiers enable exact turn-level evaluation. BeliefTrack diagnoses three failures: Failed Stay, Failed Update, and Failed Isolation. Across multiple LLMs, vanilla models exhibit severe CBM failures, while explicit belief-tracking prompts provide limited gains. In contrast, reinforcement learning with belief-state rewards reduces failure rates by 70.9\\% on average. Further probing reveals latent belief-state dynamics behind these failures, and representation-level steering reduces failure rates by 46.1\\% across two tasks\\footnote{Code is coming soon at https://github.com/zjunlp/CBM.",
-    "category": "Scientific Discovery",
-    "source": "arXiv",
-    "published": "2026-05-28T16:52:04Z",
-    "updated": "2026-05-28T16:52:04Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.CL",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30219v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30219v1"
+        "url": "https://arxiv.org/pdf/2605.31500v1"
       }
     ],
     "score": 62,
     "infographic": {
-      "key_insight": "Large language models struggle to maintain the right belief state over long interactions, and explicit belief-aware training can substantially reduce errors in when to update, preserve, or ignore information.",
-      "engineering_relevance": "For deployed AI systems, this suggests that robust long-horizon assistants may need structured state management and reward signals tied to belief consistency, not just better prompting.",
+      "key_insight": "Graph Neural Networks (GNNs) are bottlenecked by sparse, irregular memory access.",
+      "engineering_relevance": "Potential relevance: ai scientific research workflows and research evaluation.",
       "method": [
-        "Defines Contextual Belief Management (CBM) as maintaining evidence-aligned beliefs while filtering irrelevant noise.",
-        "Introduces BeliefTrack, a closed-world benchmark with finite belief states and symbolic verifiers for exact turn-level scoring.",
-        "Tests vanilla LLMs, belief-tracking prompts, reinforcement learning with belief-state rewards, and representation-level steering."
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "BeliefTrack covers Rule Discovery and Circuit Diagnosis, enabling exact turn-level evaluation and revealing that RL with belief-state rewards cuts failure rates by 70.9% on average.",
-      "watch_item": "Results come from closed-world tasks with symbolic verification, so gains may not transfer directly to open-ended real-world dialogue or discovery settings.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#LLM",
-        "#BeliefTracking",
+        "#AIScientificResearch",
+        "#AIForScience",
         "#ScientificDiscovery",
-        "#ReinforcementLearning",
-        "#LongContext"
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-when_should_models_change_their_minds_contextual_belief_management_in_large_language_model",
-      "paper_title": "When Should Models Change Their Minds? Contextual Belief Management in Large Language Models",
-      "paper_date": "2026-05-28",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-05-31T15:20:28",
+      "paper_id": "2026-05-29-arxiv-on_efficient_scaling_of_gnns_via_io_aware_layers_implementations",
+      "paper_title": "On Efficient Scaling of GNNs via IO-Aware Layers Implementations",
+      "paper_date": "2026-05-29",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-01T19:22:28",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-05-28-arxiv-modularizing_educational_llm_agency_for_fostering_responsible_learning_assistance",
-    "arxiv_id": "2605.30187v1",
-    "date": "2026-05-28",
-    "title": "Modularizing Educational LLM-Agency for Fostering Responsible Learning Assistance",
-    "authors": "Julius Gabelmann, Felix Jahn, Kevin Baum, Sophie van Rossum, Emely Wuenscher, Timo P. Gros",
-    "abstract": "The widespread adoption of AI chatbots in education will drastically change learning, making responsible deployment a critical concern. While large language models (LLMs) might have access to sources discussing insights from educational sciences, they are not particularly inclined to adhere to pedagogical concepts, risking negative effects on the learning process, such as a loss of transfer capabilities, critical thinking, or creativity. In this paper, we introduce an agentic AI chatbot architecture assisting students with exercise solving, specifically designed to contribute to more responsible AI use in education. We base our conceptual development on the identification of several desiderata for responsible LLM-based educational systems, argue for the structural shortcomings inherent in monolithic, out-of-the-box solutions, and instead suggest modularizing the agentic architecture. We propose specific modules for different stages of exercise solving, enabling incorporation of targeted pedagogical advice, guiding students through the learning process in a more controllable, transparent, and overseeable manner.",
-    "category": "AI scientific research",
+    "id": "2026-05-29-arxiv-autosci_a_memory_centric_agentic_system_for_the_full_scientific_research_lifecycle",
+    "arxiv_id": "2605.31468v1",
+    "date": "2026-05-29",
+    "title": "AutoSci: A Memory-Centric Agentic System for the Full Scientific Research Lifecycle",
+    "authors": "Weitong Qian, Beicheng Xu, Zhongao Xie, Bowen Fan, Guozheng Tang, Jiale Chen",
+    "abstract": "Scientific research has traditionally been human-intensive, requiring researchers to coordinate literature, ideas, experiments, manuscripts, and review responses across long project cycles. The rise of LLM-based scientific agents creates an opportunity to automate this process. Such a system must support the full research lifecycle, maintain structured persistent memory across projects, and improve its own research procedures over time. However, existing systems either partially satisfy or fail to satisfy these requirements, leaving a gap for a unified automated scientific research system. As a result, we present AutoSci, a memory-centric agentic system for the full scientific research lifecycle. AutoSci is organized around four modules. SciMem provides schema-governed research memory, separating Long-Term Knowledge Memory for reusable scientific knowledge from Active Research Memory for project-level artifacts such as ideas, experiments, manuscripts, and reviews. SciFlow executes a five-stage lifecycle from literature understanding to rebuttal through a harness that controls state, context, verification, feedback, and orchestration. SciDAG augments difficult skills with DAG-shaped multi-agent operators and reusable stage-specific templates. SciEvolve converts feedback signals from users, experiments, reviews, and external environments into versioned updates to SciMem organization, SciFlow skills, and SciDAG templates. Together, these modules make AutoSci a persistent research environment that can execute, remember, and evolve across research projects. The code repository is available at https://github.com/skyllwt/AutoSci.",
+    "category": "Literature and Knowledge Mining",
     "source": "arXiv",
-    "published": "2026-05-28T16:31:32Z",
-    "updated": "2026-05-28T16:31:32Z",
+    "published": "2026-05-29T16:00:04Z",
+    "updated": "2026-05-29T16:00:04Z",
     "primary_category": "cs.AI",
     "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31468v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31468v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "Scientific research has traditionally been human-intensive, requiring researchers to coordinate literature, ideas, experiments, manuscripts, and review responses across long project cycles.",
+      "engineering_relevance": "Potential relevance: literature and knowledge mining workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-autosci_a_memory_centric_agentic_system_for_the_full_scientific_research_lifecycle",
+      "paper_title": "AutoSci: A Memory-Centric Agentic System for the Full Scientific Research Lifecycle",
+      "paper_date": "2026-05-29",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-01T19:22:29",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-longtracerl_learning_long_context_reasoning_from_search_agent_trajectories_with_rubric_rew",
+    "arxiv_id": "2605.31584v1",
+    "date": "2026-05-29",
+    "title": "LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards",
+    "authors": "Nianyi Lin, Jiajie Zhang, Lei Hou, Juanzi Li",
+    "abstract": "Long-context reasoning remains a central challenge for large language models, which often fail to locate and integrate key information in extensive distracting content. Reinforcement learning with verifiable rewards (RLVR) has shown promise for this task, yet existing methods are limited by low-confusability distractors and sparse, outcome-only reward signals that cannot supervise intermediate reasoning steps. To address these issues, we introduce \\textsc{LongTraceRL}. For data construction, we generate multi-hop questions via knowledge graph random walks and leverage search agent trajectories to build \\emph{tiered distractors}: documents the agent read but did not cite (high confusability) and documents that appeared in search results but were never opened (low confusability), producing training contexts that are far more challenging than those built by random sampling or one-shot search. For reward design, we propose a \\emph{rubric reward} that uses the gold entities along each reasoning chain as fine-grained, entity-level process supervision. This rubric reward is applied only to responses with correct final answers (positive-only strategy), distinguishing the reasoning quality among correct responses and preventing reward hacking. Experiments on three reasoning LLMs (4B--30B) across five long-context benchmarks demonstrate that \\textsc{LongTraceRL} consistently outperforms strong baselines and encourages comprehensive, evidence-grounded reasoning. Codes, datasets and models are available at \\href{https://github.com/THU-KEG/LongTraceRL}{https://github.com/THU-KEG/LongTraceRL}.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-05-29T17:51:40Z",
+    "updated": "2026-05-29T17:51:40Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31584v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31584v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "Long-context reasoning remains a central challenge for large language models, which often fail to locate and integrate key information in extensive distracting content.",
+      "engineering_relevance": "Potential relevance: literature and knowledge mining workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-longtracerl_learning_long_context_reasoning_from_search_agent_trajectories_with_rubric_rew",
+      "paper_title": "LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards",
+      "paper_date": "2026-05-29",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-01T19:22:30",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-if_llms_have_human_like_attributes_then_so_does_age_of_empires_ii",
+    "arxiv_id": "2605.31514v1",
+    "date": "2026-05-29",
+    "title": "If LLMs Have Human-Like Attributes, Then So Does Age of Empires II",
+    "authors": "Adrian de Wynter",
+    "abstract": "Much research has been carried out on large language models (LLMs) and LLM-powered agentic workflows. However, many works within the field state emergence of, ascribe to, or assume, generalised anthropomorphic attributes to them (e.g., morality or understanding of natural language). Our goal is not to argue in favour or against the existence of these attributes, but to point out that these conclusions could be incorrect. For this we build and train a simple neural network on the videogame Age of Empires II, and note that any entity in a sufficiently-powerful substrate, such as LEGO or the Greater Boston Area, could also present such attributes. Hence, the purported anthropomorphic attributes of LLMs are empirically non-unique: although some properties (e.g., responses to prompts) could remain constant, others, such as the interpretation of their perceived behaviour, might change with the substrate. Thus, any empirically-grounded discussion requires explicit measurement criteria; otherwise the interpretation is left to the representation. We then show that assuming that these attributes exist or not in a system, independent of the substrate and in a generalised way, leads to either circular or uninformative conclusions, regardless of the experimenter's viewpoint on the subject. Finally we propose a 'null' assumption, where one assumes LLM non-uniqueness instead of assuming anthropomorphic attributes to set up an experiment, along with examples of it. We also discuss potential objections to our work, briefly survey the field, and prove that \\textit{Age of Empires II} is functionally- and Turing-complete.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-05-29T16:31:31Z",
+    "updated": "2026-05-29T16:31:31Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
       "cs.AI",
       "cs.CY"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30187v1"
+        "url": "https://arxiv.org/abs/2605.31514v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30187v1"
+        "url": "https://arxiv.org/pdf/2605.31514v1"
       }
     ],
-    "score": 62,
+    "score": 60,
     "infographic": {
-      "key_insight": "The paper argues that educational chatbots should be built as modular agentic systems so they can better align exercise help with pedagogical goals like transfer, critical thinking, and creativity.",
-      "engineering_relevance": "For AI-in-education deployments, modularizing the chatbot workflow makes behavior more controllable, transparent, and easier to tune for responsible learning assistance.",
+      "key_insight": "Much research has been carried out on large language models (LLMs) and LLM-powered agentic workflows.",
+      "engineering_relevance": "Potential relevance: ai scientific research workflows and research evaluation.",
       "method": [
-        "Identify desiderata for responsible LLM-based educational systems.",
-        "Analyze why monolithic, out-of-the-box LLM solutions are structurally insufficient.",
-        "Propose stage-specific modules for exercise solving that can embed targeted pedagogical guidance."
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "The abstract describes a conceptual architecture and motivation paper, not an empirical evaluation or benchmark result.",
-      "watch_item": "A modular design may improve oversight, but its real educational impact still depends on careful integration, testing, and alignment of each module with teaching practice.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#AIinEducation",
-        "#LLMAgents",
-        "#ResponsibleAI",
-        "#LearningScience",
-        "#EdTech"
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-modularizing_educational_llm_agency_for_fostering_responsible_learning_assistance",
-      "paper_title": "Modularizing Educational LLM-Agency for Fostering Responsible Learning Assistance",
-      "paper_date": "2026-05-28",
+      "paper_id": "2026-05-29-arxiv-if_llms_have_human_like_attributes_then_so_does_age_of_empires_ii",
+      "paper_title": "If LLMs Have Human-Like Attributes, Then So Does Age of Empires II",
+      "paper_date": "2026-05-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-05-31T15:20:30",
+      "generated_at": "2026-06-01T19:22:30",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-05-28-arxiv-on_distributional_reinforcement_learning_in_chaotic_dynamical_systems",
-    "arxiv_id": "2605.30160v1",
-    "date": "2026-05-28",
-    "title": "On Distributional Reinforcement Learning in Chaotic Dynamical Systems",
-    "authors": "James Rudd-Jones, Mirco Musolesi, María Pérez-Ortiz",
-    "abstract": "Chaotic dynamical systems pose a fundamental challenge for Reinforcement Learning (RL): exponential sensitivity to initial conditions induces high-variance bootstrap targets and poorly conditioned gradient updates. Chaotic dynamics arise across scientific and engineering domains, from fluid flows and climate systems to multi-agent systems, where reliable learning is highly desirable. Standard RL methods optimise expected returns through scalar value functions, implicitly averaging over diverging trajectories and entangling trajectory level instability with the learning objective. We show that under mild statistical stability assumptions, the return distribution evolves more regularly than individual trajectories when measured under the $1$-Wasserstein metric, yielding a smoother distributional Bellman objective. By aligning optimisation with this measure level structure, distributional RL provides better conditioned learning. We offer a principled explanation for the advantages of distributional methods in chaotic systems and the geometries of RL objectives under chaos.",
+    "id": "2026-05-29-arxiv-pithtrain_a_compact_and_agent_native_moe_training_system",
+    "arxiv_id": "2605.31463v1",
+    "date": "2026-05-29",
+    "title": "PithTrain: A Compact and Agent-Native MoE Training System",
+    "authors": "Ruihang Lai, Hao Kang, Haozhan Tang, Akaash R. Parthasarathy, Zichun Yu, Junru Shao",
+    "abstract": "Mixture-of-Experts (MoE) has become the dominant architecture for frontier language models. To meet this demand, production frameworks have built optimized MoE training stacks over years of engineering effort. Yet evolving these stacks for new architectures and system optimizations remains expensive. With the rise of AI coding agents, they could automate parts of training-framework development and accelerate this evolution. But applying them to these existing frameworks carries hidden costs, invisible to today's throughput-only evaluations. We name this missing dimension agent-task efficiency (ATE): the cost of using coding agents to understand, operate, and extend a framework. Grounded in four agent-native design principles, we build PithTrain, a compact, agent-native MoE training framework. We further introduce ATE-Bench, covering real-world training-framework tasks. Our evaluation shows PithTrain matches the throughput of production frameworks, and on ATE-Bench, PithTrain enables higher agent-task efficiency, with up to 62% fewer Agent Turns and 64% less Active GPU Time.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-05-29T15:52:58Z",
+    "updated": "2026-05-29T15:52:58Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.DC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31463v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31463v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "Mixture-of-Experts (MoE) has become the dominant architecture for frontier language models.",
+      "engineering_relevance": "Potential relevance: ai scientific research workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-pithtrain_a_compact_and_agent_native_moe_training_system",
+      "paper_title": "PithTrain: A Compact and Agent-Native MoE Training System",
+      "paper_date": "2026-05-29",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-01T19:22:30",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-scalable_inference_time_annealing_with_surrogate_likelihood_estimators",
+    "arxiv_id": "2605.31498v1",
+    "date": "2026-05-29",
+    "title": "Scalable Inference-Time Annealing with Surrogate Likelihood Estimators",
+    "authors": "Daniel Peñaherrera, Rishal Aggarwal, David Ryan Koes",
+    "abstract": "A long standing challenge in computational chemistry and biophysics is efficiently sampling the Boltzmann distribution of molecules. Advances in generative modeling have been proposed to address the limitations of conventional sampling techniques by eliminating the computational cost of simulation. A promising direction is iteratively finetuning diffusion models along a temperature ladder whereby training data is generated via importance sampling during inference-time annealing. Unfortunately, these methods require computing a divergence over the score field to estimate importance weights, rendering them intractable for larger systems. Here we present scalable inference-time annealing (SITA), which retrains flow-based models to generate samples at progressively lower temperatures using an energy-based model to facilitate fast surrogate likelihoods. We demonstrate state-of-the-art performance on both Alanine Dipeptide and Alanine Tripeptide while avoiding costly divergence terms. Our code is available at: https://github.com/countrsignal/sita.git",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-05-29T16:20:59Z",
+    "updated": "2026-05-29T16:20:59Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "q-bio.BM"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31498v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31498v1"
+      }
+    ],
+    "score": 58,
+    "infographic": {
+      "key_insight": "A long standing challenge in computational chemistry and biophysics is efficiently sampling the Boltzmann distribution of molecules.",
+      "engineering_relevance": "Potential relevance: scientific machine learning workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-scalable_inference_time_annealing_with_surrogate_likelihood_estimators",
+      "paper_title": "Scalable Inference-Time Annealing with Surrogate Likelihood Estimators",
+      "paper_date": "2026-05-29",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-06-01T19:22:31",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-a_tight_theory_of_error_feedback_algorithms_in_distributed_optimization",
+    "arxiv_id": "2605.31594v1",
+    "date": "2026-05-29",
+    "title": "A Tight Theory of Error Feedback Algorithms in Distributed Optimization",
+    "authors": "Daniel Berg Thomsen, Adrien Taylor, Aymeric Dieuleveut",
+    "abstract": "Communication costs are a major bottleneck in distributed learning and first-order optimization. A common approach to alleviate this issue is to compress the gradient information exchanged between agents. However, such compression typically degrades the convergence guarantees of gradient-based methods. Error feedback mechanisms provide a simple and computationally cheap remedy for this issue, but numerous variants have been proposed, and their relative performance remains poorly understood. This paper provides tight convergence analyses for two of the main error-feedback algorithms from the literature, the classic Error Feedback method (EF) and Error Feedback 21 (EF21), by identifying optimal step-size choices and constructing optimal Lyapunov functions tailored to each method. The results hold independently of the number of agents and recover the known best guarantees possible in the single-agent regime.",
     "category": "Literature and Knowledge Mining",
     "source": "arXiv",
-    "published": "2026-05-28T16:17:32Z",
-    "updated": "2026-05-28T16:17:32Z",
+    "published": "2026-05-29T17:57:03Z",
+    "updated": "2026-05-29T17:57:03Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31594v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31594v1"
+      }
+    ],
+    "score": 57,
+    "infographic": {
+      "key_insight": "Communication costs are a major bottleneck in distributed learning and first-order optimization.",
+      "engineering_relevance": "Potential relevance: literature and knowledge mining workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-a_tight_theory_of_error_feedback_algorithms_in_distributed_optimization",
+      "paper_title": "A Tight Theory of Error Feedback Algorithms in Distributed Optimization",
+      "paper_date": "2026-05-29",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-01T19:22:31",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-learning_to_adapt_self_improving_web_agent_via_cognitive_aware_exploration",
+    "arxiv_id": "2605.31365v1",
+    "date": "2026-05-29",
+    "title": "Learning to Adapt: Self-Improving Web Agent via Cognitive-Aware Exploration",
+    "authors": "Weile Chen, Bingchen Miao, Qifan Yu, Wendong Bu, Guoming Wang, Wenqiao Zhang",
+    "abstract": "Recent advances in Multimodal Large Language Models (MLLMs) have led to promising progress in web agents. However, existing web agents often rely on handcrafted execution pipelines or expensive expert trajectories, limiting their adaptability to complex, dynamic environments. To address these challenges, we propose SCALE (Self-Cognitive-Aware Learning and Exploration), which leverages three adversarial roles, Selector, Predictor, and Judger to autonomously discover the agent's limitations and expand its cognitive boundaries through environmental exploration. Moreover, we propose SCALE-Hop, a graph exploration strategy that facilitates global planning and helps agents avoid local exploration traps. To further support learning, we construct SCALE-20k, a large-scale dataset collected from 19 real-world websites, containing diverse task types and structured demonstrations generated from SCALE's exploration traces. Experimental results show that our approach significantly improves the performance and generalization of multiple MLLMs in various web environments. Our framework offers a scalable and generalizable solution for building truly autonomous and adaptive web agents.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-05-29T14:37:27Z",
+    "updated": "2026-05-29T14:37:27Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31365v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31365v1"
+      }
+    ],
+    "score": 57,
+    "infographic": {
+      "key_insight": "Recent advances in Multimodal Large Language Models (MLLMs) have led to promising progress in web agents.",
+      "engineering_relevance": "Potential relevance: autonomous labs workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-learning_to_adapt_self_improving_web_agent_via_cognitive_aware_exploration",
+      "paper_title": "Learning to Adapt: Self-Improving Web Agent via Cognitive-Aware Exploration",
+      "paper_date": "2026-05-29",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-06-01T19:22:31",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-skill_reuse_as_compression_in_agentic_rl",
+    "arxiv_id": "2605.31509v1",
+    "date": "2026-05-29",
+    "title": "Skill Reuse as Compression in Agentic RL",
+    "authors": "Zhikun Xu, Yu Feng, Jacob Dineen, Taiwei Shi, Jieyu Zhao, Ben Zhou",
+    "abstract": "Large language model agents trained with reinforcement learning (RL) often learn brittle, task-specific shortcuts. We hypothesize that agents generalize better when their successful trajectories are structurally compressible, decomposed into a small set of reusable abstract patterns. To formalize this, we introduce ReuseRL, which grounds agentic RL in the Minimum Description Length (MDL) principle. ReuseRL extracts a shared skill dictionary from successful trajectories and augments the RL objective with a segmentation cost, explicitly penalizing idiosyncratic behaviors that encode poorly. We prove a PAC-Bayes generalization bound for this compression penalty. Across ALFWorld, TextWorld-Cooking, and Countdown-Stepwise, ReuseRL improves in- and out-of-distribution success over vanilla GRPO and strong round-length baselines.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-05-29T16:28:34Z",
+    "updated": "2026-05-29T16:28:34Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG",
@@ -956,50 +747,50 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30160v1"
+        "url": "https://arxiv.org/abs/2605.31509v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30160v1"
+        "url": "https://arxiv.org/pdf/2605.31509v1"
       }
     ],
-    "score": 62,
+    "score": 54,
     "infographic": {
-      "key_insight": "In chaotic dynamical systems, distributional reinforcement learning can be better conditioned than standard expected-return RL because return distributions evolve more smoothly than individual trajectories under the 1-Wasserstein metric.",
-      "engineering_relevance": "This suggests a more stable learning objective for control and decision-making in high-sensitivity domains such as fluid dynamics, climate modeling, and multi-agent systems.",
+      "key_insight": "Large language model agents trained with reinforcement learning (RL) often learn brittle, task-specific shortcuts.",
+      "engineering_relevance": "Potential relevance: ai scientific research workflows and research evaluation.",
       "method": [
-        "Analyze RL in chaotic environments through the geometry of return distributions rather than scalar value estimates.",
-        "Use the 1-Wasserstein metric to characterize smoother evolution of return distributions under mild statistical stability assumptions.",
-        "Motivate distributional Bellman updates as a better-conditioned objective than expectation-based optimization."
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "The paper provides a theoretical, abstract-level argument under mild statistical stability assumptions; no empirical dataset or benchmark results are stated in the abstract.",
-      "watch_item": "The benefit depends on the stated statistical stability assumptions, so performance may degrade if the chaotic system or approximation scheme violates them.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#ReinforcementLearning",
-        "#DistributionalRL",
-        "#ChaoticSystems",
-        "#WassersteinDistance",
-        "#ScientificML"
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-on_distributional_reinforcement_learning_in_chaotic_dynamical_systems",
-      "paper_title": "On Distributional Reinforcement Learning in Chaotic Dynamical Systems",
-      "paper_date": "2026-05-28",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-05-31T15:20:32",
+      "paper_id": "2026-05-29-arxiv-skill_reuse_as_compression_in_agentic_rl",
+      "paper_title": "Skill Reuse as Compression in Agentic RL",
+      "paper_date": "2026-05-29",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-01T19:22:32",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-05-28-arxiv-double_edged_sword_or_sharp_tool_designing_and_evaluating_triadic_llm_teacher_collaboratio",
-    "arxiv_id": "2605.30200v1",
-    "date": "2026-05-28",
-    "title": "Double-Edged Sword or Sharp Tool? Designing and Evaluating Triadic LLM-Teacher Collaboration for K-12 Writing at Scale",
-    "authors": "Canran Wang, Yuwen Yang, Zhen Wang, Ming Ma, Ding Yu, Chentai Wang",
-    "abstract": "The double-edged sword of integrating Large Language Models (LLMs) requires an effective triadic collaboration mechanism among LLMs, teachers and students, especially for K-12 education. By developing a triadic collaboration system to support K-12 writing learning, a multidimensional evaluation framework grounded in Systemic Functional Linguistics and the suggestion trajectory tracing pipeline, this paper contributes a large-scale empirical dataset involving $57,954$ essays from $10,195$ students across $120$ schools over two years. Our findings confirm the efficacy of this system in improving writing quality through a strategic labor division: the LLM serves as a generative engine to mitigate teacher burnout, and the teacher acts as a pedagogical gatekeeper and bridge to guarantee feedback quality. While both LLM and teacher are critical for skill improvement, we uncover a ceiling effect where excessive linguistic expansion yields diminishing marginal utility. These suggest a dynamically adaptive LLM-teacher collaboration as student proficiency increases.",
+    "id": "2026-05-29-arxiv-lintree_improving_llm_reasoning_with_explicitly_structured_search_histories",
+    "arxiv_id": "2605.31492v1",
+    "date": "2026-05-29",
+    "title": "LinTree: Improving LLM Reasoning with Explicitly Structured Search Histories",
+    "authors": "Liwei Kang, Yee Whye Teh, Wee Sun Lee",
+    "abstract": "Large language models (LLMs) often solve reasoning problems by generating intermediate traces that explore and revise partial solutions. From a search perspective, these traces can be viewed as linearized search trees, where the model extends a partial solution, abandons it when it fails, and backtracks to try alternatives. Compared with traditional heuristic-guided search, such a policy has a potential advantage: it conditions on the whole search trace rather than only on the current local state. We first test whether LLMs utilize this advantage by comparing trace-conditioned reasoning policies against best-first search equipped with an LLM heuristic that only observes the current local state. Across three controlled reasoning environments, Blocks World, grid Navigation, and Sokoban, we find that raw access to search history alone is not enough to reliably outperform heuristic search. We then study one possible reason: in LLM reasoning traces, the underlying search tree is only implicitly represented, and when the model backtracks or switches branches, the trace does not explicitly identify which earlier search state is being revisited. We show that adding simple parent pointers to explicitly represent the linearized tree (LinTree) structure improves both task performance and search efficiency relative to implicit reasoning models and LLM-heuristic-guided search. These results suggest that search history becomes most useful when its tree structure is made explicit, motivating more structure-aware representations for LLM reasoning.",
     "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-05-28T16:37:00Z",
-    "updated": "2026-05-28T16:37:00Z",
+    "published": "2026-05-29T16:13:19Z",
+    "updated": "2026-05-29T16:13:19Z",
     "primary_category": "cs.AI",
     "categories": [
       "cs.AI"
@@ -1007,36 +798,244 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2605.30200v1"
+        "url": "https://arxiv.org/abs/2605.31492v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2605.30200v1"
+        "url": "https://arxiv.org/pdf/2605.31492v1"
       }
     ],
-    "score": 61,
+    "score": 54,
     "infographic": {
-      "key_insight": "A triadic LLM–teacher–student workflow can improve K-12 writing at scale when the LLM generates ideas and the teacher filters and contextualizes feedback.",
-      "engineering_relevance": "This paper shows that practical educational AI systems should use role-specialized human-AI collaboration rather than fully automated feedback, especially in high-stakes K-12 settings.",
+      "key_insight": "Large language models (LLMs) often solve reasoning problems by generating intermediate traces that explore and revise partial solutions.",
+      "engineering_relevance": "Potential relevance: ai scientific research workflows and research evaluation.",
       "method": [
-        "Built a triadic collaboration system for K-12 writing support",
-        "Used a multidimensional evaluation framework grounded in Systemic Functional Linguistics",
-        "Traced suggestion trajectories to measure how LLM and teacher feedback affect writing development"
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
       ],
-      "evidence_signal": "The study analyzes 57,954 essays from 10,195 students across 120 schools over two years, providing large-scale empirical evidence of writing improvement.",
-      "watch_item": "The reported ceiling effect suggests that more linguistic expansion from the LLM can eventually provide diminishing returns, so feedback must adapt to student proficiency.",
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
       "hashtags": [
-        "#LLM",
-        "#K12Education",
-        "#AIEducation",
-        "#HumanAICollaboration",
-        "#WritingAnalytics"
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
       ],
-      "paper_id": "2026-05-28-arxiv-double_edged_sword_or_sharp_tool_designing_and_evaluating_triadic_llm_teacher_collaboratio",
-      "paper_title": "Double-Edged Sword or Sharp Tool? Designing and Evaluating Triadic LLM-Teacher Collaboration for K-12 Writing at Scale",
-      "paper_date": "2026-05-28",
+      "paper_id": "2026-05-29-arxiv-lintree_improving_llm_reasoning_with_explicitly_structured_search_histories",
+      "paper_title": "LinTree: Improving LLM Reasoning with Explicitly Structured Search Histories",
+      "paper_date": "2026-05-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-05-31T15:20:34",
+      "generated_at": "2026-06-01T19:22:32",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-hypoagent_an_agentic_framework_for_interactive_abductive_hypothesis_generation_over_knowle",
+    "arxiv_id": "2605.31370v1",
+    "date": "2026-05-29",
+    "title": "HypoAgent: An Agentic Framework for Interactive Abductive Hypothesis Generation over Knowledge Graphs",
+    "authors": "Yisen Gao, Yixi Cai, Tianshi Zheng, Jiaxin Bai, Yangqiu Song",
+    "abstract": "Abductive reasoning over knowledge graphs aims to generate logical hypotheses that explain observed entities or facts. Existing controllable hypothesis generation methods allow users to guide this process with explicit conditions, but they remain limited in interactive settings: they struggle to ground evolving natural-language intents across multi-turn dialogues and provide little fine-grained diagnosis when generated hypotheses fail. To address these limitations, we propose HypoAgent, an Agentic framework for interactive abductive Hypothesis Generation over knowledge graphs. HypoAgent integrates three agents: an Intent Recognition Agent that grounds user utterances and dialogue history into executable KG conditions, a Hypothesis Generation Agent that performs controllable hypothesis generation according to the extracted user intention, and a Root Cause Analysis Agent that diagnoses unreliable hypothesis fragments and leverages KG neighborhood probing to identify supported refinements. Experiments on commonsense and biomedical domain-specific knowledge graphs demonstrate that HypoAgent achieves state-of-the-art semantic similarity under single-turn, multi-turn, and unconditional settings. Our code is available at https://github.com/HKUST-KnowComp/HypoAgent.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-05-29T14:40:37Z",
+    "updated": "2026-05-29T14:40:37Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31370v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31370v1"
+      }
+    ],
+    "score": 54,
+    "infographic": {
+      "key_insight": "Abductive reasoning over knowledge graphs aims to generate logical hypotheses that explain observed entities or facts.",
+      "engineering_relevance": "Potential relevance: scientific discovery workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-hypoagent_an_agentic_framework_for_interactive_abductive_hypothesis_generation_over_knowle",
+      "paper_title": "HypoAgent: An Agentic Framework for Interactive Abductive Hypothesis Generation over Knowledge Graphs",
+      "paper_date": "2026-05-29",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-06-01T19:22:32",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-dashi_a_python_library_for_dataset_shift_characterization_to_support_trustworthy_ai_develo",
+    "arxiv_id": "2605.31360v1",
+    "date": "2026-05-29",
+    "title": "dashi: A Python library for Dataset Shift Characterization to Support Trustworthy AI Development and Deployment",
+    "authors": "David Fernández-Narro, Pablo Ferri, Ángel Sánchez-García, Juan M. García-Gómez, Carlos Sáez",
+    "abstract": "The Artificial Intelligence (AI) life cycle requires a thorough understanding of the underlying data dynamics for robust, safe and cost-effective AI development and use. Dataset shifts are defined as changes between train and test data distributions. Whether occurring over time (temporal) or across different sites (multi-source), they can severely degrade model performance and compromise data quality. This is particularly important in health AI, where the safety and fundamental rights of patients can be severely affected by uncontrolled shifts both at training and operational stages. While the theoretical foundations of covariate, prior, and concept shifts are well established, there is a lack of accessible and comprehensive software tools to perform their analysis. We introduce dashi, an open-source Python library designed for the exploration, quantification, and characterization of dataset shifts. dashi provides a dual approach: an unsupervised approach that leverages information geometry and non-parametric statistical manifolds to data variability characterization and analysis (e.g., Information Geometric Temporal plots and Multi-Source Variability metrics like Global Probabilistic Deviation and Source Probabilistic Outlyingness), and a supervised approach that quantifies and characterizes model performance degradation. Both unsupervised and supervised approaches work across user-defined temporal and domain/source batches. We demonstrate the utility of dashi on three simulated and real-world health AI case studies on gestational diabetes mellitus, COVID-19 and emergency medical dispatch. By providing interactive visual analytics and variability metrics, dashi supports trustworthiness of AI life cycle stages enabling robust and safe machine learning pipelines through the assessment of data coherence and AI performance.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-05-29T14:33:45Z",
+    "updated": "2026-05-29T14:33:45Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31360v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31360v1"
+      }
+    ],
+    "score": 54,
+    "infographic": {
+      "key_insight": "The Artificial Intelligence (AI) life cycle requires a thorough understanding of the underlying data dynamics for robust, safe and cost-effective AI development and use.",
+      "engineering_relevance": "Potential relevance: literature and knowledge mining workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-dashi_a_python_library_for_dataset_shift_characterization_to_support_trustworthy_ai_develo",
+      "paper_title": "dashi: A Python library for Dataset Shift Characterization to Support Trustworthy AI Development and Deployment",
+      "paper_date": "2026-05-29",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-01T19:22:33",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-wall_clock_complexity_for_zeroth_order_optimization_with_tunable_oracle_fidelity",
+    "arxiv_id": "2605.31346v1",
+    "date": "2026-05-29",
+    "title": "Wall-Clock Complexity for Zeroth-Order Optimization with Tunable Oracle Fidelity",
+    "authors": "Alexandra Suvorikova, Igor Pavlov, Artem Vasin, Georgii Bychkov, Anastasia Antsiferova, Darina Dvinskikh",
+    "abstract": "Zeroth-order (black-box) optimization is applied when gradients are unavailable and objective evaluations rely on expensive simulations. In many such applications, the oracle fidelity is tunable: higher-accuracy queries reduce noise but incur higher computational costs. To capture this trade-off, we study an accuracy-aware wall-clock model where each query with fidelity $δ$ has a cost $c(δ)$, and we minimize the total time $T_{\\mathrm{total}} = \\sum_{k=1}^{N} c(δ_k)$, subject to a target accuracy constraint. We show how the choice of oracle type, noise model, and optimization scheme induces explicit wall-clock-optimal choices for the algorithmic parameters. For instance, we demonstrate that accelerated methods can be wall-clock inferior to non-accelerated schemes. Furthermore, we characterize the conditions under which a constant fidelity strategy is optimal in the Big-O sense. Our framework provides a unified methodology to translate convergence guarantees into practical fidelity and batching recommendations.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-05-29T14:24:54Z",
+    "updated": "2026-05-29T14:24:54Z",
+    "primary_category": "math.OC",
+    "categories": [
+      "math.OC",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31346v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31346v1"
+      }
+    ],
+    "score": 54,
+    "infographic": {
+      "key_insight": "Zeroth-order (black-box) optimization is applied when gradients are unavailable and objective evaluations rely on expensive simulations.",
+      "engineering_relevance": "Potential relevance: scientific machine learning workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-wall_clock_complexity_for_zeroth_order_optimization_with_tunable_oracle_fidelity",
+      "paper_title": "Wall-Clock Complexity for Zeroth-Order Optimization with Tunable Oracle Fidelity",
+      "paper_date": "2026-05-29",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-06-01T19:22:33",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-05-29-arxiv-s_3_ldbo_a_snapshot_single_loop_algorithm_for_decentralized_bilevel_optimization",
+    "arxiv_id": "2605.31311v1",
+    "date": "2026-05-29",
+    "title": "S$^3$LDBO: A Snapshot Single-Loop Algorithm for Decentralized Bilevel Optimization",
+    "authors": "Chao Yin, Youran Dong, Shiqian Ma, Bofan Wang, Junfeng Yang",
+    "abstract": "Networked AI systems increasingly rely on multiple agents that collaboratively learn and adapt models over communication networks. In such systems, bilevel formulations naturally arise in hyperparameter optimization, data cleaning, and meta-learning, but the repeated evaluation of gradients, Jacobians, and Hessians can impose a substantial computational burden on individual agents. To address this challenge, we propose Snapshot-SLDBO (S$^3$LDBO), an efficient single-loop decentralized bilevel optimization algorithm that enables agents to intermittently skip expensive derivative evaluations through a snapshot mechanism. This mechanism can be interpreted as an autonomous computation-adaptation strategy for networked AI, where agents selectively perform costly local updates while maintaining global collaborative learning. We establish the ergodic iteration complexity and the high probability nonergodic iteration complexity of the proposed algorithm within a deterministic setting. Experimental results on hyperparameter optimization with synthetic and MNIST datasets, data hyper-cleaning on Fashion-MNIST, and decentralized meta-learning on miniImageNet demonstrate that the proposed algorithm improves computational efficiency while maintaining competitive learning performance.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-05-29T13:44:46Z",
+    "updated": "2026-05-29T13:44:46Z",
+    "primary_category": "math.OC",
+    "categories": [
+      "math.OC",
+      "cs.DC",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2605.31311v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2605.31311v1"
+      }
+    ],
+    "score": 54,
+    "infographic": {
+      "key_insight": "Networked AI systems increasingly rely on multiple agents that collaboratively learn and adapt models over communication networks.",
+      "engineering_relevance": "Potential relevance: autonomous labs workflows and research evaluation.",
+      "method": [
+        "AI scientific research paper selected from recent arXiv submissions.",
+        "Ranked by recency plus AI and scientific research relevance signals.",
+        "Use the linked paper for methods, data, and validation details."
+      ],
+      "evidence_signal": "Evidence details are summarized from the public abstract only.",
+      "watch_item": "Review the full paper for governing assumptions, validation data, and generalization limits.",
+      "hashtags": [
+        "#AIScientificResearch",
+        "#AIForScience",
+        "#ScientificDiscovery",
+        "#AIResearch",
+        "#arXiv"
+      ],
+      "paper_id": "2026-05-29-arxiv-s_3_ldbo_a_snapshot_single_loop_algorithm_for_decentralized_bilevel_optimization",
+      "paper_title": "S$^3$LDBO: A Snapshot Single-Loop Algorithm for Decentralized Bilevel Optimization",
+      "paper_date": "2026-05-29",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-06-01T19:22:33",
       "generator": "openai"
     }
   }
