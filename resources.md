@@ -1,6 +1,6 @@
 # AI scientific research Progress Public Resources
 
-Generated: 2026-06-02
+Generated: 2026-06-03
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. GPU Forecasters: Language Models as Selective Surrogates for Kernel Runtime Optimization
