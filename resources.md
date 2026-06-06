@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-06-05
+Generated: 2026-06-06
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery
