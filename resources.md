@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-06-06
+Generated: 2026-06-07
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery
@@ -131,15 +131,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.06300v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-04-arxiv-multi_resnets_for_subspace_preconditioning_in_constrained_optimization_infographic.json
 
-## 17. ToolChoiceConfusion: Causal Minimal Tool Filtering for Reliable LLM Agents
-
-- Date: 2026-06-04
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.06284v1
-- PDF: https://arxiv.org/pdf/2606.06284v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-04-arxiv-toolchoiceconfusion_causal_minimal_tool_filtering_for_reliable_llm_agents_infographic.json
-
-## 18. Regret Minimization with Adaptive Opponents in Repeated Games
+## 17. Regret Minimization with Adaptive Opponents in Repeated Games
 
 - Date: 2026-06-04
 - Category: Scientific Machine Learning
@@ -147,7 +139,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.06486v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-04-arxiv-regret_minimization_with_adaptive_opponents_in_repeated_games_infographic.json
 
-## 19. PAC-Bayesian Adversarially Robust Generalization for Message Passing Graph Neural Networks: A Sensitivity Analysis
+## 18. PAC-Bayesian Adversarially Robust Generalization for Message Passing Graph Neural Networks: A Sensitivity Analysis
 
 - Date: 2026-06-04
 - Category: AI scientific research
@@ -155,10 +147,18 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.06293v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-04-arxiv-pac_bayesian_adversarially_robust_generalization_for_message_passing_graph_neural_networks_infographic.json
 
-## 20. Benchmark Everything Everywhere All at Once
+## 19. Benchmark Everything Everywhere All at Once
 
 - Date: 2026-06-04
 - Category: AI Scientists and Research Agents
 - arXiv: https://arxiv.org/abs/2606.06462v1
 - PDF: https://arxiv.org/pdf/2606.06462v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-04-arxiv-benchmark_everything_everywhere_all_at_once_infographic.json
+
+## 20. Where Should Knowledge Enter? A Layered Framework for Knowledge Infusion in Multimodal Iterative Generative Mo
+
+- Date: 2026-06-04
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2606.06356v1
+- PDF: https://arxiv.org/pdf/2606.06356v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-04-arxiv-where_should_knowledge_enter_a_layered_framework_for_knowledge_infusion_in_multimodal_iter_infographic.json
