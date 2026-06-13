@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-06-12
+Generated: 2026-06-13
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery
@@ -115,7 +115,15 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.13565v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-a2d2_fine_tuning_any_length_discrete_diffusion_for_adaptive_decoding_infographic.json
 
-## 15. Reinforcement Learning for Neural Model Editing
+## 15. CloudCons: A Comprehensive End-to-End Benchmark for Cloud Resource Consolidation
+
+- Date: 2026-06-11
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.13513v1
+- PDF: https://arxiv.org/pdf/2606.13513v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-cloudcons_a_comprehensive_end_to_end_benchmark_for_cloud_resource_consolidation_infographic.json
+
+## 16. Reinforcement Learning for Neural Model Editing
 
 - Date: 2026-06-11
 - Category: AI scientific research
@@ -123,7 +131,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.13461v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-reinforcement_learning_for_neural_model_editing_infographic.json
 
-## 16. Multi-Agent Reinforcement Learning from Delayed Marketplace Feedback for Objective-Weight Adaptation in Three-Sided Dispatch
+## 17. Multi-Agent Reinforcement Learning from Delayed Marketplace Feedback for Objective-Weight Adaptation in Three-Sided Dispatch
 
 - Date: 2026-06-11
 - Category: AI scientific research
@@ -131,7 +139,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.13604v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-multi_agent_reinforcement_learning_from_delayed_marketplace_feedback_for_objective_weight_infographic.json
 
-## 17. Automated reproducibility assessments in the social and behavioral sciences using large language models
+## 18. Automated reproducibility assessments in the social and behavioral sciences using large language models
 
 - Date: 2026-06-11
 - Category: AI scientific research
@@ -139,7 +147,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.13670v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-automated_reproducibility_assessments_in_the_social_and_behavioral_sciences_using_large_la_infographic.json
 
-## 18. Multiagent Protocols with Aggregated Confidence Signals
+## 19. Multiagent Protocols with Aggregated Confidence Signals
 
 - Date: 2026-06-11
 - Category: AI scientific research
@@ -147,18 +155,10 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.13591v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-multiagent_protocols_with_aggregated_confidence_signals_infographic.json
 
-## 19. Clustering Node Attributed Networks with Graph Neural Networks and Self Learning
+## 20. Clustering Node Attributed Networks with Graph Neural Networks and Self Learning
 
 - Date: 2026-06-11
 - Category: Literature and Knowledge Mining
 - arXiv: https://arxiv.org/abs/2606.13444v1
 - PDF: https://arxiv.org/pdf/2606.13444v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-clustering_node_attributed_networks_with_graph_neural_networks_and_self_learning_infographic.json
-
-## 20. Why Sampling Is Not Choosing: Intentionality, Agency, and Moral Responsibility in Large Language Models
-
-- Date: 2026-06-11
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.13441v1
-- PDF: https://arxiv.org/pdf/2606.13441v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-11-arxiv-why_sampling_is_not_choosing_intentionality_agency_and_moral_responsibility_in_large_langu_infographic.json

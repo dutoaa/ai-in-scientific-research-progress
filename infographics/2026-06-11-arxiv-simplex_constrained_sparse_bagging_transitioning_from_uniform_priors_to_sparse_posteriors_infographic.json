@@ -1,13 +1,13 @@
 {
-  "key_insight": "Simplex-Constrained Sparse Bagging replaces uniform ensemble voting with a sparse probability distribution learned on the simplex, so only the most competent base models retain weight.",
-  "engineering_relevance": "The method is model-agnostic and can compress bagged ensembles dramatically, reducing inference cost while improving calibration without sacrificing accuracy.",
+  "key_insight": "SCSB replaces uniform bagging weights with a sparse probability distribution on the simplex, using OOB loss minimization plus a concave quadratic penalty to prune weak ensemble members and improve calibration.",
+  "engineering_relevance": "The method offers a model-agnostic post-training compression path for bagged ensembles that can cut inference cost substantially while maintaining or improving accuracy and probabilistic reliability.",
   "method": [
-    "Minimize OOB loss over ensemble weights constrained to the probability simplex",
-    "Replace ineffective L1 sparsity with a concave quadratic penalty to enable pruning",
-    "Post-train prune and reweight bagging models for calibrated sparse inference"
+    "Optimize ensemble weights on the probability simplex using out-of-bag loss.",
+    "Replace ineffective L1 sparsity on the simplex with a concave quadratic penalty.",
+    "Prune low-weight estimators to form a sparse, calibrated bagging posterior."
   ],
-  "evidence_signal": "The abstract reports up to 96% ensemble compression with linear inference speedups, lower Expected Calibration Error, and preserved or improved generalization accuracy.",
-  "watch_item": "Optimization on the simplex with a nonconvex quadratic sparsity penalty may require careful tuning and can be sensitive to local minima or OOB estimate quality.",
+  "evidence_signal": "The abstract reports up to 96% ensemble compression with linear inference speedups and lower Expected Calibration Error while preserving or improving generalization accuracy.",
+  "watch_item": "Performance depends on the quality of OOB estimates and optimization stability, so highly correlated or small ensembles may make the sparse weighting less reliable.",
   "hashtags": [
     "#EnsembleLearning",
     "#ModelCompression",
@@ -19,6 +19,6 @@
   "paper_title": "Simplex-Constrained Sparse Bagging: Transitioning from Uniform Priors to Sparse Posteriors in Ensemble Learning",
   "paper_date": "2026-06-11",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-06-12T16:47:13",
+  "generated_at": "2026-06-13T15:43:55",
   "generator": "openai"
 }
