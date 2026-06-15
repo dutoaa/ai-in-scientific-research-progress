@@ -1,0 +1,24 @@
+{
+  "key_insight": "The paper shows that many production “INT8” diffusion transformer paths on consumer Ampere GPUs never actually use INT8 tensor cores, and a fused Triton INT8 GEMM fixes that bottleneck.",
+  "engineering_relevance": "Replacing dequantize-to-bf16 linear layers with a true int8xint8->int32 kernel makes INT8 the fastest option on single consumer GPUs for Ideogram 4.0 inference at practical resolutions.",
+  "method": [
+    "Built a fused Triton INT8 GEMM for Ampere tensor cores",
+    "Folded per-token x per-channel dequantization and bias into the epilogue",
+    "Autotuned the kernel per GEMM shape and swapped it into the model’s linear layers"
+  ],
+  "evidence_signal": "The kernel matched the reference numerically and ran 2.8-4.2x faster per GEMM, producing a ~9-10% end-to-end speedup at 768px and 156.5 s/image at 1024px on an RTX 3090, faster than NF4 and FP8 baselines.",
+  "watch_item": "The performance win is hardware-specific to consumer Ampere; on A100 and B200, native bf16/FP8 paths outperform this INT8 approach.",
+  "hashtags": [
+    "#INT8",
+    "#DiffusionTransformers",
+    "#Triton",
+    "#AmpereGPU",
+    "#InferenceOptimization"
+  ],
+  "paper_id": "2026-06-12-arxiv-realizing_native_int8_compute_for_diffusion_transformers_on_consumer_gpus_a_fused_int8_gem",
+  "paper_title": "Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0",
+  "paper_date": "2026-06-12",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-06-15T18:42:49",
+  "generator": "openai"
+}
