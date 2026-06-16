@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-06-15
+Generated: 2026-06-16
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. When the Tool Decides: LLM Agents Defer Blindly to Graph Neural Network Tools, and Stronger Backbones Defer More
+## 1. Speaking the Language of Science: Toward a General-Purpose Generative Foundation Model for the Natural Sciences
 
-- Date: 2026-06-12
+- Date: 2026-06-15
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14476v1
-- PDF: https://arxiv.org/pdf/2606.14476v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-when_the_tool_decides_llm_agents_defer_blindly_to_graph_neural_network_tools_and_stronger_infographic.json
+- arXiv: https://arxiv.org/abs/2606.16905v1
+- PDF: https://arxiv.org/pdf/2606.16905v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-speaking_the_language_of_science_toward_a_general_purpose_generative_foundation_model_for_infographic.json
 
-## 2. PepALD: Macrocyclic Peptide Generation via Autoregressive Latent Diffusion
+## 2. DEEPRUBRIC: Evidence-Tree Rubric Supervision for Efficient Reinforcement Learning of Deep Research Agents
 
-- Date: 2026-06-12
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2606.14510v1
-- PDF: https://arxiv.org/pdf/2606.14510v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-pepald_macrocyclic_peptide_generation_via_autoregressive_latent_diffusion_infographic.json
-
-## 3. From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI
-
-- Date: 2026-06-12
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2606.14502v1
-- PDF: https://arxiv.org/pdf/2606.14502v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-from_chatbot_to_digital_colleague_the_paradigm_shift_toward_persistent_autonomous_ai_infographic.json
-
-## 4. Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0
-
-- Date: 2026-06-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14598v1
-- PDF: https://arxiv.org/pdf/2606.14598v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-realizing_native_int8_compute_for_diffusion_transformers_on_consumer_gpus_a_fused_int8_gem_infographic.json
-
-## 5. SIMMER: Benchmarking Latent Failures in LLM Executable Planning with a World Model
-
-- Date: 2026-06-12
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2606.14574v1
-- PDF: https://arxiv.org/pdf/2606.14574v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-simmer_benchmarking_latent_failures_in_llm_executable_planning_with_a_world_model_infographic.json
-
-## 6. Provably Safe, Yet Scalable Reinforcement Learning
-
-- Date: 2026-06-12
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2606.14536v1
-- PDF: https://arxiv.org/pdf/2606.14536v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-provably_safe_yet_scalable_reinforcement_learning_infographic.json
-
-## 7. From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails
-
-- Date: 2026-06-12
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2606.14517v1
-- PDF: https://arxiv.org/pdf/2606.14517v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-from_shield_to_target_denial_of_service_attacks_on_llm_based_agent_guardrails_infographic.json
-
-## 8. Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows
-
-- Date: 2026-06-12
+- Date: 2026-06-15
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2606.14672v1
-- PDF: https://arxiv.org/pdf/2606.14672v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-towards_direct_latent_space_synthesis_for_parallel_branches_in_llm_agent_workflows_infographic.json
+- arXiv: https://arxiv.org/abs/2606.17029v1
+- PDF: https://arxiv.org/pdf/2606.17029v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-deeprubric_evidence_tree_rubric_supervision_for_efficient_reinforcement_learning_of_deep_r_infographic.json
 
-## 9. Abstracting Cross-Domain Action Sequences into Interpretable Workflows
+## 3. Exploring Extrinsic and Intrinsic Properties for Effective Reasoning with Code Interpreter
 
-- Date: 2026-06-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14654v1
-- PDF: https://arxiv.org/pdf/2606.14654v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-abstracting_cross_domain_action_sequences_into_interpretable_workflows_infographic.json
-
-## 10. A Comparative Study of Deep Learning Architectures for Multi-Horizon Behavioural Forecasting for Mobile Health
-
-- Date: 2026-06-12
+- Date: 2026-06-15
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.14604v1
-- PDF: https://arxiv.org/pdf/2606.14604v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-a_comparative_study_of_deep_learning_architectures_for_multi_horizon_behavioural_forecasti_infographic.json
+- arXiv: https://arxiv.org/abs/2606.16934v1
+- PDF: https://arxiv.org/pdf/2606.16934v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-exploring_extrinsic_and_intrinsic_properties_for_effective_reasoning_with_code_interpreter_infographic.json
 
-## 11. CARE: Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation
+## 4. Decision-Weighted Flow Matching for Contextual Stochastic Optimization
 
-- Date: 2026-06-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14581v1
-- PDF: https://arxiv.org/pdf/2606.14581v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-care_controlling_llm_generated_policies_through_auditable_review_of_evidence_in_scientific_infographic.json
+- Date: 2026-06-15
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2606.16790v1
+- PDF: https://arxiv.org/pdf/2606.16790v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-decision_weighted_flow_matching_for_contextual_stochastic_optimization_infographic.json
 
-## 12. VISTA: View-Consistent Self-Verified Training for GUI Grounding
+## 5. A Causal Model of Theory of Mind in Conflict for Artificial Intelligence
 
-- Date: 2026-06-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14579v1
-- PDF: https://arxiv.org/pdf/2606.14579v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-vista_view_consistent_self_verified_training_for_gui_grounding_infographic.json
+- Date: 2026-06-15
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2606.16944v1
+- PDF: https://arxiv.org/pdf/2606.16944v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-a_causal_model_of_theory_of_mind_in_conflict_for_artificial_intelligence_infographic.json
 
-## 13. Regional Climate Model Emulation with Diffusion Approaches: What is the Added Value of Generative Machine Learning?
+## 6. Functional Gradient Descent with Adaptive Representations
 
-- Date: 2026-06-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14570v1
-- PDF: https://arxiv.org/pdf/2606.14570v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-regional_climate_model_emulation_with_diffusion_approaches_what_is_the_added_value_of_gene_infographic.json
+- Date: 2026-06-15
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2606.16926v1
+- PDF: https://arxiv.org/pdf/2606.16926v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-functional_gradient_descent_with_adaptive_representations_infographic.json
 
-## 14. GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge
+## 7. Consensus-based Agentic Large Language Model Framework for Harmonized Tariff Schedule Code Classification
 
-- Date: 2026-06-12
+- Date: 2026-06-15
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2606.16987v1
+- PDF: https://arxiv.org/pdf/2606.16987v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-consensus_based_agentic_large_language_model_framework_for_harmonized_tariff_schedule_code_infographic.json
+
+## 8. Phantoms and Disclosures: a Causal Framework for Auditing Synthetic Data
+
+- Date: 2026-06-15
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2606.14470v1
-- PDF: https://arxiv.org/pdf/2606.14470v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-gitofthoughts_version_controlled_reasoning_and_agent_memory_you_can_replay_diff_and_merge_infographic.json
+- arXiv: https://arxiv.org/abs/2606.16952v1
+- PDF: https://arxiv.org/pdf/2606.16952v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-phantoms_and_disclosures_a_causal_framework_for_auditing_synthetic_data_infographic.json
 
-## 15. CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning
+## 9. A Unified Causal-Origin Taxonomy of Distributional Shifts in Reinforcement Learning
 
-- Date: 2026-06-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14415v1
-- PDF: https://arxiv.org/pdf/2606.14415v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-cspo_constraint_sensitive_policy_optimization_for_safe_reinforcement_learning_infographic.json
-
-## 16. Cluster LOCO: Feature Importance For Interpreting Clusters
-
-- Date: 2026-06-12
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2606.14592v1
-- PDF: https://arxiv.org/pdf/2606.14592v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-cluster_loco_feature_importance_for_interpreting_clusters_infographic.json
-
-## 17. A Statistical and Machine Learning Framework for Operational Threshold Detection and Deployable Dispatch Controller Development in Hydrogen Multi-Energy Systems
-
-- Date: 2026-06-12
+- Date: 2026-06-15
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2606.14601v1
-- PDF: https://arxiv.org/pdf/2606.14601v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-a_statistical_and_machine_learning_framework_for_operational_threshold_detection_and_deplo_infographic.json
+- arXiv: https://arxiv.org/abs/2606.16933v1
+- PDF: https://arxiv.org/pdf/2606.16933v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-a_unified_causal_origin_taxonomy_of_distributional_shifts_in_reinforcement_learning_infographic.json
 
-## 18. Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning
+## 10. Task-Error Residual Learning for Real-Robot Five-Ball Juggling
 
-- Date: 2026-06-12
+- Date: 2026-06-15
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14693v1
-- PDF: https://arxiv.org/pdf/2606.14693v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-learning_coordinated_preference_for_multi_objective_multi_agent_reinforcement_learning_infographic.json
+- arXiv: https://arxiv.org/abs/2606.16978v1
+- PDF: https://arxiv.org/pdf/2606.16978v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-task_error_residual_learning_for_real_robot_five_ball_juggling_infographic.json
 
-## 19. Optimal Hidden-Target Learning for Online Inventory Optimization on General Convex Sets
+## 11. Adaptive and Explicit safe: Triggering Latent Safety Awareness in Large Reasoning Models
 
-- Date: 2026-06-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.14679v1
-- PDF: https://arxiv.org/pdf/2606.14679v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-optimal_hidden_target_learning_for_online_inventory_optimization_on_general_convex_sets_infographic.json
-
-## 20. Which Directions Matter? Sparse Design for Affine Robust Optimization
-
-- Date: 2026-06-12
+- Date: 2026-06-15
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.14648v1
-- PDF: https://arxiv.org/pdf/2606.14648v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-12-arxiv-which_directions_matter_sparse_design_for_affine_robust_optimization_infographic.json
+- arXiv: https://arxiv.org/abs/2606.16808v1
+- PDF: https://arxiv.org/pdf/2606.16808v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-adaptive_and_explicit_safe_triggering_latent_safety_awareness_in_large_reasoning_models_infographic.json
+
+## 12. ExpRL: Exploratory RL for LLM Mid-Training
+
+- Date: 2026-06-15
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2606.17024v1
+- PDF: https://arxiv.org/pdf/2606.17024v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-exprl_exploratory_rl_for_llm_mid_training_infographic.json
+
+## 13. Beyond the Smile: A Hybrid Convolutional VAE for Crypto Volatility Surfaces
+
+- Date: 2026-06-15
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2606.16961v1
+- PDF: https://arxiv.org/pdf/2606.16961v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-beyond_the_smile_a_hybrid_convolutional_vae_for_crypto_volatility_surfaces_infographic.json
+
+## 14. HawkesNest: A Multi-Axis Synthetic Benchmark for Spatiotemporal Pattern Complexity
+
+- Date: 2026-06-15
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2606.16863v1
+- PDF: https://arxiv.org/pdf/2606.16863v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-hawkesnest_a_multi_axis_synthetic_benchmark_for_spatiotemporal_pattern_complexity_infographic.json
+
+## 15. Upper Bounds on the Generalization Error of Deep Learning Models via Local Robustness and Stability
+
+- Date: 2026-06-15
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.16883v1
+- PDF: https://arxiv.org/pdf/2606.16883v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-upper_bounds_on_the_generalization_error_of_deep_learning_models_via_local_robustness_and_infographic.json
+
+## 16. GIST-CMTF: Goal-State Inference for Causal Minimal Tool Filtering in LLM Agents
+
+- Date: 2026-06-15
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.16813v1
+- PDF: https://arxiv.org/pdf/2606.16813v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-gist_cmtf_goal_state_inference_for_causal_minimal_tool_filtering_in_llm_agents_infographic.json
+
+## 17. Scaling LLM Reasoning from Minimal Labels: A Semi-Supervised Framework with a Lightweight Verifier
+
+- Date: 2026-06-15
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2606.16811v1
+- PDF: https://arxiv.org/pdf/2606.16811v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-scaling_llm_reasoning_from_minimal_labels_a_semi_supervised_framework_with_a_lightweight_v_infographic.json
+
+## 18. Fantastic Pretraining Optimizers and Where to Find Them II: Hyperball Optimization
+
+- Date: 2026-06-15
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.16899v1
+- PDF: https://arxiv.org/pdf/2606.16899v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-fantastic_pretraining_optimizers_and_where_to_find_them_ii_hyperball_optimization_infographic.json
+
+## 19. Bayesian Inference and Decision Audits for Public Archives of Frontier AI Evaluations
+
+- Date: 2026-06-15
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2606.17005v1
+- PDF: https://arxiv.org/pdf/2606.17005v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-bayesian_inference_and_decision_audits_for_public_archives_of_frontier_ai_evaluations_infographic.json
+
+## 20. Deep Q-Learning on Hölder Spaces
+
+- Date: 2026-06-15
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.16846v1
+- PDF: https://arxiv.org/pdf/2606.16846v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-15-arxiv-deep_q_learning_on_h_lder_spaces_infographic.json

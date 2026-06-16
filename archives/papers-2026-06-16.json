@@ -1,0 +1,1047 @@
+[
+  {
+    "id": "2026-06-12-arxiv-when_the_tool_decides_llm_agents_defer_blindly_to_graph_neural_network_tools_and_stronger",
+    "arxiv_id": "2606.14476v1",
+    "date": "2026-06-12",
+    "title": "When the Tool Decides: LLM Agents Defer Blindly to Graph Neural Network Tools, and Stronger Backbones Defer More",
+    "authors": "Zhongyuan Wang, Pratyusha Vemuri",
+    "abstract": "A growing line of work equips large language model (LLM) agents with graph neural networks (GNNs) as callable tools, assuming the agent exercises judgment over when and how much to rely on such a tool. We test this directly. We expose a frozen GNN to a ReAct-style LLM agent as an explicit tool and measure, on node classification over a text-attributed graph (ogbn-arxiv, replicated on WikiCS), whether the agent uses the tool or merely obeys it. We find the agent does not exercise judgment: its predictions agree with the raw GNN's 97.6-99.2% of the time (5 seeds), collapsing into a GNN parrot that adopts the tool's output wholesale and bypasses its own reasoning. Sweeping backbone capability (Qwen2.5 0.5B-7B), the deference is not a weak-model artifact: among models able to invoke the tool, agreement rises with capability (0.60 to 0.98 from 1.5B to 7B). Crucially, the cost of deference does not shrink as capability grows and grows where alternatives emerge: a per-node oracle over the available actions beats the parrot by 0.09-0.18 at 3B and 0.12-0.22 at 7B, roughly doubling at high homophily, because the parrot is pinned to the frozen GNN while the agent's alternatives improve; at 7B a simple neighbour-label tool overtakes the GNN at high homophily (0.81 vs 0.71) yet the agent still defers. A simple selective-invocation gate recovers about half of that high-homophily gap (0.71 to 0.83) but yields no net global gain, and held-out estimates bound the best achievable gate over standard test-time features to at most a third of the oracle headroom: reliable selective invocation looks limited by available information, not merely router design. Our results are a cautionary measurement: evaluations of agent+tool systems cannot assume the agent adds judgment on top of the tool, and selective invocation must be designed in rather than expected to emerge from scale.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T14:13:19Z",
+    "updated": "2026-06-12T14:13:19Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14476v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14476v1"
+      }
+    ],
+    "score": 74,
+    "infographic": {
+      "key_insight": "LLM agents exposed to a GNN tool mostly stop reasoning independently and instead copy the tool’s prediction, with stronger backbones deferring even more.",
+      "engineering_relevance": "For agentic ML systems, tool use should be designed as a selective decision policy rather than assumed to emerge from scale or prompting.",
+      "method": [
+        "Freeze a GNN and attach it as an explicit callable tool to a ReAct-style LLM agent.",
+        "Evaluate node classification on text-attributed graphs (ogbn-arxiv, replicated on WikiCS).",
+        "Sweep LLM backbone size (Qwen2.5 0.5B–7B) and compare agent outputs against raw GNN, alternative tools, and oracle/selective-gating baselines."
+      ],
+      "evidence_signal": "Across 5 seeds, agent predictions agreed with the raw GNN 97.6–99.2% of the time, and agreement increased from 0.60 to 0.98 as backbone size grew from 1.5B to 7B.",
+      "watch_item": "Selective invocation is constrained by the information available at test time, so better routing logic alone may not overcome the gap to an oracle policy.",
+      "hashtags": [
+        "#LLMAgents",
+        "#GraphNeuralNetworks",
+        "#ToolUse",
+        "#SelectiveInvocation",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-06-12-arxiv-when_the_tool_decides_llm_agents_defer_blindly_to_graph_neural_network_tools_and_stronger",
+      "paper_title": "When the Tool Decides: LLM Agents Defer Blindly to Graph Neural Network Tools, and Stronger Backbones Defer More",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:42:41",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-pepald_macrocyclic_peptide_generation_via_autoregressive_latent_diffusion",
+    "arxiv_id": "2606.14510v1",
+    "date": "2026-06-12",
+    "title": "PepALD: Macrocyclic Peptide Generation via Autoregressive Latent Diffusion",
+    "authors": "Junming Zhang, Siyu Yi, Wei Ju, Zhonghui Gu",
+    "abstract": "Macrocyclic peptides are promising therapeutic candidates for intracellular targets, but their design requires simultaneous control over non-natural monomer chemistry, ring topology, membrane permeability, and target binding. Existing SMILES- or HELM-string generative models either operate in long atom-level sequence spaces or treat monomers as symbolic tokens with limited chemical grounding. We introduce PepALD, an Autoregressive Latent Diffusion (ALD) foundation model for \\textit{de novo} macrocyclic peptide generation. The model represents HELM monomers with structured chemical embeddings, generates each residue through context-conditioned diffusion in chemically informed latent space, predicts R-group-aware ring closures during autoregressive generation, and aligns the denoiser to affinity rewards using winner-protected diffusion-adapted preference optimization. In silico experiments demonstrate PepALD's generation quality and reward-optimization performance against representative peptide generation baselines.",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-06-12T14:40:27Z",
+    "updated": "2026-06-12T14:40:27Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14510v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14510v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "PepALD generates macrocyclic peptides by combining autoregressive sequence construction with latent diffusion in a chemically informed monomer space, enabling better control over residue chemistry and ring closure.",
+      "engineering_relevance": "This provides a practical generative framework for designing drug-like macrocyclic peptides with explicit support for non-natural monomers, topology, and affinity optimization.",
+      "method": [
+        "Structured HELM monomer embeddings encode chemical information beyond symbolic tokens.",
+        "Autoregressive latent diffusion generates each residue with context-conditioned denoising in latent space.",
+        "R-group-aware ring closure prediction and preference-optimized denoiser alignment improve macrocycle validity and reward targeting."
+      ],
+      "evidence_signal": "The paper reports in silico experiments showing improved generation quality and reward-optimization performance versus representative peptide generation baselines.",
+      "watch_item": "As an in silico foundation model, performance will still depend on the quality of monomer libraries, closure annotations, and how well affinity rewards transfer to real experimental binding and permeability outcomes.",
+      "hashtags": [
+        "#MacrocyclicPeptides",
+        "#GenerativeAI",
+        "#LatentDiffusion",
+        "#DrugDiscovery",
+        "#ComputationalBiology"
+      ],
+      "paper_id": "2026-06-12-arxiv-pepald_macrocyclic_peptide_generation_via_autoregressive_latent_diffusion",
+      "paper_title": "PepALD: Macrocyclic Peptide Generation via Autoregressive Latent Diffusion",
+      "paper_date": "2026-06-12",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-06-15T18:42:44",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-from_chatbot_to_digital_colleague_the_paradigm_shift_toward_persistent_autonomous_ai",
+    "arxiv_id": "2606.14502v1",
+    "date": "2026-06-12",
+    "title": "From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI",
+    "authors": "Yongheng Zhang, Ziang Liu, Jiaxuan Zhu, Shuai Wang, Xiangqi Chen, Haojing Huang",
+    "abstract": "Large Language Models (LLMs) are undergoing a fundamental transformation from conversational generators into integrated AI systems capable of reasoning, action, memory, and self-improvement. We conceptualize this transition as a shift from Chatbot to Digital Colleague: from conversational answers to persistent work. We organize this transition along two tightly coupled dimensions. First, at the cognitive core level, LLMs are advancing from Chatbot-era \"fast thinking\" systems driven by next-token prediction toward Thinking LLMs that leverage inference-time computation, Chain-of-Thought reasoning, reflection, process supervision, and reinforcement learning to support more deliberate and reliable cognition. Second, at the tool-augmented task execution level, LLMs are progressing from tool-calling Agents that invoke external resources in an ad hoc manner toward OpenClaw-style workstation systems (OpenClaw) equipped with persistent Workspaces, skills, verification loops, and governance. The \"Workspace + Skill\" paradigm makes episodic tool use colleague-like via state persistence, reusable procedures, task closure, and experience reuse. We examine data construction shifts from instruction-response pairs to State-Action-Observation trajectories and evaluation from static benchmarks to sandboxed, auditable, self-evolving AI ecosystems.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-06-12T14:33:55Z",
+    "updated": "2026-06-12T14:33:55Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14502v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14502v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "The paper argues that LLMs are shifting from stateless chatbots to persistent digital colleagues by combining deeper reasoning with workspace-based autonomous task execution.",
+      "engineering_relevance": "For autonomous systems engineering, this reframes LLMs as long-lived agents that require memory, verification, governance, and reusable skills rather than one-off prompt responses.",
+      "method": [
+        "Cognitive core: move from fast next-token prediction to Thinking LLMs using CoT, reflection, process supervision, and RL.",
+        "Task execution: evolve from ad hoc tool-calling agents to OpenClaw-style workstation systems with persistent workspaces and skill reuse.",
+        "Workflow: support task closure through verification loops, state persistence, and experience reuse."
+      ],
+      "evidence_signal": "The abstract highlights a data shift from instruction-response pairs to State-Action-Observation trajectories and an evaluation shift from static benchmarks to sandboxed, auditable, self-evolving AI ecosystems.",
+      "watch_item": "Persistent autonomy increases implementation risk around safety, governance, and correctness when memory, tools, and self-improvement interact over long horizons.",
+      "hashtags": [
+        "#LLM",
+        "#AutonomousAgents",
+        "#ThinkingLLM",
+        "#AIWorkflows",
+        "#DigitalColleague"
+      ],
+      "paper_id": "2026-06-12-arxiv-from_chatbot_to_digital_colleague_the_paradigm_shift_toward_persistent_autonomous_ai",
+      "paper_title": "From Chatbot to Digital Colleague: The Paradigm Shift Toward Persistent Autonomous AI",
+      "paper_date": "2026-06-12",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-06-15T18:42:47",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-realizing_native_int8_compute_for_diffusion_transformers_on_consumer_gpus_a_fused_int8_gem",
+    "arxiv_id": "2606.14598v1",
+    "date": "2026-06-12",
+    "title": "Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0",
+    "authors": "Ali Asaria, Tony Salomone, Deep Gandhi",
+    "abstract": "Post-training INT8 (W8A8) quantization of diffusion transformers is widely deployed as a speed optimization, yet on consumer Ampere GPUs it is frequently slower than the FP8 and NF4 alternatives it is meant to beat. We trace this to a software artifact: the production \"INT8\" forward quantizes weights and activations only to immediately dequantize them back to bf16 and run a bf16 matrix multiply, never engaging the GPU's INT8 tensor cores, so the hardware's compute advantage is left entirely unrealized. We close this gap with a single fused Triton INT8 GEMM (int8xint8->int32 on Ampere tensor cores, with per-token x per-channel dequantization and bias folded into the epilogue, autotuned per GEMM shape) dropped into the Ideogram 4.0 diffusion transformer's linear layers in place of the dequantize-to-bf16 path. In the kernel, the int8xint8->int32 accumulation is bit-exact against torch._int_mm and the dequantized output matches the reference at cosine similarity 1.0 with no NaNs, running 2.8-4.2x faster than bf16 per GEMM. End to end it delivers a ~1.1x (~9-10%) speedup at 768px, and at 1024px it generates an image in 156.5 s on a single RTX 3090, faster than the single-card NF4 (164.5 s) and FP8 (172.9 s) baselines, at no measurable quality cost on these point estimates (PickScore/CLIPScore). INT8 thus goes from the slowest variant to the fastest, and 1024px becomes single-GPU feasible. The primary speed criterion (beat FP8, by ~9.5%) is comfortably met; the NF4 margin (~4.9%, single-run n=4) is within run-to-run variance we did not quantify and is best read as consistent with meeting the stretch target. We close with an honest deployment map: the win is specific to consumer Ampere, and on A100 and B200 the same kernel loses to those cards' fast native bf16/FP8 paths.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T16:19:03Z",
+    "updated": "2026-06-12T16:19:03Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14598v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14598v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "The paper shows that many production “INT8” diffusion transformer paths on consumer Ampere GPUs never actually use INT8 tensor cores, and a fused Triton INT8 GEMM fixes that bottleneck.",
+      "engineering_relevance": "Replacing dequantize-to-bf16 linear layers with a true int8xint8->int32 kernel makes INT8 the fastest option on single consumer GPUs for Ideogram 4.0 inference at practical resolutions.",
+      "method": [
+        "Built a fused Triton INT8 GEMM for Ampere tensor cores",
+        "Folded per-token x per-channel dequantization and bias into the epilogue",
+        "Autotuned the kernel per GEMM shape and swapped it into the model’s linear layers"
+      ],
+      "evidence_signal": "The kernel matched the reference numerically and ran 2.8-4.2x faster per GEMM, producing a ~9-10% end-to-end speedup at 768px and 156.5 s/image at 1024px on an RTX 3090, faster than NF4 and FP8 baselines.",
+      "watch_item": "The performance win is hardware-specific to consumer Ampere; on A100 and B200, native bf16/FP8 paths outperform this INT8 approach.",
+      "hashtags": [
+        "#INT8",
+        "#DiffusionTransformers",
+        "#Triton",
+        "#AmpereGPU",
+        "#InferenceOptimization"
+      ],
+      "paper_id": "2026-06-12-arxiv-realizing_native_int8_compute_for_diffusion_transformers_on_consumer_gpus_a_fused_int8_gem",
+      "paper_title": "Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:42:49",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-simmer_benchmarking_latent_failures_in_llm_executable_planning_with_a_world_model",
+    "arxiv_id": "2606.14574v1",
+    "date": "2026-06-12",
+    "title": "SIMMER: Benchmarking Latent Failures in LLM Executable Planning with a World Model",
+    "authors": "Xiaoxin Lu, Ranran Haoran Zhang, Rui Zhang",
+    "abstract": "Large language models (LLMs) are increasingly deployed as planners for autonomous agents in household environments. While existing benchmarks evaluate whether LLM-generated plans execute successfully, they overlook a critical type of failure: latent failures. Unlike immediate failures that trigger instant feedback at execution time and enable timely correction, latent failures do not immediately halt plan execution but silently compromise goal achievement. In severe cases, they cause irreversible harm. To address this gap, we introduce SIMMER, a benchmark for evaluating latent failures in LLM planning through a human-curated symbolic world model grounded in the kitchen domain. SIMMER defines a world model comprising 77 actions, 262 unique objects, and approximately 46,800 possible interactions that are semantically realistic, derived from real-world cooking scripts. It then leverages a state machine executor that validates plans against the world model and detects immediate precondition violations, latent hazards, and irreversible failures. Experiments across six LLMs show that even frontier models achieve at most 17% error-free plans. Moreover, up to 56% of plans contain latent failures, the majority of which lead to irreversible consequences. We further demonstrate that explicit state reasoning via counterfactual foresight simulation can reduce latent failures by up to 72% and irreversible cases by up to 75%, suggesting a promising direction for more robust LLM planners.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-06-12T15:53:16Z",
+    "updated": "2026-06-12T15:53:16Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14574v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14574v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "SIMMER shows that LLM plans can look valid at execution time yet still contain hidden latent failures that silently derail task success or cause irreversible harm.",
+      "engineering_relevance": "For autonomous household agents, evaluation must go beyond immediate execution errors and check world-state consistency, hazards, and irreversible side effects before deployment.",
+      "method": [
+        "Built a human-curated symbolic kitchen world model with 77 actions, 262 objects, and ~46,800 realistic interactions.",
+        "Used a state-machine executor to validate plans against preconditions and detect immediate violations, latent hazards, and irreversible failures.",
+        "Tested counterfactual foresight simulation to add explicit state reasoning and reduce hidden failures."
+      ],
+      "evidence_signal": "Across six LLMs, frontier models achieved at most 17% error-free plans, while up to 56% of plans had latent failures and most of those led to irreversible consequences.",
+      "watch_item": "A symbolic kitchen world model may not capture the full ambiguity, sensor noise, and open-ended dynamics of real homes, so real-world transfer should be validated carefully.",
+      "hashtags": [
+        "#LLMPlanning",
+        "#AutonomousAgents",
+        "#WorldModel",
+        "#RobustAI",
+        "#Benchmarking"
+      ],
+      "paper_id": "2026-06-12-arxiv-simmer_benchmarking_latent_failures_in_llm_executable_planning_with_a_world_model",
+      "paper_title": "SIMMER: Benchmarking Latent Failures in LLM Executable Planning with a World Model",
+      "paper_date": "2026-06-12",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-06-15T18:42:52",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-provably_safe_yet_scalable_reinforcement_learning",
+    "arxiv_id": "2606.14536v1",
+    "date": "2026-06-12",
+    "title": "Provably Safe, Yet Scalable Reinforcement Learning",
+    "authors": "Kai S. Yun, Zeyang Li, Navid Azizan",
+    "abstract": "Safe reinforcement learning (RL) aims to learn policies that optimize rewards while satisfying constraints. Predominant approaches rely on soft-constrained policy optimization, which has achieved empirical success but does not provide formal safety guarantees for the learned policy. In contrast, methods with strict guarantees typically rely on explicit certificate functions, whose construction requires the direct synthesis and verification of control-invariant sets, a process that scales poorly with state dimension and often yields overly conservative behavior. In this paper, we present the Provably Safe, yet Scalable RL (PS2-RL) framework, a novel two-phase architecture for learning provably safe policies in a scalable manner, designed to overcome the key bottlenecks of prior methods. Rather than explicitly computing invariant sets, PS2-RL leverages a learned backup policy to forward-integrate the system dynamics, generating an implicit control-invariant set online. In the first phase, the backup policy is trained with our proposed safe-arrival value function, which characterizes the optimal backup policy for invariant-set construction. In the second phase, an RL policy is trained end-to-end through a differentiable projection layer that strictly enforces the safety guarantees induced by the learned backup policy. By maximizing the volume of the implicit control-invariant set in the first phase, the resulting PS2 policy from the second phase is performant and scalable, while maintaining provable safety. Crucially, PS2-RL imposes no restrictions on the underlying RL algorithm and can be plugged into any existing training pipeline. We establish theoretical guarantees for the proposed framework and evaluate it on robotic control tasks with state dimensions up to 10, a regime in which prior provably safe RL methods struggle or become impractical.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-06-12T15:13:51Z",
+    "updated": "2026-06-12T15:13:51Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.RO",
+      "eess.SY"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14536v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14536v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "PS2-RL learns a backup policy that implicitly defines a safe set online, then uses a differentiable projection layer to train RL policies with formal safety guarantees.",
+      "engineering_relevance": "The framework offers a practical way to add provable safety to existing RL pipelines without explicit invariant-set computation, making it more scalable for higher-dimensional control problems.",
+      "method": [
+        "Phase 1: train a backup policy using a safe-arrival value function to construct an implicit control-invariant set.",
+        "Phase 2: train the RL policy end-to-end through a differentiable projection layer that enforces the learned safety constraints.",
+        "Maximize the implicit safe-set volume to reduce conservatism while preserving provable safety."
+      ],
+      "evidence_signal": "The authors report theoretical guarantees and evaluate the method on robotic control tasks with state dimensions up to 10, where prior provably safe RL methods are often impractical.",
+      "watch_item": "Safety depends on the quality of the learned backup policy and its implicit safe set, so imperfect backup training could limit guarantees or performance.",
+      "hashtags": [
+        "#SafeRL",
+        "#ReinforcementLearning",
+        "#Robotics",
+        "#ControlTheory",
+        "#FormalMethods"
+      ],
+      "paper_id": "2026-06-12-arxiv-provably_safe_yet_scalable_reinforcement_learning",
+      "paper_title": "Provably Safe, Yet Scalable Reinforcement Learning",
+      "paper_date": "2026-06-12",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-06-15T18:42:54",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-from_shield_to_target_denial_of_service_attacks_on_llm_based_agent_guardrails",
+    "arxiv_id": "2606.14517v1",
+    "date": "2026-06-12",
+    "title": "From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails",
+    "authors": "Yuguang Zhou, Xunguang Wang, Pingchuan Ma, Zhantong Xue, Zhaoyu Wang, Shuai Wang",
+    "abstract": "LLM-based guardrails have emerged as a highly effective defense against prompt injection and jailbreak attacks in autonomous agents. However, we reveal that the very reasoning and task-following capabilities enabling this protection introduce a novel vulnerability: attackers can inject crafted data to trap the guardrail in extended reasoning loops, effectuating a systematic denial-of-service (DoS) attack. To systematically expose this threat, we design a beam-search optimization framework that crafts natural-language payloads to maximize guardrail reasoning length, utilizing an LLM proposer guided by a strategy bank. Based on the observation of guardrail's schema-following nature, we also provide another attack framework driven by mechanism-aware structural mutations with less computational load. The attack efficacy is systematically evaluated in two parts. First, in standalone evaluations, the attack generalizes across diverse guardrail architectures, safety templates, and agent benchmarks. Payloads optimized on a single open-source surrogate successfully transfer to eight leading model backbones (e.g., Claude, GPT, Gemini, DeepSeek, and Qwen), achieving a 13--63$\\times$ token amplification. Second, in end-to-end real-world agent deployments (web, desktop, code, and multi-agent systems), the attack reveals up to a 148$\\times$ latency amplification. We show that a single poisoned document can saturate shared guardrail infrastructures, effectively starving co-located agents and paralyzing the entire system. By uncovering this availability flaw, our work underscores the urgent need to develop cost-bounded, reasoning-robust guardrails.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-06-12T14:49:00Z",
+    "updated": "2026-06-12T14:49:00Z",
+    "primary_category": "cs.CR",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14517v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14517v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "LLM-based guardrails can be turned into a denial-of-service target when crafted inputs force them into long reasoning loops, consuming excessive tokens and latency.",
+      "engineering_relevance": "This exposes an availability risk in autonomous-agent safety layers, showing guardrails must be cost-bounded and robust not just against jailbreaks but also against resource-exhaustion attacks.",
+      "method": [
+        "Beam-search payload optimization uses an LLM proposer plus a strategy bank to maximize guardrail reasoning length.",
+        "A mechanism-aware structural-mutation attack exploits schema-following behavior with lower compute overhead.",
+        "The attacks are tested across multiple guardrail designs and real agent deployments to assess transferability and impact."
+      ],
+      "evidence_signal": "According to the abstract, optimized payloads transfer from one surrogate model to eight major model backbones, causing 13–63× token amplification and up to 148× latency amplification in end-to-end deployments.",
+      "watch_item": "Defense designs should avoid introducing unbounded reasoning loops or shared-resource bottlenecks, since a single poisoned document may degrade co-located agents and system-wide throughput.",
+      "hashtags": [
+        "#LLMGuardrails",
+        "#DoSAttack",
+        "#AgentSecurity",
+        "#PromptInjection",
+        "#AISafety"
+      ],
+      "paper_id": "2026-06-12-arxiv-from_shield_to_target_denial_of_service_attacks_on_llm_based_agent_guardrails",
+      "paper_title": "From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails",
+      "paper_date": "2026-06-12",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-06-15T18:42:57",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-towards_direct_latent_space_synthesis_for_parallel_branches_in_llm_agent_workflows",
+    "arxiv_id": "2606.14672v1",
+    "date": "2026-06-12",
+    "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+    "authors": "Shikun Liu, Mufei Li, Dongqi Fu, Haoyu Wang, Yinglong Xia, Hong Li",
+    "abstract": "Large language models increasingly serve as execution engines for agentic systems, yet they still consume context through a sequential text interface. This creates a mismatch with modern structured agent workflows, in which independent branches explore subtasks, retrieve evidence, or generate candidate solutions before a final synthesis step. Existing systems typically merge these branches by concatenating their textual outputs, which discards the parallel structure and incurs redundant prefill computation. In this work, we introduce Parallel-Synthesis, a plug-and-play framework that enables a synthesizer to directly consume the KV caches produced by parallel worker agents. Parallel-Synthesis combines a cache mapper that calibrates independently generated branch caches with a fine-tuned synthesizer adapter that enables generation from this non-sequential cache interface. We train Parallel-Synthesis using data that exposes the synthesizer to parallel cache contexts, teaches aggregation across cached branches, and distills reasoning behavior from standard text-concatenation-based synthesis. Across nine downstream datasets spanning math, science QA, code generation, GAIA, and multi-agent database diagnosis, Parallel-Synthesis matches or outperforms text-based synthesis on seven datasets and remains close on the other two. It also reduces time-to-first-token by 2.5x-11x, suggesting that direct cache-based synthesis is a promising interface for more native and efficient synthesis over parallel agent branches.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-06-12T17:39:29Z",
+    "updated": "2026-06-12T17:39:29Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14672v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14672v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "Parallel-Synthesis lets an LLM synthesizer directly read parallel branch KV caches instead of concatenating branch text, preserving branch structure while cutting redundant computation.",
+      "engineering_relevance": "This offers a more native and efficient interface for multi-agent workflows, especially when many independent branches must be merged quickly.",
+      "method": [
+        "Cache mapper calibrates KV caches from independently generated worker branches.",
+        "Fine-tuned synthesizer adapter generates from a non-sequential cache interface.",
+        "Training uses parallel-cache contexts plus distillation from standard text-concatenation synthesis."
+      ],
+      "evidence_signal": "Evaluated on nine datasets across math, science QA, code, GAIA, and database diagnosis; it matches or exceeds text-based synthesis on seven and reduces time-to-first-token by 2.5x-11x.",
+      "watch_item": "Direct cache-based synthesis depends on careful cache alignment/calibration, so robustness across heterogeneous branch lengths, models, or retrieval styles may be implementation-sensitive.",
+      "hashtags": [
+        "#LLMAgents",
+        "#KVCache",
+        "#ParallelSynthesis",
+        "#MultiAgentSystems",
+        "#EfficientInference"
+      ],
+      "paper_id": "2026-06-12-arxiv-towards_direct_latent_space_synthesis_for_parallel_branches_in_llm_agent_workflows",
+      "paper_title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-06-15T18:43:00",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-abstracting_cross_domain_action_sequences_into_interpretable_workflows",
+    "arxiv_id": "2606.14654v1",
+    "date": "2026-06-12",
+    "title": "Abstracting Cross-Domain Action Sequences into Interpretable Workflows",
+    "authors": "Gaurav Verma, Scott Counts",
+    "abstract": "Sequential or time-stamped interaction logs provide objective records of digital application usage, yet their granularity and noise often obscure meaningful insights into people's work. Such insights are essential for improving digital products in ways grounded in real-world user interactions. Prior research has applied deep learning models to cluster user actions into high-level activities, but these approaches are highly sensitive to noise and struggle to generalize across applications. To address this limitation, we introduce WorkflowView, a framework that uses large language models (LLMs) to abstract low-level action sequences into high-level activities. We establish the effectiveness and generality of our approach across three distinct, challenging sequential tasks and diverse domains: (a) zero-shot task description reconstruction from browser logs (achieving high semantic similarity, $μ_{sim} = 0.91$), (b) few-shot student dropout prediction using MOOC interaction logs (reaching weighted $F_1 = 0.90$ with only five few-shot examples), and (c) anonymized, privacy-preserving analysis of AI tool integration within document workflows in Microsoft Word. Our work demonstrates that LLM-based abstraction is a robust and efficient path forward for transforming low-level behavioral data into high-level, interpretable, and actionable insights. We also discuss practical considerations for deploying LLM-based inferences within logging infrastructures, including computational efficiency and user privacy.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T17:19:15Z",
+    "updated": "2026-06-12T17:19:15Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14654v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14654v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "WorkflowView uses large language models to convert noisy, low-level action logs into interpretable high-level workflows that transfer across domains.",
+      "engineering_relevance": "This enables product and platform teams to derive actionable user-behavior insights from existing telemetry without building domain-specific sequence models.",
+      "method": [
+        "Apply LLMs to abstract action sequences into activity-level descriptions",
+        "Test zero-shot reconstruction of browser tasks and few-shot MOOC dropout prediction",
+        "Use anonymized workflow analysis for privacy-preserving insight into AI tool use in Microsoft Word"
+      ],
+      "evidence_signal": "The approach achieved high semantic similarity for task reconstruction (mu_sim = 0.91) and strong few-shot dropout prediction performance (weighted F1 = 0.90 with five examples).",
+      "watch_item": "LLM-based inference in logging pipelines must balance computational cost with privacy and deployment constraints.",
+      "hashtags": [
+        "#LLM",
+        "#WorkflowMining",
+        "#UserBehavior",
+        "#PrivacyPreservingAI",
+        "#HumanComputerInteraction"
+      ],
+      "paper_id": "2026-06-12-arxiv-abstracting_cross_domain_action_sequences_into_interpretable_workflows",
+      "paper_title": "Abstracting Cross-Domain Action Sequences into Interpretable Workflows",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:43:02",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-a_comparative_study_of_deep_learning_architectures_for_multi_horizon_behavioural_forecasti",
+    "arxiv_id": "2606.14604v1",
+    "date": "2026-06-12",
+    "title": "A Comparative Study of Deep Learning Architectures for Multi-Horizon Behavioural Forecasting for Mobile Health",
+    "authors": "Pavlos Nicolaou, Kleanthis Malialis, Artemis Kontou, Panayiotis Kolios",
+    "abstract": "Wearable devices and smartphones generate rich behavioural time series that can support proactive health interventions, yet systematic comparisons of modern forecasting architectures for these data are lacking. In particular, it remains unclear how models generalise across populations, how different architectures respond to participant-level fine-tuning and how forecasting accuracy degrades across multi-day horizons. We benchmark six deep learning architectures, two zero-shot Foundation Models (FM) and statistical baselines on three public datasets encompassing over 800 participants, reporting per-feature metrics for step counts, screen time and sleep duration across 1-8 day horizons. We further conduct a per-feature personalisation study across all six architectures and assess FM transferability across dataset sizes and temporal granularities. Our key findings are: (i) no single architecture dominates, PatchTST leads among trained models while the three runners-up (TCN, MLP, Transformer) show no meaningful performance difference; (ii) the FM TimesFM matches or exceeds trained models zero-shot, especially in low-data regimes and (iii) participant-level fine-tuning reduces per-feature RMSE by 16-60\\%, with sleep benefiting most and step counts least. These results provide practical guidance on architecture selection, FM applicability and personalisation strategies for mobile health forecasting. To the best of our knowledge, this is the first study to jointly evaluate modern deep learning, FMs and personalisation for multi-horizon behavioural forecasting from wearables.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-06-12T16:25:58Z",
+    "updated": "2026-06-12T16:25:58Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14604v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14604v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "PatchTST is the strongest trained model for multi-horizon behavioral forecasting, but the zero-shot foundation model TimesFM is competitive or better, and participant-level fine-tuning substantially improves accuracy.",
+      "engineering_relevance": "For mobile health systems, this suggests practical deployment can combine foundation models with lightweight personalization to improve forecasting from wearable and smartphone data.",
+      "method": [
+        "Benchmarked six deep learning architectures plus two zero-shot foundation models and statistical baselines.",
+        "Evaluated step count, screen time, and sleep duration across 1–8 day forecasting horizons on three public datasets.",
+        "Tested participant-level fine-tuning and transferability across dataset sizes and temporal granularities."
+      ],
+      "evidence_signal": "The study spans three public datasets with over 800 participants and reports per-feature performance across 1–8 day horizons.",
+      "watch_item": "Results may depend on dataset characteristics and feature granularity, so zero-shot or personalized performance could shift when deployed on new populations or sensing pipelines.",
+      "hashtags": [
+        "#MobileHealth",
+        "#TimeSeriesForecasting",
+        "#DeepLearning",
+        "#FoundationModels",
+        "#Wearables"
+      ],
+      "paper_id": "2026-06-12-arxiv-a_comparative_study_of_deep_learning_architectures_for_multi_horizon_behavioural_forecasti",
+      "paper_title": "A Comparative Study of Deep Learning Architectures for Multi-Horizon Behavioural Forecasting for Mobile Health",
+      "paper_date": "2026-06-12",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-15T18:43:05",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-care_controlling_llm_generated_policies_through_auditable_review_of_evidence_in_scientific",
+    "arxiv_id": "2606.14581v1",
+    "date": "2026-06-12",
+    "title": "CARE: Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation",
+    "authors": "Guanyu Liu, Weiyi Kong, Zeyu Wang, Boer Zhang, Baiqing Li, Peiyu Zhang",
+    "abstract": "Granting LLMs direct control over costly, irreversible scientific experiments leads to unsafe exploration and unstable performance, but discarding LLM creativity entirely sacrifices significant optimization potential. We introduce CARE (Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation), an auditable controller for high-throughput experimentation (HTE) optimization that keeps a non-LLM incumbent optimizer as the default action path while using LLMs to revise challenger ranking policies. Before each outcome is revealed, a public-evidence intervention gate compares the challenger with the incumbent. It authorizes the challenger's selection only when the evidence available before selection supports the change, with the decision recorded in the audit log. CARE outperforms all other evaluated methods on Minerva/Olympus and ChemLex benchmarks, with final-best improving from 80.0 to 88.5 on Minerva/Olympus and from 83.9 to 92.1 on ChemLex, relative to the public incumbent. Our experiments indicate that LLM self-evolution is more reliable when it expands the proposal space under an auditable controller, rather than directly choosing experiments.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T15:58:32Z",
+    "updated": "2026-06-12T15:58:32Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14581v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14581v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "CARE lets LLMs improve experiment selection indirectly by auditing evidence before they can override a reliable non-LLM incumbent policy.",
+      "engineering_relevance": "This design is relevant for high-stakes scientific automation because it preserves optimization gains while reducing unsafe or irreversible experiment choices.",
+      "method": [
+        "Keep a non-LLM incumbent optimizer as the default action path",
+        "Use an LLM to revise challenger ranking policies instead of directly selecting experiments",
+        "Apply a public-evidence intervention gate and record each decision in an audit log"
+      ],
+      "evidence_signal": "The abstract reports stronger final-best results than the public incumbent on both benchmarks, improving from 80.0 to 88.5 on Minerva/Olympus and from 83.9 to 92.1 on ChemLex.",
+      "watch_item": "The approach depends on the quality and sufficiency of pre-outcome public evidence, so weak evidence may limit when the LLM is allowed to intervene.",
+      "hashtags": [
+        "#LLM",
+        "#ScientificAutomation",
+        "#HighThroughputExperimentation",
+        "#AuditableAI",
+        "#ExperimentalOptimization"
+      ],
+      "paper_id": "2026-06-12-arxiv-care_controlling_llm_generated_policies_through_auditable_review_of_evidence_in_scientific",
+      "paper_title": "CARE: Controlling LLM-Generated Policies through Auditable Review of Evidence in Scientific Experimentation",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:43:07",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-vista_view_consistent_self_verified_training_for_gui_grounding",
+    "arxiv_id": "2606.14579v1",
+    "date": "2026-06-12",
+    "title": "VISTA: View-Consistent Self-Verified Training for GUI Grounding",
+    "authors": "Xinyu Qiu, Yunzhu Zhang, Heng Jia, Shuheng Shen, Changhua Meng, Linchao Zhu",
+    "abstract": "When applying Group Relative Policy Optimization (GRPO) for GUI Grounding, rollouts are sampled from a single screenshot view; groups often become either all failures on difficult instances or all successes on easy ones, yielding no useful relative advantage. We propose VISTA (View-Consistent Self-Verified Training), a GRPO-based training framework that constructs each comparison group from multiple target-preserving views of the same GUI instance.Each view is generated by a crop that keeps the target element visible and remaps its box exactly, so model rollouts are compared across semantically equivalent but geometrically different inputs. To stabilize short coordinate generation without turning reinforcement learning into unconditional imitation, VISTA further adds a self-verified cross-view anchor: an oracle answer optimized with an advantage-weighted loss, excluded from the group baseline and activated only when the model has produced a maximum-reward rollout. Across five GUI-grounding benchmarks and multiple Qwen backbones, VISTA consistently improves grounding accuracy.On ScreenSpot-Pro, it raises Qwen3-VL 4B/8B/30B-A3B from 55.5/52.7/53.7 to 63.4/65.8/67.0. Robustness analyses further show higher worst-view accuracy and lower prediction flip rates.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T15:58:18Z",
+    "updated": "2026-06-12T15:58:18Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14579v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14579v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "VISTA fixes GRPO’s “all-success/all-failure” problem for GUI grounding by comparing rollouts across multiple target-preserving views of the same screen, making relative learning informative again.",
+      "engineering_relevance": "The method improves robustness of GUI agents under view changes and is directly useful for training grounding models that must locate interface elements reliably across cropped or shifted screenshots.",
+      "method": [
+        "Builds each GRPO comparison group from multiple cropped views that still preserve the target element and remap its box exactly.",
+        "Adds a self-verified cross-view anchor trained with advantage-weighted loss, but only when the model already achieves a maximum-reward rollout.",
+        "Keeps reinforcement learning from collapsing into pure imitation by excluding the anchor from the group baseline."
+      ],
+      "evidence_signal": "Across five GUI-grounding benchmarks and multiple Qwen backbones, VISTA improves accuracy; on ScreenSpot-Pro, Qwen3-VL 4B/8B/30B-A3B rises from 55.5/52.7/53.7 to 63.4/65.8/67.0.",
+      "watch_item": "Performance depends on constructing valid target-preserving crops and exact box remapping, which may be tricky for complex interfaces or tightly packed elements.",
+      "hashtags": [
+        "#GUIGrounding",
+        "#ReinforcementLearning",
+        "#VisionLanguageModels",
+        "#Robustness",
+        "#HCI"
+      ],
+      "paper_id": "2026-06-12-arxiv-vista_view_consistent_self_verified_training_for_gui_grounding",
+      "paper_title": "VISTA: View-Consistent Self-Verified Training for GUI Grounding",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:43:10",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-regional_climate_model_emulation_with_diffusion_approaches_what_is_the_added_value_of_gene",
+    "arxiv_id": "2606.14570v1",
+    "date": "2026-06-12",
+    "title": "Regional Climate Model Emulation with Diffusion Approaches: What is the Added Value of Generative Machine Learning?",
+    "authors": "Mikel N. Legasa, Antoine Doury, Achille Gellens, Redouane Lguensat, Clara Naldesi, Soulivanh Thao",
+    "abstract": "Emulators provide a cost-effective alternative to regional climate models (RCMs) by capturing their dynamical downscaling function. They link large-scale predictors simulated by global climate models (GCMs) to RCM-simulated high-resolution fields of the target variable, here precipitation. Machine learning methods, typically deep learning, are cheaper than running RCMs in computation time and energy. Among them, generative models are appealing because they can simulate ensembles of local high-resolution fields consistent with the predictors. This ensemble, which we call the uncertainty envelope, remains to be properly assessed for added value. Here, we make three contributions. First, we introduce ParamDiffusion, a new two-stage diffusion-based framework, and compare it with a state-of-the-art diffusion approach. Second, we expand standard validation through a comprehensive framework aligned with climate-science needs, examining specific precipitation events, including extremes. Third, within this framework, we assess the added value of diffusion approaches relative to deterministic methods. We intercompare four deep-learning models: a deterministic model designed to capture the precipitation tail; a parametric probabilistic model based on it; a recently proposed diffusion approach; and ParamDiffusion, which couples the parametric model with a diffusion model. Our results show that diffusion-based approaches reproduce climatological precipitation statistics with high skill, including distributional tails and spatially compounded extremes, while generating spatially detailed fields. However, none of the assessed models consistently accounts for the most extreme RCM-simulated events within its uncertainty envelope. Diffusion models are therefore promising for probabilistic RCM emulation, but progress is still required before they can reliably represent high-impact precipitation extremes.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T15:46:35Z",
+    "updated": "2026-06-12T15:46:35Z",
+    "primary_category": "physics.ao-ph",
+    "categories": [
+      "physics.ao-ph",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14570v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14570v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "Diffusion-based emulators can generate realistic, high-resolution precipitation fields and improve probabilistic regional climate modeling, but they still miss some of the most extreme events.",
+      "engineering_relevance": "For climate-risk and downscaling workflows, diffusion models offer a cheaper surrogate for regional climate models while preserving spatial detail and uncertainty sampling.",
+      "method": [
+        "Introduced ParamDiffusion, a two-stage diffusion framework that combines a parametric probabilistic model with diffusion sampling.",
+        "Compared four deep-learning emulators: deterministic, parametric probabilistic, a prior diffusion model, and ParamDiffusion.",
+        "Validated with a climate-focused framework covering climatology, precipitation tails, spatial extremes, and individual event cases."
+      ],
+      "evidence_signal": "The abstract reports strong skill on precipitation distributions, tail behavior, and spatially compounded extremes, but persistent failure to consistently capture the most extreme RCM events in the uncertainty envelope.",
+      "watch_item": "These models are promising, but their uncertainty envelopes are not yet reliable for the highest-impact precipitation extremes.",
+      "hashtags": [
+        "#ClimateAI",
+        "#DiffusionModels",
+        "#RegionalClimateModeling",
+        "#PrecipitationExtremes",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-06-12-arxiv-regional_climate_model_emulation_with_diffusion_approaches_what_is_the_added_value_of_gene",
+      "paper_title": "Regional Climate Model Emulation with Diffusion Approaches: What is the Added Value of Generative Machine Learning?",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:43:14",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-gitofthoughts_version_controlled_reasoning_and_agent_memory_you_can_replay_diff_and_merge",
+    "arxiv_id": "2606.14470v1",
+    "date": "2026-06-12",
+    "title": "GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge",
+    "authors": "Pavan C Shekar, Abhishek H S, Aswanth Krishnan",
+    "abstract": "Large language model (LLM) reasoning is ephemeral: chains of thought vanish with the context window, pruned search branches leave no record, and memory buffers cannot be diffed, merged, or audited. Every other complex software process (code, infrastructure, data, experiments) is version-controlled; reasoning is not. We introduce GitOfThoughts, which stores an agent's reasoning tree as a git repository: every scored thought is a commit, scores are notes, outcomes are tags, and retrieval is \"git log\" over the agent's own history. This makes reasoning replayable, auditable, and mergeable across agents at near-zero engineering cost. We then ask the harder question: does memory, in any substrate, actually improve accuracy? Across five substrates (none, markdown, vector, graph, git), two benchmarks, two model scales, and pre-registered replications, the answer for novel problems is no. No memory format reliably helps, and a promising early result collapsed under its own pre-registered replication. Memory pays only above what we call the copyability threshold: when the retrieved case is a near-duplicate of the current problem (similarity >~ 0.8), accuracy jumps sharply; below it, nothing. The gain is answer retrieval, not method transfer: a 4.5x larger model doubles the near-duplicate payoff yet still cannot extract a transferable method from a worked example. The only general lever we find is test-time sampling. The case for git-as-substrate is therefore auditability, provenance, and mergeability at accuracy parity. We document a retracted result and a refuted hypothesis to model the evaluation standard we hold ourselves to.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-06-12T14:02:37Z",
+    "updated": "2026-06-12T14:02:37Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14470v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14470v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "GitOfThoughts makes LLM reasoning version-controlled and replayable with git, but the paper finds memory usually does not improve accuracy unless the retrieved case is nearly a duplicate of the current problem.",
+      "engineering_relevance": "The main value is auditability, provenance, and mergeable agent memory at near-zero integration cost, rather than a general accuracy boost.",
+      "method": [
+        "Stores each scored thought as a git commit",
+        "Uses scores as notes, outcomes as tags, and retrieval via git log",
+        "Compares five memory substrates across two benchmarks, two model scales, and pre-registered replications"
+      ],
+      "evidence_signal": "Across none, markdown, vector, graph, and git memory, novel-problem accuracy did not improve reliably; gains appeared only when similarity exceeded roughly 0.8, and the early positive result failed replication.",
+      "watch_item": "Git-based memory improves traceability, but it should not be assumed to transfer methods or raise accuracy beyond near-duplicate retrieval cases.",
+      "hashtags": [
+        "#LLMReasoning",
+        "#AgentMemory",
+        "#VersionControl",
+        "#ScientificDiscovery",
+        "#Reproducibility"
+      ],
+      "paper_id": "2026-06-12-arxiv-gitofthoughts_version_controlled_reasoning_and_agent_memory_you_can_replay_diff_and_merge",
+      "paper_title": "GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge",
+      "paper_date": "2026-06-12",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-06-15T18:43:16",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-cspo_constraint_sensitive_policy_optimization_for_safe_reinforcement_learning",
+    "arxiv_id": "2606.14415v1",
+    "date": "2026-06-12",
+    "title": "CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning",
+    "authors": "Ayoub Belouadah, Sylvain Kubler, Yves Le Traon",
+    "abstract": "Safe reinforcement learning (Safe RL) aims to maximize expected return while satisfying safety constraints, typically modeled as Constrained Markov Decision Processes (CMDPs). While primal-dual methods scale well to deep RL, they often suffer from delayed constraint correction, leading to oscillatory behavior and prolonged safety violations. In this paper, we propose Constraint-Sensitive Policy Optimization (CSPO), a first-order primal-dual method that incorporates local constraint sensitivity into policy updates. CSPO augments the primal objective with a constraint-sensitive correction derived from the shortest signed distance to the safety boundary, enabling smarter recovery steps back to safety, compensating for delayed Lagrange multiplier updates, reducing oscillations near the boundary, and preserving the KKT solutions of the original constrained problem. Experiments on navigation and locomotion benchmarks demonstrate that CSPO achieves faster safety recovery and high reward preservation, resulting in higher constrained returns compared to state-of-the-art primal-dual and penalty-based methods",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T12:48:56Z",
+    "updated": "2026-06-12T12:48:56Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14415v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14415v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "CSPO improves safe reinforcement learning by adding local constraint sensitivity to policy updates, helping the agent recover to safety faster while keeping high reward.",
+      "engineering_relevance": "The method is practical for deep RL systems that must respect safety limits in real time, especially where delayed constraint updates can cause instability or repeated violations.",
+      "method": [
+        "Primal-dual policy optimization with a first-order update rule",
+        "Constraint-sensitive correction based on the shortest signed distance to the safety boundary",
+        "Designed to reduce oscillations near constraints while preserving KKT solutions"
+      ],
+      "evidence_signal": "The abstract reports experiments on navigation and locomotion benchmarks, showing faster safety recovery, reduced boundary oscillations, and higher constrained returns than state-of-the-art baselines.",
+      "watch_item": "The approach depends on estimating distance to the safety boundary accurately, which may be difficult in complex or partially observed environments.",
+      "hashtags": [
+        "#SafeRL",
+        "#ReinforcementLearning",
+        "#ConstrainedMDP",
+        "#PolicyOptimization",
+        "#AISafety"
+      ],
+      "paper_id": "2026-06-12-arxiv-cspo_constraint_sensitive_policy_optimization_for_safe_reinforcement_learning",
+      "paper_title": "CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:43:19",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-cluster_loco_feature_importance_for_interpreting_clusters",
+    "arxiv_id": "2606.14592v1",
+    "date": "2026-06-12",
+    "title": "Cluster LOCO: Feature Importance For Interpreting Clusters",
+    "authors": "Claire M. He, Genevera I. Allen",
+    "abstract": "Clustering is widely used for exploratory analysis and scientific discovery, driving insights from market segmentation to biological data analysis, but its outputs can be difficult to interpret, audit, and reproduce as modern datasets become increasingly large and complex. Reliable use of clustering requires understanding which features drive the discovered structure, yet feature-level explanations for clustering remain scarce compared with methods in supervised learning. Furthermore, existing clustering feature importance scores are often tied to specific algorithms and data assumptions. To address these challenges, we propose Cluster LOCO (Leave-One-Covariate-Out), a family of model-agnostic feature importance scores for clustering. Cluster LOCO is built on feature occlusion and clustering generalizability, defined as whether cluster labels learned on one subset of the data can be accurately predicted on held-out samples. For any chosen clustering algorithm, Cluster LOCO quantifies a feature's importance by measuring how much its removal degrades generalizability. We first introduce Cluster LOCO-Split, which relies on data splitting, and then extend it to Cluster LOCO-MP, a minipatch ensemble-based version designed for large-scale data. Across synthetic simulations and an application to cell-type discovery in single-cell transcriptomics, we show that Cluster LOCO more reliably recovers informative features than existing clustering feature importance methods.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-06-12T16:10:26Z",
+    "updated": "2026-06-12T16:10:26Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.AP",
+      "stat.ME"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14592v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14592v1"
+      }
+    ],
+    "score": 58,
+    "infographic": {
+      "key_insight": "Cluster LOCO measures how much each feature matters for clustering by checking how much cluster generalizability drops when that feature is removed.",
+      "engineering_relevance": "This gives practitioners a model-agnostic way to audit, interpret, and prioritize features in clustering workflows, including large-scale scientific datasets.",
+      "method": [
+        "Split data, cluster one part, and test how well the learned labels generalize to held-out samples.",
+        "Compute feature importance by leaving one covariate out and measuring the drop in clustering generalizability.",
+        "Scale the approach with Cluster LOCO-MP, a minipatch ensemble variant for large datasets."
+      ],
+      "evidence_signal": "The authors evaluate on synthetic simulations and single-cell transcriptomics, reporting that Cluster LOCO more reliably identifies informative features than existing clustering feature-importance methods.",
+      "watch_item": "Because the score depends on clustering stability and data splitting choices, results may vary with the clustering algorithm, split design, and dataset size.",
+      "hashtags": [
+        "#Clustering",
+        "#FeatureImportance",
+        "#Interpretability",
+        "#SingleCell",
+        "#ScientificDiscovery"
+      ],
+      "paper_id": "2026-06-12-arxiv-cluster_loco_feature_importance_for_interpreting_clusters",
+      "paper_title": "Cluster LOCO: Feature Importance For Interpreting Clusters",
+      "paper_date": "2026-06-12",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-06-15T18:43:22",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-a_statistical_and_machine_learning_framework_for_operational_threshold_detection_and_deplo",
+    "arxiv_id": "2606.14601v1",
+    "date": "2026-06-12",
+    "title": "A Statistical and Machine Learning Framework for Operational Threshold Detection and Deployable Dispatch Controller Development in Hydrogen Multi-Energy Systems",
+    "authors": "Shadi Heenatigala, Hasanika Samarasinghe",
+    "abstract": "This study presents a statistical and machine learning framework for characterizing a hydrogen-based multi-energy system (H-MES) using one year of high-resolution operational data. Statistical analysis revealed a binary operation driven by renewable surplus, with solar irradiance explaining 45.7% of rank-based variance in hydrogen production, a large effect by conventional standards. Only high-irradiance periods triggered meaningful electrolyzer engagement, while electricity demand exerted a weaker inverse suppression effect ($ε^2 = 0.126$). Multiple regression confirmed electrolyzer power as the dominant linear predictor, with a synergistic solar-wind interaction. Notably, Random Forest analysis ranked wind output first in predictive importance despite its weak bivariate correlation (r = 0.167), revealing non-linear dynamics invisible to parametric methods. A sequence model exploited strong 24-hour autocorrelation (r = 0.845) for operational forecasting, while a reinforcement learning agent optimized hydrogen revenue dispatch. The core contribution is demonstrating that statistical and machine learning approaches are complementary for H-MES modeling and control.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-06-12T16:23:33Z",
+    "updated": "2026-06-12T16:23:33Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "eess.SY",
+      "math.OC",
+      "stat.CO"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14601v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14601v1"
+      }
+    ],
+    "score": 57,
+    "infographic": {
+      "key_insight": "Hydrogen multi-energy system operation is largely binary and driven by renewable surplus, with statistical and machine learning methods together revealing both linear and non-linear control signals.",
+      "engineering_relevance": "The framework supports deployable dispatch controllers and operational threshold detection for H-MES, helping improve hydrogen production scheduling and revenue-oriented control.",
+      "method": [
+        "Analyzed one year of high-resolution operational data from a hydrogen multi-energy system.",
+        "Used statistical tests, multiple regression, Random Forest, sequence modeling, and reinforcement learning.",
+        "Compared linear, rank-based, and temporal patterns to identify thresholds and forecasting signals."
+      ],
+      "evidence_signal": "Solar irradiance explained 45.7% of rank-based variance in hydrogen production, while electrolyzer power was the strongest linear predictor and 24-hour autocorrelation was strong (r = 0.845).",
+      "watch_item": "Results are data- and site-specific, so controller performance may vary when transferred to other H-MES configurations or operating regimes.",
+      "hashtags": [
+        "#HydrogenEnergy",
+        "#MachineLearning",
+        "#DispatchControl",
+        "#RenewableIntegration",
+        "#EnergySystems"
+      ],
+      "paper_id": "2026-06-12-arxiv-a_statistical_and_machine_learning_framework_for_operational_threshold_detection_and_deplo",
+      "paper_title": "A Statistical and Machine Learning Framework for Operational Threshold Detection and Deployable Dispatch Controller Development in Hydrogen Multi-Energy Systems",
+      "paper_date": "2026-06-12",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-06-15T18:43:24",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-learning_coordinated_preference_for_multi_objective_multi_agent_reinforcement_learning",
+    "arxiv_id": "2606.14693v1",
+    "date": "2026-06-12",
+    "title": "Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning",
+    "authors": "Pengxin Wang, Lihao Guo, Yi Xie, Bo Liu, Siyang Cao, Jingdi Chen",
+    "abstract": "Cooperative multi-objective multi-agent reinforcement learning (MOMARL) models team decision making under multiple, potentially conflicting objectives. In this setting, conflicts arise not only across objectives but also across agents with different observations, roles, and contributions. We propose Preference Coordinated Multi-agent Policy Optimization (PCMA), which learns coordinated agent-specific preferences to enable complementary trade-offs among agents. Theoretically, we formulate cooperative MOMARL as a team-optimal game and show that, under suitable conditions, preference diversity can induce team improvement through a first-order improvement decomposition. Experiments on multiple cooperative MOMA environments and a practical traffic-control scenario show that PCMA improves both performance and trade-off coordination.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T17:55:28Z",
+    "updated": "2026-06-12T17:55:28Z",
+    "primary_category": "cs.MA",
+    "categories": [
+      "cs.MA",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14693v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14693v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "PCMA learns coordinated, agent-specific preferences so a multi-agent team can make complementary trade-offs across multiple objectives and improve joint performance.",
+      "engineering_relevance": "The method is relevant for real-world cooperative control systems, such as traffic management, where different agents must balance competing goals while staying aligned as a team.",
+      "method": [
+        "Formulate cooperative MOMARL as a team-optimal game.",
+        "Learn diverse preferences for each agent to coordinate complementary trade-offs.",
+        "Use preference coordination with policy optimization to improve team-level outcomes."
+      ],
+      "evidence_signal": "The paper reports experiments on multiple cooperative MOMARL benchmarks and a practical traffic-control scenario, showing better performance and trade-off coordination.",
+      "watch_item": "The approach may depend on suitable conditions for the theoretical improvement guarantee and could require careful tuning to maintain stable coordination across agents.",
+      "hashtags": [
+        "#MultiAgentRL",
+        "#MultiObjectiveRL",
+        "#ReinforcementLearning",
+        "#TrafficControl",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-06-12-arxiv-learning_coordinated_preference_for_multi_objective_multi_agent_reinforcement_learning",
+      "paper_title": "Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:43:26",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-optimal_hidden_target_learning_for_online_inventory_optimization_on_general_convex_sets",
+    "arxiv_id": "2606.14679v1",
+    "date": "2026-06-12",
+    "title": "Optimal Hidden-Target Learning for Online Inventory Optimization on General Convex Sets",
+    "authors": "Anthony Pineci, Yunzong Xu",
+    "abstract": "Online inventory optimization (OIO) is online convex optimization with physical memory: inventory carryover makes the feasible action set depend on the past. A natural principle, used in stochastic inventory learning and recently in OIO under a single linear capacity constraint, is to maintain a hidden target chosen by an online learner and implement its projection onto the currently feasible order-up-to set. We prove that this simple principle is optimal for OIO on arbitrary bounded convex capacity sets. With online gradient descent as the base learner, the method improves the best known regret guarantee for OIO on general convex sets from inverse to inverse-square-root dependence on the common-demand probability, and we prove a matching lower bound. The same principle gives the first polylogarithmic regret guarantee for strongly convex losses and the first dynamic regret guarantee adapting to Euclidean path variation on general convex capacity sets. The analysis introduces a norm alignment principle: the right state variable is the distance from the hidden target to the feasible set, measured in the same norm as the projection. Under norm alignment, this distance evolves pathwise as a scalar queue, with target movement as arrival and common demand as service. This reduction to one-dimensional queue control resolves the state dependence and extends the guarantees to general convex capacity sets, beyond the reach of prior productwise approaches. Experiments on synthetic and real-world inventory data corroborate the theory.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-12T17:45:29Z",
+    "updated": "2026-06-12T17:45:29Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "eess.SY",
+      "math.OC",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14679v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14679v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "A hidden target updated by an online learner and projected onto the feasible inventory set is provably optimal for online inventory optimization on general bounded convex capacity sets.",
+      "engineering_relevance": "This gives a practical, low-complexity policy for inventory control with carryover constraints and improves regret guarantees in more realistic convex capacity settings.",
+      "method": [
+        "Use a hidden target as the learner’s state, then project it onto the currently feasible order-up-to set.",
+        "Apply online gradient descent as the base learner to drive the target updates.",
+        "Exploit norm alignment so target-to-feasible-set distance behaves like a scalar queue, enabling regret analysis on general convex sets."
+      ],
+      "evidence_signal": "The paper reports improved regret bounds and matching lower bounds analytically, with experiments on synthetic and real-world inventory data supporting the theory.",
+      "watch_item": "Performance and proof guarantees depend on choosing the projection norm consistently with the state metric, so implementation must preserve this norm alignment.",
+      "hashtags": [
+        "#OnlineOptimization",
+        "#InventoryControl",
+        "#ConvexOptimization",
+        "#RegretBounds",
+        "#MachineLearning"
+      ],
+      "paper_id": "2026-06-12-arxiv-optimal_hidden_target_learning_for_online_inventory_optimization_on_general_convex_sets",
+      "paper_title": "Optimal Hidden-Target Learning for Online Inventory Optimization on General Convex Sets",
+      "paper_date": "2026-06-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-15T18:43:29",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-12-arxiv-which_directions_matter_sparse_design_for_affine_robust_optimization",
+    "arxiv_id": "2606.14648v1",
+    "date": "2026-06-12",
+    "title": "Which Directions Matter? Sparse Design for Affine Robust Optimization",
+    "authors": "Pedro Chumpitaz-Flores, My Duong, Juan S. Borrero, Kaixun Hua",
+    "abstract": "Robust machine learning and optimization rely on the uncertainty model choice. We investigate which uncertainty directions a model must cover when defined by a finite dictionary and a budget constraint. Selecting a subset forms an atomic uncertainty set with a closed form support function, yielding tractable robust programs for affine objectives. We propose a data driven selection rule based on a coverage objective over evaluation directions, including gradients, adversarial perturbations, or shifts observed on held out data. We prove this objective is monotone and submodular, supporting a greedy method with a $(1-1/e)$ approximation guarantee and a matching hardness barrier. We also provide a certificate bounding the loss from the selected subset and a radius calibration rule with out of sample control.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-06-12T17:10:58Z",
+    "updated": "2026-06-12T17:10:58Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.14648v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.14648v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "The paper shows that for affine robust optimization, only a sparse subset of uncertainty directions may be needed, and these can be selected with provable coverage guarantees.",
+      "engineering_relevance": "This enables more tractable robust ML and optimization pipelines by replacing large uncertainty sets with a smaller atomic set that still preserves key robustness behavior.",
+      "method": [
+        "Model uncertainty as a finite dictionary with a budget constraint and select a subset of directions as an atomic uncertainty set.",
+        "Use a data-driven coverage objective over evaluation directions such as gradients, adversarial perturbations, or held-out data shifts.",
+        "Apply a greedy selection algorithm justified by monotone submodularity, with a (1-1/e) approximation guarantee and a loss certificate."
+      ],
+      "evidence_signal": "The abstract reports theoretical guarantees, including a matching hardness barrier, plus out-of-sample control for radius calibration on held-out evaluation directions.",
+      "watch_item": "Performance depends on the quality of the chosen dictionary and evaluation directions, so poor coverage may miss important uncertainty modes.",
+      "hashtags": [
+        "#RobustOptimization",
+        "#SparseSelection",
+        "#SubmodularOptimization",
+        "#MachineLearning",
+        "#UncertaintyQuantification"
+      ],
+      "paper_id": "2026-06-12-arxiv-which_directions_matter_sparse_design_for_affine_robust_optimization",
+      "paper_title": "Which Directions Matter? Sparse Design for Affine Robust Optimization",
+      "paper_date": "2026-06-12",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-15T18:43:32",
+      "generator": "openai"
+    }
+  }
+]
