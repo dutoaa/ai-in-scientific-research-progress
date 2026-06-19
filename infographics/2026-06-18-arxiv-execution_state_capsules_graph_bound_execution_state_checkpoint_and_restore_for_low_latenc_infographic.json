@@ -1,0 +1,24 @@
+{
+  "key_insight": "Execution-state capsules extend reuse beyond KV caches by checkpointing and restoring the full graph-bound execution state for low-latency, small-batch on-device AI serving.",
+  "engineering_relevance": "This enables fast, exact branch/reset/rollback behavior for interactive agents, speech, and robot policies without relying on high-throughput KV-cache assumptions.",
+  "method": [
+    "Capture the complete restorable state at a committed graph boundary into a capsule.",
+    "Store live state in closed, named contiguous buffers so it can be snapshotted and restored without block-table indirection.",
+    "Support restore, fork, and rollback across KV, recurrent, convolution, MTP state, and metadata."
+  ],
+  "evidence_signal": "On RTX 5090, restore is byte-exact and greedy decoding is token-identical; GPU-resident snapshot/restore is sub-millisecond, and TTFT speedup vs cold prefill rises from 3.9x at 2k tokens to 27x at 16k tokens, with results also holding on Jetson AGX Thor and DGX Spark.",
+  "watch_item": "This approach depends on a white-box runtime and backend-controlled static buffer layout, so portability and integration with existing opaque serving stacks may be nontrivial.",
+  "hashtags": [
+    "#LLMServing",
+    "#Checkpointing",
+    "#OnDeviceAI",
+    "#GPUSystems",
+    "#PhysicalAI"
+  ],
+  "paper_id": "2026-06-18-arxiv-execution_state_capsules_graph_bound_execution_state_checkpoint_and_restore_for_low_latenc",
+  "paper_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+  "paper_date": "2026-06-18",
+  "paper_category": "Literature and Knowledge Mining",
+  "generated_at": "2026-06-19T16:33:54",
+  "generator": "openai"
+}
