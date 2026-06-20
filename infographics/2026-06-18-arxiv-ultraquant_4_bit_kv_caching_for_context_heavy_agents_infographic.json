@@ -1,24 +1,24 @@
 {
-  "key_insight": "UltraQuant shows that 4-bit KV caching can preserve agent quality while substantially improving latency and throughput in long-context, multi-turn serving workloads.",
-  "engineering_relevance": "The paper targets a practical bottleneck in agent serving by combining cache compression with GPU-kernel and data-format optimizations to keep utilization high under concurrency.",
+  "key_insight": "UltraQuant shows that 4-bit KV caching can preserve agent quality while dramatically improving latency and throughput in long-context, multi-turn workloads where cache pressure dominates.",
+  "engineering_relevance": "The work is directly relevant to serving systems for context-heavy agents because it ties quantization choices to GPU residency, concurrency, and end-to-end response latency rather than cache compression alone.",
   "method": [
-    "Benchmarked 4-bit KV caching for multi-round agent workloads.",
-    "Used TurboQuant-style rotation, codebook quantization, asymmetric K/V handling, and block-scale variants.",
-    "Added AMD GPU serving optimizations and an UltraQuant FP4 path with FP8 queries, FP4 KV tensors, and UE8M0 group scales."
+    "Uses 4-bit KV-cache compression with TurboQuant-style rotation and codebook quantization as the quality anchor.",
+    "Adds practical robustness choices: asymmetric K/V treatment, Walsh-Hadamard rotation, QJL removal, and block-scale variants.",
+    "Implements an AMD GPU serving path with optimized decode-attention kernels and UltraQuant using FP8 queries, FP4 KV tensors, UE8M0 group scales, and native scaled-MFMA on CDNA4."
   ],
-  "evidence_signal": "On a long-context, multi-turn agentic workload, UltraQuant improved P50 time-to-first-token by 3.47x in late cache-pressured rounds (2.3x overall) and increased output throughput by 1.63x versus FP8 KV caching.",
-  "watch_item": "The approach depends on specialized quantization choices and AMD CDNA4-specific support, so portability and stability across other models or GPU stacks may require extra validation.",
+  "evidence_signal": "On a long-context, multi-turn agentic workload, UltraQuant improved P50 time-to-first-token by 3.47x in the cache-pressured late rounds (2.3x overall) and increased output throughput by 1.63x versus the FP8 KV baseline.",
+  "watch_item": "Results depend on specialized serving kernels and AMD CDNA4 hardware support, so portability and accuracy under different models or deployments may require re-tuning.",
   "hashtags": [
     "#KVCache",
-    "#4BitQuantization",
+    "#Quantization",
     "#LLMServing",
-    "#AgenticAI",
-    "#GPUOptimization"
+    "#AIAgents",
+    "#AMDGPUs"
   ],
   "paper_id": "2026-06-18-arxiv-ultraquant_4_bit_kv_caching_for_context_heavy_agents",
   "paper_title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
   "paper_date": "2026-06-18",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-06-19T16:33:22",
+  "generated_at": "2026-06-20T15:47:10",
   "generator": "openai"
 }

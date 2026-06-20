@@ -1,24 +1,24 @@
 {
-  "key_insight": "A two-stage evolutionary hyperparameter search can make PINN training more reliable by using cheap exploratory runs to find strong configurations before fully training only the best candidates.",
-  "engineering_relevance": "This provides a practical way to reduce PINN instability and improve solution accuracy under fixed compute budgets for PDE-based scientific modeling.",
+  "key_insight": "A two-stage evolutionary hyperparameter search can make PINN training more robust by cheaply screening candidates first and fully training only the best ones.",
+  "engineering_relevance": "This offers a practical way to improve PDE-solver accuracy under fixed compute budgets when PINNs are unstable and highly sensitive to hyperparameters.",
   "method": [
-    "Stage 1: run low-fidelity, truncated training to screen many hyperparameter configurations with an evolutionary algorithm.",
-    "Stage 2: fully train only the most promising candidates using standard gradient-based optimization.",
-    "Use the outer loop as a black-box search over mixed, non-differentiable PINN hyperparameters."
+    "Use an evolutionary algorithm to explore mixed PINN hyperparameters as a black-box outer loop.",
+    "Run short low-fidelity training epochs to quickly rank candidate configurations.",
+    "Fully train only the top candidates with standard gradient-based optimization in stage two."
   ],
-  "evidence_signal": "The approach was evaluated on Advection, Klein-Gordon, and Helmholtz problems, where it consistently outperformed standard training and achieved lower mean error under constrained computational resources.",
-  "watch_item": "Because stage 1 uses truncated training, promising configurations may be misranked if early performance is not predictive of final convergence.",
+  "evidence_signal": "The approach was evaluated on Advection, Klein-Gordon, and Helmholtz problems and consistently reduced mean error versus standard training under constrained computation.",
+  "watch_item": "Performance depends on the quality of low-fidelity screening, so overly short truncated runs may discard configurations that would have improved with longer training.",
   "hashtags": [
     "#PINNs",
-    "#ScientificMachineLearning",
-    "#EvolutionaryAlgorithms",
     "#HyperparameterOptimization",
+    "#EvolutionaryAlgorithms",
+    "#ScientificMachineLearning",
     "#PDEs"
   ],
   "paper_id": "2026-06-18-arxiv-evolutionary_two_stage_hyperparameter_optimization_strategies_for_physics_informed_neural",
   "paper_title": "Evolutionary Two-Stage Hyperparameter Optimization Strategies for Physics-Informed Neural Networks",
   "paper_date": "2026-06-18",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-06-19T16:33:20",
+  "generated_at": "2026-06-20T15:47:00",
   "generator": "openai"
 }

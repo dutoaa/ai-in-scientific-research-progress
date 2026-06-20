@@ -1,24 +1,24 @@
 {
-  "key_insight": "Execution-state capsules extend reuse beyond KV caches by checkpointing and restoring the full graph-bound execution state for low-latency, small-batch on-device AI serving.",
-  "engineering_relevance": "This enables fast, exact branch/reset/rollback behavior for interactive agents, speech, and robot policies without relying on high-throughput KV-cache assumptions.",
+  "key_insight": "Execution-state capsules checkpoint and restore the full graph-bound runtime state—not just KV cache—enabling fast, exact reuse for low-latency on-device AI serving.",
+  "engineering_relevance": "This lets interactive agents, speech stacks, and robot policies recover, branch, and re-enter execution with much lower time-to-first-token than cold prefill on GPU and edge hardware.",
   "method": [
-    "Capture the complete restorable state at a committed graph boundary into a capsule.",
-    "Store live state in closed, named contiguous buffers so it can be snapshotted and restored without block-table indirection.",
-    "Support restore, fork, and rollback across KV, recurrent, convolution, MTP state, and metadata."
+    "FlashRT captures execution plans over contiguous static buffers with no block-table indirection.",
+    "A capsule snapshots/restores the complete committed boundary, including KV, recurrent, convolution, MTP state, and metadata.",
+    "Supports fork/rollback of execution state for graph-bound reuse rather than token-bound KV reuse."
   ],
-  "evidence_signal": "On RTX 5090, restore is byte-exact and greedy decoding is token-identical; GPU-resident snapshot/restore is sub-millisecond, and TTFT speedup vs cold prefill rises from 3.9x at 2k tokens to 27x at 16k tokens, with results also holding on Jetson AGX Thor and DGX Spark.",
-  "watch_item": "This approach depends on a white-box runtime and backend-controlled static buffer layout, so portability and integration with existing opaque serving stacks may be nontrivial.",
+  "evidence_signal": "On an RTX 5090, restore was byte-exact and greedy decoding was token-identical; TTFT speedup over cold prefill rose from 3.9x at 2k tokens to 27x at 16k tokens, with sub-millisecond GPU-resident snapshot/restore.",
+  "watch_item": "This approach depends on a white-box, backend-facing runtime with closed-set named buffers, so integrating arbitrary or dynamic model runtimes may be non-trivial.",
   "hashtags": [
     "#LLMServing",
-    "#Checkpointing",
+    "#CheckpointRestore",
     "#OnDeviceAI",
-    "#GPUSystems",
-    "#PhysicalAI"
+    "#KVCache",
+    "#GPUInference"
   ],
   "paper_id": "2026-06-18-arxiv-execution_state_capsules_graph_bound_execution_state_checkpoint_and_restore_for_low_latenc",
   "paper_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
   "paper_date": "2026-06-18",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-06-19T16:33:54",
+  "generated_at": "2026-06-20T15:47:39",
   "generator": "openai"
 }

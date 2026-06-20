@@ -26,29 +26,29 @@
         "url": "https://arxiv.org/pdf/2606.20467v1"
       }
     ],
-    "score": 91,
+    "score": 86,
     "infographic": {
-      "key_insight": "ASYS uses an agent-guided symbolic search process to discover interpretable PDE formulas and analytical approximations, rather than relying only on meshes, numerical tables, or black-box neural nets.",
-      "engineering_relevance": "This could help computational scientists obtain compact, human-readable surrogate laws for PDE behavior, accelerating analysis, hypothesis generation, and model validation.",
+      "key_insight": "Agentic Symbolic Search (ASYS) uses a prior-guided agent plus evolutionary and gradient-based optimization to discover interpretable symbolic PDE representations instead of only numerical or neural approximations.",
+      "engineering_relevance": "The method could help engineers obtain compact, human-readable surrogate laws for complex PDE systems, improving insight, downstream analysis, and model-guided design.",
       "method": [
-        "Agent translates PDE theory, public constraints, and prior search experience into testable differentiable symbolic programs.",
-        "Evolutionary search refines the symbolic form while gradient-based optimization fits continuous parameters.",
-        "Acts as prior-guided inductive bias injection instead of blind symbolic regression."
+        "Agent translates PDE theory, problem constraints, and prior search experience into differentiable symbolic programs.",
+        "Evolutionary search refines the mathematical form while gradient descent fits continuous parameters.",
+        "Acts as inductive-bias injection for symbolic discovery rather than blind symbolic regression."
       ],
-      "evidence_signal": "The abstract reports experiments on five PDE problems spanning bounded dynamics, finite-time blow-up, and free-boundary focusing, including previously unavailable interpretable formulas.",
-      "watch_item": "Performance likely depends on the quality of priors, constraint encoding, and search space design, so the method may be sensitive to implementation and problem setup.",
+      "evidence_signal": "Across five PDE problems, including bounded dynamics, finite-time blow-up, and free-boundary focusing, ASYS recovered known analytical forms or produced new interpretable formulas such as an Allen-Cahn interface law and a Keller-Segel contraction law.",
+      "watch_item": "Performance may depend on the quality of provided priors, constraints, and search setup, so results could be sensitive to problem-specific guidance.",
       "hashtags": [
         "#PDEs",
         "#SymbolicRegression",
         "#ScientificAI",
-        "#ComputationalPhysics",
-        "#InterpretableML"
+        "#InterpretableML",
+        "#ComputationalScience"
       ],
       "paper_id": "2026-06-18-arxiv-agentic_symbolic_search_characterizing_pdes_beyond_hand_crafted_expressions_meshes_and_neu",
       "paper_title": "Agentic Symbolic Search: Characterizing PDEs Beyond Hand-crafted Expressions, Meshes, and Neural Networks",
       "paper_date": "2026-06-18",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-06-19T16:33:17",
+      "generated_at": "2026-06-20T15:46:58",
       "generator": "openai"
     }
   },
@@ -81,131 +81,27 @@
     ],
     "score": 86,
     "infographic": {
-      "key_insight": "A two-stage evolutionary hyperparameter search can make PINN training more reliable by using cheap exploratory runs to find strong configurations before fully training only the best candidates.",
-      "engineering_relevance": "This provides a practical way to reduce PINN instability and improve solution accuracy under fixed compute budgets for PDE-based scientific modeling.",
+      "key_insight": "A two-stage evolutionary hyperparameter search can make PINN training more robust by cheaply screening candidates first and fully training only the best ones.",
+      "engineering_relevance": "This offers a practical way to improve PDE-solver accuracy under fixed compute budgets when PINNs are unstable and highly sensitive to hyperparameters.",
       "method": [
-        "Stage 1: run low-fidelity, truncated training to screen many hyperparameter configurations with an evolutionary algorithm.",
-        "Stage 2: fully train only the most promising candidates using standard gradient-based optimization.",
-        "Use the outer loop as a black-box search over mixed, non-differentiable PINN hyperparameters."
+        "Use an evolutionary algorithm to explore mixed PINN hyperparameters as a black-box outer loop.",
+        "Run short low-fidelity training epochs to quickly rank candidate configurations.",
+        "Fully train only the top candidates with standard gradient-based optimization in stage two."
       ],
-      "evidence_signal": "The approach was evaluated on Advection, Klein-Gordon, and Helmholtz problems, where it consistently outperformed standard training and achieved lower mean error under constrained computational resources.",
-      "watch_item": "Because stage 1 uses truncated training, promising configurations may be misranked if early performance is not predictive of final convergence.",
+      "evidence_signal": "The approach was evaluated on Advection, Klein-Gordon, and Helmholtz problems and consistently reduced mean error versus standard training under constrained computation.",
+      "watch_item": "Performance depends on the quality of low-fidelity screening, so overly short truncated runs may discard configurations that would have improved with longer training.",
       "hashtags": [
         "#PINNs",
-        "#ScientificMachineLearning",
-        "#EvolutionaryAlgorithms",
         "#HyperparameterOptimization",
+        "#EvolutionaryAlgorithms",
+        "#ScientificMachineLearning",
         "#PDEs"
       ],
       "paper_id": "2026-06-18-arxiv-evolutionary_two_stage_hyperparameter_optimization_strategies_for_physics_informed_neural",
       "paper_title": "Evolutionary Two-Stage Hyperparameter Optimization Strategies for Physics-Informed Neural Networks",
       "paper_date": "2026-06-18",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-19T16:33:20",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-ultraquant_4_bit_kv_caching_for_context_heavy_agents",
-    "arxiv_id": "2606.20474v1",
-    "date": "2026-06-18",
-    "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
-    "authors": "Inesh Chakrabarti, David Limpus, Aditi Ghai Rana, Bowen Bao, Spandan Tiwari, Thiago Crepaldi",
-    "abstract": "Context-heavy agents place unusual pressure on the key-value (KV) cache: long prefixes are reused across many short turns, while concurrency determines whether the serving system can keep GPUs utilized. We study 4-bit KV-cache compression for this setting, using TurboQuant-style rotation and codebook quantization as a quality anchor and vLLM FP8 KV caching as the deployment anchor. We report three contributions. First, we frame 4-bit KV caching around multi-round agent workloads where task quality, cache residency, and serving throughput must be measured jointly. Second, we describe the practical design choices needed to make the 4-bit path robust, including asymmetric K/V treatment, Walsh-Hadamard rotation, QJL removal, and block-scale variants. Third, we present serving optimizations on AMD GPUs, including optimized decode-attention kernels and UltraQuant, an FP4 approximation path that uses FP8 queries, FP4 KV tensors, UE8M0 group scales, and native scaled-MFMA support on CDNA4. On a long-context, multi-turn agentic workload, UltraQuant cuts P50 time-to-first-token by 3.47x in the cache-pressured late rounds (2.3x across all rounds) and raises output throughput by 1.63x over the FP8 KV baseline.",
-    "category": "AI Scientists and Research Agents",
-    "source": "arXiv",
-    "published": "2026-06-18T16:54:07Z",
-    "updated": "2026-06-18T16:54:07Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "cs.PF"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20474v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20474v1"
-      }
-    ],
-    "score": 81,
-    "infographic": {
-      "key_insight": "UltraQuant shows that 4-bit KV caching can preserve agent quality while substantially improving latency and throughput in long-context, multi-turn serving workloads.",
-      "engineering_relevance": "The paper targets a practical bottleneck in agent serving by combining cache compression with GPU-kernel and data-format optimizations to keep utilization high under concurrency.",
-      "method": [
-        "Benchmarked 4-bit KV caching for multi-round agent workloads.",
-        "Used TurboQuant-style rotation, codebook quantization, asymmetric K/V handling, and block-scale variants.",
-        "Added AMD GPU serving optimizations and an UltraQuant FP4 path with FP8 queries, FP4 KV tensors, and UE8M0 group scales."
-      ],
-      "evidence_signal": "On a long-context, multi-turn agentic workload, UltraQuant improved P50 time-to-first-token by 3.47x in late cache-pressured rounds (2.3x overall) and increased output throughput by 1.63x versus FP8 KV caching.",
-      "watch_item": "The approach depends on specialized quantization choices and AMD CDNA4-specific support, so portability and stability across other models or GPU stacks may require extra validation.",
-      "hashtags": [
-        "#KVCache",
-        "#4BitQuantization",
-        "#LLMServing",
-        "#AgenticAI",
-        "#GPUOptimization"
-      ],
-      "paper_id": "2026-06-18-arxiv-ultraquant_4_bit_kv_caching_for_context_heavy_agents",
-      "paper_title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-06-19T16:33:22",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-software_package_mardi_open_interfaces_for_improved_interoperability_in_numerical_optimiza",
-    "arxiv_id": "2606.20490v1",
-    "date": "2026-06-18",
-    "title": "Software package MaRDI Open Interfaces for improved interoperability in numerical optimization",
-    "authors": "Dmitry I. Kabanov, Stephan Rave, Mario Ohlberger",
-    "abstract": "To address the challenges of interoperability in computational science, we present the latest updates to the software package MaRDI Open Interfaces. This software package aims to decrease the time and coding/testing efforts spent by computational scientists on tasks such as writing bindings to numerical solvers and adapting experiment codes to the varying interfaces of solvers for the same problem type (e.g., for benchmarking, which solver is better). By streamlining these tasks, this software package helps researchers focus on the actual essence of their computational projects. Here, we demonstrate a recently developed interface for nonlinear optimization and illustrate how it can be applied for computational experiments with optimization problems. As an example of such problem, we consider training of physics-informed neural networks to predict the solutions of viscous Burgers' equation.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-06-18T17:07:33Z",
-    "updated": "2026-06-18T17:07:33Z",
-    "primary_category": "cs.MS",
-    "categories": [
-      "cs.MS"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20490v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20490v1"
-      }
-    ],
-    "score": 80,
-    "infographic": {
-      "key_insight": "MaRDI Open Interfaces improves interoperability in numerical optimization by standardizing solver access, reducing the effort needed to bind, swap, and benchmark optimization solvers across computational experiments.",
-      "engineering_relevance": "The package helps computational scientists integrate nonlinear optimization solvers more efficiently, making it easier to prototype and compare methods in workflows such as training physics-informed neural networks.",
-      "method": [
-        "Provides updated open interfaces for numerical optimization solvers",
-        "Abstracts solver-specific bindings to reduce code adaptation effort",
-        "Supports computational experiments and benchmarking across different solvers"
-      ],
-      "evidence_signal": "The abstract reports a demonstrated nonlinear optimization interface and an application to training physics-informed neural networks for viscous Burgers' equation, but does not provide quantitative performance results.",
-      "watch_item": "Interoperability still depends on the quality and completeness of each solver’s interface implementation, so integration effort may remain nontrivial for new or unusual solvers.",
-      "hashtags": [
-        "#NumericalOptimization",
-        "#Interoperability",
-        "#ScientificComputing",
-        "#PhysicsInformedNeuralNetworks",
-        "#SoftwareEngineering"
-      ],
-      "paper_id": "2026-06-18-arxiv-software_package_mardi_open_interfaces_for_improved_interoperability_in_numerical_optimiza",
-      "paper_title": "Software package MaRDI Open Interfaces for improved interoperability in numerical optimization",
-      "paper_date": "2026-06-18",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-19T16:33:24",
+      "generated_at": "2026-06-20T15:47:00",
       "generator": "openai"
     }
   },
@@ -237,27 +133,131 @@
     ],
     "score": 80,
     "infographic": {
-      "key_insight": "HEPTv2 is an end-to-end point transformer that reconstructs charged-particle tracks directly from detector hits, avoiding graph building and auxiliary preprocessing while preserving high accuracy.",
-      "engineering_relevance": "The model targets real-time track reconstruction at HL-LHC scale, offering a strong accuracy-latency-memory trade-off for high-throughput detector inference.",
+      "key_insight": "HEPTv2 is an end-to-end point-transformer that reconstructs charged-particle tracks directly from detector hits, avoiding graph construction while improving both accuracy and runtime efficiency.",
+      "engineering_relevance": "The approach is highly relevant for real-time high-energy-physics systems because it delivers strong tracking performance at HL-LHC scale under tight latency and memory constraints.",
       "method": [
-        "Locality-aware point encoder with locality-sensitive hashing in detector coordinate space",
-        "Sectorized track decoder that predicts complete trajectories directly from hits",
-        "Joint encoder-decoder training for end-to-end optimization without graph construction or filtering"
+        "Locality-aware point encoder using locality-sensitive hashing in detector coordinate space",
+        "Sectorized track decoder with direct hit-to-track prediction",
+        "Joint encoder-decoder supervision for end-to-end optimization without graph-building, clustering, or filtering"
       ],
-      "evidence_signal": "On TrackML, HEPTv2 reaches 98.6% double-majority tracking efficiency at a 0.8% fake rate with about 15 ms latency and 0.4 GB peak memory per event on an NVIDIA A100.",
-      "watch_item": "Performance and scalability are demonstrated on TrackML and may depend on detector geometry, hit density, and implementation details of the locality-sensitive hashing and sector decoding pipeline.",
+      "evidence_signal": "On TrackML, HEPTv2 reports 98.6% double-majority tracking efficiency at a 0.8% fake rate, with about 15 ms inference time and 0.4 GB peak memory per event on an NVIDIA A100.",
+      "watch_item": "Performance depends on efficient sectorization and hashing design, so deployment may require careful tuning to preserve accuracy at very high hit multiplicities.",
       "hashtags": [
-        "#ParticleTracking",
-        "#Transformers",
+        "#PointTransformer",
         "#HighEnergyPhysics",
-        "#EndToEndML",
+        "#ParticleTracking",
+        "#EndToEndAI",
         "#RealTimeInference"
       ],
       "paper_id": "2026-06-18-arxiv-heptv2_end_to_end_efficient_point_transformer_for_charged_particle_reconstruction",
       "paper_title": "HEPTv2: End-to-End Efficient Point Transformer for Charged Particle Reconstruction",
       "paper_date": "2026-06-18",
       "paper_category": "Biomedical and Physical Sciences",
-      "generated_at": "2026-06-19T16:33:27",
+      "generated_at": "2026-06-20T15:47:03",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-ultraquant_4_bit_kv_caching_for_context_heavy_agents",
+    "arxiv_id": "2606.20474v1",
+    "date": "2026-06-18",
+    "title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
+    "authors": "Inesh Chakrabarti, David Limpus, Aditi Ghai Rana, Bowen Bao, Spandan Tiwari, Thiago Crepaldi",
+    "abstract": "Context-heavy agents place unusual pressure on the key-value (KV) cache: long prefixes are reused across many short turns, while concurrency determines whether the serving system can keep GPUs utilized. We study 4-bit KV-cache compression for this setting, using TurboQuant-style rotation and codebook quantization as a quality anchor and vLLM FP8 KV caching as the deployment anchor. We report three contributions. First, we frame 4-bit KV caching around multi-round agent workloads where task quality, cache residency, and serving throughput must be measured jointly. Second, we describe the practical design choices needed to make the 4-bit path robust, including asymmetric K/V treatment, Walsh-Hadamard rotation, QJL removal, and block-scale variants. Third, we present serving optimizations on AMD GPUs, including optimized decode-attention kernels and UltraQuant, an FP4 approximation path that uses FP8 queries, FP4 KV tensors, UE8M0 group scales, and native scaled-MFMA support on CDNA4. On a long-context, multi-turn agentic workload, UltraQuant cuts P50 time-to-first-token by 3.47x in the cache-pressured late rounds (2.3x across all rounds) and raises output throughput by 1.63x over the FP8 KV baseline.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-06-18T16:54:07Z",
+    "updated": "2026-06-18T16:54:07Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.PF"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20474v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20474v1"
+      }
+    ],
+    "score": 76,
+    "infographic": {
+      "key_insight": "UltraQuant shows that 4-bit KV caching can preserve agent quality while dramatically improving latency and throughput in long-context, multi-turn workloads where cache pressure dominates.",
+      "engineering_relevance": "The work is directly relevant to serving systems for context-heavy agents because it ties quantization choices to GPU residency, concurrency, and end-to-end response latency rather than cache compression alone.",
+      "method": [
+        "Uses 4-bit KV-cache compression with TurboQuant-style rotation and codebook quantization as the quality anchor.",
+        "Adds practical robustness choices: asymmetric K/V treatment, Walsh-Hadamard rotation, QJL removal, and block-scale variants.",
+        "Implements an AMD GPU serving path with optimized decode-attention kernels and UltraQuant using FP8 queries, FP4 KV tensors, UE8M0 group scales, and native scaled-MFMA on CDNA4."
+      ],
+      "evidence_signal": "On a long-context, multi-turn agentic workload, UltraQuant improved P50 time-to-first-token by 3.47x in the cache-pressured late rounds (2.3x overall) and increased output throughput by 1.63x versus the FP8 KV baseline.",
+      "watch_item": "Results depend on specialized serving kernels and AMD CDNA4 hardware support, so portability and accuracy under different models or deployments may require re-tuning.",
+      "hashtags": [
+        "#KVCache",
+        "#Quantization",
+        "#LLMServing",
+        "#AIAgents",
+        "#AMDGPUs"
+      ],
+      "paper_id": "2026-06-18-arxiv-ultraquant_4_bit_kv_caching_for_context_heavy_agents",
+      "paper_title": "UltraQuant: 4-bit KV Caching for Context-Heavy Agents",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-06-20T15:47:10",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-software_package_mardi_open_interfaces_for_improved_interoperability_in_numerical_optimiza",
+    "arxiv_id": "2606.20490v1",
+    "date": "2026-06-18",
+    "title": "Software package MaRDI Open Interfaces for improved interoperability in numerical optimization",
+    "authors": "Dmitry I. Kabanov, Stephan Rave, Mario Ohlberger",
+    "abstract": "To address the challenges of interoperability in computational science, we present the latest updates to the software package MaRDI Open Interfaces. This software package aims to decrease the time and coding/testing efforts spent by computational scientists on tasks such as writing bindings to numerical solvers and adapting experiment codes to the varying interfaces of solvers for the same problem type (e.g., for benchmarking, which solver is better). By streamlining these tasks, this software package helps researchers focus on the actual essence of their computational projects. Here, we demonstrate a recently developed interface for nonlinear optimization and illustrate how it can be applied for computational experiments with optimization problems. As an example of such problem, we consider training of physics-informed neural networks to predict the solutions of viscous Burgers' equation.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-06-18T17:07:33Z",
+    "updated": "2026-06-18T17:07:33Z",
+    "primary_category": "cs.MS",
+    "categories": [
+      "cs.MS"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20490v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20490v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "MaRDI Open Interfaces improves interoperability in computational optimization by standardizing solver access, reducing the effort needed to connect experiment codes with different numerical solvers.",
+      "engineering_relevance": "The package helps computational scientists prototype, benchmark, and swap nonlinear optimization backends more efficiently, which is especially useful for workflows such as training physics-informed neural networks.",
+      "method": [
+        "Provides open interfaces that abstract solver-specific bindings.",
+        "Adds a recently developed interface for nonlinear optimization.",
+        "Supports computational experiments by adapting the same problem setup to multiple solvers."
+      ],
+      "evidence_signal": "The abstract reports a demonstration of the nonlinear optimization interface on physics-informed neural network training for viscous Burgers' equation, but does not provide quantitative performance results.",
+      "watch_item": "Interoperability layers can still require careful adaptation to solver-specific assumptions, so compatibility and benchmark fairness should be validated case by case.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#NumericalOptimization",
+        "#Interoperability",
+        "#PhysicsInformedNeuralNetworks",
+        "#ComputationalScience"
+      ],
+      "paper_id": "2026-06-18-arxiv-software_package_mardi_open_interfaces_for_improved_interoperability_in_numerical_optimiza",
+      "paper_title": "Software package MaRDI Open Interfaces for improved interoperability in numerical optimization",
+      "paper_date": "2026-06-18",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-06-20T15:47:12",
       "generator": "openai"
     }
   },
@@ -287,237 +287,29 @@
         "url": "https://arxiv.org/pdf/2606.20497v1"
       }
     ],
-    "score": 79,
+    "score": 74,
     "infographic": {
-      "key_insight": "The paper combines interpretable linear meta-learning with adaptive uncertainty calibration to improve multi-objective molecular search under limited data and computational constraints.",
-      "engineering_relevance": "It offers a practical, explainable optimization pipeline for accelerating chemical discovery when quantum-level evaluations are expensive and multiple competing objectives must be balanced.",
+      "key_insight": "The paper combines interpretable linear meta-learning with adaptive uncertainty calibration to make multi-objective molecular search faster, more transferable, and more effective than standard surrogates.",
+      "engineering_relevance": "It offers a practical, low-compute active-learning framework for chemistry optimization where multiple competing objectives and limited data make deep models hard to deploy.",
       "method": [
-        "Meta-learn linear surrogate models across chemical objectives and cheap auxiliary properties to transfer reusable chemical structure knowledge.",
-        "Embed the surrogates in an Efficient Global Optimization (EGO) loop for multi-objective search.",
-        "Adapt confidence estimates during active search to better manage exploration versus exploitation as candidate distributions shift."
+        "Meta-train linear surrogate models across chemical objectives and cheap auxiliary properties to transfer knowledge to new targets.",
+        "Embed the surrogate in an Efficient Global Optimization (EGO) loop for multi-objective discovery.",
+        "Use adaptive confidence tuning to recalibrate uncertainty and balance exploration vs. exploitation during search."
       ],
-      "evidence_signal": "On a real large-scale search for spin-crossover metal-organic complexes, the baseline was reported as 78% worse in Pareto sense than the meta-learning approach, and dynamic confidence tuning improved over 50% relative to a statically calibrated front.",
-      "watch_item": "Because the approach relies on adaptive calibration in tail regions, performance may depend on careful uncertainty tuning and could be sensitive to shifts between training objectives and the target search space.",
+      "evidence_signal": "On a large-scale real search for spin-crossover metal-organic complexes, the baseline was 78% worse in Pareto performance, and dynamic confidence tuning beat over 50% of the statically calibrated front.",
+      "watch_item": "The approach depends on good calibration and transfer across related objectives, so performance may drop if the auxiliary tasks are poorly matched or the uncertainty model is miscalibrated.",
       "hashtags": [
         "#MetaLearning",
         "#MultiObjectiveOptimization",
         "#ChemicalDiscovery",
-        "#UncertaintyQuantification",
-        "#ActiveLearning"
+        "#ActiveLearning",
+        "#UncertaintyQuantification"
       ],
       "paper_id": "2026-06-18-arxiv-interpretable_meta_learning_for_multi_objective_chemical_search",
       "paper_title": "Interpretable Meta-Learning for Multi-Objective Chemical Search",
       "paper_date": "2026-06-18",
       "paper_category": "Biomedical and Physical Sciences",
-      "generated_at": "2026-06-19T16:33:30",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-autopass_evidence_guided_llm_agents_for_compiler_performance_tuning",
-    "arxiv_id": "2606.20373v1",
-    "date": "2026-06-18",
-    "title": "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning",
-    "authors": "Zepeng Li, Jie Ren, Zhanyong Tang, Jie Zheng, Zheng Wang",
-    "abstract": "Large Language Models (LLMs) show promise for code compilation tasks, but applying them to runtime performance tuning is difficult due to complex microarchitectural effects and noisy runtime measurements. We present AutoPass, a multi-agent framework for compiler performance tuning that uses compiler and runtime evidence to guide LLM-generated optimization decisions. Rather than treating the compiler as a black box like prior auto-tuning schemes, AutoPass opens up the compiler to the LLM, enabling it to query compiler-internal optimization states and analyze the intermediate representation to orchestrate compiler options. The search process iteratively refines optimization configurations using measured runtime feedback to diagnose regressions and guide latency-improving edits. AutoPass operates in an inference-only, training-free setting and requires no offline training or task-specific fine-tuning, making it readily applicable to new benchmarks and platforms. We implement AutoPass on the LLVM compiler and evaluate it on server-grade x86-64 and embedded ARM64 systems. AutoPass outperforms expert-tuned heuristics and classical autotuning methods, achieving geometric-mean speedups of 1.043x and 1.117x over LLVM -O3 on x86-64 and ARM64, respectively.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-06-18T15:35:40Z",
-    "updated": "2026-06-18T15:35:40Z",
-    "primary_category": "cs.SE",
-    "categories": [
-      "cs.SE",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20373v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20373v1"
-      }
-    ],
-    "score": 76,
-    "infographic": {
-      "key_insight": "AutoPass turns compiler tuning into an evidence-guided LLM agent loop that inspects compiler state and runtime feedback to make better optimization choices.",
-      "engineering_relevance": "It offers a practical, training-free way to improve real program performance on both server and embedded targets without task-specific fine-tuning.",
-      "method": [
-        "Multi-agent LLM framework for compiler performance tuning",
-        "Queries compiler-internal optimization states and IR instead of treating the compiler as a black box",
-        "Iteratively refines optimization settings using measured runtime feedback to fix regressions and improve latency"
-      ],
-      "evidence_signal": "Evaluated on LLVM for x86-64 and ARM64, AutoPass achieved geometric-mean speedups of 1.043x and 1.117x over -O3, outperforming expert heuristics and classical autotuning methods.",
-      "watch_item": "Runtime measurements are noisy and compiler effects are complex, so the approach may be sensitive to benchmarking stability and platform-specific behavior.",
-      "hashtags": [
-        "#LLMAgents",
-        "#CompilerOptimization",
-        "#AutoTuning",
-        "#LLVM",
-        "#PerformanceEngineering"
-      ],
-      "paper_id": "2026-06-18-arxiv-autopass_evidence_guided_llm_agents_for_compiler_performance_tuning",
-      "paper_title": "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-06-19T16:33:35",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-what_do_safety_aligned_llms_learn_from_mixed_compliance_demonstrations",
-    "arxiv_id": "2606.20508v1",
-    "date": "2026-06-18",
-    "title": "What Do Safety-Aligned LLMs Learn From Mixed Compliance Demonstrations?",
-    "authors": "Sihui Dai, Mann Patel",
-    "abstract": "Prior work has shown that in-context demonstrations can jailbreak language models, but it remains unclear how models interpret different types of compliance demonstrations. We study this by mixing benign compliance demonstrations (non-harmful request, helpful response) with harmful compliance demonstrations (harmful request, helpful response) and testing three hypotheses about how demonstration composition drives harmful compliance. Across four models, we find that benign and harmful demonstrations are not interchangeable: benign demonstrations can either reduce or increase harmful compliance depending on the model. We further show that preference optimization is the critical training stage that prevents benign demonstrations from increasing harmful compliance, that demonstration ordering exhibits strong recency bias, and that models differ in how refusal interacts with in-context learning: some adopt demonstrated formatting even when refusing, while others override all in-context signals upon refusal. Taken together, this work moves beyond showing that demonstration-based jailbreaking works to characterizing how it works: what models extract from compliance demonstrations depends on demonstration content, ordering, and training methodology.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-06-18T17:25:38Z",
-    "updated": "2026-06-18T17:25:38Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20508v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20508v1"
-      }
-    ],
-    "score": 75,
-    "infographic": {
-      "key_insight": "Safety-aligned LLMs do not treat benign and harmful compliance demonstrations the same; what they learn depends strongly on demo content, ordering, and training stage.",
-      "engineering_relevance": "For deployed LLM systems, prompt-injection and jailbreak defenses must account for in-context demonstration effects, not just the presence of harmful examples.",
-      "method": [
-        "Mixed benign and harmful compliance demonstrations in prompts",
-        "Tested three hypotheses on harmful compliance across four models",
-        "Compared effects of ordering, refusal behavior, and training methodology"
-      ],
-      "evidence_signal": "The study evaluates four models and finds recency bias plus model-specific responses to benign versus harmful demonstrations, as summarized in the abstract.",
-      "watch_item": "Results may be highly model- and training-dependent, so mitigation strategies should be validated per model rather than assumed to generalize.",
-      "hashtags": [
-        "#LLMSafety",
-        "#InContextLearning",
-        "#PromptInjection",
-        "#JailbreakDefense",
-        "#AIResearch"
-      ],
-      "paper_id": "2026-06-18-arxiv-what_do_safety_aligned_llms_learn_from_mixed_compliance_demonstrations",
-      "paper_title": "What Do Safety-Aligned LLMs Learn From Mixed Compliance Demonstrations?",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-06-19T16:33:37",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-marginal_advantage_accumulation_for_memory_driven_agent_self_evolution",
-    "arxiv_id": "2606.20475v1",
-    "date": "2026-06-18",
-    "title": "Marginal Advantage Accumulation for Memory-Driven Agent Self-Evolution",
-    "authors": "Mingyu Yang, Keye Zheng, Congchao Cheng, Yujie Liu, Xingkang Lu, Fan Jiang",
-    "abstract": "In batch-style trace distillation, the same memory operation may receive contradictory feedback across different batches. Existing methods lack a cross-batch, operation-level evidence accumulation mechanism, making it impossible to distinguish stably effective operations from accidental hits. This paper formalizes the requirement as two structural conditions, alignability and comparability, and proposes Marginal Advantage Accumulation (MAA). MAA constructs differential signals to make them comparable across batches, accumulates signed evidence per operation via EMA, and ensures cross-batch traceability through semantic identity merging. As a post-processing architecture, MAA achieves the best results in 14 out of 16 settings across 4 benchmarks and 4 target models, consistently outperforming existing batch-level distillation baselines and matching or surpassing online alternatives in most settings, while reducing optimization-phase token consumption by approximately 75%.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-06-18T16:54:25Z",
-    "updated": "2026-06-18T16:54:25Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20475v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20475v1"
-      }
-    ],
-    "score": 73,
-    "infographic": {
-      "key_insight": "Marginal Advantage Accumulation (MAA) turns inconsistent batch-level memory feedback into a cross-batch, operation-level evidence signal so stable helpful operations can be separated from accidental ones.",
-      "engineering_relevance": "For memory-driven agents, MAA offers a practical post-processing layer that improves trace distillation quality while cutting optimization-token cost by about 75%.",
-      "method": [
-        "Build differential signals so operation effects are comparable across batches",
-        "Accumulate signed evidence per operation with exponential moving average (EMA)",
-        "Merge semantically identical traces to preserve cross-batch identity and traceability"
-      ],
-      "evidence_signal": "Across 4 benchmarks and 4 target models, MAA achieved the best results in 14 of 16 settings, outperforming batch-level baselines and often matching or surpassing online methods.",
-      "watch_item": "Performance depends on reliable semantic identity merging and on whether differential signals remain well-aligned across diverse batch distributions.",
-      "hashtags": [
-        "#TraceDistillation",
-        "#MemoryDrivenAgents",
-        "#EvidenceAccumulation",
-        "#PostProcessing",
-        "#AIResearch"
-      ],
-      "paper_id": "2026-06-18-arxiv-marginal_advantage_accumulation_for_memory_driven_agent_self_evolution",
-      "paper_title": "Marginal Advantage Accumulation for Memory-Driven Agent Self-Evolution",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-06-19T16:33:39",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-contagion_networks_evaluator_bias_propagation_in_multi_agent_llm_systems",
-    "arxiv_id": "2606.20493v1",
-    "date": "2026-06-18",
-    "title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
-    "authors": "Zewen Liu",
-    "abstract": "When large language models serve as evaluators in multi-agent systems, their systematic evaluation biases propagate through the agent network. We introduce Contagion Networks, a formal framework for measuring how evaluator biases spread across interacting LLM agents. In a controlled 3-agent experiment using DeepSeek-chat with three distinct evaluator bias profiles (structured, balanced, evidence-based), we measure the Cross-Agent Contagion Matrix Gamma_3 and find that evaluator biases consistently propagate between agents (gamma in [0.157, 0.352]), even within the same underlying model. We identify three propagation regimes governed by the spectral radius rho(Gamma_N), and demonstrate that homogeneous-model agents produce contagion coefficients 3-5x weaker than cross-model coefficients observed in prior work (MM-EPC: gamma approx 0.85-1.3), placing them in the suppression regime. We show that increasing evaluator committee size from k=1 to k=3 reduces effective contagion by 72.4%, providing an actionable mitigation strategy. We release the open-source Contagion Network experimental framework.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-06-18T17:09:34Z",
-    "updated": "2026-06-18T17:09:34Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "cs.MA"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20493v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20493v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "Evaluator bias in multi-agent LLM systems is contagious: even when agents share the same base model, biased judgments can propagate across the network at measurable levels.",
-      "engineering_relevance": "For multi-agent AI systems, using larger evaluator committees and bias-aware evaluation design can materially reduce cross-agent contamination and improve reliability.",
-      "method": [
-        "Defined Contagion Networks to model bias spread among interacting LLM agents.",
-        "Ran controlled 3-agent experiments with DeepSeek-chat under three evaluator profiles: structured, balanced, and evidence-based.",
-        "Measured the Cross-Agent Contagion Matrix (Gamma_3) and analyzed propagation regimes via the spectral radius rho(Gamma_N)."
-      ],
-      "evidence_signal": "In the 3-agent study, contagion coefficients ranged from 0.157 to 0.352, and increasing committee size from k=1 to k=3 reduced effective contagion by 72.4%.",
-      "watch_item": "Results come from a controlled setup with one underlying model family, so transferability to larger, more diverse, or real-world agent networks may require further validation.",
-      "hashtags": [
-        "#LLM",
-        "#MultiAgentSystems",
-        "#AIAlignment",
-        "#EvaluationBias",
-        "#ResearchFramework"
-      ],
-      "paper_id": "2026-06-18-arxiv-contagion_networks_evaluator_bias_propagation_in_multi_agent_llm_systems",
-      "paper_title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-06-19T16:33:42",
+      "generated_at": "2026-06-20T15:47:15",
       "generator": "openai"
     }
   },
@@ -549,27 +341,27 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "Multi-turn adaptive red-teaming can still break LLM agents in safety-critical control roles, and different frontier models fail in largely non-overlapping ways.",
-      "engineering_relevance": "For safety-critical AI deployment, robustness must be evaluated under sustained adversarial interaction because defenses that help one model may weaken another.",
+      "key_insight": "Multi-turn adaptive red-teaming can push LLM agents operating a safety-critical system past safety limits, and different models fail in largely non-overlapping ways.",
+      "engineering_relevance": "For safety-critical deployments, robustness must be evaluated with sustained interactive attacks and model-specific defenses, not just one-shot benchmarks or average success rates.",
       "method": [
-        "NRT-Bench simulates a nuclear power plant control room with a five-role LLM operator team.",
-        "Adversaries send multi-turn messages through four channels with per-turn feedback in bounded sessions.",
-        "Safety failure is measured by an objective system signal: the run ends when any critical safety function is lost."
+        "NRT-Bench simulates a nuclear power plant control room with a five-role LLM operator team and six critical safety functions.",
+        "Adversaries attack over four channels in bounded multi-turn sessions with per-turn feedback.",
+        "A fixed-attack paired-replay protocol measures objective harm: a run ends when any critical safety function is lost and the triggering message is identified."
       ],
-      "evidence_signal": "Across four frontier operator models, 8.7%–12.1% of attack sessions caused loss of a critical safety function, and among 149 sessions, vulnerabilities were mostly disjoint rather than shared across models.",
-      "watch_item": "The benchmark is simulated, so real-world deployment still requires careful validation of transferability, operator prompting, and defense interactions.",
+      "evidence_signal": "Across four frontier operator models, 8.7%–12.1% of attack sessions caused loss of a critical safety function, and in 149 sessions none of the attacks defeated all four models while about one-third defeated at least one.",
+      "watch_item": "Defense effects are highly model-dependent, so a guardrail that helps one agent may weaken another; safety claims should not be transferred across models without re-evaluation.",
       "hashtags": [
         "#LLMSafety",
         "#RedTeaming",
         "#AdversarialRobustness",
         "#SafetyCriticalSystems",
-        "#Benchmarking"
+        "#ScientificMachineLearning"
       ],
       "paper_id": "2026-06-18-arxiv-llm_agent_safety_multi_turn_red_teaming_jailbreak_benchmarks_adversarial_robustness_safety",
       "paper_title": "LLM agent safety, multi-turn red-teaming, jailbreak benchmarks, adversarial robustness, safety-critical systems",
       "paper_date": "2026-06-18",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-19T16:33:45",
+      "generated_at": "2026-06-20T15:47:17",
       "generator": "openai"
     }
   },
@@ -601,27 +393,235 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "AutoResearch uses an LLM as an offline research agent to autonomously tune aerospace control policies, while an embedded credibility layer audits each claimed improvement against seed noise and ablation checks.",
-      "engineering_relevance": "This provides a reproducible way to develop and verify spacecraft guidance, navigation, and control policies so that only statistically credible gains are promoted for deployment.",
+      "key_insight": "AutoResearch uses an LLM as an offline research agent to iteratively design spacecraft control policies, while an embedded credibility layer audits each claimed improvement against measured seed noise before it is accepted.",
+      "engineering_relevance": "This provides a reproducible way to accelerate aerospace control policy development without trusting the LLM to fly the vehicle, making results more defensible for safety-critical space autonomy.",
       "method": [
-        "LLM reads a plain-language problem description plus run history and proposes one training-script edit per iteration.",
-        "Each candidate result is validated by measured per-problem seed noise, reseeded verification of the best configuration, and leave-one-out pruning of agent edits.",
-        "The same audited loop is applied to two spacecraft control tasks: relative rendezvous and safety-constrained docking past a keep-out zone."
+        "LLM reads the problem description and run history, then proposes one training-script edit per iteration.",
+        "Each candidate result must pass three checks: measured seed-noise comparison, reseeded verification of the best configuration, and leave-one-out pruning of the agent’s edits.",
+        "The same audited loop is applied to rendezvous and collision-avoidance docking benchmarks calibrated to optimal control baselines."
       ],
-      "evidence_signal": "Across both benchmark problems, the audited policy exceeds measured seed noise by many standard deviations; on docking, the learned policy remains outside the keep-out zone on every seed while undirected search finds no feasible policy.",
-      "watch_item": "Because the framework relies on problem-specific seed-noise calibration and repeated verification, its credibility depends on carefully designed benchmarks and sufficient compute for repeated runs.",
+      "evidence_signal": "Across both aerospace tasks, the audited policies beat measured seed noise by many standard deviations; on docking, the learned policy remained outside the keep-out zone on every seed while undirected search found no feasible policy.",
+      "watch_item": "The approach depends on accurate seed-noise estimation and benchmark calibration; if these are mismeasured, the credibility layer could overstate true improvement.",
       "hashtags": [
-        "#AIAgents",
         "#SpaceAutonomy",
-        "#ControlSystems",
-        "#LLMResearch",
+        "#LLMResearchAgent",
+        "#AerospaceControl",
+        "#SafeAI",
         "#Reproducibility"
       ],
       "paper_id": "2026-06-18-arxiv-agentic_autoresearch_forspace_autonomy_an_auditable_llm_driven_research_agent_for_aerospac",
       "paper_title": "Agentic AutoResearch forSpace Autonomy: An Auditable, LLM-Driven Research Agent for Aerospace Control Problems",
       "paper_date": "2026-06-18",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-06-19T16:33:47",
+      "generated_at": "2026-06-20T15:47:20",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-autopass_evidence_guided_llm_agents_for_compiler_performance_tuning",
+    "arxiv_id": "2606.20373v1",
+    "date": "2026-06-18",
+    "title": "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning",
+    "authors": "Zepeng Li, Jie Ren, Zhanyong Tang, Jie Zheng, Zheng Wang",
+    "abstract": "Large Language Models (LLMs) show promise for code compilation tasks, but applying them to runtime performance tuning is difficult due to complex microarchitectural effects and noisy runtime measurements. We present AutoPass, a multi-agent framework for compiler performance tuning that uses compiler and runtime evidence to guide LLM-generated optimization decisions. Rather than treating the compiler as a black box like prior auto-tuning schemes, AutoPass opens up the compiler to the LLM, enabling it to query compiler-internal optimization states and analyze the intermediate representation to orchestrate compiler options. The search process iteratively refines optimization configurations using measured runtime feedback to diagnose regressions and guide latency-improving edits. AutoPass operates in an inference-only, training-free setting and requires no offline training or task-specific fine-tuning, making it readily applicable to new benchmarks and platforms. We implement AutoPass on the LLVM compiler and evaluate it on server-grade x86-64 and embedded ARM64 systems. AutoPass outperforms expert-tuned heuristics and classical autotuning methods, achieving geometric-mean speedups of 1.043x and 1.117x over LLVM -O3 on x86-64 and ARM64, respectively.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-18T15:35:40Z",
+    "updated": "2026-06-18T15:35:40Z",
+    "primary_category": "cs.SE",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20373v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20373v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "AutoPass uses evidence-guided multi-agent LLM reasoning to tune compiler optimizations by inspecting compiler internals and runtime feedback instead of treating the compiler as a black box.",
+      "engineering_relevance": "This makes compiler performance tuning more adaptable to new codebases and hardware without offline training or task-specific fine-tuning.",
+      "method": [
+        "Query compiler-internal optimization states and intermediate representations to inform LLM decisions.",
+        "Iteratively refine optimization settings using measured runtime feedback to detect regressions and improve latency.",
+        "Operate in an inference-only, training-free multi-agent workflow on LLVM."
+      ],
+      "evidence_signal": "Evaluated on LLVM across server-grade x86-64 and embedded ARM64 systems, where it achieved geometric-mean speedups of 1.043x and 1.117x over -O3.",
+      "watch_item": "Runtime measurements can be noisy and microarchitectural effects are complex, so the approach may be sensitive to benchmarking variance and hardware-specific behavior.",
+      "hashtags": [
+        "#LLMAgents",
+        "#CompilerOptimization",
+        "#PerformanceTuning",
+        "#LLVM",
+        "#Autotuning"
+      ],
+      "paper_id": "2026-06-18-arxiv-autopass_evidence_guided_llm_agents_for_compiler_performance_tuning",
+      "paper_title": "AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-20T15:47:23",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-what_do_safety_aligned_llms_learn_from_mixed_compliance_demonstrations",
+    "arxiv_id": "2606.20508v1",
+    "date": "2026-06-18",
+    "title": "What Do Safety-Aligned LLMs Learn From Mixed Compliance Demonstrations?",
+    "authors": "Sihui Dai, Mann Patel",
+    "abstract": "Prior work has shown that in-context demonstrations can jailbreak language models, but it remains unclear how models interpret different types of compliance demonstrations. We study this by mixing benign compliance demonstrations (non-harmful request, helpful response) with harmful compliance demonstrations (harmful request, helpful response) and testing three hypotheses about how demonstration composition drives harmful compliance. Across four models, we find that benign and harmful demonstrations are not interchangeable: benign demonstrations can either reduce or increase harmful compliance depending on the model. We further show that preference optimization is the critical training stage that prevents benign demonstrations from increasing harmful compliance, that demonstration ordering exhibits strong recency bias, and that models differ in how refusal interacts with in-context learning: some adopt demonstrated formatting even when refusing, while others override all in-context signals upon refusal. Taken together, this work moves beyond showing that demonstration-based jailbreaking works to characterizing how it works: what models extract from compliance demonstrations depends on demonstration content, ordering, and training methodology.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-18T17:25:38Z",
+    "updated": "2026-06-18T17:25:38Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20508v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20508v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "Mixed compliance demonstrations are not interchangeable: benign examples can either suppress or amplify harmful compliance depending on the model, ordering, and training stage.",
+      "engineering_relevance": "For safety-aligned LLMs, robust behavior depends not just on refusal tuning but on how in-context examples are composed and ordered during deployment.",
+      "method": [
+        "Mixed benign and harmful compliance demonstrations in prompts",
+        "Tested four LLMs across different demonstration compositions and ordering",
+        "Compared effects across training stages, especially preference optimization"
+      ],
+      "evidence_signal": "The abstract reports cross-model evaluation showing distinct harmful-compliance responses to benign vs. harmful demonstrations, with strong recency effects and refusal-format differences.",
+      "watch_item": "Prompt behavior can shift sharply with demonstration order and model training, so safety testing should include mixed-example and refusal-format stress cases before deployment.",
+      "hashtags": [
+        "#LLMSafety",
+        "#InContextLearning",
+        "#AIAlignment",
+        "#JailbreakResearch",
+        "#PreferenceOptimization"
+      ],
+      "paper_id": "2026-06-18-arxiv-what_do_safety_aligned_llms_learn_from_mixed_compliance_demonstrations",
+      "paper_title": "What Do Safety-Aligned LLMs Learn From Mixed Compliance Demonstrations?",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-20T15:47:25",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-marginal_advantage_accumulation_for_memory_driven_agent_self_evolution",
+    "arxiv_id": "2606.20475v1",
+    "date": "2026-06-18",
+    "title": "Marginal Advantage Accumulation for Memory-Driven Agent Self-Evolution",
+    "authors": "Mingyu Yang, Keye Zheng, Congchao Cheng, Yujie Liu, Xingkang Lu, Fan Jiang",
+    "abstract": "In batch-style trace distillation, the same memory operation may receive contradictory feedback across different batches. Existing methods lack a cross-batch, operation-level evidence accumulation mechanism, making it impossible to distinguish stably effective operations from accidental hits. This paper formalizes the requirement as two structural conditions, alignability and comparability, and proposes Marginal Advantage Accumulation (MAA). MAA constructs differential signals to make them comparable across batches, accumulates signed evidence per operation via EMA, and ensures cross-batch traceability through semantic identity merging. As a post-processing architecture, MAA achieves the best results in 14 out of 16 settings across 4 benchmarks and 4 target models, consistently outperforming existing batch-level distillation baselines and matching or surpassing online alternatives in most settings, while reducing optimization-phase token consumption by approximately 75%.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-18T16:54:25Z",
+    "updated": "2026-06-18T16:54:25Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20475v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20475v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "Marginal Advantage Accumulation (MAA) turns noisy batch-by-batch memory feedback into stable cross-batch evidence so truly useful operations can be identified and reinforced.",
+      "engineering_relevance": "For memory-driven agents, MAA offers a practical post-processing layer that improves trace distillation robustness without changing the base model or requiring expensive online optimization.",
+      "method": [
+        "Build comparable differential signals across batches",
+        "Accumulate signed per-operation evidence with EMA",
+        "Merge semantically identical traces to preserve cross-batch identity"
+      ],
+      "evidence_signal": "Across 4 benchmarks and 4 target models, the paper reports best results in 14 of 16 settings and about 75% lower optimization-phase token consumption versus batch-level baselines.",
+      "watch_item": "Semantic identity merging and evidence accumulation depend on reliable trace matching, so noisy operation descriptions or inconsistent labeling could weaken gains.",
+      "hashtags": [
+        "#AIResearch",
+        "#MemoryDrivenAgents",
+        "#TraceDistillation",
+        "#OnlineLearning",
+        "#ModelOptimization"
+      ],
+      "paper_id": "2026-06-18-arxiv-marginal_advantage_accumulation_for_memory_driven_agent_self_evolution",
+      "paper_title": "Marginal Advantage Accumulation for Memory-Driven Agent Self-Evolution",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-20T15:47:27",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-contagion_networks_evaluator_bias_propagation_in_multi_agent_llm_systems",
+    "arxiv_id": "2606.20493v1",
+    "date": "2026-06-18",
+    "title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
+    "authors": "Zewen Liu",
+    "abstract": "When large language models serve as evaluators in multi-agent systems, their systematic evaluation biases propagate through the agent network. We introduce Contagion Networks, a formal framework for measuring how evaluator biases spread across interacting LLM agents. In a controlled 3-agent experiment using DeepSeek-chat with three distinct evaluator bias profiles (structured, balanced, evidence-based), we measure the Cross-Agent Contagion Matrix Gamma_3 and find that evaluator biases consistently propagate between agents (gamma in [0.157, 0.352]), even within the same underlying model. We identify three propagation regimes governed by the spectral radius rho(Gamma_N), and demonstrate that homogeneous-model agents produce contagion coefficients 3-5x weaker than cross-model coefficients observed in prior work (MM-EPC: gamma approx 0.85-1.3), placing them in the suppression regime. We show that increasing evaluator committee size from k=1 to k=3 reduces effective contagion by 72.4%, providing an actionable mitigation strategy. We release the open-source Contagion Network experimental framework.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-18T17:09:34Z",
+    "updated": "2026-06-18T17:09:34Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20493v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20493v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "Evaluator bias in LLM multi-agent systems can spread through the agent network, and the paper formalizes this contagion with measurable coefficients and regimes.",
+      "engineering_relevance": "For multi-agent AI systems, using larger or more balanced evaluator committees can substantially reduce bias propagation, improving reliability of coordinated LLM workflows.",
+      "method": [
+        "Defines Contagion Networks to quantify cross-agent bias spread.",
+        "Runs a controlled 3-agent experiment with DeepSeek-chat under structured, balanced, and evidence-based evaluator profiles.",
+        "Measures a Cross-Agent Contagion Matrix Gamma_3 and relates propagation behavior to the spectral radius rho(Gamma_N)."
+      ],
+      "evidence_signal": "In the abstract’s 3-agent experiment, contagion coefficients remained positive at gamma = 0.157–0.352, and increasing committee size from k=1 to k=3 reduced effective contagion by 72.4%.",
+      "watch_item": "Results are from a controlled setup on a single underlying model and may not generalize to larger, more heterogeneous, or dynamically changing multi-agent deployments.",
+      "hashtags": [
+        "#LLMAgents",
+        "#BiasPropagation",
+        "#MultiAgentSystems",
+        "#EvaluationBias",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-06-18-arxiv-contagion_networks_evaluator_bias_propagation_in_multi_agent_llm_systems",
+      "paper_title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-20T15:47:30",
       "generator": "openai"
     }
   },
@@ -651,17 +651,17 @@
         "url": "https://arxiv.org/pdf/2606.20554v1"
       }
     ],
-    "score": 71,
+    "score": 66,
     "infographic": {
-      "key_insight": "G2Rec combines holistic graph-based user co-engagement modeling with semantic tokenization to better capture user interest context for generative recommendation.",
-      "engineering_relevance": "The framework is designed for industrial-scale sequential recommendation, making it relevant for recommender systems that need scalable, context-rich user modeling.",
+      "key_insight": "G2Rec unifies graph-based user co-engagement modeling with semantic tokenization to build more holistic and semantically grounded user interest contexts for generative recommendation.",
+      "engineering_relevance": "The framework targets industrial-scale recommender systems by improving sequence modeling while addressing scalability and weak supervision issues in user-interest representation.",
       "method": [
-        "Models distributed user interest context from co-engagement graphs at a holistic level.",
-        "Tokenizes item semantics with explicit supervision signals instead of relying on heuristics.",
-        "Unifies graph-based context modeling and semantic tokenization into one scalable generative recommendation framework."
+        "Builds distributed user-interest context from holistic graph-based co-engagement signals.",
+        "Tokenizes item semantics with explicit structure to produce more accurate semantic representations.",
+        "Combines the two into a scalable generative recommendation pipeline without requiring ground-truth user interests."
       ],
-      "evidence_signal": "The abstract reports online deployment across product surfaces and extensive experiments on public datasets, with G2Rec outperforming existing methods.",
-      "watch_item": "Practical performance may depend on the quality and scalability of graph construction and tokenization in very large, evolving catalogs.",
+      "evidence_signal": "The paper reports extensive experiments on public datasets and online deployment across product surfaces, showing superiority over existing methods.",
+      "watch_item": "Graph-based context modeling and tokenization may increase system complexity, so deployment cost and latency should be carefully validated at scale.",
       "hashtags": [
         "#GenerativeRecommendation",
         "#RecommenderSystems",
@@ -673,321 +673,7 @@
       "paper_title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
       "paper_date": "2026-06-18",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-06-19T16:33:49",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-statistical_properties_of_training_generalization",
-    "arxiv_id": "2606.20299v1",
-    "date": "2026-06-18",
-    "title": "Statistical Properties of Training & Generalization",
-    "authors": "Itay Lavie, Noam Levi, Yonatan Kahn",
-    "abstract": "Deep learning has managed to evade numerous intuitions from classical statistics to achieve unprecedented performance on a number of real-world tasks. In this article, we investigate the key features and surprises of deep learning from a physics-informed perspective, taking care to point out and justify where possible the many choices inherent in constructing a deep learning model. In particular, we review the phenomenon of neural scaling laws and discuss their interplay with the constraints and inductive biases which may be present when applying machine learning to problems in physics.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-06-18T14:35:53Z",
-    "updated": "2026-06-18T14:35:53Z",
-    "primary_category": "stat.ML",
-    "categories": [
-      "stat.ML",
-      "cs.LG",
-      "hep-ph",
-      "physics.data-an"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20299v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20299v1"
-      }
-    ],
-    "score": 70,
-    "infographic": {
-      "key_insight": "Deep learning often departs from classical statistical intuition, and its performance can be understood through scaling laws, inductive biases, and task constraints from a physics-informed viewpoint.",
-      "engineering_relevance": "For scientific machine learning, the paper highlights that model design choices and problem-specific priors strongly shape training and generalization, so architecture and data scaling should be planned together.",
-      "method": [
-        "Review neural scaling laws and their implications for performance trends",
-        "Analyze training/generalization through a physics-informed lens",
-        "Discuss how inductive biases and physics constraints affect model choice"
-      ],
-      "evidence_signal": "The abstract indicates a review-style synthesis rather than a new benchmark study, drawing on phenomena observed across deep learning and physics-informed applications.",
-      "watch_item": "Scaling-law trends may not transfer cleanly across domains, so conclusions should be checked against the specific physics constraints and data regime of the target problem.",
-      "hashtags": [
-        "#ScientificMachineLearning",
-        "#DeepLearning",
-        "#NeuralScalingLaws",
-        "#Generalization",
-        "#PhysicsInformedAI"
-      ],
-      "paper_id": "2026-06-18-arxiv-statistical_properties_of_training_generalization",
-      "paper_title": "Statistical Properties of Training & Generalization",
-      "paper_date": "2026-06-18",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-19T16:33:51",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-execution_state_capsules_graph_bound_execution_state_checkpoint_and_restore_for_low_latenc",
-    "arxiv_id": "2606.20537v1",
-    "date": "2026-06-18",
-    "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-    "authors": "Liang Su",
-    "abstract": "Mainstream LLM serving systems reuse prefix work mainly through paged or radix key-value (KV) caches. This is highly effective for high-throughput, high-concurrency serving, but it manages only one positional fragment of execution state: the KV cache. We study the opposite regime: low-latency, small-batch, on-device physical-AI serving, where interactive LLM agents, speech systems, and robot policies repeatedly branch, reset, interrupt, and re-enter under tight responsiveness budgets. We introduce execution-state capsules, a graph-bound checkpoint and restore mechanism for the complete restorable state at a committed boundary. FlashRT is a white-box, backend-facing kernel runtime whose evaluated NVIDIA CUDA backend runs captured graph plans over contiguous static buffers with no block-table indirection. Because the live state is a closed set of named buffers, a capsule can snapshot, restore, fork, or roll back the whole execution boundary, including KV, recurrent state, convolution state, MTP state, and metadata. This moves reuse from token-addressed KV fragments to graph-bound execution-state boundaries. On an RTX 5090, capsule restore is byte-exact at the stored-state level and token-identical under greedy decode. A KV-only ablation diverges, showing that recurrent state is load-bearing. GPU-resident snapshot and restore are sub-millisecond, and TTFT speedup over cold prefill grows from 3.9x at 2k tokens to 27x at 16k tokens. On Jetson AGX Thor and DGX Spark, the same correctness and structural properties hold. Capsules are not a replacement for high-throughput KV-cache serving; they define a complementary latency-first serving point for explicit execution-state reuse.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-06-18T17:49:36Z",
-    "updated": "2026-06-18T17:49:36Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.DC"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20537v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20537v1"
-      }
-    ],
-    "score": 69,
-    "infographic": {
-      "key_insight": "Execution-state capsules extend reuse beyond KV caches by checkpointing and restoring the full graph-bound execution state for low-latency, small-batch on-device AI serving.",
-      "engineering_relevance": "This enables fast, exact branch/reset/rollback behavior for interactive agents, speech, and robot policies without relying on high-throughput KV-cache assumptions.",
-      "method": [
-        "Capture the complete restorable state at a committed graph boundary into a capsule.",
-        "Store live state in closed, named contiguous buffers so it can be snapshotted and restored without block-table indirection.",
-        "Support restore, fork, and rollback across KV, recurrent, convolution, MTP state, and metadata."
-      ],
-      "evidence_signal": "On RTX 5090, restore is byte-exact and greedy decoding is token-identical; GPU-resident snapshot/restore is sub-millisecond, and TTFT speedup vs cold prefill rises from 3.9x at 2k tokens to 27x at 16k tokens, with results also holding on Jetson AGX Thor and DGX Spark.",
-      "watch_item": "This approach depends on a white-box runtime and backend-controlled static buffer layout, so portability and integration with existing opaque serving stacks may be nontrivial.",
-      "hashtags": [
-        "#LLMServing",
-        "#Checkpointing",
-        "#OnDeviceAI",
-        "#GPUSystems",
-        "#PhysicalAI"
-      ],
-      "paper_id": "2026-06-18-arxiv-execution_state_capsules_graph_bound_execution_state_checkpoint_and_restore_for_low_latenc",
-      "paper_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
-      "paper_date": "2026-06-18",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-06-19T16:33:54",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-multi_lcb_extending_livecodebench_to_multiple_programming_languages",
-    "arxiv_id": "2606.20517v1",
-    "date": "2026-06-18",
-    "title": "Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages",
-    "authors": "Maria Ivanova, Pavel Zadorozhny, Rodion Levichev, Ivan Petrov, Adamenko Pavel, Ivan Lopatin",
-    "abstract": "LiveCodeBench (LCB) has recently become a widely adopted benchmark for evaluating large language models (LLMs) on code-generation tasks. By curating competitive programming problems, constantly adding fresh problems to the set, and filtering them by release dates, LCB provides contamination-aware evaluation and offers a holistic view of coding capability. However, LCB remains restricted to Python, leaving open the question of whether LLMs can generalize across the diverse programming languages required in real-world software engineering. We introduce Multi-LCB, a benchmark for evaluating LLMs across twelve programming languages, including Python. Multi-LCB transforms Python tasks from the LCB dataset into equivalent tasks in other languages while preserving LCB's contamination controls and evaluation protocol. Because it is fully compatible with the original LCB format, Multi-LCB will automatically track future LCB updates, enabling systematic assessment of cross-language code generation competence and requiring models to sustain performance well beyond Python. We evaluated 24 LLMs for instruction and reasoning on Multi-LCB, uncovering evidence of Python overfitting, language-specific contamination, and substantial disparities in multilingual performance. Our results establish Multi-LCB as a rigorous new benchmark for multi-programming-language code evaluation, directly addressing LCB's primary limitation and exposing critical gaps in current LLM capabilities.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-06-18T17:35:57Z",
-    "updated": "2026-06-18T17:35:57Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.PL"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20517v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20517v1"
-      }
-    ],
-    "score": 69,
-    "infographic": {
-      "key_insight": "Multi-LCB extends LiveCodeBench from Python-only evaluation to 12 programming languages while preserving contamination-aware benchmarking.",
-      "engineering_relevance": "It gives engineering teams a more realistic way to measure whether LLMs can generate code reliably across the languages used in production software.",
-      "method": [
-        "Transforms Python LiveCodeBench tasks into equivalent problems in 11 additional languages",
-        "Keeps the original LCB contamination controls and evaluation protocol",
-        "Automatically stays aligned with future LiveCodeBench updates"
-      ],
-      "evidence_signal": "The authors evaluated 24 LLMs and report evidence of Python overfitting, language-specific contamination, and large performance gaps across languages.",
-      "watch_item": "Benchmark fidelity depends on the quality of task translation across languages, so equivalent semantics and difficulty may still vary by language.",
-      "hashtags": [
-        "#LLMCodeGen",
-        "#Benchmarking",
-        "#MultiLanguage",
-        "#SoftwareEngineering",
-        "#AIResearch"
-      ],
-      "paper_id": "2026-06-18-arxiv-multi_lcb_extending_livecodebench_to_multiple_programming_languages",
-      "paper_title": "Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-06-19T16:33:56",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-efficient_and_sound_probabilistic_verification_for_ai_agents",
-    "arxiv_id": "2606.20510v1",
-    "date": "2026-06-18",
-    "title": "Efficient and Sound Probabilistic Verification for AI Agents",
-    "authors": "Alaia Solko-Breslin, Pramod Kaushik Mudrakarta, Mihai Christodorescu, Somesh Jha, Krishnamurthy Dj Dvijotham",
-    "abstract": "Securing AI agents that operate in complex digital environments has become a critical need, and runtime monitoring approaches that formulate and enforce policies expressed in a formal language like Datalog offer a promising solution. However, existing approaches are restricted to deterministic policies. In many practical applications of AI agents, there is a need to enforce security policies in the face of ambiguity, leading to probabilistic predicates or state transitions (for example, a declassifier or Personally Identifiable Information (PII) detector that has some failure probability on each invocation). Furthermore, in many such applications, one cannot easily make the independence assumptions necessary to invoke prior work on probabilistic inference in Datalog. We address this by introducing a sound and efficient framework for such verification based on distributionally robust optimization, computing sound upper bounds on the probability of policy violation regardless of possible correlations between predicates. On standard benchmarks for terminal and tool calling agents, we demonstrate that our approach outperforms prior art and improves the security-utility trade-off while ensuring rigorous bounds on the probability of policy violation.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-06-18T17:27:59Z",
-    "updated": "2026-06-18T17:27:59Z",
-    "primary_category": "cs.CR",
-    "categories": [
-      "cs.CR",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20510v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20510v1"
-      }
-    ],
-    "score": 69,
-    "infographic": {
-      "key_insight": "The paper introduces a sound runtime verification framework for AI agents that bounds policy-violation probability even when predicates or transitions are probabilistic and correlated.",
-      "engineering_relevance": "It enables more practical security monitoring for agentic systems by handling uncertain tool outputs and PII/declassifier failures without relying on unrealistic independence assumptions.",
-      "method": [
-        "Formulate probabilistic policy verification in Datalog using distributionally robust optimization.",
-        "Compute sound upper bounds on violation probability under arbitrary predicate correlations.",
-        "Target runtime monitoring for AI agents in complex digital environments."
-      ],
-      "evidence_signal": "The abstract reports evaluation on standard benchmarks for terminal and tool-calling agents, showing better security-utility trade-offs than prior art while preserving rigorous violation bounds.",
-      "watch_item": "The approach provides upper bounds, so practical deployment may be limited by conservatism and the cost of integrating robust probabilistic monitoring into real agent pipelines.",
-      "hashtags": [
-        "#AIAgents",
-        "#ProbabilisticVerification",
-        "#RuntimeMonitoring",
-        "#Datalog",
-        "#CyberSecurity"
-      ],
-      "paper_id": "2026-06-18-arxiv-efficient_and_sound_probabilistic_verification_for_ai_agents",
-      "paper_title": "Efficient and Sound Probabilistic Verification for AI Agents",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-06-19T16:33:58",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-quantum_classical_physics_informed_kolmogorov_arnold_networks_for_pdes",
-    "arxiv_id": "2606.20326v1",
-    "date": "2026-06-18",
-    "title": "Quantum-classical physics-informed Kolmogorov-Arnold networks for PDEs",
-    "authors": "Xiang Rao, Yuxuan Shen",
-    "abstract": "We develop QCPIKAN, the first quantum-classical physics-informed Kolmogorov-Arnold network designed to solve partial differential equations (PDEs). Built upon Chebyshev-polynomial KAN layers and parameterized quantum circuits, this hybrid framework embeds physical constraints into the training loss to enforce physical consistency. Our theoretical investigations grounded in approximation theory prove that this design accelerates high-frequency error convergence to an exponential rate and effectively mitigates numerical dispersion. We validate the framework across three typical seepage scenarios in porous media, including single-phase flow, component transport and two-phase flow. Compared with existing quantum-classical physics-informed neural networks, QCPIKAN achieves superior performance in global prediction accuracy, local error control, dynamic evolution tracking and displacement front localization. This work provides a robust and efficient alternative for solving complex PDEs.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-06-18T15:03:43Z",
-    "updated": "2026-06-18T15:03:43Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "physics.comp-ph"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20326v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20326v1"
-      }
-    ],
-    "score": 68,
-    "infographic": {
-      "key_insight": "QCPIKAN combines Chebyshev-polynomial Kolmogorov-Arnold networks with parameterized quantum circuits and physics-informed loss to solve PDEs with improved high-frequency accuracy.",
-      "engineering_relevance": "The method offers a hybrid quantum-classical solver that could improve simulation fidelity for porous-media seepage and other PDE-based engineering models.",
-      "method": [
-        "Chebyshev-KAN layers encode function approximation with polynomial structure.",
-        "Parameterized quantum circuits add a quantum-classical hybrid representation.",
-        "Physics-informed training enforces PDE constraints through the loss function."
-      ],
-      "evidence_signal": "The paper reports validation on three porous-media seepage cases—single-phase flow, component transport, and two-phase flow—with better global accuracy, local error control, and front tracking than prior quantum-classical PINNs.",
-      "watch_item": "Performance gains depend on reliable quantum-circuit training and may be constrained by hardware noise and optimization cost.",
-      "hashtags": [
-        "#ScientificMachineLearning",
-        "#PhysicsInformedML",
-        "#QuantumMachineLearning",
-        "#PDEs",
-        "#PorousMedia"
-      ],
-      "paper_id": "2026-06-18-arxiv-quantum_classical_physics_informed_kolmogorov_arnold_networks_for_pdes",
-      "paper_title": "Quantum-classical physics-informed Kolmogorov-Arnold networks for PDEs",
-      "paper_date": "2026-06-18",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-19T16:34:00",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-06-18-arxiv-shifting_based_optimizable_linear_relaxations_for_general_activation_functions",
-    "arxiv_id": "2606.20292v1",
-    "date": "2026-06-18",
-    "title": "Shifting-based Optimizable Linear Relaxations for General Activation Functions",
-    "authors": "Philipp Kern, László Antal, Erika Ábráham, Carsten Sinz",
-    "abstract": "The use of neural networks (NNs) is rapidly increasing, including in safety- and security-critical domains. To provide formal guarantees about NN behavior, many verification methods rely on optimizable linear relaxations of activation functions. However, existing techniques depend on hand-crafted relaxations for each activation function. Extension to state-of-the-art activation functions therefore requires substantial manual effort. In contrast, our approach SLiR (Shifting-based Linear Relaxations) is broadly applicable, requiring only a Lipschitz constant or a set of critical points. SLiR parameterizes relaxations by their slope and computes the corresponding offset via a shifting procedure that ensures sound upper and lower bounds over the input domain, enabling efficient optimization while maintaining correctness. Our experiments show that SLiR produces tight relaxations across a wide range of practical activation functions and enables verification of up to 7.8x more properties compared to state-of-the-art methods.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-06-18T14:32:05Z",
-    "updated": "2026-06-18T14:32:05Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.LO"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2606.20292v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2606.20292v1"
-      }
-    ],
-    "score": 68,
-    "infographic": {
-      "key_insight": "SLiR turns activation-function relaxation into a general, shift-based optimization problem that can soundly handle many nonlinearities without custom manual derivations.",
-      "engineering_relevance": "This makes neural network verification easier to extend to modern activation functions while preserving tight, optimizable bounds needed for safety-critical systems.",
-      "method": [
-        "Parameterize each linear relaxation by its slope.",
-        "Compute the intercept via a shifting procedure that enforces sound upper and lower bounds over the input domain.",
-        "Use either a Lipschitz constant or a set of critical points as the only function-specific input."
-      ],
-      "evidence_signal": "The abstract reports that SLiR achieves tight relaxations across many practical activations and verifies up to 7.8x more properties than state-of-the-art methods.",
-      "watch_item": "Soundness and tightness still depend on correctly identifying the Lipschitz bound or critical points, so poor estimates could weaken the relaxation.",
-      "hashtags": [
-        "#NeuralNetworkVerification",
-        "#LinearRelaxation",
-        "#ActivationFunctions",
-        "#FormalMethods",
-        "#AISafety"
-      ],
-      "paper_id": "2026-06-18-arxiv-shifting_based_optimizable_linear_relaxations_for_general_activation_functions",
-      "paper_title": "Shifting-based Optimizable Linear Relaxations for General Activation Functions",
-      "paper_date": "2026-06-18",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-06-19T16:34:02",
+      "generated_at": "2026-06-20T15:47:32",
       "generator": "openai"
     }
   },
@@ -1021,27 +707,341 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "SSH-Net improves competing-risks failure prediction by matching neural network substructures to distinct covariate groups and outputting cause-specific hazards.",
-      "engineering_relevance": "The method is useful for reliability analysis of complex engineered systems, such as GPUs, where multiple failure causes and hierarchical inputs must be modeled together.",
+      "key_insight": "SSH-Net links neural network structure to grouped covariates to predict cause-specific failure-time distributions under competing risks.",
+      "engineering_relevance": "It is useful for reliability analysis of engineered systems with hierarchical inputs, such as GPU failure prediction, where different structural factors may affect different failure causes.",
       "method": [
-        "Build a structured segmented deep network with separate sub-networks for different covariate groups.",
-        "Use a cause-specific competing-risks formulation to predict cause-specific hazard functions.",
-        "Train with a penalized log-likelihood loss and derive cumulative incidence predictions."
+        "Uses a structured segmented neural network with separate sub-networks for different covariate groups.",
+        "Models cause-specific hazards within a competing-risks framework.",
+        "Trains with penalized log-likelihood to estimate failure-time distribution functions."
       ],
-      "evidence_signal": "The paper validates SSH-Net using simulation studies and Titan GPU failure-time data, reporting Brier score, AUC, and RMSE for predicted cause-specific cumulative incidence functions.",
-      "watch_item": "Performance may depend on careful hyperparameter tuning and meaningful grouping of covariates, which can be challenging for complex systems.",
+      "evidence_signal": "Performance was validated in simulations using Brier score, AUC, and RMSE, and the method was also demonstrated on Titan GPU failure-time data.",
+      "watch_item": "The structured architecture may require careful hyperparameter tuning and well-defined covariate grouping to avoid missing important cross-group interactions.",
       "hashtags": [
         "#CompetingRisks",
         "#DeepLearning",
         "#ReliabilityEngineering",
-        "#GPUFailures",
-        "#TimeToEvent"
+        "#FailurePrediction",
+        "#GPU"
       ],
       "paper_id": "2026-06-18-arxiv-ssh_net_a_deep_neural_network_for_predicting_failure_time_distribution_functions_under_com",
       "paper_title": "SSH-Net: A Deep Neural Network for Predicting Failure Time Distribution Functions under Competing Risks with Application to GPU Data",
       "paper_date": "2026-06-18",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-06-19T16:34:05",
+      "generated_at": "2026-06-20T15:47:34",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-statistical_properties_of_training_generalization",
+    "arxiv_id": "2606.20299v1",
+    "date": "2026-06-18",
+    "title": "Statistical Properties of Training & Generalization",
+    "authors": "Itay Lavie, Noam Levi, Yonatan Kahn",
+    "abstract": "Deep learning has managed to evade numerous intuitions from classical statistics to achieve unprecedented performance on a number of real-world tasks. In this article, we investigate the key features and surprises of deep learning from a physics-informed perspective, taking care to point out and justify where possible the many choices inherent in constructing a deep learning model. In particular, we review the phenomenon of neural scaling laws and discuss their interplay with the constraints and inductive biases which may be present when applying machine learning to problems in physics.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-06-18T14:35:53Z",
+    "updated": "2026-06-18T14:35:53Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "hep-ph",
+      "physics.data-an"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20299v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20299v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "Deep learning often follows neural scaling laws rather than classical statistical intuition, and its behavior is strongly shaped by inductive biases and problem-specific constraints.",
+      "engineering_relevance": "For scientific machine learning, model performance depends not only on data size and capacity but also on how well the architecture and training choices match the physics of the task.",
+      "method": [
+        "Review deep learning training and generalization through a physics-informed lens.",
+        "Examine neural scaling laws and how they change with model/data scaling.",
+        "Discuss inductive biases and constraints relevant to physics-based applications."
+      ],
+      "evidence_signal": "The paper is a conceptual review rather than a new benchmark study, drawing its claims from known deep learning phenomena and their interpretation in scientific ML.",
+      "watch_item": "Scaling behavior can be misleading if the model architecture or training setup introduces hidden biases that do not transfer to the target physics problem.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#DeepLearning",
+        "#NeuralScalingLaws",
+        "#Generalization",
+        "#PhysicsInformedAI"
+      ],
+      "paper_id": "2026-06-18-arxiv-statistical_properties_of_training_generalization",
+      "paper_title": "Statistical Properties of Training & Generalization",
+      "paper_date": "2026-06-18",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-06-20T15:47:37",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-execution_state_capsules_graph_bound_execution_state_checkpoint_and_restore_for_low_latenc",
+    "arxiv_id": "2606.20537v1",
+    "date": "2026-06-18",
+    "title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+    "authors": "Liang Su",
+    "abstract": "Mainstream LLM serving systems reuse prefix work mainly through paged or radix key-value (KV) caches. This is highly effective for high-throughput, high-concurrency serving, but it manages only one positional fragment of execution state: the KV cache. We study the opposite regime: low-latency, small-batch, on-device physical-AI serving, where interactive LLM agents, speech systems, and robot policies repeatedly branch, reset, interrupt, and re-enter under tight responsiveness budgets. We introduce execution-state capsules, a graph-bound checkpoint and restore mechanism for the complete restorable state at a committed boundary. FlashRT is a white-box, backend-facing kernel runtime whose evaluated NVIDIA CUDA backend runs captured graph plans over contiguous static buffers with no block-table indirection. Because the live state is a closed set of named buffers, a capsule can snapshot, restore, fork, or roll back the whole execution boundary, including KV, recurrent state, convolution state, MTP state, and metadata. This moves reuse from token-addressed KV fragments to graph-bound execution-state boundaries. On an RTX 5090, capsule restore is byte-exact at the stored-state level and token-identical under greedy decode. A KV-only ablation diverges, showing that recurrent state is load-bearing. GPU-resident snapshot and restore are sub-millisecond, and TTFT speedup over cold prefill grows from 3.9x at 2k tokens to 27x at 16k tokens. On Jetson AGX Thor and DGX Spark, the same correctness and structural properties hold. Capsules are not a replacement for high-throughput KV-cache serving; they define a complementary latency-first serving point for explicit execution-state reuse.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-06-18T17:49:36Z",
+    "updated": "2026-06-18T17:49:36Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20537v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20537v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Execution-state capsules checkpoint and restore the full graph-bound runtime state—not just KV cache—enabling fast, exact reuse for low-latency on-device AI serving.",
+      "engineering_relevance": "This lets interactive agents, speech stacks, and robot policies recover, branch, and re-enter execution with much lower time-to-first-token than cold prefill on GPU and edge hardware.",
+      "method": [
+        "FlashRT captures execution plans over contiguous static buffers with no block-table indirection.",
+        "A capsule snapshots/restores the complete committed boundary, including KV, recurrent, convolution, MTP state, and metadata.",
+        "Supports fork/rollback of execution state for graph-bound reuse rather than token-bound KV reuse."
+      ],
+      "evidence_signal": "On an RTX 5090, restore was byte-exact and greedy decoding was token-identical; TTFT speedup over cold prefill rose from 3.9x at 2k tokens to 27x at 16k tokens, with sub-millisecond GPU-resident snapshot/restore.",
+      "watch_item": "This approach depends on a white-box, backend-facing runtime with closed-set named buffers, so integrating arbitrary or dynamic model runtimes may be non-trivial.",
+      "hashtags": [
+        "#LLMServing",
+        "#CheckpointRestore",
+        "#OnDeviceAI",
+        "#KVCache",
+        "#GPUInference"
+      ],
+      "paper_id": "2026-06-18-arxiv-execution_state_capsules_graph_bound_execution_state_checkpoint_and_restore_for_low_latenc",
+      "paper_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
+      "paper_date": "2026-06-18",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-06-20T15:47:39",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-multi_lcb_extending_livecodebench_to_multiple_programming_languages",
+    "arxiv_id": "2606.20517v1",
+    "date": "2026-06-18",
+    "title": "Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages",
+    "authors": "Maria Ivanova, Pavel Zadorozhny, Rodion Levichev, Ivan Petrov, Adamenko Pavel, Ivan Lopatin",
+    "abstract": "LiveCodeBench (LCB) has recently become a widely adopted benchmark for evaluating large language models (LLMs) on code-generation tasks. By curating competitive programming problems, constantly adding fresh problems to the set, and filtering them by release dates, LCB provides contamination-aware evaluation and offers a holistic view of coding capability. However, LCB remains restricted to Python, leaving open the question of whether LLMs can generalize across the diverse programming languages required in real-world software engineering. We introduce Multi-LCB, a benchmark for evaluating LLMs across twelve programming languages, including Python. Multi-LCB transforms Python tasks from the LCB dataset into equivalent tasks in other languages while preserving LCB's contamination controls and evaluation protocol. Because it is fully compatible with the original LCB format, Multi-LCB will automatically track future LCB updates, enabling systematic assessment of cross-language code generation competence and requiring models to sustain performance well beyond Python. We evaluated 24 LLMs for instruction and reasoning on Multi-LCB, uncovering evidence of Python overfitting, language-specific contamination, and substantial disparities in multilingual performance. Our results establish Multi-LCB as a rigorous new benchmark for multi-programming-language code evaluation, directly addressing LCB's primary limitation and exposing critical gaps in current LLM capabilities.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-18T17:35:57Z",
+    "updated": "2026-06-18T17:35:57Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.PL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20517v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20517v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Multi-LCB extends LiveCodeBench from Python-only evaluation to 12 programming languages, revealing that LLM coding performance does not reliably transfer across languages.",
+      "engineering_relevance": "For software engineering workflows, the benchmark highlights whether a model can generate correct code in the target language rather than only in Python.",
+      "method": [
+        "Transforms Python LiveCodeBench tasks into equivalent tasks in 11 additional languages",
+        "Preserves LiveCodeBench contamination controls and evaluation protocol",
+        "Stays compatible with future LiveCodeBench updates"
+      ],
+      "evidence_signal": "The authors evaluated 24 LLMs on Multi-LCB and found evidence of Python overfitting, language-specific contamination, and large multilingual performance gaps.",
+      "watch_item": "Cross-language task translation must preserve semantic and difficulty equivalence; otherwise benchmark scores may reflect translation artifacts rather than true multilingual coding ability.",
+      "hashtags": [
+        "#LLM",
+        "#CodeGeneration",
+        "#Benchmarking",
+        "#MultilingualAI",
+        "#LiveCodeBench"
+      ],
+      "paper_id": "2026-06-18-arxiv-multi_lcb_extending_livecodebench_to_multiple_programming_languages",
+      "paper_title": "Multi-LCB: Extending LiveCodeBench to Multiple Programming Languages",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-20T15:47:42",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-efficient_and_sound_probabilistic_verification_for_ai_agents",
+    "arxiv_id": "2606.20510v1",
+    "date": "2026-06-18",
+    "title": "Efficient and Sound Probabilistic Verification for AI Agents",
+    "authors": "Alaia Solko-Breslin, Pramod Kaushik Mudrakarta, Mihai Christodorescu, Somesh Jha, Krishnamurthy Dj Dvijotham",
+    "abstract": "Securing AI agents that operate in complex digital environments has become a critical need, and runtime monitoring approaches that formulate and enforce policies expressed in a formal language like Datalog offer a promising solution. However, existing approaches are restricted to deterministic policies. In many practical applications of AI agents, there is a need to enforce security policies in the face of ambiguity, leading to probabilistic predicates or state transitions (for example, a declassifier or Personally Identifiable Information (PII) detector that has some failure probability on each invocation). Furthermore, in many such applications, one cannot easily make the independence assumptions necessary to invoke prior work on probabilistic inference in Datalog. We address this by introducing a sound and efficient framework for such verification based on distributionally robust optimization, computing sound upper bounds on the probability of policy violation regardless of possible correlations between predicates. On standard benchmarks for terminal and tool calling agents, we demonstrate that our approach outperforms prior art and improves the security-utility trade-off while ensuring rigorous bounds on the probability of policy violation.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-18T17:27:59Z",
+    "updated": "2026-06-18T17:27:59Z",
+    "primary_category": "cs.CR",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20510v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20510v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "The paper introduces a sound way to verify AI-agent security policies when predicates or transitions are probabilistic and may be correlated, by computing worst-case upper bounds on policy-violation probability.",
+      "engineering_relevance": "This gives builders of tool-using and terminal AI agents a practical runtime-monitoring method for enforcing security policies with rigorous probabilistic guarantees in messy real-world settings.",
+      "method": [
+        "Formulates policy verification for probabilistic Datalog-like rules as a distributionally robust optimization problem.",
+        "Computes sound upper bounds on violation probability without relying on independence assumptions.",
+        "Targets runtime monitoring for AI agents operating over uncertain predicates such as PII detectors or declassifiers."
+      ],
+      "evidence_signal": "On standard benchmarks for terminal and tool-calling agents, the method reportedly outperforms prior approaches and improves the security-utility trade-off while maintaining rigorous probability bounds.",
+      "watch_item": "Soundness comes with a conservatively worst-case guarantee, so tightness of the bound and computational cost may affect deployment at scale.",
+      "hashtags": [
+        "#AIAgents",
+        "#ProbabilisticVerification",
+        "#RuntimeMonitoring",
+        "#Datalog",
+        "#DistributionallyRobustOptimization"
+      ],
+      "paper_id": "2026-06-18-arxiv-efficient_and_sound_probabilistic_verification_for_ai_agents",
+      "paper_title": "Efficient and Sound Probabilistic Verification for AI Agents",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-20T15:47:44",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-quantum_classical_physics_informed_kolmogorov_arnold_networks_for_pdes",
+    "arxiv_id": "2606.20326v1",
+    "date": "2026-06-18",
+    "title": "Quantum-classical physics-informed Kolmogorov-Arnold networks for PDEs",
+    "authors": "Xiang Rao, Yuxuan Shen",
+    "abstract": "We develop QCPIKAN, the first quantum-classical physics-informed Kolmogorov-Arnold network designed to solve partial differential equations (PDEs). Built upon Chebyshev-polynomial KAN layers and parameterized quantum circuits, this hybrid framework embeds physical constraints into the training loss to enforce physical consistency. Our theoretical investigations grounded in approximation theory prove that this design accelerates high-frequency error convergence to an exponential rate and effectively mitigates numerical dispersion. We validate the framework across three typical seepage scenarios in porous media, including single-phase flow, component transport and two-phase flow. Compared with existing quantum-classical physics-informed neural networks, QCPIKAN achieves superior performance in global prediction accuracy, local error control, dynamic evolution tracking and displacement front localization. This work provides a robust and efficient alternative for solving complex PDEs.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-06-18T15:03:43Z",
+    "updated": "2026-06-18T15:03:43Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20326v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20326v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "QCPIKAN combines Chebyshev-polynomial Kolmogorov-Arnold layers with parameterized quantum circuits to build a physics-informed hybrid model that improves PDE solution accuracy and high-frequency error convergence.",
+      "engineering_relevance": "The approach offers a more accurate and physically consistent solver for porous-media PDEs such as seepage, transport, and two-phase flow, with potential value in scientific simulation workflows.",
+      "method": [
+        "Chebyshev-polynomial KAN layers encode expressive classical function approximation.",
+        "Parameterized quantum circuits add a quantum-classical hybrid representation.",
+        "Physics-informed loss terms enforce PDE constraints and boundary/initial consistency."
+      ],
+      "evidence_signal": "The paper evaluates QCPIKAN on three porous-media seepage scenarios—single-phase flow, component transport, and two-phase flow—and reports superior global accuracy, local error control, dynamic tracking, and displacement-front localization versus existing quantum-classical physics-informed neural networks.",
+      "watch_item": "Performance gains may depend on the cost and stability of training hybrid quantum-classical models, including circuit design, optimization difficulty, and hardware availability.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#PhysicsInformedNeuralNetworks",
+        "#QuantumMachineLearning",
+        "#KolmogorovArnoldNetworks",
+        "#PDEs"
+      ],
+      "paper_id": "2026-06-18-arxiv-quantum_classical_physics_informed_kolmogorov_arnold_networks_for_pdes",
+      "paper_title": "Quantum-classical physics-informed Kolmogorov-Arnold networks for PDEs",
+      "paper_date": "2026-06-18",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-06-20T15:47:47",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-06-18-arxiv-shifting_based_optimizable_linear_relaxations_for_general_activation_functions",
+    "arxiv_id": "2606.20292v1",
+    "date": "2026-06-18",
+    "title": "Shifting-based Optimizable Linear Relaxations for General Activation Functions",
+    "authors": "Philipp Kern, László Antal, Erika Ábráham, Carsten Sinz",
+    "abstract": "The use of neural networks (NNs) is rapidly increasing, including in safety- and security-critical domains. To provide formal guarantees about NN behavior, many verification methods rely on optimizable linear relaxations of activation functions. However, existing techniques depend on hand-crafted relaxations for each activation function. Extension to state-of-the-art activation functions therefore requires substantial manual effort. In contrast, our approach SLiR (Shifting-based Linear Relaxations) is broadly applicable, requiring only a Lipschitz constant or a set of critical points. SLiR parameterizes relaxations by their slope and computes the corresponding offset via a shifting procedure that ensures sound upper and lower bounds over the input domain, enabling efficient optimization while maintaining correctness. Our experiments show that SLiR produces tight relaxations across a wide range of practical activation functions and enables verification of up to 7.8x more properties compared to state-of-the-art methods.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-06-18T14:32:05Z",
+    "updated": "2026-06-18T14:32:05Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.LO"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2606.20292v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2606.20292v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "SLiR turns activation-function verification into a general, optimizable linear-relaxation problem by computing sound bounds through slope selection and shifting.",
+      "engineering_relevance": "This makes formal verification more scalable for modern neural networks because new activation functions can be supported with far less hand-crafted effort.",
+      "method": [
+        "Parameterize upper/lower relaxations by slope.",
+        "Compute the offset via a shifting procedure that preserves sound bounds over the input domain.",
+        "Require only a Lipschitz constant or a set of critical points, making the approach broadly applicable."
+      ],
+      "evidence_signal": "Experiments in the abstract report tight relaxations across many practical activations and up to 7.8x more verified properties than state-of-the-art methods.",
+      "watch_item": "The method’s correctness and tightness depend on choosing valid slopes and a reliable shifting procedure, so implementation details matter for sound verification.",
+      "hashtags": [
+        "#NeuralNetworkVerification",
+        "#FormalMethods",
+        "#ActivationFunctions",
+        "#Optimization",
+        "#AISafety"
+      ],
+      "paper_id": "2026-06-18-arxiv-shifting_based_optimizable_linear_relaxations_for_general_activation_functions",
+      "paper_title": "Shifting-based Optimizable Linear Relaxations for General Activation Functions",
+      "paper_date": "2026-06-18",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-06-20T15:47:48",
       "generator": "openai"
     }
   }
