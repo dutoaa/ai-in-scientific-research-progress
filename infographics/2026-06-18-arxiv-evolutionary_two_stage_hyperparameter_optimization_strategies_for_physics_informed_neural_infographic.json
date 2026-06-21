@@ -1,13 +1,13 @@
 {
-  "key_insight": "A two-stage evolutionary hyperparameter search can make PINN training more robust by cheaply screening candidates first and fully training only the best ones.",
-  "engineering_relevance": "This offers a practical way to improve PDE-solver accuracy under fixed compute budgets when PINNs are unstable and highly sensitive to hyperparameters.",
+  "key_insight": "A two-stage evolutionary hyperparameter search can make PINNs more accurate and robust by using cheap low-fidelity screening before full gradient-based training.",
+  "engineering_relevance": "This offers a practical way to improve PDE-solving PINNs under fixed compute budgets when standard training is unstable or highly sensitive to hyperparameters.",
   "method": [
-    "Use an evolutionary algorithm to explore mixed PINN hyperparameters as a black-box outer loop.",
-    "Run short low-fidelity training epochs to quickly rank candidate configurations.",
-    "Fully train only the top candidates with standard gradient-based optimization in stage two."
+    "Use an evolutionary algorithm to search mixed PINN hyperparameters in a noisy black-box outer loop.",
+    "Run short truncated training to quickly evaluate and filter candidate configurations.",
+    "Fully train only the best candidates with standard gradient-based optimizers in a second stage."
   ],
-  "evidence_signal": "The approach was evaluated on Advection, Klein-Gordon, and Helmholtz problems and consistently reduced mean error versus standard training under constrained computation.",
-  "watch_item": "Performance depends on the quality of low-fidelity screening, so overly short truncated runs may discard configurations that would have improved with longer training.",
+  "evidence_signal": "The approach was evaluated on Advection, Klein-Gordon, and Helmholtz problems and reported consistently lower mean error than standard training under constrained computational resources.",
+  "watch_item": "Low-fidelity screening can mis-rank candidates, so the method depends on choosing a truncation budget that preserves correlation with final performance.",
   "hashtags": [
     "#PINNs",
     "#HyperparameterOptimization",
@@ -19,6 +19,6 @@
   "paper_title": "Evolutionary Two-Stage Hyperparameter Optimization Strategies for Physics-Informed Neural Networks",
   "paper_date": "2026-06-18",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-06-20T15:47:00",
+  "generated_at": "2026-06-21T15:57:07",
   "generator": "openai"
 }

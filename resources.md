@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-06-20
+Generated: 2026-06-21
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Agentic Symbolic Search: Characterizing PDEs Beyond Hand-crafted Expressions, Meshes, and Neural Networks
@@ -59,15 +59,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.20408v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-18-arxiv-llm_agent_safety_multi_turn_red_teaming_jailbreak_benchmarks_adversarial_robustness_safety_infographic.json
 
-## 8. Agentic AutoResearch forSpace Autonomy: An Auditable, LLM-Driven Research Agent for Aerospace Control Problems
-
-- Date: 2026-06-18
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2606.20394v1
-- PDF: https://arxiv.org/pdf/2606.20394v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-18-arxiv-agentic_autoresearch_forspace_autonomy_an_auditable_llm_driven_research_agent_for_aerospac_infographic.json
-
-## 9. AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning
+## 8. AutoPass: Evidence-Guided LLM Agents for Compiler Performance Tuning
 
 - Date: 2026-06-18
 - Category: AI scientific research
@@ -75,7 +67,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.20373v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-18-arxiv-autopass_evidence_guided_llm_agents_for_compiler_performance_tuning_infographic.json
 
-## 10. What Do Safety-Aligned LLMs Learn From Mixed Compliance Demonstrations?
+## 9. What Do Safety-Aligned LLMs Learn From Mixed Compliance Demonstrations?
 
 - Date: 2026-06-18
 - Category: AI scientific research
@@ -83,7 +75,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.20508v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-18-arxiv-what_do_safety_aligned_llms_learn_from_mixed_compliance_demonstrations_infographic.json
 
-## 11. Marginal Advantage Accumulation for Memory-Driven Agent Self-Evolution
+## 10. Marginal Advantage Accumulation for Memory-Driven Agent Self-Evolution
 
 - Date: 2026-06-18
 - Category: AI scientific research
@@ -91,13 +83,21 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.20475v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-18-arxiv-marginal_advantage_accumulation_for_memory_driven_agent_self_evolution_infographic.json
 
-## 12. Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems
+## 11. Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems
 
 - Date: 2026-06-18
 - Category: AI scientific research
 - arXiv: https://arxiv.org/abs/2606.20493v1
 - PDF: https://arxiv.org/pdf/2606.20493v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-18-arxiv-contagion_networks_evaluator_bias_propagation_in_multi_agent_llm_systems_infographic.json
+
+## 12. Agentic AutoResearch forSpace Autonomy: An Auditable, LLM-Driven Research Agent for Aerospace Control Problems
+
+- Date: 2026-06-18
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2606.20394v1
+- PDF: https://arxiv.org/pdf/2606.20394v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-18-arxiv-agentic_autoresearch_forspace_autonomy_an_auditable_llm_driven_research_agent_for_aerospac_infographic.json
 
 ## 13. Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation
 
