@@ -1,24 +1,24 @@
 {
-  "key_insight": "Execution-state capsules generalize reuse from KV-cache fragments to the entire graph-bound execution state, enabling fast checkpoint/restore for low-latency, small-batch on-device AI serving.",
-  "engineering_relevance": "This is useful for interactive agents, speech models, and robot policies that frequently branch, interrupt, and resume under tight responsiveness budgets.",
+  "key_insight": "Execution-state capsules let on-device AI systems checkpoint and restore the full graph-bound execution state—not just KV cache—so interactive agents can resume, branch, or roll back with very low latency.",
+  "engineering_relevance": "This enables latency-first serving for robots, speech, and embedded LLM agents where responsiveness and correctness matter more than high-throughput batch reuse.",
   "method": [
-    "Capture the complete restorable state at a committed graph boundary",
-    "Store live state in contiguous static buffers with no block-table indirection",
-    "Restore/fork/roll back KV, recurrent, convolution, MTP, and metadata state together"
+    "Capture the complete committed execution state as a graph-bound capsule over static contiguous buffers.",
+    "Restore, fork, or roll back all restorable state including KV, recurrent, convolution, MTP, and metadata.",
+    "Run captured graph plans on a CUDA backend without block-table indirection for deterministic replay."
   ],
-  "evidence_signal": "On RTX 5090, restore is byte-exact and greedy-decoded outputs are token-identical; GPU-resident snapshot/restore is sub-millisecond and TTFT speedup rises from 3.9x at 2k tokens to 27x at 16k tokens.",
-  "watch_item": "The approach depends on a white-box runtime and backend-facing graph capture, so integration may be harder than standard KV-only serving stacks.",
+  "evidence_signal": "The abstract reports byte-exact restore, token-identical greedy decoding, sub-millisecond GPU-resident snapshot/restore, and TTFT speedups from 3.9x at 2k tokens to 27x at 16k tokens, validated on RTX 5090, Jetson AGX Thor, and DGX Spark.",
+  "watch_item": "This approach depends on a closed set of named buffers and backend support for captured graph execution, so integration may be nontrivial for dynamic or highly custom model stacks.",
   "hashtags": [
-    "#LLMServing",
+    "#AIInference",
+    "#KVCache",
     "#CheckpointRestore",
-    "#EdgeAI",
-    "#OnDeviceInference",
-    "#GPUInference"
+    "#OnDeviceAI",
+    "#EdgeComputing"
   ],
   "paper_id": "2026-06-18-arxiv-execution_state_capsules_graph_bound_execution_state_checkpoint_and_restore_for_low_latenc",
   "paper_title": "Execution-State Capsules: Graph-Bound Execution-State Checkpoint and Restore for Low-Latency, Small-Batch, On-Device Physical-AI Serving",
   "paper_date": "2026-06-18",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-06-21T15:57:42",
+  "generated_at": "2026-06-22T18:15:22",
   "generator": "openai"
 }

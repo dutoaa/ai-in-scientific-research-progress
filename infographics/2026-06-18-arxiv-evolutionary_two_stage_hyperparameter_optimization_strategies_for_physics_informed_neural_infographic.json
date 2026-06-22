@@ -1,24 +1,24 @@
 {
-  "key_insight": "A two-stage evolutionary hyperparameter search can make PINNs more accurate and robust by using cheap low-fidelity screening before full gradient-based training.",
-  "engineering_relevance": "This offers a practical way to improve PDE-solving PINNs under fixed compute budgets when standard training is unstable or highly sensitive to hyperparameters.",
+  "key_insight": "A two-stage evolutionary hyperparameter search can make Physics-Informed Neural Networks more accurate and robust by using cheap screening first and full training only on the best candidates.",
+  "engineering_relevance": "This offers a practical way to tune PINNs under fixed compute budgets, reducing wasted training on weak configurations in scientific simulation workflows.",
   "method": [
-    "Use an evolutionary algorithm to search mixed PINN hyperparameters in a noisy black-box outer loop.",
-    "Run short truncated training to quickly evaluate and filter candidate configurations.",
-    "Fully train only the best candidates with standard gradient-based optimizers in a second stage."
+    "Stage 1: run truncated, low-fidelity PINN trainings to evaluate many hyperparameter combinations quickly.",
+    "Use an evolutionary algorithm as the outer-loop optimizer over mixed, noisy, black-box hyperparameters.",
+    "Stage 2: fully train the top-ranked candidates with standard gradient-based optimization."
   ],
-  "evidence_signal": "The approach was evaluated on Advection, Klein-Gordon, and Helmholtz problems and reported consistently lower mean error than standard training under constrained computational resources.",
-  "watch_item": "Low-fidelity screening can mis-rank candidates, so the method depends on choosing a truncation budget that preserves correlation with final performance.",
+  "evidence_signal": "The approach was evaluated on three benchmark PDEs—Advection, Klein-Gordon, and Helmholtz—and the abstract reports consistently lower mean error than standard training under constrained resources.",
+  "watch_item": "The extra outer-loop search and short-run screening may still be compute-intensive, so results can depend on the fidelity choice, budget allocation, and problem-specific hyperparameter ranges.",
   "hashtags": [
     "#PINNs",
+    "#ScientificMachineLearning",
     "#HyperparameterOptimization",
     "#EvolutionaryAlgorithms",
-    "#ScientificMachineLearning",
     "#PDEs"
   ],
   "paper_id": "2026-06-18-arxiv-evolutionary_two_stage_hyperparameter_optimization_strategies_for_physics_informed_neural",
   "paper_title": "Evolutionary Two-Stage Hyperparameter Optimization Strategies for Physics-Informed Neural Networks",
   "paper_date": "2026-06-18",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-06-21T15:57:07",
+  "generated_at": "2026-06-22T18:14:31",
   "generator": "openai"
 }

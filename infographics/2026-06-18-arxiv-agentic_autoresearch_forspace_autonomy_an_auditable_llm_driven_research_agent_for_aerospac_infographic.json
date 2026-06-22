@@ -1,24 +1,24 @@
 {
-  "key_insight": "AutoResearch uses an LLM as an offline research agent to autonomously iterate on aerospace control training, while an embedded credibility layer only accepts results that exceed measured seed noise and pass verification checks.",
-  "engineering_relevance": "This provides a reproducible way to discover and audit spacecraft guidance and control policies, helping engineers distinguish real gains from seed-dependent noise before deployment.",
+  "key_insight": "AutoResearch uses an LLM to autonomously iterate on aerospace control training, but only credits improvements that survive strict audit checks against measured seed noise.",
+  "engineering_relevance": "This provides a reproducible way to search for better spacecraft guidance and control policies while separating real gains from random seed variation.",
   "method": [
-    "LLM reads a plain-language problem description and experiment history, then proposes one training-script edit per iteration.",
-    "Each candidate policy is evaluated with measured per-problem seed noise, reseeded verification of the best setting, and leave-one-out pruning of the agent’s edits.",
-    "The same audited loop is applied to two spacecraft control tasks: Clohessy-Wiltshire rendezvous and constrained docking around a keep-out zone."
+    "LLM reads the problem description and run history, then proposes one training-script edit per iteration",
+    "Each candidate result is validated with seed-noise measurements, reseeded confirmation, and leave-one-out pruning of edits",
+    "The same audited loop is tested on rendezvous and keep-out-zone docking benchmarks"
   ],
-  "evidence_signal": "Across both problems, the audited policies outperform measured seed noise by many standard deviations; on the docking task, the learned policy remains feasible on every seed while undirected search finds no feasible policy.",
-  "watch_item": "The approach depends on accurate seed-noise calibration and problem-specific benchmarking, so its credibility claims may weaken if the evaluation protocol or task dynamics change.",
+  "evidence_signal": "Across both benchmark problems, the audited policies outperform measured seed noise by many standard deviations, and on docking the learned policy remains feasible on every seed while undirected search finds none.",
+  "watch_item": "The approach depends on accurate seed-noise calibration and careful auditing, so misestimated noise or benchmark-specific tuning could overstate generality.",
   "hashtags": [
-    "#AerospaceAI",
-    "#ResearchAgents",
+    "#AIAgents",
     "#SpaceAutonomy",
     "#ControlSystems",
-    "#LLMAutonomy"
+    "#LLMResearch",
+    "#Reproducibility"
   ],
   "paper_id": "2026-06-18-arxiv-agentic_autoresearch_forspace_autonomy_an_auditable_llm_driven_research_agent_for_aerospac",
   "paper_title": "Agentic AutoResearch forSpace Autonomy: An Auditable, LLM-Driven Research Agent for Aerospace Control Problems",
   "paper_date": "2026-06-18",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-06-21T15:57:34",
+  "generated_at": "2026-06-22T18:14:57",
   "generator": "openai"
 }
