@@ -1,24 +1,24 @@
 {
-  "key_insight": "OrbitForge turns a single text-generated video into a more reliable 3D Gaussian Splatting scene by using reconstruction to anchor and complete a closed camera orbit.",
-  "engineering_relevance": "The method offers a practical text-to-3D pipeline that improves view coverage and consistency without task-specific fine-tuning, score distillation, or stepwise view generation.",
+  "key_insight": "OrbitForge turns a single text-generated video into a full closed-orbit 3D Gaussian Splatting scene by using 3D reconstruction as an anchor and iteratively filling only missing viewpoints.",
+  "engineering_relevance": "It offers a practical text-to-3D pipeline that avoids prompt-specific fine-tuning and score-distillation, making scene synthesis more scalable for graphics and simulation workflows.",
   "method": [
-    "Generate an initial video from frozen text-to-video priors.",
-    "Reconstruct a preliminary 3D scene with Deformable Gaussian Splatting using a robust MedianGS proxy.",
-    "Render a prescribed orbit, identify missing viewpoints, complete them with the video model, and reconstruct the full orbit into the final scene."
+    "Generate an initial video from text using frozen video priors.",
+    "Reconstruct a preliminary 3D scene with Deformable Gaussian Splatting plus a robust MedianGS proxy.",
+    "Render a prescribed orbit, identify missing views, synthesize only those views, then reconstruct the completed orbit into the final 3D scene."
   ],
-  "evidence_signal": "On a frozen 300-prompt T3Bench-derived audit, OrbitForge reached a 359.0-degree median span and improved unsupported-bin Q10 ImageReward from 8.07 to 16.36 over MedianGS-only reconstruction.",
-  "watch_item": "The approach depends on accurate missing-view detection and the quality of the underlying frozen video prior, so failures in either can limit reconstruction fidelity.",
+  "evidence_signal": "On a frozen 300-prompt T3Bench-derived audit, the method achieved a 359.0-degree median span and improved unsupported-bin Q10 ImageReward from 8.07 to 16.36 versus MedianGS-only reconstruction.",
+  "watch_item": "Performance depends on the quality and completeness of generated video views, so failures in orbit coverage or temporal consistency can still limit reconstruction fidelity.",
   "hashtags": [
     "#TextTo3D",
     "#GaussianSplatting",
     "#VideoSynthesis",
     "#3DReconstruction",
-    "#GenerativeAI"
+    "#AIForGraphics"
   ],
   "paper_id": "2026-06-23-arxiv-orbitforge_text_to_3d_scene_generation_via_reconstruction_anchored_video_synthesis",
   "paper_title": "OrbitForge: Text-to-3D Scene Generation via Reconstruction-Anchored Video Synthesis",
   "paper_date": "2026-06-23",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-06-24T16:25:10",
+  "generated_at": "2026-06-25T16:35:19",
   "generator": "openai"
 }

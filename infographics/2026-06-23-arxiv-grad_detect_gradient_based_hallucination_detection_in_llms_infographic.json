@@ -1,24 +1,24 @@
 {
-  "key_insight": "Grad Detect uses a single forward-backward pass to read layer-wise gradient patterns, which reveal when an LLM is likely hallucinating better than output confidence alone.",
-  "engineering_relevance": "It offers a practical, inference-time reliability check that can improve deployment safety for LLMs in high-stakes Q&A and abstention settings.",
+  "key_insight": "Grad Detect uses a single forward-backward pass to read layer-wise gradient patterns that reveal when an LLM is likely hallucinating, often more reliably than output confidence signals.",
+  "engineering_relevance": "It offers a practical, interpretable way to add hallucination and abstention detection to deployed LLM systems with minimal extra inference cost and strong cross-model robustness.",
   "method": [
-    "Compute gradients during inference from one forward-backward pass.",
-    "Use layer-wise gradient structure as a hallucination signal.",
-    "Focus on the final five layers, which contain most of the discriminative information."
+    "Run one forward-backward pass at inference to collect layer-wise gradients.",
+    "Use the gradient structure as a predictor of hallucination or abstention.",
+    "Focus on the final layers, which contain most of the discriminative signal."
   ],
-  "evidence_signal": "Across several Q&A benchmarks and eleven models from four architectural families, the method consistently outperforms confidence-based and sampling-based baselines, with the final five layers carrying over 97% of the useful signal.",
-  "watch_item": "Because it requires backward-pass computation at inference, runtime and memory overhead may limit use in latency-sensitive deployments.",
+  "evidence_signal": "Evaluated on several Q&A benchmarks across 11 models from four architectural families, Grad Detect consistently outperformed confidence-based and sampling-based baselines, with the final five layers carrying over 97% of the discriminative gradient signal.",
+  "watch_item": "The approach still requires backward-pass computation at inference, so latency and memory overhead may limit use in very high-throughput or resource-constrained deployments.",
   "hashtags": [
     "#LLM",
     "#HallucinationDetection",
-    "#GradientBasedAI",
-    "#ModelReliability",
-    "#AIInference"
+    "#GradientBased",
+    "#AIEvaluation",
+    "#ModelReliability"
   ],
   "paper_id": "2026-06-23-arxiv-grad_detect_gradient_based_hallucination_detection_in_llms",
   "paper_title": "Grad Detect: Gradient-Based Hallucination Detection in LLMs",
   "paper_date": "2026-06-23",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-06-24T16:25:05",
+  "generated_at": "2026-06-25T16:35:14",
   "generator": "openai"
 }

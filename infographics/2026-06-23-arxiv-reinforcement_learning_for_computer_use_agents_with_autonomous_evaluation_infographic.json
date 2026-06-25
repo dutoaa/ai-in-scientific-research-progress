@@ -1,13 +1,13 @@
 {
-  "key_insight": "Use an autonomous vision-language judge as the reward signal for RL fine-tuning of computer-use agents, while correcting for evaluator noise.",
-  "engineering_relevance": "This provides a scalable way to train GUI agents in open-ended desktop environments without handcrafted rewards or manual dense labeling.",
+  "key_insight": "Autonomous vision-language evaluators can provide scalable reward signals for reinforcement learning in computer-use agents when their noise is explicitly corrected.",
+  "engineering_relevance": "This enables practical RL fine-tuning for GUI agents in open-ended desktop environments without hand-crafted rewards or dense manual labeling.",
   "method": [
-    "Run PPO on computer-use agent trajectories in GUI environments.",
-    "Use the final screenshot plus the original instruction for VLM-based terminal evaluation.",
-    "Model evaluator outputs as noisy binary rewards and apply a noise-corrected reward estimator."
+    "Use the final screenshot and original instruction as the reward input to a vision-language model.",
+    "Treat evaluator output as a noisy binary terminal reward channel.",
+    "Apply a noise-corrected reward estimator inside PPO for policy optimization."
   ],
-  "evidence_signal": "Across macOSWorld, Windows Agent Arena, and OSWorld, corrected evaluator rewards improved success rates by 12.6 points over zero-shot and 5.1 points over raw evaluator fine-tuning.",
-  "watch_item": "Performance depends on the quality of the autonomous evaluator, so noise estimation and correction must be handled carefully to avoid misleading rewards.",
+  "evidence_signal": "Across macOSWorld, Windows Agent Arena, and OSWorld, corrected evaluator rewards improved success by 12.6 points over zero-shot and 5.1 points over raw evaluator fine-tuning.",
+  "watch_item": "Performance depends on the evaluator’s accuracy, so miscalibration or domain shift in the vision-language judge can still bias reward learning.",
   "hashtags": [
     "#ReinforcementLearning",
     "#ComputerUseAgents",
@@ -19,6 +19,6 @@
   "paper_title": "Reinforcement Learning for Computer-Use Agents with Autonomous Evaluation",
   "paper_date": "2026-06-23",
   "paper_category": "Autonomous Labs",
-  "generated_at": "2026-06-24T16:24:45",
+  "generated_at": "2026-06-25T16:34:52",
   "generator": "openai"
 }
