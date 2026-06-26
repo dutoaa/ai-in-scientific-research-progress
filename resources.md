@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-06-25
+Generated: 2026-06-26
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Breaking Bottlenecks in Solid Electrolyte Discovery with Large Artificial Intelligence Models
+## 1. Kolmogorov Arnold networks (KAN) for aerodynamic prediction: a comparison with MLPs and GNNs
 
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24480v1
-- PDF: https://arxiv.org/pdf/2606.24480v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-breaking_bottlenecks_in_solid_electrolyte_discovery_with_large_artificial_intelligence_mod_infographic.json
-
-## 2. A Physics-Informed Fourier-Wavelet Transformer for Multiscale Computational Fluid Dynamics Surrogate Modeling
-
-- Date: 2026-06-23
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2606.24696v1
-- PDF: https://arxiv.org/pdf/2606.24696v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-a_physics_informed_fourier_wavelet_transformer_for_multiscale_computational_fluid_dynamics_infographic.json
-
-## 3. LaGO: Latent Action Guidance for Online Reinforcement Learning
-
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24669v1
-- PDF: https://arxiv.org/pdf/2606.24669v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-lago_latent_action_guidance_for_online_reinforcement_learning_infographic.json
-
-## 4. Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-trained Language Models
-
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24841v1
-- PDF: https://arxiv.org/pdf/2606.24841v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-matching_tasks_to_objectives_fine_tuning_and_prompt_tuning_strategies_for_encoder_decoder_infographic.json
-
-## 5. ScaleToT: Generalizing Structured LLM Reasoning for Billion-Scale Low-Activity User Modeling
-
-- Date: 2026-06-23
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2606.24605v1
-- PDF: https://arxiv.org/pdf/2606.24605v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-scaletot_generalizing_structured_llm_reasoning_for_billion_scale_low_activity_user_modelin_infographic.json
-
-## 6. Reinforcement Learning for Computer-Use Agents with Autonomous Evaluation
-
-- Date: 2026-06-23
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2606.24515v1
-- PDF: https://arxiv.org/pdf/2606.24515v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-reinforcement_learning_for_computer_use_agents_with_autonomous_evaluation_infographic.json
-
-## 7. Can Scale Save Us From Plasticity Loss in Large Language Models?
-
-- Date: 2026-06-23
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.24752v1
-- PDF: https://arxiv.org/pdf/2606.24752v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-can_scale_save_us_from_plasticity_loss_in_large_language_models_infographic.json
-
-## 8. Adaptive Machine Learning Framework for UAV Trajectory Optimization in O-RAN
-
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24483v1
-- PDF: https://arxiv.org/pdf/2606.24483v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-adaptive_machine_learning_framework_for_uav_trajectory_optimization_in_o_ran_infographic.json
-
-## 9. FlowPipe: LLM-Enhanced Conditional Generative Flow Networks for Data Preparation Pipeline Construction
-
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24679v1
-- PDF: https://arxiv.org/pdf/2606.24679v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-flowpipe_llm_enhanced_conditional_generative_flow_networks_for_data_preparation_pipeline_c_infographic.json
-
-## 10. Extended pseudo-spectral physics-informed neural networks for phase-field models
-
-- Date: 2026-06-23
+- Date: 2026-06-25
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2606.24660v1
-- PDF: https://arxiv.org/pdf/2606.24660v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-extended_pseudo_spectral_physics_informed_neural_networks_for_phase_field_models_infographic.json
+- arXiv: https://arxiv.org/abs/2606.27126v1
+- PDF: https://arxiv.org/pdf/2606.27126v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-kolmogorov_arnold_networks_kan_for_aerodynamic_prediction_a_comparison_with_mlps_and_gnns_infographic.json
 
-## 11. NoContactNoWorries: Estimating Contact through Vision and Proprioception for In-Hand Dexterous Manipulation
+## 2. Deep learning model emulators for marine biogeochemistry forecasting from days to decades
 
-- Date: 2026-06-23
+- Date: 2026-06-25
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2606.24450v1
-- PDF: https://arxiv.org/pdf/2606.24450v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-nocontactnoworries_estimating_contact_through_vision_and_proprioception_for_in_hand_dexter_infographic.json
+- arXiv: https://arxiv.org/abs/2606.27168v1
+- PDF: https://arxiv.org/pdf/2606.27168v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-deep_learning_model_emulators_for_marine_biogeochemistry_forecasting_from_days_to_decades_infographic.json
 
-## 12. Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System
+## 3. Reinforcement Learning without Ground-Truth Solutions can Improve LLMs
 
-- Date: 2026-06-23
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2606.24839v1
-- PDF: https://arxiv.org/pdf/2606.24839v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-grading_the_grader_lessons_from_evaluating_an_agentic_data_analysis_system_infographic.json
+- Date: 2026-06-25
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2606.27369v1
+- PDF: https://arxiv.org/pdf/2606.27369v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-reinforcement_learning_without_ground_truth_solutions_can_improve_llms_infographic.json
 
-## 13. Accuracy and Satisfaction in Multi-Turn LLM Dialogues for NFR Assessment
+## 4. Designing Reward Signals for Portable Query Generation: A Case Study in Industrial Semantic Job Search
 
-- Date: 2026-06-23
+- Date: 2026-06-25
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.24834v1
-- PDF: https://arxiv.org/pdf/2606.24834v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-accuracy_and_satisfaction_in_multi_turn_llm_dialogues_for_nfr_assessment_infographic.json
+- arXiv: https://arxiv.org/abs/2606.27291v1
+- PDF: https://arxiv.org/pdf/2606.27291v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-designing_reward_signals_for_portable_query_generation_a_case_study_in_industrial_semantic_infographic.json
 
-## 14. A Fair Evaluation of Graph Foundation Models for Node Property Prediction
+## 5. Autoregressive Boltzmann Generators
 
-- Date: 2026-06-23
+- Date: 2026-06-25
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2606.27361v1
+- PDF: https://arxiv.org/pdf/2606.27361v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-autoregressive_boltzmann_generators_infographic.json
+
+## 6. DMuon: Efficient Distributed Muon Training with Near-Adam Overhead
+
+- Date: 2026-06-25
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.24509v1
-- PDF: https://arxiv.org/pdf/2606.24509v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-a_fair_evaluation_of_graph_foundation_models_for_node_property_prediction_infographic.json
+- arXiv: https://arxiv.org/abs/2606.27153v1
+- PDF: https://arxiv.org/pdf/2606.27153v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-dmuon_efficient_distributed_muon_training_with_near_adam_overhead_infographic.json
 
-## 15. Grad Detect: Gradient-Based Hallucination Detection in LLMs
+## 7. fTNN: a tensor neural network for fractional PDEs
 
-- Date: 2026-06-23
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.24790v1
-- PDF: https://arxiv.org/pdf/2606.24790v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-grad_detect_gradient_based_hallucination_detection_in_llms_infographic.json
+- Date: 2026-06-25
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2606.27140v1
+- PDF: https://arxiv.org/pdf/2606.27140v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-ftnn_a_tensor_neural_network_for_fractional_pdes_infographic.json
 
-## 16. EERLoss: A Novel Loss Function for Training Deep Biometric Models. A Case Study in Keystroke Dynamics
+## 8. Error-Conditioned Neural Solvers
 
-- Date: 2026-06-23
+- Date: 2026-06-25
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2606.27354v1
+- PDF: https://arxiv.org/pdf/2606.27354v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-error_conditioned_neural_solvers_infographic.json
+
+## 9. Stochastic Gradient Optimization with Model-Assisted Sampling
+
+- Date: 2026-06-25
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2606.24586v1
-- PDF: https://arxiv.org/pdf/2606.24586v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-eerloss_a_novel_loss_function_for_training_deep_biometric_models_a_case_study_in_keystroke_infographic.json
+- arXiv: https://arxiv.org/abs/2606.27171v1
+- PDF: https://arxiv.org/pdf/2606.27171v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-stochastic_gradient_optimization_with_model_assisted_sampling_infographic.json
 
-## 17. OrbitForge: Text-to-3D Scene Generation via Reconstruction-Anchored Video Synthesis
+## 10. RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning
 
-- Date: 2026-06-23
+- Date: 2026-06-25
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.26997v1
+- PDF: https://arxiv.org/pdf/2606.26997v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-rolloutpipe_overlapping_pipelined_rollout_and_training_in_disaggregated_on_policy_llm_rein_infographic.json
+
+## 11. A Multi-Fidelity Convolutional Autoencoder-Transfer Learning Framework for Guided-Wave-Based Damage Diagnosis Using Large Simulated and Limited Experimental Datasets
+
+- Date: 2026-06-25
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2606.27304v1
+- PDF: https://arxiv.org/pdf/2606.27304v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-a_multi_fidelity_convolutional_autoencoder_transfer_learning_framework_for_guided_wave_bas_infographic.json
+
+## 12. Ask, Don't Judge: Binary Questions for Interpretable LLM Evaluation and Self-Improvement
+
+- Date: 2026-06-25
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.27226v1
+- PDF: https://arxiv.org/pdf/2606.27226v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-ask_don_t_judge_binary_questions_for_interpretable_llm_evaluation_and_self_improvement_infographic.json
+
+## 13. Graph Neural Networks Applications Across Domains: All Insights You Need
+
+- Date: 2026-06-25
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2606.27202v1
+- PDF: https://arxiv.org/pdf/2606.27202v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-graph_neural_networks_applications_across_domains_all_insights_you_need_infographic.json
+
+## 14. Adaptive Utility driven Resource Orchestration for Resilient AI (AURORA-AI)
+
+- Date: 2026-06-25
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2606.27005v1
+- PDF: https://arxiv.org/pdf/2606.27005v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-adaptive_utility_driven_resource_orchestration_for_resilient_ai_aurora_ai_infographic.json
+
+## 15. Effective Covariance Dynamics in Solvable High-Dimensional GANs
+
+- Date: 2026-06-25
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2606.27246v1
+- PDF: https://arxiv.org/pdf/2606.27246v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-effective_covariance_dynamics_in_solvable_high_dimensional_gans_infographic.json
+
+## 16. Recovering Governing Equations from Solution Data: Identifiability Bounds for Linear and Nonlinear ODEs
+
+- Date: 2026-06-25
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2606.27285v1
+- PDF: https://arxiv.org/pdf/2606.27285v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-recovering_governing_equations_from_solution_data_identifiability_bounds_for_linear_and_no_infographic.json
+
+## 17. Neural Networks for Inverse Design of Cascaded-Mode Near-Field Landscapes
+
+- Date: 2026-06-25
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.27099v1
+- PDF: https://arxiv.org/pdf/2606.27099v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-neural_networks_for_inverse_design_of_cascaded_mode_near_field_landscapes_infographic.json
+
+## 18. Semantic Early-Stopping for Iterative LLM Agent Loops
+
+- Date: 2026-06-25
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24799v1
-- PDF: https://arxiv.org/pdf/2606.24799v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-orbitforge_text_to_3d_scene_generation_via_reconstruction_anchored_video_synthesis_infographic.json
+- arXiv: https://arxiv.org/abs/2606.27009v1
+- PDF: https://arxiv.org/pdf/2606.27009v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-semantic_early_stopping_for_iterative_llm_agent_loops_infographic.json
 
-## 18. CineCap: Structured Reasoning with Spatio-Temporal Anchors for Cinematographic Video Captioning
+## 19. Blackwell Approachability and Gradient Equilibrium are Equivalent
 
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24636v1
-- PDF: https://arxiv.org/pdf/2606.24636v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-cinecap_structured_reasoning_with_spatio_temporal_anchors_for_cinematographic_video_captio_infographic.json
+- Date: 2026-06-25
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.27315v1
+- PDF: https://arxiv.org/pdf/2606.27315v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-blackwell_approachability_and_gradient_equilibrium_are_equivalent_infographic.json
 
-## 19. Uncertainty-Aware Longitudinal Forecasting of Alzheimer's Disease Progression Using Deep Learning
+## 20. Generative Models on Analog Hardware with Dynamics
 
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24604v1
-- PDF: https://arxiv.org/pdf/2606.24604v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-uncertainty_aware_longitudinal_forecasting_of_alzheimer_s_disease_progression_using_deep_l_infographic.json
-
-## 20. ASALT: Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning
-
-- Date: 2026-06-23
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.24601v1
-- PDF: https://arxiv.org/pdf/2606.24601v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-23-arxiv-asalt_adaptive_state_alignment_for_lateral_transfer_in_multi_agent_reinforcement_learning_infographic.json
+- Date: 2026-06-25
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2606.27294v1
+- PDF: https://arxiv.org/pdf/2606.27294v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-generative_models_on_analog_hardware_with_dynamics_infographic.json

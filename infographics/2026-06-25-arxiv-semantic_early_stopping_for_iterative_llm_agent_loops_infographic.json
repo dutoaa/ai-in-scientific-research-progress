@@ -1,0 +1,24 @@
+{
+  "key_insight": "Semantic early-stopping can replace fixed iteration caps in LLM agent loops by halting when draft meaning and measured quality stop improving, saving tokens without hurting answer quality.",
+  "engineering_relevance": "For multi-agent workflows like Writer–Critic loops, this offers a practical control policy that improves token efficiency and exposes when extra iterations are no longer worth their cost.",
+  "method": [
+    "Track cosine distance between consecutive draft embeddings with a patience window.",
+    "Optionally gate stopping on stagnating quality judged across rounds.",
+    "Replay all stopping policies on the same generated trajectories with cached judge calls for fair comparison."
+  ],
+  "evidence_signal": "On 60 HotpotQA test questions, the judge-free semantic stopper cut operational tokens by 38% versus max_iterations at parity quality, while the oracle-best round was still substantially better than any practical policy.",
+  "watch_item": "The full quality-gated version can be more expensive than it saves because per-round LLM judging dominates runtime and token cost.",
+  "hashtags": [
+    "#LLMAgents",
+    "#EarlyStopping",
+    "#HotpotQA",
+    "#TokenEfficiency",
+    "#RAG"
+  ],
+  "paper_id": "2026-06-25-arxiv-semantic_early_stopping_for_iterative_llm_agent_loops",
+  "paper_title": "Semantic Early-Stopping for Iterative LLM Agent Loops",
+  "paper_date": "2026-06-25",
+  "paper_category": "Literature and Knowledge Mining",
+  "generated_at": "2026-06-26T16:21:19",
+  "generator": "openai"
+}
