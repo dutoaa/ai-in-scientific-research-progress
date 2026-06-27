@@ -1,24 +1,24 @@
 {
-  "key_insight": "Semantic early-stopping can replace fixed iteration caps in LLM agent loops by halting when draft meaning and measured quality stop improving, saving tokens without hurting answer quality.",
-  "engineering_relevance": "For multi-agent workflows like Writer–Critic loops, this offers a practical control policy that improves token efficiency and exposes when extra iterations are no longer worth their cost.",
+  "key_insight": "Replace fixed max-iteration cutoffs with semantic early-stopping so iterative LLM agent loops stop when meaning and quality stop improving, not just when a token budget is exhausted.",
+  "engineering_relevance": "This can cut unnecessary inference cost in writer-critic or multi-agent workflows while preserving answer quality, making iterative LLM systems more efficient to deploy.",
   "method": [
-    "Track cosine distance between consecutive draft embeddings with a patience window.",
-    "Optionally gate stopping on stagnating quality judged across rounds.",
-    "Replay all stopping policies on the same generated trajectories with cached judge calls for fair comparison."
+    "Use embedding cosine distance between consecutive drafts with a patience window to detect semantic convergence.",
+    "Optionally gate stopping on measured quality improvement using an LLM judge.",
+    "Replay the same draft trajectory under multiple stopping policies and cache judge calls for fair, low-cost comparison."
   ],
-  "evidence_signal": "On 60 HotpotQA test questions, the judge-free semantic stopper cut operational tokens by 38% versus max_iterations at parity quality, while the oracle-best round was still substantially better than any practical policy.",
-  "watch_item": "The full quality-gated version can be more expensive than it saves because per-round LLM judging dominates runtime and token cost.",
+  "evidence_signal": "On 60 HotpotQA test questions, the judge-free semantic stopper reduced operational tokens by 38% versus max_iterations with parity quality (Delta-IS = -0.004, p = 0.81), while the oracle best-round selector beat all practical policies by +0.115 Information Score.",
+  "watch_item": "Quality-gated stopping may be too expensive in practice because repeated judge calls can outweigh the savings from fewer generation rounds.",
   "hashtags": [
     "#LLMAgents",
     "#EarlyStopping",
+    "#SemanticConvergence",
     "#HotpotQA",
-    "#TokenEfficiency",
-    "#RAG"
+    "#TokenEfficiency"
   ],
   "paper_id": "2026-06-25-arxiv-semantic_early_stopping_for_iterative_llm_agent_loops",
   "paper_title": "Semantic Early-Stopping for Iterative LLM Agent Loops",
   "paper_date": "2026-06-25",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-06-26T16:21:19",
+  "generated_at": "2026-06-27T15:19:52",
   "generator": "openai"
 }

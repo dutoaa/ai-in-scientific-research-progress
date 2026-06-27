@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-06-26
+Generated: 2026-06-27
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Kolmogorov Arnold networks (KAN) for aerodynamic prediction: a comparison with MLPs and GNNs
@@ -19,31 +19,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.27168v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-deep_learning_model_emulators_for_marine_biogeochemistry_forecasting_from_days_to_decades_infographic.json
 
-## 3. Reinforcement Learning without Ground-Truth Solutions can Improve LLMs
-
-- Date: 2026-06-25
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2606.27369v1
-- PDF: https://arxiv.org/pdf/2606.27369v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-reinforcement_learning_without_ground_truth_solutions_can_improve_llms_infographic.json
-
-## 4. Designing Reward Signals for Portable Query Generation: A Case Study in Industrial Semantic Job Search
-
-- Date: 2026-06-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.27291v1
-- PDF: https://arxiv.org/pdf/2606.27291v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-designing_reward_signals_for_portable_query_generation_a_case_study_in_industrial_semantic_infographic.json
-
-## 5. Autoregressive Boltzmann Generators
-
-- Date: 2026-06-25
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2606.27361v1
-- PDF: https://arxiv.org/pdf/2606.27361v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-autoregressive_boltzmann_generators_infographic.json
-
-## 6. DMuon: Efficient Distributed Muon Training with Near-Adam Overhead
+## 3. DMuon: Efficient Distributed Muon Training with Near-Adam Overhead
 
 - Date: 2026-06-25
 - Category: AI scientific research
@@ -51,7 +27,39 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.27153v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-dmuon_efficient_distributed_muon_training_with_near_adam_overhead_infographic.json
 
-## 7. fTNN: a tensor neural network for fractional PDEs
+## 4. Reinforcement Learning without Ground-Truth Solutions can Improve LLMs
+
+- Date: 2026-06-25
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2606.27369v1
+- PDF: https://arxiv.org/pdf/2606.27369v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-reinforcement_learning_without_ground_truth_solutions_can_improve_llms_infographic.json
+
+## 5. Designing Reward Signals for Portable Query Generation: A Case Study in Industrial Semantic Job Search
+
+- Date: 2026-06-25
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.27291v1
+- PDF: https://arxiv.org/pdf/2606.27291v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-designing_reward_signals_for_portable_query_generation_a_case_study_in_industrial_semantic_infographic.json
+
+## 6. Stochastic Gradient Optimization with Model-Assisted Sampling
+
+- Date: 2026-06-25
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2606.27171v1
+- PDF: https://arxiv.org/pdf/2606.27171v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-stochastic_gradient_optimization_with_model_assisted_sampling_infographic.json
+
+## 7. Autoregressive Boltzmann Generators
+
+- Date: 2026-06-25
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2606.27361v1
+- PDF: https://arxiv.org/pdf/2606.27361v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-autoregressive_boltzmann_generators_infographic.json
+
+## 8. fTNN: a tensor neural network for fractional PDEs
 
 - Date: 2026-06-25
 - Category: Scientific Machine Learning
@@ -59,21 +67,13 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.27140v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-ftnn_a_tensor_neural_network_for_fractional_pdes_infographic.json
 
-## 8. Error-Conditioned Neural Solvers
+## 9. Error-Conditioned Neural Solvers
 
 - Date: 2026-06-25
 - Category: Scientific Machine Learning
 - arXiv: https://arxiv.org/abs/2606.27354v1
 - PDF: https://arxiv.org/pdf/2606.27354v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-error_conditioned_neural_solvers_infographic.json
-
-## 9. Stochastic Gradient Optimization with Model-Assisted Sampling
-
-- Date: 2026-06-25
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2606.27171v1
-- PDF: https://arxiv.org/pdf/2606.27171v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-stochastic_gradient_optimization_with_model_assisted_sampling_infographic.json
 
 ## 10. RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning
 
@@ -123,7 +123,15 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.27246v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-effective_covariance_dynamics_in_solvable_high_dimensional_gans_infographic.json
 
-## 16. Recovering Governing Equations from Solution Data: Identifiability Bounds for Linear and Nonlinear ODEs
+## 16. Explaining Temporal Graph Neural Networks via Feature-induced Information Flow
+
+- Date: 2026-06-25
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2606.27201v1
+- PDF: https://arxiv.org/pdf/2606.27201v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-explaining_temporal_graph_neural_networks_via_feature_induced_information_flow_infographic.json
+
+## 17. Recovering Governing Equations from Solution Data: Identifiability Bounds for Linear and Nonlinear ODEs
 
 - Date: 2026-06-25
 - Category: Scientific Discovery
@@ -131,7 +139,15 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.27285v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-recovering_governing_equations_from_solution_data_identifiability_bounds_for_linear_and_no_infographic.json
 
-## 17. Neural Networks for Inverse Design of Cascaded-Mode Near-Field Landscapes
+## 18. Hierarchical Muon: Tiled Newton-Schulz Updates for Efficient Muon Optimization
+
+- Date: 2026-06-25
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2606.27216v1
+- PDF: https://arxiv.org/pdf/2606.27216v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-hierarchical_muon_tiled_newton_schulz_updates_for_efficient_muon_optimization_infographic.json
+
+## 19. Neural Networks for Inverse Design of Cascaded-Mode Near-Field Landscapes
 
 - Date: 2026-06-25
 - Category: AI scientific research
@@ -139,26 +155,10 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2606.27099v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-neural_networks_for_inverse_design_of_cascaded_mode_near_field_landscapes_infographic.json
 
-## 18. Semantic Early-Stopping for Iterative LLM Agent Loops
+## 20. Semantic Early-Stopping for Iterative LLM Agent Loops
 
 - Date: 2026-06-25
 - Category: Literature and Knowledge Mining
 - arXiv: https://arxiv.org/abs/2606.27009v1
 - PDF: https://arxiv.org/pdf/2606.27009v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-semantic_early_stopping_for_iterative_llm_agent_loops_infographic.json
-
-## 19. Blackwell Approachability and Gradient Equilibrium are Equivalent
-
-- Date: 2026-06-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2606.27315v1
-- PDF: https://arxiv.org/pdf/2606.27315v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-blackwell_approachability_and_gradient_equilibrium_are_equivalent_infographic.json
-
-## 20. Generative Models on Analog Hardware with Dynamics
-
-- Date: 2026-06-25
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2606.27294v1
-- PDF: https://arxiv.org/pdf/2606.27294v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-06-25-arxiv-generative_models_on_analog_hardware_with_dynamics_infographic.json

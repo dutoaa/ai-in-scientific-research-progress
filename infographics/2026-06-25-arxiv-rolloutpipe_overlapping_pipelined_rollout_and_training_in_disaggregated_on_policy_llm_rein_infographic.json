@@ -1,24 +1,24 @@
 {
-  "key_insight": "RolloutPipe overlaps rollout generation with training in disaggregated on-policy RLVR by moving complete trainable groups to the trainer as soon as they are ready, reducing idle GPU time without sacrificing on-policy correctness.",
-  "engineering_relevance": "It improves utilization in heterogeneous multi-GPU LLM post-training systems, making RLVR pipelines faster and more resource-efficient for reasoning-focused models.",
+  "key_insight": "RolloutPipe overlaps rollout and training in disaggregated on-policy RLVR by pipelining complete groups, reducing trainer idle time without sacrificing on-policy correctness.",
+  "engineering_relevance": "It is useful for heterogeneous LLM post-training systems that need higher GPU utilization and lower end-to-end latency across separate rollout and training pools.",
   "method": [
-    "Complete-group pipelining (CGP): dispatch each finished trainable group FIFO to the trainer immediately after materialization.",
-    "Frontier-group dispatch (FGD): prioritize rollout admission for frontier groups needed to assemble the next training batch sooner.",
-    "Keeps training on-policy by overlapping stages only after groups are complete, avoiding stale-data training."
+    "Complete-group pipelining (CGP): send each fully materialized trainable group to the trainer immediately in FIFO order.",
+    "Frontier-group dispatch (FGD): prioritize rollout admissions for frontier groups needed for the next batch so trainer-ready data arrives earlier.",
+    "Preserve on-policy behavior while overlapping stages instead of training on stale data."
   ],
-  "evidence_signal": "Evaluated on Qwen3-1.7B across four reasoning/science benchmarks and twelve rollout settings, achieving 30.7%–42.3% shorter rollout-to-train-end time and 37%–76% lower trainer waiting ratio versus Slime.",
-  "watch_item": "Performance gains depend on rollout/training balance and correct frontier-group scheduling, so integration complexity and workload sensitivity may affect real deployments.",
+  "evidence_signal": "On Qwen3-1.7B across four reasoning/science benchmarks and twelve rollout settings, RolloutPipe reduced rollout-to-train-end time by 30.7%-42.3% and trainer waiting ratio by 37%-76% versus Slime.",
+  "watch_item": "Benefits depend on careful dispatch and batching logic; implementing CGP/FGD in a real disaggregated system may add scheduling complexity and require stable group materialization timing.",
   "hashtags": [
-    "#LLM",
+    "#LLMPostTraining",
     "#ReinforcementLearning",
-    "#DistributedTraining",
-    "#Pipelining",
-    "#RLVR"
+    "#OnPolicyRL",
+    "#GPUScheduling",
+    "#DistributedSystems"
   ],
   "paper_id": "2026-06-25-arxiv-rolloutpipe_overlapping_pipelined_rollout_and_training_in_disaggregated_on_policy_llm_rein",
   "paper_title": "RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning",
   "paper_date": "2026-06-25",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-06-26T16:20:59",
+  "generated_at": "2026-06-27T15:19:29",
   "generator": "openai"
 }
