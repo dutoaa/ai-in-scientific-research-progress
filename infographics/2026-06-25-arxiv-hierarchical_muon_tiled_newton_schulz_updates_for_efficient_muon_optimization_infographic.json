@@ -1,24 +1,24 @@
 {
-  "key_insight": "HiMuon speeds up Muon optimization by applying the same finite Newton-Schulz update independently to small tiles instead of coupling the entire weight matrix.",
-  "engineering_relevance": "This makes optimizer updates much cheaper and more GPU-friendly, enabling tile-based kernels, batching, chunking, and runtime schedules for large neural-network training.",
+  "key_insight": "HiMuon replaces full-matrix Muon updates with independent Newton-Schulz updates on small tiles, preserving local spectral structure while cutting update cost.",
+  "engineering_relevance": "The method enables faster, more GPU-friendly optimizer steps through tiled kernels, batching, and chunked execution for large neural-network weights.",
   "method": [
-    "Split each momentum-gradient matrix into T×T tiles.",
-    "Run the finite Newton-Schulz map separately on each tile.",
-    "Reassemble tiled updates to form the full optimizer step."
+    "Partition each momentum-gradient matrix into T×T tiles.",
+    "Apply the same finite Newton-Schulz map independently to each tile.",
+    "Reassemble the tiled outputs; optionally use tile-size schedules and cross-layer batching."
   ],
-  "evidence_signal": "The paper reports transformer-training experiments and controlled matrix-function diagnostics showing improved step efficiency while staying close to full-matrix Muon in the tested settings.",
-  "watch_item": "Because cross-tile spectral interactions are discarded, the tiled update is a local matrix-function approximation and may behave differently from full Muon for some matrix sizes or tile choices.",
+  "evidence_signal": "The paper reports transformer-training experiments and controlled matrix-function diagnostics showing improved optimizer-step efficiency while staying close to full-matrix Muon in tested regimes.",
+  "watch_item": "Because HiMuon is a local tile-wise map rather than a convergent approximation to the full update, cross-tile spectral interactions are discarded and performance may depend on tile size.",
   "hashtags": [
-    "#Optimization",
     "#Muon",
     "#NewtonSchulz",
-    "#GPUComputing",
+    "#Optimization",
+    "#GPUKernels",
     "#DeepLearning"
   ],
   "paper_id": "2026-06-25-arxiv-hierarchical_muon_tiled_newton_schulz_updates_for_efficient_muon_optimization",
   "paper_title": "Hierarchical Muon: Tiled Newton-Schulz Updates for Efficient Muon Optimization",
   "paper_date": "2026-06-25",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-06-27T15:19:47",
+  "generated_at": "2026-06-28T15:21:37",
   "generator": "openai"
 }

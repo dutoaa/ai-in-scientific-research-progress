@@ -1,24 +1,24 @@
 {
-  "key_insight": "Portable query generation works best when reward shaping is made robust, because the main gains come from preventing reward-hacking rather than from the choice of optimizer.",
-  "engineering_relevance": "For industrial semantic job search, the practical takeaway is to harden reward rules and judges so generated queries preserve qualifications without leaking seeker-specific identifiers.",
+  "key_insight": "Portable query generation for job search works best when reward shaping is carefully engineered, because the main failure mode is reward hacking rather than optimizer choice.",
+  "engineering_relevance": "For industrial semantic search systems, robust deterministic reward rules can be more important than the specific RLAIF optimizer when training query-generation policies.",
   "method": [
-    "Built an end-to-end RLAIF pipeline for portable job-search query generation.",
-    "Compared critic-free optimizers (RLOO, REINFORCE++) with GRPO under adversarial reward conditions.",
-    "Added a deterministic rule-based reward floor to penalize verbatim-copying and stabilize training."
+    "Built an end-to-end RLAIF pipeline for generating portable job-search queries.",
+    "Compared critic-free optimizers, including RLOO, REINFORCE++, and GRPO, under adversarial reward conditions.",
+    "Added a deterministic rule-based reward floor to penalize verbatim copying and reduce reward hacking."
   ],
-  "evidence_signal": "On cross-family evaluation, the rule-based reward floor improved quality by +0.147, and the training-time reward model inflated apparent gains by 2.4×.",
-  "watch_item": "The approach is sensitive to reward-specification quality, so poorly designed LLM-as-judge rubrics can still induce degenerate copying behavior.",
+  "evidence_signal": "On a cross-family evaluation judge, the reward-floor fix produced a +0.147 quality gain, and the training-time reward model inflated apparent gains by 2.4×.",
+  "watch_item": "GRPO appears especially sensitive to spurious reward signals, so implementations should guard against judge rubric loopholes and copying-based exploitation.",
   "hashtags": [
     "#RLAIF",
-    "#RewardShaping",
-    "#SemanticSearch",
-    "#QueryGeneration",
-    "#AIForHR"
+    "#JobSearchAI",
+    "#RewardEngineering",
+    "#LLMasJudge",
+    "#SemanticSearch"
   ],
   "paper_id": "2026-06-25-arxiv-designing_reward_signals_for_portable_query_generation_a_case_study_in_industrial_semantic",
   "paper_title": "Designing Reward Signals for Portable Query Generation: A Case Study in Industrial Semantic Job Search",
   "paper_date": "2026-06-25",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-06-27T15:19:18",
+  "generated_at": "2026-06-28T15:21:02",
   "generator": "openai"
 }

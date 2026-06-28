@@ -26,29 +26,29 @@
         "url": "https://arxiv.org/pdf/2606.27126v1"
       }
     ],
-    "score": 82,
+    "score": 87,
     "infographic": {
-      "key_insight": "KANs can predict airfoil pressure distributions well, but in this study they were slightly behind a well-tuned MLP and below a GNN in top accuracy.",
-      "engineering_relevance": "For aerodynamic surrogate modelling, KANs offer a compact and potentially faster-training alternative, but they are not yet the clear performance leader for practical design workflows.",
+      "key_insight": "KANs can model airfoil pressure distributions well and generalize across flow conditions, but they do not clearly outperform well-tuned MLPs and are usually behind GNNs on accuracy.",
+      "engineering_relevance": "For aerodynamic surrogate modeling, KANs offer a potentially faster, lower-complexity alternative for design workflows, but their gains are not yet strong enough to displace established neural baselines.",
       "method": [
-        "Compared KANs, MLPs, and GNNs on subsonic and transonic airfoil pressure prediction.",
-        "Evaluated generalization across Mach number and angle of attack.",
-        "Assessed both prediction quality and model complexity/training cost."
+        "Compared KANs against MLPs and GNNs on surface pressure prediction for subsonic and transonic airfoils.",
+        "Evaluated interpolation across Mach number and angle of attack.",
+        "Assessed model performance alongside training cost and architectural complexity."
       ],
-      "evidence_signal": "The abstract reports that KANs interpolated across Mach numbers and angles of attack, but their performance was marginally inferior to an optimally trained MLP and bested by a GNN with longer training.",
-      "watch_item": "KAN training was unstable and highly sensitive to hyperparameter tuning, so robust optimization is critical before deployment.",
+      "evidence_signal": "The abstract reports that KANs predict pressure coefficients across the full surface and interpolate across Mach numbers and angles of attack, but are marginally inferior to a suitably trained MLP and below a best-performing GNN that requires longer training.",
+      "watch_item": "KAN performance is highly sensitive to hyperparameter tuning and can suffer from training instabilities.",
       "hashtags": [
         "#KAN",
+        "#MLP",
+        "#GNN",
         "#AeroML",
-        "#SurrogateModeling",
-        "#DeepLearning",
-        "#ComputationalFluidDynamics"
+        "#SurrogateModeling"
       ],
       "paper_id": "2026-06-25-arxiv-kolmogorov_arnold_networks_kan_for_aerodynamic_prediction_a_comparison_with_mlps_and_gnns",
       "paper_title": "Kolmogorov Arnold networks (KAN) for aerodynamic prediction: a comparison with MLPs and GNNs",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-28T15:20:52",
+      "generated_at": "2026-06-27T15:19:07",
       "generator": "openai"
     }
   },
@@ -78,29 +78,29 @@
         "url": "https://arxiv.org/pdf/2606.27168v1"
       }
     ],
-    "score": 81,
+    "score": 86,
     "infographic": {
-      "key_insight": "Deep-learning emulators can faithfully and stably replace a complex marine biogeochemistry model over both days-to-decades horizons, while sometimes improving forecast skill.",
-      "engineering_relevance": "This suggests a path to much cheaper operational ocean prediction and climate-scale ecosystem simulation, with potential use in forecasting systems and autonomous marine platforms.",
+      "key_insight": "Deep-learning emulators can reproduce a complex marine biogeochemistry model accurately across both short-term forecasts and multi-decadal projections, with improved skill over the parent model in some cases.",
+      "engineering_relevance": "These emulators could enable much cheaper and faster operational ocean forecasting and climate-scale simulations while preserving key ecosystem dynamics.",
       "method": [
-        "LSTM emulator for selected variables at daily resolution",
-        "Physics-informed 1D CNN emulator for the full water-column pelagic system",
-        "Driven by ocean physics simulator inputs and tested on short-range and multi-decadal forecasts"
+        "LSTM networks emulate a selected subset of daily variables in the water column.",
+        "Physics-informed 1D CNNs emulate the full pelagic system throughout the water column at daily resolution.",
+        "Models are driven by ocean physics simulator inputs and tested for stability, decadal projections, and 10-day forecasts."
       ],
-      "evidence_signal": "The emulators were evaluated against the parent model on daily variability, extreme events, decadal climate projections, and 10-day forecasts, and when trained on reanalysis data they outperformed the parent model for several ecosystem variables.",
-      "watch_item": "Results are demonstrated in a simplified 1D water-column setting, so performance may not transfer directly to full 3D regional or global ocean applications.",
+      "evidence_signal": "The abstract reports evaluation against the parent model using daily variability, extreme events, forecast skill scores, and multi-decadal stability, including prediction of spring bloom timing years ahead.",
+      "watch_item": "Performance is demonstrated in a simplified one-dimensional water-column setup, so generalization to full three-dimensional regional ocean models remains unproven.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#MarineBiogeochemistry",
+        "#OceanModeling",
         "#DeepLearning",
-        "#EarthSystemModels",
-        "#Forecasting"
+        "#Forecasting",
+        "#EarthSystemModels"
       ],
       "paper_id": "2026-06-25-arxiv-deep_learning_model_emulators_for_marine_biogeochemistry_forecasting_from_days_to_decades",
       "paper_title": "Deep learning model emulators for marine biogeochemistry forecasting from days to decades",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-28T15:20:54",
+      "generated_at": "2026-06-27T15:19:09",
       "generator": "openai"
     }
   },
@@ -130,29 +130,29 @@
         "url": "https://arxiv.org/pdf/2606.27153v1"
       }
     ],
-    "score": 76,
+    "score": 81,
     "infographic": {
-      "key_insight": "DMuon makes Muon practical for distributed training by cutting optimizer overhead to near-AdamW levels without changing the training framework.",
-      "engineering_relevance": "It provides a drop-in path to use matrix-orthogonalization optimizers at scale in both embodied foundation models and large language model training.",
+      "key_insight": "DMuon makes matrix-aware Muon optimization practical at scale by cutting its optimizer overhead to near-AdamW levels while preserving the benefits of orthogonalized updates.",
+      "engineering_relevance": "It plugs into existing distributed training pipelines as a drop-in module, improving training efficiency for large foundation models and LLMs without requiring framework changes.",
       "method": [
-        "Distributed Muon optimizer implementation",
-        "Integrates as a drop-in module with no framework-level changes",
-        "Uses efficient handling of matrix-level updates and Newton-Schulz iterations"
+        "Distributed Muon implementation for existing training stacks",
+        "Optimized Newton-Schulz-based matrix orthogonalization",
+        "Designed to reduce optimizer-step bottlenecks in large-scale training"
       ],
-      "evidence_signal": "The abstract reports 1.48x-3.01x end-to-end step-time speedup and 6.85x-163.00x optimizer-step speedup across embodied foundation model and LLM workloads.",
-      "watch_item": "Performance gains may depend on the cost of matrix-shaped updates and distributed communication patterns, so results may vary by architecture and training stack.",
+      "evidence_signal": "The abstract reports 1.48x-3.01x end-to-end step-time speedup and 6.85x-163.00x optimizer-step speedup across embodied foundation model and LLM training workloads.",
+      "watch_item": "Performance gains may depend on matrix shape, workload, and distributed system details, so integration and benchmarking are important before production use.",
       "hashtags": [
         "#DistributedTraining",
-        "#Muon",
-        "#Optimizer",
+        "#MuonOptimizer",
         "#LLMTraining",
-        "#AIInfrastructure"
+        "#DeepLearningSystems",
+        "#GPUAcceleration"
       ],
       "paper_id": "2026-06-25-arxiv-dmuon_efficient_distributed_muon_training_with_near_adam_overhead",
       "paper_title": "DMuon: Efficient Distributed Muon Training with Near-Adam Overhead",
       "paper_date": "2026-06-25",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-06-28T15:20:56",
+      "generated_at": "2026-06-27T15:19:12",
       "generator": "openai"
     }
   },
@@ -181,29 +181,29 @@
         "url": "https://arxiv.org/pdf/2606.27369v1"
       }
     ],
-    "score": 73,
+    "score": 78,
     "infographic": {
-      "key_insight": "RiVER shows that LLMs can be trained effectively on score-based tasks without ground-truth answers by turning execution feedback into calibrated, ranking-aware rewards.",
-      "engineering_relevance": "This enables reinforcement learning for coding and optimization problems where exact solutions are unavailable, while still improving general coding performance on standard benchmarks.",
+      "key_insight": "RiVER shows that LLMs can be improved on coding tasks without ground-truth answers by learning from calibrated, score-based execution feedback.",
+      "engineering_relevance": "This provides a practical RL training recipe for algorithmic and code-generation systems where exact labels are unavailable but deterministic performance signals exist.",
       "method": [
-        "Use deterministic execution scores as continuous rewards instead of ground-truth labels.",
-        "Apply instance-wise reward calibration to avoid scale dominance across tasks.",
-        "Emphasize top-ranked solutions to reduce frequency dominance from repeatedly sampled weak candidates."
+        "Uses ranking-induced verifiable rewards from execution scores instead of ground-truth solutions.",
+        "Applies reward calibration to reduce scale dominance across instances and frequency dominance from repeated weak samples.",
+        "Emphasizes top-ranked valid solutions while keeping bounded feedback for other correct candidates."
       ],
-      "evidence_signal": "Trained on 12 AtCoder Heuristic Contest tasks, RiVER improved ALE rating rank by 8.9% for Qwen3-8B and 9.4% for GLM-Z1-9B-0414, and transferred to exact-solution benchmarks with average gains of 2.4% on LiveCodeBench and 3.5% on USACO.",
-      "watch_item": "Performance depends on stable score calibration and task-specific execution feedback; poorly designed reward shaping may still bias updates or reduce transfer.",
+      "evidence_signal": "Trained on 12 AtCoder Heuristic Contest tasks, RiVER improved ALE rating rank by 8.9% for Qwen3-8B and 9.4% for GLM-Z1-9B-0414, and also boosted exact-solution benchmarks by 2.4% on LiveCodeBench and 3.5% on USACO.",
+      "watch_item": "Performance depends on reliable deterministic execution feedback; noisy or poorly normalized scores could weaken the calibrated reward signal.",
       "hashtags": [
         "#ReinforcementLearning",
         "#LLMTraining",
         "#CodeGeneration",
         "#RewardShaping",
-        "#BenchmarkTransfer"
+        "#AlgorithmEngineering"
       ],
       "paper_id": "2026-06-25-arxiv-reinforcement_learning_without_ground_truth_solutions_can_improve_llms",
       "paper_title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
       "paper_date": "2026-06-25",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-06-28T15:20:59",
+      "generated_at": "2026-06-27T15:19:15",
       "generator": "openai"
     }
   },
@@ -232,29 +232,29 @@
         "url": "https://arxiv.org/pdf/2606.27291v1"
       }
     ],
-    "score": 73,
+    "score": 78,
     "infographic": {
-      "key_insight": "Portable query generation for job search works best when reward shaping is carefully engineered, because the main failure mode is reward hacking rather than optimizer choice.",
-      "engineering_relevance": "For industrial semantic search systems, robust deterministic reward rules can be more important than the specific RLAIF optimizer when training query-generation policies.",
+      "key_insight": "Portable query generation works best when reward shaping is made robust, because the main gains come from preventing reward-hacking rather than from the choice of optimizer.",
+      "engineering_relevance": "For industrial semantic job search, the practical takeaway is to harden reward rules and judges so generated queries preserve qualifications without leaking seeker-specific identifiers.",
       "method": [
-        "Built an end-to-end RLAIF pipeline for generating portable job-search queries.",
-        "Compared critic-free optimizers, including RLOO, REINFORCE++, and GRPO, under adversarial reward conditions.",
-        "Added a deterministic rule-based reward floor to penalize verbatim copying and reduce reward hacking."
+        "Built an end-to-end RLAIF pipeline for portable job-search query generation.",
+        "Compared critic-free optimizers (RLOO, REINFORCE++) with GRPO under adversarial reward conditions.",
+        "Added a deterministic rule-based reward floor to penalize verbatim-copying and stabilize training."
       ],
-      "evidence_signal": "On a cross-family evaluation judge, the reward-floor fix produced a +0.147 quality gain, and the training-time reward model inflated apparent gains by 2.4×.",
-      "watch_item": "GRPO appears especially sensitive to spurious reward signals, so implementations should guard against judge rubric loopholes and copying-based exploitation.",
+      "evidence_signal": "On cross-family evaluation, the rule-based reward floor improved quality by +0.147, and the training-time reward model inflated apparent gains by 2.4×.",
+      "watch_item": "The approach is sensitive to reward-specification quality, so poorly designed LLM-as-judge rubrics can still induce degenerate copying behavior.",
       "hashtags": [
         "#RLAIF",
-        "#JobSearchAI",
-        "#RewardEngineering",
-        "#LLMasJudge",
-        "#SemanticSearch"
+        "#RewardShaping",
+        "#SemanticSearch",
+        "#QueryGeneration",
+        "#AIForHR"
       ],
       "paper_id": "2026-06-25-arxiv-designing_reward_signals_for_portable_query_generation_a_case_study_in_industrial_semantic",
       "paper_title": "Designing Reward Signals for Portable Query Generation: A Case Study in Industrial Semantic Job Search",
       "paper_date": "2026-06-25",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-06-28T15:21:02",
+      "generated_at": "2026-06-27T15:19:18",
       "generator": "openai"
     }
   },
@@ -284,29 +284,29 @@
         "url": "https://arxiv.org/pdf/2606.27171v1"
       }
     ],
-    "score": 73,
+    "score": 78,
     "infographic": {
-      "key_insight": "The paper reframes mini-batch gradient estimation as a survey-sampling problem and uses auxiliary gradient-prediction models to reduce variance without changing the underlying optimizer.",
-      "engineering_relevance": "This offers a plug-in way to improve training efficiency and stability for deep learning systems, especially when gradient noise limits convergence or generalization.",
+      "key_insight": "The paper reframes mini-batch gradient estimation as a survey-sampling problem and uses auxiliary gradient-prediction models to reduce variance without changing the optimizer’s core update rule.",
+      "engineering_relevance": "This gives practitioners a drop-in way to improve training stability and efficiency in deep learning systems, especially when working with momentum-based optimizers.",
       "method": [
-        "Treat the training set as a fixed finite population and view mini-batch gradients as sample-based estimators.",
-        "Use model-assisted sampling to predict gradients from auxiliary information and build lower-variance estimators.",
-        "Retain standard optimizers such as SGD or AdamW, with uniform sampling recovered as the no-auxiliary-information baseline."
+        "Treat the dataset as a finite population and mini-batch gradients as sample-based estimates.",
+        "Use model-assisted sampling with auxiliary gradient predictors to build lower-variance gradient estimators.",
+        "Retain existing optimizers such as SGD or AdamW, with uniform sampling as the no-auxiliary baseline."
       ],
-      "evidence_signal": "Experiments on synthetic data and six benchmark datasets reported gains in 71–86% of cases, with particularly strong results for medium-sized input spaces and improved AdamW generalization in about half the epochs.",
-      "watch_item": "The approach adds an auxiliary prediction model, so its benefit may depend on the quality and cost of that model and on how well the data fit the sampling assumptions.",
+      "evidence_signal": "Experiments on synthetic data and six benchmark datasets report gains in 71–86% of runs, with especially strong results for medium-sized input spaces and improved generalization with AdamW in about half the training epochs.",
+      "watch_item": "The approach adds an auxiliary prediction model, so its benefit may depend on the quality of the predictor and could introduce overhead if the model is poorly matched to the dataset.",
       "hashtags": [
-        "#StochasticGradientDescent",
-        "#VarianceReduction",
-        "#ModelAssistedSampling",
-        "#DeepLearningOptimization",
-        "#SurveySampling"
+        "#StochasticOptimization",
+        "#GradientVariance",
+        "#MiniBatchTraining",
+        "#SurveySampling",
+        "#DeepLearning"
       ],
       "paper_id": "2026-06-25-arxiv-stochastic_gradient_optimization_with_model_assisted_sampling",
       "paper_title": "Stochastic Gradient Optimization with Model-Assisted Sampling",
       "paper_date": "2026-06-25",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-06-28T15:21:05",
+      "generated_at": "2026-06-27T15:19:20",
       "generator": "openai"
     }
   },
@@ -336,29 +336,29 @@
         "url": "https://arxiv.org/pdf/2606.27361v1"
       }
     ],
-    "score": 71,
+    "score": 76,
     "infographic": {
-      "key_insight": "Autoregressive Boltzmann Generators replace flow-based sampling with autoregressive modeling, enabling more expressive and scalable equilibrium molecular sampling without strict invertibility constraints.",
-      "engineering_relevance": "The approach can improve practical molecular simulation workflows by generating faster, high-quality equilibrium samples and supporting transferable models for larger biomolecular systems.",
+      "key_insight": "Autoregressive Boltzmann Generators replace flow-based constraints with autoregressive modeling to generate equilibrium molecular samples more expressively and efficiently.",
+      "engineering_relevance": "The approach offers a scalable path to faster, transferable molecular sampling for computational chemistry and protein design, especially for larger peptide systems.",
       "method": [
-        "Use an autoregressive model to generate molecular configurations sequentially.",
-        "Retain Boltzmann Generator-style sampling with exact likelihoods and importance-sampling correction.",
-        "Train a large transferable model (Robin) to generalize across peptide systems."
+        "Uses an autoregressive generative framework instead of normalizing flows",
+        "Supports sequential inference-time interventions and avoids strict invertibility/topology limits",
+        "Introduces Robin, a 132M-parameter transferable model trained with ArBG"
       ],
-      "evidence_signal": "The abstract reports broad benchmark gains over flow-based models, with especially strong improvements on larger peptides such as 10-residue Chignolin and over 60% lower zero-shot energy error on 8-residue systems.",
-      "watch_item": "Autoregressive sampling may introduce implementation and inference-time complexity, so performance and stability should be validated carefully on diverse molecular topologies.",
+      "evidence_signal": "The abstract reports improved performance across benchmarks, with especially strong gains on larger peptide systems and over 60% reduction in zero-shot energy error on 8-residue systems.",
+      "watch_item": "Results are benchmark-driven, so practical gains may depend on system size, training data coverage, and whether the autoregressive model remains efficient for more complex molecular topologies.",
       "hashtags": [
-        "#BoltzmannGenerators",
-        "#AutoregressiveModels",
         "#MolecularSimulation",
-        "#GenerativeAI",
-        "#ComputationalPhysics"
+        "#GenerativeModels",
+        "#AutoregressiveModels",
+        "#BoltzmannGenerators",
+        "#ComputationalChemistry"
       ],
       "paper_id": "2026-06-25-arxiv-autoregressive_boltzmann_generators",
       "paper_title": "Autoregressive Boltzmann Generators",
       "paper_date": "2026-06-25",
       "paper_category": "Biomedical and Physical Sciences",
-      "generated_at": "2026-06-28T15:21:07",
+      "generated_at": "2026-06-27T15:19:22",
       "generator": "openai"
     }
   },
@@ -387,29 +387,29 @@
         "url": "https://arxiv.org/pdf/2606.27140v1"
       }
     ],
-    "score": 70,
+    "score": 75,
     "infographic": {
-      "key_insight": "fTNN replaces stochastic fractional-operator estimation with a fully deterministic, geometry-adapted tensor neural network that better handles boundary singularities in fractional PDEs.",
-      "engineering_relevance": "The method offers a more accurate and scalable solver template for fractional Poisson and time-dependent fractional advection-diffusion problems in scientific computing.",
+      "key_insight": "fTNN is a deterministic tensor neural network framework that combines geometry-aware fractional Laplacian integration with singularity-aware trial functions to solve fractional PDEs accurately on bounded domains.",
+      "engineering_relevance": "It offers a scalable alternative to stochastic PINN-style methods for engineering models with nonlocal operators, boundary singularities, and time-dependent fractional dynamics.",
       "method": [
-        "Splits the fractional Laplacian into singular near-field, regular interior far-field, and analytical exterior far-field terms using a spatially varying near-field radius.",
-        "Uses Gauss-Jacobi, Gauss, and deterministic angular quadrature to evaluate the operator without Monte Carlo sampling.",
-        "Builds boundary-singularity-aware trial functions and a separable spatiotemporal network with alternating subspace optimization for time-dependent problems."
+        "Split the fractional Laplacian into near-field, interior far-field, and analytical exterior far-field terms using a spatially dependent near-field radius.",
+        "Evaluate singular, regular, and angular integrals with Gauss-Jacobi, Gauss, and deterministic angular quadrature, respectively.",
+        "Use boundary-singularity-aware trial functions and a spatiotemporally separable network with alternating subspace optimization for time-dependent problems."
       ],
-      "evidence_signal": "The abstract reports numerical experiments showing high accuracy and substantial improvement over fPINN and Monte Carlo baselines, especially for strong boundary singularities and long-time simulations.",
-      "watch_item": "Performance depends on correctly identifying singularity structure and selecting the leading boundary exponent, which may be difficult for complex geometries or unseen PDEs.",
+      "evidence_signal": "The abstract reports high accuracy on benchmark fractional Poisson and fractional advection-diffusion problems, with substantial gains over fPINN and Monte Carlo baselines, especially for strong boundary singularities and long-time simulations.",
+      "watch_item": "Performance depends on correctly estimating the singularity exponent and on the added complexity of deterministic quadrature and alternating optimization in higher dimensions.",
       "hashtags": [
-        "#ScientificMachineLearning",
         "#FractionalPDEs",
-        "#NeuralOperators",
+        "#ScientificMachineLearning",
         "#TensorNetworks",
-        "#NumericalAnalysis"
+        "#PINNs",
+        "#NumericalMethods"
       ],
       "paper_id": "2026-06-25-arxiv-ftnn_a_tensor_neural_network_for_fractional_pdes",
       "paper_title": "fTNN: a tensor neural network for fractional PDEs",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-28T15:21:10",
+      "generated_at": "2026-06-27T15:19:24",
       "generator": "openai"
     }
   },
@@ -441,29 +441,29 @@
         "url": "https://arxiv.org/pdf/2606.27354v1"
       }
     ],
-    "score": 69,
+    "score": 74,
     "infographic": {
-      "key_insight": "Error-Conditioned Neural Solvers feed the PDE residual directly into the model so it can learn how to iteratively correct its own prediction errors, instead of relying on residual minimization as an optimization objective.",
-      "engineering_relevance": "This enables faster, more accurate PDE surrogates that are more robust under distribution shift while avoiding the heavy compute and instability of classical hybrid optimization methods.",
+      "key_insight": "ENS replaces residual minimization with residual-conditioned iterative correction, letting the network use its own PDE error field as input to learn better updates.",
+      "engineering_relevance": "It offers a faster, more stable alternative to hybrid PDE solvers for scientific machine learning, especially when accuracy must hold under distribution shift.",
       "method": [
-        "Input the current residual field at each iteration as a signal of spatial error structure.",
-        "Train a learned update policy to refine predictions iteratively rather than solving an inner optimization problem.",
-        "Target correction under ill-conditioned PDE regimes where low residual does not reliably imply low solution error."
+        "Feed the PDE residual field into the solver at each iteration.",
+        "Learn an update policy that corrects predictions directly from error structure.",
+        "Avoid gradient-descent or Gauss--Newton residual minimization and its instability/compute cost."
       ],
-      "evidence_signal": "The abstract reports evaluation across four PDE families, with ENS achieving the highest accuracy in most settings, up to 10× gains on turbulent Kolmogorov flow, and strong zero-shot transfer under parameter and cross-equation shifts.",
-      "watch_item": "Performance likely depends on how well the residual field is computed and represented; noisy or poorly discretized residuals could weaken the learned correction policy.",
+      "evidence_signal": "Across four PDE families, the method achieved the highest accuracy in most settings, with gains up to 10× on turbulent Kolmogorov flow and strong zero-shot transfer results.",
+      "watch_item": "Performance may depend on how well the model is trained to interpret residual patterns, and benefits are likely largest in ill-conditioned regimes rather than universally.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#NeuralPDEs",
-        "#ErrorCorrection",
-        "#PDESurrogates",
-        "#PhysicsInformedAI"
+        "#PDEs",
+        "#NeuralSolvers",
+        "#PhysicsInformedAI",
+        "#ErrorCorrection"
       ],
       "paper_id": "2026-06-25-arxiv-error_conditioned_neural_solvers",
       "paper_title": "Error-Conditioned Neural Solvers",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-28T15:21:13",
+      "generated_at": "2026-06-27T15:19:27",
       "generator": "openai"
     }
   },
@@ -493,29 +493,29 @@
         "url": "https://arxiv.org/pdf/2606.26997v1"
       }
     ],
-    "score": 68,
+    "score": 73,
     "infographic": {
-      "key_insight": "RolloutPipe overlaps rollout generation with training in disaggregated on-policy RLVR by pipelining complete groups, reducing idle trainer time without sacrificing on-policy correctness.",
-      "engineering_relevance": "It improves GPU utilization and throughput for heterogeneous LLM post-training systems by making rollout and training stages run concurrently in a controlled, data-fresh way.",
+      "key_insight": "RolloutPipe overlaps rollout and training in disaggregated on-policy RLVR by pipelining complete groups, reducing trainer idle time without sacrificing on-policy correctness.",
+      "engineering_relevance": "It is useful for heterogeneous LLM post-training systems that need higher GPU utilization and lower end-to-end latency across separate rollout and training pools.",
       "method": [
-        "Complete-Group Pipelining (CGP): send each finished trainable group to the trainer immediately in FIFO order.",
-        "Frontier-Group Dispatch (FGD): prioritize admission of requests needed to form the next training batch so trainer-ready groups arrive earlier.",
-        "Preserve on-policy behavior while starting training before the full rollout phase completes."
+        "Complete-group pipelining (CGP): send each fully materialized trainable group to the trainer immediately in FIFO order.",
+        "Frontier-group dispatch (FGD): prioritize rollout admissions for frontier groups needed for the next batch so trainer-ready data arrives earlier.",
+        "Preserve on-policy behavior while overlapping stages instead of training on stale data."
       ],
-      "evidence_signal": "On Qwen3-1.7B across four reasoning/science benchmarks and twelve rollout settings, RolloutPipe cut rollout-to-train-end time by 30.7%–42.3% and reduced trainer waiting ratio by 37%–76% versus Slime.",
-      "watch_item": "The gains depend on careful coordination between rollout admission and batch formation, which may add scheduling complexity in production disaggregated systems.",
+      "evidence_signal": "On Qwen3-1.7B across four reasoning/science benchmarks and twelve rollout settings, RolloutPipe reduced rollout-to-train-end time by 30.7%-42.3% and trainer waiting ratio by 37%-76% versus Slime.",
+      "watch_item": "Benefits depend on careful dispatch and batching logic; implementing CGP/FGD in a real disaggregated system may add scheduling complexity and require stable group materialization timing.",
       "hashtags": [
-        "#LLMTraining",
+        "#LLMPostTraining",
         "#ReinforcementLearning",
+        "#OnPolicyRL",
         "#GPUScheduling",
-        "#Pipelining",
-        "#AISystems"
+        "#DistributedSystems"
       ],
       "paper_id": "2026-06-25-arxiv-rolloutpipe_overlapping_pipelined_rollout_and_training_in_disaggregated_on_policy_llm_rein",
       "paper_title": "RolloutPipe: Overlapping Pipelined Rollout and Training in Disaggregated On-Policy LLM Reinforcement Learning",
       "paper_date": "2026-06-25",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-06-28T15:21:16",
+      "generated_at": "2026-06-27T15:19:29",
       "generator": "openai"
     }
   },
@@ -544,29 +544,29 @@
         "url": "https://arxiv.org/pdf/2606.27304v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "A multi-fidelity transfer-learning pipeline using a convolutional autoencoder can learn guided-wave damage patterns from large simulated data and adapt effectively to scarce experimental measurements.",
-      "engineering_relevance": "This enables practical, low-cost structural health monitoring for plate-like structures with piezoelectric transducers when labeled experimental damage data are limited.",
+      "key_insight": "A convolutional autoencoder transfer-learning pipeline can learn damage features from large synthetic guided-wave data and adapt to sparse experiments for accurate localization and sizing.",
+      "engineering_relevance": "This offers a practical path for structural health monitoring systems where experimental labeling is scarce but reliable damage diagnosis is needed on real plate structures.",
       "method": [
-        "Generate a large synthetic pretraining set with a lightweight 1D time-domain spectral element model.",
-        "Train a convolutional autoencoder to learn compact guided-wave features, then transfer them to a feed-forward damage predictor.",
-        "Fine-tune the model on a small labeled experimental dataset to localize and size damage."
+        "Generate large pretraining data with a fast 1D time-domain spectral element model.",
+        "Pretrain a CAE to learn compact guided-wave features, then transfer to a feed-forward network for diagnosis.",
+        "Fine-tune with a small labeled experimental dataset to bridge simulation-to-hardware domain gaps."
       ],
-      "evidence_signal": "The abstract reports strong generalization, with R² above 0.93 for damage localization and above 0.99 for damage sizing on unseen damage cases.",
-      "watch_item": "Performance may depend on how well the simulated wave physics match the experimental domain, so domain shift and sensor/actuator placement must be carefully managed.",
+      "evidence_signal": "The abstract reports strong test performance, with R² above 0.93 for damage localization and above 0.99 for damage sizing, including unseen damage cases.",
+      "watch_item": "Performance may depend on how well the synthetic simulation domain matches real experimental wave propagation and sensor conditions.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#StructuralHealthMonitoring",
         "#TransferLearning",
-        "#GuidedWaves",
-        "#Autoencoder"
+        "#Autoencoder",
+        "#GuidedWaves"
       ],
       "paper_id": "2026-06-25-arxiv-a_multi_fidelity_convolutional_autoencoder_transfer_learning_framework_for_guided_wave_bas",
       "paper_title": "A Multi-Fidelity Convolutional Autoencoder-Transfer Learning Framework for Guided-Wave-Based Damage Diagnosis Using Large Simulated and Limited Experimental Datasets",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-28T15:21:19",
+      "generated_at": "2026-06-27T15:19:31",
       "generator": "openai"
     }
   },
@@ -596,29 +596,29 @@
         "url": "https://arxiv.org/pdf/2606.27226v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "BINEVAL turns LLM evaluation into a set of atomic binary questions, making judgments more interpretable, better calibrated, and useful for prompt improvement.",
-      "engineering_relevance": "It offers a training-free way to debug, compare, and iteratively improve LLM outputs and evaluator prompts across open-ended generation tasks.",
+      "key_insight": "BINEVAL turns LLM evaluation into a set of atomic binary questions, making scores more interpretable and easier to debug while remaining competitive with strong automatic judges.",
+      "engineering_relevance": "It offers a training-free, task-agnostic evaluation workflow that can be plugged into NLP pipelines to diagnose failures and iteratively improve prompts.",
       "method": [
-        "Use a meta-prompt to decompose a task into fine-grained binary evaluation questions.",
-        "Have an LLM answer each question independently for a given output.",
-        "Aggregate question-level verdicts into multi-dimensional scores and feedback for optimization."
+        "Generate fine-grained evaluation questions from the task prompt with a meta-prompt.",
+        "Answer each binary question independently for every model output.",
+        "Aggregate question-level verdicts into multi-dimensional and overall calibrated scores, with feedback usable for prompt optimization."
       ],
-      "evidence_signal": "Across SummEval, Topical-Chat, and QAGS, BINEVAL matches or exceeds strong baselines like UniEval and G-Eval, with especially strong gains on factual consistency and better alignment to human score distributions.",
-      "watch_item": "Performance depends on the quality of generated questions and may require careful prompt design to avoid biased or incomplete decomposition.",
+      "evidence_signal": "Across SummEval, Topical-Chat, and QAGS, BINEVAL matches or outperforms UniEval and G-Eval, with especially strong gains on factual consistency in QAGS and better alignment to human score distributions.",
+      "watch_item": "Because the method relies on LLM-generated questions and judgments, performance may depend on prompt quality, judge choice, and calibration across tasks.",
       "hashtags": [
         "#LLMEvaluation",
         "#InterpretableAI",
         "#PromptEngineering",
         "#NLP",
-        "#AIEvaluation"
+        "#HumanAlignedAI"
       ],
       "paper_id": "2026-06-25-arxiv-ask_don_t_judge_binary_questions_for_interpretable_llm_evaluation_and_self_improvement",
       "paper_title": "Ask, Don't Judge: Binary Questions for Interpretable LLM Evaluation and Self-Improvement",
       "paper_date": "2026-06-25",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-06-28T15:21:21",
+      "generated_at": "2026-06-27T15:19:34",
       "generator": "openai"
     }
   },
@@ -647,29 +647,29 @@
         "url": "https://arxiv.org/pdf/2606.27202v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "Graph neural networks are now a cross-domain default for relational data, but their benefit depends on whether graph structure justifies the added compute and complexity.",
-      "engineering_relevance": "The paper gives practitioners a domain-by-domain guide to choosing graph constructions and architectures while highlighting where GNNs are likely to fail under heterophily, scale, or temporal dynamics.",
+      "key_insight": "Graph neural networks are most valuable when relational structure is genuinely informative, but their gains depend heavily on domain-specific graph construction, architecture choice, and the limits imposed by heterophily, scale, and temporal dynamics.",
+      "engineering_relevance": "For practitioners, the main takeaway is to match the graph and model to the task rather than assume message passing will outperform non-graph baselines, especially in deployment settings with shift, robustness, or fairness constraints.",
       "method": [
-        "Unifies spectral and spatial GNN formulations under shared principles.",
-        "Connects model expressiveness to the Weisfeiler-Leman hierarchy.",
-        "Reviews 12 application areas and maps graph-design choices to dominant architecture families."
+        "Unifies spectral and spatial GNN formulations under a shared design space.",
+        "Maps model expressiveness to the Weisfeiler-Leman hierarchy to clarify what architectures can and cannot distinguish.",
+        "Benchmarks twelve application domains by graph-construction cost, dominant architectures, and baseline quality."
       ],
-      "evidence_signal": "The survey compares reported gains across domains against baseline quality, split choice, and deployment realism, while emphasizing recurring failure modes such as heterophily and temporal difficulty.",
-      "watch_item": "Public leaderboard gains can be misleading: weak baselines, favorable splits, and distribution shift may hide poor real-world robustness.",
+      "evidence_signal": "The survey compares reported results across twelve domains and explicitly checks whether gains are robust or explained by weak baselines, favorable splits, or deployment mismatches.",
+      "watch_item": "Temporal, heterophilous, and large-scale graphs remain difficult, and leaderboard performance may not translate to real-world deployment.",
       "hashtags": [
         "#GraphNeuralNetworks",
         "#MachineLearning",
         "#ScientificDiscovery",
-        "#AIEngineering",
-        "#RelationalData"
+        "#DeepLearning",
+        "#AIResearch"
       ],
       "paper_id": "2026-06-25-arxiv-graph_neural_networks_applications_across_domains_all_insights_you_need",
       "paper_title": "Graph Neural Networks Applications Across Domains: All Insights You Need",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-06-28T15:21:25",
+      "generated_at": "2026-06-27T15:19:36",
       "generator": "openai"
     }
   },
@@ -698,29 +698,29 @@
         "url": "https://arxiv.org/pdf/2606.27005v1"
       }
     ],
-    "score": 62,
+    "score": 67,
     "infographic": {
-      "key_insight": "AURORA-AI is a closed-loop controller that adaptively reallocates compute across AI models to maximize a fairness-aware utility while staying stable under drift and disruption.",
-      "engineering_relevance": "It offers a practical orchestration strategy for deploying human-centric AI systems that must balance accuracy, latency, cost, robustness, interpretability, and demographic fairness in changing environments.",
+      "key_insight": "AURORA-AI is a closed-loop resource orchestration framework that uses stability-aware control and fairness-aware utility to keep heterogeneous AI systems resilient under drift, bias shocks, and abrupt disruptions.",
+      "engineering_relevance": "It offers a practical way to dynamically allocate compute across models while balancing accuracy, latency, robustness, interpretability, and demographic parity in changing real-world deployments.",
       "method": [
-        "Uses Hamilton-Jacobi-Bellman feedback control for adaptive resource allocation.",
-        "Monitors stability with Lyapunov-based criteria to keep operation resilient.",
-        "Optimizes a composite utility that jointly includes predictive performance, parity, cost, latency, robustness, and interpretability."
+        "Combines Hamilton-Jacobi-Bellman feedback control with Lyapunov-based stability monitoring.",
+        "Optimizes a composite utility over predictive performance, fairness, cost, latency, robustness, and interpretability.",
+        "Continuously reallocates computational budget across heterogeneous models in a closed loop."
       ],
-      "evidence_signal": "In stress-rich discrete-time simulations with demographic bias shocks, concept drift, and black-swan disruptions, AURORA-AI outperformed Static, Round Robin, Greedy, LinUCB, and PPO, achieving faster recovery and better tail utility and fairness metrics.",
-      "watch_item": "The framework is evaluated in simulation, so real-world gains may depend on how well the utility weights, stability assumptions, and disruption models transfer to deployed systems.",
+      "evidence_signal": "In discrete-time stress simulations with demographic bias shocks, concept drift, and black-swan disruptions, AURORA-AI outperformed Static, Round Robin, Greedy, LinUCB, and PPO, recovering immediately from the black-swan event and improving tail utility and demographic parity gaps.",
+      "watch_item": "The results are simulation-based, so real-world deployment may require careful validation of the utility weights, stability assumptions, and monitoring overhead.",
       "hashtags": [
-        "#ResilientAI",
-        "#FairAI",
-        "#AdaptiveControl",
         "#ScientificMachineLearning",
-        "#AIOrchestration"
+        "#AIControl",
+        "#FairAI",
+        "#ResilientAI",
+        "#ResourceOrchestration"
       ],
       "paper_id": "2026-06-25-arxiv-adaptive_utility_driven_resource_orchestration_for_resilient_ai_aurora_ai",
       "paper_title": "Adaptive Utility driven Resource Orchestration for Resilient AI (AURORA-AI)",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-06-28T15:21:27",
+      "generated_at": "2026-06-27T15:19:38",
       "generator": "openai"
     }
   },
@@ -749,29 +749,29 @@
         "url": "https://arxiv.org/pdf/2606.27246v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "High-dimensional GAN training with structured latent covariance collapses to deterministic ODEs governed by an effective probability-weighted second moment, revealing when correlated latent signals help or destabilize learning.",
-      "engineering_relevance": "The results provide a practical stability map for tuning generator covariance and learning rates in GANs, helping engineers improve subspace recovery and representation alignment in data-driven models.",
+      "key_insight": "High-dimensional GAN training becomes analytically tractable when heterogeneous latent covariances are compressed into a single probability-weighted effective second moment that controls the dynamics.",
+      "engineering_relevance": "This gives designers a principled way to tune generator covariance and learning rates to improve subspace recovery and stability in practical GAN training.",
       "method": [
-        "Linear generator learns a low-dimensional subspace from structured data",
-        "Quadratic energy discriminator with multi-feature, class-dependent latent covariance",
-        "High-dimensional stochastic training converges to deterministic ODEs via effective covariance"
+        "Linear generator with a multi-feature quadratic energy discriminator.",
+        "Extend solvable GAN dynamics to class-dependent, correlated, and non-zero-mean latent structure.",
+        "Derive high-dimensional deterministic ODEs from the stochastic microscopic training process."
       ],
-      "evidence_signal": "Simulations validate the ODE dynamics, phase boundaries, and signal-boosting effect, and experiments on MNIST, FashionMNIST, and CIFAR-10 show improved alignment when generator covariance is informed by the data subspace.",
-      "watch_item": "The stability and boosting effects depend on the matched-covariance assumptions and learning-rate/noise regime, so behavior may change in less controlled GAN settings.",
+      "evidence_signal": "The paper validates the ODE limit, phase boundary, and signal-boosting mechanism with numerical simulations, and reports improved subspace alignment on MNIST, FashionMNIST, and CIFAR-10 using informed generator covariance.",
+      "watch_item": "Overly strong latent correlations can destabilize recovery, so covariance shaping must stay within the mode-wise stability interval set by learning rates and noise.",
       "hashtags": [
         "#GANs",
         "#HighDimensionalLearning",
         "#CovarianceDynamics",
-        "#StabilityAnalysis",
-        "#MachineLearningTheory"
+        "#MachineLearningTheory",
+        "#SubspaceRecovery"
       ],
       "paper_id": "2026-06-25-arxiv-effective_covariance_dynamics_in_solvable_high_dimensional_gans",
       "paper_title": "Effective Covariance Dynamics in Solvable High-Dimensional GANs",
       "paper_date": "2026-06-25",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-06-28T15:21:30",
+      "generated_at": "2026-06-27T15:19:40",
       "generator": "openai"
     }
   },
@@ -800,29 +800,29 @@
         "url": "https://arxiv.org/pdf/2606.27201v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "The paper shows that explaining temporal graph neural networks requires tracing not only event embeddings but also the event-induced variables that carry long-range information flow.",
-      "engineering_relevance": "This provides a more complete attribution tool for debugging, validating, and trusting temporal GNNs used in forecasting, tracing, and recommender-system pipelines.",
+      "key_insight": "The paper explains temporal graph neural networks by tracing the full information flow, including event-induced variables that capture long-range temporal dependencies.",
+      "engineering_relevance": "This provides a more complete and interpretable debugging tool for event-based graph models used in social, epidemic, recommender, and forecasting systems.",
       "method": [
-        "Builds on the Normalized Relevance Measure (NRM) to quantify information flow from event embeddings and through event-induced variables.",
-        "Extends NRM with modular decomposition to construct relevance structures for complex ETGNN architectures.",
-        "Supports comparability of latent variables across layers and higher-order interaction analysis between events."
+        "Extends the Normalized Relevance Measure (NRM) to quantify information flow from event embeddings and through event-induced variables.",
+        "Adds modular decomposition to systematically build relevance structure for complex ETGNN architectures.",
+        "Supports layerwise comparability and higher-order interaction analysis between events."
       ],
-      "evidence_signal": "The method was evaluated on two synthetic datasets for epidemic tracing and social dynamics plus a real-world political event network, where it outperformed existing explanation methods.",
-      "watch_item": "The approach may be more complex to implement and interpret in large ETGNNs because it requires a full relevance-structure decomposition of the architecture.",
+      "evidence_signal": "The method was evaluated on two synthetic datasets for epidemic tracing and social dynamics, plus a real-world political event network, where it outperformed existing explanation methods and yielded more interpretable explanations.",
+      "watch_item": "The approach may require careful relevance-structure construction for each architecture, which could add implementation complexity.",
       "hashtags": [
-        "#TemporalGNN",
-        "#ExplainableAI",
+        "#TemporalGraphs",
         "#GraphNeuralNetworks",
-        "#InformationFlow",
-        "#ModelingAndSimulation"
+        "#ExplainableAI",
+        "#ModelInterpretability",
+        "#InformationFlow"
       ],
       "paper_id": "2026-06-25-arxiv-explaining_temporal_graph_neural_networks_via_feature_induced_information_flow",
       "paper_title": "Explaining Temporal Graph Neural Networks via Feature-induced Information Flow",
       "paper_date": "2026-06-25",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-06-28T15:21:32",
+      "generated_at": "2026-06-27T15:19:43",
       "generator": "openai"
     }
   },
@@ -854,21 +854,21 @@
         "url": "https://arxiv.org/pdf/2606.27285v1"
       }
     ],
-    "score": 60,
+    "score": 65,
     "infographic": {
-      "key_insight": "The paper shows that recovering an ODE from solution trajectories can be framed as a geometric identifiability problem using Hausdorff distance between solution sets, yielding conditions for when the true governing equation is uniquely and stably recoverable.",
-      "engineering_relevance": "This provides a theory-driven basis for deciding how many trajectories are needed to learn dynamics reliably in scientific machine learning, system identification, and data-driven model discovery.",
+      "key_insight": "The paper shows that governing ODEs can be uniquely identified from solution trajectories only when the induced Hausdorff distance between candidate solution sets is sufficiently separated, yielding quantitative identifiability and sample-complexity bounds.",
+      "engineering_relevance": "This provides a theoretical foundation for scientific machine learning systems that recover dynamics from data, helping designers know when equation discovery is possible, stable, and data-efficient.",
       "method": [
-        "Defines a Hausdorff-distance metric on sets of ODE solutions to compare candidate governing equations.",
-        "Derives identifiability bounds for linear ODEs and nonlinear ODE classes with Lipschitz/Hölder-continuous vector fields.",
-        "Uses metric entropy arguments to estimate sample complexity for recovering the governing equation from multiple solution observations."
+        "Define a Hausdorff-distance metric on sets of ODE solutions to compare equations by worst-case trajectory mismatch.",
+        "Derive identifiability bounds for linear ODEs and nonlinear ODEs with Lipschitz/Hölder vector fields.",
+        "Use metric entropy estimates to obtain sample-complexity bounds for recovering the governing equation from multiple observations."
       ],
-      "evidence_signal": "The abstract reports theoretical identifiability and metric-entropy/sample-complexity analysis across classes of ODEs, but does not mention a numerical benchmark or experimental dataset.",
-      "watch_item": "The guarantees depend on the chosen ODE class and assumptions such as solution observability and regularity of the vector field, so practical recovery may weaken under noise, sparse trajectories, or model misspecification.",
+      "evidence_signal": "The abstract reports theoretical analysis across broad ODE classes, including identifiability characterization and metric-entropy-based sample-complexity estimates, rather than empirical experiments.",
+      "watch_item": "The guarantees depend on observing sufficiently rich solution data over admissible initial conditions, so real-world performance may degrade under sparse, noisy, or incomplete trajectories.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#SystemIdentification",
-        "#ODEs",
+        "#ODEDiscovery",
+        "#Identifiability",
         "#SampleComplexity",
         "#MetricEntropy"
       ],
@@ -876,7 +876,7 @@
       "paper_title": "Recovering Governing Equations from Solution Data: Identifiability Bounds for Linear and Nonlinear ODEs",
       "paper_date": "2026-06-25",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-06-28T15:21:34",
+      "generated_at": "2026-06-27T15:19:45",
       "generator": "openai"
     }
   },
@@ -906,29 +906,29 @@
         "url": "https://arxiv.org/pdf/2606.27216v1"
       }
     ],
-    "score": 60,
+    "score": 65,
     "infographic": {
-      "key_insight": "HiMuon replaces full-matrix Muon updates with independent Newton-Schulz updates on small tiles, preserving local spectral structure while cutting update cost.",
-      "engineering_relevance": "The method enables faster, more GPU-friendly optimizer steps through tiled kernels, batching, and chunked execution for large neural-network weights.",
+      "key_insight": "HiMuon speeds up Muon optimization by applying the same finite Newton-Schulz update independently to small tiles instead of coupling the entire weight matrix.",
+      "engineering_relevance": "This makes optimizer updates much cheaper and more GPU-friendly, enabling tile-based kernels, batching, chunking, and runtime schedules for large neural-network training.",
       "method": [
-        "Partition each momentum-gradient matrix into T×T tiles.",
-        "Apply the same finite Newton-Schulz map independently to each tile.",
-        "Reassemble the tiled outputs; optionally use tile-size schedules and cross-layer batching."
+        "Split each momentum-gradient matrix into T×T tiles.",
+        "Run the finite Newton-Schulz map separately on each tile.",
+        "Reassemble tiled updates to form the full optimizer step."
       ],
-      "evidence_signal": "The paper reports transformer-training experiments and controlled matrix-function diagnostics showing improved optimizer-step efficiency while staying close to full-matrix Muon in tested regimes.",
-      "watch_item": "Because HiMuon is a local tile-wise map rather than a convergent approximation to the full update, cross-tile spectral interactions are discarded and performance may depend on tile size.",
+      "evidence_signal": "The paper reports transformer-training experiments and controlled matrix-function diagnostics showing improved step efficiency while staying close to full-matrix Muon in the tested settings.",
+      "watch_item": "Because cross-tile spectral interactions are discarded, the tiled update is a local matrix-function approximation and may behave differently from full Muon for some matrix sizes or tile choices.",
       "hashtags": [
+        "#Optimization",
         "#Muon",
         "#NewtonSchulz",
-        "#Optimization",
-        "#GPUKernels",
+        "#GPUComputing",
         "#DeepLearning"
       ],
       "paper_id": "2026-06-25-arxiv-hierarchical_muon_tiled_newton_schulz_updates_for_efficient_muon_optimization",
       "paper_title": "Hierarchical Muon: Tiled Newton-Schulz Updates for Efficient Muon Optimization",
       "paper_date": "2026-06-25",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-06-28T15:21:37",
+      "generated_at": "2026-06-27T15:19:47",
       "generator": "openai"
     }
   },
@@ -959,29 +959,29 @@
         "url": "https://arxiv.org/pdf/2606.27099v1"
       }
     ],
-    "score": 60,
+    "score": 65,
     "infographic": {
-      "key_insight": "A neural-network-based inverse design framework can efficiently recover the modal coefficients needed to synthesize desired cascaded-mode near-field landscapes in multimode waveguides.",
-      "engineering_relevance": "This enables scalable, remote shaping of optical near-fields for applications such as microscopy and nanoparticle manipulation without relying solely on local nanostructure fabrication.",
+      "key_insight": "A multilayer neural network can learn the mapping from modal design parameters to cascaded-mode near-field landscapes and enable inverse design of target optical field profiles.",
+      "engineering_relevance": "This provides a scalable route to engineer structured near-fields for microscopy and nanoparticle manipulation without relying solely on manual modal coefficient tuning.",
       "method": [
-        "Train multilayer neural networks to map design parameters to near-field landscapes.",
-        "Use the trained models in a gradient-based optimization loop to reconstruct target field profiles.",
-        "Improve lateral-field design by selecting and augmenting training data."
+        "Model the forward relationship between design parameters and near-field patterns with multilayer neural networks.",
+        "Use gradient-based optimization on the trained network to reconstruct target longitudinal and lateral field profiles.",
+        "Improve lateral reconstruction by selecting and augmenting training data."
       ],
-      "evidence_signal": "The abstract reports successful reconstruction of both simple and complex longitudinal landscapes, with lateral-field performance improving after data-selection and augmentation strategies.",
-      "watch_item": "Lateral field reconstruction remains more difficult than longitudinal design, so performance may depend strongly on training data quality and coverage.",
+      "evidence_signal": "The abstract reports accurate prediction for simple and complex longitudinal landscapes, with lateral field reconstruction improving after data selection and augmentation.",
+      "watch_item": "Lateral field inverse design remains harder than longitudinal design, so performance may depend strongly on training data quality and coverage.",
       "hashtags": [
-        "#NeuralNetworks",
+        "#DeepLearning",
         "#InverseDesign",
-        "#Nanophotonics",
+        "#Photonics",
         "#NearField",
-        "#ScientificAI"
+        "#NeuralNetworks"
       ],
       "paper_id": "2026-06-25-arxiv-neural_networks_for_inverse_design_of_cascaded_mode_near_field_landscapes",
       "paper_title": "Neural Networks for Inverse Design of Cascaded-Mode Near-Field Landscapes",
       "paper_date": "2026-06-25",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-06-28T15:21:39",
+      "generated_at": "2026-06-27T15:19:49",
       "generator": "openai"
     }
   },
@@ -1012,29 +1012,29 @@
         "url": "https://arxiv.org/pdf/2606.27009v1"
       }
     ],
-    "score": 60,
+    "score": 65,
     "infographic": {
-      "key_insight": "Semantic early-stopping replaces fixed iteration caps by halting LLM agent loops when meaning stops changing, reducing wasted tokens without hurting answer quality.",
-      "engineering_relevance": "This enables more efficient multi-agent QA systems by shifting control from blind max-iterations to adaptive stopping policies that preserve quality on easy cases and save compute overall.",
+      "key_insight": "Replace fixed max-iteration cutoffs with semantic early-stopping so iterative LLM agent loops stop when meaning and quality stop improving, not just when a token budget is exhausted.",
+      "engineering_relevance": "This can cut unnecessary inference cost in writer-critic or multi-agent workflows while preserving answer quality, making iterative LLM systems more efficient to deploy.",
       "method": [
-        "Track cosine distance between consecutive draft embeddings with a patience window.",
-        "Optionally gate stopping on a measured quality signal from an LLM judge.",
-        "Replay all stopping policies over the same generated trajectories with cached judge calls for fair comparison."
+        "Use embedding cosine distance between consecutive drafts with a patience window to detect semantic convergence.",
+        "Optionally gate stopping on measured quality improvement using an LLM judge.",
+        "Replay the same draft trajectory under multiple stopping policies and cache judge calls for fair, low-cost comparison."
       ],
-      "evidence_signal": "On 60 HotpotQA test questions, the judge-free semantic stopper cut operational tokens by 38% versus max_iterations at parity quality, while the full quality-gated version was costlier due to judge overhead.",
-      "watch_item": "Quality-gated stopping can be counter-productive in practice because per-round judge calls may dominate token cost, and the best-round oracle is not directly implementable.",
+      "evidence_signal": "On 60 HotpotQA test questions, the judge-free semantic stopper reduced operational tokens by 38% versus max_iterations with parity quality (Delta-IS = -0.004, p = 0.81), while the oracle best-round selector beat all practical policies by +0.115 Information Score.",
+      "watch_item": "Quality-gated stopping may be too expensive in practice because repeated judge calls can outweigh the savings from fewer generation rounds.",
       "hashtags": [
         "#LLMAgents",
         "#EarlyStopping",
+        "#SemanticConvergence",
         "#HotpotQA",
-        "#TokenEfficiency",
-        "#RAG"
+        "#TokenEfficiency"
       ],
       "paper_id": "2026-06-25-arxiv-semantic_early_stopping_for_iterative_llm_agent_loops",
       "paper_title": "Semantic Early-Stopping for Iterative LLM Agent Loops",
       "paper_date": "2026-06-25",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-06-28T15:21:41",
+      "generated_at": "2026-06-27T15:19:52",
       "generator": "openai"
     }
   }

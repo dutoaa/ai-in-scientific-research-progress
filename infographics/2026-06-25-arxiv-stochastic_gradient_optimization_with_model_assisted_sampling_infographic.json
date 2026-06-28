@@ -1,24 +1,24 @@
 {
-  "key_insight": "The paper reframes mini-batch gradient estimation as a survey-sampling problem and uses auxiliary gradient-prediction models to reduce variance without changing the optimizer’s core update rule.",
-  "engineering_relevance": "This gives practitioners a drop-in way to improve training stability and efficiency in deep learning systems, especially when working with momentum-based optimizers.",
+  "key_insight": "The paper reframes mini-batch gradient estimation as a survey-sampling problem and uses auxiliary gradient-prediction models to reduce variance without changing the underlying optimizer.",
+  "engineering_relevance": "This offers a plug-in way to improve training efficiency and stability for deep learning systems, especially when gradient noise limits convergence or generalization.",
   "method": [
-    "Treat the dataset as a finite population and mini-batch gradients as sample-based estimates.",
-    "Use model-assisted sampling with auxiliary gradient predictors to build lower-variance gradient estimators.",
-    "Retain existing optimizers such as SGD or AdamW, with uniform sampling as the no-auxiliary baseline."
+    "Treat the training set as a fixed finite population and view mini-batch gradients as sample-based estimators.",
+    "Use model-assisted sampling to predict gradients from auxiliary information and build lower-variance estimators.",
+    "Retain standard optimizers such as SGD or AdamW, with uniform sampling recovered as the no-auxiliary-information baseline."
   ],
-  "evidence_signal": "Experiments on synthetic data and six benchmark datasets report gains in 71–86% of runs, with especially strong results for medium-sized input spaces and improved generalization with AdamW in about half the training epochs.",
-  "watch_item": "The approach adds an auxiliary prediction model, so its benefit may depend on the quality of the predictor and could introduce overhead if the model is poorly matched to the dataset.",
+  "evidence_signal": "Experiments on synthetic data and six benchmark datasets reported gains in 71–86% of cases, with particularly strong results for medium-sized input spaces and improved AdamW generalization in about half the epochs.",
+  "watch_item": "The approach adds an auxiliary prediction model, so its benefit may depend on the quality and cost of that model and on how well the data fit the sampling assumptions.",
   "hashtags": [
-    "#StochasticOptimization",
-    "#GradientVariance",
-    "#MiniBatchTraining",
-    "#SurveySampling",
-    "#DeepLearning"
+    "#StochasticGradientDescent",
+    "#VarianceReduction",
+    "#ModelAssistedSampling",
+    "#DeepLearningOptimization",
+    "#SurveySampling"
   ],
   "paper_id": "2026-06-25-arxiv-stochastic_gradient_optimization_with_model_assisted_sampling",
   "paper_title": "Stochastic Gradient Optimization with Model-Assisted Sampling",
   "paper_date": "2026-06-25",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-06-27T15:19:20",
+  "generated_at": "2026-06-28T15:21:05",
   "generator": "openai"
 }

@@ -1,24 +1,24 @@
 {
-  "key_insight": "ENS replaces residual minimization with residual-conditioned iterative correction, letting the network use its own PDE error field as input to learn better updates.",
-  "engineering_relevance": "It offers a faster, more stable alternative to hybrid PDE solvers for scientific machine learning, especially when accuracy must hold under distribution shift.",
+  "key_insight": "Error-Conditioned Neural Solvers feed the PDE residual directly into the model so it can learn how to iteratively correct its own prediction errors, instead of relying on residual minimization as an optimization objective.",
+  "engineering_relevance": "This enables faster, more accurate PDE surrogates that are more robust under distribution shift while avoiding the heavy compute and instability of classical hybrid optimization methods.",
   "method": [
-    "Feed the PDE residual field into the solver at each iteration.",
-    "Learn an update policy that corrects predictions directly from error structure.",
-    "Avoid gradient-descent or Gauss--Newton residual minimization and its instability/compute cost."
+    "Input the current residual field at each iteration as a signal of spatial error structure.",
+    "Train a learned update policy to refine predictions iteratively rather than solving an inner optimization problem.",
+    "Target correction under ill-conditioned PDE regimes where low residual does not reliably imply low solution error."
   ],
-  "evidence_signal": "Across four PDE families, the method achieved the highest accuracy in most settings, with gains up to 10× on turbulent Kolmogorov flow and strong zero-shot transfer results.",
-  "watch_item": "Performance may depend on how well the model is trained to interpret residual patterns, and benefits are likely largest in ill-conditioned regimes rather than universally.",
+  "evidence_signal": "The abstract reports evaluation across four PDE families, with ENS achieving the highest accuracy in most settings, up to 10× gains on turbulent Kolmogorov flow, and strong zero-shot transfer under parameter and cross-equation shifts.",
+  "watch_item": "Performance likely depends on how well the residual field is computed and represented; noisy or poorly discretized residuals could weaken the learned correction policy.",
   "hashtags": [
     "#ScientificMachineLearning",
-    "#PDEs",
-    "#NeuralSolvers",
-    "#PhysicsInformedAI",
-    "#ErrorCorrection"
+    "#NeuralPDEs",
+    "#ErrorCorrection",
+    "#PDESurrogates",
+    "#PhysicsInformedAI"
   ],
   "paper_id": "2026-06-25-arxiv-error_conditioned_neural_solvers",
   "paper_title": "Error-Conditioned Neural Solvers",
   "paper_date": "2026-06-25",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-06-27T15:19:27",
+  "generated_at": "2026-06-28T15:21:13",
   "generator": "openai"
 }
