@@ -1,24 +1,24 @@
 {
-  "key_insight": "MOPD integrates multiple domain-specific RL capabilities into one LLM by distilling several teachers onto the student’s own on-policy rollouts, avoiding exposure bias and improving capability retention.",
-  "engineering_relevance": "It offers a practical post-training recipe for frontier LLMs that supports parallel domain specialization and scalable capability fusion without tightly coupling training across domains.",
+  "key_insight": "MOPD integrates multiple specialized RL-trained LLM capabilities by distilling domain teachers on the student’s own rollouts, avoiding exposure bias while preserving near-teacher performance.",
+  "engineering_relevance": "It offers a practical post-training recipe for building frontier LLMs with multiple skills in parallel, reducing cross-domain coupling and improving scalability.",
   "method": [
-    "Train separate domain-specific RL teachers for each capability.",
-    "Generate student rollouts on-policy and distill all teachers’ signals onto those trajectories.",
-    "Use dense supervision from multiple teachers to combine capabilities more effectively than off-policy or merge-based baselines."
+    "Train separate domain-specific RL teachers first.",
+    "Run the student on-policy and distill all teachers from the student’s own rollouts.",
+    "Combine dense teacher signals to merge capabilities without off-policy mismatch."
   ],
-  "evidence_signal": "On Qwen3-30B-A3B, the abstract reports MOPD outperforms Mix-RL, Cascade RL, Off-Policy Finetune, and Param-Merge, retaining nearly all of each teacher’s capability; it is also deployed in MiMo-V2-Flash.",
-  "watch_item": "The approach depends on having strong per-domain RL teachers and careful orchestration of multi-teacher distillation, which may increase training and integration complexity.",
+  "evidence_signal": "In Qwen3-30B-A3B evaluations, MOPD outperformed Mix-RL, Cascade RL, Off-Policy Finetune, and Param-Merge, while inheriting nearly all of each teacher’s capability.",
+  "watch_item": "The approach depends on having strong domain teachers and careful coordination of on-policy distillation, which may raise compute and implementation complexity in new domains.",
   "hashtags": [
     "#LLMPostTraining",
+    "#OnPolicyDistillation",
     "#ReinforcementLearning",
-    "#KnowledgeDistillation",
     "#CapabilityIntegration",
-    "#FrontierModels"
+    "#AIFoundationModels"
   ],
   "paper_id": "2026-06-29-arxiv-mopd_multi_teacher_on_policy_distillation_for_capability_integration_in_llm_post_training",
   "paper_title": "MOPD: Multi-Teacher On-Policy Distillation for Capability Integration in LLM Post-Training",
   "paper_date": "2026-06-29",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-06-30T16:24:56",
+  "generated_at": "2026-07-01T16:35:41",
   "generator": "openai"
 }

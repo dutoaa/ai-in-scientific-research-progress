@@ -1,24 +1,24 @@
 {
-  "key_insight": "DOPD improves on-policy distillation by dynamically choosing whether token-level supervision should come from a privileged teacher or privileged student, reducing privilege illusion and preserving transferable capability signals.",
-  "engineering_relevance": "The method offers a more stable and effective distillation strategy for deploying smaller LLMs and VLMs, especially when high-quality supervision is sparse or uneven across tokens.",
+  "key_insight": "DOPD improves on-policy distillation by dynamically routing token-level supervision between privileged teacher and privileged student signals to avoid “privilege illusion” and better transfer real capability.",
+  "engineering_relevance": "The method offers a more stable and effective distillation recipe for compressing LLMs and VLMs while preserving performance under robustness, continual learning, and distribution shift.",
   "method": [
-    "Routes each token’s supervision based on advantage gap and relative probabilities.",
-    "Uses dual distillation from both privileged teacher and privileged student policies.",
-    "Applies different supervision strength, objective, and strategy to different tokens to avoid conflating capability gaps with information asymmetry."
+    "Advantage-aware dual distillation selects supervision from either privileged teacher or privileged student per token.",
+    "Routing depends on advantage gap and relative token probabilities to balance strength, objective, and strategy.",
+    "Targets only the small subset of capability-bearing tokens with differentiated supervision to reduce information-asymmetry artifacts."
   ],
-  "evidence_signal": "The abstract reports extensive experiments on both LLM and VLM settings, plus stability, robustness, continual learning, and out-of-distribution evaluations, where DOPD consistently outperforms Vanilla OPD and other baselines.",
-  "watch_item": "The routing logic adds implementation complexity and may depend on careful calibration of token-level advantage and probability estimates to avoid unstable supervision decisions.",
+  "evidence_signal": "The abstract reports extensive experiments on both LLM and VLM settings, with DOPD consistently outperforming Vanilla OPD and additional evaluations showing better stability, robustness, continual learning, and out-of-distribution performance.",
+  "watch_item": "Implementation may be sensitive to correctly estimating token-level advantages and routing supervision only where signals are truly capability-bearing, since misrouting could reintroduce privilege illusion.",
   "hashtags": [
     "#OnPolicyDistillation",
+    "#KnowledgeDistillation",
     "#LLM",
     "#VLM",
-    "#KnowledgeDistillation",
-    "#AIResearch"
+    "#MachineLearning"
   ],
   "paper_id": "2026-06-29-arxiv-dopd_dual_on_policy_distillation",
   "paper_title": "DOPD: Dual On-policy Distillation",
   "paper_date": "2026-06-29",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-06-30T16:25:23",
+  "generated_at": "2026-07-01T16:36:06",
   "generator": "openai"
 }

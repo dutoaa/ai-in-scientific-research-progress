@@ -26,27 +26,27 @@
     ],
     "score": 82,
     "infographic": {
-      "key_insight": "EAPO improves LLM reasoning by reusing prior RL experience in a policy-adaptive way, injecting it only at critical decisions instead of replaying fixed trajectories.",
-      "engineering_relevance": "This offers a more sample-efficient RLVR training strategy that can reduce wasted rollouts while preserving stability as the policy changes.",
+      "key_insight": "EAPO improves LLM reasoning by reusing past RL experience as a policy-adaptive action prior rather than as fixed trajectories.",
+      "engineering_relevance": "It offers a more sample-efficient RLVR training strategy that can reduce rollout cost while better matching the model’s evolving policy during training.",
       "method": [
-        "Use a prior RL-optimized policy as an action-level experience prior.",
-        "Selectively inject experience at critical decision points during rollout.",
-        "Apply adapted importance sampling to keep learning stable and unbiased."
+        "Uses a prior RL-optimized policy as an action-level experience prior.",
+        "Injects experience only at critical decision points during rollout.",
+        "Adds adapted importance sampling to stabilize and de-bias learning from augmented trajectories."
       ],
-      "evidence_signal": "The abstract reports consistent reasoning gains on five benchmarks using Qwen-2.5-math 7B and Qwen-3-8B compared with state-of-the-art RLVR methods.",
-      "watch_item": "Performance depends on the quality and compatibility of the prior policy, and the added importance-sampling mechanism may increase training complexity.",
+      "evidence_signal": "The method was evaluated on Qwen-2.5-math 7B and Qwen-3-8B across five benchmarks, where it consistently outperformed state-of-the-art RLVR methods.",
+      "watch_item": "Because experience is injected selectively and corrected with importance sampling, performance may depend on how well the prior policy matches the current model and on careful tuning of the sampling weights.",
       "hashtags": [
         "#LLMReasoning",
         "#ReinforcementLearning",
         "#RLVR",
         "#PolicyOptimization",
-        "#AIResearch"
+        "#SampleEfficiency"
       ],
       "paper_id": "2026-06-29-arxiv-experience_augmented_policy_optimization_for_llm_reasoning",
       "paper_title": "Experience Augmented Policy Optimization for LLM Reasoning",
       "paper_date": "2026-06-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-01T16:35:20",
+      "generated_at": "2026-06-30T16:24:33",
       "generator": "openai"
     }
   },
@@ -79,27 +79,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "The paper proposes that deep learning generalization is limited by an entropic threshold: a network learns only when data-manifold entropy exceeds the topological complexity of the target boundary, adjusted by weight-space entropy.",
-      "engineering_relevance": "If valid, this framework could guide model design and optimization by identifying when overparameterized networks are likely to memorize versus generalize, and by motivating entropy-aware training methods.",
+      "key_insight": "The paper proposes that deep learning’s learnability is bounded by an Entropic Learnability Horizon, where data-manifold entropy must exceed the target boundary’s topological complexity and the network’s weight-space entropy.",
+      "engineering_relevance": "If validated, this framework could guide when models are likely to generalize versus memorize, and motivate entropy-aware training strategies for safer optimization.",
       "method": [
-        "Introduces the Entropic Learnability Horizon (ELH) as a bound on learnability.",
-        "States the Shannon-Topological Bottleneck Theorem to explain a phase transition into informational frustration.",
+        "Defines the Entropic Learnability Horizon (ELH) linking Shannon, topological, and von Neumann entropy.",
+        "Introduces the Shannon-Topological Bottleneck Theorem to explain a phase transition into \"Informational Frustration\" when complexity exceeds the horizon.",
         "Proposes Entropic Gradient Descent (EGD) to dynamically manage weight entropy during training."
       ],
-      "evidence_signal": "The abstract presents a theoretical framework and algorithmic proposal, but does not report concrete datasets, experimental benchmarks, or quantitative evaluation results.",
-      "watch_item": "The main concern is that the claims are largely theoretical and depend on definitions of entropy and topology that may be difficult to measure or validate in practical deep learning systems.",
+      "evidence_signal": "The abstract presents a theoretical framework and named theorems, but does not report experimental datasets, benchmarks, or quantitative evaluation.",
+      "watch_item": "The approach is highly conceptual, so its practical value will depend on formal definitions, measurable proxies for entropy terms, and empirical validation on real deep networks.",
       "hashtags": [
-        "#DeepLearningTheory",
+        "#DeepLearning",
         "#InformationTheory",
+        "#NeuralNetworks",
         "#Generalization",
-        "#Optimization",
-        "#NeuralNetworks"
+        "#Optimization"
       ],
       "paper_id": "2026-06-29-arxiv-informational_frustration_in_neural_manifolds_shannon_bottlenecks_and_the_limits_of_learna",
       "paper_title": "Informational Frustration in Neural Manifolds: Shannon Bottlenecks and the Limits of Learnability",
       "paper_date": "2026-06-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-01T16:35:23",
+      "generated_at": "2026-06-30T16:24:37",
       "generator": "openai"
     }
   },
@@ -131,27 +131,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "FlowAWR turns online alignment of generative flow models into supervised regression toward a theoretically optimal, advantage-weighted velocity field, avoiding SDE sampling and CFG.",
-      "engineering_relevance": "It offers a simpler and faster training/inference pipeline for controllable generative models, with better alignment efficiency on continuous-space policy optimization.",
+      "key_insight": "FlowAWR turns online alignment of continuous generative flows into supervised regression toward an optimal, advantage-weighted velocity field, avoiding SDE-based tractability hacks and classifier-free guidance.",
+      "engineering_relevance": "This gives a simpler and faster training-inference pipeline for aligning flow models, which is attractive for practical deployment of high-quality generative systems under reward constraints.",
       "method": [
-        "Derive the optimal KL-constrained policy for reward maximization.",
-        "Recast the solution as magnitude-aware, advantage-weighted rectification of the velocity field.",
-        "Train directly on the forward-process velocity field, enabling SDE-free optimization and CFG-free generation."
+        "Derive the optimal policy from KL-constrained reward maximization.",
+        "Reformulate it as magnitude-aware, advantage-weighted rectification of the forward velocity field.",
+        "Train SDE-free and generate without CFG, reducing mismatch between optimization and inference."
       ],
-      "evidence_signal": "On SD3.5-Medium, FlowAWR reached 24.12 PickScore in 1.2k steps, outperforming DiffusionNFT (23.82 in 2.0k steps) and FlowGRPO (>4k steps, 23.50), while showing stable multi-reward behavior.",
-      "watch_item": "The approach depends on accurate advantage estimation and reward design, so performance may be sensitive to reward quality and multi-objective balancing.",
+      "evidence_signal": "On SD3.5-Medium, the method reached 24.12 PickScore in 1.2k steps, outperforming DiffusionNFT at 23.82 in 2.0k steps and FlowGRPO at 23.50 in more than 4k steps, with reported 2×–5× faster convergence.",
+      "watch_item": "The approach may depend on careful reward design and stable advantage estimation, especially under multi-reward constraints and out-of-domain prompts.",
       "hashtags": [
+        "#FlowAWR",
         "#GenerativeAI",
-        "#FlowModels",
         "#ReinforcementLearning",
-        "#DiffusionModels",
-        "#MachineLearningResearch"
+        "#FlowModels",
+        "#DiffusionModels"
       ],
       "paper_id": "2026-06-29-arxiv-flowawr_online_adaptive_flow_reinforcement_via_advantage_weighted_rectification",
       "paper_title": "FlowAWR: Online Adaptive Flow Reinforcement via Advantage-Weighted Rectification",
       "paper_date": "2026-06-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-01T16:35:26",
+      "generated_at": "2026-06-30T16:24:40",
       "generator": "openai"
     }
   },
@@ -184,27 +184,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "Well-calibrated large language models can act as low-cost statistical estimators that achieve Bayes-optimal risk for inference tasks depending only on conditional means under squared loss.",
-      "engineering_relevance": "This suggests a practical substitute for expensive human-subject experiments in decision pipelines when the target quantity is a conditional expectation and the model is within its valid scope.",
+      "key_insight": "Well-calibrated large language models can act as low-cost statistical estimators that achieve Bayes-optimal risk for inference tasks determined only by conditional means under squared loss.",
+      "engineering_relevance": "This suggests a practical substitute for expensive human-subject experiments in some prediction and decision-making pipelines, reducing cost and latency when scope conditions are met.",
       "method": [
         "Model the LLM as a misspecified functional estimator trained on i.i.d. data.",
-        "Decompose error into representation bias and optimization error, then bound asymptotic risk with regularity conditions.",
-        "Use bidirectional Le Cam deficiency plus a calibration protocol to establish restricted functional risk equivalence."
+        "Decompose error into representation bias and optimization error, then bound the asymptotic risk.",
+        "Use bidirectional Le Cam deficiency analysis and calibration rules to certify restricted functional risk equivalence."
       ],
-      "evidence_signal": "The abstract reports theoretical risk analysis, finite-sample concentration bounds, and calibration decision rules rather than a new empirical benchmark.",
-      "watch_item": "Performance depends on the task being conditional-mean-based and on proper calibration; identifiability error can raise the effective bias and risk floor.",
+      "evidence_signal": "The abstract reports theoretical risk decomposition, finite-sample concentration bounds, and a calibration protocol, with performance characterized against Bayes-optimal squared-loss risk rather than a single empirical dataset.",
+      "watch_item": "The guarantee is restricted to well-calibrated models and inference that depends only on the conditional mean, so identifiability and representation bias can still inflate the risk floor outside those conditions.",
       "hashtags": [
         "#LargeLanguageModels",
         "#StatisticalEstimation",
-        "#HumanBehavior",
-        "#RiskEquivalence",
-        "#ComputationalScience"
+        "#HumanResponseData",
+        "#BayesOptimal",
+        "#AIforScience"
       ],
       "paper_id": "2026-06-29-arxiv-using_large_language_models_as_low_cost_statistical_estimators_for_human_response_data",
       "paper_title": "Using Large Language Models as Low-Cost Statistical Estimators for Human-Response Data",
       "paper_date": "2026-06-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-01T16:35:29",
+      "generated_at": "2026-06-30T16:24:43",
       "generator": "openai"
     }
   },
@@ -236,27 +236,27 @@
     ],
     "score": 76,
     "infographic": {
-      "key_insight": "C$^{2}$R improves sparse autoencoder interpretability by enforcing cross-sample consistency so each semantic feature is more likely to map to one unified latent instead of splitting or being absorbed by exceptions.",
-      "engineering_relevance": "For scalable LLM interpretability systems, this offers a principled regularizer that preserves reconstruction quality while making learned dictionaries more reliable and easier to analyze.",
+      "key_insight": "C$^2$R adds cross-sample consistency regularization to sparse autoencoders so each semantic feature is more likely to map to one stable latent, reducing feature splitting and absorption.",
+      "engineering_relevance": "This improves the interpretability of large SAE dictionaries for LLM analysis while preserving reconstruction quality, making latent-feature auditing more reliable at scale.",
       "method": [
         "Penalize co-activation of directionally similar latents across samples.",
-        "Encourage a consistent latent assignment for the same semantic concept within a batch.",
-        "Reduce redundant or interfering latents that cause feature splitting and absorption."
+        "Encourage a unified latent assignment for the same semantic feature within a batch.",
+        "Use consistency regularization alongside standard SAE reconstruction/sparsity objectives."
       ],
-      "evidence_signal": "The abstract reports comprehensive evaluation showing C$^{2}$R mitigates both splitting and absorption while preserving reconstruction fidelity.",
-      "watch_item": "The regularizer adds cross-sample coupling, so tuning the similarity threshold and penalty strength will likely be important to avoid suppressing genuinely related features.",
+      "evidence_signal": "The abstract reports comprehensive evaluation showing C$^2$R mitigates splitting and absorption while maintaining reconstruction fidelity.",
+      "watch_item": "The added cross-sample constraint may require careful tuning to avoid over-regularizing rare or genuinely multi-faceted features.",
       "hashtags": [
         "#SparseAutoencoders",
-        "#LLMInterpretability",
-        "#FeatureSplitting",
+        "#Interpretability",
+        "#LLM",
         "#Regularization",
-        "#MachineLearningResearch"
+        "#MachineLearning"
       ],
       "paper_id": "2026-06-29-arxiv-c_2_r_cross_sample_consistency_regularization_mitigates_feature_splitting_and_absorption_i",
       "paper_title": "C$^{2}$R: Cross-sample Consistency Regularization Mitigates Feature Splitting and Absorption in Sparse Autoencoders",
       "paper_date": "2026-06-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-01T16:35:32",
+      "generated_at": "2026-06-30T16:24:48",
       "generator": "openai"
     }
   },
@@ -288,27 +288,27 @@
     ],
     "score": 75,
     "infographic": {
-      "key_insight": "WorldEvolver improves long-horizon LLM planning by updating the world model at test time with memory and confidence filtering, without changing any frozen parameters.",
-      "engineering_relevance": "The framework offers a practical way to boost agent foresight and decision quality in deployment using retrieval, rule extraction, and selective prediction integration.",
+      "key_insight": "WorldEvolver improves LLM agent planning by self-updating its deployment-time world model memory, without changing model parameters or the downstream agent.",
+      "engineering_relevance": "The framework offers a practical test-time way to make long-horizon agents more reliable by filtering bad foresight and turning experience into reusable memory.",
       "method": [
         "Episodic Memory: retrieve real action transitions to simulate likely outcomes.",
-        "Semantic Memory: distill recurring prediction-observation mismatches into heuristic rules.",
-        "Selective Foresight: drop low-confidence predictions before adding them to agent context."
+        "Semantic Memory: distill repeated prediction-observation mismatches into heuristic rules.",
+        "Selective Foresight: suppress low-confidence predictions before they enter agent context."
       ],
-      "evidence_signal": "On ALFWorld and ScienceWorld, WorldEvolver achieved the highest prediction accuracy across three backbones and improved downstream success on AgentBoard versus other world model baselines.",
-      "watch_item": "Because gains depend on retrieval quality and confidence calibration, noisy memory or misfiltered forecasts could still mislead the agent at deployment time.",
+      "evidence_signal": "Evaluated on ALFWorld and ScienceWorld, WorldEvolver achieved the highest world-model prediction accuracy across three backbones and the best downstream agent success on AgentBoard compared with baselines.",
+      "watch_item": "The approach depends on high-quality retrieval and confidence filtering, so noisy memories or miscalibrated uncertainty could weaken gains.",
       "hashtags": [
-        "#WorldModels",
         "#LLMAgents",
-        "#TestTimeAdaptation",
-        "#Planning",
-        "#ScientificMachineLearning"
+        "#WorldModels",
+        "#ScientificMachineLearning",
+        "#RetrievalAugmented",
+        "#TestTimeAdaptation"
       ],
       "paper_id": "2026-06-29-arxiv-self_evolving_world_models_for_llm_agent_planning",
       "paper_title": "Self-Evolving World Models for LLM Agent Planning",
       "paper_date": "2026-06-29",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-01T16:35:35",
+      "generated_at": "2026-06-30T16:24:51",
       "generator": "openai"
     }
   },
@@ -340,27 +340,27 @@
     ],
     "score": 75,
     "infographic": {
-      "key_insight": "ANTAP routes tasks by empirically testing agent capabilities and then using a non-textual geometric projection, making metadata-based manipulation much harder.",
-      "engineering_relevance": "This provides a more secure and robust orchestration layer for multi-agent systems where routing quality and prompt/description attacks directly affect reliability.",
+      "key_insight": "ANTAP routes tasks by empirically testing agents' real capabilities and then projecting them with non-textual geometry, making description-based manipulation hard to exploit.",
+      "engineering_relevance": "This offers a practical defense for multi-agent orchestration by replacing vulnerable metadata-based routing with an evaluation-driven mechanism that improves robustness against prompt and embedding attacks.",
       "method": [
-        "Actively query agents to measure real task performance instead of trusting self-descriptions.",
-        "Distill these measurements into fixed behavioral operators in a shared semantic space.",
-        "Perform routing with a purely non-textual algebraic projection to block description-based attacks."
+        "Actively query each agent with capability tests instead of trusting self-descriptions.",
+        "Distill results into fixed behavioral operators in a shared semantic space.",
+        "Perform routing via algebraic projection, creating a \"linguistic firewall\" against metadata attacks."
       ],
-      "evidence_signal": "The abstract reports near-zero attack success rate against description-based injection attacks, versus 67.3% and above for the description-based router baseline, and a 20% reduction versus the embedding-based baseline under adaptive embedding attacks.",
-      "watch_item": "Because ANTAP depends on active capability testing, deployment may add latency and require careful test design to avoid incomplete coverage of an agent’s true behavior.",
+      "evidence_signal": "The abstract reports near-zero attack success rate against description-based injection attacks, versus 67.3%+ for the description-based router baseline, and a 20% ASR reduction versus the embedding-based baseline under adaptive embedding attacks.",
+      "watch_item": "Active testing adds runtime cost and depends on the quality and coverage of the evaluation tasks, which may limit scalability or leave gaps for untested behaviors.",
       "hashtags": [
         "#MultiAgentSystems",
         "#LLMs",
         "#AIsecurity",
-        "#Routing",
-        "#ScientificMachineLearning"
+        "#ScientificMachineLearning",
+        "#RobustRouting"
       ],
       "paper_id": "2026-06-29-arxiv-linguistic_firewall_geometry_as_defense_in_multi_agent_systems_routing",
       "paper_title": "Linguistic Firewall: Geometry as Defense in Multi-Agent Systems Routing",
       "paper_date": "2026-06-29",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-01T16:35:39",
+      "generated_at": "2026-06-30T16:24:53",
       "generator": "openai"
     }
   },
@@ -392,27 +392,27 @@
     ],
     "score": 75,
     "infographic": {
-      "key_insight": "MOPD integrates multiple specialized RL-trained LLM capabilities by distilling domain teachers on the student’s own rollouts, avoiding exposure bias while preserving near-teacher performance.",
-      "engineering_relevance": "It offers a practical post-training recipe for building frontier LLMs with multiple skills in parallel, reducing cross-domain coupling and improving scalability.",
+      "key_insight": "MOPD integrates multiple domain-specific RL capabilities into one LLM by distilling several teachers onto the student’s own on-policy rollouts, avoiding exposure bias and improving capability retention.",
+      "engineering_relevance": "It offers a practical post-training recipe for frontier LLMs that supports parallel domain specialization and scalable capability fusion without tightly coupling training across domains.",
       "method": [
-        "Train separate domain-specific RL teachers first.",
-        "Run the student on-policy and distill all teachers from the student’s own rollouts.",
-        "Combine dense teacher signals to merge capabilities without off-policy mismatch."
+        "Train separate domain-specific RL teachers for each capability.",
+        "Generate student rollouts on-policy and distill all teachers’ signals onto those trajectories.",
+        "Use dense supervision from multiple teachers to combine capabilities more effectively than off-policy or merge-based baselines."
       ],
-      "evidence_signal": "In Qwen3-30B-A3B evaluations, MOPD outperformed Mix-RL, Cascade RL, Off-Policy Finetune, and Param-Merge, while inheriting nearly all of each teacher’s capability.",
-      "watch_item": "The approach depends on having strong domain teachers and careful coordination of on-policy distillation, which may raise compute and implementation complexity in new domains.",
+      "evidence_signal": "On Qwen3-30B-A3B, the abstract reports MOPD outperforms Mix-RL, Cascade RL, Off-Policy Finetune, and Param-Merge, retaining nearly all of each teacher’s capability; it is also deployed in MiMo-V2-Flash.",
+      "watch_item": "The approach depends on having strong per-domain RL teachers and careful orchestration of multi-teacher distillation, which may increase training and integration complexity.",
       "hashtags": [
         "#LLMPostTraining",
-        "#OnPolicyDistillation",
         "#ReinforcementLearning",
+        "#KnowledgeDistillation",
         "#CapabilityIntegration",
-        "#AIFoundationModels"
+        "#FrontierModels"
       ],
       "paper_id": "2026-06-29-arxiv-mopd_multi_teacher_on_policy_distillation_for_capability_integration_in_llm_post_training",
       "paper_title": "MOPD: Multi-Teacher On-Policy Distillation for Capability Integration in LLM Post-Training",
       "paper_date": "2026-06-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-01T16:35:41",
+      "generated_at": "2026-06-30T16:24:56",
       "generator": "openai"
     }
   },
@@ -444,27 +444,27 @@
     ],
     "score": 73,
     "infographic": {
-      "key_insight": "Multi-turn LLM conversations can converge to model-specific “attractor” behaviors that persist across topics and can asymmetrically shape partner models.",
-      "engineering_relevance": "For multi-agent AI systems, this suggests agent behavior may be partly predictable, but interaction design must account for strong stylistic and behavioral influence between models.",
+      "key_insight": "Multi-turn LLM conversations do not wander randomly; instead, they often converge toward model-specific “attractor” behaviors that shape how both the model and its partner talk over time.",
+      "engineering_relevance": "For multi-agent systems, this means agent identity, style, and interaction dynamics can be partially predictable and should be designed, monitored, and tested for asymmetric influence.",
       "method": [
-        "Compared 7 LLMs across 20 controversial topics in self-play and mixed-play dyadic debates.",
-        "Tracked conversation trajectories in representation space, discourse traits, and stance over multiple turns.",
-        "Analyzed whether conversations settle into stable attractor-like patterns and how partners influence each other asymmetrically."
+        "Compared 7 LLMs across 20 controversial topics in dyadic self-play and mixed-play debates.",
+        "Tracked conversation trajectories in representation space, discourse traits, and stance behavior over multiple turns.",
+        "Measured how strongly one model’s behavior pulled the partner toward its own style and latent patterns."
       ],
-      "evidence_signal": "The study reports results across 7 LLMs and 20 controversial topics, finding self-play trajectories that act as model-specific attractors and measurable cross-model influence in mixed-play debates.",
-      "watch_item": "These attractor effects may be model- and setting-dependent, so behavior in broader agent ecosystems or safety-critical deployments may differ from the tested debates.",
+      "evidence_signal": "The study analyzes 7 LLMs over 20 controversial topics, using repeated self-play and mixed-play conversations to evaluate attractor-like dynamics in latent space, discourse traits, and stances.",
+      "watch_item": "Results are based on dyadic debates and selected model/topic pairs, so the attractor behavior may not generalize to larger groups, different prompts, or other deployment settings.",
       "hashtags": [
         "#LLM",
-        "#MultiAgentAI",
-        "#Attractors",
-        "#DebateDynamics",
-        "#AIAlignment"
+        "#MultiAgentSystems",
+        "#AIResearch",
+        "#ConversationDynamics",
+        "#Attractors"
       ],
       "paper_id": "2026-06-29-arxiv-attractor_states_emerge_in_multi_turn_llm_conversations",
       "paper_title": "Attractor States Emerge in Multi-Turn LLM Conversations",
       "paper_date": "2026-06-29",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-07-01T16:35:44",
+      "generated_at": "2026-06-30T16:24:59",
       "generator": "openai"
     }
   },
@@ -496,17 +496,17 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "SGD in a two-layer ReLU network can learn a shortcut spurious feature before the true XOR signal, and strong spurious correlation can suppress signal learning.",
-      "engineering_relevance": "This work explains why overparameterized classifiers may lock onto easy but misleading cues, informing more robust training and dataset design.",
+      "key_insight": "SGD in a two-layer ReLU network learns the shortcut spurious feature before the true XOR signal, and the spurious component can suppress later signal learning.",
+      "engineering_relevance": "This shows why models can lock onto easy correlations during training, highlighting the need for robustness checks and mitigation strategies in high-dimensional learning systems.",
       "method": [
-        "Theoretical end-to-end analysis of online minibatch SGD on logistic loss.",
-        "Two-layer ReLU network trained on high-dimensional Boolean hypercube data with XOR signal and linear spurious correlation.",
-        "Derives phase transitions showing exponential early spurious-feature growth and delayed signal learning."
+        "Analyze online minibatch SGD on a two-layer ReLU network trained with logistic loss",
+        "Use a Boolean hypercube data model with XOR signal plus linear spurious correlation",
+        "Derive phase-based learning dynamics and identify when spurious alignment dominates"
       ],
-      "evidence_signal": "The abstract reports a theoretical characterization, with the strongest spurious correlation case showing domination even at the XOR sample-complexity threshold, plus preliminary empirical evidence for eventual XOR learning when correlation is constant.",
-      "watch_item": "Results are strongest in the specified Boolean/XOR setting, so generalization to other architectures, losses, or real-world datasets may be limited.",
+      "evidence_signal": "Theoretical analysis on a synthetic XOR-plus-spurious data model, with preliminary empirical evidence that the XOR signal may emerge later when spurious correlation is only constant.",
+      "watch_item": "Results are for an idealized synthetic setting, so real-world behavior may differ when data, architecture, or optimization details change.",
       "hashtags": [
-        "#SpuriousCorrelation",
+        "#SpuriousFeatures",
         "#SGD",
         "#XOR",
         "#ReLU",
@@ -516,7 +516,7 @@
       "paper_title": "SGD Provably Prioritizes a Shortcut Spurious Feature in the XOR Model",
       "paper_date": "2026-06-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-07-01T16:35:47",
+      "generated_at": "2026-06-30T16:25:02",
       "generator": "openai"
     }
   },
@@ -550,27 +550,27 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "A scalar low-dimensional embedding can preserve key dynamical signatures of neural network training, including sensitivity to initial conditions and Lyapunov-like behavior.",
-      "engineering_relevance": "This offers a compact way to analyze, compare, and visualize optimization trajectories in high-dimensional neural network training.",
+      "key_insight": "A scalar embedding can compress neural network training dynamics into a low-dimensional trajectory while still preserving key behaviors such as sensitivity to initial conditions and Lyapunov-exponent estimates.",
+      "engineering_relevance": "This offers a practical visualization and analysis tool for diagnosing optimization dynamics in large neural networks without needing to inspect the full high-dimensional parameter space.",
       "method": [
-        "Treat training trajectories as temporal networks.",
-        "Apply scalar embedding methods to compress the trajectory into a low-dimensional representation.",
-        "Compare embedded dynamics to the original parameter-space behavior and evaluate Lyapunov-related measures."
+        "Treat training trajectories as temporal networks and embed them into a scalar time series.",
+        "Train a multilayer perceptron on MNIST and compare dynamics in original versus embedded spaces.",
+        "Use embedded trajectory statistics to estimate decorrelation time and analyze asymptotic spacing distributions."
       ],
-      "evidence_signal": "On MNIST with a multilayer perceptron, the embedding reproduced main dynamical features and accurately reconstructed the maximum Lyapunov exponent.",
-      "watch_item": "Results are demonstrated on a specific model and dataset, so broader validity across architectures, tasks, and training regimes still needs testing.",
+      "evidence_signal": "On MNIST, the embedding reproduces main dynamical features of the original parameter space, including regime-dependent sensitivity and an accurate reconstruction of the maximum Lyapunov exponent.",
+      "watch_item": "The approach is validated on one model and dataset, so its robustness across architectures, tasks, and optimizers remains to be established.",
       "hashtags": [
         "#NeuralNetworks",
         "#TrainingDynamics",
         "#TemporalNetworks",
         "#LyapunovExponent",
-        "#ModelingAndSimulation"
+        "#ScientificML"
       ],
       "paper_id": "2026-06-29-arxiv-scalar_representations_of_neural_network_training_dynamics",
       "paper_title": "Scalar Representations of Neural Network Training Dynamics",
       "paper_date": "2026-06-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-07-01T16:35:49",
+      "generated_at": "2026-06-30T16:25:05",
       "generator": "openai"
     }
   },
@@ -602,27 +602,27 @@
     ],
     "score": 71,
     "infographic": {
-      "key_insight": "LeVo 2 resolves the song-generation trade-off by using hierarchical token modeling for global planning plus track-specific refinement, then reconstructing audio with a diffusion-based codec.",
-      "engineering_relevance": "The framework offers a practical design for controllable full-length music generation systems that need both long-range coherence and high-fidelity vocal/accompaniment detail.",
+      "key_insight": "LeVo 2 improves full-length song generation by splitting the problem into hierarchical semantic planning, track-specific refinement, and diffusion-based waveform reconstruction.",
+      "engineering_relevance": "The paper offers a practical training-and-architecture recipe for controllable audio generation systems that must balance long-range coherence, lyric alignment, and detailed timbre quality.",
       "method": [
-        "LeLM predicts mixed tokens first for semantic planning, then predicts vocal and accompaniment tokens in parallel for track-specific refinement.",
-        "A music codec diffusion model reconstructs full-length waveforms from the hierarchical representations.",
-        "Progressive post-training uses SFT, offline DPO, and semi-online DPO, with aesthetics-guided musicality conditions during pre-training."
+        "LeLM first predicts mixed tokens for global musical planning, then predicts vocal and accompaniment tokens in parallel for track-level refinement.",
+        "A Music Codec diffusion model reconstructs the final full-length waveform from the hierarchical representation.",
+        "Progressive post-training uses SFT, large-scale offline DPO, and closed-loop semi-online DPO, guided by musicality-tier pretraining labels and a modular track-specific extension."
       ],
-      "evidence_signal": "Expert listening tests and objective evaluations show improvements over open-source baselines across six subjective dimensions and competitiveness with leading commercial systems on several metrics.",
-      "watch_item": "The multi-stage training pipeline is complex and may be sensitive to data quality, preference alignment noise, and optimization instability across stages.",
+      "evidence_signal": "Expert listening tests and objective evaluations show improvements over open-source baselines across six subjective dimensions, with performance approaching leading commercial systems on several metrics.",
+      "watch_item": "The multi-stage training pipeline is complex and may be sensitive to data quality, reward design, and optimization instability when scaling or reproducing.",
       "hashtags": [
         "#SongGeneration",
         "#AudioAI",
         "#DiffusionModel",
-        "#PreferenceAlignment",
+        "#PreferenceLearning",
         "#MusicGeneration"
       ],
       "paper_id": "2026-06-29-arxiv-levo_2_stable_and_melodious_song_generation_via_hierarchical_representation_modeling_and_p",
       "paper_title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
       "paper_date": "2026-06-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-07-01T16:35:51",
+      "generated_at": "2026-06-30T16:25:08",
       "generator": "openai"
     }
   },
@@ -654,27 +654,27 @@
     ],
     "score": 71,
     "infographic": {
-      "key_insight": "LLM agents can match human-level cooperation trends in aggregate while still failing to reproduce the individual decision mechanisms that generate them.",
-      "engineering_relevance": "For agent-based social simulations, validation should check not just overall outcomes but also heterogeneity and context-dependent behavior before treating LLMs as human surrogates.",
+      "key_insight": "LLM agents can match human-like group cooperation trends in a Prisoner's Dilemma, but still fail to reproduce the individual decision rules and heterogeneity that generate those outcomes.",
+      "engineering_relevance": "For social simulation and multi-agent systems, LLMs should be validated at both macro and micro levels before being treated as human surrogates in policy or behavioral studies.",
       "method": [
-        "Compared nine open-weight LLM agents with human data in a large-scale networked Prisoner’s Dilemma.",
-        "Used the same interaction protocol, payoff structure, and network topologies for both LLMs and humans.",
-        "Tested whether adding random agents improves agreement at the micro-behavior level."
+        "Ran a large-scale networked Prisoner's Dilemma with human participants and compared it directly to nine open-weight LLM agents.",
+        "Used the same interaction protocol, payoff structure, and network topologies for both humans and LLMs.",
+        "Tested whether adding random agents improved agreement between LLM behavior and human data."
       ],
-      "evidence_signal": "Across the benchmark, the selected model reproduced the early drop and later stabilization of cooperation, but underestimated individual heterogeneity and produced different conditional cooperation patterns than humans.",
-      "watch_item": "Macro-level similarity can hide a macro–micro dissociation, so outcome-only validation may overstate how faithfully LLM agents represent human decision rules.",
+      "evidence_signal": "The evaluation shows LLMs reproduce broad cooperation dynamics like early decline and later stabilization, but diverge in individual heterogeneity and conditional cooperation patterns relative to human data.",
+      "watch_item": "Matching aggregate cooperation curves does not guarantee the LLM is capturing the correct underlying behavioral mechanism, so outcome-level agreement alone is insufficient.",
       "hashtags": [
-        "#LLMAgents",
-        "#ScientificMachineLearning",
-        "#PrisonersDilemma",
+        "#LLMagents",
         "#SocialSimulation",
-        "#HumanBehavior"
+        "#PrisonersDilemma",
+        "#BehavioralModeling",
+        "#ScientificMachineLearning"
       ],
       "paper_id": "2026-06-29-arxiv-collective_cooperation_without_individual_fidelity_in_llm_agents",
       "paper_title": "Collective cooperation without individual fidelity in LLM agents",
       "paper_date": "2026-06-29",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-01T16:35:54",
+      "generated_at": "2026-06-30T16:25:10",
       "generator": "openai"
     }
   },
@@ -707,27 +707,27 @@
     ],
     "score": 71,
     "infographic": {
-      "key_insight": "The paper explains grokking as a geometry-driven transition in parameter space: optimization first lands on a memorization shell and only later escapes to a core of generalizing solutions.",
-      "engineering_relevance": "Its scaling laws for learning rate, batch size, and L2 regularization can help practitioners tune training to reduce delayed generalization and better predict when grokking will occur.",
+      "key_insight": "Grokking is explained as a geometry-driven transition in parameter space: optimization with Adam plus weight shrinkage creates an outer initialization shell, a middle memorization shell, and an inner generalization core.",
+      "engineering_relevance": "The paper gives practical scaling laws for learning rate, batch size, and L2 regularization that can help predict and control delayed generalization in training runs.",
       "method": [
-        "Characterize Adam with weight shrinkage as inducing a shell–core topology of reachable solutions.",
-        "Use stopping-time theory to analyze when trajectories leave the memorization manifold and reach the generalization boundary.",
-        "Derive scaling laws for grokking with respect to learning rate, batch size, and L2 regularization."
+        "Theoretical shell-core topology analysis of reachable solutions under Adam with weight shrinkage.",
+        "Stopping-time theory to model when trajectories escape memorization and enter the generalization region.",
+        "Derivation of grokking scaling laws and comparison with prior results."
       ],
-      "evidence_signal": "The theory is supported by empirical evidence and validated experiments that recover scaling results reported in prior grokking literature.",
-      "watch_item": "The shell–core explanation is a theoretical abstraction, so its practical accuracy may depend on optimizer choice, model architecture, and the specific training setup.",
+      "evidence_signal": "The abstract reports empirical evidence for the shell-core geometry and experiments validating the derived scaling laws against prior literature.",
+      "watch_item": "The theory is tied to a specific optimization setup (Adam with shrinkage regularization), so its behavior may not transfer unchanged to other optimizers or training regimes.",
       "hashtags": [
         "#Grokking",
-        "#ScalingLaws",
         "#OptimizationDynamics",
-        "#DeepLearningTheory",
-        "#AdamOptimizer"
+        "#ScalingLaws",
+        "#Generalization",
+        "#DeepLearningTheory"
       ],
       "paper_id": "2026-06-29-arxiv-a_stochastic_geometric_theory_of_scaling_laws_in_grokking",
       "paper_title": "A Stochastic--Geometric Theory of Scaling Laws in Grokking",
       "paper_date": "2026-06-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-01T16:35:56",
+      "generated_at": "2026-06-30T16:25:14",
       "generator": "openai"
     }
   },
@@ -759,27 +759,27 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "Staged knowledge distillation lets visual quantum reinforcement learning shift from hard end-to-end pixel training to a compact-head problem that shallow VQC policies can actually learn.",
-      "engineering_relevance": "This provides a practical path for building small quantum-compatible control policies on visual tasks without requiring large, unstable hybrid RL training loops.",
+      "key_insight": "Knowledge distillation can turn visual quantum reinforcement learning into a compact-head learning problem, allowing shallow quantum-compatible policies to learn from frozen classical visual features instead of raw pixels.",
+      "engineering_relevance": "This staged hybrid approach offers a practical path for building smaller, trainable QRL controllers for high-dimensional visual tasks without relying on brittle end-to-end quantum training.",
       "method": [
-        "Train a classical visual teacher on pixel inputs.",
-        "Freeze the teacher encoder as a shared feature interface.",
-        "Distil the teacher policy into compact downstream heads, either classical or VQC-based, using the same frozen representation."
+        "Train a classical visual teacher on pixel observations.",
+        "Freeze the encoder to provide a stable feature interface.",
+        "Distil teacher policy behavior into compact classical or VQC student heads using the same representation."
       ],
-      "evidence_signal": "The approach was evaluated on CartPole Pixels and Acrobot Pixels, where shallow angle-encoded VQC heads achieved near-teacher behavior and amplitude-encoded heads remained workable but more fragile.",
-      "watch_item": "Amplitude-encoded VQC heads maximize compactness but appear sensitive to budget limits, with higher fragility and simulation cost than angle encoding.",
+      "evidence_signal": "The pipeline was evaluated on CartPole Pixels and Acrobot Pixels, where angle-encoded VQC heads achieved near-teacher performance and amplitude-encoded heads achieved extreme compactness with greater cost.",
+      "watch_item": "Amplitude encoding improves compactness but is more fragile, more sensitive to budgets, and slower in simulation, which may limit practical deployment.",
       "hashtags": [
-        "#QuantumRL",
+        "#QuantumReinforcementLearning",
         "#KnowledgeDistillation",
+        "#HybridAI",
         "#VisualRL",
-        "#VariationalQuantumCircuits",
-        "#HybridAI"
+        "#QuantumML"
       ],
       "paper_id": "2026-06-29-arxiv-staged_hybridisation_for_visual_quantum_reinforcement_learning_via_knowledge_distillation",
       "paper_title": "Staged Hybridisation for Visual Quantum Reinforcement Learning via Knowledge Distillation",
       "paper_date": "2026-06-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-01T16:35:59",
+      "generated_at": "2026-06-30T16:25:16",
       "generator": "openai"
     }
   },
@@ -811,27 +811,27 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "HSAP combines sequence-aware communication with hierarchical sequence parallelism to correctly handle hybrid-context packed sequences while preserving stronger parallel performance.",
-      "engineering_relevance": "This is directly relevant for efficient pretraining and fine-tuning of large language models, where sequence packing and communication overhead are major scaling bottlenecks.",
+      "key_insight": "HSAP introduces a hierarchy of sequence-aware parallelism that correctly handles causal attention on packed hybrid-context sequences while preserving strong parallel efficiency.",
+      "engineering_relevance": "The framework is directly relevant for scaling LLM pretraining and fine-tuning, where packed sequences and communication overhead can otherwise break attention correctness or throttle throughput.",
       "method": [
-        "Sequence-Aware Parallelism to compute causal attention correctly on hybrid-context packed sequences.",
-        "Hierarchical Sequence-Aware Parallelism to integrate and extend existing sequence parallelism paradigms across device groups.",
-        "JIT-optimized NCCL communication strategy to reduce intensive tensor transmission and coordination overhead."
+        "Uses a sequence-aware parallelism algorithm to avoid cross-contamination in causal attention on hybrid-context packed sequences.",
+        "Applies JIT compilation to optimize NCCL communication among device groups.",
+        "Wraps existing sequence-parallel paradigms into a hierarchical framework with memory and communication overhead management."
       ],
-      "evidence_signal": "The abstract reports multiple experiments showing the proposed approach outperforms state-of-the-art sequence parallelism methods on multiple metrics.",
-      "watch_item": "The approach likely depends on careful implementation of JIT-compiled NCCL communication and hierarchical device-group orchestration, which may increase system complexity.",
+      "evidence_signal": "The abstract reports multiple experiments showing the proposed method outperforms prior state-of-the-art sequence parallelism approaches across multiple metrics.",
+      "watch_item": "Performance depends on careful implementation of the JIT-optimized NCCL communication and hierarchical device-group coordination, which may add system complexity.",
       "hashtags": [
         "#SequenceParallelism",
         "#LLMTraining",
         "#DistributedSystems",
-        "#AttentionMechanisms",
-        "#NCCL"
+        "#NCCL",
+        "#HybridContext"
       ],
       "paper_id": "2026-06-29-arxiv-hsap_a_hierachical_sequence_aware_parallelism_for_hybrid_context_generative_models",
       "paper_title": "HSAP: A Hierachical Sequence-aware Parallelism for Hybrid-Context Generative Models",
       "paper_date": "2026-06-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-01T16:36:01",
+      "generated_at": "2026-06-30T16:25:18",
       "generator": "openai"
     }
   },
@@ -863,27 +863,27 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "Tabular foundation models are strong on small-to-medium IID benchmarks, but they still lag behind tree-based and deep learning baselines on harder non-IID, large-scale, and high-dimensional tabular problems.",
-      "engineering_relevance": "For real-world tabular ML systems in science and industry, this paper shows that benchmark choice can strongly change which model appears best, so evaluation must match deployment conditions.",
+      "key_insight": "Tabular foundation models are strong on small to medium IID benchmarks, but their advantage drops on harder non-IID, large, and high-dimensional datasets.",
+      "engineering_relevance": "For real-world tabular ML systems, benchmark choice matters: performance claims should be validated on temporal, grouped, and high-dimensional data, not just standard IID tests.",
       "method": [
-        "Introduced BeyondArena, a unified benchmark covering IID, temporal, and grouped tabular tasks.",
-        "Curated 142 datasets across disciplines, feature types, and scale regimes.",
-        "Built Data Foundry, a Python framework and metadata schema for standardized dataset curation and benchmarking."
+        "Introduced BeyondArena, a unified benchmark spanning IID, temporal, and grouped tabular tasks.",
+        "Created Data Foundry, a Python framework plus metadata schema for curating tabular predictive datasets.",
+        "Evaluated 11 models on 142 curated datasets across varied sample sizes, feature types, and disciplines."
       ],
-      "evidence_signal": "Across 11 models evaluated on 142 curated datasets, the study finds that performance advantages of tabular foundation models are concentrated on tiny-to-medium IID data, while harder regimes favor traditional methods.",
-      "watch_item": "Because the benchmark is broad but still curated, results may depend on dataset selection and metadata quality, so adoption will require careful, consistent curation and protocol alignment.",
+      "evidence_signal": "Across 142 curated datasets, the abstract reports that tabular foundation models lead on tiny-to-medium IID data, while tree-based and deep learning methods remain stronger on non-IID, large, and high-dimensional settings.",
+      "watch_item": "Benchmark results may still depend on dataset curation quality and coverage, so broad claims about generality should be tested beyond the curated benchmark set.",
       "hashtags": [
-        "#TabularAI",
+        "#TabularML",
         "#FoundationModels",
         "#Benchmarking",
         "#MachineLearning",
-        "#DataCuration"
+        "#AIResearch"
       ],
       "paper_id": "2026-06-29-arxiv-beyond_iid_how_general_are_tabular_foundation_models_really",
       "paper_title": "Beyond IID: How General Are Tabular Foundation Models, Really?",
       "paper_date": "2026-06-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-01T16:36:03",
+      "generated_at": "2026-06-30T16:25:21",
       "generator": "openai"
     }
   },
@@ -914,27 +914,27 @@
     ],
     "score": 69,
     "infographic": {
-      "key_insight": "DOPD improves on-policy distillation by dynamically routing token-level supervision between privileged teacher and privileged student signals to avoid “privilege illusion” and better transfer real capability.",
-      "engineering_relevance": "The method offers a more stable and effective distillation recipe for compressing LLMs and VLMs while preserving performance under robustness, continual learning, and distribution shift.",
+      "key_insight": "DOPD improves on-policy distillation by dynamically choosing whether token-level supervision should come from a privileged teacher or privileged student, reducing privilege illusion and preserving transferable capability signals.",
+      "engineering_relevance": "The method offers a more stable and effective distillation strategy for deploying smaller LLMs and VLMs, especially when high-quality supervision is sparse or uneven across tokens.",
       "method": [
-        "Advantage-aware dual distillation selects supervision from either privileged teacher or privileged student per token.",
-        "Routing depends on advantage gap and relative token probabilities to balance strength, objective, and strategy.",
-        "Targets only the small subset of capability-bearing tokens with differentiated supervision to reduce information-asymmetry artifacts."
+        "Routes each token’s supervision based on advantage gap and relative probabilities.",
+        "Uses dual distillation from both privileged teacher and privileged student policies.",
+        "Applies different supervision strength, objective, and strategy to different tokens to avoid conflating capability gaps with information asymmetry."
       ],
-      "evidence_signal": "The abstract reports extensive experiments on both LLM and VLM settings, with DOPD consistently outperforming Vanilla OPD and additional evaluations showing better stability, robustness, continual learning, and out-of-distribution performance.",
-      "watch_item": "Implementation may be sensitive to correctly estimating token-level advantages and routing supervision only where signals are truly capability-bearing, since misrouting could reintroduce privilege illusion.",
+      "evidence_signal": "The abstract reports extensive experiments on both LLM and VLM settings, plus stability, robustness, continual learning, and out-of-distribution evaluations, where DOPD consistently outperforms Vanilla OPD and other baselines.",
+      "watch_item": "The routing logic adds implementation complexity and may depend on careful calibration of token-level advantage and probability estimates to avoid unstable supervision decisions.",
       "hashtags": [
         "#OnPolicyDistillation",
-        "#KnowledgeDistillation",
         "#LLM",
         "#VLM",
-        "#MachineLearning"
+        "#KnowledgeDistillation",
+        "#AIResearch"
       ],
       "paper_id": "2026-06-29-arxiv-dopd_dual_on_policy_distillation",
       "paper_title": "DOPD: Dual On-policy Distillation",
       "paper_date": "2026-06-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-01T16:36:06",
+      "generated_at": "2026-06-30T16:25:23",
       "generator": "openai"
     }
   },
@@ -967,27 +967,27 @@
     ],
     "score": 69,
     "infographic": {
-      "key_insight": "A minimax framework shows that, under standard OT stability assumptions, learning any valid transport map can be as statistically hard as learning the optimal transport map.",
-      "engineering_relevance": "For diffusion, flow matching, and normalizing-flow generative systems, this sets fundamental sample-complexity limits and tells engineers when simpler non-OT targets may or may not yield real gains.",
+      "key_insight": "Estimating any valid transport map is fundamentally limited by minimax sample complexity, and under common OT stability assumptions it is statistically as hard as estimating the optimal transport map itself.",
+      "engineering_relevance": "For generative modeling systems using diffusion, flow matching, or normalizing flows, this means choosing an easier-to-train transport target may not reduce the underlying statistical difficulty unless OT stability assumptions fail.",
       "method": [
-        "Formalize transport-map estimation as a minimax statistical problem",
-        "Derive sample-complexity lower bounds for any learned transport map or plan",
-        "Compare OT and non-OT transport targets under stability vs. instability assumptions"
+        "Formulates valid transport-map estimation in a minimax framework.",
+        "Derives sample-complexity lower bounds for transport maps/plans used by modern generative methods.",
+        "Shows that when OT stability assumptions break, non-OT transport maps can be learned more accurately than the OT map."
       ],
-      "evidence_signal": "The paper relies on theoretical minimax analysis and example constructions, rather than empirical benchmarking, to show both lower bounds and cases where non-OT maps can be learned more accurately.",
-      "watch_item": "The strongest hardness result depends on standard but strong stability assumptions; if those assumptions fail, conclusions about equivalence to OT may not hold.",
+      "evidence_signal": "The paper is a theoretical analysis based on minimax lower bounds and illustrative examples, rather than empirical benchmarking on a dataset.",
+      "watch_item": "The strongest hardness result relies on stability assumptions from optimal transport theory, which may not hold in all practical data-generating settings.",
       "hashtags": [
-        "#GenerativeModels",
+        "#TransportMaps",
         "#OptimalTransport",
-        "#DiffusionModels",
-        "#FlowMatching",
-        "#MinimaxTheory"
+        "#GenerativeModels",
+        "#MinimaxTheory",
+        "#SampleComplexity"
       ],
       "paper_id": "2026-06-29-arxiv-the_fundamental_limits_of_valid_transport_map_estimation",
       "paper_title": "The Fundamental Limits of Valid Transport Map Estimation",
       "paper_date": "2026-06-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-01T16:36:08",
+      "generated_at": "2026-06-30T16:25:25",
       "generator": "openai"
     }
   },
@@ -1020,27 +1020,27 @@
     ],
     "score": 67,
     "infographic": {
-      "key_insight": "Real coding-agent usage is dominated by long autonomous loops with long contexts, short outputs, and highly variable tool-call patterns, which makes LLM serving behavior very different from standard chat workloads.",
-      "engineering_relevance": "Serving systems for coding agents should optimize for low-overhead tool calls, append-length-aware prefill, smarter tool-latency prediction, and KV-cache policies that handle human-paced gaps.",
+      "key_insight": "Real coding-agent workloads are dominated by long autonomous, tool-heavy loops with long contexts, short outputs, and strong but imperfect cache reuse.",
+      "engineering_relevance": "Serving systems for coding agents should optimize tool-call overhead, prefill for append-heavy contexts, latency prediction, and KV-cache retention across human-paced gaps.",
       "method": [
-        "Collected ~4,300 real coding-agent sessions from day-to-day use of Claude Code and Codex.",
-        "Logged ~350,000 LLM steps and ~430,000 tool calls for workload analysis.",
-        "Analyzed context length, output length, tool-call diversity, and prefix-cache behavior to identify serving bottlenecks."
+        "Collected ~4,300 real daily coding-agent sessions from Claude Code and Codex",
+        "Captured ~350,000 LLM steps and ~430,000 tool calls",
+        "Analyzed workload patterns to identify serving bottlenecks and optimization opportunities"
       ],
-      "evidence_signal": "The trace dataset spans roughly 4,300 sessions and supports analysis of about 350,000 LLM steps and 430,000 tool calls, revealing high but imperfect prefix-cache hit rates.",
-      "watch_item": "The trace reflects the authors' own day-to-day usage, so patterns may not fully generalize to all coding-agent users, orgs, or model configurations.",
+      "evidence_signal": "The trace provides large-scale real-world evidence from day-to-day use, spanning multiple agent and model families, rather than synthetic benchmarks.",
+      "watch_item": "Results come from the authors' own usage traces, so workload patterns may reflect their environment, tools, and coding style rather than all agent deployments.",
       "hashtags": [
         "#LLMServing",
         "#CodingAgents",
+        "#AIInfrastructure",
         "#TraceAnalysis",
-        "#SystemOptimization",
-        "#AIInfrastructure"
+        "#SystemsForAI"
       ],
       "paper_id": "2026-06-29-arxiv-tracelab_characterizing_coding_agent_workloads_for_llm_serving",
       "paper_title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving",
       "paper_date": "2026-06-29",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-07-01T16:36:11",
+      "generated_at": "2026-06-30T16:25:28",
       "generator": "openai"
     }
   }
