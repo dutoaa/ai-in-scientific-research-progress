@@ -1,13 +1,13 @@
 {
-  "key_insight": "Neural quantum state training can be reframed as a trust-region reinforcement learning problem, enabling more stable and scalable optimization than standard first-order or SR-style methods.",
-  "engineering_relevance": "This provides a practical optimization recipe for large quantum wavefunction models, especially autoregressive NQS, where exact sampling is cheap but training stability and scalability are bottlenecks.",
+  "key_insight": "Variational neural quantum state training can be reframed as a reinforcement learning trust-region problem, enabling a new optimizer that is both scalable and more stable than standard first-order or matrix-inversion-based methods.",
+  "engineering_relevance": "PWO offers a practical way to train large autoregressive quantum wavefunction models with independent sampling, reduced numerical fragility, and better wall-clock convergence on hard spin-system benchmarks.",
   "method": [
-    "Recast variational energy minimization as an advantage policy-gradient objective over the Born distribution.",
-    "Introduce Proximal Wavefunction Optimization (PWO), which clips amplitude probability ratios and phase increments separately.",
-    "Reuse samples across multiple updates to improve efficiency while avoiding explicit matrix inversion."
+    "Reinterpret Born-distribution energy minimization as an advantage policy-gradient objective.",
+    "Apply proximal trust-region updates that clip amplitude probability ratios and phase increments separately.",
+    "Avoid explicit matrix inversion while reusing samples across multiple optimization steps."
   ],
-  "evidence_signal": "The abstract reports improved stability and wall-clock convergence on Ising and frustrated J1-J2 spin systems in 1D and 2D, and shows fine-tuning of a 1.5B-parameter RWKV-7 model.",
-  "watch_item": "PWO still relies on careful trust-region tuning and separate amplitude/phase handling, so implementation details may matter for numerical robustness and reproducibility.",
+  "evidence_signal": "The method is evaluated on Ising and frustrated J1-J2 spin systems in one and two dimensions, where it improves stability and wall-clock convergence over Adam, minSR, and SPRING, and is also fine-tuned on a 1.5B-parameter RWKV-7 model.",
+  "watch_item": "Trust-region clipping and sample reuse may improve efficiency, but performance can still depend on careful hyperparameter tuning and stable handling of amplitude-phase parameterization in large models.",
   "hashtags": [
     "#NeuralQuantumStates",
     "#ReinforcementLearning",
@@ -19,6 +19,6 @@
   "paper_title": "One More Time: Revisiting Neural Quantum States from a Reinforcement Learning Perspective",
   "paper_date": "2026-07-02",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-04T15:09:21",
+  "generated_at": "2026-07-05T15:16:47",
   "generator": "openai"
 }

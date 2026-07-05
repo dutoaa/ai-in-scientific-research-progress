@@ -1,13 +1,13 @@
 {
-  "key_insight": "DemoPSD improves on-policy self-distillation by adaptively blending teacher and student distributions with a disagreement-driven reverse-KL barycenter, reducing privileged-information leakage while preserving exploration.",
-  "engineering_relevance": "This offers a practical training strategy for LLM reasoning systems that aims to improve cross-domain robustness without sacrificing token-level supervision efficiency.",
+  "key_insight": "DemoPSD improves on-policy self-distillation by adaptively blending teacher and student outputs with a reverse-KL barycenter target, reducing privileged-information leakage while preserving exploration.",
+  "engineering_relevance": "This is relevant for training reasoning LLMs because it offers a safer distillation strategy that can improve cross-domain generalization without collapsing the model into overfit teacher behavior.",
   "method": [
-    "Compute the discrepancy between teacher and student distributions at each token position.",
-    "Use disagreement to adaptively set a reverse-KL barycenter target instead of matching the full teacher distribution.",
-    "Train the student toward this selective target to attenuate leakage and maintain exploration capacity."
+    "Compute token-level disagreement between teacher and student distributions.",
+    "Use disagreement to adaptively set the blending weight for a reverse-KL barycenter target.",
+    "Train the student to match this selective target rather than the full teacher distribution."
   ],
-  "evidence_signal": "The abstract reports extensive experiments on SciKnowEval across four scientific fields, with better performance than GRPO and SDPO, higher training entropy, and stronger out-of-distribution generalization on GPQA.",
-  "watch_item": "The adaptive barycenter and discrepancy estimation add implementation complexity, and results may depend on how reliably the disagreement signal is computed during training.",
+  "evidence_signal": "The abstract reports experiments on SciKnowEval across four scientific fields, where DemoPSD outperforms GRPO and SDPO and also generalizes better to out-of-distribution GPQA benchmarks.",
+  "watch_item": "The adaptive token-level blending and distribution matching may be sensitive to how disagreement is estimated and tuned during training, which could affect stability and reproducibility.",
   "hashtags": [
     "#LLMReasoning",
     "#SelfDistillation",
@@ -19,6 +19,6 @@
   "paper_title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
   "paper_date": "2026-07-02",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-04T15:09:36",
+  "generated_at": "2026-07-05T15:16:52",
   "generator": "openai"
 }

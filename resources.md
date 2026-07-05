@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-07-04
+Generated: 2026-07-05
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Grounded autonomous research: a fault-tolerant LLM pipeline from corpus to manuscript in frontier computational physics
@@ -35,15 +35,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.02219v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-02-arxiv-differentiable_inverse_design_of_short_range_order_in_high_entropy_alloys_from_target_sro_infographic.json
 
-## 5. One More Time: Revisiting Neural Quantum States from a Reinforcement Learning Perspective
-
-- Date: 2026-07-02
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.02292v1
-- PDF: https://arxiv.org/pdf/2607.02292v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-02-arxiv-one_more_time_revisiting_neural_quantum_states_from_a_reinforcement_learning_perspective_infographic.json
-
-## 6. Prediction Sets for Counterfactual Decisions: Coverage, Optimality, and Conformal Prediction
+## 5. Prediction Sets for Counterfactual Decisions: Coverage, Optimality, and Conformal Prediction
 
 - Date: 2026-07-02
 - Category: Scientific Machine Learning
@@ -51,7 +43,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.02206v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-02-arxiv-prediction_sets_for_counterfactual_decisions_coverage_optimality_and_conformal_prediction_infographic.json
 
-## 7. DecompRL: Solving Harder Problems by Learning Modular Code Generation
+## 6. DecompRL: Solving Harder Problems by Learning Modular Code Generation
 
 - Date: 2026-07-02
 - Category: AI scientific research
@@ -59,7 +51,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.02390v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-02-arxiv-decomprl_solving_harder_problems_by_learning_modular_code_generation_infographic.json
 
-## 8. Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials
+## 7. Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials
 
 - Date: 2026-07-02
 - Category: Scientific Machine Learning
@@ -67,13 +59,21 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.02499v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-02-arxiv-beyond_adam_soap_and_muon_for_faster_label_efficient_training_of_machine_learning_interato_infographic.json
 
-## 9. An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks
+## 8. An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks
 
 - Date: 2026-07-02
 - Category: Scientific Machine Learning
 - arXiv: https://arxiv.org/abs/2607.02194v1
 - PDF: https://arxiv.org/pdf/2607.02194v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-02-arxiv-an_optimisation_framework_for_the_well_conditioned_training_of_physics_informed_neural_net_infographic.json
+
+## 9. One More Time: Revisiting Neural Quantum States from a Reinforcement Learning Perspective
+
+- Date: 2026-07-02
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.02292v1
+- PDF: https://arxiv.org/pdf/2607.02292v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-02-arxiv-one_more_time_revisiting_neural_quantum_states_from_a_reinforcement_learning_perspective_infographic.json
 
 ## 10. UA-ChatDev: Uncertainty-Aware Multi-Agent Collaboration for Reliable Software Development
 

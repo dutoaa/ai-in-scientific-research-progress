@@ -1,24 +1,24 @@
 {
-  "key_insight": "DecompRL teaches an LLM to decompose hard coding tasks into modular sub-functions, making otherwise unreachable solutions tractable by recombining smaller implementations.",
-  "engineering_relevance": "The approach shifts compute from expensive GPU sampling to cheaper CPU-based recombination and verification, reducing token cost while improving success on difficult code-generation benchmarks.",
+  "key_insight": "DecompRL learns to decompose hard coding tasks into modular sub-functions, making the search space easier so LLMs can solve problems that direct generation cannot.",
+  "engineering_relevance": "It shifts inference cost from expensive GPU sampling to cheap CPU recombination and evaluation, cutting GPU token usage by about 50×.",
   "method": [
-    "Use reinforcement learning to explicitly learn hierarchical code decomposition.",
-    "Generate multiple implementations per module and recombine them into candidate full solutions.",
-    "Evaluate many recombinations cheaply on CPU, turning one hard search into a modular search space."
+    "Use reinforcement learning to train models to generate hierarchical code structures.",
+    "Split a problem into independently solvable modules, then implement each module separately.",
+    "Recombine k implementations across n modules to create up to k^n candidate solutions."
   ],
-  "evidence_signal": "On LiveCodeBench and CodeContests with Qwen 2.5 7B and Code World Model 32B, DecompRL outperforms standard and diversity-optimized RL beyond 10^5 tokens per problem and cuts GPU token cost by about 50x.",
-  "watch_item": "Performance depends on the ability to decompose tasks into independently solvable modules, so gains may be limited when a problem lacks a clean modular structure or when recombination introduces interface errors.",
+  "evidence_signal": "On LiveCodeBench and CodeContests, DecompRL with Qwen 2.5 7B and Code World Model 32B outperformed standard and diversity-optimized RL baselines beyond 10^5 tokens per problem.",
+  "watch_item": "The approach depends on the task being decomposable into verifiable sub-functions, so performance may drop when modular structure is unclear or module interfaces are hard to define.",
   "hashtags": [
     "#LLM",
     "#ReinforcementLearning",
     "#CodeGeneration",
     "#ModularAI",
-    "#ComputationalEfficiency"
+    "#TestTimeCompute"
   ],
   "paper_id": "2026-07-02-arxiv-decomprl_solving_harder_problems_by_learning_modular_code_generation",
   "paper_title": "DecompRL: Solving Harder Problems by Learning Modular Code Generation",
   "paper_date": "2026-07-02",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-04T15:09:25",
+  "generated_at": "2026-07-05T15:16:38",
   "generator": "openai"
 }

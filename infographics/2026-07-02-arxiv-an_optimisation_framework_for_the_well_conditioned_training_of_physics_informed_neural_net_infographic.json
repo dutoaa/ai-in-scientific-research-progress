@@ -1,13 +1,13 @@
 {
-  "key_insight": "DSGNAR is a scalable second-order training framework that tackles the core PINN bottleneck—severe optimization ill-conditioning—by combining doubly-sketched Gauss-Newton updates with adaptive control of regularization and step size.",
-  "engineering_relevance": "It enables PINNs to reach near round-off accuracy much faster and more reliably, making them more practical for high-accuracy PDE solving in scientific and engineering workflows.",
+  "key_insight": "DSGNAR is a second-order training framework that makes PINNs far better conditioned, enabling much higher accuracy and faster convergence than standard optimizers.",
+  "engineering_relevance": "This matters for scientific computing because it brings PINNs closer to classical solver accuracy on difficult PDEs, including nonlinear, chaotic, multi-scale, high-dimensional, and Navier-Stokes problems.",
   "method": [
-    "Doubly-sketched Gauss-Newton model for scalable second-order optimization",
-    "Adaptive ratio strategy to control regularization and step length",
-    "Designed to improve conditioning across nonlinear, chaotic, multi-scale, and high-dimensional PDE problems"
+    "Uses a doubly-sketched Gauss-Newton approximation to scale second-order optimization.",
+    "Adds adaptive control of both regularization and step length via a ratio-based strategy.",
+    "Targets the ill-conditioned PINN loss landscape to stabilize training and improve convergence."
   ],
-  "evidence_signal": "Across a benchmark suite including Burgers', Poisson, and Navier-Stokes problems, the method achieved relative L2 errors as low as 3×10^-16 in double precision and strong speedups, including sub-10-second single-precision Burgers' training to 4.75×10^-7.",
-  "watch_item": "As a second-order, sketching-based optimizer, performance may depend on implementation details, precision choice, and problem structure, so reproducibility and memory/compute overhead should be validated for new PDE settings.",
+  "evidence_signal": "Across benchmark PDEs, the method achieved errors as low as 3×10^-16 in double precision, improved Burgers’ results by five orders of magnitude, and was up to eight orders better on a high-dimensional Poisson problem while remaining faster.",
+  "watch_item": "Performance depends on accurate implementation of the sketched second-order updates and may still be sensitive to precision, architecture choice, and hyperparameter tuning in practical deployments.",
   "hashtags": [
     "#PINNs",
     "#ScientificMachineLearning",
@@ -19,6 +19,6 @@
   "paper_title": "An Optimisation Framework for the Well-Conditioned Training of Physics-Informed Neural Networks",
   "paper_date": "2026-07-02",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-07-04T15:09:30",
+  "generated_at": "2026-07-05T15:16:43",
   "generator": "openai"
 }

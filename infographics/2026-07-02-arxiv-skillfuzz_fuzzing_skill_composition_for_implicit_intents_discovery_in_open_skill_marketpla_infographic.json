@@ -1,17 +1,17 @@
 {
-  "key_insight": "SkillFuzz turns implicit-intent detection into a fuzzing problem over skill compositions, revealing that individually safe skills can interact to steer LLM agents toward unintended goals.",
-  "engineering_relevance": "For open skill marketplaces, this provides an execution-free screening method to audit compositional risks before deployment and reduce security blind spots from isolated skill review.",
+  "key_insight": "SkillFuzz treats skill composition itself as a fuzzing target, using planning-stage deviations from a baseline to uncover implicit intents that only appear when multiple benign skills interact.",
+  "engineering_relevance": "This helps marketplace operators audit AI agent skills before execution, reducing the risk that reusable skills combine into unintended or harmful behaviors in deployed agent systems.",
   "method": [
-    "Extract structured skill contracts from skill documents",
+    "Extract structured skill contracts from marketplace skills",
     "Use contract-guided Monte Carlo Tree Search to prioritize suspicious skill compositions",
-    "Compare planning artifacts against a skill-free baseline as a differential oracle"
+    "Compare planned intent against a skill-free baseline as a differential oracle"
   ],
-  "evidence_signal": "On representative workloads, SkillFuzz found over 1,000 implicit intents, confirmed more than 80% of the highest-risk flagged compositions during execution-time validation, and outperformed alternative search strategies while exploring only a fraction of the pairwise space.",
-  "watch_item": "Effectiveness depends on the quality of extracted skill contracts and planning artifacts, so noisy or incomplete skill descriptions may reduce detection accuracy.",
+  "evidence_signal": "On representative skill-marketplace workloads, SkillFuzz found over 1,000 distinct implicit intents under a fixed budget and validated more than 80% of the highest-risk flagged compositions during execution-time testing.",
+  "watch_item": "The approach depends on the quality of extracted skill contracts and planning artifacts, so weak or incomplete skill documentation could reduce detection accuracy.",
   "hashtags": [
     "#LLMAgents",
     "#Fuzzing",
-    "#AIsecurity",
+    "#AISafety",
     "#SkillMarketplaces",
     "#ScientificDiscovery"
   ],
@@ -19,6 +19,6 @@
   "paper_title": "SkillFuzz: Fuzzing Skill Composition for Implicit Intents Discovery in Open Skill Marketplaces",
   "paper_date": "2026-07-02",
   "paper_category": "Scientific Discovery",
-  "generated_at": "2026-07-04T15:09:43",
+  "generated_at": "2026-07-05T15:16:59",
   "generator": "openai"
 }
