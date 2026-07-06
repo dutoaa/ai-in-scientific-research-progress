@@ -1,24 +1,24 @@
 {
-  "key_insight": "Neuron-OPSD uses internal neuron activations to choose better training data and build a stronger teacher, enabling annotation-free self-distillation that improves specialized-domain performance without relying on labels.",
-  "engineering_relevance": "This offers a practical post-training recipe for deploying LLMs in expert domains where human annotation or online feedback is expensive, while aiming to preserve generalization and calibration.",
+  "key_insight": "Neuron-OPSD uses internal neuron activations to choose better training data and build teacher context, enabling annotation-free self-distillation without ground-truth labels.",
+  "engineering_relevance": "This offers a practical post-training strategy for specialized LLMs when expert annotation and online feedback are expensive, while aiming to preserve both in-domain accuracy and cross-domain generalization.",
   "method": [
-    "Select training examples using neuron-activation signals instead of labels.",
-    "Construct teacher context from neuron-aware data selection and extra context.",
-    "Train the student with on-policy distillation from the teacher distribution, using no ground-truth labels."
+    "Select training examples using neuron activation signals rather than labels.",
+    "Construct teacher context from activation-guided data and aggregate rollouts into a teacher distribution.",
+    "Train the student with on-policy distillation from the teacher, with no ground-truth supervision."
   ],
-  "evidence_signal": "The abstract reports gains on specialized-domain benchmarks, with improved in-domain performance, preserved cross-domain generalization, and reduced calibration collapse versus prior annotation-free baselines.",
-  "watch_item": "Because the approach depends on internal activations and on-policy distillation, it may be sensitive to model architecture, activation extraction overhead, and the quality of the selected context.",
+  "evidence_signal": "Across specialized-domain benchmarks, the method improves in-domain performance while maintaining cross-domain generalization and reducing calibration collapse compared with prior annotation-free baselines.",
+  "watch_item": "Because the approach depends on activation-driven data selection and teacher construction, its effectiveness may vary with model architecture, domain shift, and the quality of rollout diversity.",
   "hashtags": [
     "#LLM",
     "#SelfDistillation",
     "#AnnotationFree",
-    "#NeuralActivations",
-    "#Calibration"
+    "#NeuronActivations",
+    "#PostTraining"
   ],
   "paper_id": "2026-07-02-arxiv-neuron_aware_data_selection_for_annotation_free_llm_self_distillation",
   "paper_title": "Neuron-Aware Data Selection for Annotation-Free LLM Self-Distillation",
   "paper_date": "2026-07-02",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-05T15:16:54",
+  "generated_at": "2026-07-06T16:54:07",
   "generator": "openai"
 }

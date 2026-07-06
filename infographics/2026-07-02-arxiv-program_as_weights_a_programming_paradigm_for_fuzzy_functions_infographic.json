@@ -1,24 +1,24 @@
 {
-  "key_insight": "PAW turns a natural-language function specification into a compact neural artifact that can be executed locally and reused cheaply, instead of calling a large model for every input.",
-  "engineering_relevance": "This offers a practical path to offline, low-latency, and lower-memory deployment for fuzzy tasks like log filtering, JSON repair, and intent ranking.",
+  "key_insight": "Program-as-Weights turns a natural-language task specification into a compact neural artifact that can be reused locally, making fuzzy functions cheap, offline, and reproducible.",
+  "engineering_relevance": "It offers a practical alternative to per-query LLM API use for tasks like log filtering, JSON repair, and ranking, with much lower memory and runtime cost.",
   "method": [
-    "Train a 4B compiler on FuzzyBench to translate specs into parameter-efficient adapters.",
-    "Use a frozen 0.6B Qwen3 interpreter to execute the generated PAW programs.",
-    "Compile once per function definition, then reuse the artifact for many low-cost calls."
+    "A 4B compiler converts a natural-language specification into parameter-efficient adapters.",
+    "The adapters plug into a frozen 0.6B Qwen3 interpreter that executes the fuzzy function.",
+    "The approach is trained and evaluated on FuzzyBench, a released 10M-example dataset."
   ],
-  "evidence_signal": "The abstract reports a 10M-example dataset and that a 0.6B Qwen3 interpreter running PAW matches direct prompting of Qwen3-32B while using about 1/50 the inference memory and reaching 30 tokens/s on a MacBook M3.",
-  "watch_item": "Performance depends on the quality of the compiler-generated adapter and the frozen interpreter, so robustness on out-of-distribution fuzzy functions may be a practical concern.",
+  "evidence_signal": "The abstract reports that a 0.6B Qwen3 interpreter running PAW matches direct prompting of Qwen3-32B while using about one-fiftieth the inference memory and reaching 30 tokens/s on a MacBook M3.",
+  "watch_item": "The system depends on the quality of compiler-generated adapters and on whether FuzzyBench-style tasks transfer well to unseen fuzzy-function specs.",
   "hashtags": [
     "#LLMSystems",
-    "#NeuralProgramming",
+    "#NeuralCompilation",
+    "#FuzzyFunctions",
     "#EfficientInference",
-    "#OnDeviceAI",
     "#ProgramAsWeights"
   ],
   "paper_id": "2026-07-02-arxiv-program_as_weights_a_programming_paradigm_for_fuzzy_functions",
   "paper_title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
   "paper_date": "2026-07-02",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-05T15:17:14",
+  "generated_at": "2026-07-06T16:54:21",
   "generator": "openai"
 }

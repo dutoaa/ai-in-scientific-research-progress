@@ -1,24 +1,24 @@
 {
   "key_insight": "RECONTEXT improves long-context reasoning by recursively replaying query-relevant evidence from the original context before final answer generation, without training or pruning.",
-  "engineering_relevance": "It offers a practical, drop-in inference strategy for making long-context LLMs use existing evidence more effectively in real applications.",
+  "engineering_relevance": "It offers a lightweight inference-time harness for systems that need better use of long documents while preserving the full context window.",
   "method": [
-    "Build a query-conditioned evidence pool using model-internal relevance signals.",
-    "Replay the selected evidence before generating the final answer while keeping the full context intact.",
-    "Repeat selection recursively to separate evidence organization from answer synthesis, with no external memory or fine-tuning."
+    "Uses model-internal relevance signals to build a query-conditioned evidence pool.",
+    "Recursively replays selected evidence ahead of generation while keeping the full original context available.",
+    "Separates evidence organization from answer generation with no extra training or external memory."
   ],
-  "evidence_signal": "On eight long-context benchmarks at 128K context length, RECONTEXT improved evidence utilization across Qwen3-4B, Qwen3-8B, and Llama3-8B and achieved the best average rank on all three backbones.",
-  "watch_item": "Because it relies on internal relevance signals, performance may depend on the base model’s attention quality and add inference overhead from recursive evidence selection.",
+  "evidence_signal": "The method was evaluated on eight long-context datasets at 128K context length and consistently improved evidence utilization across Qwen3-4B, Qwen3-8B, and Llama3-8B, with the best average rank on all three backbones.",
+  "watch_item": "Because it relies on internal relevance signals and extra replay steps, performance may depend on the quality of the base model’s attention signals and can add inference overhead.",
   "hashtags": [
-    "#LongContextLLM",
-    "#Reasoning",
-    "#RetrievalAugmented",
-    "#InferenceTimeMethod",
-    "#NLP"
+    "#LongContextReasoning",
+    "#LLMInference",
+    "#EvidenceRetrieval",
+    "#RecursiveReplay",
+    "#AssociativeMemory"
   ],
   "paper_id": "2026-07-02-arxiv-recontext_recursive_evidence_replay_as_llm_harness_for_long_context_reasoning",
   "paper_title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
   "paper_date": "2026-07-02",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-05T15:17:03",
+  "generated_at": "2026-07-06T16:54:14",
   "generator": "openai"
 }

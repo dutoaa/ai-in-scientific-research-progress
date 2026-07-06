@@ -1,24 +1,24 @@
 {
-  "key_insight": "The paper replaces sample-wise RL rewards with distribution-wise rewards to reduce reward hacking, improve diversity, and better align generated images with the target data distribution.",
-  "engineering_relevance": "For visual generative model finetuning, this offers a more stable RL objective that can improve image quality without collapsing sample diversity, making deployment-friendly post-training optimization more reliable.",
+  "key_insight": "This paper replaces sample-wise RL rewards with distribution-wise rewards to better align generative models with the target data distribution and reduce reward hacking, mode collapse, and visual artifacts.",
+  "engineering_relevance": "The method offers a practical path to more reliable finetuning of visual generative models when image quality, diversity, and stability matter in downstream engineering workflows.",
   "method": [
-    "Evaluate rewards over a generated subset as a distribution, not per image",
-    "Use a subset-replace strategy to update only a small part of the reference set for efficiency",
-    "Apply RL to optimize post-hoc model merging coefficients to reduce train-inference inconsistency"
+    "Use distribution-wise rewards instead of evaluating each generated sample independently.",
+    "Introduce a subset-replace strategy to estimate rewards efficiently by updating only a small generated reference subset.",
+    "Apply RL to optimize post-hoc model merging coefficients to reduce train-inference inconsistency from SDE-based RL."
   ],
-  "evidence_signal": "The abstract reports strong FID-50K gains, improving SiT from 8.30 to 5.77 and EDM2 from 3.74 to 3.52, with qualitative results showing better perceptual quality and preserved diversity.",
-  "watch_item": "Distribution-wise reward estimation and subset management still add algorithmic complexity, so efficiency and stability depend on careful implementation and reward design.",
+  "evidence_signal": "The abstract reports improved FID-50K on multiple base models, including SiT from 8.30 to 5.77 and EDM2 from 3.74 to 3.52, alongside better perceived quality and diversity.",
+  "watch_item": "Estimating distribution-wise rewards and managing subset-replace updates may still add implementation complexity and require careful tuning to avoid unstable optimization.",
   "hashtags": [
     "#GenerativeAI",
     "#ReinforcementLearning",
-    "#ImageSynthesis",
-    "#ModelOptimization",
-    "#MachineLearning"
+    "#DiffusionModels",
+    "#ModelFinetuning",
+    "#ComputerVision"
   ],
   "paper_id": "2026-07-02-arxiv-optimizing_visual_generative_models_via_distribution_wise_rewards",
   "paper_title": "Optimizing Visual Generative Models via Distribution-wise Rewards",
   "paper_date": "2026-07-02",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-07-05T15:17:01",
+  "generated_at": "2026-07-06T16:54:11",
   "generator": "openai"
 }

@@ -1,24 +1,24 @@
 {
-  "key_insight": "DemoPSD improves on-policy self-distillation by adaptively blending teacher and student outputs with a reverse-KL barycenter target, reducing privileged-information leakage while preserving exploration.",
-  "engineering_relevance": "This is relevant for training reasoning LLMs because it offers a safer distillation strategy that can improve cross-domain generalization without collapsing the model into overfit teacher behavior.",
+  "key_insight": "DemoPSD replaces full teacher imitation with a disagreement-adapted reverse-KL barycenter, so the student learns from the teacher without copying privileged shortcuts.",
+  "engineering_relevance": "For LLM training, this offers a practical way to improve reasoning robustness and out-of-distribution generalization while reducing leakage from teacher-only information.",
   "method": [
-    "Compute token-level disagreement between teacher and student distributions.",
-    "Use disagreement to adaptively set the blending weight for a reverse-KL barycenter target.",
-    "Train the student to match this selective target rather than the full teacher distribution."
+    "Compute the teacher–student distribution gap at each token.",
+    "Use the gap to adaptively blend teacher and student into a reverse-KL barycenter target.",
+    "Train with selective guidance to preserve exploration and attenuate privileged information leakage."
   ],
-  "evidence_signal": "The abstract reports experiments on SciKnowEval across four scientific fields, where DemoPSD outperforms GRPO and SDPO and also generalizes better to out-of-distribution GPQA benchmarks.",
-  "watch_item": "The adaptive token-level blending and distribution matching may be sensitive to how disagreement is estimated and tuned during training, which could affect stability and reproducibility.",
+  "evidence_signal": "The method was evaluated on SciKnowEval across four scientific domains and reportedly outperformed GRPO and SDPO while maintaining higher training entropy and better GPQA out-of-distribution generalization.",
+  "watch_item": "Adaptive token-level blending may be sensitive to how disagreement is measured and tuned, so stable implementation and hyperparameter selection are likely important.",
   "hashtags": [
-    "#LLMReasoning",
+    "#LLMTraining",
     "#SelfDistillation",
-    "#ReinforcementLearning",
+    "#ReasoningModels",
     "#Generalization",
-    "#ScientificAI"
+    "#AIResearch"
   ],
   "paper_id": "2026-07-02-arxiv-demopsd_disagreement_modulated_policy_self_distillation",
   "paper_title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
   "paper_date": "2026-07-02",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-05T15:16:52",
+  "generated_at": "2026-07-06T16:54:04",
   "generator": "openai"
 }
