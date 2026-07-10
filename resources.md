@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-07-09
+Generated: 2026-07-10
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Physics-Audited Agentic Discovery in Scientific Machine Learning
+## 1. Deep Learning for Joint Narrowband Interference Cancellation and Soft Demodulation in OFDM Systems
 
-- Date: 2026-07-08
+- Date: 2026-07-09
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.07379v1
-- PDF: https://arxiv.org/pdf/2607.07379v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-physics_audited_agentic_discovery_in_scientific_machine_learning_infographic.json
+- arXiv: https://arxiv.org/abs/2607.08717v1
+- PDF: https://arxiv.org/pdf/2607.08717v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-deep_learning_for_joint_narrowband_interference_cancellation_and_soft_demodulation_in_ofdm_infographic.json
 
-## 2. Higher-Order Geometric Updates for Levenberg-Marquardt Method via Riemann Normal Coordinates
+## 2. DrugGen 2: A disease-aware language model for enhancing drug discovery
 
-- Date: 2026-07-08
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.07623v1
-- PDF: https://arxiv.org/pdf/2607.07623v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-higher_order_geometric_updates_for_levenberg_marquardt_method_via_riemann_normal_coordinat_infographic.json
-
-## 3. Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning
-
-- Date: 2026-07-08
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2607.07508v1
-- PDF: https://arxiv.org/pdf/2607.07508v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-single_rollout_asynchronous_optimization_for_agentic_reinforcement_learning_infographic.json
-
-## 4. Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF
-
-- Date: 2026-07-08
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.07693v1
-- PDF: https://arxiv.org/pdf/2607.07693v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-selective_timestep_weighting_and_advantage_based_replay_for_sample_efficient_diffusion_rlh_infographic.json
-
-## 5. MLIP Studio: An Open Platform for Interactive Benchmarking and Atomistic Simulations Using Machine Learning Interatomic Potentials
-
-- Date: 2026-07-08
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2607.07606v1
-- PDF: https://arxiv.org/pdf/2607.07606v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-mlip_studio_an_open_platform_for_interactive_benchmarking_and_atomistic_simulations_using_infographic.json
-
-## 6. A Unified Detection Framework for AI-Related Content and Artifacts
-
-- Date: 2026-07-08
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.07527v1
-- PDF: https://arxiv.org/pdf/2607.07527v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-a_unified_detection_framework_for_ai_related_content_and_artifacts_infographic.json
-
-## 7. Neural Operator-enabled Topology-informed Evolutionary Strategy for PDE-Constrained Optimization
-
-- Date: 2026-07-08
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.07682v1
-- PDF: https://arxiv.org/pdf/2607.07682v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-neural_operator_enabled_topology_informed_evolutionary_strategy_for_pde_constrained_optimi_infographic.json
-
-## 8. Asymmetric Focal Loss Improves Graph Neural Network Prediction of Drug-Drug Interactions
-
-- Date: 2026-07-08
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2607.07611v1
-- PDF: https://arxiv.org/pdf/2607.07611v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-asymmetric_focal_loss_improves_graph_neural_network_prediction_of_drug_drug_interactions_infographic.json
-
-## 9. A Multi-Scale Machine Learning Framework for Coupled Chemical, Spin, and Structural Disorder in Alloys
-
-- Date: 2026-07-08
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.07456v1
-- PDF: https://arxiv.org/pdf/2607.07456v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-a_multi_scale_machine_learning_framework_for_coupled_chemical_spin_and_structural_disorder_infographic.json
-
-## 10. Any-Dimensional Learning by Sampling
-
-- Date: 2026-07-08
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.07680v1
-- PDF: https://arxiv.org/pdf/2607.07680v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-any_dimensional_learning_by_sampling_infographic.json
-
-## 11. A hierarchical memory architecture overcomes context limits in long-horizon multi-agent computational modeling
-
-- Date: 2026-07-08
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2607.07666v1
-- PDF: https://arxiv.org/pdf/2607.07666v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-a_hierarchical_memory_architecture_overcomes_context_limits_in_long_horizon_multi_agent_co_infographic.json
-
-## 12. A Physics-Informed Neural Network for Small-Signal Stability in Multi-Inverter Power Systems
-
-- Date: 2026-07-08
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.07523v1
-- PDF: https://arxiv.org/pdf/2607.07523v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-a_physics_informed_neural_network_for_small_signal_stability_in_multi_inverter_power_syste_infographic.json
-
-## 13. Machine Learning Materials Properties by Encoding Orbital-Projected Density of States
-
-- Date: 2026-07-08
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2607.07339v1
-- PDF: https://arxiv.org/pdf/2607.07339v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-machine_learning_materials_properties_by_encoding_orbital_projected_density_of_states_infographic.json
-
-## 14. Stability of Flow Models for Graph Signals
-
-- Date: 2026-07-08
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.07510v1
-- PDF: https://arxiv.org/pdf/2607.07510v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-stability_of_flow_models_for_graph_signals_infographic.json
-
-## 15. Human and LLM Collaboration for Accelerated Materials Synthesis and Discovery
-
-- Date: 2026-07-08
+- Date: 2026-07-09
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2607.07604v1
-- PDF: https://arxiv.org/pdf/2607.07604v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-human_and_llm_collaboration_for_accelerated_materials_synthesis_and_discovery_infographic.json
+- arXiv: https://arxiv.org/abs/2607.08404v1
+- PDF: https://arxiv.org/pdf/2607.08404v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-druggen_2_a_disease_aware_language_model_for_enhancing_drug_discovery_infographic.json
 
-## 16. TimEE: End-to-end Time Series Classification via In-Context Learning
+## 3. MPFlow: Learning Budgeted Max-Flow Optimization on the Lightning Network with Deep Graph Reinforcement Learning
 
-- Date: 2026-07-08
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.07500v1
-- PDF: https://arxiv.org/pdf/2607.07500v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-timee_end_to_end_time_series_classification_via_in_context_learning_infographic.json
-
-## 17. SpaCellAgent: A Self-Evolving LLM-Based Multi-Agent Framework for Trajectory Analysis
-
-- Date: 2026-07-08
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.07467v1
-- PDF: https://arxiv.org/pdf/2607.07467v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-spacellagent_a_self_evolving_llm_based_multi_agent_framework_for_trajectory_analysis_infographic.json
-
-## 18. Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning
-
-- Date: 2026-07-08
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2607.07708v1
-- PDF: https://arxiv.org/pdf/2607.07708v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-accurate_interdisciplinary_and_transparent_structure_property_understanding_with_deep_nati_infographic.json
-
-## 19. Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass
-
-- Date: 2026-07-08
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2607.07696v1
-- PDF: https://arxiv.org/pdf/2607.07696v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-breaking_database_lock_in_agentic_regeneration_of_high_performance_storage_readers_for_dat_infographic.json
-
-## 20. Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning
-
-- Date: 2026-07-08
+- Date: 2026-07-09
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.07690v1
-- PDF: https://arxiv.org/pdf/2607.07690v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-08-arxiv-agon_competitive_cross_model_rl_with_implicit_rival_grading_of_reasoning_infographic.json
+- arXiv: https://arxiv.org/abs/2607.08703v1
+- PDF: https://arxiv.org/pdf/2607.08703v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-mpflow_learning_budgeted_max_flow_optimization_on_the_lightning_network_with_deep_graph_re_infographic.json
+
+## 4. Statistical Efficiency and Inference of Quantile Distributional Reinforcement Learning
+
+- Date: 2026-07-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.08444v1
+- PDF: https://arxiv.org/pdf/2607.08444v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-statistical_efficiency_and_inference_of_quantile_distributional_reinforcement_learning_infographic.json
+
+## 5. Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks
+
+- Date: 2026-07-09
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.08406v1
+- PDF: https://arxiv.org/pdf/2607.08406v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-beyond_backpropagation_monte_carlo_method_can_train_deep_neural_networks_infographic.json
+
+## 6. UltraX: Refining Pre-Training Data at Scale with Adaptive Programmatic Editing
+
+- Date: 2026-07-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.08646v1
+- PDF: https://arxiv.org/pdf/2607.08646v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-ultrax_refining_pre_training_data_at_scale_with_adaptive_programmatic_editing_infographic.json
+
+## 7. ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation
+
+- Date: 2026-07-09
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2607.08741v1
+- PDF: https://arxiv.org/pdf/2607.08741v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-ardy_autoregressive_diffusion_with_hybrid_representation_for_interactive_human_motion_gene_infographic.json
+
+## 8. EdgeRefine: Privacy-Utility Balance for Graphs via Jaccard Sampling under Edge Differential Privacy
+
+- Date: 2026-07-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.08659v1
+- PDF: https://arxiv.org/pdf/2607.08659v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-edgerefine_privacy_utility_balance_for_graphs_via_jaccard_sampling_under_edge_differential_infographic.json
+
+## 9. Latent Memory Palace: Reasoning for Control as Autoregressive Variational Inference
+
+- Date: 2026-07-09
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2607.08724v1
+- PDF: https://arxiv.org/pdf/2607.08724v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-latent_memory_palace_reasoning_for_control_as_autoregressive_variational_inference_infographic.json
+
+## 10. Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study
+
+- Date: 2026-07-09
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2607.08652v1
+- PDF: https://arxiv.org/pdf/2607.08652v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-formal_mechanisms_for_market_stability_in_self_interested_agent_societies_a_marketplace_si_infographic.json
+
+## 11. BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression
+
+- Date: 2026-07-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.08643v1
+- PDF: https://arxiv.org/pdf/2607.08643v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-bisco_llm_lookup_free_binary_spherical_coding_for_extreme_low_bit_large_language_model_com_infographic.json
+
+## 12. SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets
+
+- Date: 2026-07-09
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2607.08681v1
+- PDF: https://arxiv.org/pdf/2607.08681v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-solarchain_eval_a_physics_constrained_benchmark_for_trustworthy_economic_agents_in_decentr_infographic.json
+
+## 13. Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models
+
+- Date: 2026-07-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.08665v1
+- PDF: https://arxiv.org/pdf/2607.08665v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-resample_or_reroute_budget_aware_test_time_model_selection_for_large_language_models_infographic.json
+
+## 14. WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search
+
+- Date: 2026-07-09
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2607.08662v1
+- PDF: https://arxiv.org/pdf/2607.08662v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-webswarm_recursive_multi_agent_orchestration_for_deep_and_wide_web_search_infographic.json
+
+## 15. When Synthetic Speech Is All You Have: Better Call GRPO
+
+- Date: 2026-07-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.08409v1
+- PDF: https://arxiv.org/pdf/2607.08409v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-when_synthetic_speech_is_all_you_have_better_call_grpo_infographic.json
+
+## 16. SLORR: Simple and Efficient In-Training Low-Rank Regularization
+
+- Date: 2026-07-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.08754v1
+- PDF: https://arxiv.org/pdf/2607.08754v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-slorr_simple_and_efficient_in_training_low_rank_regularization_infographic.json
+
+## 17. The complexities of patient-centred conversational artificial intelligence
+
+- Date: 2026-07-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.08625v1
+- PDF: https://arxiv.org/pdf/2607.08625v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-the_complexities_of_patient_centred_conversational_artificial_intelligence_infographic.json
+
+## 18. Contravariance Theory: Strong Alignment for Minimal Solutions to Hard Tasks
+
+- Date: 2026-07-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.08561v1
+- PDF: https://arxiv.org/pdf/2607.08561v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-contravariance_theory_strong_alignment_for_minimal_solutions_to_hard_tasks_infographic.json
+
+## 19. Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows
+
+- Date: 2026-07-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.08740v1
+- PDF: https://arxiv.org/pdf/2607.08740v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-workflow_as_knowledge_semantic_persistence_for_llm_mediated_workflows_infographic.json
+
+## 20. The Illusion of Equivalency: Statistical Characterization of Quantization Effects in LLMs
+
+- Date: 2026-07-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.08734v1
+- PDF: https://arxiv.org/pdf/2607.08734v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-09-arxiv-the_illusion_of_equivalency_statistical_characterization_of_quantization_effects_in_llms_infographic.json
