@@ -1,24 +1,24 @@
 {
-  "key_insight": "BiSCo-LLM compresses LLM weights with lookup-free binary spherical codes plus residual error coding, aiming for extreme low-bit storage without explicit codebooks.",
-  "engineering_relevance": "The method targets practical deployment bottlenecks in large models by reducing memory, bandwidth, and checkpoint size while preserving recoverability through structured decoding and distillation.",
+  "key_insight": "BiSCo-LLM compresses LLM weights with a codebook-free binary spherical coding pipeline, aiming for extreme low-bit storage without explicit vector-quantization centroids.",
+  "engineering_relevance": "It offers a practical path to reduce memory, bandwidth, and checkpoint size for deployed LLMs when conventional quantization approaches become too limited near 2 bits per weight.",
   "method": [
-    "Map local weight chunks to a unit hypersphere and binarize them into compact spherical codes.",
-    "Encode residual reconstruction error with a second BSQ stage to improve rate-distortion without storing centroids.",
-    "Apply category-wise recovery distillation after module replacement, with an 8-bit protected path for sensitive channels."
+    "Map local weight chunks to a unit hypersphere and binarize them into packed spherical codes.",
+    "Use a residual BSQ stage to encode reconstruction error without storing codebooks.",
+    "Apply category-wise recovery distillation plus a small protected 8-bit channel for sensitive weights."
   ],
-  "evidence_signal": "The abstract reports a storage budget accounting that includes binary codes, neural decoders, protected-channel payloads, LoRA adapters, and metadata, emphasizing end-to-end compression evaluation.",
-  "watch_item": "Compression efficiency may depend on the added decoder, protected-channel path, and distillation overhead, so the effective savings should be checked against full system storage and deployment cost.",
+  "evidence_signal": "The abstract emphasizes a storage-budgeted evaluation that accounts for binary codes, neural decoders, protected-channel payloads, LoRA adapters, and metadata.",
+  "watch_item": "Implementation complexity may rise because the final compressed budget combines several components and the protected-channel path must be handled carefully for stability and fair accounting.",
   "hashtags": [
     "#LLMCompression",
     "#BinaryCoding",
-    "#ModelCompression",
-    "#LowBitInference",
-    "#EfficientAI"
+    "#LowBitQuantization",
+    "#ModelDeployment",
+    "#EfficientInference"
   ],
   "paper_id": "2026-07-09-arxiv-bisco_llm_lookup_free_binary_spherical_coding_for_extreme_low_bit_large_language_model_com",
   "paper_title": "BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression",
   "paper_date": "2026-07-09",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-10T16:27:27",
+  "generated_at": "2026-07-11T14:58:23",
   "generator": "openai"
 }
