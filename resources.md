@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-07-11
+Generated: 2026-07-12
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Deep Learning for Joint Narrowband Interference Cancellation and Soft Demodulation in OFDM Systems

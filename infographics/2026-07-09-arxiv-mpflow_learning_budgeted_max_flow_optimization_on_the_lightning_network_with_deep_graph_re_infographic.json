@@ -1,24 +1,24 @@
 {
-  "key_insight": "MPFlow learns where to open a limited number of Lightning Network channels so a node’s routing capacity, measured by max-flow, increases as much as possible.",
-  "engineering_relevance": "This provides a practical decision tool for liquidity placement in payment networks, helping operators allocate capital to channels that improve throughput under a fixed budget.",
+  "key_insight": "MPFlow learns where to open Lightning Network channels under a fixed budget to maximize routing capacity, formulated as a budgeted max-flow optimization problem on graphs.",
+  "engineering_relevance": "The method can guide liquidity placement and peer selection for operators who want better payment routing efficiency without manually tuning channel openings.",
   "method": [
-    "Model channel opening as budgeted graph optimization: choose k edge additions to maximize s–t max-flow.",
-    "Use a message-passing graph policy network trained with PPO and action masking.",
-    "Apply a hub-exclusion curriculum so the policy learns capacity-aware placement instead of simply attaching to the highest-degree nodes."
+    "Uses a message-passing graph policy network to score candidate channel additions.",
+    "Optimizes actions with PPO and action masking under a fixed edge-addition budget.",
+    "Trains with a hub-exclusion curriculum so the policy learns capacity-aware placement instead of simply attaching to top hubs."
   ],
-  "evidence_signal": "The method was tested on real Lightning Network snapshots and outperformed strong heuristic baselines across multiple seeds and unseen graphs, with deployment results covering 4,640 channel-open decisions and 267.3 BTC allocated across 30 managed nodes.",
-  "watch_item": "Performance is tied to the quality and stability of Lightning Network snapshots, so deployment may require careful adaptation to changing network topology and liquidity conditions.",
+  "evidence_signal": "The approach was evaluated on real Lightning Network snapshots across multiple seeds and unseen graphs, where it outperformed strong heuristic baselines on the max-flow objective and was also deployed in production for 4640 channel-open decisions.",
+  "watch_item": "Results depend on snapshot quality and deployment constraints, and a policy trained with hub exclusion may still need careful validation before use on rapidly changing network topologies.",
   "hashtags": [
     "#GraphReinforcementLearning",
     "#LightningNetwork",
-    "#MaxFlow",
-    "#NetworkOptimization",
-    "#PPO"
+    "#MaxFlowOptimization",
+    "#PPO",
+    "#NetworkEngineering"
   ],
   "paper_id": "2026-07-09-arxiv-mpflow_learning_budgeted_max_flow_optimization_on_the_lightning_network_with_deep_graph_re",
   "paper_title": "MPFlow: Learning Budgeted Max-Flow Optimization on the Lightning Network with Deep Graph Reinforcement Learning",
   "paper_date": "2026-07-09",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-11T14:58:11",
+  "generated_at": "2026-07-12T15:00:52",
   "generator": "openai"
 }

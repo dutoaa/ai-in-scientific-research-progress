@@ -1,24 +1,24 @@
 {
-  "key_insight": "A two-stage deep learning pipeline jointly cancels narrowband interference and produces reliable soft LLRs for OFDM, fixing the mismatch between classical interference suppression and Gaussian demodulation.",
-  "engineering_relevance": "It offers a lower-latency, more scalable receiver-side solution that improves BLER and avoids error floors under strong or overlapping interference.",
+  "key_insight": "A unified deep learning pipeline can jointly cancel narrowband interference in OFDM and produce calibrated soft demodulation, avoiding the mismatch that causes error floors in classical receivers.",
+  "engineering_relevance": "The approach reduces sequential processing latency and improves receiver robustness, making it attractive for practical OFDM systems operating under strong or structured interference.",
   "method": [
-    "NBI-CNet uses a physics-informed CNN to estimate and subtract multi-tone narrowband interference in one forward pass.",
-    "LLR-CNet whitens non-Gaussian residuals into calibrated soft metrics for robust demodulation.",
-    "The design is scale-invariant and does not require prior knowledge of the number of interferers."
+    "NBI-CNet: physics-informed CNN that estimates and removes multi-tone narrowband interference in one forward pass.",
+    "LLR-CNet: learns to transform post-cancellation residuals into reliable log-likelihood ratios for decoding.",
+    "Scale-invariant design generalizes across FFT sizes without retraining."
   ],
-  "evidence_signal": "Simulations show up to 60% complexity reduction versus EOMP-IDS, near-optimal performance within 0.2 to 0.5 dB at BLER 10^-4 under SIR = -10 dB, and more than 3 dB coding gain under mild interference with heavy spectral overlap.",
-  "watch_item": "Generalization depends on training coverage and careful integration with the receiver chain, especially when interference statistics differ from the simulated conditions.",
+  "evidence_signal": "Simulations report up to 60% lower complexity than EOMP-IDS, elimination of baseline error floors, and performance within 0.2 to 0.5 dB of the optimal iterative method at BLER = 10^-4 under SIR = -10 dB.",
+  "watch_item": "Performance depends on how well the trained model matches the interference/channel conditions, so deployment may require validation across the intended signal and spectral-overlap regimes.",
   "hashtags": [
     "#OFDM",
     "#DeepLearning",
     "#InterferenceCancellation",
     "#SoftDemodulation",
-    "#WirelessCommunications"
+    "#ScientificML"
   ],
   "paper_id": "2026-07-09-arxiv-deep_learning_for_joint_narrowband_interference_cancellation_and_soft_demodulation_in_ofdm",
   "paper_title": "Deep Learning for Joint Narrowband Interference Cancellation and Soft Demodulation in OFDM Systems",
   "paper_date": "2026-07-09",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-07-11T14:58:05",
+  "generated_at": "2026-07-12T15:00:47",
   "generator": "openai"
 }

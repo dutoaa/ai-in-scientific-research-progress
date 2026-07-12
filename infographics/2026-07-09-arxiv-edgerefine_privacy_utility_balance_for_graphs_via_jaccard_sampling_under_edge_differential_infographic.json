@@ -1,24 +1,24 @@
 {
-  "key_insight": "EdgeRefine improves the privacy-utility trade-off for graph learning by using Jaccard-based edge ranking and selective sampling to preserve useful structure while satisfying edge differential privacy.",
-  "engineering_relevance": "It offers a practical way to deploy GNNs on sensitive graphs with less accuracy loss than uniform noise injection, making private graph analytics more feasible.",
+  "key_insight": "EdgeRefine improves the privacy-utility trade-off for graph learning by ranking and sampling edges with Jaccard-based probability estimates instead of adding uniform noise to the entire adjacency matrix.",
+  "engineering_relevance": "This gives a practical edge-differentially-private preprocessing strategy for GNN pipelines that can preserve model accuracy while limiting structural privacy leakage.",
   "method": [
-    "Estimate edge-existence likelihood with Jaccard similarity and rank edges for refinement.",
-    "Use privacy budget ε to control the ratio of true vs. false edges sampled.",
-    "Apply a separate sampling rate k to cap graph size and maintain sparsity."
+    "Estimate edge-existence probabilities using Jaccard similarity.",
+    "Rank edges for noisy removal and sample true vs. false edges separately using the privacy budget ε.",
+    "Control final graph sparsity with a separate sampling rate k."
   ],
-  "evidence_signal": "Across multiple datasets and GNNs, EdgeRefine matches or approaches non-private performance and outperforms prior privacy-preserving baselines, including gains of 17.8% on ACM with GAT and 19.7% on Cora with GCN at ε=2.5.",
-  "watch_item": "The method depends on reliable similarity-based edge ranking and careful tuning of ε and k, which may be sensitive to graph homophily and dataset structure.",
+  "evidence_signal": "Across node and graph classification experiments, EdgeRefine matches or approaches non-private accuracy and outperforms privacy-preserving baselines; at ε=2.5 it improves accuracy by 17.8% on ACM with GAT and 19.7% on Cora with GCN, while also resisting reconstruction attacks.",
+  "watch_item": "Performance depends on the quality of Jaccard-based edge ranking and the chosen ε/k settings, so graphs with weak local similarity signals may be harder to refine effectively.",
   "hashtags": [
-    "#DifferentialPrivacy",
     "#GraphNeuralNetworks",
+    "#DifferentialPrivacy",
     "#PrivacyPreservingAI",
     "#GraphLearning",
-    "#JaccardSampling"
+    "#EdgePrivacy"
   ],
   "paper_id": "2026-07-09-arxiv-edgerefine_privacy_utility_balance_for_graphs_via_jaccard_sampling_under_edge_differential",
   "paper_title": "EdgeRefine: Privacy-Utility Balance for Graphs via Jaccard Sampling under Edge Differential Privacy",
   "paper_date": "2026-07-09",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-11T14:58:34",
+  "generated_at": "2026-07-12T15:01:12",
   "generator": "openai"
 }

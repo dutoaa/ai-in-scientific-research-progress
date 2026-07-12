@@ -1,24 +1,24 @@
 {
-  "key_insight": "The paper argues that, under a fixed per-query budget, the best way to improve LLM serving quality is to dynamically trade off resampling the current model against rerouting to another model instead of treating them as separate decisions.",
-  "engineering_relevance": "This gives practitioners a cost-aware policy for deploying LLM routers that can better balance latency, price, and answer correctness in real serving systems.",
+  "key_insight": "The paper reframes LLM routing as a single budget allocation problem, balancing resampling the current model against rerouting to another model to maximize expected correctness.",
+  "engineering_relevance": "This provides a practical serving strategy for cost-sensitive LLM systems, helping operators improve quality under fixed per-query budgets instead of relying on a single-shot router.",
   "method": [
-    "Formulates budget-aware test-time model selection with a per-query cost budget and an imperfect verifier.",
-    "Introduces an online resample-or-reroute (RoR) policy that allocates budget by estimated marginal correctness per unit cost.",
-    "Grounds the policy in the asymmetry between recoverability from resampling and from routing to another model."
+    "Formulate budget-aware test-time model selection with an imperfect verifier.",
+    "Use an online resample-or-reroute (RoR) policy driven by estimated marginal correctness per unit cost.",
+    "Allocate each query’s budget between resampling and rerouting based on recoverability asymmetry."
   ],
-  "evidence_signal": "Replay experiments on regenerated multi-draw correctness tensors from an eleven-model open-weight pool across four benchmarks show RoR achieves a stronger cost-quality Pareto front than several baselines, with the biggest gains on the most heterogeneous benchmark.",
-  "watch_item": "The gains depend on verifier quality and shrink as the verifier gets worse, so deployment performance may be limited in settings with weak or noisy verification.",
+  "evidence_signal": "Replay experiments on regenerated multi-draw correctness tensors from 11 open-weight models across 4 benchmarks show RoR improves the cost-quality Pareto front over several baselines, especially on the most heterogeneous task.",
+  "watch_item": "The gains depend on verifier quality and can shrink substantially when the verifier is weak, so deployment needs careful verifier calibration and cost modeling.",
   "hashtags": [
-    "#LLMs",
-    "#ModelRouting",
+    "#LLMRouting",
     "#TestTimeCompute",
-    "#CostAwareAI",
+    "#ModelSelection",
+    "#CostQualityTradeoff",
     "#InferenceOptimization"
   ],
   "paper_id": "2026-07-09-arxiv-resample_or_reroute_budget_aware_test_time_model_selection_for_large_language_models",
   "paper_title": "Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models",
   "paper_date": "2026-07-09",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-11T14:58:42",
+  "generated_at": "2026-07-12T15:01:19",
   "generator": "openai"
 }

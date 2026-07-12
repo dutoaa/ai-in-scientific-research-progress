@@ -1,17 +1,17 @@
 {
-  "key_insight": "GRPO outperforms supervised fine-tuning for adapting ASR to synthetic speech, cutting WER much more effectively when real speech is scarce.",
-  "engineering_relevance": "For privacy-constrained domains like banking, reinforcement learning on synthetic TTS data can deliver stronger ASR adaptation than SFT alone.",
+  "key_insight": "When only synthetic speech is available, GRPO adapts an LLM-based ASR model much better than supervised fine-tuning, cutting WER far more effectively.",
+  "engineering_relevance": "For privacy-constrained domains like banking, reinforcement learning on synthetic TTS data can outperform standard fine-tuning and deliver more usable ASR without collecting real speech.",
   "method": [
-    "Adapt an LLM-based ASR model using synthetic speech only.",
-    "Apply critic-free GRPO with a low-WER reward signal.",
-    "Optionally combine SFT first, then GRPO for the best result."
+    "Train on synthetic-only speech using Group Relative Policy Optimization (GRPO).",
+    "Use a critic-free reward based on low word error rate (WER) hypotheses.",
+    "Optionally combine SFT first, then GRPO for the best final adaptation."
   ],
-  "evidence_signal": "On synthetic-only adaptation, GRPO reduced WER from 36.71% to 22.09%, with SFT+GRPO improving it further by 45% relative to SFT.",
-  "watch_item": "The method is evaluated on synthetic speech, so real-world gains may depend on how well the synthetic audio matches deployment acoustics.",
+  "evidence_signal": "On synthetic-only adaptation, GRPO reduced WER from 36.71% to 22.09% versus SFT, and SFT+GRPO improved the reduction to about 45% relative to the SFT baseline.",
+  "watch_item": "The results are based on synthetic speech, so performance may depend on how closely the TTS distribution matches the target real-world audio.",
   "hashtags": [
     "#ASR",
-    "#GRPO",
     "#ReinforcementLearning",
+    "#GRPO",
     "#SyntheticSpeech",
     "#SpeechRecognition"
   ],
@@ -19,6 +19,6 @@
   "paper_title": "When Synthetic Speech Is All You Have: Better Call GRPO",
   "paper_date": "2026-07-09",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-11T14:58:52",
+  "generated_at": "2026-07-12T15:01:28",
   "generator": "openai"
 }

@@ -25,29 +25,29 @@
         "url": "https://arxiv.org/pdf/2607.08717v1"
       }
     ],
-    "score": 75,
+    "score": 80,
     "infographic": {
-      "key_insight": "A unified deep learning pipeline can jointly cancel narrowband interference in OFDM and produce calibrated soft demodulation, avoiding the mismatch that causes error floors in classical receivers.",
-      "engineering_relevance": "The approach reduces sequential processing latency and improves receiver robustness, making it attractive for practical OFDM systems operating under strong or structured interference.",
+      "key_insight": "A two-stage deep learning pipeline jointly cancels narrowband interference and produces reliable soft LLRs for OFDM, fixing the mismatch between classical interference suppression and Gaussian demodulation.",
+      "engineering_relevance": "It offers a lower-latency, more scalable receiver-side solution that improves BLER and avoids error floors under strong or overlapping interference.",
       "method": [
-        "NBI-CNet: physics-informed CNN that estimates and removes multi-tone narrowband interference in one forward pass.",
-        "LLR-CNet: learns to transform post-cancellation residuals into reliable log-likelihood ratios for decoding.",
-        "Scale-invariant design generalizes across FFT sizes without retraining."
+        "NBI-CNet uses a physics-informed CNN to estimate and subtract multi-tone narrowband interference in one forward pass.",
+        "LLR-CNet whitens non-Gaussian residuals into calibrated soft metrics for robust demodulation.",
+        "The design is scale-invariant and does not require prior knowledge of the number of interferers."
       ],
-      "evidence_signal": "Simulations report up to 60% lower complexity than EOMP-IDS, elimination of baseline error floors, and performance within 0.2 to 0.5 dB of the optimal iterative method at BLER = 10^-4 under SIR = -10 dB.",
-      "watch_item": "Performance depends on how well the trained model matches the interference/channel conditions, so deployment may require validation across the intended signal and spectral-overlap regimes.",
+      "evidence_signal": "Simulations show up to 60% complexity reduction versus EOMP-IDS, near-optimal performance within 0.2 to 0.5 dB at BLER 10^-4 under SIR = -10 dB, and more than 3 dB coding gain under mild interference with heavy spectral overlap.",
+      "watch_item": "Generalization depends on training coverage and careful integration with the receiver chain, especially when interference statistics differ from the simulated conditions.",
       "hashtags": [
         "#OFDM",
         "#DeepLearning",
         "#InterferenceCancellation",
         "#SoftDemodulation",
-        "#ScientificML"
+        "#WirelessCommunications"
       ],
       "paper_id": "2026-07-09-arxiv-deep_learning_for_joint_narrowband_interference_cancellation_and_soft_demodulation_in_ofdm",
       "paper_title": "Deep Learning for Joint Narrowband Interference Cancellation and Soft Demodulation in OFDM Systems",
       "paper_date": "2026-07-09",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-12T15:00:47",
+      "generated_at": "2026-07-11T14:58:05",
       "generator": "openai"
     }
   },
@@ -78,29 +78,29 @@
         "url": "https://arxiv.org/pdf/2607.08404v1"
       }
     ],
-    "score": 74,
+    "score": 79,
     "infographic": {
-      "key_insight": "DrugGen-2 generates small molecules using both disease ontology and target protein sequence, improving disease-aware drug design over target-only approaches.",
-      "engineering_relevance": "The model shows how conditioning generation on biomedical context and optimizing with reinforcement learning can improve candidate quality for AI-assisted drug discovery pipelines.",
+      "key_insight": "DrugGen-2 is a disease-aware generative language model that improves small-molecule design by conditioning on both disease ontology and target protein sequence.",
+      "engineering_relevance": "It shows how adding disease context to molecular generation can improve candidate quality for AI-driven drug discovery and repurposing pipelines.",
       "method": [
-        "Fine-tune GPT-2 on curated drug–disease–target records",
-        "Apply supervised fine-tuning followed by GRPO reinforcement learning",
-        "Reward validity, novelty, diversity, and predicted binding affinity"
+        "Fine-tunes a pretrained GPT-2 model on approved drug–disease–target data",
+        "Uses supervised fine-tuning followed by GRPO reinforcement learning",
+        "Rewards validity, novelty, diversity, and predicted binding affinity"
       ],
-      "evidence_signal": "On five diabetic nephropathy-related targets, DrugGen-2 outperformed DrugGPT and DrugGen, producing more unique molecules and better predicted affinities; docking found candidates as strong as -9.917 versus enalapril at -8.283.",
-      "watch_item": "Results rely on predicted affinity and docking rather than experimental wet-lab validation, so real-world efficacy and safety remain unconfirmed.",
+      "evidence_signal": "On five diabetic nephropathy-related protein targets, DrugGen-2 outperformed DrugGPT and DrugGen, with stronger uniqueness, better similarity to approved drugs, and improved predicted affinities; docking identified candidates with affinities as low as -9.917.",
+      "watch_item": "Reported gains rely on predicted affinity and docking rather than experimental validation, so real-world biological efficacy and safety remain unconfirmed.",
       "hashtags": [
-        "#AIDrugDiscovery",
-        "#GenerativeAI",
-        "#MolecularDesign",
-        "#ReinforcementLearning",
-        "#ComputationalChemistry"
+        "#AIforDrugDiscovery",
+        "#GenerativeModels",
+        "#DrugDesign",
+        "#BiomedicalAI",
+        "#MolecularGeneration"
       ],
       "paper_id": "2026-07-09-arxiv-druggen_2_a_disease_aware_language_model_for_enhancing_drug_discovery",
       "paper_title": "DrugGen 2: A disease-aware language model for enhancing drug discovery",
       "paper_date": "2026-07-09",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-07-12T15:00:49",
+      "generated_at": "2026-07-11T14:58:07",
       "generator": "openai"
     }
   },
@@ -129,29 +129,29 @@
         "url": "https://arxiv.org/pdf/2607.08703v1"
       }
     ],
-    "score": 70,
+    "score": 75,
     "infographic": {
-      "key_insight": "MPFlow learns where to open Lightning Network channels under a fixed budget to maximize routing capacity, formulated as a budgeted max-flow optimization problem on graphs.",
-      "engineering_relevance": "The method can guide liquidity placement and peer selection for operators who want better payment routing efficiency without manually tuning channel openings.",
+      "key_insight": "MPFlow learns where to open a limited number of Lightning Network channels so a node’s routing capacity, measured by max-flow, increases as much as possible.",
+      "engineering_relevance": "This provides a practical decision tool for liquidity placement in payment networks, helping operators allocate capital to channels that improve throughput under a fixed budget.",
       "method": [
-        "Uses a message-passing graph policy network to score candidate channel additions.",
-        "Optimizes actions with PPO and action masking under a fixed edge-addition budget.",
-        "Trains with a hub-exclusion curriculum so the policy learns capacity-aware placement instead of simply attaching to top hubs."
+        "Model channel opening as budgeted graph optimization: choose k edge additions to maximize s–t max-flow.",
+        "Use a message-passing graph policy network trained with PPO and action masking.",
+        "Apply a hub-exclusion curriculum so the policy learns capacity-aware placement instead of simply attaching to the highest-degree nodes."
       ],
-      "evidence_signal": "The approach was evaluated on real Lightning Network snapshots across multiple seeds and unseen graphs, where it outperformed strong heuristic baselines on the max-flow objective and was also deployed in production for 4640 channel-open decisions.",
-      "watch_item": "Results depend on snapshot quality and deployment constraints, and a policy trained with hub exclusion may still need careful validation before use on rapidly changing network topologies.",
+      "evidence_signal": "The method was tested on real Lightning Network snapshots and outperformed strong heuristic baselines across multiple seeds and unseen graphs, with deployment results covering 4,640 channel-open decisions and 267.3 BTC allocated across 30 managed nodes.",
+      "watch_item": "Performance is tied to the quality and stability of Lightning Network snapshots, so deployment may require careful adaptation to changing network topology and liquidity conditions.",
       "hashtags": [
         "#GraphReinforcementLearning",
         "#LightningNetwork",
-        "#MaxFlowOptimization",
-        "#PPO",
-        "#NetworkEngineering"
+        "#MaxFlow",
+        "#NetworkOptimization",
+        "#PPO"
       ],
       "paper_id": "2026-07-09-arxiv-mpflow_learning_budgeted_max_flow_optimization_on_the_lightning_network_with_deep_graph_re",
       "paper_title": "MPFlow: Learning Budgeted Max-Flow Optimization on the Lightning Network with Deep Graph Reinforcement Learning",
       "paper_date": "2026-07-09",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-12T15:00:52",
+      "generated_at": "2026-07-11T14:58:11",
       "generator": "openai"
     }
   },
@@ -181,29 +181,29 @@
         "url": "https://arxiv.org/pdf/2607.08646v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "UltraX improves pre-training data quality at scale by turning raw text refinement into adaptive, programmatic editing with deletion, modification, and insertion operations.",
-      "engineering_relevance": "It offers a more reliable and data-efficient pipeline for large-scale LLM pre-training, making corpus refinement more practical for industrial-scale training workflows.",
+      "key_insight": "UltraX improves pre-training data quality at scale by converting text refinement into reliable programmatic edits, including deletion, modification, and insertion.",
+      "engineering_relevance": "It offers a practical pipeline for large-scale corpus cleaning/refinement that is more efficient and stable than purely rule-based or LLM-only approaches.",
       "method": [
-        "Dataset-adaptive prompt optimization generates high-quality refined target texts from an expert LLM.",
-        "Line Alignment Mapping plus Dynamic Context Replacement convert text pairs into structured program supervision.",
-        "Low-confidence filtering, ratio-controlled sampling, and output normalization stabilize training and inference."
+        "Adaptive prompt optimization generates high-quality refined texts from expert LLMs.",
+        "Line Alignment Mapping and Dynamic Context Replacement turn text pairs into structured edit supervision.",
+        "Low-confidence filtering, ratio-controlled sampling, and post-processing stabilize training and inference."
       ],
-      "evidence_signal": "Experiments in the abstract report that UltraX achieves the highest average performance across all corpora and can match or surpass baselines with fewer training tokens.",
-      "watch_item": "Its gains depend on careful prompt optimization, filtering, and post-processing, which may add pipeline complexity and implementation overhead.",
+      "evidence_signal": "The abstract reports highest average performance across corpora and equal or better results than baselines with fewer training tokens.",
+      "watch_item": "The pipeline likely depends on careful prompt optimization and alignment quality, so noisy supervision or brittle execution could reduce gains at scale.",
       "hashtags": [
         "#LLMTraining",
-        "#DataCuration",
+        "#DataRefinement",
         "#ProgrammaticEditing",
         "#PretrainingData",
-        "#InformationMining"
+        "#MachineLearningSystems"
       ],
       "paper_id": "2026-07-09-arxiv-ultrax_refining_pre_training_data_at_scale_with_adaptive_programmatic_editing",
       "paper_title": "UltraX: Refining Pre-Training Data at Scale with Adaptive Programmatic Editing",
       "paper_date": "2026-07-09",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-12T15:00:54",
+      "generated_at": "2026-07-11T14:58:14",
       "generator": "openai"
     }
   },
@@ -233,17 +233,17 @@
         "url": "https://arxiv.org/pdf/2607.08444v1"
       }
     ],
-    "score": 66,
+    "score": 71,
     "infographic": {
-      "key_insight": "Quantile-based distributional reinforcement learning can estimate return distributions with optimal sample efficiency, achieving parametric √n rates and semiparametric efficiency for policy evaluation.",
-      "engineering_relevance": "This provides a statistically grounded way to build reliable RL systems that estimate uncertainty in returns while supporting valid inference from finite samples.",
+      "key_insight": "Quantile-based distributional reinforcement learning can estimate return distributions efficiently, with quantile-projected estimators achieving optimal statistical rates and semiparametric efficiency.",
+      "engineering_relevance": "This provides a principled, sample-efficient way to evaluate policy performance distributionally, which is useful for risk-sensitive decision systems and uncertainty-aware RL pipelines.",
       "method": [
-        "Construct a finite-dimensional quantile-projected fixed point \u0017m for the return distribution.",
-        "Build an estimator \u0017m^(n) from an empirical MDP under a generative model.",
-        "Derive non-asymptotic W∞ error bounds, asymptotic normality, and Berry–Esseen guarantees for smooth functionals."
+        "Build a finite-dimensional return-distribution representation via the quantile-projected Bellman fixed point.",
+        "Construct an empirical-MDP estimator under a generative model and derive non-asymptotic $W_\\infty$ error bounds.",
+        "Prove asymptotic normality, efficiency bounds, and a Berry--Esseen result for smooth functionals."
       ],
-      "evidence_signal": "The abstract reports non-asymptotic error scaling of ~O(√(m/n)) and proves asymptotic efficiency, including matching semiparametric bounds in the infinite-quantile regime.",
-      "watch_item": "The guarantees rely on access to a generative model and fixed-policy evaluation, so practical performance may depend on how well these assumptions match real RL data collection settings.",
+      "evidence_signal": "The abstract reports a non-asymptotic error scaling of $\\widetilde{O}(\\sqrt{m/n})$ and shows the estimator attains the semiparametric efficiency bound in both fixed- and growing-quantile regimes.",
+      "watch_item": "The strongest guarantees rely on access to a generative model and on smooth functionals, so practical performance may degrade when sampling is limited or the target functional is non-smooth.",
       "hashtags": [
         "#ReinforcementLearning",
         "#DistributionalRL",
@@ -255,7 +255,7 @@
       "paper_title": "Statistical Efficiency and Inference of Quantile Distributional Reinforcement Learning",
       "paper_date": "2026-07-09",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-12T15:00:56",
+      "generated_at": "2026-07-11T14:58:17",
       "generator": "openai"
     }
   },
@@ -284,29 +284,29 @@
         "url": "https://arxiv.org/pdf/2607.08652v1"
       }
     ],
-    "score": 65,
+    "score": 70,
     "infographic": {
-      "key_insight": "Adding a mediation mechanism on top of open communication is enough to keep self-interested agents trading productively, even under sustained adversarial trolling.",
-      "engineering_relevance": "The study suggests a practical design pattern for resilient multi-agent systems: layer formal conflict-resolution protocols to preserve utility and market stability under attack.",
+      "key_insight": "A mediation mechanism layered on unrestricted communication best preserves stable trade among self-interested LLM agents, even under adversarial trolling.",
+      "engineering_relevance": "For multi-agent systems and digital marketplaces, formal governance mechanisms like mediation can improve resilience and sustain positive utility under attack.",
       "method": [
-        "Simulated a marketplace with 18 DeepSeek-V3 agents with complementary production roles trading over a constrained social network.",
-        "Compared eight governance mechanisms across 200 rounds while progressively injecting trolls.",
+        "Simulated a marketplace with 18 DeepSeek-V3 agents having complementary production roles and constrained social ties.",
+        "Compared eight market-governance conditions under progressive troll injection over 200 rounds.",
         "Red-teamed the best mechanism with iteratively prompt-optimized LLM trolls to test adversarial robustness."
       ],
-      "evidence_signal": "Across the abstract’s evaluation, Mediation performed best in the mechanism comparison, and the strongest attack (v6) reduced honest-agent utility by 13.3% but did not collapse the market.",
-      "watch_item": "Results come from a simulated 18-agent marketplace with one model family, so robustness may not fully transfer to larger, heterogeneous, or real-world human-agent settings.",
+      "evidence_signal": "Across the 200-round benchmark, Mediation performed best, and the strongest attack reduced honest-agent utility by 13.3% without collapsing the market.",
+      "watch_item": "Results are based on a simulated LLM-agent marketplace, so transfer to real-world human or hybrid markets may require additional validation.",
       "hashtags": [
         "#MultiAgentSystems",
+        "#LLMAgents",
         "#MarketDesign",
         "#AdversarialRobustness",
-        "#LLMAgents",
         "#ScientificMachineLearning"
       ],
       "paper_id": "2026-07-09-arxiv-formal_mechanisms_for_market_stability_in_self_interested_agent_societies_a_marketplace_si",
       "paper_title": "Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study",
       "paper_date": "2026-07-09",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-12T15:00:59",
+      "generated_at": "2026-07-11T14:58:19",
       "generator": "openai"
     }
   },
@@ -335,29 +335,29 @@
         "url": "https://arxiv.org/pdf/2607.08643v1"
       }
     ],
-    "score": 65,
+    "score": 70,
     "infographic": {
-      "key_insight": "BiSCo-LLM compresses LLM weights with a lookup-free binary spherical code and residual binary coding, targeting extreme low-bit storage without explicit codebooks.",
-      "engineering_relevance": "It offers a practical path to reduce model memory, bandwidth, and checkpoint size while avoiding the storage and lookup overhead of conventional vector quantization.",
+      "key_insight": "BiSCo-LLM compresses LLM weights with a codebook-free binary spherical coding pipeline, aiming for extreme low-bit storage without explicit vector-quantization centroids.",
+      "engineering_relevance": "It offers a practical path to reduce memory, bandwidth, and checkpoint size for deployed LLMs when conventional quantization approaches become too limited near 2 bits per weight.",
       "method": [
-        "Map local weight chunks onto a unit hypersphere and binarize them into packed sign codes.",
+        "Map local weight chunks to a unit hypersphere and binarize them into packed spherical codes.",
         "Use a residual BSQ stage to encode reconstruction error without storing codebooks.",
-        "Apply category-wise recovery distillation plus a protected 8-bit channel for sensitive weights."
+        "Apply category-wise recovery distillation plus a small protected 8-bit channel for sensitive weights."
       ],
-      "evidence_signal": "The abstract reports an evaluated storage budget that counts binary codes, neural decoders, protected channels, LoRA adapters, and metadata, indicating a full-system compression assessment.",
-      "watch_item": "The method adds decoder, protected-channel, and metadata overhead, so real compression gains depend on careful accounting and deployment implementation.",
+      "evidence_signal": "The abstract emphasizes a storage-budgeted evaluation that accounts for binary codes, neural decoders, protected-channel payloads, LoRA adapters, and metadata.",
+      "watch_item": "Implementation complexity may rise because the final compressed budget combines several components and the protected-channel path must be handled carefully for stability and fair accounting.",
       "hashtags": [
         "#LLMCompression",
         "#BinaryCoding",
-        "#LowBitAI",
-        "#ModelCompression",
+        "#LowBitQuantization",
+        "#ModelDeployment",
         "#EfficientInference"
       ],
       "paper_id": "2026-07-09-arxiv-bisco_llm_lookup_free_binary_spherical_coding_for_extreme_low_bit_large_language_model_com",
       "paper_title": "BiSCo-LLM: Lookup-Free Binary Spherical Coding for Extreme Low-Bit Large Language Model Compression",
       "paper_date": "2026-07-09",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-12T15:01:01",
+      "generated_at": "2026-07-11T14:58:23",
       "generator": "openai"
     }
   },
@@ -387,29 +387,29 @@
         "url": "https://arxiv.org/pdf/2607.08406v1"
       }
     ],
-    "score": 65,
+    "score": 70,
     "infographic": {
-      "key_insight": "A simple gradient-free Monte Carlo search—randomly mutating parameters and keeping changes that reduce loss—can train deep neural networks surprisingly well, challenging the idea that backpropagation is required.",
-      "engineering_relevance": "This suggests an alternative training route for deep or unconventional models where gradients are unstable, unavailable, or undesirable, including pruning, discrete weights, and nonstandard activations.",
+      "key_insight": "A simple Monte Carlo, gradient-free random-mutation-and-accept-if-better rule can train deep neural networks surprisingly well, challenging the idea that backpropagation is necessary.",
+      "engineering_relevance": "This suggests an alternative training path for robust or physically inspired neural systems, especially where gradients are unstable, unavailable, or inconvenient to compute.",
       "method": [
-        "Randomly perturb one parameter at a time",
-        "Accept the mutation only if training loss decreases",
-        "Repeat on a single GPU without relying on backpropagation"
+        "Randomly mutate a single parameter",
+        "Keep the mutation only if loss decreases; otherwise retry",
+        "Apply directly to deep networks without batch norm or residual connections"
       ],
-      "evidence_signal": "The abstract reports successful training on networks with more than 20 layers, wide single-hidden-layer networks up to 16,384 hidden neurons, and a simple Transformer on MNIST and Tiny Shakespeare.",
-      "watch_item": "The method is likely far less efficient than gradient-based training, so scalability, runtime, and convergence quality need careful evaluation on larger real-world tasks.",
+      "evidence_signal": "The abstract reports successful training on 20+ layer deep networks, wide single-hidden-layer networks up to 16,384 hidden neurons, and a simple Transformer on MNIST and Tiny Shakespeare.",
+      "watch_item": "The approach may be computationally inefficient due to repeated random trials, so scalability and training time need careful evaluation versus backpropagation.",
       "hashtags": [
+        "#MonteCarloTraining",
+        "#GradientFreeAI",
         "#DeepLearning",
-        "#MonteCarlo",
-        "#GradientFree",
         "#NeuralNetworks",
-        "#AIResearch"
+        "#ModelingSimulation"
       ],
       "paper_id": "2026-07-09-arxiv-beyond_backpropagation_monte_carlo_method_can_train_deep_neural_networks",
       "paper_title": "Beyond Backpropagation: Monte Carlo Method Can Train Deep Neural Networks",
       "paper_date": "2026-07-09",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-07-12T15:01:04",
+      "generated_at": "2026-07-11T14:58:26",
       "generator": "openai"
     }
   },
@@ -439,29 +439,29 @@
         "url": "https://arxiv.org/pdf/2607.08625v1"
       }
     ],
-    "score": 62,
+    "score": 67,
     "infographic": {
-      "key_insight": "Real patient-chatbot interactions are highly diverse, and that diversity can materially change LLM triage outcomes.",
-      "engineering_relevance": "Health chatbot systems should be designed and evaluated to model not just clinical content, but also emotion, strategy, and communication style to better match real-world use.",
+      "key_insight": "Real patient-chatbot interactions are much more diverse than idealized simulations, and that diversity can materially change triage outcomes in health AI.",
+      "engineering_relevance": "Health chatbot evaluation and deployment should model patient communication style, emotion, and strategy—not just clinical symptoms—to avoid brittle performance and inequitable care.",
       "method": [
-        "Analyzed 2,053 real patient-chatbot conversations to characterize variation in user communication patterns.",
-        "Built a patient simulator that separately models clinical content, emotional state, conversational strategy, and communication style.",
-        "Tested realism with 15 human graders and assessed urgency performance across 1,164 clinician-graded cases using five patient personae and four LLMs."
+        "Analyzed 2,053 real patient-chatbot conversations to characterize communication diversity.",
+        "Built a patient simulator that separates clinical content, emotional state, conversational strategy, and communication style.",
+        "Tested four LLMs across five patient personae in 1,164 clinician-graded urgency-assessment cases."
       ],
-      "evidence_signal": "In a Turing-inspired realism test, human graders identified simulated versus real conversations with only 55% accuracy, and communication style significantly altered triage outcomes.",
-      "watch_item": "Evaluations based on idealized or cooperative patient personas may overestimate performance and could miss disparities caused by realistic communication diversity.",
+      "evidence_signal": "In a Turing-inspired realism test with 15 human graders, simulated conversations were nearly indistinguishable from real ones, with graders scoring only 55% accuracy.",
+      "watch_item": "Simulated or benchmarked patients that are too cooperative or articulate may overestimate chatbot performance and miss real-world disparities in urgent care triage.",
       "hashtags": [
-        "#AIHealth",
-        "#LLM",
+        "#HealthAI",
         "#Chatbots",
+        "#LLM",
         "#PatientCenteredAI",
-        "#DigitalHealth"
+        "#Triage"
       ],
       "paper_id": "2026-07-09-arxiv-the_complexities_of_patient_centred_conversational_artificial_intelligence",
       "paper_title": "The complexities of patient-centred conversational artificial intelligence",
       "paper_date": "2026-07-09",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-12T15:01:06",
+      "generated_at": "2026-07-11T14:58:28",
       "generator": "openai"
     }
   },
@@ -493,29 +493,29 @@
         "url": "https://arxiv.org/pdf/2607.08741v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "ARDY enables real-time, interactive 3D human motion generation by combining online text/kinematic control with a hybrid representation and streaming autoregressive diffusion.",
-      "engineering_relevance": "The method is directly relevant to animation, simulation, and humanoid robotics because it supports low-latency motion synthesis with flexible long-horizon constraints.",
+      "key_insight": "ARDY enables real-time interactive human motion generation by combining autoregressive streaming with a hybrid representation that balances precise control and efficient learning.",
+      "engineering_relevance": "It is useful for animation, simulation, and humanoid robotics because it supports online text prompts and flexible kinematic constraints without sacrificing motion quality.",
       "method": [
-        "Hybrid motion encoding: explicit root features plus a latent body embedding.",
+        "Hybrid representation: explicit root features plus a latent body embedding.",
         "Two-stage autoregressive transformer denoiser with variable history context.",
-        "Trained on text labels and kinematic constraints sampled from ground-truth poses for online controllability."
+        "Conditions on online text and long-horizon kinematic constraints sampled from ground-truth motions."
       ],
-      "evidence_signal": "The paper reports strong results on HumanML3D and the large-scale Bones Rigplay dataset, showing high motion quality and good constraint adherence.",
-      "watch_item": "Interactive performance and constraint fidelity may depend on dataset coverage and the quality of sampled text/pose constraints, especially for very long-horizon or unusual motions.",
+      "evidence_signal": "The method is evaluated on HumanML3D and the large-scale Bones Rigplay dataset, where the abstract reports strong motion quality and constraint adherence.",
+      "watch_item": "Interactive controllability may depend on the quality and availability of training data and constraint sampling, so generalization to novel motions or prompts may still need careful validation.",
       "hashtags": [
         "#HumanMotionGeneration",
-        "#DiffusionModels",
-        "#AutoregressiveModels",
+        "#AutoregressiveDiffusion",
         "#InteractiveAI",
-        "#MotionControl"
+        "#MotionControl",
+        "#Robotics"
       ],
       "paper_id": "2026-07-09-arxiv-ardy_autoregressive_diffusion_with_hybrid_representation_for_interactive_human_motion_gene",
       "paper_title": "ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
       "paper_date": "2026-07-09",
       "paper_category": "Autonomous Labs",
-      "generated_at": "2026-07-12T15:01:09",
+      "generated_at": "2026-07-11T14:58:31",
       "generator": "openai"
     }
   },
@@ -544,29 +544,29 @@
         "url": "https://arxiv.org/pdf/2607.08659v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "EdgeRefine improves the privacy-utility trade-off for graph learning by ranking and sampling edges with Jaccard-based probability estimates instead of adding uniform noise to the entire adjacency matrix.",
-      "engineering_relevance": "This gives a practical edge-differentially-private preprocessing strategy for GNN pipelines that can preserve model accuracy while limiting structural privacy leakage.",
+      "key_insight": "EdgeRefine improves the privacy-utility trade-off for graph learning by using Jaccard-based edge ranking and selective sampling to preserve useful structure while satisfying edge differential privacy.",
+      "engineering_relevance": "It offers a practical way to deploy GNNs on sensitive graphs with less accuracy loss than uniform noise injection, making private graph analytics more feasible.",
       "method": [
-        "Estimate edge-existence probabilities using Jaccard similarity.",
-        "Rank edges for noisy removal and sample true vs. false edges separately using the privacy budget ε.",
-        "Control final graph sparsity with a separate sampling rate k."
+        "Estimate edge-existence likelihood with Jaccard similarity and rank edges for refinement.",
+        "Use privacy budget ε to control the ratio of true vs. false edges sampled.",
+        "Apply a separate sampling rate k to cap graph size and maintain sparsity."
       ],
-      "evidence_signal": "Across node and graph classification experiments, EdgeRefine matches or approaches non-private accuracy and outperforms privacy-preserving baselines; at ε=2.5 it improves accuracy by 17.8% on ACM with GAT and 19.7% on Cora with GCN, while also resisting reconstruction attacks.",
-      "watch_item": "Performance depends on the quality of Jaccard-based edge ranking and the chosen ε/k settings, so graphs with weak local similarity signals may be harder to refine effectively.",
+      "evidence_signal": "Across multiple datasets and GNNs, EdgeRefine matches or approaches non-private performance and outperforms prior privacy-preserving baselines, including gains of 17.8% on ACM with GAT and 19.7% on Cora with GCN at ε=2.5.",
+      "watch_item": "The method depends on reliable similarity-based edge ranking and careful tuning of ε and k, which may be sensitive to graph homophily and dataset structure.",
       "hashtags": [
-        "#GraphNeuralNetworks",
         "#DifferentialPrivacy",
+        "#GraphNeuralNetworks",
         "#PrivacyPreservingAI",
         "#GraphLearning",
-        "#EdgePrivacy"
+        "#JaccardSampling"
       ],
       "paper_id": "2026-07-09-arxiv-edgerefine_privacy_utility_balance_for_graphs_via_jaccard_sampling_under_edge_differential",
       "paper_title": "EdgeRefine: Privacy-Utility Balance for Graphs via Jaccard Sampling under Edge Differential Privacy",
       "paper_date": "2026-07-09",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-12T15:01:12",
+      "generated_at": "2026-07-11T14:58:34",
       "generator": "openai"
     }
   },
@@ -596,29 +596,29 @@
         "url": "https://arxiv.org/pdf/2607.08724v1"
       }
     ],
-    "score": 60,
+    "score": 65,
     "infographic": {
-      "key_insight": "Latent Memory Palace (LMP) turns control “reasoning” into iterative retrieval in an autoregressive latent space, using variational inference to adapt how much computation a policy spends before acting.",
-      "engineering_relevance": "This offers a practical path to more flexible robot and control policies that can trade latency for decision quality and also produce better action tokenizers for downstream autoregressive control.",
+      "key_insight": "Latent Memory Palace (LMP) turns control policy reasoning into autoregressive latent-space variational inference, enabling adaptive, iterative compute during action selection.",
+      "engineering_relevance": "This offers a practical route to more capable continuous-control agents and a stronger action tokenizer for downstream autoregressive policies, with potential benefits in robotics and embodied AI.",
       "method": [
-        "Models reasoning as an autoregressive latent-variable policy with a variational lower bound.",
-        "Optimizes the bound with a latent-space reinforcement learning objective.",
-        "Uses the same framework to build LMP-π for control and LMP-tok for variable-length action tokenization."
+        "Model reasoning as an autoregressive latent distribution over control decisions",
+        "Optimize a variational lower bound with a latent-space reinforcement learning objective",
+        "Use the same framework to learn a variable-length action tokenizer (LMP-tok)"
       ],
-      "evidence_signal": "The abstract reports strong empirical performance in both simulation and real-world domains, with interpretable adaptive test-time compute and improved downstream autoregressive policy performance.",
-      "watch_item": "Variational latent reasoning and autoregressive retrieval may add training complexity and inference overhead, so stability and runtime need careful validation on new control tasks.",
+      "evidence_signal": "The abstract reports strong empirical performance in both simulation and real-world domains, along with interpretable adaptive test-time compute and improved downstream autoregressive policies.",
+      "watch_item": "Performance and interpretability gains likely depend on careful latent-space optimization and may add training/implementation complexity compared with standard control policies.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#ReinforcementLearning",
-        "#RobotControl",
-        "#VariationalInference",
-        "#AutoregressiveModels"
+        "#LatentVariables",
+        "#Robotics",
+        "#VariationalInference"
       ],
       "paper_id": "2026-07-09-arxiv-latent_memory_palace_reasoning_for_control_as_autoregressive_variational_inference",
       "paper_title": "Latent Memory Palace: Reasoning for Control as Autoregressive Variational Inference",
       "paper_date": "2026-07-09",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-12T15:01:14",
+      "generated_at": "2026-07-11T14:58:37",
       "generator": "openai"
     }
   },
@@ -647,21 +647,21 @@
         "url": "https://arxiv.org/pdf/2607.08681v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "SolarChain-Eval shows that in decentralized energy markets, higher reward can come at the cost of physical safety unless agents are constrained by explicit physics and audited interventions.",
-      "engineering_relevance": "The benchmark provides a practical way to evaluate autonomous market-control agents on both economic performance and cyber-physical trustworthiness, not just profit.",
+      "key_insight": "SolarChain-Eval shows that in decentralized energy markets, better economic performance can come at the cost of physics violations and weak governance unless agent behavior is explicitly constrained and audited.",
+      "engineering_relevance": "For cyber-physical market agents, trustworthy deployment requires combining reward design, physical safety constraints, and transparent human- or LLM-mediated intervention logs.",
       "method": [
-        "Gymnasium-compatible MDP for hourly market governance decisions",
-        "Multi-objective evaluation: utility, safety, slippage, smoothness, fairness, and auditability",
-        "LLM Planner/Auditor layer adds action bounds, high-risk reviews, and structured intervention logs"
+        "Gymnasium-compatible MDP for hourly decentralized energy-market governance",
+        "Multi-metric evaluation: utility, safety, slippage, smoothness, fairness, and auditability",
+        "LLM Planner/Auditor sets bounds, flags high-risk actions, and records structured audit traces"
       ],
-      "evidence_signal": "Experiments across static, random, myopic, RL, and RL+LLM policies exposed a utility-safety trade-off, and removing physics penalties let agents exploit invalid generation and artificial liquidity.",
-      "watch_item": "The LLM Planner/Auditor improves transparency and mitigates some risks, but it cannot fully fix a misspecified reward or replace hard physical constraints.",
+      "evidence_signal": "Experiments across static, random, myopic, RL, and RL+LLM policies show a utility-safety trade-off, and removing the physics penalty leads agents to exploit invalid generation and create artificial liquidity.",
+      "watch_item": "The LLM Planner/Auditor improves oversight but cannot fully fix a misspecified reward function, so constraint design remains critical.",
       "hashtags": [
         "#AgenticAI",
         "#EnergyMarkets",
-        "#PhysicsConstraints",
+        "#PhysicsConstrained",
         "#TrustworthyAI",
         "#Benchmarking"
       ],
@@ -669,7 +669,7 @@
       "paper_title": "SolarChain-Eval: A Physics-Constrained Benchmark for Trustworthy Economic Agents in Decentralized Energy Markets",
       "paper_date": "2026-07-09",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-07-12T15:01:16",
+      "generated_at": "2026-07-11T14:58:39",
       "generator": "openai"
     }
   },
@@ -698,29 +698,29 @@
         "url": "https://arxiv.org/pdf/2607.08665v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "The paper reframes LLM routing as a single budget allocation problem, balancing resampling the current model against rerouting to another model to maximize expected correctness.",
-      "engineering_relevance": "This provides a practical serving strategy for cost-sensitive LLM systems, helping operators improve quality under fixed per-query budgets instead of relying on a single-shot router.",
+      "key_insight": "The paper argues that, under a fixed per-query budget, the best way to improve LLM serving quality is to dynamically trade off resampling the current model against rerouting to another model instead of treating them as separate decisions.",
+      "engineering_relevance": "This gives practitioners a cost-aware policy for deploying LLM routers that can better balance latency, price, and answer correctness in real serving systems.",
       "method": [
-        "Formulate budget-aware test-time model selection with an imperfect verifier.",
-        "Use an online resample-or-reroute (RoR) policy driven by estimated marginal correctness per unit cost.",
-        "Allocate each query’s budget between resampling and rerouting based on recoverability asymmetry."
+        "Formulates budget-aware test-time model selection with a per-query cost budget and an imperfect verifier.",
+        "Introduces an online resample-or-reroute (RoR) policy that allocates budget by estimated marginal correctness per unit cost.",
+        "Grounds the policy in the asymmetry between recoverability from resampling and from routing to another model."
       ],
-      "evidence_signal": "Replay experiments on regenerated multi-draw correctness tensors from 11 open-weight models across 4 benchmarks show RoR improves the cost-quality Pareto front over several baselines, especially on the most heterogeneous task.",
-      "watch_item": "The gains depend on verifier quality and can shrink substantially when the verifier is weak, so deployment needs careful verifier calibration and cost modeling.",
+      "evidence_signal": "Replay experiments on regenerated multi-draw correctness tensors from an eleven-model open-weight pool across four benchmarks show RoR achieves a stronger cost-quality Pareto front than several baselines, with the biggest gains on the most heterogeneous benchmark.",
+      "watch_item": "The gains depend on verifier quality and shrink as the verifier gets worse, so deployment performance may be limited in settings with weak or noisy verification.",
       "hashtags": [
-        "#LLMRouting",
+        "#LLMs",
+        "#ModelRouting",
         "#TestTimeCompute",
-        "#ModelSelection",
-        "#CostQualityTradeoff",
+        "#CostAwareAI",
         "#InferenceOptimization"
       ],
       "paper_id": "2026-07-09-arxiv-resample_or_reroute_budget_aware_test_time_model_selection_for_large_language_models",
       "paper_title": "Resample or Reroute? Budget-Aware Test-Time Model Selection for Large Language Models",
       "paper_date": "2026-07-09",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-12T15:01:19",
+      "generated_at": "2026-07-11T14:58:42",
       "generator": "openai"
     }
   },
@@ -751,29 +751,29 @@
         "url": "https://arxiv.org/pdf/2607.08662v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "WebSwarm turns web search into a recursive delegation process, letting agent nodes split, expand, and aggregate work to handle both deep reasoning and broad coverage at the same time.",
-      "engineering_relevance": "The framework suggests a practical orchestration pattern for building more scalable research agents that can adapt search depth, collaboration, and evidence collection during inference.",
+      "key_insight": "WebSwarm turns web search into a recursive tree of collaborating agents, so the system can expand both depth and coverage during inference instead of forcing one agent to do everything in a single long trajectory.",
+      "engineering_relevance": "The framework is directly relevant for building scalable research assistants and search pipelines that need adaptive decomposition, evidence-grounded exploration, and efficient collaboration under context limits.",
       "method": [
-        "Probes how information is organized on the web before expanding the search tree.",
-        "Dynamically instantiates agentic search nodes with local objectives and search modes.",
-        "Each node can solve locally or delegate child nodes, then return evidence upward for revision or aggregation."
+        "Dynamically instantiates agentic search nodes with a local objective plus a search mode",
+        "Each node can solve locally or delegate child nodes recursively, then pass evidence and results upward",
+        "Probes web information structure first and reuses process-level experience across homogeneous sibling nodes"
       ],
-      "evidence_signal": "The abstract reports consistent improvements over single-agent and multi-agent baselines on BrowseComp-Plus, WideSearch, DeepWideSearch, and GISA, with additional ablations and efficiency analyses.",
-      "watch_item": "Recursive delegation and dynamic node spawning may increase orchestration complexity and search cost if search-mode control or evidence grounding is not carefully managed.",
+      "evidence_signal": "The abstract reports consistent gains over single-agent and multi-agent baselines on BrowseComp-Plus, WideSearch, DeepWideSearch, and GISA, with analyses across ablations, task difficulty, tool efficiency, and model generalization.",
+      "watch_item": "Recursive delegation and collaboration may increase orchestration complexity and tool usage, so performance can depend on robust node control, stopping criteria, and reliable evidence propagation.",
       "hashtags": [
-        "#WebSearchAgents",
         "#MultiAgentAI",
-        "#LLMReasoning",
-        "#RecursiveOrchestration",
-        "#ResearchAutomation"
+        "#WebSearch",
+        "#LLMAgents",
+        "#RecursiveReasoning",
+        "#InformationRetrieval"
       ],
       "paper_id": "2026-07-09-arxiv-webswarm_recursive_multi_agent_orchestration_for_deep_and_wide_web_search",
       "paper_title": "WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search",
       "paper_date": "2026-07-09",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-07-12T15:01:21",
+      "generated_at": "2026-07-11T14:58:44",
       "generator": "openai"
     }
   },
@@ -803,29 +803,29 @@
         "url": "https://arxiv.org/pdf/2607.08647v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "Reward learning for autonomous agents is more robust when teaching spans multiple environments and uses comparison feedback, which constrains reward functions more globally than demonstrations alone.",
-      "engineering_relevance": "This suggests practical reward-model training should combine environment selection with low-cost human feedback to improve deployment robustness across changing operating conditions.",
+      "key_insight": "Reward functions learned from a single environment can overfit to local dynamics, so robust reward learning should combine multiple environments with feedback modalities that impose stronger global constraints.",
+      "engineering_relevance": "For autonomous systems deployed across changing contexts, this approach offers a practical way to learn human-aligned objectives that transfer better to unseen environments.",
       "method": [
-        "Greedily choose informative environments that reveal complementary reward constraints.",
-        "Query the most cost-effective feedback modality within each selected environment.",
-        "Use a hierarchical teaching strategy to learn rewards that generalize across MDPs."
+        "Greedily select environments that reveal complementary reward constraints.",
+        "Query low-cost human feedback within each selected environment.",
+        "Use a hierarchical teaching strategy to optimize reward learning across multiple MDPs."
       ],
-      "evidence_signal": "The abstract reports that the method achieves substantially lower regret and better held-out-environment generalization than uniform teaching baselines under the same feedback budget.",
-      "watch_item": "Environment selection and feedback querying may be sensitive to MDP coverage and cost assumptions, so gains may depend on how well the training environments represent deployment shifts.",
+      "evidence_signal": "The abstract reports substantially lower regret and stronger generalization to held-out environments than uniform teaching baselines under the same feedback budget.",
+      "watch_item": "Performance may depend on how well the chosen training environments cover deployment variability, so limited environment diversity could still leave reward learning brittle.",
       "hashtags": [
         "#InverseReinforcementLearning",
         "#MachineTeaching",
         "#RewardLearning",
-        "#RobustAI",
-        "#AutonomousSystems"
+        "#AutonomousSystems",
+        "#RobustAI"
       ],
       "paper_id": "2026-07-09-arxiv-multi_modal_multi_environment_machine_teaching_for_robust_reward_learning",
       "paper_title": "Multi-Modal, Multi-Environment Machine Teaching for Robust Reward Learning",
       "paper_date": "2026-07-09",
       "paper_category": "Autonomous Labs",
-      "generated_at": "2026-07-12T15:01:23",
+      "generated_at": "2026-07-11T14:58:47",
       "generator": "openai"
     }
   },
@@ -854,29 +854,29 @@
         "url": "https://arxiv.org/pdf/2607.08602v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "HCC-STAR is a clinical-reasoning LLM that converts routine EMR narratives into risk stratification, guideline-consistent treatment recommendations, and individualized survival estimates for hepatocellular carcinoma.",
-      "engineering_relevance": "The paper shows how to build a verifiable, domain-aligned decision-support system by combining clinician-validated data augmentation, step-level reward optimization, and multi-center clinical evaluation.",
+      "key_insight": "HCC-STAR is a clinically aligned LLM that converts routine EMR narratives into risk staging, ranked guideline-consistent treatments, and individualized survival estimates for hepatocellular carcinoma.",
+      "engineering_relevance": "The work shows how knowledge-aligned reasoning and step-verifiable rewards can turn an LLM into a auditable clinical decision-support system rather than a text-only predictor.",
       "method": [
-        "Curated ~30,000 HCC cases from SEER and transformed them into EMR-style narratives with clinician-validated prompt augmentation.",
-        "Trained a knowledge-aligned reasoning framework with a step-verifiable composite reward to improve guideline-consistent inference.",
-        "Benchmarked on a 6,668-patient, 12-hospital Chinese cohort against guidelines, competitive models, and expert clinicians."
+        "Curated ~30,000 HCC cases from SEER and transformed them into EMR-style narratives with clinician-validated prompt-based augmentation.",
+        "Trained a knowledge-aligned reasoning framework optimized with a step-verifiable composite reward.",
+        "Integrated staging, treatment recommendation, and survival estimation into one model for guideline-consistent decision support."
       ],
-      "evidence_signal": "In a multi-center cohort of 6,668 patients, HCC-STAR outperformed clinical guidelines and competitive models in treatment recommendation and risk stratification, with clinician-blinded reviews judging its reasoning and justifications as trustworthy.",
-      "watch_item": "Performance and survival gains are promising, but real-world deployment will need external prospective validation, careful monitoring for dataset shift, and safeguards against over-reliance on model-generated recommendations.",
+      "evidence_signal": "Evaluated on a multi-center cohort of 6,668 patients from 12 hospitals, where HCC-STAR outperformed clinical guidelines and strong baselines including GPT-5 and Gemini-2.5 Pro, with clinicians rating its reasoning as trustworthy.",
+      "watch_item": "Results are promising but depend on careful external validation and safe deployment in real clinical workflows, since performance may vary across institutions, documentation styles, and patient populations.",
       "hashtags": [
         "#HCC",
         "#ClinicalLLM",
         "#DecisionSupport",
-        "#RiskStratification",
+        "#PrecisionMedicine",
         "#MedicalAI"
       ],
       "paper_id": "2026-07-09-arxiv-towards_precision_therapy_in_hepatocellular_carcinoma_a_clinical_reasoning_llm_for_risk_st",
       "paper_title": "Towards Precision Therapy in Hepatocellular Carcinoma: A Clinical-Reasoning LLM for Risk Stratification and Treatment Guidance",
       "paper_date": "2026-07-09",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-12T15:01:26",
+      "generated_at": "2026-07-11T14:58:49",
       "generator": "openai"
     }
   },
@@ -906,21 +906,21 @@
         "url": "https://arxiv.org/pdf/2607.08409v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "When only synthetic speech is available, GRPO adapts an LLM-based ASR model much better than supervised fine-tuning, cutting WER far more effectively.",
-      "engineering_relevance": "For privacy-constrained domains like banking, reinforcement learning on synthetic TTS data can outperform standard fine-tuning and deliver more usable ASR without collecting real speech.",
+      "key_insight": "GRPO outperforms supervised fine-tuning for adapting ASR to synthetic speech, cutting WER much more effectively when real speech is scarce.",
+      "engineering_relevance": "For privacy-constrained domains like banking, reinforcement learning on synthetic TTS data can deliver stronger ASR adaptation than SFT alone.",
       "method": [
-        "Train on synthetic-only speech using Group Relative Policy Optimization (GRPO).",
-        "Use a critic-free reward based on low word error rate (WER) hypotheses.",
-        "Optionally combine SFT first, then GRPO for the best final adaptation."
+        "Adapt an LLM-based ASR model using synthetic speech only.",
+        "Apply critic-free GRPO with a low-WER reward signal.",
+        "Optionally combine SFT first, then GRPO for the best result."
       ],
-      "evidence_signal": "On synthetic-only adaptation, GRPO reduced WER from 36.71% to 22.09% versus SFT, and SFT+GRPO improved the reduction to about 45% relative to the SFT baseline.",
-      "watch_item": "The results are based on synthetic speech, so performance may depend on how closely the TTS distribution matches the target real-world audio.",
+      "evidence_signal": "On synthetic-only adaptation, GRPO reduced WER from 36.71% to 22.09%, with SFT+GRPO improving it further by 45% relative to SFT.",
+      "watch_item": "The method is evaluated on synthetic speech, so real-world gains may depend on how well the synthetic audio matches deployment acoustics.",
       "hashtags": [
         "#ASR",
-        "#ReinforcementLearning",
         "#GRPO",
+        "#ReinforcementLearning",
         "#SyntheticSpeech",
         "#SpeechRecognition"
       ],
@@ -928,7 +928,7 @@
       "paper_title": "When Synthetic Speech Is All You Have: Better Call GRPO",
       "paper_date": "2026-07-09",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-12T15:01:28",
+      "generated_at": "2026-07-11T14:58:52",
       "generator": "openai"
     }
   },
@@ -958,29 +958,29 @@
         "url": "https://arxiv.org/pdf/2607.08754v1"
       }
     ],
-    "score": 58,
+    "score": 63,
     "infographic": {
-      "key_insight": "SLORR makes neural networks more compressible during training by directly regularizing the original weights with simple, stateless low-rank penalties.",
-      "engineering_relevance": "It offers an architecture-preserving way to improve post-training compression without costly SVDs, extra trainable parameters, or stateful caches.",
+      "key_insight": "SLORR is a simple, stateless, architecture-preserving way to make neural network weights more compressible during training by directly regularizing them toward low rank.",
+      "engineering_relevance": "It offers a practical compression-friendly training add-on that avoids costly SVDs, extra trainable layers, and cached state, making it easier to adopt in real deep-learning pipelines.",
       "method": [
-        "Uses two in-training low-rank regularizers: Hoyer sparsity and nuclear norm.",
-        "Applies GPU-friendly approximations for forward and backward passes with approximation guarantees.",
-        "Regularizes weight matrices directly while keeping the model architecture unchanged."
+        "Regularizes original weight matrices during training rather than changing the model architecture",
+        "Provides two variants: a Hoyer-sparsity-based regularizer and a nuclear-norm-based regularizer",
+        "Uses GPU-friendly forward/backward approximations with approximation guarantees"
       ],
-      "evidence_signal": "Across ImageNet-1K and LLM pretraining experiments, SLORR improves compressibility while adding less than 8% training overhead for vision models and less than 1% on average for LLMs.",
-      "watch_item": "The method relies on approximation schemes for low-rank penalties, so practical behavior may depend on numerical stability and hyperparameter tuning.",
+      "evidence_signal": "The paper reports results on ImageNet-1K for ResNet-50, ViT-B/16, ViT-L/16, and ResNet-18, plus LLM pretraining at 135M and 560M scale, with less than 8% overhead in vision experiments and less than 1% average overhead in LLM training.",
+      "watch_item": "Approximation quality and training stability may depend on the specific regularizer variant and implementation details, so the low-overhead gains should be validated for each target model and regime.",
       "hashtags": [
         "#LowRankRegularization",
         "#ModelCompression",
         "#NeuralNetworkTraining",
         "#EfficientAI",
-        "#LLMPretraining"
+        "#DeepLearning"
       ],
       "paper_id": "2026-07-09-arxiv-slorr_simple_and_efficient_in_training_low_rank_regularization",
       "paper_title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
       "paper_date": "2026-07-09",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-12T15:01:31",
+      "generated_at": "2026-07-11T14:58:55",
       "generator": "openai"
     }
   },
@@ -1009,29 +1009,29 @@
         "url": "https://arxiv.org/pdf/2607.08641v1"
       }
     ],
-    "score": 57,
+    "score": 62,
     "infographic": {
-      "key_insight": "The paper proposes steering neural network training with interpretable partial-dependence constraints so model behavior matches prior functional knowledge.",
-      "engineering_relevance": "This enables more data-efficient regression models whose learned relationships are both predictive and aligned with domain expectations, which is valuable in engineering systems modeling and forecasting.",
+      "key_insight": "The paper proposes steering neural network training with interpretable partial-dependence constraints so the model’s average feature response matches prior domain knowledge.",
+      "engineering_relevance": "This enables more data-efficient regression models whose explanations are both faithful to expert expectations and useful for guiding engineering decisions.",
       "method": [
-        "Use partial dependence to express desired average input-output behavior.",
-        "Add constraints during training so the network’s response follows user-provided functional knowledge.",
-        "Apply the approach to regression tasks, including dynamical systems forecasting."
+        "Compute partial dependence of selected inputs during training.",
+        "Add constraints so the learned average response follows user-specified functional knowledge.",
+        "Optimize the neural network under these explanation-guided objectives."
       ],
-      "evidence_signal": "The abstract reports empirical tests across multiple regression problems, showing constrained models outperform unconstrained ones and need less data, while their interpretations better match the provided knowledge.",
-      "watch_item": "The method depends on having accurate prior functional knowledge and correctly specified partial-dependence constraints, which may be difficult to define in practice.",
+      "evidence_signal": "Across several regression benchmarks, including dynamical systems forecasting, constrained models outperformed unconstrained ones and used data more efficiently while producing interpretations aligned with the provided knowledge.",
+      "watch_item": "The approach depends on having reliable prior functional knowledge and well-chosen feature-level constraints, which may be difficult to specify in complex real-world systems.",
       "hashtags": [
         "#ExplainableAI",
         "#NeuralNetworks",
         "#PartialDependence",
-        "#PhysicsInformedML",
+        "#ConstraintLearning",
         "#Regression"
       ],
       "paper_id": "2026-07-09-arxiv-steering_neural_network_training_through_interpretable_constraints_based_on_partial_depend",
       "paper_title": "Steering Neural Network Training through Interpretable Constraints Based on Partial Dependence",
       "paper_date": "2026-07-09",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-12T15:01:33",
+      "generated_at": "2026-07-11T14:58:57",
       "generator": "openai"
     }
   }
