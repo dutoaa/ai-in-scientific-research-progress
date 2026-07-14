@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-07-13
+Generated: 2026-07-14
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Multimodal Reward Hacking in Reinforcement Learning
+## 1. Reproducing human biases in route choice using large language models: Toward scalable behavioral modeling
 
-- Date: 2026-07-10
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09492v1
-- PDF: https://arxiv.org/pdf/2607.09492v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-multimodal_reward_hacking_in_reinforcement_learning_infographic.json
-
-## 2. Communication-Efficient Digital-Twin Coordination for Heterogeneous LLM Embodied Agents over Computing Power Networks
-
-- Date: 2026-07-10
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2607.09330v1
-- PDF: https://arxiv.org/pdf/2607.09330v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-communication_efficient_digital_twin_coordination_for_heterogeneous_llm_embodied_agents_ov_infographic.json
-
-## 3. Mach-Mind-4-Flash Technical Report
-
-- Date: 2026-07-10
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2607.09375v1
-- PDF: https://arxiv.org/pdf/2607.09375v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-mach_mind_4_flash_technical_report_infographic.json
-
-## 4. Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection
-
-- Date: 2026-07-10
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2607.09641v1
-- PDF: https://arxiv.org/pdf/2607.09641v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-semantic_pareto_dqn_a_multi_objective_reinforcement_learning_framework_for_financial_anoma_infographic.json
-
-## 5. Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation
-
-- Date: 2026-07-10
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09600v1
-- PDF: https://arxiv.org/pdf/2607.09600v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-agora_enhancing_llm_agent_reasoning_via_auction_based_task_allocation_infographic.json
-
-## 6. Characterization of the basin of convexity for multi-snapshot spike deconvolution via variable projection
-
-- Date: 2026-07-10
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09593v1
-- PDF: https://arxiv.org/pdf/2607.09593v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-characterization_of_the_basin_of_convexity_for_multi_snapshot_spike_deconvolution_via_vari_infographic.json
-
-## 7. TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems
-
-- Date: 2026-07-10
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09528v1
-- PDF: https://arxiv.org/pdf/2607.09528v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-tsai_metafraud_a_benchmark_dataset_for_financial_fraud_transaction_and_behavioral_risk_det_infographic.json
-
-## 8. All Explanations are Wrong, But Many Are Useful: Exploring the Rashomon Explanation Set with Large Language Models
-
-- Date: 2026-07-10
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2607.09502v1
-- PDF: https://arxiv.org/pdf/2607.09502v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-all_explanations_are_wrong_but_many_are_useful_exploring_the_rashomon_explanation_set_with_infographic.json
-
-## 9. Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review
-
-- Date: 2026-07-10
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.09403v1
-- PDF: https://arxiv.org/pdf/2607.09403v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-fictional_worldbuilding_multi_agent_llm_collaboration_with_hierarchical_context_compressio_infographic.json
-
-## 10. Letting the Data Speak: Extracting Keywords from Crowdsourced Collections with AI
-
-- Date: 2026-07-10
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.09324v1
-- PDF: https://arxiv.org/pdf/2607.09324v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-letting_the_data_speak_extracting_keywords_from_crowdsourced_collections_with_ai_infographic.json
-
-## 11. Automatic Thematic Indexing of Large Literary Corpora: A Machine Learning Approach to Voltaire's Complete Works
-
-- Date: 2026-07-10
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09316v1
-- PDF: https://arxiv.org/pdf/2607.09316v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-automatic_thematic_indexing_of_large_literary_corpora_a_machine_learning_approach_to_volta_infographic.json
-
-## 12. VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents
-
-- Date: 2026-07-10
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2607.09653v1
-- PDF: https://arxiv.org/pdf/2607.09653v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-vexaiot_autonomous_iot_vulnerability_exploitation_using_ai_agents_infographic.json
-
-## 13. PAC-ACT: Post-training Actor-Critic for Action Chunking Transformers
-
-- Date: 2026-07-10
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09590v1
-- PDF: https://arxiv.org/pdf/2607.09590v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-pac_act_post_training_actor_critic_for_action_chunking_transformers_infographic.json
-
-## 14. Learning Physics-Informed Surrogate Model of Linear Elastic Displacement Fields from Geometry
-
-- Date: 2026-07-10
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.09382v1
-- PDF: https://arxiv.org/pdf/2607.09382v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-learning_physics_informed_surrogate_model_of_linear_elastic_displacement_fields_from_geome_infographic.json
-
-## 15. LLM for EDA in Front-End Design: Challenges and Opportunities
-
-- Date: 2026-07-10
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2607.09616v1
-- PDF: https://arxiv.org/pdf/2607.09616v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-llm_for_eda_in_front_end_design_challenges_and_opportunities_infographic.json
-
-## 16. ProofCouncil: An LLM Agent for Solving Open Mathematical Problems
-
-- Date: 2026-07-10
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2607.09474v1
-- PDF: https://arxiv.org/pdf/2607.09474v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-proofcouncil_an_llm_agent_for_solving_open_mathematical_problems_infographic.json
-
-## 17. Active rejection enables reliable generalization of universal machine-learning interatomic potentials
-
-- Date: 2026-07-10
+- Date: 2026-07-13
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.09456v1
-- PDF: https://arxiv.org/pdf/2607.09456v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-active_rejection_enables_reliable_generalization_of_universal_machine_learning_interatomic_infographic.json
+- arXiv: https://arxiv.org/abs/2607.11632v1
+- PDF: https://arxiv.org/pdf/2607.11632v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-reproducing_human_biases_in_route_choice_using_large_language_models_toward_scalable_behav_infographic.json
 
-## 18. Fully Trainable Deep Differentiable Logic Gate Networks and Lookup Table Networks
+## 2. DiffEEG: A Self-Supervised Denoising Diffusion Model for Learning EEG Generic Representations
 
-- Date: 2026-07-10
+- Date: 2026-07-13
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09399v1
-- PDF: https://arxiv.org/pdf/2607.09399v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-fully_trainable_deep_differentiable_logic_gate_networks_and_lookup_table_networks_infographic.json
+- arXiv: https://arxiv.org/abs/2607.11578v1
+- PDF: https://arxiv.org/pdf/2607.11578v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-diffeeg_a_self_supervised_denoising_diffusion_model_for_learning_eeg_generic_representatio_infographic.json
 
-## 19. Graph Neural Networks for Scalable and Transferable Node Centrality Approximation
+## 3. Proxy Exploration and Reusable Guidance: A Modular LLM Post-Training Paradigm via Proxy-Guided Update Signals
 
-- Date: 2026-07-10
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.09372v1
-- PDF: https://arxiv.org/pdf/2607.09372v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-graph_neural_networks_for_scalable_and_transferable_node_centrality_approximation_infographic.json
+- Date: 2026-07-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.11505v1
+- PDF: https://arxiv.org/pdf/2607.11505v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-proxy_exploration_and_reusable_guidance_a_modular_llm_post_training_paradigm_via_proxy_gui_infographic.json
 
-## 20. Shared Selective Persistent Memory for Agentic LLM Systems
+## 4. Agentic Skill Optimization over Lie Algebroids
 
-- Date: 2026-07-10
+- Date: 2026-07-13
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2607.09493v1
-- PDF: https://arxiv.org/pdf/2607.09493v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-10-arxiv-shared_selective_persistent_memory_for_agentic_llm_systems_infographic.json
+- arXiv: https://arxiv.org/abs/2607.11493v1
+- PDF: https://arxiv.org/pdf/2607.11493v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-agentic_skill_optimization_over_lie_algebroids_infographic.json
+
+## 5. How to Tame Grokking: Representation Geometry as a Control Signal
+
+- Date: 2026-07-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.11666v1
+- PDF: https://arxiv.org/pdf/2607.11666v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-how_to_tame_grokking_representation_geometry_as_a_control_signal_infographic.json
+
+## 6. SCOPE-RL: Optimizing Reasoning Paths Before and After Success
+
+- Date: 2026-07-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.11506v1
+- PDF: https://arxiv.org/pdf/2607.11506v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-scope_rl_optimizing_reasoning_paths_before_and_after_success_infographic.json
+
+## 7. Structure-Feature Aligned Graph Learning via Alternating Constrained Optimization
+
+- Date: 2026-07-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.11577v1
+- PDF: https://arxiv.org/pdf/2607.11577v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-structure_feature_aligned_graph_learning_via_alternating_constrained_optimization_infographic.json
+
+## 8. Learning Residual Kinematic Corrections for Continuous Neural Decoding via Reinforcement Learning
+
+- Date: 2026-07-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.11530v1
+- PDF: https://arxiv.org/pdf/2607.11530v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-learning_residual_kinematic_corrections_for_continuous_neural_decoding_via_reinforcement_l_infographic.json
+
+## 9. Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search
+
+- Date: 2026-07-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.11826v1
+- PDF: https://arxiv.org/pdf/2607.11826v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-transformer_guided_swarm_intelligence_for_frugal_neural_architecture_search_infographic.json
+
+## 10. HiFi-LLP: High-Fidelity, Low-Cost Latency Predictors with Confidence for Robust HW-NAS
+
+- Date: 2026-07-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.11746v1
+- PDF: https://arxiv.org/pdf/2607.11746v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-hifi_llp_high_fidelity_low_cost_latency_predictors_with_confidence_for_robust_hw_nas_infographic.json
+
+## 11. Physics-Informed Neural Networks for the High-Resolution Reconstruction of Flow Measurement Indicators in Fluid Dynamics
+
+- Date: 2026-07-13
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2607.11576v1
+- PDF: https://arxiv.org/pdf/2607.11576v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-physics_informed_neural_networks_for_the_high_resolution_reconstruction_of_flow_measuremen_infographic.json
+
+## 12. A multi-scale feature enhanced graph neural network for fluid dynamics prediction in complex geometries
+
+- Date: 2026-07-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.11672v1
+- PDF: https://arxiv.org/pdf/2607.11672v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-a_multi_scale_feature_enhanced_graph_neural_network_for_fluid_dynamics_prediction_in_compl_infographic.json
+
+## 13. Heuristic Learning for Active Flow Control Using Coding Agents
+
+- Date: 2026-07-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.11565v1
+- PDF: https://arxiv.org/pdf/2607.11565v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-heuristic_learning_for_active_flow_control_using_coding_agents_infographic.json
+
+## 14. MAGIC: Transition-Aware Generation of Navigable Multi-Scene Game Worlds with Large Language Models
+
+- Date: 2026-07-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.11594v1
+- PDF: https://arxiv.org/pdf/2607.11594v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-magic_transition_aware_generation_of_navigable_multi_scene_game_worlds_with_large_language_infographic.json
+
+## 15. Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data
+
+- Date: 2026-07-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.11883v1
+- PDF: https://arxiv.org/pdf/2607.11883v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-requential_coding_pushing_the_limits_of_model_compression_with_self_generated_training_dat_infographic.json
+
+## 16. CatRetriever: Contrastive Representation Learning for Slab-to-Bulk Retrieval in Generative Catalyst Discovery
+
+- Date: 2026-07-13
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2607.11712v1
+- PDF: https://arxiv.org/pdf/2607.11712v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-catretriever_contrastive_representation_learning_for_slab_to_bulk_retrieval_in_generative_infographic.json
+
+## 17. An Explainable Agentic System for Detection of Conversational Scams with Summary-Based Memory
+
+- Date: 2026-07-13
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2607.11707v1
+- PDF: https://arxiv.org/pdf/2607.11707v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-an_explainable_agentic_system_for_detection_of_conversational_scams_with_summary_based_mem_infographic.json
+
+## 18. Think Through a Bottleneck: Hourglass Reasoning for Rigorous Induction
+
+- Date: 2026-07-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.11696v1
+- PDF: https://arxiv.org/pdf/2607.11696v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-think_through_a_bottleneck_hourglass_reasoning_for_rigorous_induction_infographic.json
+
+## 19. Evidence-Backed Video Question Answering
+
+- Date: 2026-07-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.11862v1
+- PDF: https://arxiv.org/pdf/2607.11862v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-evidence_backed_video_question_answering_infographic.json
+
+## 20. From Expressivity to Sample Complexity: Narrow Teachers for Transformers via C-RASP
+
+- Date: 2026-07-13
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2607.11760v1
+- PDF: https://arxiv.org/pdf/2607.11760v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-13-arxiv-from_expressivity_to_sample_complexity_narrow_teachers_for_transformers_via_c_rasp_infographic.json
