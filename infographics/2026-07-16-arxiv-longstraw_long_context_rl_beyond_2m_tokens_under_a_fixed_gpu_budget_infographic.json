@@ -1,0 +1,24 @@
+{
+  "key_insight": "LongStraw enables million-token RL post-training under a fixed GPU budget by reusing prompt computation, keeping only necessary model state, and replaying response branches to control memory.",
+  "engineering_relevance": "It provides a practical execution stack for long-context agent training when inference contexts are already very long but RL post-training must stay within limited GPU memory.",
+  "method": [
+    "Evaluates the shared prompt without autograd",
+    "Retains only model-specific state needed for later tokens",
+    "Replays short response branches one at a time to shrink the live training graph"
+  ],
+  "evidence_signal": "On 8 H20 GPUs, it reaches 2.1M-token positions for grouped Qwen scoring/backward with only 0.21 GB extra peak memory at larger group size, and a stress test reaches 4.46M positions.",
+  "watch_item": "The reported results validate execution capacity, not full training correctness, because the prompt state is detached and some distributed forward/gradient composition paths are still incomplete.",
+  "hashtags": [
+    "#LongContextRL",
+    "#GPUEfficiency",
+    "#MillionTokenTraining",
+    "#AgenticAI",
+    "#MemoryOptimization"
+  ],
+  "paper_id": "2026-07-16-arxiv-longstraw_long_context_rl_beyond_2m_tokens_under_a_fixed_gpu_budget",
+  "paper_title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+  "paper_date": "2026-07-16",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-07-17T15:16:54",
+  "generator": "openai"
+}
