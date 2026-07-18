@@ -1,24 +1,24 @@
 {
-  "key_insight": "Physical danger in embodied-agent plans is not the same as text-level unsafe content: the two signals are separable in LLM hidden states, enabling better safety detection beyond keyword-based moderation.",
-  "engineering_relevance": "For robotics and agent systems, a lightweight hidden-state probe can reduce false alarms on benign instructions while catching physically risky plans more reliably than standard LLM judges.",
+  "key_insight": "Text-level safety and physically grounded danger are separable in LLM hidden states, so a model can look linguistically safe while still encoding unsafe action risk.",
+  "engineering_relevance": "For embodied agents and tool-using LLMs, hidden-state risk probing offers a lighter-weight safety layer than prompt-only moderation or judge models, reducing false blocks on safe tasks.",
   "method": [
-    "Analyze hidden-state directions to test whether content danger (CD) and physical danger (PD) are distinct.",
-    "Train PRISM, a single-layer L2-regularized logistic probe on full hidden states.",
-    "Validate with random-split null tests and cross-benchmark evaluation on SafeAgentBench, PSB-1K, SafeText, and EARBench."
+    "Analyzed hidden-state directions to test whether content danger (CD) and physical danger (PD) occupy different representation spaces.",
+    "Built PRISM, a single-layer L2-regularized logistic probe over full hidden states.",
+    "Validated the probe with random-split null tests and cross-benchmark replication."
   ],
-  "evidence_signal": "Across Qwen2.5-3B/7B/14B/32B, Phi-3.5, and SmolLM2, PRISM reached 86.2–87.7% accuracy on SafeAgentBench and 99.6% on PSB-1K, while same-scale LLM judges showed much higher false positives on safe tasks.",
-  "watch_item": "Because PRISM relies on hidden-state probing, performance may depend on model architecture, layer choice, and distribution shift to new embodied tasks or unseen physical domains.",
+  "evidence_signal": "Across Qwen2.5-3B/7B/14B/32B, Phi-3.5, and SmolLM2, PRISM achieved 86.2–87.7% accuracy on SafeAgentBench and 99.6% on PSB-1K, while LLM judges showed much higher false-positive rates on safe tasks.",
+  "watch_item": "Because PRISM is a representation-level classifier, it may depend on model-specific hidden states and require careful calibration when transferred to new architectures or domains.",
   "hashtags": [
-    "#LLMs",
-    "#AgentSafety",
+    "#LLMSafety",
     "#EmbodiedAI",
     "#HiddenStateProbing",
-    "#AIResearch"
+    "#RiskDetection",
+    "#AIEngineering"
   ],
   "paper_id": "2026-07-16-arxiv-when_words_are_safe_but_actions_kill_probing_physical_danger_beyond_text_safety_in_hidden",
   "paper_title": "When Words Are Safe But Actions Kill: Probing Physical Danger Beyond Text Safety in Hidden-State Risk Space",
   "paper_date": "2026-07-16",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-17T15:16:49",
+  "generated_at": "2026-07-18T15:04:18",
   "generator": "openai"
 }

@@ -1,24 +1,24 @@
 {
-  "key_insight": "MeanFlowNFT adapts forward-process RL from instantaneous-velocity diffusion models to MeanFlow’s average-velocity generators by learning an induced instantaneous predictor, enabling reward optimization without sacrificing few-step sampling speed.",
-  "engineering_relevance": "It provides a practical way to align fast generative models with human or task-specific rewards while keeping low sampling cost, which is important for deployable image and video generation systems.",
+  "key_insight": "MeanFlowNFT adapts forward-process RL to MeanFlow by converting average-velocity sampling into an induced instantaneous-velocity objective, enabling reward optimization without sacrificing few-step generation speed.",
+  "engineering_relevance": "It offers a practical way to align fast generative models with human or task-specific rewards while retaining the low-latency sampling advantages needed in production systems.",
   "method": [
-    "Build an induced instantaneous-velocity predictor from MeanFlow’s average-velocity formulation.",
-    "Apply the DiffusionNFT forward-process RL objective to this predictor for well-defined reward optimization.",
-    "Keep sampling in the original average-velocity mode to preserve MeanFlow’s few-step efficiency."
+    "Construct an induced instantaneous-velocity predictor from the MeanFlow identity.",
+    "Apply the DiffusionNFT forward-process RL objective to this predictor.",
+    "Keep inference on average velocity so sampling stays few-step and efficient."
   ],
-  "evidence_signal": "The method improves multiple benchmarks in image and video generation, outperforming prior RL-tuned few-step generators on 6 of 8 metrics for SD3.5-M and reaching a 4-step Wan 2.1 VBench score of 84.33 versus 82.57 for a 50-step RL baseline.",
-  "watch_item": "Performance depends on the quality of the induced velocity bridge, so implementation must preserve the MeanFlow identity and stable reward optimization across different sampling horizons.",
+  "evidence_signal": "Experiments on image and video generation show consistent improvements, including outperforming prior RL-tuned few-step generators on most metrics and reaching 84.33 VBench on Wan 2.1 with 4 steps versus 82.57 for a 50-step RL baseline.",
+  "watch_item": "The approach depends on a correct average-to-instantaneous velocity bridge, so implementation errors or distribution shift could weaken the policy-improvement guarantee in practice.",
   "hashtags": [
-    "#MeanFlowNFT",
-    "#ReinforcementLearning",
     "#GenerativeAI",
+    "#ReinforcementLearning",
     "#DiffusionModels",
-    "#VideoGeneration"
+    "#VideoGeneration",
+    "#EfficientInference"
   ],
   "paper_id": "2026-07-16-arxiv-meanflownft_bringing_forward_process_rl_to_average_velocity_generators",
   "paper_title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
   "paper_date": "2026-07-16",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-17T15:16:59",
+  "generated_at": "2026-07-18T15:04:29",
   "generator": "openai"
 }

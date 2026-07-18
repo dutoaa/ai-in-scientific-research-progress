@@ -1,24 +1,24 @@
 {
-  "key_insight": "The paper reframes reinforcement learning for Masked Diffusion Language Models as a two-stage policy over both token generation and position remasking, enabling a more complete policy gradient objective.",
-  "engineering_relevance": "This provides a practical route to improve reasoning and code generation in diffusion-based language models without relying on intractable log-likelihood estimation.",
+  "key_insight": "Masked diffusion language model RL should optimize both token generation and which positions are remasked, because generation is a two-stage action process rather than token prediction alone.",
+  "engineering_relevance": "For practical LLM training, the paper suggests a more faithful policy-gradient objective that can improve reasoning and code generation in diffusion-based generators.",
   "method": [
-    "Model MDLM generation as a two-stage action MDP: token placement plus remasking decisions.",
+    "Formulate MDLM generation as a two-stage MDP: token placement and remasking decisions.",
     "Decompose the policy gradient into a token term and a masking term.",
-    "Optimize both terms jointly to better match the full generation process."
+    "Optimize both terms jointly instead of approximating likelihood with token predictions only."
   ],
-  "evidence_signal": "The approach reports strong benchmark performance in the abstract, including 87.1% on GSM8K and 53.4% on MBPP.",
-  "watch_item": "Training may be more complex than token-only methods because the masking policy must be learned and optimized stably alongside token predictions.",
+  "evidence_signal": "The abstract reports state-of-the-art benchmark results, including 87.1% on GSM8K and 53.4% on MBPP.",
+  "watch_item": "The approach depends on accurately modeling the remasking policy, which may add implementation complexity and instability compared with token-only approximations.",
   "hashtags": [
-    "#DiffusionLMs",
+    "#DiffusionLanguageModels",
     "#PolicyGradients",
     "#ReinforcementLearning",
     "#LLMReasoning",
-    "#CodeGeneration"
+    "#ProgramSynthesis"
   ],
   "paper_id": "2026-07-16-arxiv-mask_aware_policy_gradients_for_diffusion_language_models",
   "paper_title": "Mask-Aware Policy Gradients for Diffusion Language Models",
   "paper_date": "2026-07-16",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-07-17T15:16:51",
+  "generated_at": "2026-07-18T15:04:21",
   "generator": "openai"
 }

@@ -1,24 +1,24 @@
 {
-  "key_insight": "Frozen visual world models for Atari Pong often fail at task-critical dynamics like tracking the ball, and concept-guided spatial regularization can partially improve them.",
-  "engineering_relevance": "For model-based RL systems, evaluating the world model in isolation is essential because strong agent scores can hide poor predictive fidelity that harms downstream policy learning.",
+  "key_insight": "Frozen visual world models for Atari Pong often fail to preserve task-critical concepts like the ball, and concept-guided spatial regularization can partially reduce these failures.",
+  "engineering_relevance": "For model-based RL systems, improving the fidelity of internal world dynamics can materially affect downstream policy quality, so diagnostics beyond training return are essential.",
   "method": [
     "Reproduced five visual world-model agents: DreamerV3, DIAMOND, TWISTER, Simulus, and STORM.",
-    "Ran closed-loop rollout diagnostics using separately trained policies interacting with frozen world models.",
-    "Added Concept-Guided Spatial Regularization (CGSReg), a segmented-region reconstruction loss, and tested its effect on rollouts and zero-shot pixel-space MBRL."
+    "Evaluated frozen models with closed-loop rollouts using separately trained policies to expose visual and dynamical errors.",
+    "Introduced Concept-Guided Spatial Regularization (CGSReg), an auxiliary pixel reconstruction loss on segmented concept regions."
   ],
-  "evidence_signal": "Across all five models, rollouts showed errors such as ball disappearance and incorrect ball-paddle interactions, and zero-shot policies trained inside frozen models underperformed the original pipelines, with DreamerV3 dropping from -5.5 to -20.9 mean return.",
-  "watch_item": "CGSReg improves some models and metrics but does not fully resolve world-model bottlenecks, so results may depend on architecture and evaluation setting.",
+  "evidence_signal": "Across all five models, rollouts showed failures such as ball disappearance and invalid ball-paddle interactions, and zero-shot policies trained inside frozen models underperformed the original MBRL pipelines (e.g., DreamerV3 mean return -5.5 to -20.9).",
+  "watch_item": "CGSReg improves several models but not consistently across all metrics, suggesting that concept-aware reconstruction alone does not eliminate broader world-model bottlenecks.",
   "hashtags": [
     "#WorldModels",
     "#ModelBasedRL",
     "#AtariPong",
-    "#DreamerV3",
-    "#RepresentationLearning"
+    "#RepresentationLearning",
+    "#ReinforcementLearning"
   ],
   "paper_id": "2026-07-16-arxiv-concept_guided_spatial_regularization_for_world_models_in_atari_pong",
   "paper_title": "Concept-Guided Spatial Regularization for World Models in Atari Pong",
   "paper_date": "2026-07-16",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-07-17T15:17:19",
+  "generated_at": "2026-07-18T15:04:49",
   "generator": "openai"
 }
