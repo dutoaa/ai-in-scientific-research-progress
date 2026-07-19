@@ -1,24 +1,24 @@
 {
-  "key_insight": "MeanFlowNFT adapts forward-process RL to MeanFlow by converting average-velocity sampling into an induced instantaneous-velocity objective, enabling reward optimization without sacrificing few-step generation speed.",
-  "engineering_relevance": "It offers a practical way to align fast generative models with human or task-specific rewards while retaining the low-latency sampling advantages needed in production systems.",
+  "key_insight": "MeanFlowNFT adapts forward-process RL to MeanFlow by converting average-velocity sampling into an induced instantaneous-velocity objective, enabling reward alignment without sacrificing few-step generation speed.",
+  "engineering_relevance": "This makes fast generative models easier to optimize for human preferences or downstream tasks while keeping inference cheap and practical for image/video deployment.",
   "method": [
     "Construct an induced instantaneous-velocity predictor from the MeanFlow identity.",
-    "Apply the DiffusionNFT forward-process RL objective to this predictor.",
-    "Keep inference on average velocity so sampling stays few-step and efficient."
+    "Apply the DiffusionNFT forward-process RL objective to that predictor.",
+    "Keep sampling with the original average velocity to preserve fast few-step generation."
   ],
-  "evidence_signal": "Experiments on image and video generation show consistent improvements, including outperforming prior RL-tuned few-step generators on most metrics and reaching 84.33 VBench on Wan 2.1 with 4 steps versus 82.57 for a 50-step RL baseline.",
-  "watch_item": "The approach depends on a correct average-to-instantaneous velocity bridge, so implementation errors or distribution shift could weaken the policy-improvement guarantee in practice.",
+  "evidence_signal": "The abstract reports consistent gains on image and video benchmarks, including outperforming prior RL-tuned few-step generators on 6 of 8 metrics on SD3.5-M and a 4-step Wan 2.1 model reaching VBench 84.33 versus 82.57 for a 50-step baseline.",
+  "watch_item": "The approach depends on a correct induced-velocity formulation and stable reward optimization, so implementation errors or reward misalignment could reduce the expected policy-improvement benefit.",
   "hashtags": [
     "#GenerativeAI",
     "#ReinforcementLearning",
     "#DiffusionModels",
-    "#VideoGeneration",
-    "#EfficientInference"
+    "#FlowMatching",
+    "#EfficientSampling"
   ],
   "paper_id": "2026-07-16-arxiv-meanflownft_bringing_forward_process_rl_to_average_velocity_generators",
   "paper_title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
   "paper_date": "2026-07-16",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-18T15:04:29",
+  "generated_at": "2026-07-19T15:00:29",
   "generator": "openai"
 }

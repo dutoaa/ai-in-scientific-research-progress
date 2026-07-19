@@ -1,24 +1,24 @@
 {
-  "key_insight": "Text-level safety and physically grounded danger are separable in LLM hidden states, so a model can look linguistically safe while still encoding unsafe action risk.",
-  "engineering_relevance": "For embodied agents and tool-using LLMs, hidden-state risk probing offers a lighter-weight safety layer than prompt-only moderation or judge models, reducing false blocks on safe tasks.",
+  "key_insight": "Physical danger in embodied-agent planning is a distinct signal from ordinary text-level safety, and it can be detected from LLM hidden states with a simple linear probe.",
+  "engineering_relevance": "This enables safer robot and agent planners by filtering grounded physical-risk instructions without over-blocking benign tasks that merely mention risky words.",
   "method": [
-    "Analyzed hidden-state directions to test whether content danger (CD) and physical danger (PD) occupy different representation spaces.",
-    "Built PRISM, a single-layer L2-regularized logistic probe over full hidden states.",
-    "Validated the probe with random-split null tests and cross-benchmark replication."
+    "Analyze hidden-state directions to test whether content danger (CD) and physical danger (PD) separate in representation space.",
+    "Train PRISM, a single-layer L2-regularized logistic probe on full hidden states.",
+    "Validate with random-split null tests and contrastive benchmarks that remove direct harm keywords."
   ],
-  "evidence_signal": "Across Qwen2.5-3B/7B/14B/32B, Phi-3.5, and SmolLM2, PRISM achieved 86.2–87.7% accuracy on SafeAgentBench and 99.6% on PSB-1K, while LLM judges showed much higher false-positive rates on safe tasks.",
-  "watch_item": "Because PRISM is a representation-level classifier, it may depend on model-specific hidden states and require careful calibration when transferred to new architectures or domains.",
+  "evidence_signal": "Across multiple models, PRISM reached 86.2–87.7% accuracy on SafeAgentBench and 99.6% accuracy with 0.7% FPR on PSB-1K, while same-scale LLM judges produced much higher false-positive rates.",
+  "watch_item": "Results depend on hidden-state access and benchmark design, so real-world deployment should check robustness under distribution shift, new embodiments, and adversarial prompt variation.",
   "hashtags": [
     "#LLMSafety",
     "#EmbodiedAI",
-    "#HiddenStateProbing",
     "#RiskDetection",
-    "#AIEngineering"
+    "#HiddenStates",
+    "#AIResearch"
   ],
   "paper_id": "2026-07-16-arxiv-when_words_are_safe_but_actions_kill_probing_physical_danger_beyond_text_safety_in_hidden",
   "paper_title": "When Words Are Safe But Actions Kill: Probing Physical Danger Beyond Text Safety in Hidden-State Risk Space",
   "paper_date": "2026-07-16",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-18T15:04:18",
+  "generated_at": "2026-07-19T15:00:19",
   "generator": "openai"
 }

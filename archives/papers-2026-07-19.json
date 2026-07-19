@@ -26,29 +26,29 @@
         "url": "https://arxiv.org/pdf/2607.15095v1"
       }
     ],
-    "score": 87,
+    "score": 92,
     "infographic": {
-      "key_insight": "The paper shows that coalition bargaining can be simulated with LLM agents by combining partisan persona training, manifesto-grounded retrieval, and provenance tracking to explain who shaped the final agreement.",
-      "engineering_relevance": "It offers a transparent multi-agent architecture for politically constrained negotiation systems, with auditability mechanisms that can be reused in other high-stakes decision-support workflows.",
+      "key_insight": "The paper builds a transparent multi-agent LLM system to simulate coalition negotiations, while tracing every agreement clause back to party manifestos to measure influence and realism.",
+      "engineering_relevance": "It provides a scalable, auditable framework for computational political science where model behavior, retrieval grounding, and provenance tracking can be evaluated separately.",
       "method": [
-        "SFT and DPO create strong party-specific agent personas.",
-        "Per-party RAG constrains each agent to its official manifesto.",
-        "A formateur arbitrates hub-and-spoke negotiation, while MILT and CIS trace and score clause provenance."
+        "SFT + DPO create partisan LLM agents with strong party-specific personas.",
+        "Per-party RAG constrains each agent to its official manifesto during negotiation.",
+        "MILT traces clause-level provenance, computes Coalition Influence Score (CIS), and compares simulated provisions with the real coalition agreement."
       ],
-      "evidence_signal": "Across three independent simulations on the 2019 Flemish election, the framework produced a stable party ranking and showed that manifesto-anchored clauses aligned with the real coalition agreement better than hallucinated content.",
-      "watch_item": "Results depend on manifesto quality, retrieval fidelity, and the assumption that simulated party behavior can be faithfully represented by LLM personas.",
+      "evidence_signal": "Across three independent simulations, the system produced a stable winner and ranking (N-VA ahead of CD&V and Open Vld), and manifesto-anchored lineage predicted real-world adoption better than hallucinated content.",
+      "watch_item": "The approach depends on high-quality manifesto retrieval and persona tuning; if grounding or alignment is imperfect, the provenance audit and negotiation realism can degrade.",
       "hashtags": [
         "#LLMAgents",
         "#CoalitionFormation",
         "#RAG",
-        "#PoliticalScienceAI",
-        "#ModelAuditing"
+        "#ProvenanceTracking",
+        "#ComputationalPoliticalScience"
       ],
       "paper_id": "2026-07-16-arxiv-digital_pantheon_simulating_and_auditing_coalition_formation_with_llm_agents",
       "paper_title": "Digital Pantheon: Simulating and Auditing Coalition Formation with LLM Agents",
       "paper_date": "2026-07-16",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-19T15:00:07",
+      "generated_at": "2026-07-18T15:04:04",
       "generator": "openai"
     }
   },
@@ -78,21 +78,21 @@
         "url": "https://arxiv.org/pdf/2607.15107v1"
       }
     ],
-    "score": 71,
+    "score": 81,
     "infographic": {
-      "key_insight": "LINCS reframes machine learning as a categorical factorization problem, where non-compositionality is measured by the failure of a sketch to factor through its tangent lift.",
-      "engineering_relevance": "This provides a principled way to analyze whether learning constraints remain stable under infinitesimal perturbations, with potential implications for robust model design and optimization.",
+      "key_insight": "The paper reframes machine learning as repairing non-compositionality via a categorical tangent-lift construction, where learning is modeled as a factorization problem in sketches and their infinitesimal perturbations.",
+      "engineering_relevance": "This provides a formal way to reason about whether model constraints remain compositional under small perturbations, which may be useful for analyzing robustness in deep learning, LLMs, and reinforcement learning.",
       "method": [
-        "Represent ML tasks as learning sketches with graphs, commutativity conditions, limits, and colimits.",
-        "Define non-compositionality as an obstruction to factorization, then lift the sketch through the tangent functor.",
-        "Iterate tangent lifts via the INC endofunctor to study whether compositionality stabilizes as a coalgebraic fixed point."
+        "Represent ML problems as learning sketches with graphs, commutativity conditions, limits, and colimits.",
+        "Define non-compositionality as a failure of universal factorization, then lift the sketch through the tangent functor to measure infinitesimal obstruction.",
+        "Iterate the tangent lift via the INC endofunctor to study stabilization as a coalgebraic fixed point."
       ],
-      "evidence_signal": "The abstract describes a theoretical development with future experimental evaluation underway in deep learning, large language models, and reinforcement learning, but does not report results yet.",
-      "watch_item": "The framework is highly abstract and depends on categorical structure and tangent functor assumptions, so practical implementation may be nontrivial without concrete model instantiations.",
+      "evidence_signal": "The abstract reports that experimental evaluation is still underway and is described in companion papers, so no concrete results are provided here.",
+      "watch_item": "The framework is highly abstract and depends on strong categorical assumptions, so practical applicability and computational tractability may be difficult to validate in standard ML pipelines.",
       "hashtags": [
         "#CategoryTheory",
         "#MachineLearning",
-        "#TangentFunctors",
+        "#TangentCategories",
         "#Compositionality",
         "#AIResearch"
       ],
@@ -100,7 +100,7 @@
       "paper_title": "Learning in Infinitesimal Non-Compositional Sketches",
       "paper_date": "2026-07-16",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-19T15:00:10",
+      "generated_at": "2026-07-18T15:04:07",
       "generator": "openai"
     }
   },
@@ -129,29 +129,29 @@
         "url": "https://arxiv.org/pdf/2607.14884v1"
       }
     ],
-    "score": 68,
+    "score": 78,
     "infographic": {
-      "key_insight": "Physics-informed neural networks are used to optimize single-qubit quantum gates at the full evolution level, learning control fields, state trajectories, and total duration together under the Bloch equation.",
-      "engineering_relevance": "This makes quantum control more interpretable and adaptable for hardware-specific gate synthesis, enabling diagnosis and local refinement of physically valid evolutions rather than only pulse shapes.",
+      "key_insight": "Physics-informed neural networks can optimize single-qubit quantum gates at the level of the full controlled evolution, learning control fields, state trajectories, and duration together under the Bloch equation.",
+      "engineering_relevance": "This process-level approach makes quantum gate design more interpretable and adaptable, enabling hardware-aware refinement without relying on a fixed pulse ansatz or duration sweep.",
       "method": [
-        "Represent the gate as a differentiable controlled evolution, not just a pulse ansatz",
-        "Jointly learn pulse amplitudes, Bloch-state trajectories, and gate duration with PINNs",
-        "Use physics constraints from the Bloch equation to guide optimization and diagnose geometric errors"
+        "Represent gate synthesis with a PINN constrained by the Bloch equation",
+        "Jointly learn pulse shape, Bloch-state trajectory, and total gate time",
+        "Use the learned evolution structure to diagnose and locally correct geometric-condition errors"
       ],
-      "evidence_signal": "The abstract reports that rotation-gate evolutions recover expected bounded-control structure without pulse or duration scans, and a geometric gate achieves reduced residual path error while keeping high fidelity.",
-      "watch_item": "The approach likely depends on accurate physical modeling of the qubit dynamics, so performance may degrade if the Bloch-equation assumptions or hardware constraints are mismatched.",
+      "evidence_signal": "The abstract reports that optimized evolutions recover expected bounded-control structure for rotation gates and that, for a geometric gate, feedback reduced residual path error while preserving high fidelity.",
+      "watch_item": "Performance is demonstrated at the single-qubit level in abstracted control settings, so extension to noisy multi-qubit hardware may require additional constraints and validation.",
       "hashtags": [
         "#QuantumControl",
         "#PhysicsInformedNeuralNetworks",
         "#ScientificMachineLearning",
         "#QuantumGates",
-        "#DifferentiableOptimization"
+        "#OptimalControl"
       ],
       "paper_id": "2026-07-16-arxiv-evolution_level_quantum_optimal_control_of_single_qubit_gates_with_physics_informed_neural",
       "paper_title": "Evolution-Level Quantum Optimal Control of Single-Qubit Gates with Physics-Informed Neural Networks",
       "paper_date": "2026-07-16",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-19T15:00:12",
+      "generated_at": "2026-07-18T15:04:10",
       "generator": "openai"
     }
   },
@@ -181,29 +181,29 @@
         "url": "https://arxiv.org/pdf/2607.15163v1"
       }
     ],
-    "score": 67,
+    "score": 77,
     "infographic": {
-      "key_insight": "Scaling humanoid Behavior Foundation Models works best when motion tracking, diverse on-policy data, and a scalable transformer architecture are coordinated together.",
-      "engineering_relevance": "The study offers a practical recipe for building more general, higher-fidelity humanoid controllers that transfer better across tasks and environments.",
+      "key_insight": "Scaling humanoid Behavior Foundation Models works best when the learning paradigm, data strategy, and architecture are co-designed around whole-body motion tracking in a global frame.",
+      "engineering_relevance": "The paper offers a practical recipe for building more general and controllable humanoid robots that can transfer better across tasks and environments in both simulation and real-world settings.",
       "method": [
-        "Reformulate humanoid control as global-frame motion tracking of integrated whole-body behaviors.",
-        "Balance on-policy rollout volume with diverse reference motion data for better scaling.",
+        "Reformulate humanoid control as global-frame whole-body motion tracking.",
+        "Balance on-policy rollout quantity with diverse reference motions.",
         "Use the Humanoid Transformer to learn structured behavioral representations at scale."
       ],
-      "evidence_signal": "Across simulation and real-world deployment, the method reduced test MPKPE by over 10% in local mode and 82% in global mode versus existing humanoid controllers.",
-      "watch_item": "Performance gains may depend on careful tuning of data diversity, rollout quantity, and architecture, so the recipe may not transfer unchanged to all humanoid platforms or motion datasets.",
+      "evidence_signal": "Extensive simulation and real-world experiments report over 10% lower MPKPE in local mode and 82% lower MPKPE in global mode versus existing humanoid controllers.",
+      "watch_item": "The scaling gains depend on carefully coordinating data diversity, rollout collection, and model design, so weaker alignment across these components may reduce performance.",
       "hashtags": [
         "#HumanoidRobotics",
-        "#FoundationModels",
-        "#BehaviorLearning",
+        "#BehaviorFoundationModel",
         "#ScientificMachineLearning",
-        "#RobotControl"
+        "#MotionTracking",
+        "#RobotLearning"
       ],
       "paper_id": "2026-07-16-arxiv-scaling_behavior_foundation_model_for_humanoid_robots",
       "paper_title": "Scaling Behavior Foundation Model for Humanoid Robots",
       "paper_date": "2026-07-16",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-07-19T15:00:14",
+      "generated_at": "2026-07-18T15:04:12",
       "generator": "openai"
     }
   },
@@ -235,29 +235,29 @@
         "url": "https://arxiv.org/pdf/2607.15202v1"
       }
     ],
-    "score": 65,
+    "score": 75,
     "infographic": {
-      "key_insight": "The paper proposes a self-evolving, expert-in-the-loop framework that uses LLM assistance plus expert verification to produce DSM-5-TR-aligned, explainable depression symptom annotations with traceable evidence.",
-      "engineering_relevance": "It addresses a core bottleneck in mental health AI by improving label quality, auditability, and interpretability for downstream model training and evaluation.",
+      "key_insight": "The paper proposes a self-evolving, expert-in-the-loop annotation workflow that uses LLM assistance and DSM-5-TR criteria to produce explainable, auditable depression symptom labels.",
+      "engineering_relevance": "It addresses a core infrastructure problem for mental-health AI by improving label quality, traceability, and human review efficiency in dataset construction.",
       "method": [
-        "Select candidate evidence from text records",
-        "Run criterion-level DSM-5-TR analysis and case-level synthesis",
-        "Use Example Memory and Reflection Memory to incorporate expert feedback without retraining"
+        "Select candidate evidence from text records.",
+        "Perform criterion-level DSM-5-TR analysis with LLM assistance and expert verification.",
+        "Synthesize case-level labels plus evidence, reasoning traces, and edit histories using dual memories (Example Memory and Reflection Memory)."
       ],
-      "evidence_signal": "A pilot study on expert-reviewed samples reports improved annotation consistency and explainability while reducing manual revision effort.",
-      "watch_item": "The framework’s multi-cycle self-improvement is described conceptually, but broader evaluation across repeated feedback cycles and larger datasets is still future work.",
+      "evidence_signal": "A pilot study with expert-reviewed samples reports improved annotation consistency and explainability while reducing manual revision effort.",
+      "watch_item": "The framework is positioned for annotation support, not diagnosis, and its multi-cycle learning gains are not yet fully evaluated.",
       "hashtags": [
+        "#AI4Health",
         "#ExplainableAI",
         "#MentalHealthAI",
         "#LLM",
-        "#DSM5TR",
         "#HumanInTheLoop"
       ],
       "paper_id": "2026-07-16-arxiv-self_evolving_human_centered_framework_for_explainable_depression_symptom_annotation",
       "paper_title": "Self-Evolving Human-Centered Framework for Explainable Depression Symptom Annotation",
       "paper_date": "2026-07-16",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-19T15:00:16",
+      "generated_at": "2026-07-18T15:04:15",
       "generator": "openai"
     }
   },
@@ -287,29 +287,29 @@
         "url": "https://arxiv.org/pdf/2607.15218v1"
       }
     ],
-    "score": 63,
+    "score": 73,
     "infographic": {
-      "key_insight": "Physical danger in embodied-agent planning is a distinct signal from ordinary text-level safety, and it can be detected from LLM hidden states with a simple linear probe.",
-      "engineering_relevance": "This enables safer robot and agent planners by filtering grounded physical-risk instructions without over-blocking benign tasks that merely mention risky words.",
+      "key_insight": "Text-level safety and physically grounded danger are separable in LLM hidden states, so a model can look linguistically safe while still encoding unsafe action risk.",
+      "engineering_relevance": "For embodied agents and tool-using LLMs, hidden-state risk probing offers a lighter-weight safety layer than prompt-only moderation or judge models, reducing false blocks on safe tasks.",
       "method": [
-        "Analyze hidden-state directions to test whether content danger (CD) and physical danger (PD) separate in representation space.",
-        "Train PRISM, a single-layer L2-regularized logistic probe on full hidden states.",
-        "Validate with random-split null tests and contrastive benchmarks that remove direct harm keywords."
+        "Analyzed hidden-state directions to test whether content danger (CD) and physical danger (PD) occupy different representation spaces.",
+        "Built PRISM, a single-layer L2-regularized logistic probe over full hidden states.",
+        "Validated the probe with random-split null tests and cross-benchmark replication."
       ],
-      "evidence_signal": "Across multiple models, PRISM reached 86.2–87.7% accuracy on SafeAgentBench and 99.6% accuracy with 0.7% FPR on PSB-1K, while same-scale LLM judges produced much higher false-positive rates.",
-      "watch_item": "Results depend on hidden-state access and benchmark design, so real-world deployment should check robustness under distribution shift, new embodiments, and adversarial prompt variation.",
+      "evidence_signal": "Across Qwen2.5-3B/7B/14B/32B, Phi-3.5, and SmolLM2, PRISM achieved 86.2–87.7% accuracy on SafeAgentBench and 99.6% on PSB-1K, while LLM judges showed much higher false-positive rates on safe tasks.",
+      "watch_item": "Because PRISM is a representation-level classifier, it may depend on model-specific hidden states and require careful calibration when transferred to new architectures or domains.",
       "hashtags": [
         "#LLMSafety",
         "#EmbodiedAI",
+        "#HiddenStateProbing",
         "#RiskDetection",
-        "#HiddenStates",
-        "#AIResearch"
+        "#AIEngineering"
       ],
       "paper_id": "2026-07-16-arxiv-when_words_are_safe_but_actions_kill_probing_physical_danger_beyond_text_safety_in_hidden",
       "paper_title": "When Words Are Safe But Actions Kill: Probing Physical Danger Beyond Text Safety in Hidden-State Risk Space",
       "paper_date": "2026-07-16",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-19T15:00:19",
+      "generated_at": "2026-07-18T15:04:18",
       "generator": "openai"
     }
   },
@@ -340,29 +340,29 @@
         "url": "https://arxiv.org/pdf/2607.15200v1"
       }
     ],
-    "score": 62,
+    "score": 72,
     "infographic": {
-      "key_insight": "Policy gradients for masked diffusion language models should optimize both token prediction and the remasking decision, not just token likelihood.",
-      "engineering_relevance": "This provides a more faithful RL training signal for diffusion-based LLMs, improving performance on reasoning and code generation without changing the core model family.",
+      "key_insight": "Masked diffusion language model RL should optimize both token generation and which positions are remasked, because generation is a two-stage action process rather than token prediction alone.",
+      "engineering_relevance": "For practical LLM training, the paper suggests a more faithful policy-gradient objective that can improve reasoning and code generation in diffusion-based generators.",
       "method": [
-        "Formulate MDLM generation as a two-stage action MDP.",
+        "Formulate MDLM generation as a two-stage MDP: token placement and remasking decisions.",
         "Decompose the policy gradient into a token term and a masking term.",
-        "Optimize both terms jointly to better capture generation order and remasking behavior."
+        "Optimize both terms jointly instead of approximating likelihood with token predictions only."
       ],
       "evidence_signal": "The abstract reports state-of-the-art benchmark results, including 87.1% on GSM8K and 53.4% on MBPP.",
-      "watch_item": "The method adds a second optimization component for remasking, which may increase training complexity and sensitivity to how the two gradient terms are balanced.",
+      "watch_item": "The approach depends on accurately modeling the remasking policy, which may add implementation complexity and instability compared with token-only approximations.",
       "hashtags": [
-        "#DiffusionLM",
+        "#DiffusionLanguageModels",
+        "#PolicyGradients",
         "#ReinforcementLearning",
-        "#PolicyGradient",
-        "#ReasoningModels",
-        "#CodeGeneration"
+        "#LLMReasoning",
+        "#ProgramSynthesis"
       ],
       "paper_id": "2026-07-16-arxiv-mask_aware_policy_gradients_for_diffusion_language_models",
       "paper_title": "Mask-Aware Policy Gradients for Diffusion Language Models",
       "paper_date": "2026-07-16",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-07-19T15:00:21",
+      "generated_at": "2026-07-18T15:04:21",
       "generator": "openai"
     }
   },
@@ -392,29 +392,29 @@
         "url": "https://arxiv.org/pdf/2607.14952v1"
       }
     ],
-    "score": 62,
+    "score": 72,
     "infographic": {
-      "key_insight": "LongStraw makes million-token RL post-training feasible on a fixed GPU budget by restructuring execution to avoid keeping the full training graph live.",
-      "engineering_relevance": "It shows how architecture-aware replay and selective state retention can extend RL system scale far beyond standard 256K-token post-training limits.",
+      "key_insight": "LongStraw enables million-token reinforcement learning post-training under a fixed GPU budget by reusing prompt computation, detaching shared state, and replaying short response branches to reduce peak training memory.",
+      "engineering_relevance": "It makes long-context RL practical for AI agents that must learn from very long trajectories, tool traces, and accumulated documents without requiring proportional GPU memory growth.",
       "method": [
-        "Evaluate the shared prompt without autograd to avoid storing full prompt activations.",
-        "Retain only the model-specific state needed for later tokens.",
-        "Replay short response branches one at a time to shrink peak memory at the cost of extra compute time."
+        "Executes the shared prompt without autograd to avoid storing a full training graph.",
+        "Retains only the model-specific state needed for later tokens and replays response branches one at a time.",
+        "Combines the execution stack with GRPO for long-context post-training on hybrid recurrent/full-attention and compressed-attention MoE models."
       ],
-      "evidence_signal": "On 8 H20 GPUs, LongStraw reaches 2.1M positions for grouped Qwen scoring and backward passes, with only 0.21 GB extra peak memory when increasing group size; a stress test reaches 4.46M positions.",
-      "watch_item": "The reported runs validate execution capacity, not full training correctness, because captured prompt state is detached and some distributed forward/gradient composition paths are incomplete.",
+      "evidence_signal": "On 8 H20 GPUs, the system reached 2.1M-token positions for grouped Qwen scoring and response backward, with only 0.21 GB extra peak memory when increasing group size from 2 to 8, and a stress test reached 4.46M positions; on 32 H20 GPUs it validated a 2.1M-token prompt through all 78 layers of GLM-5.2.",
+      "watch_item": "The reported results demonstrate execution capacity rather than full training correctness, because the captured prompt state is detached and some distributed forward and gradient composition paths are still incomplete.",
       "hashtags": [
         "#LongContextRL",
+        "#MemoryEfficientTraining",
         "#GPUBudget",
-        "#RLPostTraining",
-        "#LLMSystems",
-        "#MemoryEfficiency"
+        "#GRPO",
+        "#AgentTraining"
       ],
       "paper_id": "2026-07-16-arxiv-longstraw_long_context_rl_beyond_2m_tokens_under_a_fixed_gpu_budget",
       "paper_title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
       "paper_date": "2026-07-16",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-19T15:00:23",
+      "generated_at": "2026-07-18T15:04:23",
       "generator": "openai"
     }
   },
@@ -446,29 +446,29 @@
         "url": "https://arxiv.org/pdf/2607.14937v1"
       }
     ],
-    "score": 62,
+    "score": 72,
     "infographic": {
-      "key_insight": "A highly simplified two-parameter model, DynaBase, can still perform strong zero-shot reconstruction of dynamical systems by blending the current latent state with nearest in-context neighbors and their successors.",
-      "engineering_relevance": "The paper shows that interpretable, low-parameter architectures can rival large foundation models for dynamical-system forecasting while enabling direct optimization and closed-form analysis.",
+      "key_insight": "A complex foundation model for zero-shot dynamical-system reconstruction can be reduced to a minimal two-parameter, interpretable linear blend that still performs competitively across chaotic and cyclic systems.",
+      "engineering_relevance": "This suggests highly lightweight, analytically tractable models may be sufficient for deployment when the goal is out-of-domain dynamical reconstruction rather than full black-box forecasting.",
       "method": [
-        "Iteratively reduced the DynaMix foundation model to a minimal interpretable form.",
-        "Used a linear blend of the current latent state, nearest context neighbor, and its temporal successor for forecasting.",
-        "Analyzed a 1-parameter family of maps to connect reconstruction behavior with contextual-parroting and chaotic regimes."
+        "Iteratively simplify the SOTA DynaMix architecture into DynaBase.",
+        "Forecast by blending the current latent state with the nearest in-context neighbor and its temporal successor.",
+        "Derive closed-form one-step prediction behavior and optimize directly for reconstruction metrics."
       ],
-      "evidence_signal": "The abstract reports competitive zero-shot reconstruction across chaotic and cyclic systems, with negligible parameter count and evaluation tied to reconstruction and prediction MSE.",
-      "watch_item": "The simplicity that improves interpretability may also make performance sensitive to context selection and training objective, especially when optimizing for short-term prediction versus full reconstruction.",
+      "evidence_signal": "The abstract reports competitive zero-shot reconstruction across chaotic and cyclic dynamical systems, with parameter counts many orders of magnitude below other foundation models.",
+      "watch_item": "The extreme simplicity likely makes performance sensitive to how in-context neighbors are selected and may trade off short-term prediction optimality against reconstruction quality.",
       "hashtags": [
         "#DynamicalSystems",
         "#ZeroShotLearning",
         "#InterpretableAI",
         "#FoundationModels",
-        "#TimeSeriesForecasting"
+        "#ScientificML"
       ],
       "paper_id": "2026-07-16-arxiv-a_minimal_interpretable_architecture_for_zero_shot_reconstruction_of_dynamical_systems",
       "paper_title": "A Minimal Interpretable Architecture for Zero-Shot Reconstruction of Dynamical Systems",
       "paper_date": "2026-07-16",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-19T15:00:26",
+      "generated_at": "2026-07-18T15:04:27",
       "generator": "openai"
     }
   },
@@ -498,29 +498,29 @@
         "url": "https://arxiv.org/pdf/2607.15273v1"
       }
     ],
-    "score": 61,
+    "score": 71,
     "infographic": {
-      "key_insight": "MeanFlowNFT adapts forward-process RL to MeanFlow by converting average-velocity sampling into an induced instantaneous-velocity objective, enabling reward alignment without sacrificing few-step generation speed.",
-      "engineering_relevance": "This makes fast generative models easier to optimize for human preferences or downstream tasks while keeping inference cheap and practical for image/video deployment.",
+      "key_insight": "MeanFlowNFT adapts forward-process RL to MeanFlow by converting average-velocity sampling into an induced instantaneous-velocity objective, enabling reward optimization without sacrificing few-step generation speed.",
+      "engineering_relevance": "It offers a practical way to align fast generative models with human or task-specific rewards while retaining the low-latency sampling advantages needed in production systems.",
       "method": [
         "Construct an induced instantaneous-velocity predictor from the MeanFlow identity.",
-        "Apply the DiffusionNFT forward-process RL objective to that predictor.",
-        "Keep sampling with the original average velocity to preserve fast few-step generation."
+        "Apply the DiffusionNFT forward-process RL objective to this predictor.",
+        "Keep inference on average velocity so sampling stays few-step and efficient."
       ],
-      "evidence_signal": "The abstract reports consistent gains on image and video benchmarks, including outperforming prior RL-tuned few-step generators on 6 of 8 metrics on SD3.5-M and a 4-step Wan 2.1 model reaching VBench 84.33 versus 82.57 for a 50-step baseline.",
-      "watch_item": "The approach depends on a correct induced-velocity formulation and stable reward optimization, so implementation errors or reward misalignment could reduce the expected policy-improvement benefit.",
+      "evidence_signal": "Experiments on image and video generation show consistent improvements, including outperforming prior RL-tuned few-step generators on most metrics and reaching 84.33 VBench on Wan 2.1 with 4 steps versus 82.57 for a 50-step RL baseline.",
+      "watch_item": "The approach depends on a correct average-to-instantaneous velocity bridge, so implementation errors or distribution shift could weaken the policy-improvement guarantee in practice.",
       "hashtags": [
         "#GenerativeAI",
         "#ReinforcementLearning",
         "#DiffusionModels",
-        "#FlowMatching",
-        "#EfficientSampling"
+        "#VideoGeneration",
+        "#EfficientInference"
       ],
       "paper_id": "2026-07-16-arxiv-meanflownft_bringing_forward_process_rl_to_average_velocity_generators",
       "paper_title": "MeanFlowNFT: Bringing Forward-Process RL to Average-Velocity Generators",
       "paper_date": "2026-07-16",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-19T15:00:29",
+      "generated_at": "2026-07-18T15:04:29",
       "generator": "openai"
     }
   },
@@ -550,29 +550,29 @@
         "url": "https://arxiv.org/pdf/2607.15217v1"
       }
     ],
-    "score": 61,
+    "score": 71,
     "infographic": {
-      "key_insight": "NeuronSoup evolves asynchronous, shared-neuron temporal graphs that compute via delay-mediated signal propagation and neuron state interference, without backpropagation.",
-      "engineering_relevance": "It offers a compact alternative neural architecture that can adapt computation depth per sample and potentially discover useful lateral interactions not hard-coded in standard deep networks.",
+      "key_insight": "NeuronSoup uses asynchronous, delay-mediated signal propagation through shared neurons to evolve temporal computation without backpropagation.",
+      "engineering_relevance": "It suggests a compact, non-differentiable alternative for classification systems where adaptive computation depth and pathway interactions matter.",
       "method": [
-        "Routes continuous signals through variable-length paths from input to output.",
-        "Shares hidden neurons across paths so later arrivals interact with residual state.",
-        "Uses a genetic algorithm to co-evolve topology, weights, delays, and connectivity on a flat real-valued genome."
+        "Encode the whole network as a 14,602-gene real-valued genome.",
+        "Evolve topology, weights, delays, and connectivity with a genetic algorithm.",
+        "Reuse hidden neurons across paths so arrival order and signal polarity create interference effects."
       ],
-      "evidence_signal": "On frozen ResNet18 features for MNIST, the evolved system reached 85.9% test accuracy with 204 active paths, 266 hidden neurons, and a 115 KB model after 10,000 generations.",
-      "watch_item": "The approach is highly optimization-dependent and may be difficult to scale or reproduce outside the specific feature-extraction and evolutionary setup.",
+      "evidence_signal": "On frozen ResNet18 features for 10-class MNIST, the evolved model used 204 active paths, 266 hidden neurons, and reached 85.9% test accuracy after 10,000 generations with a 115 KB model size.",
+      "watch_item": "Because performance depends on large-scale evolutionary search and asynchronous state interactions, training cost, reproducibility, and deployment timing behavior may be difficult to control.",
       "hashtags": [
-        "#GeneticAlgorithms",
-        "#AsynchronousNeuralNetworks",
+        "#NeuralEvolution",
         "#TemporalGraphs",
-        "#EvolutionaryAI",
-        "#MNIST"
+        "#GeneticAlgorithms",
+        "#AsynchronousComputation",
+        "#MachineLearningResearch"
       ],
       "paper_id": "2026-07-16-arxiv-neuronsoup_evolving_asynchronous_shared_neuron_temporal_graphs_without_backpropagation",
       "paper_title": "NeuronSoup: Evolving Asynchronous, Shared-Neuron Temporal Graphs without Backpropagation",
       "paper_date": "2026-07-16",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-19T15:00:31",
+      "generated_at": "2026-07-18T15:04:31",
       "generator": "openai"
     }
   },
@@ -601,29 +601,29 @@
         "url": "https://arxiv.org/pdf/2607.15190v1"
       }
     ],
-    "score": 61,
+    "score": 71,
     "infographic": {
-      "key_insight": "IRT can be useful for AI benchmark analysis, but it becomes unreliable or computationally impractical when model counts are small, item counts are large, or capability distributions are skewed or clustered.",
-      "engineering_relevance": "For benchmark designers and evaluation engineers, this means latent-trait scoring and item diagnostics should be paired with sample-size checks and estimator diagnostics before using IRT-based rankings or item selection.",
+      "key_insight": "IRT can help summarize AI benchmark performance, but its rankings and item estimates become unreliable when benchmark conditions differ from the human-testing setting it was designed for.",
+      "engineering_relevance": "For benchmark designers and evaluation engineers, the study shows that estimator choice and dataset regime can directly affect model rankings, predicted scores, and item diagnostics.",
       "method": [
-        "Simulated response matrices from six widely used LLM benchmarks",
-        "Compared three IRT models across four estimators: MML, MCMC, VI, and a neural pseudo-Siamese method",
-        "Evaluated ranking accuracy, predicted performance, item-parameter reliability, and computational scalability"
+        "Simulated response matrices from six widely used LLM benchmarks using three common IRT models.",
+        "Compared four estimation approaches: marginal maximum likelihood, MCMC, variational inference, and a neural pseudo-Siamese estimator.",
+        "Tested reliability, scalability, and computational feasibility across 18,000 benchmark conditions."
       ],
-      "evidence_signal": "Across 18,000 simulation conditions, the study found classical estimators could become infeasible at benchmark scale, while scalable methods could still give unreliable rankings and item-level inferences under small or nonnormal model populations.",
-      "watch_item": "IRT results may distort benchmark conclusions if the model pool is too small, too clustered, or not approximately normal, so estimator choice and distribution diagnostics matter.",
+      "evidence_signal": "Across 18,000 simulation conditions, classical estimators sometimes became infeasible at benchmark scale, while scalable methods could produce poor item-level and ranking inferences for small or nonnormal model sets.",
+      "watch_item": "IRT outputs may look precise even when the model set is too small, skewed, clustered, or multimodal, so diagnostics are needed before trusting benchmark claims.",
       "hashtags": [
         "#AIEvaluation",
         "#ItemResponseTheory",
         "#Benchmarking",
-        "#ModelingAndSimulation",
-        "#LLMEvaluation"
+        "#LLMEvaluation",
+        "#ModelReliability"
       ],
       "paper_id": "2026-07-16-arxiv-can_we_trust_item_response_theory_for_ai_evaluation",
       "paper_title": "Can We Trust Item Response Theory for AI Evaluation?",
       "paper_date": "2026-07-16",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-07-19T15:00:33",
+      "generated_at": "2026-07-18T15:04:34",
       "generator": "openai"
     }
   },
@@ -633,7 +633,7 @@
     "date": "2026-07-16",
     "title": "The Industrialization of Research ; On AI-Driven Science and Its Consequences",
     "authors": "Emmanuel Jeannot",
-    "abstract": "Artificial intelligence is transforming scientific research -- not merely as a more powerful instrument, but as an autonomous participant in the research cycle itself. This transition constitutes, in the most precise sense of the term, the industrialization of research: a shift from a craft model, in which knowledge, method, and judgment are embedded in the researcher, to a pipeline model, in which these steps are decomposed, automated, and supervised. The US Department of Energy's Genesis Mission is the most ambitious current instantiation of this shift, but the fundamental questions it raises extend far beyond any single program. This essay examines seven such questions: the erosion of the intergenerational transmission of scientific competence; the growing opacity of AI-generated theories; the collapse of peer evaluation under a flood of machine-generated output; the unproven capacity of AI for paradigm-shifting discovery; the capture of the scientific agenda by political and industrial actors; the compounding of systematic errors in closed-loop pipelines; and the structural bifurcation of the global research community into incommensurable tiers. These concerns do not constitute an argument against AI-driven science -- whose demonstrated potential is real and significant. They constitute the conditions under which that potential can be responsibly pursued.",
+    "abstract": "Artificial intelligence is transforming scientific research - not merely as a more powerful instrument, but as an autonomous participant in the research cycle itself. This transition constitutes, in the most precise sense of the term, the industrialization of research: a shift from a craft model, in which knowledge, method, and judgment are embedded in the researcher, to a pipeline model, in which these steps are decomposed, automated, and supervised. The US Department of Energy's Genesis Mission is the most ambitious current instantiation of this shift, but the fundamental questions it raises extend far beyond any single program. This essay examines seven such questions: the erosion of the intergenerational transmission of scientific competence; the growing opacity of AI-generated theories; the collapse of peer evaluation under a flood of machine-generated output; the unproven capacity of AI for paradigm-shifting discovery; the capture of the scientific agenda by political and industrial actors; the compounding of systematic errors in closed-loop pipelines; and the structural bifurcation of the global research community into incommensurable tiers. These concerns do not constitute an argument against AI-driven science - whose demonstrated potential is real and significant. They constitute the conditions under which that potential can be responsibly pursued.",
     "category": "Scientific Discovery",
     "source": "arXiv",
     "published": "2026-07-16T16:14:12Z",
@@ -653,29 +653,29 @@
         "url": "https://arxiv.org/pdf/2607.15164v1"
       }
     ],
-    "score": 60,
+    "score": 70,
     "infographic": {
-      "key_insight": "AI is not just speeding up science; it is turning research into an automated pipeline, with major risks for expertise, transparency, and governance.",
-      "engineering_relevance": "For computational science teams, the paper highlights that AI-enabled discovery systems need strong human oversight, provenance tracking, and error controls to avoid scaling mistakes along with productivity.",
+      "key_insight": "AI is shifting research from a craft-based human process to an automated pipeline, creating both major opportunity and serious structural risks.",
+      "engineering_relevance": "For computational science and engineering, this means AI systems can accelerate discovery workflows, but they also require strong governance, validation, and human oversight to avoid compounding errors and misuse.",
       "method": [
-        "Frames AI-driven science as a shift from craft-based research to pipeline-based research",
-        "Examines seven consequences: competence loss, opacity, peer-review overload, weak evidence for paradigm shifts, agenda capture, error compounding, and community bifurcation",
-        "Uses the U.S. DOE Genesis Mission as a concrete example of this broader transformation"
+        "Frames research as an end-to-end pipeline rather than isolated expert tasks.",
+        "Analyzes seven consequences of AI-driven science, from competence loss to agenda capture.",
+        "Uses the US DOE Genesis Mission as a concrete example of this broader shift."
       ],
-      "evidence_signal": "The abstract is an argument-based essay drawing on the Genesis Mission and conceptual analysis rather than presenting new experimental data or benchmark evaluation.",
-      "watch_item": "Closed-loop AI research pipelines may compound systematic errors if automated outputs are not rigorously validated by human experts.",
+      "evidence_signal": "The abstract is a conceptual essay rather than an empirical study, so its claims are based on structured argumentation and program analysis, not reported experimental data.",
+      "watch_item": "Closed-loop AI research pipelines may amplify systematic errors unless human review, transparency, and robust evaluation are preserved.",
       "hashtags": [
-        "#AIDrivenScience",
+        "#AIScience",
         "#ResearchAutomation",
         "#ScientificDiscovery",
-        "#ResponsibleAI",
-        "#ComputationalScience"
+        "#HumanInTheLoop",
+        "#ResearchGovernance"
       ],
       "paper_id": "2026-07-16-arxiv-the_industrialization_of_research_on_ai_driven_science_and_its_consequences",
       "paper_title": "The Industrialization of Research ; On AI-Driven Science and Its Consequences",
       "paper_date": "2026-07-16",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-07-19T15:00:36",
+      "generated_at": "2026-07-18T15:04:37",
       "generator": "openai"
     }
   },
@@ -705,29 +705,29 @@
         "url": "https://arxiv.org/pdf/2607.15257v1"
       }
     ],
-    "score": 59,
+    "score": 69,
     "infographic": {
-      "key_insight": "SearchOS makes open-domain web search more reliable by turning hidden search progress into explicit shared state and using it to coordinate multiple agents without repeating failed attempts.",
-      "engineering_relevance": "The framework is useful for building robust information-seeking systems that better manage context, coverage, and search budgets in long-horizon, tool-using LLM workflows.",
+      "key_insight": "SearchOS makes open-domain web search more robust by externalizing search progress into shared state so agents can avoid repetitive failures and keep advancing toward grounded answers.",
+      "engineering_relevance": "It provides a practical multi-agent control framework for search-intensive LLM systems, improving utilization, coordination, and citation-backed output quality under budget constraints.",
       "method": [
-        "Formulates information seeking as relational schema completion with grounded citations.",
-        "Adds Search-Oriented Context Management (SOCM): Frontier Task, Evidence Graph, Coverage Map, and Failure Memory.",
-        "Uses pipeline-parallel scheduling plus a middleware harness and reusable skills to intercept stalls and avoid repeated failure patterns."
+        "Reframes information seeking as relational schema completion with grounded citations.",
+        "Uses Search-Oriented Context Management (SOCM) to track frontier tasks, evidence graphs, coverage maps, and failure memory.",
+        "Adds pipeline-parallel scheduling plus a middleware harness and reusable skills to detect stalls, record evidence, and prevent repeated failed search patterns."
       ],
-      "evidence_signal": "According to the abstract, SearchOS ranked first across evaluated single- and multi-agent baselines on WideSearch and GISA.",
-      "watch_item": "The added orchestration, state tracking, and middleware could increase system complexity and implementation overhead in real deployments.",
+      "evidence_signal": "The system is evaluated on WideSearch and GISA, where it reportedly leads all metrics among the compared single- and multi-agent baselines.",
+      "watch_item": "The added state management, middleware, and skill infrastructure may increase system complexity and integration overhead in real deployments.",
       "hashtags": [
         "#LLMAgents",
         "#WebSearch",
         "#MultiAgentSystems",
         "#InformationRetrieval",
-        "#AIResearch"
+        "#GroundedAI"
       ],
       "paper_id": "2026-07-16-arxiv-searchos_v1_towards_robust_open_domain_information_seeking_agent_collaboration",
       "paper_title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
       "paper_date": "2026-07-16",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-19T15:00:38",
+      "generated_at": "2026-07-18T15:04:39",
       "generator": "openai"
     }
   },
@@ -757,29 +757,29 @@
         "url": "https://arxiv.org/pdf/2607.15254v1"
       }
     ],
-    "score": 59,
+    "score": 69,
     "infographic": {
-      "key_insight": "teLLMe turns observational urban driving data into queryable causal analyses by combining causal discovery, stability checks, and effect estimation to support hypothesis generation.",
-      "engineering_relevance": "It helps traffic and autonomy engineers explore how conditions like rain or peak hours may influence traffic density, while making assumptions and uncertainty explicit.",
+      "key_insight": "teLLMe turns observational urban driving data into queryable causal analyses by combining causal discovery, stability checks, and LLM-assisted translation of natural-language questions into structured causal queries.",
+      "engineering_relevance": "It can help transportation engineers and city analysts quickly generate and inspect causal hypotheses about traffic behavior, weather, and congestion from dashcam-derived event data.",
       "method": [
-        "Structured event tables from dashcam annotations",
-        "PC-based causal structure learning with bootstrap stability checks",
-        "Query-specific effect estimation via linear regression and DoWhy, with natural-language questions mapped by a schema-aware LLM"
+        "Builds a structured event table from dashcam annotations.",
+        "Learns causal structure with the PC algorithm and bootstrap-based stability checks.",
+        "Estimates query-specific effects with linear regression and DoWhy, then summarizes results in a Causal Card."
       ],
-      "evidence_signal": "Case studies on BDD-derived traffic events showed plausible causal relationships involving weather, peak hours, and traffic density, with explicit discussion of uncertainty and modeling choices.",
-      "watch_item": "Results are exploratory rather than definitive, since the system relies on observational data, learned assumptions, and query translation quality.",
+      "evidence_signal": "The paper evaluates case studies on BDD-derived traffic events, showing plausible relationships involving weather, peak hours, and traffic density.",
+      "watch_item": "The system is for exploratory hypothesis generation, so results depend on modeling assumptions and should not be treated as definitive causal claims.",
       "hashtags": [
         "#CausalInference",
-        "#UrbanMobility",
+        "#UrbanDrivingData",
+        "#ComputerVision",
         "#TrafficAnalytics",
-        "#ObservationalData",
-        "#ExplainableAI"
+        "#ScientificDiscovery"
       ],
       "paper_id": "2026-07-16-arxiv-tellme_why_ain_t_nothing_but_a_jam_exploratory_causal_analysis_of_urban_driving_data",
       "paper_title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
       "paper_date": "2026-07-16",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-07-19T15:00:40",
+      "generated_at": "2026-07-18T15:04:41",
       "generator": "openai"
     }
   },
@@ -809,29 +809,29 @@
         "url": "https://arxiv.org/pdf/2607.15216v1"
       }
     ],
-    "score": 59,
+    "score": 69,
     "infographic": {
-      "key_insight": "Symbal detects recurring, visually triggered captioning errors in MLLM-generated image-text pairs by identifying systematic misalignments and summarizing them in natural language.",
-      "engineering_relevance": "The method offers a practical auditing tool for large vision-language datasets, helping teams find critical captioning failures without needing access to the underlying MLLM.",
+      "key_insight": "Symbal detects recurring captioning errors that are systematically tied to specific visual features, enabling audit of MLLM-generated captions without access to the original model.",
+      "engineering_relevance": "This gives practitioners a practical quality-control tool for large-scale multimodal datasets and caption pipelines, especially in safety-critical domains like medical imaging.",
       "method": [
-        "Uses a structured two-stage pipeline built from off-the-shelf foundation models.",
-        "Detects systematic misalignments in vision-language datasets with MLLM-generated captions.",
-        "Produces natural-language summaries of the discovered error patterns."
+        "Uses a structured dual-stage pipeline built from off-the-shelf foundation models.",
+        "First identifies candidate systematic misalignments in image-text pairs, then summarizes the error pattern in natural language.",
+        "Benchmarked on SymbalBench across natural and medical image datasets."
       ],
-      "evidence_signal": "Evaluated on SymbalBench with 1.7 million image-text pairs across 420 datasets from natural and medical domains, where Symbal correctly identified systematic misalignments in 63.8% of datasets.",
-      "watch_item": "Performance is benchmark-dependent, so real-world deployment may require careful validation across new domains, caption styles, and visual feature distributions.",
+      "evidence_signal": "The benchmark includes 1.7 million image-text pairs across 420 vision-language datasets, and Symbal correctly identified systematic misalignments in 63.8% of datasets.",
+      "watch_item": "Performance is measured at the dataset level, so rare or subtle misalignments may still be missed, and results may depend on the quality of the underlying generated captions.",
       "hashtags": [
         "#MultimodalAI",
-        "#ImageCaptioning",
-        "#ModelAuditing",
+        "#Captioning",
         "#VisionLanguage",
-        "#AIResearch"
+        "#ModelEvaluation",
+        "#MedicalAI"
       ],
       "paper_id": "2026-07-16-arxiv-symbal_detecting_systematic_misalignments_in_model_generated_captions",
       "paper_title": "Symbal: Detecting Systematic Misalignments in Model-Generated Captions",
       "paper_date": "2026-07-16",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-19T15:00:42",
+      "generated_at": "2026-07-18T15:04:43",
       "generator": "openai"
     }
   },
@@ -862,29 +862,29 @@
         "url": "https://arxiv.org/pdf/2607.15176v1"
       }
     ],
-    "score": 59,
+    "score": 69,
     "infographic": {
-      "key_insight": "Current multimodal LLMs show uneven scientific visualization literacy: Gemini leads overall, but capabilities vary sharply by visualization technique and task.",
-      "engineering_relevance": "SciVis literacy should be treated as a distinct benchmark for selecting, validating, and deploying multimodal AI in scientific analysis workflows.",
+      "key_insight": "Current multimodal LLMs are not uniformly literate in scientific visualization: strong on some visual tasks, but notably weak on quantitative, texture-based, and integration-heavy SciVis understanding.",
+      "engineering_relevance": "For scientific AI tools, benchmark design must include domain-specific visualization literacy, not just chart reading, to avoid overestimating real-world interpretive reliability.",
       "method": [
-        "Benchmarked six MLLMs: three closed-source and three open-source.",
-        "Used a standardized 49-item scientific visualization literacy assessment spanning 18 visualizations, 8 techniques, and 11 task types.",
-        "Compared model performance against responses from 485 human participants under a closed-world protocol."
+        "Benchmarked 6 MLLMs: 3 closed-source and 3 open-source.",
+        "Used a closed-world protocol on a standardized SciVis literacy test with 49 items across 18 visualizations/illustrations.",
+        "Compared model performance against 485 human participants across 8 techniques and 11 task types."
       ],
-      "evidence_signal": "The evaluation used 49 items across 18 SciVis examples and showed Gemini above the human mean on evaluated subsets, while open-source models stayed below the human baseline.",
-      "watch_item": "Results come from a closed-world benchmark, so real-world performance may differ when models face unseen visualization styles or interactive analysis settings.",
+      "evidence_signal": "The evaluation shows Gemini performed best overall, exceeding the human mean on the tested subsets, while open-source models stayed below the human baseline.",
+      "watch_item": "Results come from a fixed benchmark and closed-world setup, so performance may not transfer to unseen visualization styles or broader scientific domains.",
       "hashtags": [
         "#MultimodalAI",
-        "#ScientificVisualization",
+        "#SciVis",
         "#Benchmarking",
-        "#LLMEvaluation",
-        "#AIforScience"
+        "#VisualizationLiteracy",
+        "#ScientificAI"
       ],
       "paper_id": "2026-07-16-arxiv-benchmarking_multimodal_large_language_models_for_scientific_visualization_literacy",
       "paper_title": "Benchmarking Multimodal Large Language Models for Scientific Visualization Literacy",
       "paper_date": "2026-07-16",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-07-19T15:00:44",
+      "generated_at": "2026-07-18T15:04:46",
       "generator": "openai"
     }
   },
@@ -914,29 +914,29 @@
         "url": "https://arxiv.org/pdf/2607.15142v1"
       }
     ],
-    "score": 59,
+    "score": 69,
     "infographic": {
-      "key_insight": "Frozen world models for Atari Pong still make obvious visual and dynamical mistakes, and concept-guided spatial regularization can partially reduce those failures.",
-      "engineering_relevance": "For model-based RL systems, evaluating the world model itself—not just end-policy return—can reveal brittle predictive errors that directly limit downstream performance.",
+      "key_insight": "Frozen visual world models for Atari Pong often fail to preserve task-critical concepts like the ball, and concept-guided spatial regularization can partially reduce these failures.",
+      "engineering_relevance": "For model-based RL systems, improving the fidelity of internal world dynamics can materially affect downstream policy quality, so diagnostics beyond training return are essential.",
       "method": [
-        "Reproduced and trained five visual world models: DreamerV3, DIAMOND, TWISTER, Simulus, and STORM.",
-        "Ran closed-loop rollout diagnostics with separately trained policies interacting with frozen world models.",
-        "Added Concept-Guided Spatial Regularization (CGSReg), an auxiliary pixel reconstruction loss over segmented concept regions."
+        "Reproduced five visual world-model agents: DreamerV3, DIAMOND, TWISTER, Simulus, and STORM.",
+        "Evaluated frozen models with closed-loop rollouts using separately trained policies to expose visual and dynamical errors.",
+        "Introduced Concept-Guided Spatial Regularization (CGSReg), an auxiliary pixel reconstruction loss on segmented concept regions."
       ],
-      "evidence_signal": "Across all five models, rollouts showed failures such as ball disappearance, wrong ball motion, and invalid paddle interactions, and zero-shot pixel-space MBRL underperformed the original pipelines, with DreamerV3 dropping from -5.5 to -20.9 mean return.",
-      "watch_item": "CGSReg improves some models and metrics but does not eliminate all world-model bottlenecks, so gains may be model- and task-dependent.",
+      "evidence_signal": "Across all five models, rollouts showed failures such as ball disappearance and invalid ball-paddle interactions, and zero-shot policies trained inside frozen models underperformed the original MBRL pipelines (e.g., DreamerV3 mean return -5.5 to -20.9).",
+      "watch_item": "CGSReg improves several models but not consistently across all metrics, suggesting that concept-aware reconstruction alone does not eliminate broader world-model bottlenecks.",
       "hashtags": [
         "#WorldModels",
         "#ModelBasedRL",
         "#AtariPong",
-        "#VisualDynamics",
-        "#RepresentationLearning"
+        "#RepresentationLearning",
+        "#ReinforcementLearning"
       ],
       "paper_id": "2026-07-16-arxiv-concept_guided_spatial_regularization_for_world_models_in_atari_pong",
       "paper_title": "Concept-Guided Spatial Regularization for World Models in Atari Pong",
       "paper_date": "2026-07-16",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-07-19T15:00:47",
+      "generated_at": "2026-07-18T15:04:49",
       "generator": "openai"
     }
   },
@@ -966,29 +966,29 @@
         "url": "https://arxiv.org/pdf/2607.14905v1"
       }
     ],
-    "score": 58,
+    "score": 68,
     "infographic": {
-      "key_insight": "Reasoning-structure graphs extracted from text provide a more robust signal for LLM authorship attribution than surface linguistic features.",
-      "engineering_relevance": "This suggests a practical path for building detection systems that remain effective under paraphrasing, backtranslation, and model-version shifts.",
+      "key_insight": "Reasoning structure, not just surface wording, provides a more robust signal for attributing text to LLM authors.",
+      "engineering_relevance": "The paper suggests a practical defense for AI text forensics by using reasoning graphs and graph neural networks to improve robustness against paraphrasing and model updates.",
       "method": [
-        "Run an argument-mining pipeline to extract reasoning graphs from generated text.",
-        "Feed the graphs into a graph neural network for authorship attribution.",
-        "Compare against a Longformer baseline to test robustness and generalization."
+        "Extract reasoning graphs from generated texts using an argument mining pipeline.",
+        "Train a graph neural network on the extracted reasoning structures.",
+        "Compare against a Longformer baseline for authorship attribution."
       ],
-      "evidence_signal": "The abstract reports gains of up to 27 percentage points under obfuscation attacks and 19 points on texts from unseen model versions.",
-      "watch_item": "The approach depends on reliable argument-mining graph extraction, which may be sensitive to parser errors and domain variation.",
+      "evidence_signal": "The approach improves attribution by up to 27 percentage points under paraphrasing/backtranslation attacks and by 19 percentage points on texts from unseen model versions.",
+      "watch_item": "Performance depends on reliable argument-mining and graph extraction, which may introduce errors or reduce transferability across domains and languages.",
       "hashtags": [
-        "#LLMDetection",
+        "#LLMForensics",
         "#AuthorshipAttribution",
         "#GraphNeuralNetworks",
         "#ArgumentMining",
-        "#RobustNLP"
+        "#RobustAI"
       ],
       "paper_id": "2026-07-16-arxiv-show_me_how_you_reason_and_i_ll_tell_you_who_you_are_reasoning_graphs_for_robust_llm_autho",
       "paper_title": "Show Me How You Reason and I'll Tell You Who You Are: Reasoning Graphs for Robust LLM Authorship Attribution",
       "paper_date": "2026-07-16",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-19T15:00:49",
+      "generated_at": "2026-07-18T15:04:51",
       "generator": "openai"
     }
   },
@@ -1018,29 +1018,29 @@
         "url": "https://arxiv.org/pdf/2607.15258v1"
       }
     ],
-    "score": 57,
+    "score": 67,
     "infographic": {
-      "key_insight": "Bitcoin market sentiment can be classified from a fusion of on-chain blockchain activity, historical price data, and Twitter sentiment, with XGBoost performing best.",
-      "engineering_relevance": "The study shows that combining heterogeneous financial and social signals with interpretable machine learning can support transparent, data-driven cryptocurrency analytics.",
+      "key_insight": "The paper shows that Bitcoin market sentiment can be classified from a fusion of on-chain, price, and Twitter sentiment signals, with XGBoost performing best.",
+      "engineering_relevance": "This provides a practical, interpretable pipeline for multimodal financial analytics that could support real-time market monitoring and decision support.",
       "method": [
-        "Merged on-chain transaction metrics, Bitcoin price history, and daily Twitter sentiment into a normalized dataset.",
-        "Tested multiple machine learning models with cross-validation for sentiment classification.",
-        "Applied SHAP to explain which on-chain features most influenced predictions."
+        "Combined blockchain transaction metrics, historical Bitcoin prices, and daily Twitter sentiment labels into a normalized dataset.",
+        "Trained and compared multiple machine learning classifiers with cross-validation.",
+        "Used SHAP to interpret which on-chain features most influenced sentiment predictions."
       ],
-      "evidence_signal": "Across cross-validation experiments, XGBoost achieved the strongest performance with an average F1-score of about 0.84.",
-      "watch_item": "Results depend on the quality and alignment of daily social, price, and blockchain data, so time-synchronization and feature leakage need careful control.",
+      "evidence_signal": "Across cross-validation, Gradient Boosting/XGBoost achieved the strongest performance, with an average F1-score of about 0.84.",
+      "watch_item": "The approach depends on aligned, high-quality daily data from multiple sources, so timestamp mismatch and noisy social sentiment could affect reliability.",
       "hashtags": [
         "#Bitcoin",
         "#SentimentAnalysis",
-        "#XGBoost",
-        "#SHAP",
-        "#BlockchainAnalytics"
+        "#BlockchainAnalytics",
+        "#MachineLearning",
+        "#ExplainableAI"
       ],
       "paper_id": "2026-07-16-arxiv-decoding_market_emotion_from_blockchain_activity_a_data_driven_sentiment_classifier",
       "paper_title": "Decoding Market Emotion from Blockchain Activity: A Data-Driven Sentiment Classifier",
       "paper_date": "2026-07-16",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-07-19T15:00:51",
+      "generated_at": "2026-07-18T15:04:53",
       "generator": "openai"
     }
   }

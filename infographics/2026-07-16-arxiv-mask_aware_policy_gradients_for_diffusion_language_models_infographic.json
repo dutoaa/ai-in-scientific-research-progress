@@ -1,24 +1,24 @@
 {
-  "key_insight": "Masked diffusion language model RL should optimize both token generation and which positions are remasked, because generation is a two-stage action process rather than token prediction alone.",
-  "engineering_relevance": "For practical LLM training, the paper suggests a more faithful policy-gradient objective that can improve reasoning and code generation in diffusion-based generators.",
+  "key_insight": "Policy gradients for masked diffusion language models should optimize both token prediction and the remasking decision, not just token likelihood.",
+  "engineering_relevance": "This provides a more faithful RL training signal for diffusion-based LLMs, improving performance on reasoning and code generation without changing the core model family.",
   "method": [
-    "Formulate MDLM generation as a two-stage MDP: token placement and remasking decisions.",
+    "Formulate MDLM generation as a two-stage action MDP.",
     "Decompose the policy gradient into a token term and a masking term.",
-    "Optimize both terms jointly instead of approximating likelihood with token predictions only."
+    "Optimize both terms jointly to better capture generation order and remasking behavior."
   ],
   "evidence_signal": "The abstract reports state-of-the-art benchmark results, including 87.1% on GSM8K and 53.4% on MBPP.",
-  "watch_item": "The approach depends on accurately modeling the remasking policy, which may add implementation complexity and instability compared with token-only approximations.",
+  "watch_item": "The method adds a second optimization component for remasking, which may increase training complexity and sensitivity to how the two gradient terms are balanced.",
   "hashtags": [
-    "#DiffusionLanguageModels",
-    "#PolicyGradients",
+    "#DiffusionLM",
     "#ReinforcementLearning",
-    "#LLMReasoning",
-    "#ProgramSynthesis"
+    "#PolicyGradient",
+    "#ReasoningModels",
+    "#CodeGeneration"
   ],
   "paper_id": "2026-07-16-arxiv-mask_aware_policy_gradients_for_diffusion_language_models",
   "paper_title": "Mask-Aware Policy Gradients for Diffusion Language Models",
   "paper_date": "2026-07-16",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-07-18T15:04:21",
+  "generated_at": "2026-07-19T15:00:21",
   "generator": "openai"
 }
