@@ -1,24 +1,24 @@
 {
-  "key_insight": "PagedWeight dynamically quantizes MoE expert weights at runtime to balance model accuracy, GPU memory, and serving throughput as KV-cache demand grows.",
-  "engineering_relevance": "It offers a practical serving strategy for memory-constrained MoE LLM deployments, helping operators preserve accuracy while fitting larger batches or longer contexts.",
+  "key_insight": "PagedWeight dynamically quantizes MoE expert weights at runtime to balance model precision with KV-cache growth, improving the memory–quality tradeoff during LLM serving.",
+  "engineering_relevance": "It is directly relevant for deploying MoE LLMs in memory-constrained serving systems where GPU memory, throughput, and latency must be jointly optimized.",
   "method": [
-    "Runtime-adaptive expert weight quantization",
-    "Quality-aware tradeoff management between weight precision and KV-cache size",
-    "Designed for memory-sensitive MoE serving scenarios"
+    "Monitors serving-time memory pressure and adjusts expert-weight quantization dynamically.",
+    "Trades off expert precision against KV-cache size to fit within GPU memory budgets.",
+    "Targets MoE inference scenarios with an explicit quality-memory-throughput balance."
   ],
-  "evidence_signal": "Across multiple memory-sensitive MoE serving scenarios, the method matches FP16 accuracy with up to 72.0% GPU memory savings and 1.94× higher throughput, while outperforming quantization baselines by up to 39.3% quality at similar memory budgets.",
-  "watch_item": "Runtime quantization decisions add system complexity and may require careful tuning to avoid latency or quality regressions under changing workloads.",
+  "evidence_signal": "The abstract reports FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94× throughput improvement, plus up to 39.3% better quality than quantization baselines at similar memory budgets.",
+  "watch_item": "Runtime quantization and scheduling add system complexity, so stability and overhead need careful validation in real serving pipelines.",
   "hashtags": [
-    "#MixtureOfExperts",
+    "#MoE",
     "#LLMServing",
     "#Quantization",
-    "#GPUmemory",
-    "#AISystems"
+    "#KVCache",
+    "#GPUMemory"
   ],
   "paper_id": "2026-07-17-arxiv-pagedweight_efficient_moe_llm_serving_with_dynamic_quality_aware_weight_quantization",
   "paper_title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
   "paper_date": "2026-07-17",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-20T15:54:02",
+  "generated_at": "2026-07-21T15:54:30",
   "generator": "openai"
 }

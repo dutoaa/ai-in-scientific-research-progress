@@ -22,7 +22,7 @@
     <header>
       <div>
         <h1>AI Scientists - Daily Top 20</h1>
-        <p class="sub">Collected 2026-07-20. Ranked from recent arXiv papers on AI scientists, co-scientists, research agents, and AI for scientific research, with OpenAI infographic summaries where credentials are available.</p>
+        <p class="sub">Collected 2026-07-21. Ranked from recent arXiv papers on AI scientists, co-scientists, research agents, and AI for scientific research, with OpenAI infographic summaries where credentials are available.</p>
       </div>
       <nav class="actions">
         <a href="papers.json">Data JSON</a>
@@ -39,12 +39,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16133v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16133v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> Multi-agent systems help when bounded communication compresses redundant context more than it loses task-relevant information, making them an information-bottleneck trade-off rather than a universal upgrade over single-agent systems.</p>
-          <p><b>Engineering relevance:</b> For LLM system design, the best architecture depends on relay bandwidth and model strength: near-sufficient communication can improve efficiency, but lossy message passing can reduce performance, especially for stronger models.</p>
-          <ul><li>Formulate SAS vs. MAS as an information bottleneck with bounded relay messages.</li><li>Show that with infinite relay bandwidth, a MAS can simulate any SAS by transmitting full context.</li><li>Introduce an effective bottleneck parameter β to capture the compression–information-loss trade-off.</li></ul>
-          <p><b>Evidence signal:</b> The paper validates the theory with 18 controlled experiments across five benchmarks and three model scales, finding MAS gains when relays are near-sufficient and weaker models benefit most.</p>
-          <p><b>Watch item:</b> The benefit of MAS is sensitive to communication design; if relay messages discard too much information, performance can stagnate or reverse despite added coordination overhead.</p>
-          <div class="tags"><span>#MultiAgentSystems</span> <span>#InformationBottleneck</span> <span>#LLMSystems</span> <span>#AgenticAI</span> <span>#AIResearch</span></div>
+          <p><b>Key insight:</b> Multi-agent systems help when bounded inter-agent communication compresses redundant context without discarding too much task-relevant information, making the design an information bottleneck trade-off.</p>
+          <p><b>Engineering relevance:</b> For practical LLM systems, this means agent splitting and message budgets should be tuned to model strength and task structure rather than assumed to always improve performance.</p>
+          <ul><li>Frames SAS vs. MAS through an information bottleneck perspective.</li><li>Shows that with unlimited relay bandwidth, a MAS can simulate any SAS by passing full context.</li><li>Introduces an effective bottleneck parameter (β) to capture the trade-off between context reduction and information loss.</li></ul>
+          <p><b>Evidence signal:</b> The authors validate the theory with 18 controlled experiments across five benchmarks and three model scales.</p>
+          <p><b>Watch item:</b> If relay messages are too compressed, performance can drop below a single-agent baseline, especially for stronger models.</p>
+          <div class="tags"><span>#MultiAgentSystems</span> <span>#LLM</span> <span>#InformationBottleneck</span> <span>#AgenticAI</span> <span>#AIResearch</span></div>
         </section>
       </article>
     
@@ -58,12 +58,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.15901v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.15901v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> DSWorld learns a data-science world model that predicts workflow state transitions before execution, reducing costly trial-and-error in autonomous agents.</p>
-          <p><b>Engineering relevance:</b> It can speed up agent training and search-based inference for data science workflows while preserving competitive performance.</p>
-          <ul><li>Builds structured workflow states from the current data science environment and candidate operations.</li><li>Uses cost-aware routing to choose between real execution, lightweight execution, and an LLM-based simulator for expensive operations.</li><li>Trains with an 8K transition trajectory dataset and Reflective World Model Optimization to improve error-sensitive transition prediction.</li></ul>
+          <p><b>Key insight:</b> DSWorld learns to predict the next state of a data science workflow, letting autonomous agents avoid many expensive trial-and-error executions.</p>
+          <p><b>Engineering relevance:</b> It can speed up training and search for data science agents by routing cheap steps through structured prediction and reserving real execution for costly operations.</p>
+          <ul><li>Builds a structured representation of workflow state and candidate operations</li><li>Uses cost-aware routing to choose between lightweight execution and an LLM-based simulator</li><li>Trains with an 8K transition trajectory dataset and Reflective World Model Optimization</li></ul>
           <p><b>Evidence signal:</b> The abstract reports about 14× faster RL-based agent training, 3–6× faster search-based inference, and 35.6% better transition prediction than the strongest LLM baseline.</p>
-          <p><b>Watch item:</b> Performance depends on the quality of state construction and simulator routing, and the approach may need careful validation when generalizing to new data science tools or workflows.</p>
-          <div class="tags"><span>#AutonomousAgents</span> <span>#DataScience</span> <span>#WorldModel</span> <span>#ReinforcementLearning</span> <span>#AIforScience</span></div>
+          <p><b>Watch item:</b> Performance depends on accurate transition prediction, so errors in simulated state updates or routing decisions could still propagate through agent training and inference.</p>
+          <div class="tags"><span>#AutonomousAgents</span> <span>#DataScience</span> <span>#WorldModel</span> <span>#ReinforcementLearning</span> <span>#LLM</span></div>
         </section>
       </article>
     
@@ -77,12 +77,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16038v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16038v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> SciForge is an AI-native scientific workbench that keeps human judgment in the interface while modular agents handle multimodal parsing, reasoning, execution, and auditable research-state management.</p>
-          <p><b>Engineering relevance:</b> It offers a practical blueprint for building research assistants that preserve provenance, coordinate workflows, and support end-to-end scientific discovery across papers, code, data, models, and figures.</p>
-          <ul><li>Goal-scoped governance with review gates and shared decision surfaces</li><li>Translate-then-reason pipeline using domain-specific scientific object translators</li><li>Evidence-DAG sidecar for provenance chains, audit findings, and traceability</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports eight end-to-end user cases, including multi-day agentic research sprints for gene discovery, protein design, molecular optimization, and genome-to-BGC discovery.</p>
-          <p><b>Watch item:</b> The system’s collaborative team-science features are still limited, since shared team workspaces are planned for future releases rather than fully delivered now.</p>
-          <div class="tags"><span>#AIForscience</span> <span>#ScientificAI</span> <span>#ResearchAgents</span> <span>#MultimodalAI</span> <span>#AuditableAI</span></div>
+          <p><b>Key insight:</b> SciForge is an AI-native scientific workbench that keeps human judgment in the UI while modular services handle multimodal translation, workflow execution, and auditable research state.</p>
+          <p><b>Engineering relevance:</b> It offers a practical architecture for building research agents that can operate on papers, code, data, figures, and model outputs without losing provenance or collaborative decision context.</p>
+          <ul><li>Goal-scoped decision governance with review gates and shared review surfaces</li><li>Translate-then-reason pipeline that routes scientific objects through domain-specific translators before agent reasoning</li><li>Evidence-DAG audit sidecar plus scientific model routing and workflow automation</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports eight end-to-end user cases, including multi-day agentic sprints for gene discovery, protein design, molecular optimization, and genome-to-BGC discovery.</p>
+          <p><b>Watch item:</b> The strongest collaboration features are still future-facing, since shared team workspaces are planned for later releases and the current system emphasizes desktop/mobile supervision.</p>
+          <div class="tags"><span>#AIScientists</span> <span>#ScientificWorkflows</span> <span>#MultimodalAI</span> <span>#ResearchAgents</span> <span>#Reproducibility</span></div>
         </section>
       </article>
     
@@ -96,12 +96,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16169v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16169v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> Muon can substantially improve agentic RL post-training performance, but only under specific optimizer, estimator, and learning-rate settings.</p>
-          <p><b>Engineering relevance:</b> For RL system design, the policy optimizer should be tuned jointly with the advantage estimator and learning rate rather than assumed interchangeable with AdamW.</p>
-          <ul><li>Compared vanilla Muon vs. AdamW on ALFWorld with Qwen2.5-0.5B-Instruct under matched single-seed settings.</li><li>Applied Muon only to hidden weight matrices in Group-in-Group Policy Optimization (GiGPO) and compared with GRPO and GraphGPO.</li><li>Varied learning rate to test when Muon helps or saturates performance across training windows.</li></ul>
-          <p><b>Evidence signal:</b> In single-seed ALFWorld evaluations, Muon raised GiGPO final-window validation success from 0.290 to 0.546 and improved GraphGPO at 1e-5 to 0.901 with higher normalized validation AUC (0.399 to 0.556).</p>
-          <p><b>Watch item:</b> The findings are exploratory: results are single-seed and on one task/model setup, so multi-seed and cross-task validation are still needed.</p>
-          <div class="tags"><span>#ReinforcementLearning</span> <span>#MuonOptimizer</span> <span>#AgenticAI</span> <span>#PolicyOptimization</span> <span>#ALFWorld</span></div>
+          <p><b>Key insight:</b> Muon can substantially improve agentic RL post-training, but only under the right optimizer, advantage estimator, and learning-rate setting.</p>
+          <p><b>Engineering relevance:</b> For sparse-reward RL agents, optimizer choice is not a minor detail: Muon may yield large gains over AdamW when applied to hidden matrices in the right training regime.</p>
+          <ul><li>Matched single-seed comparisons on ALFWorld with Qwen2.5-0.5B-Instruct</li><li>Compared vanilla Muon vs AdamW under GiGPO, GRPO, and GraphGPO</li><li>Applied Muon only to hidden weight matrices and varied learning rate</li></ul>
+          <p><b>Evidence signal:</b> In the abstract’s ALFWorld evaluations, Muon raised GiGPO final-window validation success from 0.290 to 0.546, improved GRPO from 0.161 to 0.268 at 3e-5, and reached 0.901 validation success with GraphGPO at 1e-5.</p>
+          <p><b>Watch item:</b> The results are exploratory single-seed findings, so multi-seed and cross-task validation are still needed before drawing general conclusions.</p>
+          <div class="tags"><span>#Muon</span> <span>#ReinforcementLearning</span> <span>#AgenticAI</span> <span>#OptimizerDesign</span> <span>#SparseRewardRL</span></div>
         </section>
       </article>
     
@@ -115,12 +115,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16031v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16031v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> A tabular foundation model can perform pre-fault dynamic security assessment for many power-system contingencies via in-context learning, reducing the need for per-contingency retraining and large labeled datasets.</p>
-          <p><b>Engineering relevance:</b> This enables faster, more scalable stability screening in power-system operations, including better handling of previously unseen contingencies with only a few new labels.</p>
-          <ul><li>Uses a tabular foundation model (TFM) instead of one classifier per contingency</li><li>Applies in-context learning with no retraining or hyperparameter tuning</li><li>Tests electrical distance coordinates (EDC) as continuous features to support transfer to unseen contingencies</li></ul>
-          <p><b>Evidence signal:</b> On the IEEE 68-bus system, the approach achieved about 90% average Macro F1 with only 120 labeled samples per contingency, and 10 labeled samples for a new contingency with EDC matched the best transfer-learning oracle.</p>
-          <p><b>Watch item:</b> Generalization to unseen contingencies depends on feature encoding, so EDC may not help in all cases and a small labeled set may still be needed.</p>
-          <div class="tags"><span>#PowerSystems</span> <span>#DynamicSecurityAssessment</span> <span>#FoundationModels</span> <span>#InContextLearning</span> <span>#TabularAI</span></div>
+          <p><b>Key insight:</b> A tabular foundation model can perform pre-fault dynamic security assessment for many contingencies at once, using in-context learning instead of separate retrained classifiers.</p>
+          <p><b>Engineering relevance:</b> This could substantially reduce the labeling, tuning, and maintenance burden for online power-system stability screening while improving generalization to new contingencies.</p>
+          <ul><li>Use a single tabular foundation model for contingency-level stability assessment.</li><li>Encode system state features, including electrical distance coordinates (EDC), to support in-context prediction and transfer.</li><li>Add a few labeled samples from unseen contingencies when needed to improve generalization without retraining.</li></ul>
+          <p><b>Evidence signal:</b> On the IEEE 68-bus system, the model reached about 90% average Macro F1 with only 120 labeled samples per contingency, and 10 labeled samples for a new contingency with EDC matched the best transfer-learning oracle.</p>
+          <p><b>Watch item:</b> Generalization to unseen contingencies depends on feature encoding and may still require a small labeled set, so deployment should validate EDC usefulness for the target grid.</p>
+          <div class="tags"><span>#PowerSystems</span> <span>#DynamicSecurityAssessment</span> <span>#FoundationModels</span> <span>#TabularML</span> <span>#MachineLearning</span></div>
         </section>
       </article>
     
@@ -134,11 +134,11 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16028v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16028v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> A sentiment-augmented deep reinforcement learning framework can improve daily crypto and stock trading decisions, with DDPG delivering the best overall test performance in this study.</p>
-          <p><b>Engineering relevance:</b> The paper shows how combining market indicators, news sentiment, and an alpha-based reward can be used to build and tune automated trading agents for practical financial decision support.</p>
-          <ul><li>Formulate trading as a discrete-action MDP with long/flat/short decisions for BTC and TSLA.</li><li>Use technical indicators, cyclical calendar features, and LLaMA 3.2 1B news sentiment scores as state inputs.</li><li>Compare PG, PPO, DQL, and DDPG with Ray Tune hyperparameter search and validation Sharpe-based model selection.</li></ul>
-          <p><b>Evidence signal:</b> The system was evaluated on the CLEF 2026 FinMMEval Task 3 benchmark, where DDPG achieved 54.96% cumulative return on TSLA and 1.58% on BTC, while the validation-selected DQL model was chosen for the live endpoint.</p>
-          <p><b>Watch item:</b> There is a notable validation-to-test generalization gap, suggesting that models tuned in bull-market conditions may underperform when deployed in different market regimes.</p>
+          <p><b>Key insight:</b> The paper shows that sentiment-augmented deep reinforcement learning, especially DDPG, can outperform buy-and-hold in active trading when trained with an alpha-based reward and robust validation.</p>
+          <p><b>Engineering relevance:</b> It demonstrates a practical pipeline for finance agents that combines news sentiment, technical indicators, and hyperparameter search to produce daily long/flat/short decisions under realistic market constraints.</p>
+          <ul><li>Formulate trading as a discrete-action MDP with daily long, flat, or short actions.</li><li>Fuse technical indicators, cyclical calendar features, and LLaMA 3.2 news sentiment scores.</li><li>Train and compare PG, PPO, DQL, and DDPG with alpha reward, randomized episode starts, and Ray Tune optimization.</li></ul>
+          <p><b>Evidence signal:</b> On the CLEF FinMMEval Task 3 test set, DDPG achieved 54.96% cumulative return for TSLA and 1.58% for BTC, while DQL was chosen for the live endpoint based on the best validation Sharpe ratio.</p>
+          <p><b>Watch item:</b> The large validation-to-test gap suggests the learned policy may not transfer reliably across regime changes, especially from bull-market validation to bear-market test periods.</p>
           <div class="tags"><span>#DeepReinforcementLearning</span> <span>#AlgorithmicTrading</span> <span>#SentimentAnalysis</span> <span>#Bitcoin</span> <span>#Tesla</span></div>
         </section>
       </article>
@@ -153,12 +153,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16127v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16127v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> CADAQUES makes cost a first-class part of autonomous discovery by explicitly budgeting both queries and decision-making within a dual Oracle-Driver loop.</p>
-          <p><b>Engineering relevance:</b> This framework helps scientific ML and simulation campaigns avoid hidden compute, time, and token costs while enabling more efficient, auditable query planning.</p>
-          <ul><li>Separates the loop into an Oracle that answers queries and a Driver that proposes them</li><li>Tracks a shared vector-valued budget for wall time, CPU hours, money, and LLM tokens</li><li>Records an append-only ledger of declared vs. settled costs for each transaction</li></ul>
-          <p><b>Evidence signal:</b> On the 2D Ising critical-temperature task, low-fidelity exploration followed by higher-fidelity refinement produced lower and less variable errors than always using high fidelity at the studied budget scale.</p>
-          <p><b>Watch item:</b> The reported benefits come from one noisy benchmark and a specific budget regime, so results may not generalize to all discovery problems or cost structures.</p>
-          <div class="tags"><span>#ScientificDiscovery</span> <span>#AutonomousExperiments</span> <span>#CostAwareAI</span> <span>#QueryEfficiency</span> <span>#ComputationalScience</span></div>
+          <p><b>Key insight:</b> CADAQUES makes cost a first-class part of autonomous discovery, jointly budgeting query execution and decision-making across time, compute, money, and tokens.</p>
+          <p><b>Engineering relevance:</b> The framework gives researchers a practical architecture for building query-efficient scientific discovery loops where both simulators and LLM-driven planners are explicitly metered.</p>
+          <ul><li>Splits the loop into an Oracle that answers queries and a Driver that proposes them.</li><li>Tracks both evaluations and decisions against a shared vector-valued budget.</li><li>Uses an append-only ledger to record declared vs. settled costs for every transaction.</li></ul>
+          <p><b>Evidence signal:</b> On the 2D Ising critical-temperature task, low-fidelity exploration followed by higher-fidelity refinement produced lower and less variable error than using high fidelity throughout at the studied budget scale.</p>
+          <p><b>Watch item:</b> Because cost accounting is centralized, the main implementation risk is ensuring that declared and settled costs are measured consistently across diverse oracles and planners.</p>
+          <div class="tags"><span>#ScientificDiscovery</span> <span>#AutonomousDiscovery</span> <span>#CostAwareAI</span> <span>#QueryEfficiency</span> <span>#ComputationalScience</span></div>
         </section>
       </article>
     
@@ -172,12 +172,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16177v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16177v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> PEARL combines reinforcement learning with differentiable physics and adjoint sensitivities to make real-time optimal control more sample-efficient and scalable for high-dimensional dynamical systems.</p>
-          <p><b>Engineering relevance:</b> This approach can reduce simulation cost and improve deployability for control of complex engineering systems such as flow navigation, robotics, and other parametric dynamical processes.</p>
-          <ul><li>Uses an actor-adjoint algorithm to compute policy gradients over short horizons.</li><li>Leverages automatic differentiation and adjoint-based sensitivities of future returns approximated by neural networks.</li><li>Exploits differentiable dynamics to guide policy learning and reduce environment interactions.</li></ul>
-          <p><b>Evidence signal:</b> The method is evaluated on two challenging parametric navigation problems in unsteady flows, where it outperforms state-of-the-art RL, generalizes across scenarios, and scales to high-dimensional state/action spaces.</p>
-          <p><b>Watch item:</b> Performance depends on access to differentiable environment models and accurate adjoint/NN approximations, which may limit use when the physics model is noisy or only partially known.</p>
-          <div class="tags"><span>#ReinforcementLearning</span> <span>#OptimalControl</span> <span>#DifferentiablePhysics</span> <span>#AdjointMethods</span> <span>#ScientificMachineLearning</span></div>
+          <p><b>Key insight:</b> PEARL combines reinforcement learning with differentiable physics and adjoint sensitivities to learn real-time optimal control policies with far fewer environment interactions.</p>
+          <p><b>Engineering relevance:</b> The approach is promising for high-dimensional, parametric control problems where sample efficiency, scalability, and generalization across operating conditions are critical.</p>
+          <ul><li>Uses an actor-adjoint training loop to compute policy gradients over short horizons.</li><li>Leverages automatic differentiation and neural-network approximations of future returns to incorporate physics-based sensitivities.</li><li>Targets differentiable dynamical systems to reduce exploration burden and stabilize long-horizon learning.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports evaluation on two challenging parametric navigation problems in unsteady flows, where PEARL outperforms state-of-the-art RL while using fewer interactions and generalizing across scenarios.</p>
+          <p><b>Watch item:</b> Performance depends on access to differentiable dynamics and accurate sensitivity approximations, which may limit applicability to systems with non-differentiable or poorly modeled physics.</p>
+          <div class="tags"><span>#ReinforcementLearning</span> <span>#OptimalControl</span> <span>#DifferentiablePhysics</span> <span>#SampleEfficiency</span> <span>#DynamicalSystems</span></div>
         </section>
       </article>
     
@@ -191,12 +191,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16097v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16097v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> Pretraining quality and scale strongly predict how much benefit reinforcement learning will deliver, and RL can uncover new correct reasoning behavior rather than only sharpening existing preferences.</p>
-          <p><b>Engineering relevance:</b> For reasoning-model pipelines, compute allocation across pretraining, SFT, and RL should be planned jointly because earlier-stage training choices measurably change downstream RL returns.</p>
-          <ul><li>Pretrain language models from 5M to 1B parameters on human chess games.</li><li>Apply supervised fine-tuning on synthetic reasoning traces.</li><li>Run RL on chess puzzles with verifiable rewards, then test transfer on math-domain text with a 1B model.</li></ul>
-          <p><b>Evidence signal:</b> Across compute sweeps, post-RL performance is predicted by pretraining loss, RL reward-curve slope rises roughly linearly with pretraining tokens, and the pattern also appears in a math-domain transfer experiment.</p>
-          <p><b>Watch item:</b> Chess provides a controlled testbed, but the controlled setup and synthetic traces may not fully capture the noise, scale, and diversity of real-world LLM pretraining and RL deployments.</p>
-          <div class="tags"><span>#LLMReasoning</span> <span>#ReinforcementLearning</span> <span>#Pretraining</span> <span>#PostTraining</span> <span>#AIEmpiricalStudy</span></div>
+          <p><b>Key insight:</b> Pretraining strongly determines how much reinforcement learning can improve reasoning, and RL changes models by revealing or amplifying correct behaviors rather than simply sharpening existing ones.</p>
+          <p><b>Engineering relevance:</b> For LLM training pipelines, pretraining data and scale should be treated as first-class design variables because they predict downstream RL efficiency and final reasoning performance.</p>
+          <ul><li>Pretrained 5M–1B parameter language models on human chess games.</li><li>Applied supervised fine-tuning on synthetic reasoning traces.</li><li>Ran RL on chess puzzles with verifiable rewards, then tested transfer on 1B math-domain text models.</li></ul>
+          <p><b>Evidence signal:</b> Across compute sweeps, post-RL performance was predicted by pretraining loss, RL reward slope scaled roughly linearly with pretraining tokens, and the pattern also held in a math-text transfer experiment.</p>
+          <p><b>Watch item:</b> Chess provides a controlled testbed, but its controlled rewards and domain structure may not fully capture the noise, diversity, and evaluation challenges of real-world LLM reasoning tasks.</p>
+          <div class="tags"><span>#LLMTraining</span> <span>#ReinforcementLearning</span> <span>#Pretraining</span> <span>#Reasoning</span> <span>#AIResearch</span></div>
         </section>
       </article>
     
@@ -210,12 +210,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16090v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16090v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> DADiff uses a diffusion model to quantify source-target dynamics mismatch via generative trajectory deviation, then adapts policies with either reward modification or data selection.</p>
-          <p><b>Engineering relevance:</b> It offers a practical way to transfer reinforcement learning policies to new operating conditions when only limited target-domain interaction data is available.</p>
-          <ul><li>Train a diffusion-based next-state generator on source dynamics.</li><li>Compare source vs. target generative trajectories to estimate mismatch.</li><li>Use the mismatch signal for reward shaping or filtering data to adapt policy training.</li></ul>
-          <p><b>Evidence signal:</b> The paper reports extensive experiments across environments with different shifts, and the proposed method outperforms existing approaches in handling dynamics mismatch.</p>
-          <p><b>Watch item:</b> Effectiveness may depend on how well the diffusion model captures transition dynamics and on the quality of limited target-domain samples used for adaptation.</p>
-          <div class="tags"><span>#ReinforcementLearning</span> <span>#DomainAdaptation</span> <span>#DiffusionModels</span> <span>#DynamicsShift</span> <span>#MachineLearning</span></div>
+          <p><b>Key insight:</b> DADiff uses diffusion-model trajectory discrepancies to estimate source-target dynamics mismatch and adapt RL policies across domains.</p>
+          <p><b>Engineering relevance:</b> It offers a practical way to transfer controllers or policies when target-domain interaction data is scarce but dynamics differ from the training environment.</p>
+          <ul><li>Model source and target next-state generation with a diffusion-based trajectory model</li><li>Measure generative trajectory deviation as a proxy for dynamics mismatch</li><li>Use the deviation for reward modification or target-data selection to adapt the policy</li></ul>
+          <p><b>Evidence signal:</b> The authors report extensive experiments across environments with different shifts, showing better performance than existing adaptation methods.</p>
+          <p><b>Watch item:</b> Performance depends on how well the diffusion model captures trajectories, so limited target data or poor generative fit could weaken mismatch estimation.</p>
+          <div class="tags"><span>#ReinforcementLearning</span> <span>#DomainAdaptation</span> <span>#DiffusionModels</span> <span>#DynamicsMismatch</span> <span>#AIforScience</span></div>
         </section>
       </article>
     
@@ -229,12 +229,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.15835v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.15835v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> Big-means++ turns random data samples into a global-search mechanism for K-means, using sample-to-sample variation, flowing centroids, and multi-scale shaking to escape poor local minima on big data.</p>
-          <p><b>Engineering relevance:</b> It offers a scalable clustering strategy for very large or streaming-like datasets where full-data optimization is impractical, while aiming to improve solution quality without heavy metaheuristic hybrids.</p>
-          <ul><li>Run K-means refinements on fresh random samples instead of the full dataset.</li><li>Propagate centroid states across sampled surrogate landscapes with a flowing-incumbent strategy.</li><li>Use geometric sample-size shaking and asynchronous multi-agent search with automatic convergence detection.</li></ul>
-          <p><b>Evidence signal:</b> The method was evaluated on 22 datasets and compared against 11 competing algorithms, with the abstract reporting improved effectiveness, efficiency, and robustness.</p>
-          <p><b>Watch item:</b> Because performance depends on stochastic sampling and convergence stopping rules, results may be sensitive to sample schedule, hyperparameters, and data imbalance.</p>
-          <div class="tags"><span>#KMeans</span> <span>#BigDataClustering</span> <span>#GlobalOptimization</span> <span>#ScientificMachineLearning</span> <span>#ScalableAI</span></div>
+          <p><b>Key insight:</b> Big-means++ turns repeated K-means runs on randomly sampled surrogate datasets into a data-native global search strategy for big-data clustering, aiming to escape poor local minima without expensive metaheuristic hybrids.</p>
+          <p><b>Engineering relevance:</b> It offers a scalable way to cluster very large or arbitrarily tall datasets using only finite samples, making it practical for high-volume scientific and industrial data pipelines.</p>
+          <ul><li>Flowing-incumbent K-means refinements carry centroid states across fresh sampled landscapes instead of resetting to a best-so-far solution.</li><li>Geometric sample-size shaking explores multiple resolution scales and helps handle cluster imbalance.</li><li>A multi-agent asynchronous search runs independent trajectories with automatic convergence detection for speed-quality control.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports experiments on 22 datasets against 11 competing algorithms, showing effectiveness, efficiency, and robustness.</p>
+          <p><b>Watch item:</b> Because the method relies on stochastic sampling and surrogate landscapes, performance may depend on sample-size schedules, stopping criteria, and random initialization settings.</p>
+          <div class="tags"><span>#KMeans</span> <span>#BigData</span> <span>#Clustering</span> <span>#GlobalOptimization</span> <span>#ScientificMachineLearning</span></div>
         </section>
       </article>
     
@@ -248,12 +248,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.15845v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.15845v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> The paper reframes workflow generation as a knowledge modeling problem, using hierarchical reasoning to produce more coherent and executable ComfyUI-style workflows.</p>
-          <p><b>Engineering relevance:</b> For modeling and simulation pipelines, this suggests that agentic systems should reason over modular structure and workflow knowledge rather than generating JSON directly from text.</p>
-          <ul><li>Knowledge inversion: distill real workflows into hierarchical representations from pseudo-code and skeletons to high-level strategies.</li><li>Knowledge injection: supervised fine-tuning teaches task-to-strategy and strategy-to-executable-structure reasoning.</li><li>Inference: reversible reasoning plus self-refinement improves structural coherence and workflow validity.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports extensive experiments showing richer node diversity, more coherent structures, and higher execution success rates than existing systems.</p>
-          <p><b>Watch item:</b> The approach depends on high-quality workflow corpora and careful multi-stage training/inference, which may increase system complexity and deployment cost.</p>
-          <div class="tags"><span>#WorkflowGeneration</span> <span>#KnowledgeCentricAI</span> <span>#LLMAgents</span> <span>#ComfyUI</span> <span>#ModelingAndSimulation</span></div>
+          <p><b>Key insight:</b> The paper shows that workflow generation improves when the model learns and reasons over knowledge hierarchies, not just direct text-to-JSON output.</p>
+          <p><b>Engineering relevance:</b> For visual-creation systems like ComfyUI, this approach can yield more executable, structurally coherent workflows with better node composition and higher success rates.</p>
+          <ul><li>Knowledge inversion: distill real workflows into hierarchical knowledge forms, from pseudo-code and skeletons to high-level strategies.</li><li>Knowledge injection: fine-tune the model to map task descriptions to strategies and strategies to executable workflow structures.</li><li>Reversible inference + self-refinement: generate workflows and iteratively correct structural inconsistencies for coherence.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports extensive experiments showing richer node diversity, more coherent structures, and higher execution success rates than existing methods.</p>
+          <p><b>Watch item:</b> The approach depends on high-quality workflow corpora and added inference/refinement steps, which may increase system complexity and deployment cost.</p>
+          <div class="tags"><span>#WorkflowGeneration</span> <span>#LLM</span> <span>#KnowledgeCentricAI</span> <span>#ComfyUI</span> <span>#VisualCreation</span></div>
         </section>
       </article>
     
@@ -267,12 +267,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16175v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16175v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> Open-weight LLMs can reliably turn CAV vulnerability text into structured STIX and CWE outputs, but full ATT&amp;CK-style attack mapping is still much harder.</p>
-          <p><b>Engineering relevance:</b> This work helps security teams automate threat intelligence for autonomous vehicles, improving prioritization of vulnerable assets, weaknesses, and likely attack behaviors.</p>
-          <ul><li>Built CAV-STIXGen, a dataset linking CAV CVE descriptions to STIX objects, CWE labels, and MITRE ATT&amp;CK mappings.</li><li>Benchmarked 11 open-weight LLMs (4B–120B) across prompting strategies and temperatures.</li><li>Compared single-model and multi-agent configurations for structured threat extraction.</li></ul>
-          <p><b>Evidence signal:</b> Single-model setups reached F1 scores of 0.94 for STIX domain objects, 0.63 for relationship objects, and 0.99 for CWE mapping, while multi-agent results reached 0.91 for SDOs and 0.43 for SROs.</p>
-          <p><b>Watch item:</b> MITRE ATT&amp;CK mapping remains incomplete and relationship extraction is weaker, so outputs should be validated before operational use.</p>
-          <div class="tags"><span>#AutonomousVehicles</span> <span>#LLMSecurity</span> <span>#STIX</span> <span>#CVE</span> <span>#ThreatIntelligence</span></div>
+          <p><b>Key insight:</b> Open-weight LLMs can reliably convert CAV vulnerability text into structured STIX and CWE outputs, but full attack-technique mapping is still difficult.</p>
+          <p><b>Engineering relevance:</b> This enables faster, more standardized threat intelligence for autonomous vehicle security teams to prioritize vulnerabilities and defenses.</p>
+          <ul><li>Built CAV-STIXGen from CAV CVE descriptions mapped to STIX SDO/SRO, CWE, and MITRE ATT&amp;CK labels</li><li>Benchmarked 11 open-weight LLMs from 4B to 120B parameters across prompting strategies and temperatures</li><li>Compared single-model and multi-agent setups, and analyzed CWE/ATT&amp;CK co-occurrence patterns</li></ul>
+          <p><b>Evidence signal:</b> The best single-model results reached F1 = 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while MITRE ATT&amp;CK mapping remained challenging.</p>
+          <p><b>Watch item:</b> SRO and especially full ATT&amp;CK mapping are less reliable, so human review is still needed before operational use.</p>
+          <div class="tags"><span>#AutonomousVehicles</span> <span>#LLM</span> <span>#CyberSecurity</span> <span>#STIX</span> <span>#ThreatIntelligence</span></div>
         </section>
       </article>
     
@@ -286,12 +286,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16131v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16131v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> ToolSciVer improves multimodal scientific claim verification by teaching a VLM when to use specialized visual tools to extract claim-relevant evidence from papers, charts, tables, and figures.</p>
-          <p><b>Engineering relevance:</b> The framework is directly useful for building more reliable AI systems that must ground decisions in scientific documents, especially where structured visuals and dense layouts make naïve reading fail.</p>
-          <ul><li>Uses three type-aware tools: table row/column focus, chart-to-structure parsing, and high-resolution region zoom.</li><li>Trains tool-use policy with GRPO to optimize correctness, valid formatting, concise answers, and efficient tool selection.</li><li>Combines visual evidence extraction with multimodal reasoning to turn dense paper visuals into explicit claim-facing evidence.</li></ul>
+          <p><b>Key insight:</b> ToolSciVer improves multimodal scientific claim verification by teaching a VLM to choose the right visual tool for tables, charts, and dense figure regions, turning hard-to-read scientific visuals into explicit evidence for reasoning.</p>
+          <p><b>Engineering relevance:</b> The paper offers a practical blueprint for building more reliable document AI systems in scientific workflows, where accurate evidence extraction from complex figures and tables is often the bottleneck.</p>
+          <ul><li>Adds three type-aware visual tools: table row/column focus, chart-to-structure parsing, and high-resolution region zoom.</li><li>Trains tool selection with Group Relative Policy Optimization (GRPO) using a composite reward for correctness, format validity, length control, tool efficiency, and tool-validity penalties.</li><li>Integrates tool outputs into claim-facing evidence for multimodal reasoning in a VLM.</li></ul>
           <p><b>Evidence signal:</b> Evaluated on SciVer and MuSciClaims across five VLMs from Qwen, InternVL, and Gemma families, outperforming four competitive baselines in the abstract.</p>
-          <p><b>Watch item:</b> Performance gains depend on correct tool selection and reward design, so deployment may be sensitive to tool errors or distribution shifts in scientific visual layouts.</p>
-          <div class="tags"><span>#ScientificClaimVerification</span> <span>#MultimodalAI</span> <span>#VisionLanguageModels</span> <span>#ToolAugmentedReasoning</span> <span>#RLHF</span></div>
+          <p><b>Watch item:</b> The approach adds policy and tool-chain complexity, so gains may depend on robust tool invocation, clean formatting, and reliable parsing of scientific visuals at inference time.</p>
+          <div class="tags"><span>#ScientificAI</span> <span>#MultimodalReasoning</span> <span>#ToolUse</span> <span>#VisionLanguageModels</span> <span>#ClaimVerification</span></div>
         </section>
       </article>
     
@@ -305,12 +305,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.15916v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.15916v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> (MPO)^2 learns multivariate polynomial models with matrix product operators, making polynomial function approximation more expressive and feature-order independent.</p>
-          <p><b>Engineering relevance:</b> It offers a compact way to model complex input-output relationships for machine learning and signal processing without the exponential cost of full polynomial tensors.</p>
-          <ul><li>Learns MPO-based feature embeddings to compress polynomial representations.</li><li>Uses compact polynomial weight tensors with structured operators such as projections, convolutions, and masks.</li><li>Avoids feature-order dependence seen in tensor-train formulations while improving expressivity over CP-based models.</li></ul>
-          <p><b>Evidence signal:</b> The abstract reports improvements over existing tensor-decomposition polynomial models on regression and classification benchmarks.</p>
-          <p><b>Watch item:</b> Performance may depend on careful MPO/weight-tensor design and implementation details for structured operators and symmetry constraints.</p>
-          <div class="tags"><span>#MatrixProductOperators</span> <span>#PolynomialOptimization</span> <span>#TensorDecomposition</span> <span>#MachineLearning</span> <span>#SignalProcessing</span></div>
+          <p><b>Key insight:</b> (MPO)^2 learns compact multivariate polynomial models by combining MPO-based feature embeddings with structured polynomial weight tensors, improving expressivity without exponential tensor growth.</p>
+          <p><b>Engineering relevance:</b> The method offers a practical way to build efficient, order-independent polynomial approximators for machine learning and signal-processing pipelines under tight memory and compute budgets.</p>
+          <ul><li>Learn MPO feature embeddings to represent inputs compactly.</li><li>Use polynomial weight tensors with structured operators such as projections, convolutions, and masks.</li><li>Preserve feature-order independence while enabling compact multiplicative interactions.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports improvements over existing tensor-decomposition-based polynomial models across regression and classification benchmarks.</p>
+          <p><b>Watch item:</b> Performance may depend on correct MPO/weight-tensor design, and structured constraints could add implementation complexity.</p>
+          <div class="tags"><span>#TensorNetworks</span> <span>#PolynomialOptimization</span> <span>#MatrixProductOperators</span> <span>#MachineLearning</span> <span>#ScientificAI</span></div>
         </section>
       </article>
     
@@ -324,12 +324,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.15884v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.15884v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> The paper reframes hyperparameter tuning as an interpretable game, using Shapley Effects to reveal which hyperparameters most influence each objective.</p>
-          <p><b>Engineering relevance:</b> It helps engineers narrow the search space, prioritize the most impactful knobs, and evaluate models early in multi-objective settings.</p>
-          <ul><li>Compute global hyperparameter sensitivity with Shapley Effects.</li><li>Identify effective configurations using Pareto front sets.</li><li>Compare hyperparameter-objective interactions across multiple neural architectures and domains.</li></ul>
-          <p><b>Evidence signal:</b> The framework is demonstrated on three distinct neural network architectures across different problem domains under multi-objective evaluation.</p>
-          <p><b>Watch item:</b> Shapley-based analysis can be computationally expensive and may depend on how objectives, search spaces, and model runs are defined.</p>
-          <div class="tags"><span>#HyperparameterTuning</span> <span>#ShapleyEffects</span> <span>#SensitivityAnalysis</span> <span>#MultiObjectiveAI</span> <span>#InterpretableML</span></div>
+          <p><b>Key insight:</b> The paper reframes hyperparameter tuning as an interpretable game-theoretic analysis, using Shapley Effects and Pareto fronts to identify which hyperparameters most strongly influence different objectives.</p>
+          <p><b>Engineering relevance:</b> It helps practitioners narrow the search space, prioritize impactful hyperparameters, and evaluate models early in multi-objective neural network workflows.</p>
+          <ul><li>Apply Shapley Effects for global hyperparameter sensitivity analysis.</li><li>Use Pareto front sets to find effective hyperparameter configurations.</li><li>Interpret objective-specific interactions across different neural network architectures.</li></ul>
+          <p><b>Evidence signal:</b> The framework is demonstrated on three distinct neural network architectures across different problem domains under multi-objective settings.</p>
+          <p><b>Watch item:</b> Results are interpretive and problem-dependent, so sensitivity rankings and Pareto conclusions may not transfer across datasets, objectives, or model families without re-analysis.</p>
+          <div class="tags"><span>#HyperparameterTuning</span> <span>#ShapleyEffects</span> <span>#ParetoFront</span> <span>#SensitivityAnalysis</span> <span>#MultiObjectiveAI</span></div>
         </section>
       </article>
     
@@ -343,12 +343,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.15935v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.15935v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> The paper shows that deep reinforcement learning can solve robotic arm reach and static reach-avoid tasks in realistic settings, but performance drops compared with simplified benchmark environments.</p>
-          <p><b>Engineering relevance:</b> It provides a more realistic benchmark for evaluating robot manipulation policies, helping engineers test whether DRL methods transfer beyond toy tabletop setups.</p>
-          <ul><li>Built a comprehensive reach-avoid benchmark for robotic arms with realistic, unsimplified scenarios.</li><li>Used the MuJoCo MJX physics engine and Brax to parallelize simulation and training.</li><li>Evaluated DRL on both UR5e and Franka Emika Robot environments.</li></ul>
-          <p><b>Evidence signal:</b> Reported state-of-the-art success rates of 96.1% and 98.8% on reach, and 86.8% and 95.2% on static reach-avoid for UR5e and Franka, respectively.</p>
-          <p><b>Watch item:</b> Results are strong for the tested settings, but the benchmark still needs broader validation to confirm robustness across more complex real-world conditions.</p>
-          <div class="tags"><span>#DeepReinforcementLearning</span> <span>#RobotManipulation</span> <span>#ReachAvoid</span> <span>#MuJoCo</span> <span>#Brax</span></div>
+          <p><b>Key insight:</b> Vectorized, high-fidelity simulation reveals that DRL can solve robotic reach and reach-avoid tasks well in benchmark settings, but performance drops in realistic scenarios.</p>
+          <p><b>Engineering relevance:</b> The benchmark provides a more practical testbed for robot-arm safety and manipulation research, helping engineers evaluate whether policies generalize beyond simplified tabletop environments.</p>
+          <ul><li>Built a comprehensive reach-avoid benchmark for robotic arms with realistic scenarios</li><li>Used MuJoCo MJX physics and Brax to parallelize simulation and DRL training</li><li>Evaluated multiple robot platforms and task variants, including UR5e and Franka</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports state-of-the-art success rates of 96.1% and 98.8% for reach, and 86.8% and 95.2% for static reach-avoid on UR5e and Franka, respectively.</p>
+          <p><b>Watch item:</b> Results are strongest for the static reach-avoid setting; the paper notes that prior simplified successes do not necessarily transfer to realistic environments, so generalization remains a concern.</p>
+          <div class="tags"><span>#ReinforcementLearning</span> <span>#Robotics</span> <span>#Benchmarking</span> <span>#MuJoCo</span> <span>#Brax</span></div>
         </section>
       </article>
     
@@ -362,12 +362,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.15928v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.15928v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> PEACE improves adult-to-pediatric ECG transfer by using diagnosis-aware, label-conditioned cross-modal alignment instead of global waveform-text fusion.</p>
-          <p><b>Engineering relevance:</b> The method offers a practical pretraining strategy for clinical ECG systems when pediatric labels are scarce, while still requiring only ECG input at inference.</p>
-          <ul><li>Composes only positive-label diagnosis descriptors into axis tokens and a fused knowledge embedding.</li><li>Uses a label query network to cross-attend diagnostic labels over ECG tokens and axis tokens.</li><li>Applies label-set-aware bidirectional contrastive learning with curriculum adaptive fusion during training.</li></ul>
-          <p><b>Evidence signal:</b> On ZZU-pECG, PEACE achieved macro-average AUCs of 59.39% zero-shot, 81.74% at 50-shot, and 91.56% with full fine-tuning, and reached 96.90% macro-average AUC on PTB-XL after fine-tuning.</p>
-          <p><b>Watch item:</b> The knowledge branch is training-only, so gains depend on high-quality label text and may be sensitive to label harmonization across datasets.</p>
-          <div class="tags"><span>#ECG</span> <span>#TransferLearning</span> <span>#PediatricAI</span> <span>#ContrastiveLearning</span> <span>#ClinicalAI</span></div>
+          <p><b>Key insight:</b> PEACE improves adult-to-pediatric ECG transfer by aligning ECG signals with label-conditioned, axis-specific clinical knowledge instead of relying on global multimodal matching.</p>
+          <p><b>Engineering relevance:</b> The method offers a practical pretraining and fine-tuning strategy for low-label pediatric ECG deployment, especially when inference must run on ECG signals alone.</p>
+          <ul><li>Uses label query network (LQN) to cross-attend diagnostic labels over ECG tokens and knowledge axis tokens.</li><li>Builds positive-label-only rhythm, morphology, and ST-T descriptors for each record and aligns them with ECG features via label set aware bidirectional contrastive learning (LSBC).</li><li>Applies curriculum adaptive fusion (CAF) to gradually strengthen alignment supervision during training.</li></ul>
+          <p><b>Evidence signal:</b> On ZZU-pECG, PEACE achieved macro-average AUCs of 59.39% zero-shot, 81.74% with 50-shot, and 91.56% with full fine-tuning, and reached 96.90% macro-average AUC on PTB-XL after fine-tuning.</p>
+          <p><b>Watch item:</b> Because the knowledge branch is training-only and gains depend on label-conditioned alignment, performance may be sensitive to label quality, diagnosis harmonization, and shifts in pediatric label availability.</p>
+          <div class="tags"><span>#ECG</span> <span>#PediatricAI</span> <span>#TransferLearning</span> <span>#ContrastiveLearning</span> <span>#MedicalAI</span></div>
         </section>
       </article>
     
@@ -381,12 +381,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16184v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16184v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> PagedWeight dynamically quantizes MoE expert weights at runtime to balance model accuracy, GPU memory, and serving throughput as KV-cache demand grows.</p>
-          <p><b>Engineering relevance:</b> It offers a practical serving strategy for memory-constrained MoE LLM deployments, helping operators preserve accuracy while fitting larger batches or longer contexts.</p>
-          <ul><li>Runtime-adaptive expert weight quantization</li><li>Quality-aware tradeoff management between weight precision and KV-cache size</li><li>Designed for memory-sensitive MoE serving scenarios</li></ul>
-          <p><b>Evidence signal:</b> Across multiple memory-sensitive MoE serving scenarios, the method matches FP16 accuracy with up to 72.0% GPU memory savings and 1.94× higher throughput, while outperforming quantization baselines by up to 39.3% quality at similar memory budgets.</p>
-          <p><b>Watch item:</b> Runtime quantization decisions add system complexity and may require careful tuning to avoid latency or quality regressions under changing workloads.</p>
-          <div class="tags"><span>#MixtureOfExperts</span> <span>#LLMServing</span> <span>#Quantization</span> <span>#GPUmemory</span> <span>#AISystems</span></div>
+          <p><b>Key insight:</b> PagedWeight dynamically quantizes MoE expert weights at runtime to balance model precision with KV-cache growth, improving the memory–quality tradeoff during LLM serving.</p>
+          <p><b>Engineering relevance:</b> It is directly relevant for deploying MoE LLMs in memory-constrained serving systems where GPU memory, throughput, and latency must be jointly optimized.</p>
+          <ul><li>Monitors serving-time memory pressure and adjusts expert-weight quantization dynamically.</li><li>Trades off expert precision against KV-cache size to fit within GPU memory budgets.</li><li>Targets MoE inference scenarios with an explicit quality-memory-throughput balance.</li></ul>
+          <p><b>Evidence signal:</b> The abstract reports FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94× throughput improvement, plus up to 39.3% better quality than quantization baselines at similar memory budgets.</p>
+          <p><b>Watch item:</b> Runtime quantization and scheduling add system complexity, so stability and overhead need careful validation in real serving pipelines.</p>
+          <div class="tags"><span>#MoE</span> <span>#LLMServing</span> <span>#Quantization</span> <span>#KVCache</span> <span>#GPUMemory</span></div>
         </section>
       </article>
     
@@ -400,12 +400,12 @@
         <div class="links"><a href="https://arxiv.org/abs/2607.16144v1" target="_blank" rel="noreferrer">arXiv</a> <a href="https://arxiv.org/pdf/2607.16144v1" target="_blank" rel="noreferrer">PDF</a></div>
         <section class="info">
           <h3>OpenAI Infographic Summary</h3>
-          <p><b>Key insight:</b> A single transformer-based Riemannian flow matching model can learn Standard Model event structure directly from LHC data across sub-GeV to TeV scales using only on-shell physics priors.</p>
-          <p><b>Engineering relevance:</b> This suggests data-driven generative models can replace or augment Monte Carlo simulation for high-energy physics event generation while preserving physically valid kinematics.</p>
-          <ul><li>Train ShellFlow on ~10^9 ATLAS Open Data pp collision events.</li><li>Condition on recorded event composition and generate each particle on its on-shell manifold.</li><li>Use only two priors: the on-shell condition and the invariant-mass formula.</li></ul>
-          <p><b>Evidence signal:</b> From a single training run, the model reproduces intra-particle kinematics, J/5, , and Z resonances at PDG positions, the leptonic Weinberg angle, W/top masses, and inter-particle correlations not included in the training objective.</p>
-          <p><b>Watch item:</b> Performance depends on large-scale labeled collision data and careful enforcement of physical constraints, so generalization beyond the ATLAS domain or to rare processes still needs validation.</p>
-          <div class="tags"><span>#AIforScience</span> <span>#HighEnergyPhysics</span> <span>#GenerativeModels</span> <span>#FlowMatching</span> <span>#ATLAS</span></div>
+          <p><b>Key insight:</b> A single transformer-based Riemannian flow-matching model can learn a broad slice of Standard Model collider structure directly from LHC data, spanning sub-GeV to TeV scales.</p>
+          <p><b>Engineering relevance:</b> This suggests a data-driven generative approach for high-energy physics that could replace multiple specialized Monte Carlo samples with one physics-aware model.</p>
+          <ul><li>Train ShellFlow on ~10^9 ATLAS 13 TeV pp collision events.</li><li>Condition on event composition and generate particles on their on-shell manifolds.</li><li>Use only two physics priors: the on-shell condition and the invariant-mass formula.</li></ul>
+          <p><b>Evidence signal:</b> From one training run, the model reproduces intra-particle kinematics, dilepton resonances (J/ψ, Υ, Z), the leptonic Weinberg angle, the W and top masses, and unseen inter-particle correlations.</p>
+          <p><b>Watch item:</b> Results depend on high-volume, well-calibrated collider data and the model’s ability to preserve physical constraints during generation, which may be challenging outside the ATLAS domain.</p>
+          <div class="tags"><span>#AIforPhysics</span> <span>#GenerativeModels</span> <span>#FlowMatching</span> <span>#ParticlePhysics</span> <span>#LHC</span></div>
         </section>
       </article>
     </section>

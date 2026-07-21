@@ -1,24 +1,24 @@
 {
-  "key_insight": "A tabular foundation model can perform pre-fault dynamic security assessment for many power-system contingencies via in-context learning, reducing the need for per-contingency retraining and large labeled datasets.",
-  "engineering_relevance": "This enables faster, more scalable stability screening in power-system operations, including better handling of previously unseen contingencies with only a few new labels.",
+  "key_insight": "A tabular foundation model can perform pre-fault dynamic security assessment for many contingencies at once, using in-context learning instead of separate retrained classifiers.",
+  "engineering_relevance": "This could substantially reduce the labeling, tuning, and maintenance burden for online power-system stability screening while improving generalization to new contingencies.",
   "method": [
-    "Uses a tabular foundation model (TFM) instead of one classifier per contingency",
-    "Applies in-context learning with no retraining or hyperparameter tuning",
-    "Tests electrical distance coordinates (EDC) as continuous features to support transfer to unseen contingencies"
+    "Use a single tabular foundation model for contingency-level stability assessment.",
+    "Encode system state features, including electrical distance coordinates (EDC), to support in-context prediction and transfer.",
+    "Add a few labeled samples from unseen contingencies when needed to improve generalization without retraining."
   ],
-  "evidence_signal": "On the IEEE 68-bus system, the approach achieved about 90% average Macro F1 with only 120 labeled samples per contingency, and 10 labeled samples for a new contingency with EDC matched the best transfer-learning oracle.",
-  "watch_item": "Generalization to unseen contingencies depends on feature encoding, so EDC may not help in all cases and a small labeled set may still be needed.",
+  "evidence_signal": "On the IEEE 68-bus system, the model reached about 90% average Macro F1 with only 120 labeled samples per contingency, and 10 labeled samples for a new contingency with EDC matched the best transfer-learning oracle.",
+  "watch_item": "Generalization to unseen contingencies depends on feature encoding and may still require a small labeled set, so deployment should validate EDC usefulness for the target grid.",
   "hashtags": [
     "#PowerSystems",
     "#DynamicSecurityAssessment",
     "#FoundationModels",
-    "#InContextLearning",
-    "#TabularAI"
+    "#TabularML",
+    "#MachineLearning"
   ],
   "paper_id": "2026-07-17-arxiv-revisiting_data_driven_dynamic_security_assessment_with_a_tabular_foundation_model",
   "paper_title": "Revisiting data-driven dynamic security assessment with a tabular foundation model",
   "paper_date": "2026-07-17",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-07-20T15:53:24",
+  "generated_at": "2026-07-21T15:53:24",
   "generator": "openai"
 }

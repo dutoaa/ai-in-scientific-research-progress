@@ -1,24 +1,24 @@
 {
-  "key_insight": "Muon can substantially improve agentic RL post-training performance, but only under specific optimizer, estimator, and learning-rate settings.",
-  "engineering_relevance": "For RL system design, the policy optimizer should be tuned jointly with the advantage estimator and learning rate rather than assumed interchangeable with AdamW.",
+  "key_insight": "Muon can substantially improve agentic RL post-training, but only under the right optimizer, advantage estimator, and learning-rate setting.",
+  "engineering_relevance": "For sparse-reward RL agents, optimizer choice is not a minor detail: Muon may yield large gains over AdamW when applied to hidden matrices in the right training regime.",
   "method": [
-    "Compared vanilla Muon vs. AdamW on ALFWorld with Qwen2.5-0.5B-Instruct under matched single-seed settings.",
-    "Applied Muon only to hidden weight matrices in Group-in-Group Policy Optimization (GiGPO) and compared with GRPO and GraphGPO.",
-    "Varied learning rate to test when Muon helps or saturates performance across training windows."
+    "Matched single-seed comparisons on ALFWorld with Qwen2.5-0.5B-Instruct",
+    "Compared vanilla Muon vs AdamW under GiGPO, GRPO, and GraphGPO",
+    "Applied Muon only to hidden weight matrices and varied learning rate"
   ],
-  "evidence_signal": "In single-seed ALFWorld evaluations, Muon raised GiGPO final-window validation success from 0.290 to 0.546 and improved GraphGPO at 1e-5 to 0.901 with higher normalized validation AUC (0.399 to 0.556).",
-  "watch_item": "The findings are exploratory: results are single-seed and on one task/model setup, so multi-seed and cross-task validation are still needed.",
+  "evidence_signal": "In the abstract’s ALFWorld evaluations, Muon raised GiGPO final-window validation success from 0.290 to 0.546, improved GRPO from 0.161 to 0.268 at 3e-5, and reached 0.901 validation success with GraphGPO at 1e-5.",
+  "watch_item": "The results are exploratory single-seed findings, so multi-seed and cross-task validation are still needed before drawing general conclusions.",
   "hashtags": [
+    "#Muon",
     "#ReinforcementLearning",
-    "#MuonOptimizer",
     "#AgenticAI",
-    "#PolicyOptimization",
-    "#ALFWorld"
+    "#OptimizerDesign",
+    "#SparseRewardRL"
   ],
   "paper_id": "2026-07-17-arxiv-when_does_muon_help_agentic_reinforcement_learning",
   "paper_title": "When Does Muon Help Agentic Reinforcement Learning?",
   "paper_date": "2026-07-17",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-07-20T15:53:21",
+  "generated_at": "2026-07-21T15:53:19",
   "generator": "openai"
 }

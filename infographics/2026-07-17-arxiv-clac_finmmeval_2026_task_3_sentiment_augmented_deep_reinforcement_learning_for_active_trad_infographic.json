@@ -1,13 +1,13 @@
 {
-  "key_insight": "A sentiment-augmented deep reinforcement learning framework can improve daily crypto and stock trading decisions, with DDPG delivering the best overall test performance in this study.",
-  "engineering_relevance": "The paper shows how combining market indicators, news sentiment, and an alpha-based reward can be used to build and tune automated trading agents for practical financial decision support.",
+  "key_insight": "The paper shows that sentiment-augmented deep reinforcement learning, especially DDPG, can outperform buy-and-hold in active trading when trained with an alpha-based reward and robust validation.",
+  "engineering_relevance": "It demonstrates a practical pipeline for finance agents that combines news sentiment, technical indicators, and hyperparameter search to produce daily long/flat/short decisions under realistic market constraints.",
   "method": [
-    "Formulate trading as a discrete-action MDP with long/flat/short decisions for BTC and TSLA.",
-    "Use technical indicators, cyclical calendar features, and LLaMA 3.2 1B news sentiment scores as state inputs.",
-    "Compare PG, PPO, DQL, and DDPG with Ray Tune hyperparameter search and validation Sharpe-based model selection."
+    "Formulate trading as a discrete-action MDP with daily long, flat, or short actions.",
+    "Fuse technical indicators, cyclical calendar features, and LLaMA 3.2 news sentiment scores.",
+    "Train and compare PG, PPO, DQL, and DDPG with alpha reward, randomized episode starts, and Ray Tune optimization."
   ],
-  "evidence_signal": "The system was evaluated on the CLEF 2026 FinMMEval Task 3 benchmark, where DDPG achieved 54.96% cumulative return on TSLA and 1.58% on BTC, while the validation-selected DQL model was chosen for the live endpoint.",
-  "watch_item": "There is a notable validation-to-test generalization gap, suggesting that models tuned in bull-market conditions may underperform when deployed in different market regimes.",
+  "evidence_signal": "On the CLEF FinMMEval Task 3 test set, DDPG achieved 54.96% cumulative return for TSLA and 1.58% for BTC, while DQL was chosen for the live endpoint based on the best validation Sharpe ratio.",
+  "watch_item": "The large validation-to-test gap suggests the learned policy may not transfer reliably across regime changes, especially from bull-market validation to bear-market test periods.",
   "hashtags": [
     "#DeepReinforcementLearning",
     "#AlgorithmicTrading",
@@ -19,6 +19,6 @@
   "paper_title": "CLaC@FinMMEval 2026 Task 3: Sentiment-Augmented Deep Reinforcement Learning for Active Trading -- An Alpha-Reward Approach",
   "paper_date": "2026-07-17",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-20T15:53:27",
+  "generated_at": "2026-07-21T15:53:27",
   "generator": "openai"
 }
