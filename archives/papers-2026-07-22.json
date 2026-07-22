@@ -1,0 +1,1037 @@
+[
+  {
+    "id": "2026-07-17-arxiv-when_do_multi_agent_systems_help_an_information_bottleneck_perspective",
+    "arxiv_id": "2607.16133v1",
+    "date": "2026-07-17",
+    "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+    "authors": "Wendi Yu, Lianhao Zhou, Xiangjue Dong, Sai Sudarshan Barath, Declan Staunton, Byung-Jun Yoon",
+    "abstract": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings. Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS. Specifically, our key observation is that a SAS accumulates its full reasoning trace in one shared context, while a MAS uses isolated local contexts connected by bounded relay messages. We show that, under infinite relay bandwidth, any SAS can be simulated by a MAS that transmits the full upstream context. Thus, the nontrivial advantage of MAS arises under bounded relays, where compression introduces a fundamental trade-off: reducing redundant context can improve efficiency, but may also incur loss of task-relevant information. We formalize this trade-off as an information bottleneck controlled by an effective parameter $β$, which captures how the balance shifts with model capability, and shows that MAS gains arise when context reduction outweighs relay information loss. We conduct 18 controlled experiments across five benchmarks and three model scales to validate our theoretical studies. We observe that MAS consistently helps when relays are near-sufficient, especially for weaker models. In contrast, MAS gains shrink or reverse when relays incur information loss, especially for stronger models that can already extract useful information from redundant context and thus gain little from compression. Our study shows that multi-agent design is fundamentally an information-bottleneck optimization problem. This perspective explains when bounded inter-agent communication helps or hurts.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-17T17:13:44Z",
+    "updated": "2026-07-17T17:13:44Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16133v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16133v1"
+      }
+    ],
+    "score": 73,
+    "infographic": {
+      "key_insight": "Multi-agent systems help when bounded inter-agent communication compresses redundant context without discarding too much task-relevant information, making the design an information bottleneck trade-off.",
+      "engineering_relevance": "For practical LLM systems, this means agent splitting and message budgets should be tuned to model strength and task structure rather than assumed to always improve performance.",
+      "method": [
+        "Frames SAS vs. MAS through an information bottleneck perspective.",
+        "Shows that with unlimited relay bandwidth, a MAS can simulate any SAS by passing full context.",
+        "Introduces an effective bottleneck parameter (β) to capture the trade-off between context reduction and information loss."
+      ],
+      "evidence_signal": "The authors validate the theory with 18 controlled experiments across five benchmarks and three model scales.",
+      "watch_item": "If relay messages are too compressed, performance can drop below a single-agent baseline, especially for stronger models.",
+      "hashtags": [
+        "#MultiAgentSystems",
+        "#LLM",
+        "#InformationBottleneck",
+        "#AgenticAI",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-07-17-arxiv-when_do_multi_agent_systems_help_an_information_bottleneck_perspective",
+      "paper_title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-21T15:52:42",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-dsworld_a_data_science_world_model_for_efficient_autonomous_agents",
+    "arxiv_id": "2607.15901v1",
+    "date": "2026-07-17",
+    "title": "DSWorld: A Data Science World Model for Efficient Autonomous Agents",
+    "authors": "Zherui Yang, Fan Liu, Hao Liu",
+    "abstract": "Despite strong capabilities in data understanding and decision-making, autonomous data science agents still heavily rely on trial-and-error workflows that involve expensive computation. This bottleneck motivates models that can anticipate the effects of data science operations before real execution. In this paper, we introduce the concept of Data Science World Model, which model the data science execution environment by predicting environment state transitions conditioned on current workflow states and candidate operations. We further propose DSWorld, a practical framework that combines structured state construction, cost-aware routing, lightweight real execution, and an LLM-based simulator for expensive operations. To support training, we construct an 8K-scale transition trajectory dataset and introduce Reflective World Model Optimization, an error-aware reinforcement learning strategy for improving transition prediction. Experiments show that DSWorld accelerates RL-based agent training by approximately $14\\times$ and search-based inference by approximately $3$-$6\\times$ while maintaining competitive performance, and outperforms the strongest LLM baseline by 35.6% on transition prediction tasks. The code is available at https://anonymous.4open.science/r/DSWorld.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-17T12:14:55Z",
+    "updated": "2026-07-17T12:14:55Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.15901v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15901v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "DSWorld learns to predict the next state of a data science workflow, letting autonomous agents avoid many expensive trial-and-error executions.",
+      "engineering_relevance": "It can speed up training and search for data science agents by routing cheap steps through structured prediction and reserving real execution for costly operations.",
+      "method": [
+        "Builds a structured representation of workflow state and candidate operations",
+        "Uses cost-aware routing to choose between lightweight execution and an LLM-based simulator",
+        "Trains with an 8K transition trajectory dataset and Reflective World Model Optimization"
+      ],
+      "evidence_signal": "The abstract reports about 14× faster RL-based agent training, 3–6× faster search-based inference, and 35.6% better transition prediction than the strongest LLM baseline.",
+      "watch_item": "Performance depends on accurate transition prediction, so errors in simulated state updates or routing decisions could still propagate through agent training and inference.",
+      "hashtags": [
+        "#AutonomousAgents",
+        "#DataScience",
+        "#WorldModel",
+        "#ReinforcementLearning",
+        "#LLM"
+      ],
+      "paper_id": "2026-07-17-arxiv-dsworld_a_data_science_world_model_for_efficient_autonomous_agents",
+      "paper_title": "DSWorld: A Data Science World Model for Efficient Autonomous Agents",
+      "paper_date": "2026-07-17",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-21T15:52:45",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-sciforge_an_ai_native_multimodal_workbench_for_scientific_discovery",
+    "arxiv_id": "2607.16038v1",
+    "date": "2026-07-17",
+    "title": "SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery",
+    "authors": "SciForge Team, Zhangyang Gao, Minghao Fang, Yifei Liu, Hanhui Yang, Xinyu Gu",
+    "abstract": "Scientific work increasingly spans heterogeneous artifacts -- papers, code, datasets, scientific file formats, model outputs, figures, manuscripts, and team decisions -- yet general-purpose AI assistants rarely preserve these objects as a coherent, auditable research state. We present SciForge, a multimodal research-native AI workbench that reserves the graphical interface for human judgment while search, parsing, model routing, workflow execution, plotting, writing, and presentation generation run as modular agent-accessible services. SciForge is built around five pillars: (i) \\emph{goal-scoped scientific decision governance} for \\textbf{goal-oriented} research, with review gates and shared review surfaces; (ii) \\emph{translate-then-reason} for \\textbf{multimodal} input, routing scientific objects through domain translators before the agent reasons; (iii) \\emph{evidence governance} for \\textbf{auditable} traceability, linking claims to provenance chains and audit findings; (iv) \\emph{collaborative team science} for \\textbf{collaborative} research, enabling multi-role decision governance, with shared team workspaces planned for future releases; and (v) \\emph{real-world application scenarios} for \\textbf{practical} impact, demonstrated through eight end-to-end user cases, with flagship demonstrations including multi-day agentic research sprints for gene discovery, AI-guided de novo protein design, molecular optimization, and genome-to-BGC discovery. The system combines a thin interaction layer, contextual research capability patterns, an Agent Runtime and Workflow Engine, an Evidence-DAG audit sidecar and a Scientific Model Router. SciForge currently runs as a desktop application, with mobile supervision support; future releases will deepen team collaboration. The system is open-source and available at https://github.com/AGI4Sci/SciForge",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-17T15:13:03Z",
+    "updated": "2026-07-17T15:13:03Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16038v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16038v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "SciForge is an AI-native scientific workbench that keeps human judgment in the UI while modular services handle multimodal translation, workflow execution, and auditable research state.",
+      "engineering_relevance": "It offers a practical architecture for building research agents that can operate on papers, code, data, figures, and model outputs without losing provenance or collaborative decision context.",
+      "method": [
+        "Goal-scoped decision governance with review gates and shared review surfaces",
+        "Translate-then-reason pipeline that routes scientific objects through domain-specific translators before agent reasoning",
+        "Evidence-DAG audit sidecar plus scientific model routing and workflow automation"
+      ],
+      "evidence_signal": "The abstract reports eight end-to-end user cases, including multi-day agentic sprints for gene discovery, protein design, molecular optimization, and genome-to-BGC discovery.",
+      "watch_item": "The strongest collaboration features are still future-facing, since shared team workspaces are planned for later releases and the current system emphasizes desktop/mobile supervision.",
+      "hashtags": [
+        "#AIScientists",
+        "#ScientificWorkflows",
+        "#MultimodalAI",
+        "#ResearchAgents",
+        "#Reproducibility"
+      ],
+      "paper_id": "2026-07-17-arxiv-sciforge_an_ai_native_multimodal_workbench_for_scientific_discovery",
+      "paper_title": "SciForge: An AI-Native, Multimodal Workbench for Scientific Discovery",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-21T15:52:47",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-when_does_muon_help_agentic_reinforcement_learning",
+    "arxiv_id": "2607.16169v1",
+    "date": "2026-07-17",
+    "title": "When Does Muon Help Agentic Reinforcement Learning?",
+    "authors": "Kai Ruan, Jinghao Lin, Zihe Huang, Ziqi Zhou, Qianshan Wei, Xuan Wang",
+    "abstract": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through matched single-seed comparisons with AdamW on ALFWorld using Qwen2.5-0.5B-Instruct. Under Group-in-Group Policy Optimization (GiGPO), applying Muon only to hidden weight matrices raises final-window validation success from 0.290 to 0.546 (+88%); high-rate AdamW controls retain no post-update success. The effect depends on the advantage estimator and learning rate. At 3e-5, Muon improves GRPO from 0.161 to 0.268, whereas GraphGPO's late-window gap narrows near saturation. At 1e-5, GraphGPO Muon reaches 0.901, raises normalized validation AUC from 0.399 to 0.556, and reaches 0.5 and 0.75 success 30 and 60 updates earlier, respectively. These exploratory results show that Muon can benefit agentic RL and motivate studying the policy optimizer, advantage estimator, and learning rate jointly. Multi-seed and cross-task validation remain open.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-17T17:49:05Z",
+    "updated": "2026-07-17T17:49:05Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16169v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16169v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "Muon can substantially improve agentic RL post-training, but only under the right optimizer, advantage estimator, and learning-rate setting.",
+      "engineering_relevance": "For sparse-reward RL agents, optimizer choice is not a minor detail: Muon may yield large gains over AdamW when applied to hidden matrices in the right training regime.",
+      "method": [
+        "Matched single-seed comparisons on ALFWorld with Qwen2.5-0.5B-Instruct",
+        "Compared vanilla Muon vs AdamW under GiGPO, GRPO, and GraphGPO",
+        "Applied Muon only to hidden weight matrices and varied learning rate"
+      ],
+      "evidence_signal": "In the abstract’s ALFWorld evaluations, Muon raised GiGPO final-window validation success from 0.290 to 0.546, improved GRPO from 0.161 to 0.268 at 3e-5, and reached 0.901 validation success with GraphGPO at 1e-5.",
+      "watch_item": "The results are exploratory single-seed findings, so multi-seed and cross-task validation are still needed before drawing general conclusions.",
+      "hashtags": [
+        "#Muon",
+        "#ReinforcementLearning",
+        "#AgenticAI",
+        "#OptimizerDesign",
+        "#SparseRewardRL"
+      ],
+      "paper_id": "2026-07-17-arxiv-when_does_muon_help_agentic_reinforcement_learning",
+      "paper_title": "When Does Muon Help Agentic Reinforcement Learning?",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-21T15:53:19",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-revisiting_data_driven_dynamic_security_assessment_with_a_tabular_foundation_model",
+    "arxiv_id": "2607.16031v1",
+    "date": "2026-07-17",
+    "title": "Revisiting data-driven dynamic security assessment with a tabular foundation model",
+    "authors": "Olayiwola Arowolo, Maosheng Yang, Jochen Cremer",
+    "abstract": "Data-driven pre-fault dynamic security assessment (DSA) rapidly evaluates the dynamic risk of credible contingencies on a power system using machine learning. Existing approaches face two limitations. First, they require a large labelled database for training, with a separate model trained, tuned, and maintained for each contingency in a potentially long list of credible contingencies. Second, the trained models generalize poorly to unseen contingencies. This work addresses the limitations by using a tabular foundation model (TFM) that assesses stability through in-context learning, requiring no retraining or hyperparameter optimization. A single TFM can assess many contingencies at once, removing the need for one model per classifier. We also characterize when the use of electrical distance coordinates (EDC) as continuous features enables generalization of TFM to unseen contingencies and when they do not, demonstrating how a few labelled samples can reliably improve generalization. Through comprehensive case studies on the IEEE 68-bus system, we show that a single TFM attains an average Macro F1 score of about 90% with only 120 labelled samples per contingency, roughly two orders of magnitude fewer than conventionally assumed, without any model retraining or hyperparameter tuning. For new/unseen contingencies, we show that using just 10 labelled samples of the new contingency with EDC encoding matches the best achievable transfer learning oracle model, which requires fully labelled data and is not deployable in practice. Overall, this initial study paves the way towards developing and deploying foundation models for power system operations, with possible applications across multiple operational tasks.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-17T15:06:11Z",
+    "updated": "2026-07-17T15:06:11Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16031v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16031v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "A tabular foundation model can perform pre-fault dynamic security assessment for many contingencies at once, using in-context learning instead of separate retrained classifiers.",
+      "engineering_relevance": "This could substantially reduce the labeling, tuning, and maintenance burden for online power-system stability screening while improving generalization to new contingencies.",
+      "method": [
+        "Use a single tabular foundation model for contingency-level stability assessment.",
+        "Encode system state features, including electrical distance coordinates (EDC), to support in-context prediction and transfer.",
+        "Add a few labeled samples from unseen contingencies when needed to improve generalization without retraining."
+      ],
+      "evidence_signal": "On the IEEE 68-bus system, the model reached about 90% average Macro F1 with only 120 labeled samples per contingency, and 10 labeled samples for a new contingency with EDC matched the best transfer-learning oracle.",
+      "watch_item": "Generalization to unseen contingencies depends on feature encoding and may still require a small labeled set, so deployment should validate EDC usefulness for the target grid.",
+      "hashtags": [
+        "#PowerSystems",
+        "#DynamicSecurityAssessment",
+        "#FoundationModels",
+        "#TabularML",
+        "#MachineLearning"
+      ],
+      "paper_id": "2026-07-17-arxiv-revisiting_data_driven_dynamic_security_assessment_with_a_tabular_foundation_model",
+      "paper_title": "Revisiting data-driven dynamic security assessment with a tabular foundation model",
+      "paper_date": "2026-07-17",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-21T15:53:24",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-clac_finmmeval_2026_task_3_sentiment_augmented_deep_reinforcement_learning_for_active_trad",
+    "arxiv_id": "2607.16028v1",
+    "date": "2026-07-17",
+    "title": "CLaC@FinMMEval 2026 Task 3: Sentiment-Augmented Deep Reinforcement Learning for Active Trading -- An Alpha-Reward Approach",
+    "authors": "Andrei Neagu, Eeham Khan, Leila Kosseim",
+    "abstract": "This paper presents our system for Task 3 of the CLEF 2026 FinMMEval Lab, which requires daily long, flat, or short trading decisions for Bitcoin (BTC) and Tesla (TSLA) using news and historical market data. We formulate the problem as a discrete-action Markov Decision Process and compare four deep reinforcement learning algorithms: Policy Gradient (PG), Proximal Policy Optimization (PPO), Deep Q-Learning (DQL), and Deep Deterministic Policy Gradient (DDPG). The agents use technical indicators, cyclical calendar encodings, and daily news sentiment scores produced by LLaMA 3.2 1B. To reduce overfitting and align training with the objective of outperforming buy-and-hold, we introduce an alpha reward based on excess market return and randomize episode start dates. Hyperparameters are optimized with Ray Tune over 180 trials per algorithm-asset pair, with early stopping and model selection based on validation Sharpe ratio. On the CLEF Task 3 test set, DDPG achieves the strongest overall performance. DQL was selected a priori for the live endpoint because it obtained the highest validation Sharpe ratio, with selection performed without access to the test period. For TSLA, DDPG and DQL achieve cumulative returns of 54.96% and 52.62%, respectively, compared with 16.45% for buy-and-hold. For BTC, DDPG achieves a positive return of 1.58% while buy-and-hold declines by -34.27%. The results also reveal a substantial validation-to-test generalization gap, highlighting the difficulty of transferring policies selected in bull-market conditions to a bear-market regime.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-17T15:01:35Z",
+    "updated": "2026-07-17T15:01:35Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16028v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16028v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "The paper shows that sentiment-augmented deep reinforcement learning, especially DDPG, can outperform buy-and-hold in active trading when trained with an alpha-based reward and robust validation.",
+      "engineering_relevance": "It demonstrates a practical pipeline for finance agents that combines news sentiment, technical indicators, and hyperparameter search to produce daily long/flat/short decisions under realistic market constraints.",
+      "method": [
+        "Formulate trading as a discrete-action MDP with daily long, flat, or short actions.",
+        "Fuse technical indicators, cyclical calendar features, and LLaMA 3.2 news sentiment scores.",
+        "Train and compare PG, PPO, DQL, and DDPG with alpha reward, randomized episode starts, and Ray Tune optimization."
+      ],
+      "evidence_signal": "On the CLEF FinMMEval Task 3 test set, DDPG achieved 54.96% cumulative return for TSLA and 1.58% for BTC, while DQL was chosen for the live endpoint based on the best validation Sharpe ratio.",
+      "watch_item": "The large validation-to-test gap suggests the learned policy may not transfer reliably across regime changes, especially from bull-market validation to bear-market test periods.",
+      "hashtags": [
+        "#DeepReinforcementLearning",
+        "#AlgorithmicTrading",
+        "#SentimentAnalysis",
+        "#Bitcoin",
+        "#Tesla"
+      ],
+      "paper_id": "2026-07-17-arxiv-clac_finmmeval_2026_task_3_sentiment_augmented_deep_reinforcement_learning_for_active_trad",
+      "paper_title": "CLaC@FinMMEval 2026 Task 3: Sentiment-Augmented Deep Reinforcement Learning for Active Trading -- An Alpha-Reward Approach",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-21T15:53:27",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-cadaques_a_cost_aware_dual_architecture_for_query_efficient_autonomous_discovery",
+    "arxiv_id": "2607.16127v1",
+    "date": "2026-07-17",
+    "title": "CADAQUES: A Cost-Aware Dual Architecture for Query-Efficient Autonomous Discovery",
+    "authors": "Jorge Bravo-Abad",
+    "abstract": "Autonomous discovery systems couple a resource that answers queries (a simulator, instrument, or analytic model) to an algorithm that selects what to query next. Most software frameworks for this loop inherit the control structure of numerical optimization: campaigns run for a fixed number of iterations, query costs are absent from the programming interface, and decision-making is treated as free. In practice, queries may differ in cost by orders of magnitude, and planners built on large language models or expensive surrogates consume resources of their own. Here we present CADAQUES, an open-source Python framework built on one architectural principle: cost is a first-class primitive of the discovery loop. CADAQUES separates the loop into two structural protocols, an Oracle that answers queries and a Driver that proposes them, and charges both evaluations and decisions against a common vector-valued budget spanning wall time, CPU hours, monetary cost, and language model tokens. An append-only ledger records, for each transaction, the cost declared before execution and the cost settled afterwards, making their discrepancy an observable property of the campaign. We evaluate the architecture by locating the critical temperature of the two-dimensional Ising model from noisy finite-size estimates against the exact thermodynamic-limit reference. In this noisy setting, strategies that concentrate around the best observed result can be misled by noise-induced peaks, whereas a schedule that explores with cheap low-fidelity queries and refines with higher-fidelity ones yields lower and less variable errors than high fidelity throughout, at the studied budget scale. Metering adds tens of microseconds per iteration, three orders of magnitude below the cheapest oracle query. The framework is MIT-licensed and archived at Zenodo (doi:10.5281/zenodo.21293589).",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-07-17T17:04:20Z",
+    "updated": "2026-07-17T17:04:20Z",
+    "primary_category": "physics.comp-ph",
+    "categories": [
+      "physics.comp-ph",
+      "cs.SE"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16127v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16127v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "CADAQUES makes cost a first-class part of autonomous discovery, jointly budgeting query execution and decision-making across time, compute, money, and tokens.",
+      "engineering_relevance": "The framework gives researchers a practical architecture for building query-efficient scientific discovery loops where both simulators and LLM-driven planners are explicitly metered.",
+      "method": [
+        "Splits the loop into an Oracle that answers queries and a Driver that proposes them.",
+        "Tracks both evaluations and decisions against a shared vector-valued budget.",
+        "Uses an append-only ledger to record declared vs. settled costs for every transaction."
+      ],
+      "evidence_signal": "On the 2D Ising critical-temperature task, low-fidelity exploration followed by higher-fidelity refinement produced lower and less variable error than using high fidelity throughout at the studied budget scale.",
+      "watch_item": "Because cost accounting is centralized, the main implementation risk is ensuring that declared and settled costs are measured consistently across diverse oracles and planners.",
+      "hashtags": [
+        "#ScientificDiscovery",
+        "#AutonomousDiscovery",
+        "#CostAwareAI",
+        "#QueryEfficiency",
+        "#ComputationalScience"
+      ],
+      "paper_id": "2026-07-17-arxiv-cadaques_a_cost_aware_dual_architecture_for_query_efficient_autonomous_discovery",
+      "paper_title": "CADAQUES: A Cost-Aware Dual Architecture for Query-Efficient Autonomous Discovery",
+      "paper_date": "2026-07-17",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-07-21T15:53:33",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-physics_enhanced_reinforcement_learning_for_real_time_optimal_control_of_dynamical_systems",
+    "arxiv_id": "2607.16177v1",
+    "date": "2026-07-17",
+    "title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+    "authors": "Matteo Tomasetto, Nicolò Botteghi, Gabriele Bruni, Andrea Manzoni",
+    "abstract": "Reinforcement learning (RL) has recently emerged as a promising feedback control strategy for nonlinear and complex dynamical systems. However, RL algorithms are sample inefficient and require a large number of interaction with the environment to synthesize optimal control strategies. Consequently, applications of RL are typically limited to sparse sensors and actuators due to the curse of dimensionality entailed by the exploration-exploitation dilemma in high-dimensional spaces. In this work, we bridge RL and traditional optimal control for dynamical system with a novel Physics-EnhAnced Reinforcement Learning (PEARL) paradigm tailored to the control of high-dimensional and parametric dynamical systems, exploiting the differentibility of their dynamics. Specifically, PEARL employs an actor-adjoint algorithm that leverages automatic differentiation to compute policy gradients over short horizons and adjoint-based sensitivities of future returns approximated via neural networks, significantly reducing the number of environment interactions, while mitigating long-term gradient instabilities. Through two challenging parametric navigation problems in unsteady flows, we show that PEARL (i) effectively exploits differentiable environments to outperform state-of-the-art RL algorithms, (ii) is sample efficient, thanks to the physics-guided policy learning, (iii) generalizes across multiple scenarios, which is crucial when dealing with parametric systems, and (iv) enables scaling RL to high-dimensional state and action spaces, without requiring low-dimensional state representations or multi-agent strategies.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-17T17:56:05Z",
+    "updated": "2026-07-17T17:56:05Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16177v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16177v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "PEARL combines reinforcement learning with differentiable physics and adjoint sensitivities to learn real-time optimal control policies with far fewer environment interactions.",
+      "engineering_relevance": "The approach is promising for high-dimensional, parametric control problems where sample efficiency, scalability, and generalization across operating conditions are critical.",
+      "method": [
+        "Uses an actor-adjoint training loop to compute policy gradients over short horizons.",
+        "Leverages automatic differentiation and neural-network approximations of future returns to incorporate physics-based sensitivities.",
+        "Targets differentiable dynamical systems to reduce exploration burden and stabilize long-horizon learning."
+      ],
+      "evidence_signal": "The abstract reports evaluation on two challenging parametric navigation problems in unsteady flows, where PEARL outperforms state-of-the-art RL while using fewer interactions and generalizing across scenarios.",
+      "watch_item": "Performance depends on access to differentiable dynamics and accurate sensitivity approximations, which may limit applicability to systems with non-differentiable or poorly modeled physics.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#OptimalControl",
+        "#DifferentiablePhysics",
+        "#SampleEfficiency",
+        "#DynamicalSystems"
+      ],
+      "paper_id": "2026-07-17-arxiv-physics_enhanced_reinforcement_learning_for_real_time_optimal_control_of_dynamical_systems",
+      "paper_title": "Physics-enhanced reinforcement learning for real-time optimal control of dynamical systems",
+      "paper_date": "2026-07-17",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-21T15:53:35",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-understanding_reasoning_from_pretraining_to_post_training",
+    "arxiv_id": "2607.16097v1",
+    "date": "2026-07-17",
+    "title": "Understanding Reasoning from Pretraining to Post-Training",
+    "authors": "Jingyan Shen, Ang Li, Salman Rahman, Yifan Sun, Micah Goldblum, Matus Telgarsky",
+    "abstract": "Reinforcement learning (RL) has become central to improving large language models (LLMs) on complex reasoning tasks, yet RL post-training is largely studied in isolation from the pretraining that precedes it. As a result, two basic questions remain open: (1) how do pretraining choices (model size, data) shape the returns to RL compute, and (2) what does RL actually do to the model? These questions are difficult to study in the standard LLM setting: pretraining corpora are vast and uncontrolled, making it hard to attribute behaviors to pretraining versus RL, and systematic compute sweeps across both stages are prohibitively expensive. To address these challenges, we use chess as a controlled testbed for studying reasoning across the full pretraining-to-post-training pipeline. We follow the standard LLM training pipeline by pretraining language models from 5M to 1B parameters on human chess games, supervised fine-tuning on synthetic reasoning traces, and running RL on chess puzzles with verifiable rewards. Using this framework, we find that the post-RL performance at given RL compute level is well-predicted from the pretraining loss, and slope of the RL reward curves improves approximately linearly with the pretraining tokens. Beyond scaling, we find that RL does not simply sharpen the SFT policy: on easy puzzles it amplifies correct moves the SFT policy already preferred, while on hard puzzles it surfaces correct moves that were nearly absent under SFT. We further test whether our findings transfer beyond chess by training a 1B language model on math-domain text, where the same predictive pattern emerges: longer-pretrained checkpoints reach higher post-RL performance and improve faster under RL. In sum, we provide a quantitative account of the pretraining-to-RL interface and a controlled testbed for studying the science of reasoning across the full pretraining-to-post-training pipeline.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-17T16:31:58Z",
+    "updated": "2026-07-17T16:31:58Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16097v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16097v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "Pretraining strongly determines how much reinforcement learning can improve reasoning, and RL changes models by revealing or amplifying correct behaviors rather than simply sharpening existing ones.",
+      "engineering_relevance": "For LLM training pipelines, pretraining data and scale should be treated as first-class design variables because they predict downstream RL efficiency and final reasoning performance.",
+      "method": [
+        "Pretrained 5M–1B parameter language models on human chess games.",
+        "Applied supervised fine-tuning on synthetic reasoning traces.",
+        "Ran RL on chess puzzles with verifiable rewards, then tested transfer on 1B math-domain text models."
+      ],
+      "evidence_signal": "Across compute sweeps, post-RL performance was predicted by pretraining loss, RL reward slope scaled roughly linearly with pretraining tokens, and the pattern also held in a math-text transfer experiment.",
+      "watch_item": "Chess provides a controlled testbed, but its controlled rewards and domain structure may not fully capture the noise, diversity, and evaluation challenges of real-world LLM reasoning tasks.",
+      "hashtags": [
+        "#LLMTraining",
+        "#ReinforcementLearning",
+        "#Pretraining",
+        "#Reasoning",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-07-17-arxiv-understanding_reasoning_from_pretraining_to_post_training",
+      "paper_title": "Understanding Reasoning from Pretraining to Post-Training",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-21T15:53:44",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-dadiff_diffusion_driven_cross_domain_policy_adaptation_for_reinforcement_learning",
+    "arxiv_id": "2607.16090v1",
+    "date": "2026-07-17",
+    "title": "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning",
+    "authors": "Hanyang Chen, Anirudh Satheesh, Longchao Da, Hua Wei",
+    "abstract": "Transferring policies across domains poses a vital challenge in reinforcement learning, due to the dynamics mismatch between the source and target domains. In this paper, we consider the setting of online dynamics adaptation, where policies are trained in the source domain with sufficient data, while only limited interactions with the target domain are allowed. There are a few existing works that address the dynamics mismatch by employing domain classifiers, value-guided data filtering, or representation learning. Instead, we study the domain adaptation problem from a generative modeling perspective. Specifically, we introduce DADiff, a diffusion-based framework that leverages the discrepancy between source and target domain generative trajectories in the generation process of the next state to estimate the dynamics mismatch. Both reward modification and data selection variants are developed to adapt the policy to the target domain. We also provide a theoretical analysis to show that the performance difference of a given policy between the two domains is bounded by the generative trajectory deviation. More discussions on the applicability of the variants and the connection between our theoretical analysis and the prior work are further provided. We conduct extensive experiments in environments with various shifts to validate the effectiveness of our method. The results demonstrate that our method provides superior performance compared to existing approaches, effectively addressing the dynamics mismatch. We provide the code of our method at https://github.com/hanyang-chen/DADiff-release",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-17T16:20:08Z",
+    "updated": "2026-07-17T16:20:08Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16090v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16090v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "DADiff uses diffusion-model trajectory discrepancies to estimate source-target dynamics mismatch and adapt RL policies across domains.",
+      "engineering_relevance": "It offers a practical way to transfer controllers or policies when target-domain interaction data is scarce but dynamics differ from the training environment.",
+      "method": [
+        "Model source and target next-state generation with a diffusion-based trajectory model",
+        "Measure generative trajectory deviation as a proxy for dynamics mismatch",
+        "Use the deviation for reward modification or target-data selection to adapt the policy"
+      ],
+      "evidence_signal": "The authors report extensive experiments across environments with different shifts, showing better performance than existing adaptation methods.",
+      "watch_item": "Performance depends on how well the diffusion model captures trajectories, so limited target data or poor generative fit could weaken mismatch estimation.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#DomainAdaptation",
+        "#DiffusionModels",
+        "#DynamicsMismatch",
+        "#AIforScience"
+      ],
+      "paper_id": "2026-07-17-arxiv-dadiff_diffusion_driven_cross_domain_policy_adaptation_for_reinforcement_learning",
+      "paper_title": "DADiff: Diffusion-Driven Cross-Domain Policy Adaptation for Reinforcement Learning",
+      "paper_date": "2026-07-17",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-21T15:53:46",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-data_native_global_optimization_for_big_data_k_means_clustering",
+    "arxiv_id": "2607.15835v1",
+    "date": "2026-07-17",
+    "title": "Data-Native Global Optimization for Big Data K-means Clustering",
+    "authors": "Ravil Mussabayev, Rustam Mussabayev, Zukhra Yerdaliyeva, Kuldeyev Nursultan",
+    "abstract": "Big data clustering remains challenging: the Minimum Sum-of-Squares Clustering (MSSC) problem underlying K-means is NP-hard, and existing methods either reach poor local minima or require prohibitive metaheuristic hybrids. We target arbitrarily tall data: a fixed feature space may contain arbitrarily many, possibly infinitely many, observations, while the algorithm accesses only finite random samples. We propose Big-means++, an algorithm achieving scalability and global-search quality by curating inputs to MSSC optimization on big data. It orchestrates local K-means refinements into a data-native global search for big data clustering. Rather than optimizing the full-data MSSC objective, Big-means++ traverses sample-induced surrogate landscapes. Each sample defines a distinct empirical MSSC approximation with a perturbed local-optimum structure, turning sample-to-sample variation into a global-search mechanism. Unlike Big-means, a flowing-incumbent strategy propagates centroid state across empirical landscapes through K-means refinements on fresh samples without rollback to a best-so-far solution. This increases mobility and favors stable, high-quality configurations across approximations of the full-data structure. A new shaking mechanism varies sample size geometrically, broadening the surrogate landscapes explored across resolution scales, accounting for cluster imbalance, and improving solution quality. A competitive multi-agent system asynchronously explores independent sampled landscapes, transforming diverse stochastic trajectories into collective search intelligence. Automatic convergence detection stops each agent after attaining a high-quality solution but before further search risks degrading it, while providing a universal speed-quality control. Experiments on 22 datasets against 11 competing algorithms demonstrate the effectiveness, efficiency, and robustness of Big-means++.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-17T10:46:58Z",
+    "updated": "2026-07-17T10:46:58Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.15835v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15835v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "Big-means++ turns repeated K-means runs on randomly sampled surrogate datasets into a data-native global search strategy for big-data clustering, aiming to escape poor local minima without expensive metaheuristic hybrids.",
+      "engineering_relevance": "It offers a scalable way to cluster very large or arbitrarily tall datasets using only finite samples, making it practical for high-volume scientific and industrial data pipelines.",
+      "method": [
+        "Flowing-incumbent K-means refinements carry centroid states across fresh sampled landscapes instead of resetting to a best-so-far solution.",
+        "Geometric sample-size shaking explores multiple resolution scales and helps handle cluster imbalance.",
+        "A multi-agent asynchronous search runs independent trajectories with automatic convergence detection for speed-quality control."
+      ],
+      "evidence_signal": "The abstract reports experiments on 22 datasets against 11 competing algorithms, showing effectiveness, efficiency, and robustness.",
+      "watch_item": "Because the method relies on stochastic sampling and surrogate landscapes, performance may depend on sample-size schedules, stopping criteria, and random initialization settings.",
+      "hashtags": [
+        "#KMeans",
+        "#BigData",
+        "#Clustering",
+        "#GlobalOptimization",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-07-17-arxiv-data_native_global_optimization_for_big_data_k_means_clustering",
+      "paper_title": "Data-Native Global Optimization for Big Data K-means Clustering",
+      "paper_date": "2026-07-17",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-21T15:54:04",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-knowledge_centric_agents_for_workflow_generation",
+    "arxiv_id": "2607.15845v1",
+    "date": "2026-07-17",
+    "title": "Knowledge-Centric Agents for Workflow Generation",
+    "authors": "Zhendong Li, Lei Sun, Ruibo Ming, He Zhang, Danda Pani Paudel, Luc Van Gool",
+    "abstract": "Workflow generation in visual creation systems such as ComfyUI demands not only syntactic accuracy but also expert-level reasoning over modular compositions. Existing large language model (LLM) approaches often treat this as a direct text-to-JSON generation task, struggling with structural brittleness and lacking the experiential knowledge required for effective design. We argue that successful workflow generation requires modeling knowledge itself, including its structure, hierarchy, and reasoning dynamics. To this end, we propose a knowledge-centric framework that learns to invert, inject, and infer with knowledge across multiple abstraction levels. We first perform knowledge inversion to distill hierarchical representations, ranging from full pseudo-codes and skeletons to high-level strategies, from large collections of real-world workflows. We then conduct knowledge injection through supervised fine-tuning, teaching the model to reason from task descriptions to strategies and from strategies to executable structures. During inference, the model performs reversible reasoning to synthesize executable workflows, augmented by self-refinement for structural coherence. Extensive experiments demonstrate that our method produces workflows with richer node diversity, more coherent structures, and higher execution success rates than existing systems, establishing a new foundation for knowledge-driven, agentic workflow generation.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-17T11:03:01Z",
+    "updated": "2026-07-17T11:03:01Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.15845v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15845v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "The paper shows that workflow generation improves when the model learns and reasons over knowledge hierarchies, not just direct text-to-JSON output.",
+      "engineering_relevance": "For visual-creation systems like ComfyUI, this approach can yield more executable, structurally coherent workflows with better node composition and higher success rates.",
+      "method": [
+        "Knowledge inversion: distill real workflows into hierarchical knowledge forms, from pseudo-code and skeletons to high-level strategies.",
+        "Knowledge injection: fine-tune the model to map task descriptions to strategies and strategies to executable workflow structures.",
+        "Reversible inference + self-refinement: generate workflows and iteratively correct structural inconsistencies for coherence."
+      ],
+      "evidence_signal": "The abstract reports extensive experiments showing richer node diversity, more coherent structures, and higher execution success rates than existing methods.",
+      "watch_item": "The approach depends on high-quality workflow corpora and added inference/refinement steps, which may increase system complexity and deployment cost.",
+      "hashtags": [
+        "#WorkflowGeneration",
+        "#LLM",
+        "#KnowledgeCentricAI",
+        "#ComfyUI",
+        "#VisualCreation"
+      ],
+      "paper_id": "2026-07-17-arxiv-knowledge_centric_agents_for_workflow_generation",
+      "paper_title": "Knowledge-Centric Agents for Workflow Generation",
+      "paper_date": "2026-07-17",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-21T15:54:07",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-evaluating_open_weight_llms_for_generating_structured_threat_information_for_autonomous_ve",
+    "arxiv_id": "2607.16175v1",
+    "date": "2026-07-17",
+    "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+    "authors": "Md Erfan, Ahmed Ryan, Md Kamal Hossain Chowdhury, Md Rayhanur Rahman",
+    "abstract": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, where vulnerabilities can compromise assets, users, and vehicle operations. These vulnerabilities are commonly documented as plain text in the Common Vulnerabilities and Exposures (CVE) database; however, security practitioners require structured information about affected assets, types of weaknesses, and attack behaviors to effectively mitigate the risks from these vulnerabilities. To this end, we evaluate open-weight Large Language Models (LLMs) for generating Structured Threat Information Expression (STIX), a well-known structured format for representing threat information, for CAV-related CVEs. We construct a dataset called CAV-STIXGen that maps CAV vulnerability descriptions to STIX domain objects (SDO), STIX relationship objects (SRO), Common Weakness Enumeration (CWE), and MITRE ATT&CK techniques mappings. Using this dataset, we evaluated 11 open-weight LLMs (4B to 120B parameters) across various prompting strategies and temperatures. Single-model configurations achieve F1 scores of 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while complete MITRE ATT&CK mapping remains challenging. In a multi-agent setup, Gemma-4-31B and Codestral-22B achieve F1 scores of 0.91 for SDOs and 0.43 for SROs, respectively. Lastly, we analyze CWE and MITRE ATT&CK co-occurrences to identify recurring threat patterns in the CAV domain, demonstrating how AI-assisted vulnerability-to-STIX translation can automate threat intelligence and prioritize defense in transportation security.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-17T17:55:19Z",
+    "updated": "2026-07-17T17:55:19Z",
+    "primary_category": "cs.CR",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16175v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16175v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "Open-weight LLMs can reliably convert CAV vulnerability text into structured STIX and CWE outputs, but full attack-technique mapping is still difficult.",
+      "engineering_relevance": "This enables faster, more standardized threat intelligence for autonomous vehicle security teams to prioritize vulnerabilities and defenses.",
+      "method": [
+        "Built CAV-STIXGen from CAV CVE descriptions mapped to STIX SDO/SRO, CWE, and MITRE ATT&CK labels",
+        "Benchmarked 11 open-weight LLMs from 4B to 120B parameters across prompting strategies and temperatures",
+        "Compared single-model and multi-agent setups, and analyzed CWE/ATT&CK co-occurrence patterns"
+      ],
+      "evidence_signal": "The best single-model results reached F1 = 0.94 for SDO, 0.63 for SRO, and 0.99 for CWE mapping, while MITRE ATT&CK mapping remained challenging.",
+      "watch_item": "SRO and especially full ATT&CK mapping are less reliable, so human review is still needed before operational use.",
+      "hashtags": [
+        "#AutonomousVehicles",
+        "#LLM",
+        "#CyberSecurity",
+        "#STIX",
+        "#ThreatIntelligence"
+      ],
+      "paper_id": "2026-07-17-arxiv-evaluating_open_weight_llms_for_generating_structured_threat_information_for_autonomous_ve",
+      "paper_title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+      "paper_date": "2026-07-17",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-21T15:54:09",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-toolsciver_multimodal_scientific_claim_verification_with_visual_tool_augmented_reinforceme",
+    "arxiv_id": "2607.16131v1",
+    "date": "2026-07-17",
+    "title": "ToolSciVer: Multimodal Scientific Claim Verification with Visual Tool Augmented Reinforcement Learning",
+    "authors": "Binglin Zhou, Peng Shi, Ryo Kamoi, Nan Zhang, Rui Zhang",
+    "abstract": "Multimodal Scientific Claim Verification (MSCV) requires models to verify scientific claims using visually grounded evidence from papers, including figures, tables, charts, and textual context. However, existing methods often fail because they struggle to locate decisive visual evidence, accurately read structured scientific visuals, and integrate multimodal observations into reliable reasoning. We introduce ToolSciVer, the first tool-augmented framework for MSCV to our knowledge. ToolSciVer equips a VLM with three type-aware visual tools, table row/column focus, chart-to-structure parsing, and high-resolution region zoom, which convert dense scientific visuals into explicit, claim-facing evidence, and trains the policy with Group Relative Policy Optimization (GRPO) under a composite reward of answer correctness, format validity, length control, tool-use efficiency, and tool-validity penalties. Experiments on SciVer and MuSciClaims datasets on five VLMs from three model families (Qwen, InternVL, Gemma) demonstrate that our method achieves superior performance compared to four competitive baselines including prompting-based and RL-based tool-use methods, highlighting the effectiveness of learned, type-aware tool use for scientific claim verification.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-17T17:11:50Z",
+    "updated": "2026-07-17T17:11:50Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16131v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16131v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "ToolSciVer improves multimodal scientific claim verification by teaching a VLM to choose the right visual tool for tables, charts, and dense figure regions, turning hard-to-read scientific visuals into explicit evidence for reasoning.",
+      "engineering_relevance": "The paper offers a practical blueprint for building more reliable document AI systems in scientific workflows, where accurate evidence extraction from complex figures and tables is often the bottleneck.",
+      "method": [
+        "Adds three type-aware visual tools: table row/column focus, chart-to-structure parsing, and high-resolution region zoom.",
+        "Trains tool selection with Group Relative Policy Optimization (GRPO) using a composite reward for correctness, format validity, length control, tool efficiency, and tool-validity penalties.",
+        "Integrates tool outputs into claim-facing evidence for multimodal reasoning in a VLM."
+      ],
+      "evidence_signal": "Evaluated on SciVer and MuSciClaims across five VLMs from Qwen, InternVL, and Gemma families, outperforming four competitive baselines in the abstract.",
+      "watch_item": "The approach adds policy and tool-chain complexity, so gains may depend on robust tool invocation, clean formatting, and reliable parsing of scientific visuals at inference time.",
+      "hashtags": [
+        "#ScientificAI",
+        "#MultimodalReasoning",
+        "#ToolUse",
+        "#VisionLanguageModels",
+        "#ClaimVerification"
+      ],
+      "paper_id": "2026-07-17-arxiv-toolsciver_multimodal_scientific_claim_verification_with_visual_tool_augmented_reinforceme",
+      "paper_title": "ToolSciVer: Multimodal Scientific Claim Verification with Visual Tool Augmented Reinforcement Learning",
+      "paper_date": "2026-07-17",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-21T15:54:12",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-mpo_2_multivariate_polynomial_optimization_based_on_matrix_product_operators",
+    "arxiv_id": "2607.15916v1",
+    "date": "2026-07-17",
+    "title": "(MPO)$^2$: Multivariate Polynomial Optimization based on Matrix Product Operators",
+    "authors": "Niccolò Ciolli, Anders Vestergaard Nørskov, Michael Kastoryano, Petr Taborsky, Morten Mørup",
+    "abstract": "Central to machine learning and signal processing is the ability to perform universal function approximation and learn complex input-output relationships from limited numbers of observations. Multivariate polynomial models offer a natural way to express such relationships through multiplicative feature interactions, but their coefficient tensors grow exponentially in size with the polynomial degree. Existing tensorized polynomial models reduce this cost, yet canonical polyadic decompositions have rank-limited expressivity, and tensor train formulations are feature order dependent. We introduce Multivariate Polynomial Optimization based on Matrix Product Operators (MPO)$^2$, a framework that combines learned MPO feature embeddings with compact polynomial weight tensors. This yields feature order independent polynomial representations that can incorporate structured operators such as projections, convolutions, and masks for weight tensor symmetries. Across regression and classification benchmarks, (MPO)$^2$ improves over existing tensor decomposition based polynomial models and provides a flexible alternative for efficient polynomial function approximation.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-17T12:44:48Z",
+    "updated": "2026-07-17T12:44:48Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.15916v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15916v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "(MPO)^2 learns compact multivariate polynomial models by combining MPO-based feature embeddings with structured polynomial weight tensors, improving expressivity without exponential tensor growth.",
+      "engineering_relevance": "The method offers a practical way to build efficient, order-independent polynomial approximators for machine learning and signal-processing pipelines under tight memory and compute budgets.",
+      "method": [
+        "Learn MPO feature embeddings to represent inputs compactly.",
+        "Use polynomial weight tensors with structured operators such as projections, convolutions, and masks.",
+        "Preserve feature-order independence while enabling compact multiplicative interactions."
+      ],
+      "evidence_signal": "The abstract reports improvements over existing tensor-decomposition-based polynomial models across regression and classification benchmarks.",
+      "watch_item": "Performance may depend on correct MPO/weight-tensor design, and structured constraints could add implementation complexity.",
+      "hashtags": [
+        "#TensorNetworks",
+        "#PolynomialOptimization",
+        "#MatrixProductOperators",
+        "#MachineLearning",
+        "#ScientificAI"
+      ],
+      "paper_id": "2026-07-17-arxiv-mpo_2_multivariate_polynomial_optimization_based_on_matrix_product_operators",
+      "paper_title": "(MPO)$^2$: Multivariate Polynomial Optimization based on Matrix Product Operators",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-21T15:54:14",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-which_hyperparameters_matter_a_game_theoretic_framework_for_interpretable_hyperparameter_s",
+    "arxiv_id": "2607.15884v1",
+    "date": "2026-07-17",
+    "title": "Which Hyperparameters Matter? A Game-Theoretic Framework for Interpretable Hyperparameter Sensitivity Analysis",
+    "authors": "Nyi Nyi Aung, Heepeom Shin, Abigail Lawlor, Adrian Stein",
+    "abstract": "This work presents a game-theoretic framework for interpretable hyperparameter-objective interaction analysis rather than proposing a new optimization algorithm. In the proposed framework, Shapley Effects are employed for global sensitivity analysis, while Pareto front sets are utilized to identify effective hyperparameter configurations and support early-stage model evaluation. The resulting analysis reveals which players (hyperparameters) are most influential with respect to different objectives in a given game (application). Consequently, the proposed framework provides interpretable insights into objective-aware hyperparameter interactions, enabling practitioners to guide subsequent optimization, reduce the search space, and perform early-stage model evaluation. The effectiveness of the proposed framework is demonstrated using three distinct neural network architectures across different problem domains under multi-objective settings.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-17T11:58:35Z",
+    "updated": "2026-07-17T11:58:35Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.CO"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.15884v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15884v1"
+      }
+    ],
+    "score": 57,
+    "infographic": {
+      "key_insight": "The paper reframes hyperparameter tuning as an interpretable game-theoretic analysis, using Shapley Effects and Pareto fronts to identify which hyperparameters most strongly influence different objectives.",
+      "engineering_relevance": "It helps practitioners narrow the search space, prioritize impactful hyperparameters, and evaluate models early in multi-objective neural network workflows.",
+      "method": [
+        "Apply Shapley Effects for global hyperparameter sensitivity analysis.",
+        "Use Pareto front sets to find effective hyperparameter configurations.",
+        "Interpret objective-specific interactions across different neural network architectures."
+      ],
+      "evidence_signal": "The framework is demonstrated on three distinct neural network architectures across different problem domains under multi-objective settings.",
+      "watch_item": "Results are interpretive and problem-dependent, so sensitivity rankings and Pareto conclusions may not transfer across datasets, objectives, or model families without re-analysis.",
+      "hashtags": [
+        "#HyperparameterTuning",
+        "#ShapleyEffects",
+        "#ParetoFront",
+        "#SensitivityAnalysis",
+        "#MultiObjectiveAI"
+      ],
+      "paper_id": "2026-07-17-arxiv-which_hyperparameters_matter_a_game_theoretic_framework_for_interpretable_hyperparameter_s",
+      "paper_title": "Which Hyperparameters Matter? A Game-Theoretic Framework for Interpretable Hyperparameter Sensitivity Analysis",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-21T15:54:17",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-learning_reach_avoid_task_with_reinforcement_learning_vectorized_simulation_and_benchmark",
+    "arxiv_id": "2607.15935v1",
+    "date": "2026-07-17",
+    "title": "Learning Reach-Avoid Task with Reinforcement Learning: Vectorized Simulation and Benchmark",
+    "authors": "Jonas Weihing, Shahram Eivazi",
+    "abstract": "Deep reinforcement learning (DRL) has a longstanding tradition in addressing the reach-avoid task problem, especially for controlling robotic arms. While this task serves as a baseline environment within the research community, the ability of DRL to effectively learn the each-avoid task in complex and realistic scenarios beyond simplified and restricted tabletop settings remains uncertain. In this paper, we present, for the first time, a comprehensive benchmark for the reachavoid task that accurately captures real-world complexities without simplifications. We demonstrate a diverse range of settings for robotic arm reach-avoid task, which can be used for evaluating DRL research. We achieved this by utilizing the MuJoCo MJX physics engine and parallelizing both the simulation environment and DRL algorithms using the Brax library. We achieved state-of-the-art results with success rates of 96.1% (UR5e) and 98.8% (Franka Emika Robot) for the reach task and 86.8% (UR5e) and 95.2% (Franka) for the static reachavoid task. Our results indicate that while in previous works DRL agents could solve, for example, a reach task in a simplified setting perfectly, their agents performance collapses when evaluated in realistic scenarios. Overall, this work identifies that additional research is still required to claim the successful resolution of the robotic arm reach-avoid task using DRL. The environment and benchmarking code is available as open source at the following link",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-17T13:18:32Z",
+    "updated": "2026-07-17T13:18:32Z",
+    "primary_category": "cs.RO",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.15935v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15935v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "Vectorized, high-fidelity simulation reveals that DRL can solve robotic reach and reach-avoid tasks well in benchmark settings, but performance drops in realistic scenarios.",
+      "engineering_relevance": "The benchmark provides a more practical testbed for robot-arm safety and manipulation research, helping engineers evaluate whether policies generalize beyond simplified tabletop environments.",
+      "method": [
+        "Built a comprehensive reach-avoid benchmark for robotic arms with realistic scenarios",
+        "Used MuJoCo MJX physics and Brax to parallelize simulation and DRL training",
+        "Evaluated multiple robot platforms and task variants, including UR5e and Franka"
+      ],
+      "evidence_signal": "The abstract reports state-of-the-art success rates of 96.1% and 98.8% for reach, and 86.8% and 95.2% for static reach-avoid on UR5e and Franka, respectively.",
+      "watch_item": "Results are strongest for the static reach-avoid setting; the paper notes that prior simplified successes do not necessarily transfer to realistic environments, so generalization remains a concern.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#Robotics",
+        "#Benchmarking",
+        "#MuJoCo",
+        "#Brax"
+      ],
+      "paper_id": "2026-07-17-arxiv-learning_reach_avoid_task_with_reinforcement_learning_vectorized_simulation_and_benchmark",
+      "paper_title": "Learning Reach-Avoid Task with Reinforcement Learning: Vectorized Simulation and Benchmark",
+      "paper_date": "2026-07-17",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-21T15:54:20",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-knowledge_guided_cross_modal_fusion_for_adult_to_pediatric_ecg_transfer_via_label_conditio",
+    "arxiv_id": "2607.15928v1",
+    "date": "2026-07-17",
+    "title": "Knowledge-Guided Cross-Modal Fusion for Adult-to-Pediatric ECG Transfer via Label-Conditioned Contrastive Alignment",
+    "authors": "Xinran Liu, Yuwen Li, Hongxiang Gao, Heyang Xu, Jianqing Li, Zongmin Wang",
+    "abstract": "Adult and pediatric electrocardiogram (ECG) interpretation relies on age-sensitive criteria, and models pretrained mainly on adult ECGs often transfer poorly to pediatric populations when pediatric labels are scarce. Existing multimodal ECG--text methods typically align waveforms and text at the global sample level, entangling evidence from co-occurring diagnoses and limiting transfer under this gap. We propose Pediatric-Adult ECG Alignment via Cross-modal Enhancement (PEACE), a knowledge-guided framework pretrained on the largely adult MIMIC-IV ECG corpus. PEACE describes each diagnosis along rhythm, morphology, and ST--T axes and, per recording, composes only positive-label descriptors into three axis tokens and a fused embedding. A label query network (LQN) uses diagnostic labels as queries to cross-attend over ECG tokens and axis tokens, while label set aware bidirectional contrastive learning (LSBC) aligns pooled ECG features with the fused embedding when recordings share diagnoses. Curriculum adaptive fusion (CAF) gates alignment strength according to smoothed classification loss and training progress, limiting disruption during early optimization. The knowledge branch is used only for training supervision; inference uses ECG signals alone. On ZZU-pECG, PEACE reaches macro average AUCs of 59.39%, 81.74%, and 91.56% under zero-shot, 50-shot, and full fine-tuning, with the clearest gains over foundation and knowledge-pretraining baselines under limited supervision; versus domain adaptation initializations, zero-shot improves substantially while 50-shot AUC is comparable to DANN. After fine-tuning on PTB-XL, PEACE reaches 96.90% macro average AUC over nine harmonized labels. Ablations confirm that label-conditioned knowledge alignment, rather than global text fusion, is the key driver of pediatric transfer gains.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-17T13:11:12Z",
+    "updated": "2026-07-17T13:11:12Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.15928v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.15928v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "PEACE improves adult-to-pediatric ECG transfer by aligning ECG signals with label-conditioned, axis-specific clinical knowledge instead of relying on global multimodal matching.",
+      "engineering_relevance": "The method offers a practical pretraining and fine-tuning strategy for low-label pediatric ECG deployment, especially when inference must run on ECG signals alone.",
+      "method": [
+        "Uses label query network (LQN) to cross-attend diagnostic labels over ECG tokens and knowledge axis tokens.",
+        "Builds positive-label-only rhythm, morphology, and ST-T descriptors for each record and aligns them with ECG features via label set aware bidirectional contrastive learning (LSBC).",
+        "Applies curriculum adaptive fusion (CAF) to gradually strengthen alignment supervision during training."
+      ],
+      "evidence_signal": "On ZZU-pECG, PEACE achieved macro-average AUCs of 59.39% zero-shot, 81.74% with 50-shot, and 91.56% with full fine-tuning, and reached 96.90% macro-average AUC on PTB-XL after fine-tuning.",
+      "watch_item": "Because the knowledge branch is training-only and gains depend on label-conditioned alignment, performance may be sensitive to label quality, diagnosis harmonization, and shifts in pediatric label availability.",
+      "hashtags": [
+        "#ECG",
+        "#PediatricAI",
+        "#TransferLearning",
+        "#ContrastiveLearning",
+        "#MedicalAI"
+      ],
+      "paper_id": "2026-07-17-arxiv-knowledge_guided_cross_modal_fusion_for_adult_to_pediatric_ecg_transfer_via_label_conditio",
+      "paper_title": "Knowledge-Guided Cross-Modal Fusion for Adult-to-Pediatric ECG Transfer via Label-Conditioned Contrastive Alignment",
+      "paper_date": "2026-07-17",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-21T15:54:26",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-pagedweight_efficient_moe_llm_serving_with_dynamic_quality_aware_weight_quantization",
+    "arxiv_id": "2607.16184v1",
+    "date": "2026-07-17",
+    "title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+    "authors": "Yuchen Yang, Yifan Zhao, Anisha Dasgupta, Sasa Misailovic",
+    "abstract": "Mixture-of-Experts (MoE) is a popular class of large language models (LLMs), offering high efficiency and accuracy. However, in KV-cache-intensive serving scenarios, MoEs often exhibit a tension between the GPU memory requirements of the model weights and the growing KV cache. We propose PagedWeight, a novel management method for MoE LLM serving that dynamically quantizes MoE model's weights at runtime and balances expert-weight precision with the KV cache sizes. PagedWeight exposes and effectively navigates the complex tradeoff between the model's task accuracy, memory consumption, and throughput/latency. Across several memory-sensitive MoE serving scenarios, PagedWeight improves the quality-memory tradeoff over several existing quantization baselines. PagedWeight achieves FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94$\\times$ throughput improvement, and improves quality over quantization methods by up to 39.3% at a similar memory budget with at most 4.1% throughput loss.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-17T17:58:29Z",
+    "updated": "2026-07-17T17:58:29Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16184v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16184v1"
+      }
+    ],
+    "score": 55,
+    "infographic": {
+      "key_insight": "PagedWeight dynamically quantizes MoE expert weights at runtime to balance model precision with KV-cache growth, improving the memory–quality tradeoff during LLM serving.",
+      "engineering_relevance": "It is directly relevant for deploying MoE LLMs in memory-constrained serving systems where GPU memory, throughput, and latency must be jointly optimized.",
+      "method": [
+        "Monitors serving-time memory pressure and adjusts expert-weight quantization dynamically.",
+        "Trades off expert precision against KV-cache size to fit within GPU memory budgets.",
+        "Targets MoE inference scenarios with an explicit quality-memory-throughput balance."
+      ],
+      "evidence_signal": "The abstract reports FP16-equivalent accuracy with up to 72.0% GPU memory savings and 1.94× throughput improvement, plus up to 39.3% better quality than quantization baselines at similar memory budgets.",
+      "watch_item": "Runtime quantization and scheduling add system complexity, so stability and overhead need careful validation in real serving pipelines.",
+      "hashtags": [
+        "#MoE",
+        "#LLMServing",
+        "#Quantization",
+        "#KVCache",
+        "#GPUMemory"
+      ],
+      "paper_id": "2026-07-17-arxiv-pagedweight_efficient_moe_llm_serving_with_dynamic_quality_aware_weight_quantization",
+      "paper_title": "PagedWeight: Efficient MoE LLM Serving with Dynamic Quality-Aware Weight Quantization",
+      "paper_date": "2026-07-17",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-21T15:54:30",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-17-arxiv-learning_standard_model_structure_from_lhc_data_with_riemannian_flow_matching",
+    "arxiv_id": "2607.16144v1",
+    "date": "2026-07-17",
+    "title": "Learning Standard Model structure from LHC data with Riemannian flow matching",
+    "authors": "Midori Kato, Kevin A. Urquía-Calderón, Inar Timiryasov, Oleg Ruchayskiy",
+    "abstract": "In this work we demonstrate that a single transformer-based generative model can capture Standard Model structure spanning five decades of invariant mass, from the sub-GeV regime to the TeV continuum, a range that no single Monte Carlo sample covers. To achieve this we design \\textsc{ShellFlow}, a Riemannian conditional flow matching model that, given the recorded event composition, generates each particle on its on-shell manifold. Its only physics priors are the on-shell condition and the invariant-mass formula. The model is trained on $\\sim 10^{9}$ real $pp$ collision events from the ATLAS Open Data 13~TeV release and told nothing else. From a single training run, the model learns to reproduce all of the following: intra-particle kinematics, the dilepton resonances ($J/ψ$, $Υ$, $Z$) at their PDG positions, the leptonic Weinberg angle, the $W$ and top-quark masses, and inter-particle correlations that enter no training objective. A substantial fraction of the Standard Model is thus learnable directly from recorded collision data.",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-07-17T17:23:22Z",
+    "updated": "2026-07-17T17:23:22Z",
+    "primary_category": "hep-ph",
+    "categories": [
+      "hep-ph",
+      "cs.LG",
+      "hep-ex"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.16144v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.16144v1"
+      }
+    ],
+    "score": 55,
+    "infographic": {
+      "key_insight": "A single transformer-based Riemannian flow-matching model can learn a broad slice of Standard Model collider structure directly from LHC data, spanning sub-GeV to TeV scales.",
+      "engineering_relevance": "This suggests a data-driven generative approach for high-energy physics that could replace multiple specialized Monte Carlo samples with one physics-aware model.",
+      "method": [
+        "Train ShellFlow on ~10^9 ATLAS 13 TeV pp collision events.",
+        "Condition on event composition and generate particles on their on-shell manifolds.",
+        "Use only two physics priors: the on-shell condition and the invariant-mass formula."
+      ],
+      "evidence_signal": "From one training run, the model reproduces intra-particle kinematics, dilepton resonances (J/ψ, Υ, Z), the leptonic Weinberg angle, the W and top masses, and unseen inter-particle correlations.",
+      "watch_item": "Results depend on high-volume, well-calibrated collider data and the model’s ability to preserve physical constraints during generation, which may be challenging outside the ATLAS domain.",
+      "hashtags": [
+        "#AIforPhysics",
+        "#GenerativeModels",
+        "#FlowMatching",
+        "#ParticlePhysics",
+        "#LHC"
+      ],
+      "paper_id": "2026-07-17-arxiv-learning_standard_model_structure_from_lhc_data_with_riemannian_flow_matching",
+      "paper_title": "Learning Standard Model structure from LHC data with Riemannian flow matching",
+      "paper_date": "2026-07-17",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-07-21T15:54:33",
+      "generator": "openai"
+    }
+  }
+]
