@@ -1,0 +1,1048 @@
+[
+  {
+    "id": "2026-07-22-arxiv-co_evolving_llm_evaluators_and_policies_via_dynamicrubric",
+    "arxiv_id": "2607.20083v1",
+    "date": "2026-07-22",
+    "title": "Co-Evolving LLM Evaluators and Policies via DynamicRubric",
+    "authors": "Beining Wang, Weihang Su, Hongtao Tian, Hao Kong, Tao Yang, Ting Yao",
+    "abstract": "Post-training with evaluator feedback on policy-induced samples serves as a major mechanism for improving large language models. As policies improve, these sampled responses become close in quality. These close candidates create a bottleneck for policy optimization: collapsed relative evaluator score gaps yield weak or misleading policy supervision. We theoretically characterize why these gaps matter through a probability allocation view, showing that the directional gain of shifting probability mass from one response to another is exactly the evaluator score gap between them. This identifies relative score gaps as the policy optimization signals that guide updates. Motivated by this view, we propose DynamicRubric, a response-set-conditioned evaluator--policy co-evolution framework that generates weighted binary rubric items for each candidate set and aggregates the resulting judgments into response-level scores. In our experiments with 8B backbones, DynamicRubric improves evaluator performance and provides stronger policy supervision than baselines using a 70B reward model or a 235B static rubric generator. DynamicRubric-optimized policies also show gains on verifiable reasoning and coding tasks. A DynamicRubric-optimized model is fully deployed in WeChat Search's AI answering scenario, where it serves all online traffic across tens of millions of requests per day and improves key online metrics. These results suggest a principle for evaluator-guided post-training: evaluators should evolve with the policies they supervise.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-22T12:35:40Z",
+    "updated": "2026-07-22T12:35:40Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20083v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20083v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "DynamicRubric argues that as LLM policies improve and candidate answers become closer in quality, evaluators must co-evolve to preserve useful relative score gaps for policy learning.",
+      "engineering_relevance": "For production LLM training, this suggests adaptive evaluators can provide stronger supervision than static reward models when optimizing high-performing models on near-tied responses.",
+      "method": [
+        "Condition the evaluator on the full response set, not each answer in isolation.",
+        "Generate weighted binary rubric items tailored to the candidate set.",
+        "Aggregate rubric judgments into response-level scores to drive policy updates."
+      ],
+      "evidence_signal": "With 8B backbones, DynamicRubric outperforms baselines using a 70B reward model and a 235B static rubric generator, and the optimized policy improves verifiable reasoning and coding tasks.",
+      "watch_item": "Because the method depends on response-set-conditioned rubrics, its effectiveness may be sensitive to rubric quality, calibration, and deployment cost at scale.",
+      "hashtags": [
+        "#LLMAlignment",
+        "#RewardModeling",
+        "#PostTraining",
+        "#EvaluatorCoEvolution",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-07-22-arxiv-co_evolving_llm_evaluators_and_policies_via_dynamicrubric",
+      "paper_title": "Co-Evolving LLM Evaluators and Policies via DynamicRubric",
+      "paper_date": "2026-07-22",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-23T15:56:52",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-label_free_finite_volume_residual_training_of_attention_graph_neural_networks_for_coupled",
+    "arxiv_id": "2607.20321v1",
+    "date": "2026-07-22",
+    "title": "Label-Free Finite-Volume-Residual Training of Attention Graph Neural Networks for Coupled Thermo-Fluid Fields",
+    "authors": "Tianyu Li, Zhiwei Cao, Qingang Zhang, Ruihang Wang, Binyang Song, Yonggang Wen",
+    "abstract": "Neural surrogates are widely used in scientific machine learning for fast prediction of three-dimensional (3D) thermo-fluid fields. However, generating training data using conventional numerical solvers often incurs substantial computational and storage costs. We propose to train an attention graph neural network by minimizing the finite-volume method (FVM) residuals of the governing equations. These residuals are evaluated directly on the mesh, requiring no labeled data. We evaluate the trained surrogates against computational fluid dynamics (CFD) references and a data-supervised baseline across four scenarios. On the two steady-state benchmarks, the FVM-loss model achieves an all-field normalized root-mean-square error (nRMSE) of 2.3-2.8%. It demonstrates close agreement with the CFD references, including the buoyancy-energy coupling. On the two parametric transient cases, the FVM-loss model outperforms the supervised baseline in terms of accuracy, while avoiding the data-generation cost entirely. These results indicate that the FVM loss can provide a practical training signal for neural surrogates and reduce the model development cost.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-22T16:07:09Z",
+    "updated": "2026-07-22T16:07:09Z",
+    "primary_category": "physics.flu-dyn",
+    "categories": [
+      "physics.flu-dyn",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20321v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20321v1"
+      }
+    ],
+    "score": 76,
+    "infographic": {
+      "key_insight": "The paper trains an attention graph neural network directly from finite-volume residuals, enabling label-free surrogate modeling of coupled thermo-fluid fields.",
+      "engineering_relevance": "This reduces the need for expensive CFD data generation while preserving physically consistent predictions for steady and transient thermal-fluid simulations.",
+      "method": [
+        "Compute FVM residuals of the governing equations on the mesh as the training loss.",
+        "Train an attention graph neural network without labeled field data.",
+        "Evaluate against CFD references and a data-supervised baseline on steady and parametric transient cases."
+      ],
+      "evidence_signal": "Across four scenarios, the FVM-loss model achieved 2.3–2.8% all-field nRMSE on the steady benchmarks and outperformed the supervised baseline on the transient cases.",
+      "watch_item": "Residual-based training depends on accurate discretization, mesh quality, and stable optimization; performance may vary for more complex geometries or poorly conditioned coupled physics.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#GraphNeuralNetworks",
+        "#FiniteVolumeMethod",
+        "#ThermoFluid",
+        "#PhysicsInformedAI"
+      ],
+      "paper_id": "2026-07-22-arxiv-label_free_finite_volume_residual_training_of_attention_graph_neural_networks_for_coupled",
+      "paper_title": "Label-Free Finite-Volume-Residual Training of Attention Graph Neural Networks for Coupled Thermo-Fluid Fields",
+      "paper_date": "2026-07-22",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-23T15:56:55",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-multi_modal_transformer_for_signal_classification_in_nanopore_blockade_experiments",
+    "arxiv_id": "2607.20323v1",
+    "date": "2026-07-22",
+    "title": "Multi-modal transformer for signal classification in nanopore blockade experiments",
+    "authors": "Sandro Kuppel, Julian Hoßbach, Samuel Tovey, Christian Holm",
+    "abstract": "Nanopore devices have emerged as powerful tools for single-molecule sensing, with potential for rapid, portable diagnostics. They detect changes in ionic current as analytes enter nanometer-scale pores, providing a means of identifying diverse biomarkers from their characteristic signal patterns. However, these signals are highly complex, and reliably assigning them to specific molecules remains a major challenge. Here, we address this by introducing a multi-modal deep learning architecture that jointly processes multiple signal representations, including raw time-series data, wavelet-based images, and static feature vectors. Our approach surpasses existing methods by more than 10 percentage points on a 42-peptide benchmark and transfers to a 20-amino-acid dataset with near-perfect accuracy. The model integrates complementary information from these representations, with attention analysis showing that the time-series and wavelet-image inputs emphasize different features of the same event. Together, these results demonstrate the potential of machine learning to enable robust, high-accuracy molecular identification with nanopore sensors.",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-07-22T16:09:34Z",
+    "updated": "2026-07-22T16:09:34Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "physics.comp-ph",
+      "q-bio.BM"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20323v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20323v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "A multi-modal transformer that fuses raw nanopore signals, wavelet images, and hand-crafted features can identify peptides more accurately than single-representation methods.",
+      "engineering_relevance": "This approach could improve portable nanopore diagnostics by making molecular classification more robust to noisy, complex blockade signals.",
+      "method": [
+        "Jointly encodes three signal views: time-series, wavelet-based image, and static feature vector.",
+        "Uses transformer-based attention to integrate complementary information across modalities.",
+        "Analyzes attention to show different modalities focus on different aspects of the same event."
+      ],
+      "evidence_signal": "The model improves performance by more than 10 percentage points on a 42-peptide benchmark and transfers to a 20-amino-acid dataset with near-perfect accuracy.",
+      "watch_item": "Performance may depend on high-quality, well-aligned multi-modal inputs, so deployment could be sensitive to preprocessing and dataset shift.",
+      "hashtags": [
+        "#Nanopore",
+        "#DeepLearning",
+        "#Transformer",
+        "#SignalClassification",
+        "#BiomedicalAI"
+      ],
+      "paper_id": "2026-07-22-arxiv-multi_modal_transformer_for_signal_classification_in_nanopore_blockade_experiments",
+      "paper_title": "Multi-modal transformer for signal classification in nanopore blockade experiments",
+      "paper_date": "2026-07-22",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-07-23T15:56:57",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-pg_kinn_a_physics_informed_petrov_galerkin_kolmogorov_arnold_network_for_solving_forward_a",
+    "arxiv_id": "2607.20378v1",
+    "date": "2026-07-22",
+    "title": "PG-KINN: A Physics-Informed Petrov-Galerkin Kolmogorov-Arnold Network for Solving Forward and Inverse PDEs",
+    "authors": "Amirhossein Sadr, Nima Soltani, Vahideh Moghtadaiee, Aida Pakniyat, Dara Rahmati, Saeid Gorgin",
+    "abstract": "Physics-informed learning of partial differential equations (PDEs) has been dominated by multilayer perceptrons (MLPs), whose spectral bias and dense parameterization limit both accuracy and interpretability. Kolmogorov Arnold Networks (KANs) mitigate these limitations because their learnable spline activations are structurally aligned with the piecewise-polynomial bases of classical discretizations. However, the way a PDE is cast into a loss functional is as decisive as the choice of approximator: strong-form residual minimization requires high-order derivatives and heavily weighted losses, the energy (Bubnov-Galerkin) form is restricted to self-adjoint operators and, as we show, collapses to a trivial solution for parameter-identification problems, and boundary integral forms require a known fundamental solution. We propose PG-KINN, a physics-informed KAN built on a Petrov-Galerkin formulation in which the trial space is a KAN and the test space is an independent, compactly supported, piecewise-polynomial space evaluated with Gauss-Legendre quadrature. Integration by parts lowers the differentiation order while retaining applicability to general non-self-adjoint, nonlinear, and inverse problems; the localized test functions turn the global residual into a set of element-wise weak residuals with favorable conditioning. On a suite of benchmarks spanning crack singularities, stress concentration, Neo-Hookean hyperelasticity, inverse parameter identification in heterogeneous media, and complex geometries, PG-KINN consistently outperforms legacy MLP baselines and state-of-the-art KAN-based strong/energy/inverse formulations (PIKAN). These results position the Petrov-Galerkin coupling of KAN trial spaces and polynomial test spaces as a robust and accurate route for AI-based computational mechanics.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-22T17:08:29Z",
+    "updated": "2026-07-22T17:08:29Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "math.NA"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20378v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20378v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "PG-KINN combines a KAN trial network with a Petrov-Galerkin weak formulation to improve PDE solving by reducing derivative order, improving conditioning, and supporting forward and inverse problems.",
+      "engineering_relevance": "This offers a more accurate and robust physics-informed surrogate for computational mechanics, especially for nonlinear, non-self-adjoint, and complex-geometry PDEs.",
+      "method": [
+        "KAN as the trial space with learnable spline activations",
+        "Independent compactly supported piecewise-polynomial test functions",
+        "Gauss-Legendre quadrature after integration by parts to form element-wise weak residuals"
+      ],
+      "evidence_signal": "The abstract reports consistent gains over MLP baselines and prior KAN variants across benchmarks including crack singularities, stress concentration, hyperelasticity, inverse identification, and complex geometries.",
+      "watch_item": "Performance depends on careful Petrov-Galerkin test-space design and quadrature setup, and the method may be more implementation-intensive than standard strong-form PINN training.",
+      "hashtags": [
+        "#PhysicsInformedML",
+        "#KolmogorovArnoldNetworks",
+        "#PetrovGalerkin",
+        "#PDEs",
+        "#ComputationalMechanics"
+      ],
+      "paper_id": "2026-07-22-arxiv-pg_kinn_a_physics_informed_petrov_galerkin_kolmogorov_arnold_network_for_solving_forward_a",
+      "paper_title": "PG-KINN: A Physics-Informed Petrov-Galerkin Kolmogorov-Arnold Network for Solving Forward and Inverse PDEs",
+      "paper_date": "2026-07-22",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-23T15:57:00",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-interval_and_fuzzy_physics_augmented_neural_networks_ipann_and_fpann_for_uncertainty_quant",
+    "arxiv_id": "2607.20339v1",
+    "date": "2026-07-22",
+    "title": "Interval and fuzzy physics-augmented neural networks (iPANN and fPANN) for uncertainty quantification and propagation in constitutive modeling",
+    "authors": "Somesh Pratap Singh, Govinda Anantha Padmanabha, Jingye Tan, Steven Yang, Reese E. Jones, D. Thomas Seidl",
+    "abstract": "Constitutive modeling under uncertainty remains a central challenge for reliable mechanics simulations, particularly when the available stress-deformation data are sparse, noisy, or heterogeneous. We propose interval and fuzzy physics-augmented neural networks (iPANNs and fPANNs) for uncertainty-aware hyperelastic constitutive modeling. iPANNs learn sparse lower, mean, and upper free energy density branches whose stresses, obtained by automatic differentiation, ultimately enclose noisy stress observations. In contrast to this deterministic interval description, fPANNs embed the learned iPANN branches into a fuzzy-set representation through alpha-cut interpolation, yielding a nested family of admissible responses. iPANNs and fPANNs encode mechanistic constraints - preserving objectivity, consistency and promoting polyconvexity - and smoothed L0 regularization promotes interpretable energy representations. The bound models are trained through a two-stage transfer-learning procedure in which a sparse mean constitutive response is learned first and then fine-tuned into lower and upper energy branches. We evaluate the framework on synthetic isotropic hyperelastic data with heteroscedastic noise, varying random realizations, shifted noise means, and varying noise magnitudes. The results show that the learned bounds enclose noisy stress observations while generalizing to the test set. Further, we examine the propagation of uncertainty through the mean, upper and lower bound predictions of the learned iPANN models in a finite element setting. The proposed framework provides a compact, physics-consistent route for distribution-free aleatoric uncertainty quantification in hyperelastic constitutive modeling, and propagation in downstream finite element simulations.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-22T16:26:59Z",
+    "updated": "2026-07-22T16:26:59Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20339v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20339v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "iPANNs and fPANNs learn physics-constrained lower/mean/upper hyperelastic energy bounds that quantify uncertainty while keeping predicted stresses consistent with noisy data.",
+      "engineering_relevance": "This provides a compact, distribution-free way to build constitutive models that are more reliable for finite element analysis when experimental stress-deformation data are sparse or noisy.",
+      "method": [
+        "Train a sparse mean free-energy network first, then fine-tune lower and upper branches via transfer learning.",
+        "Use automatic differentiation to convert learned energy branches into stress bounds that enclose observations.",
+        "Extend interval bounds to fuzzy uncertainty with alpha-cut interpolation, while enforcing objectivity, consistency, and polyconvexity."
+      ],
+      "evidence_signal": "The paper evaluates synthetic isotropic hyperelastic datasets with heteroscedastic noise, varying random realizations, shifted noise means, and different noise magnitudes, and reports that the learned bounds enclose noisy stress observations and generalize to test data.",
+      "watch_item": "The approach adds model and training complexity, and performance may depend on the quality of sparse data and the stability of the two-stage regularized optimization.",
+      "hashtags": [
+        "#PhysicsInformedAI",
+        "#UncertaintyQuantification",
+        "#ConstitutiveModeling",
+        "#FiniteElementAnalysis",
+        "#Hyperelasticity"
+      ],
+      "paper_id": "2026-07-22-arxiv-interval_and_fuzzy_physics_augmented_neural_networks_ipann_and_fpann_for_uncertainty_quant",
+      "paper_title": "Interval and fuzzy physics-augmented neural networks (iPANN and fPANN) for uncertainty quantification and propagation in constitutive modeling",
+      "paper_date": "2026-07-22",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-23T15:57:03",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-dqaoa_gpt_ai_accelerated_distributed_quantum_optimization_for_combinatorial_problems",
+    "arxiv_id": "2607.20225v1",
+    "date": "2026-07-22",
+    "title": "DQAOA-GPT: AI-Accelerated Distributed Quantum Optimization for Combinatorial Problems",
+    "authors": "Seongmin Kim, Abhinav Rijal, Yuri Alexeev, Nora Bauer, Martin Roetteler, Mina Yoon",
+    "abstract": "While combinatorial optimization problems are central to many scientific and engineering applications, their solution remains challenging due to exponentially large search spaces. Variational quantum algorithms offer a promising route for tackling such problems, yet their practical performance is limited by repeated quantum circuit evaluations and classical parameter updates. In this work, we introduce DQAOA-GPT, a hybrid framework that integrates the distributed quantum approximate optimization algorithm (DQAOA), which decomposes a large optimization problem into smaller sub-problems, with GPT-based quantum circuit generation for solving those sub-problems. Rather than relying on iterative variational optimization, the proposed approach uses a trained generative model to directly generate high-quality quantum circuits for the decomposed sub-problems. As a benchmark, we evaluate DQAOA-GPT against conventional DQAOA on dense HUBO optimization problems with up to 100 decision variables. The results demonstrate that DQAOA-GPT significantly reduces computational cost while maintaining competitive solution quality, with larger acceleration observed for larger sub-problem sizes. Although this work focuses on benchmark-scale validation, the framework provides a promising foundation for larger-scale combinatorial optimization in hybrid HPC-QC environments through increased GPU resources and parallel computing capability.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-22T14:46:33Z",
+    "updated": "2026-07-22T14:46:33Z",
+    "primary_category": "quant-ph",
+    "categories": [
+      "quant-ph",
+      "cs.AI",
+      "cs.DC",
+      "math.OC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20225v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20225v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "DQAOA-GPT replaces iterative variational tuning with GPT-generated quantum circuits for decomposed optimization subproblems, reducing cost while preserving competitive solution quality.",
+      "engineering_relevance": "The approach offers a practical hybrid HPC-quantum path for accelerating large combinatorial optimization workloads by parallelizing subproblem solving and cutting quantum-classical iteration overhead.",
+      "method": [
+        "Decompose a large HUBO optimization instance into smaller subproblems using DQAOA.",
+        "Use a trained GPT-based model to directly generate quantum circuits for each subproblem.",
+        "Benchmark against conventional DQAOA on dense HUBO problems up to 100 variables."
+      ],
+      "evidence_signal": "The abstract reports benchmarking on dense HUBO instances with up to 100 decision variables, showing significantly lower computational cost and competitive quality, with stronger speedups for larger subproblem sizes.",
+      "watch_item": "Results are benchmark-scale only, so real-world performance may depend on training quality, subproblem decomposition strategy, and available GPU/parallel resources.",
+      "hashtags": [
+        "#QuantumOptimization",
+        "#DQAOA",
+        "#GenerativeAI",
+        "#HPC",
+        "#CombinatorialOptimization"
+      ],
+      "paper_id": "2026-07-22-arxiv-dqaoa_gpt_ai_accelerated_distributed_quantum_optimization_for_combinatorial_problems",
+      "paper_title": "DQAOA-GPT: AI-Accelerated Distributed Quantum Optimization for Combinatorial Problems",
+      "paper_date": "2026-07-22",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-23T15:57:06",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-active_inference_as_a_convex_markov_decision_process",
+    "arxiv_id": "2607.20152v1",
+    "date": "2026-07-22",
+    "title": "Active Inference as a Convex Markov Decision Process",
+    "authors": "Nikola Milosevic, Nicolás Hinrichs, Nico Scherf",
+    "abstract": "Active Inference (AIF) frames adaptive behavior as the minimization of expected free energy (EFE), combining epistemic and pragmatic objectives within a single variational principle. We frame AIF as policy optimization and show that, for closed-loop control policies, EFE minimization can be formulated as a convex Markov decision process (MDP). In this formulation, the pragmatic terms are linear in the predictive state marginals and therefore equivalent to reward maximization in a latent MDP, while the epistemic value introduces a nonlinear component that distinguishes EFE minimization from standard reinforcement learning. This perspective further reveals the epistemic drive of active inference as a policy-dependent (performative) reward. We analyze finite-horizon, discounted, and average-reward formulations of EFE and derive a mirror descent (MD) algorithm that locally linearizes the objective around the current state marginals, yielding a policy-dependent reward that is compatible with actor-critic methods and dynamic programming. Finally, we argue that coupling world-model learning with policy optimization gives active inference the structure of performative reinforcement learning, providing a route toward grounding active inference within modern reinforcement learning and optimization theory, including convergence analysis and principled policy improvement guarantees.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-22T13:52:40Z",
+    "updated": "2026-07-22T13:52:40Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20152v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20152v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "The paper shows that active inference can be reformulated as a convex Markov decision process, where expected free energy decomposes into reward-like pragmatic terms plus a distinct nonlinear epistemic term.",
+      "engineering_relevance": "This reframing makes active inference more compatible with standard RL tooling such as actor-critic methods, dynamic programming, and convergence analysis.",
+      "method": [
+        "Recasts closed-loop active inference as policy optimization in a latent MDP.",
+        "Separates pragmatic value as linear reward terms from epistemic value as a nonlinear, policy-dependent component.",
+        "Derives a mirror descent update that locally linearizes expected free energy around current state marginals."
+      ],
+      "evidence_signal": "The contribution is primarily theoretical: the abstract reports formulation, derivation, and algorithmic analysis across finite-horizon, discounted, and average-reward settings rather than empirical benchmarking.",
+      "watch_item": "The mirror-descent linearization is local, so stability and performance may depend on how accurately the current marginals approximate the true objective during learning.",
+      "hashtags": [
+        "#ActiveInference",
+        "#ReinforcementLearning",
+        "#MarkovDecisionProcess",
+        "#MirrorDescent",
+        "#PerformativeRL"
+      ],
+      "paper_id": "2026-07-22-arxiv-active_inference_as_a_convex_markov_decision_process",
+      "paper_title": "Active Inference as a Convex Markov Decision Process",
+      "paper_date": "2026-07-22",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-23T15:57:08",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-pro_long_programmatic_memory_enables_long_horizon_reasoning",
+    "arxiv_id": "2607.20064v1",
+    "date": "2026-07-22",
+    "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+    "authors": "Alexis Fox, Junlin Wang, Paul Rosu, Bhuwan Dhingra",
+    "abstract": "Long-horizon tasks require sustained perception, reasoning, and exploration, and are a persistent challenge for large language model (LLM) agents. This gap is reflected in their limited performance on continual learning benchmarks such as ARC-AGI-3, especially when models are evaluated out of the box. Various agent harnesses have been proposed to close this gap, and each commits to a strategy for handling long sequences of observations, i.e., what information to save from the environment and how to load it into model context, a choice we argue is particularly consequential. Existing methods for context management face a significant tradeoff, as preserving more information makes retrieving relevant details less tractable. We propose PRO-LONG, a minimal context management framework built around programmatic memory for LLM agents in long-horizon, exploratory settings. PRO-LONG addresses the tradeoff by keeping a complete, structured interaction log and capitalizing on recent progress in coding agents to search this history efficiently. On the full ARC-AGI-3 public game set, PRO-LONG improves over a base coding agent by an average of 18.0 percentage points across frontier models, and matches or exceeds state-of-the-art specialized harnesses (up to 76.1% pass@1) while using 4.2-5.8x fewer tokens. With Fable 5, PRO-LONG achieves 97.4% best@2 at a total cost of \\$1,750. Relevant code and logs are available at https://github.com/alexisfox7/PRO-LONG.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-22T12:11:51Z",
+    "updated": "2026-07-22T12:11:51Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20064v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20064v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "PRO-LONG shows that keeping a complete structured interaction log and searching it programmatically can substantially improve long-horizon LLM agent performance without bloating context.",
+      "engineering_relevance": "For agent builders, the paper suggests a practical memory-management design that can raise accuracy while reducing token use, making long-horizon systems more efficient and scalable.",
+      "method": [
+        "Store every interaction in a complete structured history instead of pruning aggressively.",
+        "Use coding-agent-style search over the log to retrieve only relevant details into context.",
+        "Optimize context management as a memory-plus-retrieval problem for exploratory tasks."
+      ],
+      "evidence_signal": "On the full ARC-AGI-3 public game set, PRO-LONG improved a base coding agent by 18.0 percentage points on average across frontier models and reached up to 76.1% pass@1 with 4.2–5.8x fewer tokens.",
+      "watch_item": "Performance depends on effective history search and log structure, so weaker retrieval or poorly organized traces could reduce the gains in more complex deployments.",
+      "hashtags": [
+        "#LLMAgents",
+        "#MemoryManagement",
+        "#LongHorizonReasoning",
+        "#ARCAGI3",
+        "#ContextOptimization"
+      ],
+      "paper_id": "2026-07-22-arxiv-pro_long_programmatic_memory_enables_long_horizon_reasoning",
+      "paper_title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+      "paper_date": "2026-07-22",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-23T15:57:11",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-oledlm_a_unified_language_model_for_oled_molecular_design",
+    "arxiv_id": "2607.20194v1",
+    "date": "2026-07-22",
+    "title": "OLEDLM: A Unified Language Model for OLED Molecular Design",
+    "authors": "Fukang Wen, Yuchong Tang, Jingyuan Li, Beichen Wang, Yixuan Jiang, Xiaoyi Jiang",
+    "abstract": "The development of organic light-emitting diode (OLED) materials faces the compounded challenges of an astronomically large chemical space, stringent quantum-chemical constraints, and a scarcity of labeled data. Although the question of OLED generation is important, few models have been trained effectively for this specific domain. We propose an inverse molecular design framework based on causal language models: given target optoelectronic properties (e.g., excitation energy, oscillator strength), our model directly generates OLED SMILES sequences satisfying the specified constraints. We employ a multi-stage strategy: first, we establish a foundational chemical language model using a LLaMA-style transformer architecture. To the best of our knowledge, this represents the first successful adaptation of LLMs specifically for the OLED domain, bridging the gap between generic molecular generation and the stringent structural requirements of optoelectronic materials. Second, we fine-tune property predictors based on a BERT model pre-trained on our large-scale OLED dataset. Then, we perform Reinforcement Learning on our fine-tuned model, leveraging our property predictor, for better SMILES generation. Finally, through DFT verification, we demonstrate that our framework can efficiently navigate the OLED chemical space, generating novel candidates with high structural validity and optimized optoelectronic properties.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-22T14:16:54Z",
+    "updated": "2026-07-22T14:16:54Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20194v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20194v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "OLEDLM unifies pretrained language modeling, property prediction, and reinforcement learning to generate valid OLED molecules directly from target optoelectronic constraints.",
+      "engineering_relevance": "The framework offers a practical inverse-design pipeline for accelerating discovery of OLED materials in a huge, label-scarce chemical space.",
+      "method": [
+        "Build a LLaMA-style causal language model on a large OLED dataset to learn chemical sequence generation.",
+        "Fine-tune a BERT-based property predictor for optoelectronic targets such as excitation energy and oscillator strength.",
+        "Apply reinforcement learning guided by the predictor, then verify promising candidates with DFT."
+      ],
+      "evidence_signal": "The abstract reports successful DFT verification showing the model can generate novel, structurally valid OLED candidates with optimized optoelectronic properties.",
+      "watch_item": "Performance likely depends strongly on the quality and bias of the property predictor and DFT validation, so generalization beyond the training chemical space remains a concern.",
+      "hashtags": [
+        "#OLED",
+        "#MolecularDesign",
+        "#LanguageModel",
+        "#ReinforcementLearning",
+        "#ComputationalChemistry"
+      ],
+      "paper_id": "2026-07-22-arxiv-oledlm_a_unified_language_model_for_oled_molecular_design",
+      "paper_title": "OLEDLM: A Unified Language Model for OLED Molecular Design",
+      "paper_date": "2026-07-22",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-23T15:57:14",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-potre_test_time_reasoning_inspired_by_cognitive_heterogeneity",
+    "arxiv_id": "2607.20268v1",
+    "date": "2026-07-22",
+    "title": "PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity",
+    "authors": "Anmol Kankariya, Sercan Ö. Arık",
+    "abstract": "While Large Language Models (LLMs) excel at many tasks, they frequently struggle with complex reasoning that requires long-horizon planning and iterative error correction. Furthermore, standard single-stream prompting proves brittle when models encounter novel abstractions or rigorous domain constraints. We introduce PoTRE (Poly-Topological Reasoning Ensembles), a heterogeneous framework that decouples inference into four agents: (1) Adversarial Refinement Agent, (2) Hierarchical strategic Planning Agent, (3) Spectrum Search Agent, and (4) Direct Chain Agent. A final Task-Adaptive Aggregation Layer dynamically reconciles these perspectives -- via final candidate selection, semantic synthesis, or neuro-symbolic verification -- to produce a robust global solution. We evaluate PoTRE on three frontier benchmarks: ARC-AGI-2, Humanity's Last Exam (HLE), and PRBench Finance. PoTRE achieves state-of-the-art accuracy of 49.92% on HLE, surpassing the previous best official score. We demonstrate that this architectural heterogeneity achieves improved reasoning performance using similar or fewer inference tokens compared to heavily scaled homogeneous baselines.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-22T15:20:53Z",
+    "updated": "2026-07-22T15:20:53Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20268v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20268v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "PoTRE improves complex test-time reasoning by routing the same problem through four complementary agent styles and then adaptively merging their outputs.",
+      "engineering_relevance": "The paper suggests that heterogeneous inference ensembles can boost reasoning accuracy without simply scaling model size or token budget, making them attractive for practical deployment.",
+      "method": [
+        "Adversarial Refinement Agent: iteratively stresses and repairs candidate solutions",
+        "Hierarchical Strategic Planning Agent: decomposes the task into structured subgoals",
+        "Spectrum Search Agent + Direct Chain Agent: explore diverse solution paths from broad search to direct reasoning",
+        "Task-Adaptive Aggregation Layer: selects, synthesizes, or verifies the final answer"
+      ],
+      "evidence_signal": "Evaluated on ARC-AGI-2, Humanity's Last Exam, and PRBench Finance, with a reported state-of-the-art 49.92% on HLE.",
+      "watch_item": "The added system complexity and final aggregation/verification logic may be harder to implement reliably and could introduce overhead or failure modes when agent outputs disagree strongly.",
+      "hashtags": [
+        "#LLMReasoning",
+        "#TestTimeCompute",
+        "#Ensembles",
+        "#AIResearch",
+        "#Benchmarking"
+      ],
+      "paper_id": "2026-07-22-arxiv-potre_test_time_reasoning_inspired_by_cognitive_heterogeneity",
+      "paper_title": "PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity",
+      "paper_date": "2026-07-22",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-23T15:57:17",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-dynamical_and_optimization_trade_offs_of_levi_civita_coordinates_for_learned_close_encount",
+    "arxiv_id": "2607.20235v1",
+    "date": "2026-07-22",
+    "title": "Dynamical and Optimization Trade-offs of Levi--Civita Coordinates for Learned Close-Encounter Dynamics",
+    "authors": "Abhishek Shankar",
+    "abstract": "Classical regularization removes the binary-collision singularity from the Kepler problem, but its value as a representation for learned Hamiltonian dynamics has not been systematically isolated. We compare Cartesian and planar Levi--Civita formulations of a perturbed Kepler system with a smooth quadrupole potential. With the perturbation supplied analytically, a Levi--Civita Hamiltonian splitting holds the maximum relative energy error near $2.1\\times10^{-5}$ through eccentricity $e=0.99$, while the Cartesian splitting becomes unstable. This advantage persists at matched physical horizon and force-evaluation budget, where the regularized baseline is $3\\times10^{-5}$, about $4.7$--$8.3$ orders of magnitude below the Cartesian arm depending on eccentricity. In held-out high-eccentricity tests with matched sampling, regularized models produce finite rollouts in $40/40$ runs versus $0/40$ for Cartesian. However, the fixed-shell construction supplies the regularized model with the exact initial orbit energy, and survival still carries $\\mathcal{O}(1)$ energy error. Four neural residual objectives fail to approach the analytic result. Exact-feature controls show that the regularized residual is a four-monomial degree-6 polynomial that a direct least-squares solve fits to the baseline. The remaining exact-feature gap is due to severe raw-basis ill-conditioning: orthogonalization restores baseline fitting for L-BFGS in two iterations. Small MLPs remain at $\\mathcal{O}(1)$ rollout error even after gauge symmetrization. Levi--Civita coordinates therefore improve dynamical conditioning while worsening raw-basis optimization conditioning; accurate neural residual learning remains unresolved. This is a controlled falsification-plus-trade-off study, not a solution to learned close-encounter dynamics.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-22T14:56:15Z",
+    "updated": "2026-07-22T14:56:15Z",
+    "primary_category": "physics.comp-ph",
+    "categories": [
+      "physics.comp-ph",
+      "astro-ph.EP",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20235v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20235v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "Levi--Civita coordinates stabilize close-encounter orbital dynamics dramatically better than Cartesian coordinates, but they make neural residual learning harder in raw feature space.",
+      "engineering_relevance": "For high-eccentricity Hamiltonian simulation, regularization can greatly improve rollout robustness and energy conservation, yet the coordinate choice can create optimization bottlenecks for learned models.",
+      "method": [
+        "Compared Cartesian vs. planar Levi--Civita formulations on a perturbed Kepler system with an analytic quadrupole potential.",
+        "Evaluated Hamiltonian splitting, matched physical horizon/force budget, held-out high-eccentricity rollouts, and neural residual fitting.",
+        "Used exact-feature controls, least-squares fits, and orthogonalization to isolate dynamical versus optimization effects."
+      ],
+      "evidence_signal": "At eccentricities up to 0.99, Levi--Civita kept max relative energy error near 2.1×10^-5 and produced 40/40 finite high-eccentricity rollouts, while Cartesian became unstable and failed all 40/40 tests.",
+      "watch_item": "The regularized setup supplies exact initial orbit energy and still leaves O(1) residual error in surviving neural rollouts, so the result is a conditioning trade-off rather than a solved learning pipeline.",
+      "hashtags": [
+        "#HamiltonianDynamics",
+        "#LeviCivita",
+        "#ScientificML",
+        "#OrbitalSimulation",
+        "#NumericalMethods"
+      ],
+      "paper_id": "2026-07-22-arxiv-dynamical_and_optimization_trade_offs_of_levi_civita_coordinates_for_learned_close_encount",
+      "paper_title": "Dynamical and Optimization Trade-offs of Levi--Civita Coordinates for Learned Close-Encounter Dynamics",
+      "paper_date": "2026-07-22",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-23T15:57:20",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-slai_t_rex_full_parameter_post_training_of_the_deepseek_v4_family_on_ascend_superpod",
+    "arxiv_id": "2607.20145v1",
+    "date": "2026-07-22",
+    "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+    "authors": "Dongfang Li, Xiaodong Luo, Ruoyu Sun, Xuhui Chen, Linyuan Qiu, Jian Meng",
+    "abstract": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication overhead, and inefficient kernel execution. While most large-scale LLM training systems are built around GPU-based clusters, this report presents an end-to-end optimization practice on the Ascend NPU SuperPOD. Using the DeepSeek-V4 model family as the target workload, we develop a hierarchical optimization framework spanning model-level parallelism, computation-communication orchestration, and low-level kernel execution. The resulting system achieves 34.22% Model FLOPs Utilization (MFU) with a 2.93x improvement over the open-source baseline recipe while maintaining training stability. Building on this optimized infrastructure, we further establish a CPT and SFT workflow for complex Operations Research (OR) tasks. We refer to the integrated framework as SLAI T-Rex. Using DeepSeek-V4-Flash, we develop OR-oriented CPT and SFT data pipelines that combine collected domain resources with solver-verified synthetic optimization documents. The resulting dataset contains 10K high-quality SFT samples spanning four task categories and three problem representations. The specialized model achieves the highest average zero-shot Pass@1 score among the evaluated models, reaching 71.81% and outperforming GPT-5.4-Mini and the base DeepSeek-V4-Flash model by 3.98 and 11.27 percentage points, respectively. Overall, this work demonstrates a full-stack pathway from efficient trillion-parameter model post-training on Ascend infra to domain-specialized Flash models for solver-grounded mathematical modeling, advancing frontier-model systems for complex reasoning.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-22T13:49:17Z",
+    "updated": "2026-07-22T13:49:17Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20145v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20145v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "SLAI T-Rex shows that trillion-parameter post-training on Ascend SuperPOD can be made practical through joint optimization of parallelism, communication, and kernel execution, then reused to build a domain-specialized OR model.",
+      "engineering_relevance": "The paper is relevant because it demonstrates an end-to-end pathway for adapting GPU-era large-model training ideas to NPU supercomputers while preserving training stability and improving throughput.",
+      "method": [
+        "Hierarchical optimization across model parallelism, computation-communication scheduling, and kernel execution",
+        "Post-training DeepSeek-V4 family on Ascend SuperPOD with full-parameter optimization",
+        "Build CPT and SFT pipelines for OR tasks using collected resources plus solver-verified synthetic data"
+      ],
+      "evidence_signal": "The optimized system reaches 34.22% MFU with a 2.93× improvement over the open-source baseline, and the specialized model attains 71.81% average zero-shot Pass@1 on evaluated OR tasks.",
+      "watch_item": "Results are tightly coupled to the Ascend NPU stack and DeepSeek-V4 family, so portability to other hardware or model families may require substantial re-tuning.",
+      "hashtags": [
+        "#LargeScaleTraining",
+        "#MoE",
+        "#AscendNPU",
+        "#PostTraining",
+        "#OperationsResearch"
+      ],
+      "paper_id": "2026-07-22-arxiv-slai_t_rex_full_parameter_post_training_of_the_deepseek_v4_family_on_ascend_superpod",
+      "paper_title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+      "paper_date": "2026-07-22",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-23T15:57:23",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-fmrp_lean_a_hipaa_compliant_ai_augmented_lims_architecture_for_end_to_end_clinical_assay_w",
+    "arxiv_id": "2607.20382v1",
+    "date": "2026-07-22",
+    "title": "FMRP-LEAN: A HIPAA-Compliant AI-Augmented LIMS Architecture for End-to-End Clinical Assay Workflow Optimization",
+    "authors": "Eva McCord, Ernest Pedapati, Zag ElSayed",
+    "abstract": "Clinical biomarker workflows in translational research settings often rely on spreadsheet-driven tracking, manual quality control (QC) reconciliation, and loosely integrated systems, resulting in limited state visibility, delayed reporting, and increased operational risk. These challenges are particularly pronounced in multi-day assays such as Luminex-based quantification of Fragile X Messenger Ribonucleoprotein (FMRP), where HIPAA-compliant data governance, deterministic workflow progression, and coordinated communication across laboratory and clinical teams are required. This paper presents FMRP-LEAN, a HIPAA-compliant, AI-augmented Laboratory Information Management System (LIMS) architecture that formalizes biospecimen lifecycle management through a finite-state workflow model with explicit transition guards and dwell-time observability. The system integrates a self-hosted Supabase/PostgreSQL stack deployed within hospital-controlled infrastructure, hybrid edge-internal isolation with encrypted tunneling and loopback-only services, and bi-directional REDCap synchronization. A unified MRN-UUIDv7 identifier framework with QR-based tracking ensures traceable clinical-research linkage under PHI residency constraints. FMRP-LEAN incorporates automated statistical QC pre-screening and a governance-constrained AI operations module that operates exclusively on aggregate projections, with deterministic fallback guarantees. Deployment demonstrates improved workflow observability, reduced QC latency, and enhanced cross-role transparency between laboratory technicians, research coordinators, and patient-facing teams. The architecture provides a reproducible model for secure, state-explicit, and AI-augmented clinical research workflows in regulated healthcare environments.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-07-22T17:11:52Z",
+    "updated": "2026-07-22T17:11:52Z",
+    "primary_category": "cs.HC",
+    "categories": [
+      "cs.HC",
+      "cs.AI",
+      "cs.ET",
+      "physics.med-ph",
+      "q-bio.NC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20382v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20382v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "FMRP-LEAN turns a manually tracked clinical assay workflow into a state-explicit, HIPAA-compliant LIMS with AI support, improving visibility and coordination across the full biospecimen lifecycle.",
+      "engineering_relevance": "The architecture shows how regulated translational labs can combine finite-state workflow control, secure data residency, and interoperable systems to reduce operational risk in multi-day assays.",
+      "method": [
+        "Finite-state workflow model with explicit transition guards and dwell-time tracking",
+        "Self-hosted Supabase/PostgreSQL stack inside hospital-controlled infrastructure with encrypted tunneling and loopback-only services",
+        "Bi-directional REDCap sync plus MRN-UUIDv7 and QR-based specimen tracking"
+      ],
+      "evidence_signal": "The abstract reports improved workflow observability, reduced QC latency, and greater cross-role transparency after deployment.",
+      "watch_item": "The AI module is constrained to aggregate projections and deterministic fallbacks, so real-world benefit may depend on careful validation of governance, interoperability, and staff adoption.",
+      "hashtags": [
+        "#LIMS",
+        "#HIPAA",
+        "#ClinicalWorkflow",
+        "#AIinHealthcare",
+        "#Bioinformatics"
+      ],
+      "paper_id": "2026-07-22-arxiv-fmrp_lean_a_hipaa_compliant_ai_augmented_lims_architecture_for_end_to_end_clinical_assay_w",
+      "paper_title": "FMRP-LEAN: A HIPAA-Compliant AI-Augmented LIMS Architecture for End-to-End Clinical Assay Workflow Optimization",
+      "paper_date": "2026-07-22",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-07-23T15:57:25",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-non_negative_matrix_factorization_using_the_textit_r_package_textsf_nnmf",
+    "arxiv_id": "2607.20084v1",
+    "date": "2026-07-22",
+    "title": "Non--negative matrix factorization using the \\textit{R} package \\textsf{nnmf}",
+    "authors": "Volkan Sevinç, Nikolas Kontemeniotis, Theodoros Perdikis, Michail Tsagris",
+    "abstract": "Non--negative matrix factorization (NMF) has become an established dimensionality reduction technique for extracting latent structures from non--negative data and has found widespread applications in fields such as bioinformatics, text mining, image analysis, and recommender systems. As the popularity of NMF has increased, numerous \\textit{R} packages implementing different optimization strategies and computational frameworks have been developed. Despite their widespread availability, comprehensive evaluations of these implementations under real--world data conditions remain limited. Consequently, researchers often lack objective guidance when selecting an appropriate package for practical applications. This study introduces a new \\textit{R} package for NMF and offers asystematic performance comparison with two widely available \\textit{R} packages for NMF analysis. Rather than relying on simulated datasets, the evaluation is conducted using real--world data to better reflect the complexity, heterogeneity, and noise characteristics encountered in practical analytical settings. The packages are assessed using a consistent experimental framework, with emphasis on computational efficiency, convergence behavior, reconstruction accuracy, memory utilization, and the stability of the resulting matrix factorization.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-22T12:35:52Z",
+    "updated": "2026-07-22T12:35:52Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20084v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20084v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "The paper introduces a new R package for non-negative matrix factorization and benchmarks it against two existing R implementations using real-world data.",
+      "engineering_relevance": "It helps practitioners choose an NMF package based on practical tradeoffs in speed, convergence, accuracy, memory use, and factorization stability.",
+      "method": [
+        "Built a new R package for NMF analysis.",
+        "Compared it with two widely used R NMF packages under a common experimental setup.",
+        "Evaluated computational efficiency, convergence behavior, reconstruction accuracy, memory usage, and stability."
+      ],
+      "evidence_signal": "The comparison uses real-world datasets rather than simulations to better capture noise, heterogeneity, and practical complexity.",
+      "watch_item": "Results may depend on dataset characteristics and implementation details, so package choice should still be validated on the target application.",
+      "hashtags": [
+        "#NonNegativeMatrixFactorization",
+        "#RPackage",
+        "#Benchmarking",
+        "#MachineLearning",
+        "#DataScience"
+      ],
+      "paper_id": "2026-07-22-arxiv-non_negative_matrix_factorization_using_the_textit_r_package_textsf_nnmf",
+      "paper_title": "Non--negative matrix factorization using the \\textit{R} package \\textsf{nnmf}",
+      "paper_date": "2026-07-22",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-23T15:57:27",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-antigen_specific_antibody_multi_modal_foundation_model_for_functional_antibody_design",
+    "arxiv_id": "2607.20057v1",
+    "date": "2026-07-22",
+    "title": "Antigen-specific Antibody Multi-modal Foundation Model for Functional Antibody Design",
+    "authors": "Xiaoliang Shi, Zichen Wang, Runze Ma, Zhongyue Zhang, Shuangjia Zheng",
+    "abstract": "Antibodies are essential proteins that play a central role in immune recognition by binding specific antigen molecules. Although recent protein language models have enabled progress in single-chain protein modeling and generation, they often fall short in antigen-specific antibody design, where effective modeling requires explicit pairing between antibody and antigen, particularly at the epitope level. To address these limitations, we introduce AAMFM, an Antigen-specific Antibody Multimodal Foundation Model that learns unified representations of antibody sequences and structures conditioned on antigen context. AAMFM incorporates rich antigen information including geometric interfaces and epitope annotations via a cross-modal adapter, enabling joint modeling of antibody-antigen interactions in a shared latent space. To further guide the model toward functional relevance, we fine-tune AAMFM using Calibrated Direct Preference Optimization (Cal-DPO), leveraging preference signals extracted from a strong structural prior to align learning with binding-specific objectives. Extensive experiments demonstrate that AAMFM achieves state-of-the-art performance in functional antibody design, revealing its potential for antigen-specific antibody engineering. Our code is available at https://github.com/XL-S224/AAMFM.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-22T11:59:38Z",
+    "updated": "2026-07-22T11:59:38Z",
+    "primary_category": "q-bio.BM",
+    "categories": [
+      "q-bio.BM",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20057v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20057v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "AAMFM is a multimodal foundation model that learns antibody sequence-structure representations conditioned on antigen context, with explicit epitope-aware interaction modeling for functional antibody design.",
+      "engineering_relevance": "The method provides a practical route to design antibodies targeted to specific antigens, which can improve hit generation and reduce trial-and-error in therapeutic discovery pipelines.",
+      "method": [
+        "Encodes antibody sequences and structures in a shared latent space.",
+        "Injects antigen geometry and epitope annotations through a cross-modal adapter.",
+        "Fine-tunes with Calibrated Direct Preference Optimization (Cal-DPO) using structural preference signals."
+      ],
+      "evidence_signal": "The abstract reports extensive experiments showing state-of-the-art performance in functional antibody design across antigen-specific evaluation settings.",
+      "watch_item": "Performance likely depends on the quality of antigen geometry, epitope annotations, and the strength of the structural prior used to generate preference signals.",
+      "hashtags": [
+        "#AntibodyDesign",
+        "#FoundationModel",
+        "#ProteinEngineering",
+        "#MultimodalAI",
+        "#DrugDiscovery"
+      ],
+      "paper_id": "2026-07-22-arxiv-antigen_specific_antibody_multi_modal_foundation_model_for_functional_antibody_design",
+      "paper_title": "Antigen-specific Antibody Multi-modal Foundation Model for Functional Antibody Design",
+      "paper_date": "2026-07-22",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-23T15:57:30",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-the_blessing_of_dimensionality_how_near_orthogonality_in_high_dimensional_spaces_explains",
+    "arxiv_id": "2607.20301v1",
+    "date": "2026-07-22",
+    "title": "The Blessing of Dimensionality: How Near-Orthogonality in High-Dimensional Spaces Explains Temporal Portability",
+    "authors": "Abigail Woodring, Adrian Chan, Rana Muhammad Shahroz Khan, Sukwon Yun, Chau-Wai Wong, Tianlong Chen",
+    "abstract": "Fine-tuning has been widely used to adapt large language models (LLMs) for domain-specific tasks. Parameter efficient fine-tuning (PEFT) methods such as low-rank adaptation (LoRA) are frequently used to reduce computational costs. PortLLM is a training-free and data-free scheme used to adapt LLMs after continual pretraining. Although the initial PortLLM results show that LoRA patches exhibit short-term temporal portability, the long-term performance of PortLLM across several updates of continual pretraining remains underexplored. Furthermore, the intriguing effectiveness of PortLLM is not well understood from a theoretical standpoint. We address these two open questions by (1) performing an extensive empirical study of the long-term temporal portability of PortLLM patches across 10 continual pretraining steps using base models Mistral, Gemma, and Qwen; and (2) offering two theoretical analyses to explain our observation that the simple PortLLM method achieves competitive performance. We find empirically that the portability persists across longer time duration, indicating that repeated fine-tuning is not required when the base model is periodically updated. We find theoretically that near-orthogonality of high-dimensional vectors is a key justification for temporal portability. Our analyses also demonstrate a geometric perspective of the loss landscape in facilitating the theoretical comparison of different adaptation options.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-22T15:48:39Z",
+    "updated": "2026-07-22T15:48:39Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20301v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20301v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "PortLLM patches remain temporally portable across multiple continual pretraining updates, and this persistence can be explained by near-orthogonality in high-dimensional spaces.",
+      "engineering_relevance": "This suggests teams can periodically update base LLMs without repeatedly re-finetuning downstream PEFT patches, reducing adaptation cost and maintenance overhead.",
+      "method": [
+        "Empirically test PortLLM patch portability across 10 continual pretraining steps",
+        "Evaluate multiple base models: Mistral, Gemma, and Qwen",
+        "Use theoretical analyses to connect portability with high-dimensional geometry and loss landscape structure"
+      ],
+      "evidence_signal": "The abstract reports an extensive long-term study over 10 continual pretraining steps showing portability persists beyond short-term updates.",
+      "watch_item": "The results are tied to specific base models and continual-pretraining settings, so portability may not transfer unchanged to other architectures or update regimes.",
+      "hashtags": [
+        "#LLM",
+        "#PEFT",
+        "#LoRA",
+        "#ContinualPretraining",
+        "#HighDimensionalGeometry"
+      ],
+      "paper_id": "2026-07-22-arxiv-the_blessing_of_dimensionality_how_near_orthogonality_in_high_dimensional_spaces_explains",
+      "paper_title": "The Blessing of Dimensionality: How Near-Orthogonality in High-Dimensional Spaces Explains Temporal Portability",
+      "paper_date": "2026-07-22",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-23T15:57:32",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-pier_physics_informed_environmental_retrieval_for_time_series_modeling",
+    "arxiv_id": "2607.20230v1",
+    "date": "2026-07-22",
+    "title": "PIER: Physics-Informed Environmental Retrieval for Time-Series Modeling",
+    "authors": "Shiyuan Luo, Runlong Yu, Chonghao Qiu, Yue Qin, Rahul Ghosh, Robert Ladwig",
+    "abstract": "Accurate modeling of environmental systems is fundamental to scientific understanding and decision-making, yet remains challenging because observations are limited and physical dynamics vary across systems. Retrieval-augmented approaches offer a natural path to transfer knowledge across systems, but standard embedding-based retrieval does not guarantee consistency of underlying physical processes, since scenarios with similar embeddings may arise from different underlying mechanisms. We propose Physics-Informed Environmental Retrieval (PIER), a model-agnostic framework that augments embedding-based retrieval with a physics-aware stream that scores candidates by flux-response consistency with the target, using local verifiers trained on physics-derived flux features. A weight adjustment mechanism then learns per-scenario weights that adaptively balance the two retrieval streams based on diagnostic features summarizing physics-stream reliability. Experiments on 356 lakes across the Midwestern United States spanning 41 years show that PIER consistently outperforms baselines for water temperature and dissolved oxygen prediction, and serves as a general augmentation strategy across diverse backbones.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-22T14:49:10Z",
+    "updated": "2026-07-22T14:49:10Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20230v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20230v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "PIER improves time-series environmental prediction by combining standard embedding retrieval with a physics-aware retrieval stream that checks whether candidate systems have matching flux-response behavior.",
+      "engineering_relevance": "The framework is model-agnostic, so it can be added to many forecasting backbones to transfer knowledge across environmental systems while preserving physical consistency.",
+      "method": [
+        "Retrieve similar scenarios using embedding similarity.",
+        "Score candidates with local physics verifiers built from flux-derived features.",
+        "Learn adaptive per-scenario weights to balance embedding and physics streams."
+      ],
+      "evidence_signal": "The paper reports experiments on 356 lakes across 41 years in the Midwestern United States, showing consistent gains for water temperature and dissolved oxygen prediction.",
+      "watch_item": "The physics-aware stream depends on reliable flux-derived features and trained local verifiers, which may be sensitive to feature quality and domain-specific setup.",
+      "hashtags": [
+        "#PhysicsInformedAI",
+        "#EnvironmentalModeling",
+        "#RetrievalAugmentation",
+        "#TimeSeriesForecasting",
+        "#ScientificML"
+      ],
+      "paper_id": "2026-07-22-arxiv-pier_physics_informed_environmental_retrieval_for_time_series_modeling",
+      "paper_title": "PIER: Physics-Informed Environmental Retrieval for Time-Series Modeling",
+      "paper_date": "2026-07-22",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-23T15:57:34",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-small_free_and_effective_orchestrating_open_weight_small_language_models_to_outperform_sin",
+    "arxiv_id": "2607.20216v1",
+    "date": "2026-07-22",
+    "title": "Small, Free, and Effective: Orchestrating Open-Weight Small Language Models to Outperform Single LLM for Malware Analysis",
+    "authors": "Adel ElZemity, Shujun Li, Budi Arief",
+    "abstract": "Malware analysis demands rapid interpretation of complex detonation reports spanning filesystem, network, and process behaviours. While large language models (LLMs) demonstrate impressive capabilities for technical artifact interpretation, the opacity and escalating API costs of closed-weight frontier models motivate exploration of open-weight alternatives. However, many open-weight models are large, demanding significant compute resources and incurring non-trivial hosting costs that place them beyond reach for resource-constrained deployments. This paper investigates whether orchestrated ensembles of small language models (SLMs) can match or exceed single LLM performance on structured questions about malware detonation reports. We established baselines by testing eleven open-weight SLMs, three cyber security pre-trained models, and six frontier LLMs on Meta's CyberSecEval Malware Analysis benchmark. We then designed and evaluated four orchestration architectures: (i) a multi-agent pipeline that decomposes analysis into structured evidence-collection and reasoning stages, (ii) an adversarial debate framework in which two agents iteratively critique each other's reasoning, (iii) a hierarchical consultation system that pairs a general-purpose SLM with a cyber-specialised expert model, and (iv) a hybrid architecture that combines evidence-grounded pipelines with adversarial debate reasoning. The hybrid system (Qwen3-4B with Foundation-Sec-8B) achieved 35.30% overall accuracy, exceeding the strongest cyber-specialised baseline (22.54%) and the strongest ungrounded frontier baseline (34.77%); when given the same evidence pipeline, grounded Gemini remained the strongest configuration at 38.22%. These findings show that evidence-grounded orchestration can substantially improve the performance of collaborative SLMs for supporting interpretation of malware detonation reports.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-22T14:36:10Z",
+    "updated": "2026-07-22T14:36:10Z",
+    "primary_category": "cs.CR",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20216v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20216v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Orchestrating small, open-weight language models with evidence-grounded workflows can outperform single-model baselines for malware detonation report analysis.",
+      "engineering_relevance": "This suggests practical, lower-cost malware triage systems can be built with deployable small models instead of relying on expensive closed frontier LLMs.",
+      "method": [
+        "Benchmarked 11 open-weight SLMs, 3 cyber-security pre-trained models, and 6 frontier LLMs on the CyberSecEval Malware Analysis benchmark.",
+        "Compared four orchestration designs: multi-agent evidence collection, adversarial debate, hierarchical consultation, and a hybrid grounded-plus-debate system.",
+        "Evaluated accuracy on structured questions about filesystem, network, and process behaviors from malware detonation reports."
+      ],
+      "evidence_signal": "The hybrid Qwen3-4B + Foundation-Sec-8B system reached 35.30% accuracy, beating the strongest cyber-specialized baseline (22.54%) and the strongest ungrounded frontier baseline (34.77%), while grounded Gemini achieved 38.22% with the same evidence pipeline.",
+      "watch_item": "Results depend on benchmark quality and evidence-pipeline design, so deployment may be sensitive to report formatting, orchestration overhead, and domain shift.",
+      "hashtags": [
+        "#MalwareAnalysis",
+        "#SmallLanguageModels",
+        "#OpenWeightAI",
+        "#CyberSecurity",
+        "#LLMOrchestration"
+      ],
+      "paper_id": "2026-07-22-arxiv-small_free_and_effective_orchestrating_open_weight_small_language_models_to_outperform_sin",
+      "paper_title": "Small, Free, and Effective: Orchestrating Open-Weight Small Language Models to Outperform Single LLM for Malware Analysis",
+      "paper_date": "2026-07-22",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-23T15:57:37",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-statistical_inference_for_rank_allocation_in_low_rank_adaptation",
+    "arxiv_id": "2607.20205v1",
+    "date": "2026-07-22",
+    "title": "Statistical Inference for Rank Allocation in Low-Rank Adaptation",
+    "authors": "Yihang Gao, Vincent Y. F. Tan",
+    "abstract": "Low-rank adaptation (LoRA) has become a widely used parameter-efficient fine-tuning method for large language models. Since different modules and layers may contribute unequally to downstream adaptation, allocating rank resources under a fixed parameter budget is an important problem for balancing efficiency, expressiveness, and generalization. Existing adaptive rank methods address this problem mainly through carefully designed importance scores constructed from gradient-derived sensitivity and uncertainty measures, without an explicit statistical interpretation. In this paper, we formulate LoRA rank allocation as a statistical hypothesis testing problem and propose StatLoRA, a statistical inference-based rank allocation method. StatLoRA associates each LoRA component with a test statistic and uses estimated p-values to determine which components should be retained or pruned under a prescribed rank budget. The proposed testing procedure is supported by our central limit theory for stochastic optimizer trajectories. In particular, we establish asymptotic normality for a broad class of commonly used optimizers in deep learning, including AdamW, and derive the corresponding asymptotic distributions for the proposed component scores used in hypothesis testing. We evaluate StatLoRA on LoRA fine-tuning of DeBERTaV3-base, BART-Large, and Qwen2.5-7B across natural language understanding, natural language generation, and question answering tasks. Experiments show that StatLoRA achieves comparable or better performance than vanilla LoRA, AdaLoRA, and IGU-LoRA under matched rank budgets. Sensitivity analyses and empirical diagnostics further support the stability of the proposed hypothesis-testing-based allocation rule and provide empirical evidence for the asymptotic theory of component scores.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-07-22T14:25:59Z",
+    "updated": "2026-07-22T14:25:59Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "math.ST"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20205v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20205v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "StatLoRA reframes LoRA rank allocation as hypothesis testing, using p-values to keep the most statistically significant components under a fixed rank budget.",
+      "engineering_relevance": "It offers a principled way to distribute limited adaptation capacity across layers and modules, improving parameter efficiency without relying only on heuristic importance scores.",
+      "method": [
+        "Model each LoRA component with a test statistic derived from optimizer-trajectories theory.",
+        "Estimate p-values from asymptotic distributions to decide retain vs. prune under a rank budget.",
+        "Use central limit theory to justify the testing procedure for optimizers including AdamW."
+      ],
+      "evidence_signal": "The method was evaluated on LoRA fine-tuning of DeBERTaV3-base, BART-Large, and Qwen2.5-7B across NLU, NLG, and QA tasks, where it matched or outperformed vanilla LoRA, AdaLoRA, and IGU-LoRA at comparable rank budgets.",
+      "watch_item": "The approach depends on asymptotic normality and empirical p-value estimates, so performance may be sensitive to finite-sample effects and implementation details of optimizer dynamics.",
+      "hashtags": [
+        "#LoRA",
+        "#RankAllocation",
+        "#StatisticalInference",
+        "#ParameterEfficientFineTuning",
+        "#DeepLearning"
+      ],
+      "paper_id": "2026-07-22-arxiv-statistical_inference_for_rank_allocation_in_low_rank_adaptation",
+      "paper_title": "Statistical Inference for Rank Allocation in Low-Rank Adaptation",
+      "paper_date": "2026-07-22",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-07-23T15:57:39",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-22-arxiv-reconstructing_local_environments_from_concise_atomistic_representations",
+    "arxiv_id": "2607.20338v1",
+    "date": "2026-07-22",
+    "title": "Reconstructing local environments from concise atomistic representations",
+    "authors": "Jigyasa Nigam, Tuong Phung, Ameya Daigavane, Aria Mansouri Tehrani, Tess Smidt",
+    "abstract": "Symmetry-based representations of local atomic structure, such as the power spectrum or bispectrum, are routinely used to characterize the structural diversity of datasets and as input features for atomistic machine learning. Although these descriptors systematically incorporate increasingly complex geometric correlations, it remains unclear if a given feature can be mapped back to a discrete point cloud, whether such a reconstruction is unique, and how changes in the descriptor are reflected in the underlying atomic geometry. The choice and discretization of the radial and angular bases, as well as the high dimensionality of the resulting feature vectors -- which may contain hundreds or thousands of components -- make this interpretation even more challenging. In this work, we investigate the inverse problem of recovering atomic structures from invariant descriptors. We show that accurate reconstructions can be obtained from remarkably compact descriptors of different correlation orders, each comprising only a few tens of features. Even representations that are formally incomplete or locally ill-conditioned can be inverted to accurate geometric reconstructions of atomic environments across molecular and material datasets. Our reconstruction framework provides a general algorithmic means of identifying approximate degeneracies of invariant descriptors and recovering distinct atomic environments that cannot be distinguished by a given representation. Finally, by reconstructing atomic configurations from descriptors, we examine how perturbations in invariant descriptors of different correlation orders translate into structural distortions.",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-07-22T16:24:36Z",
+    "updated": "2026-07-22T16:24:36Z",
+    "primary_category": "physics.comp-ph",
+    "categories": [
+      "physics.comp-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.20338v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.20338v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "Compact symmetry-based descriptors can be inverted to reconstruct local atomic environments accurately, even when the representation is incomplete or locally ill-conditioned.",
+      "engineering_relevance": "This enables interpretable atomistic ML features and provides a practical route to diagnose degeneracies and geometry sensitivity in materials and molecular models.",
+      "method": [
+        "Invert invariant descriptors such as power spectrum/bispectrum back to point clouds",
+        "Use compact radial/angular bases with only tens of features",
+        "Compare reconstructions across different correlation orders to probe ambiguity and distortion"
+      ],
+      "evidence_signal": "The abstract reports accurate reconstructions across molecular and materials datasets using remarkably compact descriptors, including formally incomplete and locally ill-conditioned ones.",
+      "watch_item": "Reconstruction quality depends on basis choice and discretization, and approximate degeneracies mean different atomic environments may map to similar descriptors.",
+      "hashtags": [
+        "#AtomisticML",
+        "#SymmetryFunctions",
+        "#InverseProblem",
+        "#MaterialsScience",
+        "#ScientificAI"
+      ],
+      "paper_id": "2026-07-22-arxiv-reconstructing_local_environments_from_concise_atomistic_representations",
+      "paper_title": "Reconstructing local environments from concise atomistic representations",
+      "paper_date": "2026-07-22",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-07-23T15:57:42",
+      "generator": "openai"
+    }
+  }
+]
