@@ -1,24 +1,24 @@
 {
-  "key_insight": "Expert Behavior Prior RL learns expert-like action priors from the online replay buffer, improving exploration, stability, and sample efficiency without needing offline expert trajectories.",
-  "engineering_relevance": "This is relevant for autonomous robotics and industrial control because it offers a more practical way to stabilize online RL when high-quality demonstration data is limited or unavailable.",
+  "key_insight": "EBP replaces static offline behavior priors with a Q-guided generative prior learned from the online replay buffer to improve exploration, stability, and sample efficiency.",
+  "engineering_relevance": "This is relevant for autonomous robotics and industrial control because it can reduce reliance on expert demonstrations while improving online RL performance in real systems.",
   "method": [
-    "Q-CVAE generates high-value expert policy priors from the online replay buffer.",
-    "Expert Policy Guidance (EPG) selects actions from a generative support set to strengthen policy exploitation.",
-    "Policy Gradient Correction (PGC) aligns Q-guidance with expert supervision for stable updates."
+    "Train a Q-guided conditional VAE (Q-CVAE) on online replay data to generate high-value expert-like action priors.",
+    "Use Expert Policy Guidance (EPG) to select actions from the generative support set for policy exploitation.",
+    "Apply Policy Gradient Correction (PGC) to align Q-guidance with expert supervision and stabilize updates."
   ],
-  "evidence_signal": "The abstract reports extensive benchmarks on Gym, PyBullet, and DMControl, where EBP outperforms state-of-the-art online RL methods with better sample efficiency and more stable convergence.",
-  "watch_item": "Performance may depend on accurate Q-guidance and well-tuned generative support, so instability or bias in value estimates could affect action prior quality.",
+  "evidence_signal": "The abstract reports extensive evaluation on Gym, PyBullet, and DMControl benchmarks, where EBP outperforms state-of-the-art online RL methods with higher sample efficiency and more stable convergence.",
+  "watch_item": "Performance may depend on the quality and coverage of the online replay buffer, and the added generative and correction modules could increase training complexity.",
   "hashtags": [
     "#ReinforcementLearning",
-    "#OnlineRL",
-    "#Robotics",
-    "#ControlSystems",
-    "#AutonomousLabs"
+    "#BehaviorPrior",
+    "#OfflineToOnlineRL",
+    "#RoboticsControl",
+    "#SampleEfficiency"
   ],
   "paper_id": "2026-07-23-arxiv-expert_behavior_prior_reinforcement_learning",
   "paper_title": "Expert Behavior Prior Reinforcement Learning",
   "paper_date": "2026-07-23",
   "paper_category": "Autonomous Labs",
-  "generated_at": "2026-07-25T15:07:28",
+  "generated_at": "2026-07-26T15:09:27",
   "generator": "openai"
 }

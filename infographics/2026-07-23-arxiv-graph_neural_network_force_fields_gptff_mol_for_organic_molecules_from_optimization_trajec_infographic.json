@@ -1,24 +1,24 @@
 {
-  "key_insight": "OpenGEM26 expands molecular machine-learning force-field training with 4.4 million DFT conformations from 200,000 organic molecules, enabling GPTFF-mol to model energies and forces more accurately across broader chemical and conformational space.",
-  "engineering_relevance": "This provides a practical surrogate for DFT in atomistic simulation of sulfur- and chlorine-containing organics, reducing computational cost while preserving reliable geometry, dynamics, and barrier predictions.",
+  "key_insight": "OpenGEM26 expands molecular ML training data to 200,000 organic molecules and 4.4 million conformations, enabling a graph neural network force field (GPTFF-mol) that better captures energies, forces, and distorted geometries than prior models.",
+  "engineering_relevance": "This provides a scalable surrogate for DFT in molecular simulation, especially for sulfur- and chlorine-containing organics where fast but reliable force predictions are needed.",
   "method": [
-    "Built OpenGEM26 from optimization trajectories and non-equilibrium structures for H/C/N/O/S/Cl molecules with up to ten heavy atoms.",
-    "Computed labels at ωB97X-D/Def2-SVP and Def2-TZVP with dispersion corrections.",
-    "Trained a graph neural network potential, GPTFF-mol, on the resulting large-scale dataset."
+    "Built OpenGEM26 from DFT optimization trajectories and non-equilibrium structures for H/C/N/O/S/Cl molecules with up to 10 heavy atoms.",
+    "Trained a graph neural network potential, GPTFF-mol, on ωB97X-D/Def2-SVP and Def2-TZVP data with dispersion corrections.",
+    "Benchmarked against QM9 coverage and ANI-2x, then validated on butane rotation and keto-enol tautomerization."
   ],
-  "evidence_signal": "The paper reports GPTFF-mol reaches 16 meV/molecule (0.82 meV/atom) energy MAE and outperforms ANI-2x on force prediction, while reproducing butane rotation and keto-enol tautomerization behavior.",
-  "watch_item": "Performance is demonstrated on molecules with up to ten heavy atoms, so generalization to larger chemistries or very different reaction classes may require additional validation.",
+  "evidence_signal": "The abstract reports 16 meV/molecule energy MAE (0.82 meV/atom), improved force prediction over ANI-2x, and broader coverage of energy, bond-length, and bond-angle space than QM9.",
+  "watch_item": "The dataset is limited to molecules with up to ten heavy atoms and may not transfer directly to larger systems or chemistries outside H/C/N/O/S/Cl.",
   "hashtags": [
-    "#ScientificMachineLearning",
     "#GraphNeuralNetworks",
-    "#MolecularDynamics",
-    "#ForceFields",
-    "#DFT"
+    "#MachineLearningPotentials",
+    "#MolecularSimulation",
+    "#DFT",
+    "#ComputationalChemistry"
   ],
   "paper_id": "2026-07-23-arxiv-graph_neural_network_force_fields_gptff_mol_for_organic_molecules_from_optimization_trajec",
   "paper_title": "Graph Neural Network Force Fields (GPTFF-mol) for Organic Molecules from Optimization Trajectories (OpenGEM26)",
   "paper_date": "2026-07-23",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-07-25T15:06:57",
+  "generated_at": "2026-07-26T15:08:51",
   "generator": "openai"
 }

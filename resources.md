@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-07-25
+Generated: 2026-07-26
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. MIRROR: Learning from the Other View for Multi-Modal Reasoning

@@ -1,24 +1,24 @@
 {
-  "key_insight": "MIRROR exploits the fact that text, image, and combined views of the same geometry problem reveal complementary reasoning strengths and failures, using the best view to teach the others.",
-  "engineering_relevance": "This provides a practical training recipe for making vision-language models more reliable and consistent across modalities in multimodal reasoning systems.",
+  "key_insight": "MIRROR exploits mismatches between text, image, and combined views of the same geometry problem to transfer successful reasoning across modalities and make VLM reasoning more consistent.",
+  "engineering_relevance": "This provides a practical training recipe for multimodal systems that need robust, view-invariant reasoning, especially in geometry-style QA and diagram understanding.",
   "method": [
-    "Build ODA-Data: paired geometry problems with text-dominant, image-dominant, and combined views.",
-    "Evaluate the model on all views for each problem and choose the best-performing view as the teacher.",
-    "Apply a reverse-KL reinforcement learning objective to align weaker views toward the teacher view."
+    "Build ODA-Data with paired text-dominant, image-dominant, and image+text versions of the same geometry problems.",
+    "Run the model on all views, pick the best-performing view as a teacher, and optimize the others toward it with a reverse-KL objective.",
+    "Use self-supervised reciprocal reasoning optimization to improve both accuracy and cross-modal consistency."
   ],
-  "evidence_signal": "The abstract reports improvements over standard RL across geometry reasoning benchmarks, with better accuracy and more consistent behavior across modalities.",
-  "watch_item": "The approach depends on high-quality paired multimodal data and view-wise evaluation, so gains may be sensitive to dataset construction and teacher-view selection.",
+  "evidence_signal": "The abstract reports that ODA-Data includes training/evaluation splits for modality-dependent behaviors and that MIRROR improves over standard RL on geometry reasoning benchmarks.",
+  "watch_item": "The approach depends on having reliable per-view performance differences and high-quality paired multimodal data, so gains may weaken if the views are poorly aligned or the teacher view is wrong.",
   "hashtags": [
+    "#MultimodalAI",
     "#VisionLanguageModels",
-    "#MultimodalReasoning",
+    "#Reasoning",
     "#ReinforcementLearning",
-    "#GeometryAI",
-    "#AIResearch"
+    "#GeometryQA"
   ],
   "paper_id": "2026-07-23-arxiv-mirror_learning_from_the_other_view_for_multi_modal_reasoning",
   "paper_title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
   "paper_date": "2026-07-23",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-25T15:06:52",
+  "generated_at": "2026-07-26T15:08:45",
   "generator": "openai"
 }

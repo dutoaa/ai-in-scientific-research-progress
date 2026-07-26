@@ -1,24 +1,24 @@
 {
-  "key_insight": "A cycle-consistent neural surrogate can predict tokamak edge plasma fields quickly while also recovering the underlying control inputs and estimating prediction uncertainty.",
-  "engineering_relevance": "This enables near real-time edge-plasma analysis for parameter scans, optimization, control, and digital-twin workflows where full SOLPS-ITER simulations are too slow.",
+  "key_insight": "A cycle-consistent neural surrogate can both predict tokamak edge plasma fields quickly and infer the underlying control inputs with high reliability.",
+  "engineering_relevance": "This enables near-real-time analysis, parameter scans, uncertainty-aware decision support, and potential digital-twin or control applications for tokamak edge and divertor operation.",
   "method": [
-    "Conditional U-Net maps five control parameters to 2D SOLPS-ITER plasma-state fields.",
-    "A frozen forward model is paired with an optimization-based inverse method to enforce cycle consistency.",
-    "An ensemble MLP predicts midplane and divertor profiles with uncertainty estimates to flag missing-data regions."
+    "Conditional U-Net forward model maps five control parameters to 2D SOLPS-ITER plasma fields.",
+    "Optimization-based inverse model is built on the frozen forward network and trained with cycle-consistency.",
+    "Ensemble MLPs predict midplane and divertor profiles with uncertainty estimates."
   ],
-  "evidence_signal": "The forward model reports normalized RMSE below 2.6% and Pearson correlations above 0.95, while cycle-consistency raises average cyclical R² from 0.59 to 0.99 and recovers all five control parameters with Pearson r≥0.97.",
-  "watch_item": "Performance may depend on database coverage and warm starts, since cold-start inverse runs had about 30% outright failures.",
+  "evidence_signal": "The forward model reports normalized RMSE below 2.6% and Pearson correlations above 0.95, while cycle-consistency raises average cyclical R^2 from 0.59 to 0.99 and recovers all five control parameters with Pearson r >= 0.97.",
+  "watch_item": "Performance depends on the training database and warm-start strategy, so extrapolation to unseen regimes or poorly covered operating points may remain risky.",
   "hashtags": [
     "#ScientificMachineLearning",
-    "#Tokamak",
-    "#PlasmaPhysics",
+    "#TokamakPlasma",
+    "#NeuralSurrogates",
     "#UncertaintyQuantification",
-    "#NeuralSurrogates"
+    "#DigitalTwins"
   ],
   "paper_id": "2026-07-23-arxiv-cycle_consistent_and_uncertainty_aware_neural_surrogates_for_tokamak_edge_plasmas",
   "paper_title": "Cycle-Consistent and Uncertainty-Aware Neural Surrogates for Tokamak Edge Plasmas",
   "paper_date": "2026-07-23",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-07-25T15:07:07",
+  "generated_at": "2026-07-26T15:09:02",
   "generator": "openai"
 }
