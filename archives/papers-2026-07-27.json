@@ -1,0 +1,1047 @@
+[
+  {
+    "id": "2026-07-23-arxiv-mirror_learning_from_the_other_view_for_multi_modal_reasoning",
+    "arxiv_id": "2607.21552v1",
+    "date": "2026-07-23",
+    "title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
+    "authors": "Wen Ye, Yuxiao Qu, Aviral Kumar, Xuezhe Ma",
+    "abstract": "Unlike large language models (LLMs) that exhibit strong reasoning capabilities, vision-language models (VLMs) struggle with visual reasoning, even on geometry problems that admit equivalent text, diagram, and combined diagram+text views. We show that these views often elicit different behaviors: a model may solve a problem from text but fail on the corresponding diagram, or succeed visually while failing textually. This inconsistency suggests that different views expose complementary reasoning paths and failure modes that standard multimodal post-training does not fully exploit. To study and exploit this phenomenon, we construct ODA-Data, a high-quality paired multimodal geometry dataset with text-dominant, image-dominant, and combined image+text views of the same problems, together with splits for training and evaluating modality-dependent reasoning behaviors. We then develop Modality-Informed Reciprocal Reasoning Optimization (MIRROR), a reinforcement learning approach for improving multimodal reasoning via self supervision. For each problem, MIRROR evaluates the model under all views, selects the best-performing view as a teacher, and trains other views with a reverse-KL objective towards the teacher. Across reasoning benchmarks that evaluate on geometry problems, MIRROR improves over standard RL and yields more accurate and consistent behavior across modalities",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-23T17:35:56Z",
+    "updated": "2026-07-23T17:35:56Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21552v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21552v1"
+      }
+    ],
+    "score": 83,
+    "infographic": {
+      "key_insight": "MIRROR exploits mismatches between text, image, and combined views of the same geometry problem to transfer successful reasoning across modalities and make VLM reasoning more consistent.",
+      "engineering_relevance": "This provides a practical training recipe for multimodal systems that need robust, view-invariant reasoning, especially in geometry-style QA and diagram understanding.",
+      "method": [
+        "Build ODA-Data with paired text-dominant, image-dominant, and image+text versions of the same geometry problems.",
+        "Run the model on all views, pick the best-performing view as a teacher, and optimize the others toward it with a reverse-KL objective.",
+        "Use self-supervised reciprocal reasoning optimization to improve both accuracy and cross-modal consistency."
+      ],
+      "evidence_signal": "The abstract reports that ODA-Data includes training/evaluation splits for modality-dependent behaviors and that MIRROR improves over standard RL on geometry reasoning benchmarks.",
+      "watch_item": "The approach depends on having reliable per-view performance differences and high-quality paired multimodal data, so gains may weaken if the views are poorly aligned or the teacher view is wrong.",
+      "hashtags": [
+        "#MultimodalAI",
+        "#VisionLanguageModels",
+        "#Reasoning",
+        "#ReinforcementLearning",
+        "#GeometryQA"
+      ],
+      "paper_id": "2026-07-23-arxiv-mirror_learning_from_the_other_view_for_multi_modal_reasoning",
+      "paper_title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-26T15:08:45",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-pats_policy_aware_training_scaffolding_for_agentic_reinforcement_learning",
+    "arxiv_id": "2607.21419v1",
+    "date": "2026-07-23",
+    "title": "PATS: Policy-Aware Training Scaffolding for Agentic Reinforcement Learning",
+    "authors": "Yipeng Shi, Zhipeng Ma, Yue Wang, Qitai Tan, Yang Li, Peng Chen",
+    "abstract": "In long-horizon LLM agent reinforcement learning, weak policies often repeat similar failures, producing uninformative rollout trajectories and limiting effective policy optimization. Existing skill-centric methods improve exploration by optimizing, filtering, or internalizing reusable skills. However, they remain centered on the skills themselves rather than being designed as adaptive training-time support for the evolving policy. To address this, we propose a policy-centric training paradigm that reframes skills as a dynamic training scaffold. Our framework, Pats, converts rollout groups from the latest policy into evidence cards and uses task-specific evaluation to adjust the context used in subsequent rollouts. Concrete guidance helps weak policies to complete challenging tasks. As policy improves, redundant context is revised or removed to reduce reliance on explicit guidance while preserving useful rollout variation. The policy is optimized with environmental rewards using standard RLVR, and the training scaffold is discarded at deployment. On ALFWorld and WebShop, Pats improves over strong baselines by up to 18.6%. Across seven search-augmented QA benchmarks, it remains competitive while using 32.1% fewer prompt tokens than the baseline.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-23T15:24:35Z",
+    "updated": "2026-07-23T15:24:35Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21419v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21419v1"
+      }
+    ],
+    "score": 82,
+    "infographic": {
+      "key_insight": "PATS turns skills into a policy-aware training scaffold that adapts rollout context as the agent improves, helping weak long-horizon LLM policies learn more effectively.",
+      "engineering_relevance": "For agentic RL systems, it offers a practical way to improve exploration and training stability with task-specific guidance during training while removing that scaffolding at deployment.",
+      "method": [
+        "Convert rollout groups from the latest policy into evidence cards.",
+        "Use task-specific evaluation to revise, reduce, or remove contextual guidance over time.",
+        "Train the policy with environmental rewards via standard RLVR, then discard the scaffold at deployment."
+      ],
+      "evidence_signal": "The method reports up to 18.6% gains on ALFWorld and WebShop, and stays competitive on seven search-augmented QA benchmarks while using 32.1% fewer prompt tokens than the baseline.",
+      "watch_item": "Because the scaffold is task-specific and dynamically managed, its effectiveness may depend on reliable evaluation signals and careful context pruning to avoid over-reliance or loss of useful guidance.",
+      "hashtags": [
+        "#AgenticRL",
+        "#LLMAgents",
+        "#ReinforcementLearning",
+        "#TrainingScaffolding",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-07-23-arxiv-pats_policy_aware_training_scaffolding_for_agentic_reinforcement_learning",
+      "paper_title": "PATS: Policy-Aware Training Scaffolding for Agentic Reinforcement Learning",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-26T15:08:47",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-graph_neural_network_force_fields_gptff_mol_for_organic_molecules_from_optimization_trajec",
+    "arxiv_id": "2607.21369v1",
+    "date": "2026-07-23",
+    "title": "Graph Neural Network Force Fields (GPTFF-mol) for Organic Molecules from Optimization Trajectories (OpenGEM26)",
+    "authors": "Yifan Huang, Fankai Xie, Jiangnan Zheng, Tenglong Lu, Sheng Meng, Miao Liu",
+    "abstract": "Density functional theory (DFT) serves as a reliable tool for atomistic molecular simulations, while machine learning potentials have become powerful complements to balance accuracy and efficiency. In this work, we release OpenGEM26 (Open Generated Ensemble of Molecules, 2026), a large-scale dataset comprising 200,000 unique molecules and 4.4 million conformations composed of H, C, N, O, S and Cl with up to ten heavy atoms. All calculations are carried out at the ωB97X-D/Def2-SVP and Def2-TZVP levels with dispersion corrections, and complete structural optimization trajectories and abundant non-equilibrium structures are recorded. Statistical analyses confirm that this dataset covers a broader conformational space than QM9 in terms of energy, bond lengths and bond angles. A graph neural network-based potential GPTFF-mol is trained using the new dataset, achieving an energy mean absolute error of 16 meV/molecule, which is equivalent to 0.82meV/atom, and superior force prediction performance compared with ANI-2x. Validated by butane rotation and keto-enol tautomerization tests, the model accurately describes molecular dynamical behaviors and reaction barriers at distorted geometries. This work provides a high-quality resource and robust ML potential for efficient simulations of sulfur- and chlorine-containing organic molecules.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-23T14:35:45Z",
+    "updated": "2026-07-23T14:35:45Z",
+    "primary_category": "physics.chem-ph",
+    "categories": [
+      "physics.chem-ph",
+      "cond-mat.mtrl-sci",
+      "cs.CE",
+      "physics.comp-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21369v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21369v1"
+      }
+    ],
+    "score": 82,
+    "infographic": {
+      "key_insight": "OpenGEM26 expands molecular ML training data to 200,000 organic molecules and 4.4 million conformations, enabling a graph neural network force field (GPTFF-mol) that better captures energies, forces, and distorted geometries than prior models.",
+      "engineering_relevance": "This provides a scalable surrogate for DFT in molecular simulation, especially for sulfur- and chlorine-containing organics where fast but reliable force predictions are needed.",
+      "method": [
+        "Built OpenGEM26 from DFT optimization trajectories and non-equilibrium structures for H/C/N/O/S/Cl molecules with up to 10 heavy atoms.",
+        "Trained a graph neural network potential, GPTFF-mol, on ωB97X-D/Def2-SVP and Def2-TZVP data with dispersion corrections.",
+        "Benchmarked against QM9 coverage and ANI-2x, then validated on butane rotation and keto-enol tautomerization."
+      ],
+      "evidence_signal": "The abstract reports 16 meV/molecule energy MAE (0.82 meV/atom), improved force prediction over ANI-2x, and broader coverage of energy, bond-length, and bond-angle space than QM9.",
+      "watch_item": "The dataset is limited to molecules with up to ten heavy atoms and may not transfer directly to larger systems or chemistries outside H/C/N/O/S/Cl.",
+      "hashtags": [
+        "#GraphNeuralNetworks",
+        "#MachineLearningPotentials",
+        "#MolecularSimulation",
+        "#DFT",
+        "#ComputationalChemistry"
+      ],
+      "paper_id": "2026-07-23-arxiv-graph_neural_network_force_fields_gptff_mol_for_organic_molecules_from_optimization_trajec",
+      "paper_title": "Graph Neural Network Force Fields (GPTFF-mol) for Organic Molecules from Optimization Trajectories (OpenGEM26)",
+      "paper_date": "2026-07-23",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-26T15:08:51",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-arex_towards_a_recursively_self_improving_agent_for_deep_research",
+    "arxiv_id": "2607.21461v1",
+    "date": "2026-07-23",
+    "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
+    "authors": "Shuqi Lu, Chaofan Li, Kun Luo, Zhang Zhang, Hui Wang, Hongwang Xiao",
+    "abstract": "Deep research requires agents to find answers that jointly satisfy multiple constraints. Discovering such answers is costly, whereas verifying a candidate can often be decomposed into tractable constraint-wise checks. This discovery--verification asymmetry suggests that a research agent should do more than simply search longer: it should recursively improve its current answer by verifying intermediate results and using the partially verified state to guide subsequent refinement. We introduce AREX, a family of Recursively Self-Improving (RSI) deep research agents. AREX alternates between an inner research loop that gathers evidence and constructs a provisional answer, and an outer self-improvement loop that audits the answer constraint-wise, identifies unresolved claims, and launches targeted follow-up research. To sustain RSI over long horizons, AREX learns an autonomous context-update tool that compresses growing interaction history into a compact improvement state preserving verified evidence and unresolved constraints, without relying on an external model. We train AREX on verified synthetic tasks and high-quality trajectories through agentic mid-training and long-horizon reinforcement learning. To mitigate sparse final rewards during long horizon learning, we emphasize key steps where decisive evidence is acquired or erroneous research directions are corrected. We instantiate a dense 4B model and a 122B-A10B Mixture-of-Experts model. Across BrowseComp, WideSearch, DeepSearchQA, Humanity's Last Exam (HLE), and other reasoning and tool-use benchmarks, AREX substantially outperforms comparable-scale baselines and remains competitive with models using substantially more activated parameters.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-23T16:05:46Z",
+    "updated": "2026-07-23T16:05:46Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21461v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21461v1"
+      }
+    ],
+    "score": 80,
+    "infographic": {
+      "key_insight": "AREX improves deep-research agents by recursively verifying partial answers and using constraint-wise audits to guide targeted follow-up research instead of only searching longer.",
+      "engineering_relevance": "The paper suggests a practical agent design pattern for long-horizon research systems: pair evidence gathering with an internal self-improvement loop and a compact state updater to sustain performance under context growth.",
+      "method": [
+        "Inner research loop gathers evidence and drafts a provisional answer.",
+        "Outer self-improvement loop audits each constraint, flags unresolved claims, and triggers targeted follow-up research.",
+        "Learned context-update tool compresses history into a compact improvement state without an external model."
+      ],
+      "evidence_signal": "The abstract reports training on verified synthetic tasks and high-quality trajectories, then evaluating on BrowseComp, WideSearch, DeepSearchQA, Humanity's Last Exam, and other benchmarks, where AREX outperforms comparable-scale baselines.",
+      "watch_item": "Performance likely depends on reliable constraint decomposition and the learned context compressor; errors in verification or state summarization could propagate through the recursive loop.",
+      "hashtags": [
+        "#AIResearchAgents",
+        "#RecursiveSelfImprovement",
+        "#LongHorizonRL",
+        "#ToolUse",
+        "#DeepResearch"
+      ],
+      "paper_id": "2026-07-23-arxiv-arex_towards_a_recursively_self_improving_agent_for_deep_research",
+      "paper_title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-26T15:08:54",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-compact_latent_coordination_for_autonomous_vehicles_at_unsignalized_intersections",
+    "arxiv_id": "2607.21488v1",
+    "date": "2026-07-23",
+    "title": "Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections",
+    "authors": "Gil Lifshits, Igal Bilik, Gilad Katz",
+    "abstract": "Coordinating autonomous vehicles at unsignalized intersections remains a critical challenge for multi-agent reinforcement learning (MARL) systems, which typically struggle with combinatorial action spaces, reliance on privileged information, or rigid agent designs. We propose Master-Agent Proto-plan System (MAPS), a hierarchical deep reinforcement learning (DRL) architecture in which a centralized Master agent generates a compact, continuous embedding, denoted as proto-plan, that encodes a global coordination strategy. Decentralized Worker agents integrate this embedding with local observations to execute vehicle-specific control, decoupling strategic intent from tactical execution and enabling independent optimization of each module. As a proof-of-concept evaluation of this coordination mechanism, we test MAPS across 72 intersection configurations in HighwayEnv. MAPS achieves collision-free navigation while significantly reducing average travel time, outperforming state-of-the-art baselines. The learned proto-plans further exhibit robust generalization: a system trained with three agents achieves a 94% success rate when deployed zero-shot to five-agent scenarios, confirming that proto-plan-based hierarchical learning provides a promising framework for multi-vehicle coordination.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-23T16:28:35Z",
+    "updated": "2026-07-23T16:28:35Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.MA",
+      "cs.RO"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21488v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21488v1"
+      }
+    ],
+    "score": 76,
+    "infographic": {
+      "key_insight": "MAPS uses a centralized master agent to emit a compact continuous proto-plan that guides decentralized vehicle controllers, separating global coordination from local driving decisions.",
+      "engineering_relevance": "This hierarchy reduces MARL complexity at unsignalized intersections and supports scalable, transferable coordination across different vehicle counts and intersection layouts.",
+      "method": [
+        "Master agent generates a latent proto-plan encoding the coordination strategy",
+        "Worker agents combine proto-plan with local observations for vehicle-specific control",
+        "Independent optimization of strategy and execution modules enables scalable training and deployment"
+      ],
+      "evidence_signal": "Evaluated in HighwayEnv across 72 intersection configurations, MAPS achieved collision-free navigation with lower travel time and reached 94% zero-shot success when trained on three agents and deployed to five-agent scenarios.",
+      "watch_item": "Results are from a simulation-based proof of concept, so real-world robustness, sensing noise, and safety validation remain open concerns.",
+      "hashtags": [
+        "#MultiAgentRL",
+        "#AutonomousVehicles",
+        "#IntersectionCoordination",
+        "#HierarchicalRL",
+        "#ProtoPlan"
+      ],
+      "paper_id": "2026-07-23-arxiv-compact_latent_coordination_for_autonomous_vehicles_at_unsignalized_intersections",
+      "paper_title": "Compact Latent Coordination for Autonomous Vehicles at Unsignalized Intersections",
+      "paper_date": "2026-07-23",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-26T15:08:56",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-an_llm_driven_workflow_for_automated_process_control_strategy_generation_and_tuning_from_d",
+    "arxiv_id": "2607.21292v1",
+    "date": "2026-07-23",
+    "title": "An LLM-Driven Workflow for Automated Process Control Strategy Generation and Tuning from Dynamic Process Models",
+    "authors": "Ari Luna Rueda, Eike Cramer, Klaus Hellgardt, Mehmet Mercangöz",
+    "abstract": "We present a structured large-language-model-driven workflow for automated multi-variable control design from dynamic process models. The workflow decomposes the design task into constrained code-generation steps: plant-interface construction, normalization, manipulated-variable controlled-variable (MV-CV) pairing, controller specification, closed loop simulation, scenario generation, performance evaluation and Bayesian-optimization (BO) based tuning. Generated artifacts are executed and validated before downstream tasks proceed, and failed artifacts are repaired using validation feedback. The proposed approach is demonstrated on a nonlinear gas-preheater benchmark with coupled pressure and temperature dynamics. The generated workflow produces a physically consistent decentralized PI (proportional-integral) feedback-feedforward control structure and an executable tuning environment. Bayesian optimization reduces the closed loop performance objective, which aggregates set-point tracking and disturbance-rejection errors for the controlled variables, by approximately 26.5% relative to the initial controller generated by the workflow, mainly through improved pressure-loop transient performance. This figure quantifies the automated tuning stage rather than a comparison against a manually designed controller. The results demonstrate the feasibility of using structured large-language-model-based code generation to construct executable control-design workflows, while also highlighting the need for broader validation on larger plantwide-control benchmarks.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-23T13:13:29Z",
+    "updated": "2026-07-23T13:13:29Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "eess.SY"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21292v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21292v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "A structured LLM workflow can automatically build, validate, and tune a multi-variable control strategy from a dynamic process model, producing an executable controller design pipeline.",
+      "engineering_relevance": "This could reduce the manual effort needed to develop decentralized control structures and tuning environments for nonlinear process plants.",
+      "method": [
+        "Break the design into constrained code-generation steps: plant interface, normalization, MV-CV pairing, controller spec, simulation, scenario generation, and evaluation.",
+        "Execute and validate each artifact before moving to the next step; repair failed outputs using validation feedback.",
+        "Use Bayesian optimization to tune controller parameters against a closed-loop objective combining tracking and disturbance-rejection errors."
+      ],
+      "evidence_signal": "On a nonlinear gas-preheater benchmark, Bayesian optimization improved the closed-loop objective by about 26.5% relative to the workflow-generated initial controller, mainly by improving pressure-loop transients.",
+      "watch_item": "The results are shown on a single benchmark, so broader validation on larger plantwide control problems is still needed.",
+      "hashtags": [
+        "#LLMforEngineering",
+        "#ProcessControl",
+        "#BayesianOptimization",
+        "#ModelingAndSimulation",
+        "#Automation"
+      ],
+      "paper_id": "2026-07-23-arxiv-an_llm_driven_workflow_for_automated_process_control_strategy_generation_and_tuning_from_d",
+      "paper_title": "An LLM-Driven Workflow for Automated Process Control Strategy Generation and Tuning from Dynamic Process Models",
+      "paper_date": "2026-07-23",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-26T15:08:59",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-cycle_consistent_and_uncertainty_aware_neural_surrogates_for_tokamak_edge_plasmas",
+    "arxiv_id": "2607.21407v1",
+    "date": "2026-07-23",
+    "title": "Cycle-Consistent and Uncertainty-Aware Neural Surrogates for Tokamak Edge Plasmas",
+    "authors": "Abdourahmane Diaw, Sebastian De Pascuale, Jae-Sun Park, Ivan Paradela Perez, Jeremy D. Lore, Stefan Dasbach",
+    "abstract": "The boundary and divertor plasma govern how a tokamak exhausts power and particles, setting heat fluxes, target conditions, and the onset of detachment. Predicting these quantities is essential for operating current and future devices, but edge simulations that resolve them are too slow for parameter scans, optimization, or real-time control. Machine-learning surrogates offer a fast alternative, yet most are forward-only: they cannot recover input parameters from observations or assess the reliability of their predictions. We introduce a cycle-consistent neural surrogate for edge plasmas, combining a conditional U-Net forward model with an optimization-based inverse method built on the frozen forward network. The forward model maps five control parameters to two-dimensional plasma-state fields on the SOLPS-ITER mesh; the inverse method enforces consistency between forward and inverse predictions, a self-supervised quality check needing no ground-truth labels at inference. An ensemble of multilayer perceptrons also predicts electron temperature and density profiles at the outboard midplane and divertor targets, with uncertainty estimates that flag where more simulations are needed. The forward model achieves normalized root-mean-square errors below 2.6% and Pearson correlations above 0.95 for all fields. Cycle-consistency regularization raises the average cyclical $R^2$ from 0.59 to 0.99 without degrading forward accuracy and enables recovery of the core fueling rate; all five control parameters are recovered with Pearson $r\\ge0.97$. A $k$-d tree warm start yields a database completion rate above 95%, versus roughly 30% outright failures when cold-started. With about $4\\times10^6$ parameters, the model produces full 2D predictions in milliseconds, five to six orders of magnitude faster than SOLPS-ITER, enabling real-time control, parameter scans, uncertainty analysis, and digital twins.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-23T15:06:57Z",
+    "updated": "2026-07-23T15:06:57Z",
+    "primary_category": "physics.comp-ph",
+    "categories": [
+      "physics.comp-ph",
+      "cs.AI",
+      "physics.plasm-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21407v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21407v1"
+      }
+    ],
+    "score": 74,
+    "infographic": {
+      "key_insight": "A cycle-consistent neural surrogate can both predict tokamak edge plasma fields quickly and infer the underlying control inputs with high reliability.",
+      "engineering_relevance": "This enables near-real-time analysis, parameter scans, uncertainty-aware decision support, and potential digital-twin or control applications for tokamak edge and divertor operation.",
+      "method": [
+        "Conditional U-Net forward model maps five control parameters to 2D SOLPS-ITER plasma fields.",
+        "Optimization-based inverse model is built on the frozen forward network and trained with cycle-consistency.",
+        "Ensemble MLPs predict midplane and divertor profiles with uncertainty estimates."
+      ],
+      "evidence_signal": "The forward model reports normalized RMSE below 2.6% and Pearson correlations above 0.95, while cycle-consistency raises average cyclical R^2 from 0.59 to 0.99 and recovers all five control parameters with Pearson r >= 0.97.",
+      "watch_item": "Performance depends on the training database and warm-start strategy, so extrapolation to unseen regimes or poorly covered operating points may remain risky.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#TokamakPlasma",
+        "#NeuralSurrogates",
+        "#UncertaintyQuantification",
+        "#DigitalTwins"
+      ],
+      "paper_id": "2026-07-23-arxiv-cycle_consistent_and_uncertainty_aware_neural_surrogates_for_tokamak_edge_plasmas",
+      "paper_title": "Cycle-Consistent and Uncertainty-Aware Neural Surrogates for Tokamak Edge Plasmas",
+      "paper_date": "2026-07-23",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-26T15:09:02",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-gs_agent_creating_4d_physical_worlds_with_generative_simulation",
+    "arxiv_id": "2607.21522v1",
+    "date": "2026-07-23",
+    "title": "GS-Agent: Creating 4D Physical Worlds With Generative Simulation",
+    "authors": "Hongxin Zhang, Chunru Lin, Junyan Li, Zhou Xian, Tsun-Hsuan Wang, Chuang Gan",
+    "abstract": "Creating dynamic and physically realistic 4D worlds from natural language descriptions is both fascinating and challenging. Traditional computer graphics methods rely on manual creation, requiring extensive human effort to fine-tune materials, motions, and visual fidelity. Recent advances in generative foundation models have sparked interest in learning to generate such 4D worlds from large-scale data; however, existing methods still struggle to ensure physical plausibility and controllability. In this work, we take a different path by leveraging foundation models to construct an agentic system that emulates how humans traditionally create 4D worlds, yet automates the entire process. We present GS-Agent, an end-to-end multi-agent framework that integrates physics engines in the loop to generate realistic, dynamic, and controllable 4D physical worlds from natural language. Inspired by how humans build 4D worlds, GS-Agent decomposes the task into entity management, covering 3D asset curation, material tuning, placement, and motion control, and rendering configuration, including camera and lighting manipulation. Multiple agents with distinct expertise interact with the physics engine via code, seek multimodal feedback, and collaborate to iteratively construct 4D worlds that align with the given descriptions. Experimental results show that GS-Agent effectively converts natural language into diverse and physically plausible 4D worlds exhibiting rich interactions among liquids, deformable objects, and rigid bodies, while achieving cinematic camera and lighting control. We envision GS-Agent as a foundation for a new paradigm in 4D world generation, empowering creative content creation and physical AI. Project page at https://umass-embodied-agi.github.io/gs-agent/",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-07-23T17:04:36Z",
+    "updated": "2026-07-23T17:04:36Z",
+    "primary_category": "cs.RO",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21522v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21522v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "GS-Agent turns text prompts into realistic 4D physical worlds by using multiple coordinated agents that plan, simulate, and refine scenes with a physics engine in the loop.",
+      "engineering_relevance": "The framework offers a practical blueprint for controllable generative simulation, useful for synthetic data creation, robotics training environments, and cinematic physical scene generation.",
+      "method": [
+        "Decomposes world creation into entity management: asset selection, material tuning, placement, and motion control.",
+        "Uses multiple specialized agents that interact through code with a physics engine and multimodal feedback.",
+        "Coordinates rendering configuration such as camera and lighting to match the natural-language description."
+      ],
+      "evidence_signal": "The abstract reports that experiments produced diverse, physically plausible 4D scenes with liquids, deformables, and rigid bodies, plus cinematic camera and lighting control.",
+      "watch_item": "The approach likely depends on careful agent coordination and simulator fidelity, so performance may be sensitive to physics-engine accuracy and implementation complexity.",
+      "hashtags": [
+        "#GenerativeSimulation",
+        "#4DWorldGeneration",
+        "#PhysicsInTheLoop",
+        "#MultiAgentAI",
+        "#ComputationalGraphics"
+      ],
+      "paper_id": "2026-07-23-arxiv-gs_agent_creating_4d_physical_worlds_with_generative_simulation",
+      "paper_title": "GS-Agent: Creating 4D Physical Worlds With Generative Simulation",
+      "paper_date": "2026-07-23",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-07-26T15:09:04",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-graph_learning_on_ensembles_of_cyclic_peptides_an_investigation_of_molecular_ensemble_mode",
+    "arxiv_id": "2607.21561v1",
+    "date": "2026-07-23",
+    "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+    "authors": "Aaron Feller, Kris Deibler, Maxim Secor",
+    "abstract": "Molecular property prediction from structure often uses a single representative conformation, even though many molecules exist as conformational ensembles in solution. We introduce EnsembleEGNN, a molecular ensemble foundation model that encodes an ensemble by first encoding each conformer with shared Equivariant Graph Neural Network (EGNN) layers, then pooling the resulting conformer representations with a Set Attention Block. We pretrain the model on CREMP, a cyclic peptide ensemble dataset, using a multi-task self-supervised objective combining masked token recovery, noisy-coordinate reconstruction, and pairwise distance reconstruction. On the CREMP-CycPeptMPDB dataset, training EnsembleEGNN from scratch fails entirely ($R^2=0.005$). However, the pretrained model reaches $R^2=0.477$ and Pearson $r=0.699$, outperforming the sequence-only BERT baseline ($R^2=0.439$, Pearson $r=0.667$). When EnsembleEGNN is co-trained end-to-end with the BERT sequence encoder, the hybrid model improves further to $R^2=0.538$ and Pearson $r=0.737$. These results demonstrate that encoding conformational ensembles into a single thermodynamically informed embedding improves cyclic-peptide property prediction.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-23T17:42:51Z",
+    "updated": "2026-07-23T17:42:51Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "q-bio.BM"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21561v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21561v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "Modeling a molecule as a conformational ensemble, rather than a single structure, improves cyclic-peptide property prediction.",
+      "engineering_relevance": "The work suggests ensemble-aware graph models can be used to build more accurate predictive tools for molecular design and screening in computational chemistry and drug discovery.",
+      "method": [
+        "Encode each conformer with shared EGNN layers.",
+        "Pool conformer embeddings using a Set Attention Block to form one ensemble representation.",
+        "Pretrain with masked token recovery, noisy-coordinate reconstruction, and pairwise distance reconstruction."
+      ],
+      "evidence_signal": "On CREMP-CycPeptMPDB, training from scratch failed (R^2=0.005), while pretrained EnsembleEGNN achieved R^2=0.477 and Pearson r=0.699, and the BERT+EnsembleEGNN hybrid improved further to R^2=0.538 and r=0.737.",
+      "watch_item": "Performance depends on access to high-quality conformer ensembles, so generating and curating reliable ensemble data may be a practical bottleneck.",
+      "hashtags": [
+        "#GraphNeuralNetworks",
+        "#MolecularModeling",
+        "#CyclicPeptides",
+        "#EnsembleLearning",
+        "#ComputationalChemistry"
+      ],
+      "paper_id": "2026-07-23-arxiv-graph_learning_on_ensembles_of_cyclic_peptides_an_investigation_of_molecular_ensemble_mode",
+      "paper_title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+      "paper_date": "2026-07-23",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-26T15:09:07",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-agentic_coding_without_the_cloud_evaluating_open_weight_large_language_models_on_longitudi",
+    "arxiv_id": "2607.21482v1",
+    "date": "2026-07-23",
+    "title": "Agentic coding without the cloud: evaluating open-weight large language models on longitudinal data preparation tasks",
+    "authors": "Mack Nixon, Liam Wright, Yevgeniya Kovalchuk, Alison Fang-Wei Wu, Martin Danka, Andy Boyd",
+    "abstract": "Large language models (LLMs) and agents are now widely used tools in code development, with data typically sent to third-party cloud-based models. Their adoption in research using personal data is constrained by governance requirements that typically prohibit data transmission to external services. Locally deployable open-weight models offer an alternative since sensitive data never leave the local environment. We introduce an open-source framework for evaluating the efficacy of AI agents powered by open-weight LLMs on one of the most persistent bottlenecks in research on longitudinal population studies: data preparation. The framework comprises: a curated ground-truth dataset (cleaning scripts preparing six sweeps of data from a British cohort study), task definitions encompassing tasks such as category harmonization and multi-wave merging, and automated routines for evaluating the LLM-produced R code and outputted data. We benchmark LLMs across the (consumer grade) deployment spectrum to assess their efficacy in 20 data preparation tasks (creation of 102 variables). Current state-of-the-art, 31-35B parameter models almost saturated our benchmark (\"average task completion\" up to 87.9%). The performance of open-weight LLMs running on consumer-grade hardware shows promise of a viable path toward AI-assisted data preparation in governance-restricted research settings. Our framework is publicly available at: https://github.com/UCL-ARC/RRBench.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-23T16:23:42Z",
+    "updated": "2026-07-23T16:23:42Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21482v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21482v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "Open-weight, locally deployable LLM agents can perform much of the routine code-heavy work needed for longitudinal data preparation without sending sensitive data to the cloud.",
+      "engineering_relevance": "This points to a practical path for privacy-preserving, AI-assisted data engineering in governance-restricted research environments using consumer-grade hardware.",
+      "method": [
+        "Built an open-source benchmark with curated ground-truth cleaning scripts for six waves of a British cohort study.",
+        "Defined 20 longitudinal data-preparation tasks, including category harmonization and multi-wave merging.",
+        "Automated evaluation of model-generated R code and the resulting data outputs."
+      ],
+      "evidence_signal": "Across 20 tasks covering 102 variables, the best 31–35B open-weight models nearly saturated the benchmark, reaching up to 87.9% average task completion.",
+      "watch_item": "Performance is strong but still depends on task complexity and reliable local execution, so sensitive research workflows will need careful validation before deployment.",
+      "hashtags": [
+        "#OpenWeightLLMs",
+        "#AIForScience",
+        "#DataPreparation",
+        "#PrivacyPreservingAI",
+        "#ResearchAgents"
+      ],
+      "paper_id": "2026-07-23-arxiv-agentic_coding_without_the_cloud_evaluating_open_weight_large_language_models_on_longitudi",
+      "paper_title": "Agentic coding without the cloud: evaluating open-weight large language models on longitudinal data preparation tasks",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-26T15:09:11",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-semantic_aware_task_clustering_for_constructive_and_cooperative_multi_tasking",
+    "arxiv_id": "2607.21426v1",
+    "date": "2026-07-23",
+    "title": "Semantic-Aware Task Clustering for Constructive and Cooperative Multi-Tasking",
+    "authors": "Ahmad Halimi Razlighi, Maximilian H. V. Tillmann, Edgar Beck, Bho Matthiesen, Armin Dekorsy",
+    "abstract": "Cooperative multi-task semantic communication (CMT-SemCom) improves task execution performance by leveraging shared representations. However, as we demonstrated in [1], cooperative multi-tasking can be either constructive or destructive, depending on the semantic relationships among tasks. To ensure constructive cooperation, we propose a semantic-aware task clustering method for CMT-SemCom. We have formulated a sequential multi-stage optimization problem in which semantically aligned tasks are clustered once after a short initial training phase, and then end-to-end (E2E) joint training is conducted exclusively within the discovered groups. Specifically, the problem decomposes into two stages: (i) a semantic clustering problem leveraging hierarchical density-based spatial clustering, and (ii) an intra-cluster E2E CMT-SemCom learning problem. Simulation results demonstrate that the proposed framework effectively mitigates destructive cooperation and negative transfer, yielding accuracy gains compared to unclustered multi-tasking and individual training baselines.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-23T15:29:39Z",
+    "updated": "2026-07-23T15:29:39Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.IT",
+      "eess.SP",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21426v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21426v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "Semantically related tasks should be clustered before joint training so cooperative multi-task learning becomes constructive instead of causing negative transfer.",
+      "engineering_relevance": "This provides a practical recipe for improving multi-task semantic communication systems by grouping compatible tasks and training only within those groups to boost accuracy and stability.",
+      "method": [
+        "Run a short initial training phase to extract task representations.",
+        "Apply hierarchical density-based clustering to discover semantically aligned task groups.",
+        "Perform end-to-end cooperative training only inside each cluster."
+      ],
+      "evidence_signal": "Simulations in the abstract show improved accuracy versus both unclustered multi-tasking and individual-task training, with reduced destructive cooperation.",
+      "watch_item": "The approach depends on a reliable early semantic representation and clustering step, so poor initial embeddings or unstable cluster assignments could hurt downstream performance.",
+      "hashtags": [
+        "#MultiTaskLearning",
+        "#SemanticCommunication",
+        "#TaskClustering",
+        "#NegativeTransfer",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-07-23-arxiv-semantic_aware_task_clustering_for_constructive_and_cooperative_multi_tasking",
+      "paper_title": "Semantic-Aware Task Clustering for Constructive and Cooperative Multi-Tasking",
+      "paper_date": "2026-07-23",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-26T15:09:13",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-elasticttt_prior_preserving_test_time_tuning_for_video_editing",
+    "arxiv_id": "2607.21529v1",
+    "date": "2026-07-23",
+    "title": "ElasticTTT: Prior-Preserving Test-Time Tuning for Video Editing",
+    "authors": "Yueyi Liu, Chi Zhang, Sen Cui, Miao Liu",
+    "abstract": "Test-Time Tuning (TTT) on pretrained diffusion models has emerged as a powerful paradigm for video editing. However, there exists a foundational mismatch between the distribution-mapping nature of generative models and the single-point optimization of standard TTT. In this paper, we demonstrate that this mismatch triggers \\textit{Prior Collapse}, a degenerate state where the model discards the text conditions and spatial latents, collapsing generations to the source video, or entangling the features of distinct regions. To resolve this, we propose \\textbf{ElasticTTT}, a novel framework that preserves the prior generative distribution and rescues generative elasticity. Specifically, we propose \\textit{Target Distribution Regularization} to prevent sharp memorization minima, \\textit{Contrastive CFG} to guide inference away from source biases, and \\textit{Asynchronous Noise Schedule} to preserve unedited regions. Extensive evaluations, supported by theoretical analysis, demonstrate that ElasticTTT successfully preserves the generative prior of the base model, achieving state-of-the-art performance on one-shot video editing.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-23T17:15:30Z",
+    "updated": "2026-07-23T17:15:30Z",
+    "primary_category": "cs.CV",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21529v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21529v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "ElasticTTT fixes a mismatch in test-time tuning by preserving the diffusion model’s prior distribution, preventing collapse to the source video and improving one-shot video editing.",
+      "engineering_relevance": "For practical video editing systems, the method offers a way to adapt pretrained diffusion models at inference time without sacrificing diversity, text control, or spatial separation.",
+      "method": [
+        "Target Distribution Regularization avoids sharp memorization minima during tuning.",
+        "Contrastive CFG steers generation away from source-video bias.",
+        "Asynchronous Noise Schedule protects unedited regions from unintended changes."
+      ],
+      "evidence_signal": "The abstract reports extensive evaluations and theoretical analysis, with state-of-the-art performance on one-shot video editing.",
+      "watch_item": "The added tuning and scheduling components may increase implementation complexity and require careful hyperparameter calibration to avoid unstable inference.",
+      "hashtags": [
+        "#VideoEditing",
+        "#DiffusionModels",
+        "#TestTimeTuning",
+        "#GenerativeAI",
+        "#ComputerVision"
+      ],
+      "paper_id": "2026-07-23-arxiv-elasticttt_prior_preserving_test_time_tuning_for_video_editing",
+      "paper_title": "ElasticTTT: Prior-Preserving Test-Time Tuning for Video Editing",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-26T15:09:15",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-euclid_mcp_a_model_context_protocol_server_for_deterministic_logical_reasoning_via_prolog",
+    "arxiv_id": "2607.21412v1",
+    "date": "2026-07-23",
+    "title": "Euclid-MCP: A Model Context Protocol Server for Deterministic Logical Reasoning via Prolog",
+    "authors": "Bartolomeo Bogliolo",
+    "abstract": "Large Language Models (LLMs) excel at natural language understanding and generation but remain unreliable for multi-step logical reasoning, especially in safety-critical or compliance-sensitive domains. Recent neuro-symbolic approaches address this gap by coupling neural models with external symbolic engines, yet most integrations are bespoke and lack a standardized interface for tool-augmented agents. This paper presents Euclid-MCP, an open-source MCP server that provides deterministic logical reasoning via SWI-Prolog. Euclid-MCP introduces Euclid-IR, an engine-agnostic intermediate representation for Horn-clause logic that is human-readable, easy for LLMs to generate, and straightforward to compile into Prolog or alternative backends. The server exposes a compact tool interface that supports a translate-run-inspect-repair loop, enabling LLM clients to delegate inference while retaining full access to proof traces and derivation logs. We evaluate Euclid-MCP on a realistic IT security and compliance use case. Results show that while LLMs alone are sufficient on small knowledge bases, they hallucinate systematically on larger problems, whereas Euclid-MCP delivers exact answers with lower latency and more compact outputs. We argue that semantic RAG is fundamentally unsuited for rule enforcement, and that Euclid-MCP can serve as a stable, shared reasoning substrate for both RAG-based assistants and agentic systems.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-23T15:15:37Z",
+    "updated": "2026-07-23T15:15:37Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.SE"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21412v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21412v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "Euclid-MCP adds a standardized MCP layer over SWI-Prolog so LLMs can offload multi-step logical reasoning to a deterministic symbolic engine.",
+      "engineering_relevance": "It provides a practical, tool-augmented reasoning substrate for compliance and security workflows where correctness, traceability, and reproducibility matter.",
+      "method": [
+        "Introduces Euclid-IR, a human-readable Horn-clause intermediate representation that LLMs can generate reliably.",
+        "Compiles Euclid-IR to Prolog or other backends and exposes a compact translate-run-inspect-repair tool loop.",
+        "Returns proof traces and derivation logs so clients can inspect and refine reasoning steps."
+      ],
+      "evidence_signal": "The abstract reports evaluation on an IT security and compliance use case: LLMs work on small knowledge bases, but hallucinate on larger ones, while Euclid-MCP produces exact answers with lower latency and more compact outputs.",
+      "watch_item": "Performance depends on the quality of the translated rules and backend integration, so malformed Euclid-IR or Prolog-specific constraints may limit portability or correctness.",
+      "hashtags": [
+        "#MCP",
+        "#Prolog",
+        "#NeuroSymbolicAI",
+        "#LLMReasoning",
+        "#ComplianceAI"
+      ],
+      "paper_id": "2026-07-23-arxiv-euclid_mcp_a_model_context_protocol_server_for_deterministic_logical_reasoning_via_prolog",
+      "paper_title": "Euclid-MCP: A Model Context Protocol Server for Deterministic Logical Reasoning via Prolog",
+      "paper_date": "2026-07-23",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-26T15:09:18",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-benchmarking_agents_for_proving_theorems_in_quantum_algorithms_and_quantum_information",
+    "arxiv_id": "2607.21533v1",
+    "date": "2026-07-23",
+    "title": "Benchmarking Agents for Proving Theorems in Quantum Algorithms and Quantum Information",
+    "authors": "Lei Zhang, Yusheng Zhao, Yimeng Cao, Ranyiliu Chen, Mingrui Jing, Jizhe Lai",
+    "abstract": "Formal verification is becoming increasingly practical for quantum computing, yet the ability of AI agents to construct machine-checkable proofs in this domain remains unmeasured. We introduce Lean-QuantumAlg-Bench and Lean-QIT-Bench, two Lean 4 benchmarks containing 36 and 40 theorem-completion tasks for quantum algorithms and quantum information theory, respectively. Every task compiles in a fixed environment and is evaluated by deterministic proof checking and targeted semantic review, with difficulty weights assigned before model execution. We evaluate four models-GPT-5.5, Kimi K3, DeepSeek V4-Pro, and MiniMax M3-within a common theorem-proving framework under two settings: a task-only baseline and library-augmented deduction (LAD), which additionally provides access to a verified domain library. The highest difficulty-weighted scores are 60.4 out of 100 on the quantum-algorithm benchmark and 59.6 out of 100 on the quantum-information benchmark. LAD improves both score and completion rate in all eight model-benchmark comparisons, with gains of up to 15.9 points, providing evidence that verified libraries can strengthen domain-specific proof agents. The results reveal recurring weaknesses of agentic proving in areas such as quantum simulation, quantum learning, quantum information measures, and entanglement theory. Monetary and wall-clock costs per score point also vary substantially across models, highlighting important capability-efficiency trade-offs. We expect these benchmarks to establish a reproducible baseline for developing more capable and reliable proof agents, and to pave the way toward self-evolving AI scientists for advancing quantum information science.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-23T17:19:21Z",
+    "updated": "2026-07-23T17:19:21Z",
+    "primary_category": "quant-ph",
+    "categories": [
+      "quant-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21533v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21533v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "The paper introduces two Lean 4 quantum theorem benchmarks and shows that library-augmented agents prove more theorems more reliably than task-only agents.",
+      "engineering_relevance": "It provides a reproducible way to measure and improve AI proof agents for quantum algorithms and quantum information, with direct implications for verified scientific automation.",
+      "method": [
+        "Built Lean-QuantumAlg-Bench (36 tasks) and Lean-QIT-Bench (40 tasks) for theorem completion.",
+        "Evaluated GPT-5.5, Kimi K3, DeepSeek V4-Pro, and MiniMax M3 in a common proving framework.",
+        "Compared task-only prompting against library-augmented deduction (LAD) using a verified domain library."
+      ],
+      "evidence_signal": "All tasks compile in a fixed environment and are scored by deterministic proof checking plus targeted semantic review; LAD improved score and completion rate in all 8 model-benchmark comparisons, with top weighted scores of 60.4 and 59.6.",
+      "watch_item": "The benchmarks are domain-specific and still expose weaknesses in simulation, learning, information measures, and entanglement proofs, so results may not transfer to broader theorem-proving settings.",
+      "hashtags": [
+        "#QuantumComputing",
+        "#FormalVerification",
+        "#Lean4",
+        "#AIAgents",
+        "#TheoremProving"
+      ],
+      "paper_id": "2026-07-23-arxiv-benchmarking_agents_for_proving_theorems_in_quantum_algorithms_and_quantum_information",
+      "paper_title": "Benchmarking Agents for Proving Theorems in Quantum Algorithms and Quantum Information",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-26T15:09:21",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-ai_assistants_overassist",
+    "arxiv_id": "2607.21306v1",
+    "date": "2026-07-23",
+    "title": "AI Assistants Overassist",
+    "authors": "Verona Teo, Raghav Jain, Tobias Gerstenberg, Max Kleiman-Weiner",
+    "abstract": "Large language models (LLMs) are increasingly used as tutors and thought partners, helping users reason through problems. While guidance from AI assistants can scaffold thinking and foster learning, such benefits depend on how they help--for instance, intervening too early or too frequently may hinder true learning and cognitive engagement. Yet how AI systems navigate intervention decisions during problem-solving remains poorly understood. Here, we introduce Int-Bench, a simulation-based benchmark for evaluating LLM interventions during learning. Int-Bench simulates a \"student\" solving a problem while a \"teacher\" monitors the student's reasoning and decides whether, when, and how to intervene. Across three domains--code debugging, mathematics, and brain teasers--we evaluate LLM teachers on the frequency and timing of interventions, as well as their impact on both immediate task success and generalization to new problems. We also compare LLMs to humans, finding that LLMs intervene more frequently and earlier than humans. Moreover, in contrast to humans, they tend to provide complete solutions rather than targeted hints. These findings suggest that current LLM assistants often optimize for short-term success rather than supporting the reasoning processes needed for deeper learning and long-term success.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-23T13:30:01Z",
+    "updated": "2026-07-23T13:30:01Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.CY",
+      "cs.HC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21306v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21306v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "LLM tutors often overintervene—acting too early and too often—and this can improve immediate answers while weakening deeper learning.",
+      "engineering_relevance": "For AI tutoring and copilots, intervention policy matters as much as correctness: systems should prefer timed hints over full solutions to preserve user reasoning and transfer.",
+      "method": [
+        "Introduced Int-Bench, a simulation benchmark for teacher-style interventions during problem solving.",
+        "Compared LLM and human teachers across code debugging, mathematics, and brain teasers.",
+        "Evaluated when and how often assistants intervene, plus effects on immediate success and generalization."
+      ],
+      "evidence_signal": "Across three simulated domains, the benchmark shows LLMs intervene more frequently and earlier than humans, and they more often give complete solutions instead of targeted hints.",
+      "watch_item": "Simulation-based results may not fully capture real learner behavior, so deployment should validate intervention policies with human users before optimization.",
+      "hashtags": [
+        "#LLM",
+        "#AIEducation",
+        "#HumanAIInteraction",
+        "#ScientificMachineLearning",
+        "#Benchmarking"
+      ],
+      "paper_id": "2026-07-23-arxiv-ai_assistants_overassist",
+      "paper_title": "AI Assistants Overassist",
+      "paper_date": "2026-07-23",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-26T15:09:24",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-expert_behavior_prior_reinforcement_learning",
+    "arxiv_id": "2607.21302v1",
+    "date": "2026-07-23",
+    "title": "Expert Behavior Prior Reinforcement Learning",
+    "authors": "Gong Gao, Weidong Zhao, Xianhui Liu, Ning Jia",
+    "abstract": "Behavior prior reinforcement learning (BPRL) has emerged as a promising paradigm to improve sample efficiency in online reinforcement learning (RL) by leveraging policy priors derived from offline demonstrations. However, most existing BPRL methods rely on static offline datasets, which often suffer from low data diversity and suboptimal trajectory quality. This reliance restricts the effectiveness of policy priors, hindering both policy exploitation and stability during online training. Consequently, agents are prone to inefficient exploration and unstable learning dynamics. To address these limitations, we deviate from existing offline pre-training methods and propose an Expert Behavior Prior (EBP) algorithm. Specifically, we introduce a Q-guided conditional variational autoencoder (Q-CVAE) that learns to generate expert policy priors directly from the online replay buffer. This enables the generation of high-value actions for guiding policy updates without relying on pre-collected expert trajectories. To further enhance policy exploitation, we propose an expert policy guidance (EPG) mechanism that selects expert actions from a generative support set, and we integrate a policy gradient correction (PGC) module to harmonize Q-guidance with expert supervision, promoting stable and consistent policy improvement. Extensive experiments conducted on robotic control (Gym, PyBullet) and industrial control (DMControl) benchmarks demonstrate that EBP significantly outperforms state-of-the-art online RL algorithms, achieving higher sample efficiency and more stable convergence.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-23T13:26:57Z",
+    "updated": "2026-07-23T13:26:57Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21302v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21302v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "EBP replaces static offline behavior priors with a Q-guided generative prior learned from the online replay buffer to improve exploration, stability, and sample efficiency.",
+      "engineering_relevance": "This is relevant for autonomous robotics and industrial control because it can reduce reliance on expert demonstrations while improving online RL performance in real systems.",
+      "method": [
+        "Train a Q-guided conditional VAE (Q-CVAE) on online replay data to generate high-value expert-like action priors.",
+        "Use Expert Policy Guidance (EPG) to select actions from the generative support set for policy exploitation.",
+        "Apply Policy Gradient Correction (PGC) to align Q-guidance with expert supervision and stabilize updates."
+      ],
+      "evidence_signal": "The abstract reports extensive evaluation on Gym, PyBullet, and DMControl benchmarks, where EBP outperforms state-of-the-art online RL methods with higher sample efficiency and more stable convergence.",
+      "watch_item": "Performance may depend on the quality and coverage of the online replay buffer, and the added generative and correction modules could increase training complexity.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#BehaviorPrior",
+        "#OfflineToOnlineRL",
+        "#RoboticsControl",
+        "#SampleEfficiency"
+      ],
+      "paper_id": "2026-07-23-arxiv-expert_behavior_prior_reinforcement_learning",
+      "paper_title": "Expert Behavior Prior Reinforcement Learning",
+      "paper_date": "2026-07-23",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-26T15:09:27",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-expanding_flow_maps",
+    "arxiv_id": "2607.21585v1",
+    "date": "2026-07-23",
+    "title": "Expanding Flow Maps",
+    "authors": "Sophia Tang, Pranam Chatterjee",
+    "abstract": "Flow-based generative models have enabled remarkable progress in fast and controllable generation across continuous and discrete state spaces, yet existing parameterizations are constrained to fixed dimensions or fixed sequence lengths. Here, we introduce Expanding Generative Flows (EFlows), which define flows between distributions of increasing dimensionality along an expanding interpolant that grows the state by augmenting it with conditional noise. Building on this construction, we propose Expanding Flow Maps (EFMs), a new class of flow maps that distill the expanding interpolant into efficient few-step generative models. Each EFM factors the map between any two timesteps into two learnable operations: an expand operator, which augments the state space with new coordinates or tokens conditioned on the current state, and a transport map, which pushes the expanded state forward along the interpolant. Composing these operators yields a single map that jointly expands and denoises the state, recovering existing fixed-canvas flows and flow maps as the special case in which the expand operator is the identity. We further extend the framework to the discrete simplex, enabling variable-size graph generation and variable-length sequence generation. Across both continuous and discrete modalities, we establish EFlows and EFMs as a principled framework for settings in which output size is itself a learned, controllable degree of freedom.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-23T17:57:38Z",
+    "updated": "2026-07-23T17:57:38Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21585v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21585v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Expanding Generative Flows and Expanding Flow Maps let a model learn both what to generate and how large the output should be by expanding the state space during the flow process.",
+      "engineering_relevance": "This provides a principled way to build fast, controllable generative systems for variable-size data such as graphs and sequences, instead of requiring a fixed canvas or fixed length.",
+      "method": [
+        "Define an expanding interpolant that grows the state by adding conditional noise or new coordinates/tokens.",
+        "Factor each map into an expand operator followed by a transport map that denoises and advances the expanded state.",
+        "Recover standard fixed-size flow models as the special case where expansion is the identity."
+      ],
+      "evidence_signal": "The abstract reports that the framework is extended to both continuous and discrete simplex settings, enabling variable-size graph generation and variable-length sequence generation.",
+      "watch_item": "Because the method relies on learnable expansion plus transport, training stability and correct control of size growth may be challenging in practice.",
+      "hashtags": [
+        "#GenerativeAI",
+        "#FlowModels",
+        "#VariableLengthGeneration",
+        "#GraphGeneration",
+        "#ScientificML"
+      ],
+      "paper_id": "2026-07-23-arxiv-expanding_flow_maps",
+      "paper_title": "Expanding Flow Maps",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-26T15:09:29",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-agent_guided_relational_concept_discovery_toward_interpretable_surgical_margin_assessment",
+    "arxiv_id": "2607.21437v1",
+    "date": "2026-07-23",
+    "title": "Agent-Guided Relational Concept Discovery: Toward Interpretable Surgical Margin Assessment",
+    "authors": "Nooshin Maghsoodi, Amoon Jamzad, Robert Policelli, Mohammad Farahmand, Dilakshan Srikanthan, Martin Kaufmann",
+    "abstract": "Deep learning models can effectively use Rapid Evaporative Ionization Mass Spectrometry (REIMS) data for surgical margin assessment. However, their clinical adoption remains challenging due to limited generalization to operating room conditions. This difficulty arises because models are typically trained on labeled spectra collected from resected tissue samples, while they must operate on noisy, unlabeled data acquired directly during surgery. In addition, the black-box nature of deep learning models makes it difficult to understand and systematically improve their behavior. Concept-based learning offers a promising way to address these challenges by mapping raw measurements to human-understandable concepts. However, supervised concept-based approaches rely on concept annotations, which are difficult to obtain in complex mass spectrometry workflows. We propose Agent-Guided Concept Discovery, a framework that learns meaningful concepts directly from data without requiring predefined concept labels. During training, a reasoning agent refines semantic descriptions of the learned concepts and adaptively adjusts their weight based on diagnostic relevance. These concepts are further grounded using a biochemical knowledge graph to ensure consistency with known metabolic relationships. Across Skin and Breast Cancer datasets, our model improves balanced accuracy and sensitivity over the baseline. In a representative intraoperative case, it shows fewer false positives, indicating better generalization to surgical conditions.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-07-23T15:44:04Z",
+    "updated": "2026-07-23T15:44:04Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21437v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21437v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Agent-Guided Concept Discovery learns interpretable, diagnostically relevant concepts directly from REIMS data to improve surgical margin assessment without needing predefined concept labels.",
+      "engineering_relevance": "The approach aims to make intraoperative mass-spectrometry models more clinically reliable by improving generalization under noisy operating-room conditions while keeping decisions explainable.",
+      "method": [
+        "Learns concepts from unlabeled REIMS spectra instead of requiring concept annotations",
+        "Uses a reasoning agent to refine concept names/descriptions and reweight them by diagnostic relevance",
+        "Grounds learned concepts with a biochemical knowledge graph for metabolic consistency"
+      ],
+      "evidence_signal": "Across Skin and Breast Cancer datasets, the model improves balanced accuracy and sensitivity over the baseline, and a representative intraoperative case shows fewer false positives.",
+      "watch_item": "Clinical deployment may still depend on the quality of the knowledge graph and how robustly the learned concepts transfer across hospitals, instruments, and surgical workflows.",
+      "hashtags": [
+        "#ExplainableAI",
+        "#MassSpectrometry",
+        "#SurgicalAI",
+        "#ConceptLearning",
+        "#HealthcareML"
+      ],
+      "paper_id": "2026-07-23-arxiv-agent_guided_relational_concept_discovery_toward_interpretable_surgical_margin_assessment",
+      "paper_title": "Agent-Guided Relational Concept Discovery: Toward Interpretable Surgical Margin Assessment",
+      "paper_date": "2026-07-23",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-07-26T15:09:32",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-bridging_the_gap_between_plausibility_and_admissibility_constraint_aware_flow_maps_for_dyn",
+    "arxiv_id": "2607.21421v1",
+    "date": "2026-07-23",
+    "title": "Bridging the Gap Between Plausibility and Admissibility: Constraint-Aware Flow Maps for Dynamic Graph Systems",
+    "authors": "Michael Romei de Socio, Gian Luca Pozzato, Alessio Merlo",
+    "abstract": "Generative models can support decision-making under uncertainty by producing ensembles of plausible future system trajectories, but statistical plausibility does not ensure structural feasibility. This study investigates whether post-sampling symbolic constraints can improve the reliability of generative trajectory modeling in dynamic graph-structured systems. A conditional diffusion model generates future graph-state trajectories from partial observations, while an external symbolic layer applies hard filtering, soft weighting, or projection-based repair. The framework is evaluated on two controlled synthetic regimes: a compact graph and a medium-complexity dependency graph, using metrics for structural validity, sample efficiency, diversity, robustness, and calibration. In the compact regime, the model produces an invalid probability mass of 0.002996, indicating an almost entirely admissible trajectory manifold. Under the same architecture and training protocol, invalid mass increases to 0.155929 in the medium-complexity regime. Hard filtering removes all invalid retained trajectories while preserving 84.4% of generated samples, whereas soft weighting preserves effective sample size but yields only limited validity gains. Family-level analysis shows that dependency constraints account for nearly all observed inadmissibility. These results indicate that statistical plausibility and structural admissibility are distinct reliability properties and that symbolic constraint handling becomes more valuable as graph-structural complexity increases.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-23T15:25:42Z",
+    "updated": "2026-07-23T15:25:42Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21421v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21421v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Post-sampling symbolic constraints can turn a statistically plausible trajectory generator into a structurally admissible one, especially as graph complexity rises.",
+      "engineering_relevance": "For dynamic graph systems, combining diffusion-based generation with constraint checking/repair improves the reliability of predicted trajectories for planning and decision support.",
+      "method": [
+        "Conditional diffusion generates future graph-state trajectories from partial observations.",
+        "An external symbolic layer enforces constraints via hard filtering, soft weighting, or projection-based repair.",
+        "Performance is compared across two synthetic graph regimes using validity, sample efficiency, diversity, robustness, and calibration metrics."
+      ],
+      "evidence_signal": "Invalid probability mass was very low in the compact graph (0.002996) but much higher in the medium-complexity graph (0.155929); hard filtering eliminated invalid retained trajectories while keeping 84.4% of generated samples.",
+      "watch_item": "Constraint handling may improve admissibility, but hard filtering can reduce retained sample diversity and the approach was validated only on controlled synthetic regimes.",
+      "hashtags": [
+        "#DynamicGraphs",
+        "#DiffusionModels",
+        "#ConstraintAwareAI",
+        "#GenerativeModeling",
+        "#ScientificComputing"
+      ],
+      "paper_id": "2026-07-23-arxiv-bridging_the_gap_between_plausibility_and_admissibility_constraint_aware_flow_maps_for_dyn",
+      "paper_title": "Bridging the Gap Between Plausibility and Admissibility: Constraint-Aware Flow Maps for Dynamic Graph Systems",
+      "paper_date": "2026-07-23",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-26T15:09:34",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-23-arxiv-same_dangerous_objective_opposite_advice_direct_exposure_versus_multi_agent_mediation",
+    "arxiv_id": "2607.21518v1",
+    "date": "2026-07-23",
+    "title": "Same Dangerous Objective, Opposite Advice: Direct Exposure versus Multi-Agent Mediation",
+    "authors": "Linjun Li",
+    "abstract": "Even a current high-capability LLM can appear safer when shown a dangerous objective directly than when other agents transform and relay its direction. Using OpenAI's gpt-5.6-sol model alias, we test 25 pre-specified mirrored trade-off profiles. Direct exposure to an objective authorizing concealment, fabrication, and pressure produced advice net opposed to its target. After an Id and Censor transformed the same objective into affect and a constraint-rewritten, target-bearing intention, the user-facing Superego---which saw the preferred direction but not the raw objective, its manipulative clauses, or its source---produced advice net aligned with the target. This behavioral reverse shift is consistent with the model recognizing or distrusting the manipulative motive, although we do not identify its internal mechanism. The second result exposes a compositional safety gap: a current high-capability model can be used as the user-facing component of an automated, multi-stage workflow serving an explicitly manipulative objective. The workflow can keep the raw instruction, its manipulation-authorizing clauses, and its provenance outside the downstream model's context while preserving the objective's target direction. A user with endpoint-only access likewise cannot directly inspect those upstream messages including the objective.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-23T17:02:11Z",
+    "updated": "2026-07-23T17:02:11Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.21518v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.21518v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "A high-capability LLM can reject a dangerous objective when exposed to it directly, yet still produce target-aligned advice when the same objective is mediated and transformed by other agents.",
+      "engineering_relevance": "This reveals a compositional safety gap for multi-agent systems: downstream models may appear safe while still enabling manipulative workflows that hide the raw objective and its provenance.",
+      "method": [
+        "Tested 25 pre-specified mirrored trade-off profiles.",
+        "Compared direct exposure to a dangerous objective versus a mediated pipeline with Id, Censor, and user-facing Superego roles.",
+        "Measured whether final advice aligned with or opposed the intended target direction."
+      ],
+      "evidence_signal": "The abstract reports a reverse shift in advice: direct exposure produced net-opposed guidance, while mediated exposure produced net-aligned guidance across the evaluated profiles.",
+      "watch_item": "The result suggests a vulnerability in multi-stage agent workflows, but the abstract does not establish the internal mechanism or generalize beyond the tested model and prompt setup.",
+      "hashtags": [
+        "#LLMs",
+        "#AISafety",
+        "#MultiAgentSystems",
+        "#Prompting",
+        "#ScientificAI"
+      ],
+      "paper_id": "2026-07-23-arxiv-same_dangerous_objective_opposite_advice_direct_exposure_versus_multi_agent_mediation",
+      "paper_title": "Same Dangerous Objective, Opposite Advice: Direct Exposure versus Multi-Agent Mediation",
+      "paper_date": "2026-07-23",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-26T15:09:37",
+      "generator": "openai"
+    }
+  }
+]

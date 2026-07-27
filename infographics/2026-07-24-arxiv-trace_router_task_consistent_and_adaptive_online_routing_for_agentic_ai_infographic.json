@@ -1,0 +1,24 @@
+{
+  "key_insight": "TRACE-Router routes an entire agentic task to one LLM at admission, then learns from the task’s final outcome so routing decisions align with delayed, task-level supervision.",
+  "engineering_relevance": "This gives practitioners a practical way to improve accuracy-latency trade-offs in long-horizon AI workflows without needing explicit task-complexity prediction.",
+  "method": [
+    "Uses a contextual bandit to choose the backend model once per task",
+    "Pins all subsequent LLM calls in the workflow to the selected model",
+    "Updates the routing policy from terminal task reward, jointly considering accuracy and latency"
+  ],
+  "evidence_signal": "Across three agentic benchmarks, TRACE-Router improved the accuracy-latency frontier; on tau2-Bench it beat latency-matched model interpolation by 7–8 accuracy points, and on Terminal-Bench it achieved 7.1 higher accuracy points with 36% lower latency than the strongest single-model baseline.",
+  "watch_item": "Because all calls in a task are pinned to one backend, performance may depend on how well the admission-time decision captures task difficulty and workload shifts.",
+  "hashtags": [
+    "#AgenticAI",
+    "#LLMRouting",
+    "#ContextualBandit",
+    "#AIPerformance",
+    "#LatencyAccuracyTradeoff"
+  ],
+  "paper_id": "2026-07-24-arxiv-trace_router_task_consistent_and_adaptive_online_routing_for_agentic_ai",
+  "paper_title": "TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI",
+  "paper_date": "2026-07-24",
+  "paper_category": "AI Scientists and Research Agents",
+  "generated_at": "2026-07-27T16:24:45",
+  "generator": "openai"
+}

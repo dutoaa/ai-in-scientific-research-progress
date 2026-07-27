@@ -1,0 +1,24 @@
+{
+  "key_insight": "Off-policy ratio error in asynchronous RL is not uniform: low-entropy tokens amplify harmful stale-data noise, while high-entropy tokens reflect legitimate exploration, so a single magnitude threshold is miscalibrated.",
+  "engineering_relevance": "Entropy-aware trust regions can make asynchronous LLM post-training more stable and faster by filtering deviations according to token uncertainty rather than raw ratio size.",
+  "method": [
+    "Scale each token’s off-policy deviation by its local entropy.",
+    "Use an entropy-scaled trust region instead of a uniform importance-ratio cutoff.",
+    "Avoid extra forward passes or explicit model-version switching detection."
+  ],
+  "evidence_signal": "On long-horizon agentic tasks and mathematical reasoning benchmarks, the method outperformed prior asynchronous approaches and matched synchronous GRPO accuracy while reaching 2.6× faster training.",
+  "watch_item": "Entropy scaling adds a new hyperparameter/thresholding policy, so careful calibration is needed to avoid over-accepting noisy updates or suppressing useful exploration.",
+  "hashtags": [
+    "#ReinforcementLearning",
+    "#LLMPostTraining",
+    "#AsynchronousRL",
+    "#TrustRegions",
+    "#EntropyAware"
+  ],
+  "paper_id": "2026-07-24-arxiv-deconstructing_off_policy_ratios_entropy_scaled_trust_regions_for_asynchronous_reinforceme",
+  "paper_title": "Deconstructing Off-Policy Ratios: Entropy-Scaled Trust Regions for Asynchronous Reinforcement Learning",
+  "paper_date": "2026-07-24",
+  "paper_category": "AI Scientists and Research Agents",
+  "generated_at": "2026-07-27T16:24:14",
+  "generator": "openai"
+}
