@@ -1,24 +1,24 @@
 {
-  "key_insight": "Latent PDE mapping lets physics-informed models learn on a fixed latent geometry while correctly accounting for deformed physical geometries, improving generalization from very few training shapes.",
-  "engineering_relevance": "This can make surrogate models for PDE-based engineering simulation more data-efficient and more transferable across changing shapes or patient-specific geometries.",
+  "key_insight": "Latent PDE mapping transfers PDE residuals and boundary conditions to a common latent geometry, enabling physics-informed models to generalize across unseen shapes with sparse training data.",
+  "engineering_relevance": "This can reduce the amount of geometry-specific simulation data needed to train surrogate models for complex engineering systems such as cardiac electrophysiology.",
   "method": [
-    "Pull back PDE residuals and boundary conditions from each physical geometry to a predefined latent domain using the deformation gradient.",
-    "Compute geometry-consistent shape gradients automatically within physics-informed neural networks and deep operator networks.",
-    "Apply the approach to the anisotropic Aliev-Panfilov cardiac electrophysiology PDE in 2D and 3D."
+    "Map each physical geometry to a predefined latent domain using the deformation gradient.",
+    "Pull back PDE residuals and boundary conditions so shape gradients are computed consistently across geometries.",
+    "Train physics-informed neural networks and deep operator networks in this latent formulation."
   ],
-  "evidence_signal": "The authors trained on only 15 geometries and report about a 4–6× reduction in mean relative L2 error on select geometric families, with modest training overhead and negligible inference cost.",
-  "watch_item": "Benefits were not uniform across all geometry parameterizations, so performance may depend on the deformation family and how well the latent mapping matches the geometry variation.",
+  "evidence_signal": "The authors trained on only 15 geometrically parameterized samples in 2D and 3D and reported about a 4–6× reduction in mean relative L2 error on select geometry families.",
+  "watch_item": "Benefits were geometry-dependent, with only modest gains for affine and shear-deformed cases, so the approach may not help equally across all deformation types.",
   "hashtags": [
     "#ScientificMachineLearning",
-    "#PhysicsInformedLearning",
+    "#PhysicsInformedNN",
+    "#OperatorLearning",
     "#PDEs",
-    "#SurrogateModeling",
-    "#CardiacElectrophysiology"
+    "#GeometricGeneralization"
   ],
   "paper_id": "2026-07-24-arxiv-latent_pde_mapping_for_efficient_physics_informed_learning_across_geometries_with_limited",
   "paper_title": "Latent PDE mapping for efficient physics-informed learning across geometries with limited data",
   "paper_date": "2026-07-24",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-07-27T16:24:34",
+  "generated_at": "2026-07-28T16:11:55",
   "generator": "openai"
 }

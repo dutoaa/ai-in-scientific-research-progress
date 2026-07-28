@@ -1,13 +1,13 @@
 {
-  "key_insight": "Accurately approximating the score function in a diffusion model can be converted into a quantitative guarantee that the generated distribution is close to the target data distribution in KL divergence, with an added term for terminal prior mismatch.",
-  "engineering_relevance": "This gives practitioners a theoretical bridge from neural network approximation quality to end-to-end generative fidelity, helping guide model capacity, noise schedules, and reverse-process initialization.",
+  "key_insight": "Accurate neural network approximation of the score function can be translated into a quantitative guarantee that the reverse diffusion model approximates the target data distribution in KL divergence, up to a terminal prior mismatch.",
+  "engineering_relevance": "This gives practitioners a principled error link between model capacity/score accuracy and generative fidelity, helping guide architecture and noise-schedule design for score-based diffusion systems.",
   "method": [
-    "Use Hornik-style universal approximation to relate neural networks to score-function approximation.",
-    "Apply Girsanov's theorem on path space to bound divergence between reverse diffusion trajectories.",
-    "Use the data processing inequality for relative entropy to transfer path-space error into distribution-level KL bounds."
+    "Uses Hornik-style universal approximation theory to justify score-function approximation by neural networks.",
+    "Applies Girsanov’s theorem on path space to relate score error to distributional error in the reverse diffusion process.",
+    "Uses the data processing inequality for relative entropy to derive an explicit KL bound including noise schedule and terminal prior mismatch."
   ],
-  "evidence_signal": "The paper is theoretical and derives an explicit upper bound from approximation theory; the abstract does not report experiments or numerical evaluation.",
-  "watch_item": "The guarantee still depends on the mismatch between the forward diffusion terminal distribution and the chosen reverse-process prior, so poor prior initialization can limit performance even with accurate score approximation.",
+  "evidence_signal": "The paper is theory-driven rather than empirical; it provides an explicit upper bound and proof-based guarantee instead of reporting experimental results.",
+  "watch_item": "The bound is limited by the mismatch between the forward diffusion terminal distribution and the chosen reverse-process prior, which can leave irreducible approximation error.",
   "hashtags": [
     "#DiffusionModels",
     "#ScoreMatching",
@@ -19,6 +19,6 @@
   "paper_title": "From Score Approximation to Distribution Approximation in Score-Based Diffusion Models",
   "paper_date": "2026-07-24",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-07-27T16:25:01",
+  "generated_at": "2026-07-28T16:12:25",
   "generator": "openai"
 }

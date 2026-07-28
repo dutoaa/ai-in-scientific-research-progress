@@ -1,24 +1,24 @@
 {
-  "key_insight": "IQ-JEPA learns tissue sound speed and attenuation from ultrasound IQ data by first self-supervising on unlabeled channel data to predict masked latent regions, then fine-tuning on a small labeled simulation set.",
-  "engineering_relevance": "This reduces the need for expensive labeled ultrasound simulations and improves label efficiency for quantitative ultrasound workflows that need fast, accurate sound-speed estimation.",
+  "key_insight": "IQ-JEPA uses self-supervised pretraining on unlabeled ultrasound IQ data to learn phase-aware representations that dramatically improve sound-speed and attenuation estimation with far fewer labels.",
+  "engineering_relevance": "This reduces the cost and labeling burden of quantitative ultrasound, making faster and more scalable tissue property estimation more practical for real imaging systems.",
   "method": [
-    "Pretrain a joint-embedding predictive encoder on unlabeled complex IQ data by predicting masked-region representations from visible context.",
-    "Use a Hermitian Vision Transformer that operates directly on complex-valued IQ signals with phase-equivariant attention and phase-invariant feed-forward operations.",
-    "Fine-tune the pretrained encoder on simulated sound-speed maps and transfer the frozen features to sound speed and attenuation tasks."
+    "Pretrain a joint-embedding predictor to reconstruct masked IQ latent regions from visible context.",
+    "Use a Hermitian vision transformer that processes complex IQ data directly with phase-equivariant attention and phase-invariant conjugate-product features.",
+    "Fine-tune the pretrained encoder on simulated sound-speed maps and test transfer to attenuation and cross-distribution settings."
   ],
-  "evidence_signal": "On 79,293 Fullwave 2.5 simulations, pretraining with 63,435 unlabeled acquisitions achieved 15.60 m/s error at 10,000 labels and 8.71 m/s at full labels, outperforming supervised training in label efficiency.",
-  "watch_item": "Performance still depends on simulation quality and may transfer less cleanly across acquisition settings, so real-world validation and robustness checks are important.",
+  "evidence_signal": "On 79,293 Fullwave 2.5 simulations, pretraining on 63,435 unlabeled acquisitions achieved 15.60 m/s error at 10,000 labels and 8.71 m/s at full labels, with gains growing as labels decreased.",
+  "watch_item": "Performance depends on simulation-to-real transfer and the quality of unlabeled pretraining data, so generalization outside the studied phantom distributions may require further validation.",
   "hashtags": [
-    "#UltrasoundAI",
     "#ScientificMachineLearning",
+    "#UltrasoundAI",
     "#SelfSupervisedLearning",
     "#QuantitativeUltrasound",
-    "#TransformerModels"
+    "#VisionTransformer"
   ],
   "paper_id": "2026-07-24-arxiv-iq_jepa_a_joint_embedding_predictive_architecture_with_a_hermitian_vision_transformer_for",
   "paper_title": "IQ-JEPA: A Joint-Embedding Predictive Architecture with a Hermitian Vision Transformer for Sound Speed and Attenuation Estimation from Ultrasound IQ Data",
   "paper_date": "2026-07-24",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-07-27T16:24:52",
+  "generated_at": "2026-07-28T16:12:16",
   "generator": "openai"
 }
