@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "2026-07-24-arxiv-deconstructing_off_policy_ratios_entropy_scaled_trust_regions_for_asynchronous_reinforceme",
+    "arxiv_id": "2607.22186v1",
+    "date": "2026-07-24",
+    "title": "Deconstructing Off-Policy Ratios: Entropy-Scaled Trust Regions for Asynchronous Reinforcement Learning",
+    "authors": "Guanqun Zhao, Zijun Xie, Binbin Zheng, Enlei Gong, Jiafeng Lu, Yehan Yang",
+    "abstract": "Asynchronous reinforcement learning (RL) accelerates large language model (LLM) post-training by overlapping rollout generation with policy optimization, but the resulting stale, off-policy data can destabilize optimization and ultimately cause policy collapse. Existing methods typically retain or discard tokens based solely on the magnitude of their importance ratios, applying the same threshold uniformly across token positions. In this work, we reveal that the natural scale of the importance ratio varies systematically with token entropy. Under asynchronous dynamics, this entropy-ratio scaling dictates two distinct phenomena: at low entropy, the inherent train-inference discrepancy is drastically amplified into substantial sampling noise; at high entropy, in-flight weight updates naturally induce pronounced, legitimate exploratory deviations. Consequently, magnitude-only correction inadvertently admits the amplified noise while strictly masking out the essential exploration triggered by in-flight updates. To address this, we propose the Entropy-Scaled Trust Region (ESTR), which scales each token's off-policy deviation by its local entropy, requiring no auxiliary forward passes or explicit version-switch detection. Across long-horizon agentic tasks and mathematical reasoning benchmarks, ESTR consistently outperforms existing asynchronous methods and achieves the best train-inference consistency. Compared with synchronous GRPO, ESTR attains comparable accuracy while improving training speed by $2.6\\times$.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-24T10:55:42Z",
+    "updated": "2026-07-24T10:55:42Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22186v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22186v1"
+      }
+    ],
+    "score": 80,
+    "infographic": {
+      "key_insight": "Off-policy importance ratios in asynchronous RL are not uniformly meaningful: their natural scale depends on token entropy, so a single magnitude threshold can suppress useful exploration while admitting harmful noise.",
+      "engineering_relevance": "Entropy-aware filtering can make asynchronous LLM post-training more stable and faster by improving train-inference consistency without extra forward passes or version-switch checks.",
+      "method": [
+        "Estimate each token’s off-policy deviation relative to its local entropy.",
+        "Apply an entropy-scaled trust region instead of a uniform ratio threshold.",
+        "Keep exploratory high-entropy updates while downweighting amplified low-entropy sampling noise."
+      ],
+      "evidence_signal": "Across long-horizon agentic tasks and mathematical reasoning benchmarks, the method outperformed existing asynchronous approaches and matched synchronous GRPO accuracy while achieving 2.6× faster training.",
+      "watch_item": "The approach depends on reliable entropy estimates, so behavior may be sensitive to token-level calibration and the choice of trust-region scaling.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#LLMAlignment",
+        "#AsynchronousTraining",
+        "#TrustRegion",
+        "#EntropyAware"
+      ],
+      "paper_id": "2026-07-24-arxiv-deconstructing_off_policy_ratios_entropy_scaled_trust_regions_for_asynchronous_reinforceme",
+      "paper_title": "Deconstructing Off-Policy Ratios: Entropy-Scaled Trust Regions for Asynchronous Reinforcement Learning",
+      "paper_date": "2026-07-24",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-28T16:11:34",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-neptuna_a_comprehensive_machine_learning_framework_for_benchmarking_complex_multiphase_flo",
+    "arxiv_id": "2607.22280v1",
+    "date": "2026-07-24",
+    "title": "Neptuna: A Comprehensive Machine Learning Framework for Benchmarking Complex Multiphase Flows",
+    "authors": "Harish Ramachandran, Björn Kimpel, Thomas Paula, Josef Winter, Steffen Schmidt, Nikolaus Adams",
+    "abstract": "Compressible multiphase flows involving shocks and material interfaces arise in applications such as bubble collapse and droplet breakup, where strong nonlinear interactions produce complex interface deformation, mixing, and multiscale dynamics. Developing reliable machine learning surrogates for these flows remains challenging due to the simultaneous presence of compressibility, sharp discontinuities, and multiphase effects. In this work, we introduce the first large-scale benchmark specifically designed for shock-driven compressible multiphase flows, comprising 2.4 TB of high-fidelity 2D and 3D datasets \\footnote{Dataset repo: https://huggingface.co/FluidVerse. Dataset sample videos, metadata.json, inference rollout plots from autoregressive rollout of the trained baselines are provided in the supplementary\\_material.zip } featuring shock-induced bubble collapse and droplet breakup. We evaluate diverse surrogate model families on our benchmarking framework: Neptuna \\footnote{Benchmarking repo: https://anonymous.4open.science/r/neptuna-A4E3}, including convolutional, spectral, transformer-based, and pre-trained PDE foundation models. Beyond standard MSE training, we investigate composite losses combining MSE with Sobolev, interface-aware, and structure-aware terms, together with adaptive loss balancing using SoftAdapt and GradNorm. Evaluation includes pointwise, spectral, feature-focused, structural, and physics-informed metrics. Results show that no single model performs best across all datasets and metrics, while composite losses significantly improve interface preservation and spectral fidelity. Among adaptive weighting strategies, SoftAdapt provides the most consistent improvements with almost no overhead compared to MSE-only training.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-24T13:20:01Z",
+    "updated": "2026-07-24T13:20:01Z",
+    "primary_category": "physics.flu-dyn",
+    "categories": [
+      "physics.flu-dyn",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22280v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22280v1"
+      }
+    ],
+    "score": 76,
+    "infographic": {
+      "key_insight": "Neptuna is the first large-scale benchmark built specifically to stress-test machine learning surrogates on shock-driven compressible multiphase flows, and it shows that no single model or loss dominates across all settings.",
+      "engineering_relevance": "The benchmark helps identify surrogate models and training strategies that better preserve interfaces, shocks, and spectral structure for practical bubble-collapse and droplet-breakup simulations.",
+      "method": [
+        "Built a 2.4 TB benchmark with high-fidelity 2D and 3D datasets for bubble collapse and droplet breakup.",
+        "Compared convolutional, spectral, transformer-based, and pre-trained PDE foundation models.",
+        "Tested MSE plus composite losses with Sobolev, interface-aware, and structure-aware terms, including SoftAdapt and GradNorm."
+      ],
+      "evidence_signal": "Evaluation spans pointwise, spectral, feature-focused, structural, and physics-informed metrics, with results showing composite losses improve interface preservation and spectral fidelity.",
+      "watch_item": "Performance gains may depend strongly on dataset type and metric choice, so improvements on the benchmark may not transfer uniformly to other multiphase flow regimes.",
+      "hashtags": [
+        "#ScientificML",
+        "#MultiphaseFlows",
+        "#Benchmarking",
+        "#PhysicsInformedAI",
+        "#SoftAdapt"
+      ],
+      "paper_id": "2026-07-24-arxiv-neptuna_a_comprehensive_machine_learning_framework_for_benchmarking_complex_multiphase_flo",
+      "paper_title": "Neptuna: A Comprehensive Machine Learning Framework for Benchmarking Complex Multiphase Flows",
+      "paper_date": "2026-07-24",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-28T16:11:36",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-optimization_of_time_consuming_experimental_conditions_using_pseudo_experimental_data_guid",
+    "arxiv_id": "2607.22238v1",
+    "date": "2026-07-24",
+    "title": "Optimization of time-consuming experimental conditions using pseudo-experimental data guided by adaptive polynomial regression",
+    "authors": "Hirotaka Sugawara, Yujin Taguchi, Kei Minagawa, Yusuke Hiki, Takashi Morikura, Akira Funahashi",
+    "abstract": "Bayesian optimization (BO) is an optimization method that sequentially proposes the next candidate explainable variables for optimizing target variables by balancing exploration and exploitation. BO is often used under a limited evaluation budget, such as hyperparameter tuning of deep learning. Despite its effectiveness, conventional BO may have poor convergence in practical experimental science where each evaluation is often costly and time-consuming. Recently, BO methods have been proposed that accelerate optimization by using pseudo-experimental data that simulate experimental data. However, when only a limited number of experimental data are available, the generated pseudo-experimental data may be of insufficient quality. In this study, we developed PolyBO to improve optimization time by generating high-quality pseudo-experimental data even when the number of trials is limited. PolyBO performs BO efficiently by generating pseudo-experimental data with an adaptively updated versatile parametric model. This low-capacity polynomial regression model is intended to enable efficient BO even with limited experimental data. PolyBO updates the BO surrogate model with a combined dataset consisting of experimental data and pseudo-experimental data and then performs optimization. Using synthetic benchmark functions with diverse landscapes, we found that PolyBO reduced the optimization time by a median of 42\\%. For a real-world material composition optimization problem, PolyBO reduced the optimization time by a median of 96\\% compared with conventional methods. Overall, PolyBO achieves efficient optimization in settings where each experiment requires a long time.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-24T12:16:53Z",
+    "updated": "2026-07-24T12:16:53Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22238v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22238v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "PolyBO speeds up costly experimental optimization by generating adaptive pseudo-experimental data with a low-capacity polynomial model and using it to guide Bayesian optimization.",
+      "engineering_relevance": "It can reduce the number of real experiments needed in time-consuming materials, process, or design optimization workflows.",
+      "method": [
+        "Build a polynomial regression surrogate that is adaptively updated as data arrive.",
+        "Generate pseudo-experimental data from the surrogate to enrich the training set.",
+        "Run Bayesian optimization on the combined real + pseudo dataset to propose the next experiment."
+      ],
+      "evidence_signal": "On synthetic benchmarks, PolyBO reduced optimization time by a median of 42%, and on a real material composition task it reduced time by a median of 96% versus conventional methods.",
+      "watch_item": "Performance may depend on whether the polynomial surrogate remains sufficiently accurate when only a few real experimental points are available.",
+      "hashtags": [
+        "#BayesianOptimization",
+        "#ScientificMachineLearning",
+        "#SurrogateModel",
+        "#ExperimentalOptimization",
+        "#MaterialsInformatics"
+      ],
+      "paper_id": "2026-07-24-arxiv-optimization_of_time_consuming_experimental_conditions_using_pseudo_experimental_data_guid",
+      "paper_title": "Optimization of time-consuming experimental conditions using pseudo-experimental data guided by adaptive polynomial regression",
+      "paper_date": "2026-07-24",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-28T16:11:39",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-complexity_bounds_and_approaches_to_learning_projected_gradient_descent_solver_iterates",
+    "arxiv_id": "2607.22467v1",
+    "date": "2026-07-24",
+    "title": "Complexity Bounds and Approaches to Learning Projected Gradient Descent Solver Iterates",
+    "authors": "Anjian Li, Ryne Beeson",
+    "abstract": "Data scarcity poses a fundamental challenge in training generative models to produce initial guesses for parametric optimization problems that are otherwise numerically expensive to solve. We therefore study a $k$-neighborhood data collection strategy that augments datasets of converged solutions with intermediate solver iterates, increasing the amount of training data without additional solver runs. To understand the benefits of this approach, we derive a generalization bound based on Rademacher complexity that reveals the role of the $k$-neighborhoods and related parameters. To achieve this result, we focus on one-sided box-constrained quadratic programs solved by projected gradient descent. We illustrate the behavior of this solver on two examples. The approach proposed in this paper enables a more capable DDDAS paradigm by improving the efficiency of the data-model-optimization loop. We finish by discussing two views of learning solver-iterate data and connect our analysis with GLENS, a new data-efficient global search method.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-24T16:31:30Z",
+    "updated": "2026-07-24T16:31:30Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22467v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22467v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "Augmenting scarce optimization datasets with intermediate projected-gradient-descent iterates can improve learning efficiency while admitting a Rademacher-complexity generalization bound that clarifies how k-neighborhood data helps.",
+      "engineering_relevance": "This provides a data-efficient way to build better warm-start or initial-guess models for expensive parametric optimization problems in DDDAS and related engineering workflows.",
+      "method": [
+        "Collect converged solutions and add solver iterates from a k-neighborhood around each run.",
+        "Analyze learnability with a generalization bound based on Rademacher complexity.",
+        "Focus the theory and examples on one-sided box-constrained quadratic programs solved by projected gradient descent."
+      ],
+      "evidence_signal": "The abstract reports two illustrative solver examples and a theoretical generalization analysis showing how k-neighborhood size and related parameters affect learning performance.",
+      "watch_item": "The approach is derived and demonstrated for a specific projected-gradient-descent quadratic-program setting, so performance and bounds may not transfer directly to other solvers or constraint types without adaptation.",
+      "hashtags": [
+        "#GenerativeAI",
+        "#Optimization",
+        "#ProjectedGradientDescent",
+        "#RademacherComplexity",
+        "#DD DAS"
+      ],
+      "paper_id": "2026-07-24-arxiv-complexity_bounds_and_approaches_to_learning_projected_gradient_descent_solver_iterates",
+      "paper_title": "Complexity Bounds and Approaches to Learning Projected Gradient Descent Solver Iterates",
+      "paper_date": "2026-07-24",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-28T16:11:44",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-integrated_order_dispatching_and_routing_for_last_mile_pickup_via_deep_reinforcement_learn",
+    "arxiv_id": "2607.22356v1",
+    "date": "2026-07-24",
+    "title": "Integrated Order Dispatching and Routing for Last-Mile Pickup via Deep Reinforcement Learning",
+    "authors": "Yida Xu, Zhaofang Mao, Yuheng Miao, Jiaxin Zhang, Yiting Sun",
+    "abstract": "In recent years, the growing complexity of last-mile pickup operations has increased the need for fast and accurate decision-making on logistics platforms. This challenge is fundamentally driven by two key and tightly coupled decision-making processes: order dispatching and routing. Solving them separately overlooks their interdependence, while fully end-to-end learning can be unstable and costly on large, variable-scale instances due to sparse rewards. To solve this problem, we propose an integrated optimization framework which couples a learned routing oracle with real-time dispatching heuristics. For the routing subproblem, we develop a Dynamic-Residual Graph Attention Network encoder with a Look-Ahead Courier-Personalized decoder. For the dispatching subproblem, we develop a routing-oracle-guided dispatching heuristic with local search, where the oracle provides near-optimal solutions to select candidate couriers while retaining real-time scalability. Extensive experiments on real-world datasets from Cainiao Logistics are used to test the performance of our approach, including an offline evaluation and an online rolling-horizon simulation. The experimental results show that our approach outperforms other benchmarks regarding solution quality and solving time, indicating it can effectively support logistics companies in solving real-time and large-scale last-mile pickup problems.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-24T14:37:02Z",
+    "updated": "2026-07-24T14:37:02Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22356v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22356v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "The paper couples order dispatching with routing in a single deep reinforcement learning framework to handle last-mile pickup decisions more effectively than treating them separately.",
+      "engineering_relevance": "It offers a practical decision-support method for logistics platforms that need fast, scalable, and near-real-time optimization on large, variable pickup instances.",
+      "method": [
+        "Dynamic-Residual Graph Attention Network encodes routing states.",
+        "Look-Ahead Courier-Personalized decoder generates routing decisions.",
+        "Routing-oracle-guided dispatching heuristic with local search selects couriers in real time."
+      ],
+      "evidence_signal": "The approach was evaluated on real-world Cainiao Logistics data using both offline testing and online rolling-horizon simulation, and it improved solution quality while reducing solving time versus benchmarks.",
+      "watch_item": "Performance depends on the quality and speed of the learned routing oracle, so deployment must manage inference latency and robustness on highly variable instance sizes.",
+      "hashtags": [
+        "#DeepReinforcementLearning",
+        "#LastMileLogistics",
+        "#OrderDispatching",
+        "#VehicleRouting",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-07-24-arxiv-integrated_order_dispatching_and_routing_for_last_mile_pickup_via_deep_reinforcement_learn",
+      "paper_title": "Integrated Order Dispatching and Routing for Last-Mile Pickup via Deep Reinforcement Learning",
+      "paper_date": "2026-07-24",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-28T16:11:47",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-ideagent_agentic_quality_diversity_search_for_research_idea_generation",
+    "arxiv_id": "2607.22375v1",
+    "date": "2026-07-24",
+    "title": "IDEAgent: Agentic Quality-Diversity Search for Research Idea Generation",
+    "authors": "Varun Gumma, Navonil Majumder, Soumitra Sinhahajari, Soujanya Poria",
+    "abstract": "Large Language Models (LLMs) have significantly automated the process of scientific discovery over the past few years. However, existing systems share one core limitation: they generate and optimize ideas independently for either Quality or Diversity. This often leads to the generation of ideas in close proximity to one another or to a large set of trivial, unsound, or unclear concepts. In this work, we instead argue that research ideation should be treated as a conjunction of both objectives and framed as a Quality-Diversity (QD) search. In line with this perspective, we introduce IDEAgent, a multi-agent framework that manages the evolution of ideas through lineages. We jointly drive Quality using multi-objective feedback for dedicated repair and refinement, while Diversity is achieved through lightweight sequential memory and explicit comparison against completed ideas, their historical ancestors, and rejected proposals. To systematically evaluate this QD conjunction, we develop Yield, a joint metric that computes the largest set of mutually diverse ideas that satisfy a predetermined quality threshold. Finally, through evaluations across 32 topics spanning 8 domains of Computer Science, we show that IDEAgent outperforms the best baseline by 3.89x on Yield, while achieving non-zero Yield on 8x more topics. We further corroborate these findings through an analysis of quality improvements, showing that repair and refinement are crucial for building logical rigor and clarity while preserving non-obviousness. To encourage future research on QD-search-based ideation, we open-source IDEAgent at https://github.com/declare-lab/IDEAgent.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-24T15:03:14Z",
+    "updated": "2026-07-24T15:03:14Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22375v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22375v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "IDEAgent reframes research ideation as a joint quality-diversity search problem, using multi-agent lineage tracking to generate ideas that are both strong and meaningfully different.",
+      "engineering_relevance": "The framework suggests a practical design pattern for AI research assistants: combine iterative repair/refinement with explicit memory-based diversity control to reduce repetitive or trivial outputs.",
+      "method": [
+        "Multi-agent idea evolution organized as lineages",
+        "Quality improved via multi-objective feedback, repair, and refinement",
+        "Diversity enforced with sequential memory and comparison against prior, ancestor, and rejected ideas"
+      ],
+      "evidence_signal": "Across 32 topics in 8 Computer Science domains, IDEAgent achieved 3.89× higher Yield than the best baseline and produced non-zero Yield on 8× more topics.",
+      "watch_item": "The approach may depend on careful thresholding, memory management, and reliable quality judgments, which could be difficult to calibrate across domains.",
+      "hashtags": [
+        "#QualityDiversity",
+        "#LLMAgents",
+        "#ResearchIdeation",
+        "#ScientificDiscovery",
+        "#AIForScience"
+      ],
+      "paper_id": "2026-07-24-arxiv-ideagent_agentic_quality_diversity_search_for_research_idea_generation",
+      "paper_title": "IDEAgent: Agentic Quality-Diversity Search for Research Idea Generation",
+      "paper_date": "2026-07-24",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-28T16:11:50",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-variational_low_rank_tensor_decomposition_for_multisubject_spatiotemporal_data_analysis",
+    "arxiv_id": "2607.22262v1",
+    "date": "2026-07-24",
+    "title": "Variational Low-rank Tensor Decomposition for Multisubject Spatiotemporal Data Analysis",
+    "authors": "Laura M. Montaldo, Ricardo A. Borsoi, Sebastian Miron, Tulay Adali",
+    "abstract": "Modeling shared and subject-specific structure in multisubject spatiotemporal data remains challenging, particularly in neuroimaging, where both spatial and temporal patterns exhibit rich variability across subjects. Existing matrix and tensor decompositions provide interpretable factorizations, but rely on fixed multilinear structures or coupling schemes that may limit their flexibility in capturing complex variability. In this work, we introduce a spatiotemporal variational tensor decomposition (ST-VTD) framework that combines a tensor factorization generative model with structured priors to jointly represent spatial maps and temporal dynamics. Spatial factors are regularized to promote a low-rank structure inspired by the LL1 decomposition, while temporal factors are modeled using a learned Long short-term memory (LSTM)-based prior, enabling flexible and adaptive dynamics. Posterior inference is performed using an amortized variational formulation by unrolling iterations of an optimization algorithm, leading to an interpretable and parameter-efficient architecture. The proposed inference framework employs a warm-start strategy based on group independent component analysis, which we found to improve optimization performance. Experiments on a realistic synthetic functional MRI (fMRI) dataset demonstrate that the proposed approach significantly improves latent factor recovery compared with representative classical and probabilistic decomposition benchmarks.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-24T12:55:09Z",
+    "updated": "2026-07-24T12:55:09Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "eess.SP"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22262v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22262v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "The paper introduces ST-VTD, a variational tensor decomposition that combines low-rank spatial structure with learned temporal priors to better separate shared and subject-specific spatiotemporal patterns in multisubject data.",
+      "engineering_relevance": "This offers a more interpretable and flexible framework for neuroimaging and other spatiotemporal sensing problems where classical tensor models struggle with variability across subjects.",
+      "method": [
+        "Spatial factors are regularized with an LL1-inspired low-rank structure.",
+        "Temporal factors use an LSTM-based learned prior to capture adaptive dynamics.",
+        "Posterior inference is done with an amortized variational scheme by unrolling optimization iterations, initialized with group ICA warm starts."
+      ],
+      "evidence_signal": "On a realistic synthetic fMRI dataset, the method improved latent factor recovery over representative classical and probabilistic decomposition benchmarks.",
+      "watch_item": "Performance depends on the quality of the learned temporal prior and warm-start initialization, which may limit robustness outside the tested setting.",
+      "hashtags": [
+        "#TensorDecomposition",
+        "#VariationalInference",
+        "#fMRI",
+        "#Neuroimaging",
+        "#SpatiotemporalData"
+      ],
+      "paper_id": "2026-07-24-arxiv-variational_low_rank_tensor_decomposition_for_multisubject_spatiotemporal_data_analysis",
+      "paper_title": "Variational Low-rank Tensor Decomposition for Multisubject Spatiotemporal Data Analysis",
+      "paper_date": "2026-07-24",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-28T16:11:52",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-latent_pde_mapping_for_efficient_physics_informed_learning_across_geometries_with_limited",
+    "arxiv_id": "2607.22215v1",
+    "date": "2026-07-24",
+    "title": "Latent PDE mapping for efficient physics-informed learning across geometries with limited data",
+    "authors": "Ingvild Askim Adde, Mary M. Maleckar, Gabriel Balaban",
+    "abstract": "In this study, we introduce latent PDE mapping, a broadly applicable physics-informed learning technique designed to enable efficient geometric generalization with sparse training data. Latent PDE mapping pulls back geometry-specific PDE residuals and boundary conditions to a predefined latent geometry via the deformation gradient, thereby enabling the automated calculation of geometry-consistent shape gradients that are missing in conventional physics-informed machine learning formulations. We demonstrate the utility of latent PDE mapping in solving the anisotropic Aliev-Panfilov PDE of cardiac electrophysiology using both physics-informed neural networks and physics-informed deep operator networks. The Aliev-Panfilov PDE serves as a challenging exemplar: a nonlinear, time-dependent PDE benchmark with sharp gradients that are expensive to capture using traditional numerical solvers. To represent the limited data regime, we train the networks using just fifteen geometric samples drawn from parameterized distributions in two and three spatial dimensions. While modest improvements appear for geometries parameterized by affine and shear deformations, latent PDE mapping demonstrates significant benefits on select geometric families, achieving a factor ~4-6 reduction in mean relative L2 error. Furthermore, our results show that the computational cost of applying latent PDE mapping was modest during network training, and negligible at inference. Taken together, our study highlights how latent PDE mapping facilitates the creation of generalizable physics-informed machine learning models from limited sets of training geometries.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-24T11:33:50Z",
+    "updated": "2026-07-24T11:33:50Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "physics.comp-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22215v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22215v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "Latent PDE mapping transfers PDE residuals and boundary conditions to a common latent geometry, enabling physics-informed models to generalize across unseen shapes with sparse training data.",
+      "engineering_relevance": "This can reduce the amount of geometry-specific simulation data needed to train surrogate models for complex engineering systems such as cardiac electrophysiology.",
+      "method": [
+        "Map each physical geometry to a predefined latent domain using the deformation gradient.",
+        "Pull back PDE residuals and boundary conditions so shape gradients are computed consistently across geometries.",
+        "Train physics-informed neural networks and deep operator networks in this latent formulation."
+      ],
+      "evidence_signal": "The authors trained on only 15 geometrically parameterized samples in 2D and 3D and reported about a 4–6× reduction in mean relative L2 error on select geometry families.",
+      "watch_item": "Benefits were geometry-dependent, with only modest gains for affine and shear-deformed cases, so the approach may not help equally across all deformation types.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#PhysicsInformedNN",
+        "#OperatorLearning",
+        "#PDEs",
+        "#GeometricGeneralization"
+      ],
+      "paper_id": "2026-07-24-arxiv-latent_pde_mapping_for_efficient_physics_informed_learning_across_geometries_with_limited",
+      "paper_title": "Latent PDE mapping for efficient physics-informed learning across geometries with limited data",
+      "paper_date": "2026-07-24",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-28T16:11:55",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-minevalicoder_reliable_code_generation_with_test_case_quality_mining_and_bipartite_graph_b",
+    "arxiv_id": "2607.22471v1",
+    "date": "2026-07-24",
+    "title": "MineValiCoder: Reliable Code Generation with Test Case Quality Mining and Bipartite Graph-Based Mutual Validation",
+    "authors": "Zhen Zhao, Qihang Yang, Feifei Dai, Xiangfang Li, Bo Li",
+    "abstract": "Large Language Model (LLM)-based Test-Driven Development (TDD) has advanced automated code generation. However, existing approaches depend heavily on human-crafted test cases and cannot operate effectively when only natural-language requirements are available. Although recent work enables automatic test generation, it often overlooks the inherent stochasticity of LLMs, leading to two key defects: faulty tests generate misleading feedback that distorts code optimization, while mixed-quality test cases produce conflicting evaluation signals that hinder reliable code selection. To address these challenges, we propose MineValiCoder, a collaborative closed-loop TDD framework based on the mutual reinforcement of test-case quality and code quality. MineValiCoder comprises three modules. The Test Case Quality Mining (TCQM) module filters faulty test cases through self-validation, providing reliable optimization supervision. The Parallel TDD Refinement module iteratively optimizes code and generates diverse high-quality code candidates using validated test-case feedback. The Bipartite Graph-Based Code-Test Mutual Validation (BiCoTeV) module dynamically models code-test interactions and performs mutual validation scoring for stable and reliable optimal-code selection. Extensive evaluations across four LLMs and mainstream benchmarks show that MineValiCoder significantly outperforms state-of-the-art methods. Specifically, it achieves Pass@1 scores of 96.34% on HumanEval, 87.40% on MBPP, 64.00% on APPS, and 51.33% on LiveCodeBench. These results demonstrate the effectiveness of MineValiCoder in mitigating LLM stochasticity and improving the reliability of automated code generation.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-24T16:39:06Z",
+    "updated": "2026-07-24T16:39:06Z",
+    "primary_category": "cs.SE",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22471v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22471v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "MineValiCoder improves LLM-based code generation by jointly filtering weak tests and validating code-test pairs so noisy test feedback does not mislead optimization.",
+      "engineering_relevance": "This is directly relevant to reliable automated software synthesis pipelines that must work from natural-language requirements with minimal human-written tests.",
+      "method": [
+        "TCQM mines and self-validates test cases to remove faulty tests before optimization.",
+        "Parallel TDD Refinement iteratively improves code while generating diverse candidate solutions from validated feedback.",
+        "BiCoTeV builds a bipartite code-test graph to score mutual consistency and select the most reliable code."
+      ],
+      "evidence_signal": "Across four LLMs and standard benchmarks, the method reports strong Pass@1 results including 96.34% on HumanEval, 87.40% on MBPP, 64.00% on APPS, and 51.33% on LiveCodeBench.",
+      "watch_item": "Performance depends on the quality of the generated tests and the added validation graph, which may increase compute cost and still struggle when requirements are ambiguous.",
+      "hashtags": [
+        "#LLM",
+        "#CodeGeneration",
+        "#TestDrivenDevelopment",
+        "#ProgramSynthesis",
+        "#AI4SE"
+      ],
+      "paper_id": "2026-07-24-arxiv-minevalicoder_reliable_code_generation_with_test_case_quality_mining_and_bipartite_graph_b",
+      "paper_title": "MineValiCoder: Reliable Code Generation with Test Case Quality Mining and Bipartite Graph-Based Mutual Validation",
+      "paper_date": "2026-07-24",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-28T16:11:58",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-towards_trustworthy_and_cost_efficient_data_integration_from_na_ve_rag_to_agentic_rag",
+    "arxiv_id": "2607.22319v1",
+    "date": "2026-07-24",
+    "title": "Towards Trustworthy and Cost-Efficient Data Integration: From Naïve RAG to Agentic RAG",
+    "authors": "Chuangtao Ma, Arijit Khan",
+    "abstract": "Large language models (LLMs) and AI agents have demonstrated strong potential for data integration in zero-shot and few-shot settings. However, they continue to face significant accuracy and cost challenges in enterprise environments due to a persistent knowledge gap. This paper envisions trustworthy, scalable, and cost-efficient integration through knowledge-grounded LLMs and agents operating within a retrieval-augmented generation (RAG) workflow. Here, trustworthiness refers to evidence-grounded, verifiable reasoning, where integration decisions are transparently supported by retrieved knowledge, robust against hallucination, and consistent across tasks. We trace the evolution from classic RAG to GraphRAG and KG-RAG (knowledge graph-based RAG), highlighting how these paradigms bridge parametric and contextual knowledge. Building on this trajectory, we explore the shift toward Agentic RAG, where autonomous multi-agent systems adaptively plan, retrieve, refine, and reason for complex integration tasks. We examine optimization strategies for cost-efficient integration, addressing computational bottlenecks in large-scale enterprise settings. Finally, we outline open challenges and future directions toward building reliable, explainable, and scalable knowledge-grounded integration systems.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-24T13:58:44Z",
+    "updated": "2026-07-24T13:58:44Z",
+    "primary_category": "cs.DB",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22319v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22319v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "The paper argues that trustworthy data integration in enterprise settings requires knowledge-grounded RAG systems that evolve from naïve retrieval to graph-based and agentic workflows.",
+      "engineering_relevance": "For computational data integration pipelines, the key takeaway is that evidence-grounded retrieval and multi-agent orchestration can improve accuracy, scalability, and cost control while reducing hallucinations.",
+      "method": [
+        "Trace the progression from classic RAG to GraphRAG and KG-RAG to better bridge parametric and contextual knowledge.",
+        "Use Agentic RAG with autonomous planning, retrieval, refinement, and reasoning for complex integration tasks.",
+        "Apply optimization strategies to reduce computational bottlenecks in large-scale enterprise deployments."
+      ],
+      "evidence_signal": "The abstract is a vision and survey-style synthesis rather than a new benchmark study, so its claims are framed around known accuracy, cost, and enterprise-scale challenges.",
+      "watch_item": "Agentic and graph-based RAG systems can add orchestration and retrieval overhead, so implementation must balance improved trustworthiness against latency, complexity, and cost.",
+      "hashtags": [
+        "#RAG",
+        "#AgenticAI",
+        "#KnowledgeGraphs",
+        "#DataIntegration",
+        "#TrustworthyAI"
+      ],
+      "paper_id": "2026-07-24-arxiv-towards_trustworthy_and_cost_efficient_data_integration_from_na_ve_rag_to_agentic_rag",
+      "paper_title": "Towards Trustworthy and Cost-Efficient Data Integration: From Naïve RAG to Agentic RAG",
+      "paper_date": "2026-07-24",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-28T16:12:01",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-causalforge_a_formally_grounded_self_improving_agentic_framework_for_automated_research_in",
+    "arxiv_id": "2607.22511v1",
+    "date": "2026-07-24",
+    "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+    "authors": "Jiyuan Tan, Vasilis Syrgkanis",
+    "abstract": "Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliable evaluation. A common approach is to close the research loop with a large language model (LLM) reviewer. However, such reviewers remain empirically unreliable: they may accept fabricated papers and detect them at rates close to chance (Bad Scientist, 2025). We present CausalForge, a framework for automated theoretical research in causal inference grounded in the Lean proof assistant. CausalForge combines Causalean, a foundational Lean library for causal inference containing 7,035 machine-checked declarations developed with language-model assistance under human design and review, with CausalSmith, a self-improving agentic pipeline that selects research topics, proposes results, formalizes statements, constructs proofs, and presents the resulting artifacts for human inspection. Because a machine-checked proof establishes only that a formal statement follows from its assumptions, not that the statement faithfully captures the intended scientific claim, the pipeline augments kernel verification with a statement audit that compares each formal theorem against the informal claim it is intended to express. We evaluate the system using artifacts produced by completed autonomous research runs. The source code, formal library, and run records are available at https://github.com/Jiyuan-Tan/CausalForge.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-24T17:32:35Z",
+    "updated": "2026-07-24T17:32:35Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.AI",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22511v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22511v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "CausalForge combines Lean-based formal verification with an autonomous research pipeline to make automated theoretical causal inference more reliable than LLM-only review loops.",
+      "engineering_relevance": "The framework offers a practical blueprint for building agentic AI research systems where theorem generation, proof checking, and claim auditing are integrated into a single trustworthy workflow.",
+      "method": [
+        "Causalean: a Lean causal-inference library with 7,035 machine-checked declarations",
+        "CausalSmith: an agentic pipeline that picks topics, proposes results, formalizes statements, and constructs proofs",
+        "Statement audit: checks whether the formal theorem actually matches the intended informal claim"
+      ],
+      "evidence_signal": "Evaluation is based on artifacts from completed autonomous research runs, with the authors emphasizing that Lean kernel verification is supplemented by claim-level auditing.",
+      "watch_item": "A machine-checked proof can still formalize the wrong scientific claim, so correctness depends on the quality of the statement audit and human review.",
+      "hashtags": [
+        "#CausalInference",
+        "#LeanTheoremProving",
+        "#AIResearchAgents",
+        "#FormalMethods",
+        "#AutonomousScience"
+      ],
+      "paper_id": "2026-07-24-arxiv-causalforge_a_formally_grounded_self_improving_agentic_framework_for_automated_research_in",
+      "paper_title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+      "paper_date": "2026-07-24",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-28T16:12:04",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-trace_router_task_consistent_and_adaptive_online_routing_for_agentic_ai",
+    "arxiv_id": "2607.22465v1",
+    "date": "2026-07-24",
+    "title": "TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI",
+    "authors": "Ritik Raj, Souvik Kundu, Sarbartha Banerjee, Dheemanth Joshi, Ishita Vohra, Tushar Krishna",
+    "abstract": "Routing to select large language models (LLMs) with different cost-quality trade-offs has become a fundamental deployment feature of enterprise AI. Existing routers, primarily make independent routing decisions for each LLM call. However, agentic applications execute as long-horizon workflows whose quality is determined only by a delayed, task-level outcome. This mismatch prevents per-call routers from correctly attributing feedback to individual routing decisions. Towards mitigating this, we present TRACE-Router, a task-level routing framework that aligns routing with the unit of supervision. TRACE-Router assigns each task to a model once at admission using a contextual bandit, pins all subsequent LLM calls to the selected backend, and updates its policy using the task's terminal reward, jointly accounting for accuracy and latency. By leveraging delayed task feedback, TRACE-Router learns routing policies that adapt to the workload while avoiding explicit task-complexity estimation. Across three agentic benchmarks, TRACE-Router consistently improves the accuracy-latency trade-off, achieving non-dominated Pareto frontier points. On tau2-Bench, it outperforms latency-matched interpolation between individual models by 7-8 accuracy points, while on Terminal-Bench it achieves 7.1 higher accuracy points than the strongest single model baseline with 36% lower latency.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-24T16:29:06Z",
+    "updated": "2026-07-24T16:29:06Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22465v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22465v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "TRACE-Router makes routing decisions at the task level, using the final task reward to better match how long-horizon agentic workflows are actually evaluated.",
+      "engineering_relevance": "This enables more reliable deployment of cost-quality adaptive LLM systems for agentic applications, improving accuracy-latency trade-offs without manual task-complexity estimation.",
+      "method": [
+        "Assign each task to one backend model at admission using a contextual bandit.",
+        "Pin all subsequent LLM calls for that task to the chosen model to keep routing consistent.",
+        "Update the routing policy from delayed terminal reward, jointly optimizing accuracy and latency."
+      ],
+      "evidence_signal": "Across three agentic benchmarks, TRACE-Router finds non-dominated Pareto frontier points; on tau2-Bench it beats latency-matched interpolation by 7–8 accuracy points, and on Terminal-Bench it reaches 7.1 higher accuracy points than the strongest single model baseline with 36% lower latency.",
+      "watch_item": "Because routing is pinned per task and trained from delayed rewards, performance may depend on stable task execution traces and sufficient terminal feedback to learn good policies.",
+      "hashtags": [
+        "#LLMRouting",
+        "#AgenticAI",
+        "#ContextualBandits",
+        "#AdaptiveSystems",
+        "#InferenceOptimization"
+      ],
+      "paper_id": "2026-07-24-arxiv-trace_router_task_consistent_and_adaptive_online_routing_for_agentic_ai",
+      "paper_title": "TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI",
+      "paper_date": "2026-07-24",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-28T16:12:07",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-graph_based_correlation_matrix_generation_a_convex_optimization_approach",
+    "arxiv_id": "2607.22436v1",
+    "date": "2026-07-24",
+    "title": "Graph-Based Correlation Matrix Generation: A Convex Optimization Approach",
+    "authors": "Ali Fakhar, K{é}vin Polisano, Ir{è}ne Gannaz, Sophie Achard",
+    "abstract": "This work addresses the generation of theoretical correlation matrices with prescribed sparsity patterns associated to graph structures. We propose a novel convex optimization framework in which an initial matrix is projected onto an elliptope under a positive semidefiniteness constraint. Several numerical schemes are implemented and compared. The problem falls within the broader class of matrix completion, where off-diagonal entries corresponding to absent edges are fixed to zero and diagonal entries are fixed to one. Beyond this structural constraint, the approach offers greater flexibility than existing methods by allowing control over the mean of the off-diagonal entry distribution, enabling the generation of correlation matrices that better reflect realistic data. This procedure is not designed to yield a uniform distribution over the feasible set; rather, it provides a principled and tunable way to construct correlation matrices suitable for benchmarking statistical methods for graphical model inference. Theoretical guarantees on the existence of solutions are established, both in the general setting and under the additional mean constraint. Simulation studies illustrate the properties of the generated matrices with respect to graph structure. The methodology is applied to two real-world datasets from neuroscience and finance, and a comparison with GAN-based correlation matrix generation is provided.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-24T15:54:23Z",
+    "updated": "2026-07-24T15:54:23Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22436v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22436v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "A convex optimization method projects an initial matrix onto the elliptope to generate valid correlation matrices that match a graph’s sparsity pattern and can be tuned to control the mean off-diagonal correlation.",
+      "engineering_relevance": "This provides a controllable way to synthesize realistic correlation matrices for benchmarking graphical model inference, especially in neuroscience and finance where graph structure matters.",
+      "method": [
+        "Set absent graph edges to zero and diagonal entries to one as a matrix completion constraint.",
+        "Project an initial matrix onto the elliptope under positive semidefiniteness to obtain a valid correlation matrix.",
+        "Optionally enforce a target mean for off-diagonal entries to better mimic realistic data."
+      ],
+      "evidence_signal": "The authors compare several numerical schemes through simulations and apply the method to two real-world datasets from neuroscience and finance, also contrasting it with GAN-based correlation matrix generation.",
+      "watch_item": "The method is not intended to produce a uniform sample over the feasible set, so results depend on the chosen initialization and tuning of the mean constraint.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#ConvexOptimization",
+        "#CorrelationMatrices",
+        "#GraphInference",
+        "#MatrixCompletion"
+      ],
+      "paper_id": "2026-07-24-arxiv-graph_based_correlation_matrix_generation_a_convex_optimization_approach",
+      "paper_title": "Graph-Based Correlation Matrix Generation: A Convex Optimization Approach",
+      "paper_date": "2026-07-24",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-28T16:12:09",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-explainable_reinforcement_learning_for_assisting_air_traffic_controllers",
+    "arxiv_id": "2607.22525v1",
+    "date": "2026-07-24",
+    "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+    "authors": "Anduel Mehmeti, Gabriella Gigante, Salvatore Venticinque",
+    "abstract": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collaboration--building trust in AI-driven solutions is essential. Trust, in turn, is closely linked to the explainability of AI systems. The rapid advancements in AI across various domains have underscored the challenges of establishing trust, raising increasing interest in AI explainability even more when applied to deep learning. In this context, the present work aims to explore the application of explainability techniques to Reinforcement Learning (RL) algorithms, specifically within the safety-critical domain of Air Traffic Control (ATC). Using a simplified ATC environment as an initial testbed, an intelligent agent is trained with a reinforcement learning algorithm to make decisions on alternative flight routes that avoid no-fly zones. As a preliminary explainability approach, a saliency map is employed, providing insights into the input features that most significantly influence the agent's decision-making process.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-24T17:56:38Z",
+    "updated": "2026-07-24T17:56:38Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22525v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22525v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "The paper shows that saliency maps can make reinforcement learning decisions more interpretable in a simplified air traffic control setting, helping build trust in safety-critical AI.",
+      "engineering_relevance": "This approach is relevant for air traffic management because explainable RL can support human operators when AI suggests route changes that must avoid restricted airspace.",
+      "method": [
+        "Train an RL agent in a simplified ATC environment.",
+        "Have the agent choose alternative flight routes that bypass no-fly zones.",
+        "Apply saliency maps to identify which input features most influenced each decision."
+      ],
+      "evidence_signal": "The abstract indicates a preliminary testbed and explainability demonstration, but does not report quantitative performance metrics or comparative evaluation.",
+      "watch_item": "Because the study uses a simplified environment and a preliminary explainability method, results may not directly transfer to real-world ATC operations without further validation.",
+      "hashtags": [
+        "#ExplainableAI",
+        "#ReinforcementLearning",
+        "#AirTrafficControl",
+        "#HumanAIInteraction",
+        "#SafetyCriticalSystems"
+      ],
+      "paper_id": "2026-07-24-arxiv-explainable_reinforcement_learning_for_assisting_air_traffic_controllers",
+      "paper_title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+      "paper_date": "2026-07-24",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-28T16:12:12",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-iq_jepa_a_joint_embedding_predictive_architecture_with_a_hermitian_vision_transformer_for",
+    "arxiv_id": "2607.22351v1",
+    "date": "2026-07-24",
+    "title": "IQ-JEPA: A Joint-Embedding Predictive Architecture with a Hermitian Vision Transformer for Sound Speed and Attenuation Estimation from Ultrasound IQ Data",
+    "authors": "Masashi Sode, Gianmarco Pinton",
+    "abstract": "The speed of sound in tissue is a prerequisite for well-focused imaging and has diagnostic value, but recovering it from raw pulse-echo channel data is fundamentally a nonlinear inverse problem. Learned solvers are fast yet label hungry. Simulated sound-speed labels are expensive, while abundant real channel data is unlabeled. We propose IQ-JEPA to exploit both data types. An encoder is pretrained without labels to predict the latent representation of masked in-phase and quadrature (IQ) regions from visible context, then fine-tuned on simulated maps. Sound speed appears in the IQ signal as a phase difference, invariant to the constant phase offset. The encoder is a Hermitian vision transformer that operates on the complex signal directly. Its attention is equivariant to that phase and its conjugate-product feed-forward is invariant to it, so the encoder reads a quantity analogous to the one classical coherence methods use. On 79,293 Fullwave 2.5 simulations at 2.5 MHz, pretraining on the 63,435 unlabeled acquisitions reaches 15.60 m/s at 10,000 labels. This is a roughly threefold gain in label efficiency over supervised training, growing to over fourfold at 1,000 labels. It is about 2.2x below an InversionNet baseline, and 8.71 m/s at full labels. The gain still grows with more unlabeled pretraining data. Our comparisons point to self-supervision as the dominant factor. The same encoder transfers. Its frozen features expose sound speed and attenuation, and cross-distribution pretraining between layered and abdominal phantoms costs little accuracy. We see this as a first step toward a foundation model for quantitative ultrasound.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-24T14:31:54Z",
+    "updated": "2026-07-24T14:31:54Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "physics.med-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22351v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22351v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "IQ-JEPA uses self-supervised pretraining on unlabeled ultrasound IQ data to learn phase-aware representations that dramatically improve sound-speed and attenuation estimation with far fewer labels.",
+      "engineering_relevance": "This reduces the cost and labeling burden of quantitative ultrasound, making faster and more scalable tissue property estimation more practical for real imaging systems.",
+      "method": [
+        "Pretrain a joint-embedding predictor to reconstruct masked IQ latent regions from visible context.",
+        "Use a Hermitian vision transformer that processes complex IQ data directly with phase-equivariant attention and phase-invariant conjugate-product features.",
+        "Fine-tune the pretrained encoder on simulated sound-speed maps and test transfer to attenuation and cross-distribution settings."
+      ],
+      "evidence_signal": "On 79,293 Fullwave 2.5 simulations, pretraining on 63,435 unlabeled acquisitions achieved 15.60 m/s error at 10,000 labels and 8.71 m/s at full labels, with gains growing as labels decreased.",
+      "watch_item": "Performance depends on simulation-to-real transfer and the quality of unlabeled pretraining data, so generalization outside the studied phantom distributions may require further validation.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#UltrasoundAI",
+        "#SelfSupervisedLearning",
+        "#QuantitativeUltrasound",
+        "#VisionTransformer"
+      ],
+      "paper_id": "2026-07-24-arxiv-iq_jepa_a_joint_embedding_predictive_architecture_with_a_hermitian_vision_transformer_for",
+      "paper_title": "IQ-JEPA: A Joint-Embedding Predictive Architecture with a Hermitian Vision Transformer for Sound Speed and Attenuation Estimation from Ultrasound IQ Data",
+      "paper_date": "2026-07-24",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-28T16:12:16",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-learning_bidirectional_causal_interactions_with_heteroscedastic_neural_networks",
+    "arxiv_id": "2607.22313v1",
+    "date": "2026-07-24",
+    "title": "Learning Bidirectional Causal Interactions with Heteroscedastic Neural Networks",
+    "authors": "Masahiro Tanaka",
+    "abstract": "Estimating contemporaneous bidirectional interactions from observational data is difficult because each outcome is endogenous to the other, while flexible regressions may capture only reduced-form dependence. This paper proposes SEM-DNN, a heteroscedastic neural simultaneous-equation estimator that learns reciprocal structural interactions without external instruments. Identification exploits conditional covariance diagonalization: when structural shocks have zero conditional means, are conditionally uncorrelated given predetermined covariates, and exhibit nonproportional conditional variances, only the true interaction coefficients diagonalize the conditional residual covariance across the feature space. The method jointly approximates nonlinear structural mean functions and feature-dependent variances using a diagonal Gaussian quasi-likelihood that incorporates the simultaneous-system Jacobian. We establish unique identification and positive-definite local curvature of the profiled population criterion and show that, under neural-profile compatibility conditions, the implemented neural criterion inherits this curvature despite nonunique network parameterizations. The coefficients admit a causal interpretation when the structural equations represent autonomous mechanisms that remain invariant under the relevant interventions. Monte Carlo experiments with nonlinear, high-dimensional nuisance functions and non-Gaussian shocks show that SEM-DNN recovers structural effects more reliably than parametric, kernel-based, and separate-equation neural alternatives as information increases, although at greater computational cost. An application to ready-to-eat cereal scanner data illustrates how the method can study contemporaneous price-sales feedback and assess identification strength, residual diagonalization, variance calibration, and optimization sensitivity.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-24T13:53:58Z",
+    "updated": "2026-07-24T13:53:58Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.ME"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22313v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22313v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "SEM-DNN identifies contemporaneous bidirectional causal effects by learning nonlinear simultaneous equations with feature-dependent variances, using conditional covariance diagonalization to recover the true interaction coefficients.",
+      "engineering_relevance": "The method offers a practical causal inference tool for systems with mutual feedback and no valid instruments, such as coupled sensors, markets, and autonomous control loops.",
+      "method": [
+        "Jointly fits nonlinear structural mean functions and heteroscedastic variances with a diagonal Gaussian quasi-likelihood.",
+        "Uses the simultaneous-system Jacobian plus conditional residual covariance structure to identify reciprocal effects.",
+        "Relies on zero-mean, conditionally uncorrelated shocks with nonproportional variances to diagonalize residual covariance across covariates."
+      ],
+      "evidence_signal": "Monte Carlo studies and a cereal scanner-data application show improved recovery of structural effects and diagnostic checks for identification strength, residual diagonalization, variance calibration, and optimization sensitivity.",
+      "watch_item": "Training is computationally heavier than alternatives, and the causal interpretation depends on strong assumptions about shock structure and invariance of the underlying mechanisms.",
+      "hashtags": [
+        "#CausalInference",
+        "#NeuralNetworks",
+        "#SimultaneousEquations",
+        "#Heteroscedasticity",
+        "#AutonomousSystems"
+      ],
+      "paper_id": "2026-07-24-arxiv-learning_bidirectional_causal_interactions_with_heteroscedastic_neural_networks",
+      "paper_title": "Learning Bidirectional Causal Interactions with Heteroscedastic Neural Networks",
+      "paper_date": "2026-07-24",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-28T16:12:18",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-from_score_approximation_to_distribution_approximation_in_score_based_diffusion_models",
+    "arxiv_id": "2607.22199v1",
+    "date": "2026-07-24",
+    "title": "From Score Approximation to Distribution Approximation in Score-Based Diffusion Models",
+    "authors": "Lan V. Truong",
+    "abstract": "Score-based diffusion models have achieved remarkable empirical success in generative modeling, yet their approximation-theoretic foundations remain incomplete. In particular, although classical universal approximation theorems guarantee that neural networks can approximate score functions, it remains unclear whether such approximation guarantees translate into approximation of the probability distributions generated by reverse diffusion processes. In this paper, we establish a rigorous quantitative connection between these two notions. Specifically, we prove that if a neural network approximates the true score function sufficiently accurately, then the probability distribution generated by the corresponding reverse diffusion model is close to the target data distribution in Kullback-Leibler (KL) divergence, up to an irreducible mismatch between the terminal distribution of the forward diffusion process and the prior used to initialize the reverse process. More precisely, we derive an explicit upper bound on the distribution approximation error in terms of the score approximation error, the diffusion noise schedule, and the terminal prior mismatch. Our analysis combines Hornik's universal approximation theorem, Girsanov's theorem on path space, and the data processing inequality for relative entropy. Complementary to recent work that studies score approximation under finite-sample statistical settings and structural assumptions on the data distribution, our work develops an approximation-theoretic analysis based on classical neural network approximation theory. The resulting theorem provides a simple and explicit guarantee linking neural network approximation of score functions to approximation of the probability distributions generated by reverse diffusion models.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-24T11:13:39Z",
+    "updated": "2026-07-24T11:13:39Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.IT",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22199v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22199v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "Accurate neural network approximation of the score function can be translated into a quantitative guarantee that the reverse diffusion model approximates the target data distribution in KL divergence, up to a terminal prior mismatch.",
+      "engineering_relevance": "This gives practitioners a principled error link between model capacity/score accuracy and generative fidelity, helping guide architecture and noise-schedule design for score-based diffusion systems.",
+      "method": [
+        "Uses Hornik-style universal approximation theory to justify score-function approximation by neural networks.",
+        "Applies Girsanov’s theorem on path space to relate score error to distributional error in the reverse diffusion process.",
+        "Uses the data processing inequality for relative entropy to derive an explicit KL bound including noise schedule and terminal prior mismatch."
+      ],
+      "evidence_signal": "The paper is theory-driven rather than empirical; it provides an explicit upper bound and proof-based guarantee instead of reporting experimental results.",
+      "watch_item": "The bound is limited by the mismatch between the forward diffusion terminal distribution and the chosen reverse-process prior, which can leave irreducible approximation error.",
+      "hashtags": [
+        "#DiffusionModels",
+        "#ScoreMatching",
+        "#GenerativeAI",
+        "#ApproximationTheory",
+        "#KLdivergence"
+      ],
+      "paper_id": "2026-07-24-arxiv-from_score_approximation_to_distribution_approximation_in_score_based_diffusion_models",
+      "paper_title": "From Score Approximation to Distribution Approximation in Score-Based Diffusion Models",
+      "paper_date": "2026-07-24",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-28T16:12:25",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-the_regression_tax_decomposing_why_skills_help_and_hurt_llm_agents",
+    "arxiv_id": "2607.22520v1",
+    "date": "2026-07-24",
+    "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+    "authors": "Darshan Tank, Baran Nama",
+    "abstract": "Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this metric hides an important cost: skills can also make agents worse. We measure both sides by comparing agents with and without skills across nearly 6,000 runs spanning two office automation benchmarks and three model harness stacks. This allows us to distinguish two outcomes. A regression is a task solved without skills but failed after skills are added. A residual failure is a task that fails both with and without skills. We find that regressions are substantial enough that the best performing skills outperform others primarily by regressing less, not by gaining more. We identify three causes of regression: (i) skill description osmosis, a skill changes an agent's behavior simply by being present in context, even when it is never invoked; (ii) grounding displacement, a skill's prescribed procedure overrides how the agent interprets its inputs; and (iii) verification displacement, where the procedure suppresses checks the agent would otherwise perform on its outputs. Analysing persistent failures reveals the same underlying pattern. Existing skills overemphasize procedural guidance the stage least often responsible for failure while under supporting grounding and verification, the dominant sources of remaining errors. After correcting evaluation artifacts and studying traces, we find many regressions and persistent failures recoverable through better grounding and verification. Procedural skills should be evaluated by decomposing their net effect into gains and regressions, not by aggregate improvement alone. We identify three regression modes skills should avoid, and find that reliability depends more on grounding and verification than on procedural skill choice.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-24T17:50:03Z",
+    "updated": "2026-07-24T17:50:03Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22520v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22520v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "Procedural skills can improve LLM agents overall, but their real impact must be decomposed into gains and regressions because added skills can also make agents worse.",
+      "engineering_relevance": "For reliable office-automation agents, skill design should prioritize grounding and verification, since these matter more for avoiding failures than procedural instructions alone.",
+      "method": [
+        "Compare agents with vs. without skills across ~6,000 runs.",
+        "Separate outcomes into regressions (solved without skills, failed with skills) and residual failures (failed in both cases).",
+        "Trace failure modes to identify osmosis, grounding displacement, and verification displacement."
+      ],
+      "evidence_signal": "Across two office automation benchmarks and three harness stacks, the authors find regressions are large enough that the best skills often win mainly by causing fewer regressions, not more new successes.",
+      "watch_item": "Results depend on careful artifact correction and trace analysis, so implementations should avoid assuming any skill is beneficial just because average success improves.",
+      "hashtags": [
+        "#LLMAgents",
+        "#Evaluation",
+        "#Reliability",
+        "#PromptEngineering",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-07-24-arxiv-the_regression_tax_decomposing_why_skills_help_and_hurt_llm_agents",
+      "paper_title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+      "paper_date": "2026-07-24",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-28T16:12:28",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-interpretable_eeg_biomarkers_with_bag_of_waves_spatial_and_temporal_waveform_dictionaries",
+    "arxiv_id": "2607.22508v1",
+    "date": "2026-07-24",
+    "title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
+    "authors": "Athanasios Papastathopoulos-Katsaros, Steven T. Lee, Lin Yao, Ajay Thomas, Junseok Park, Matthew J. McGinley",
+    "abstract": "Electroencephalography (EEG) is widely used to diagnose neurological conditions, but its analysis usually relies on either predefined spectral features or deep neural networks. Predefined features carry a strong bias, since they fix in advance what counts as informative, while deep neural networks and foundation models are hard to interpret and need large amounts of data and compute. We present bag-of-waves, an interpretable framework that learns a small dictionary of recurring EEG waveform templates, called atoms, using shift-invariant k-means without labels. The continuous EEG is then turned into a sequence of atom tokens, whose counts feed a simple downstream classifier or clustering step. We extend this representation in two ways: we add atom-to-atom transitions, which we call n- grams, to capture temporal structure, and we move from single-channel atoms to regional and cross-channel spatial atoms for the multichannel case. We test the method on three complementary datasets, each probing a different aspect: single-channel mouse genotype clustering with only sixteen animals (the low-data and temporal case), resting-state dementia classification (the spatial case), and the TUEV benchmark, a six-way classification of clinical EEG events (a high-data comparison against strong deep and foundation baselines). Across all three datasets, bag-of-waves achieves performance competitive with state-of-the-art deep and foundation models. Yet, it operates with a fraction of the parameter count and provides full interpretability: because every atom corresponds to an inspectable waveform, the method explicitly recovers known clinical morphologies that a neurophysiologist can directly validate. Its main advantage is that it works in the low-data regime where heavier models are a poor fit.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-24T17:27:43Z",
+    "updated": "2026-07-24T17:27:43Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22508v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22508v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "Bag-of-waves learns a small, interpretable dictionary of EEG waveform atoms and uses token counts plus temporal/spatial extensions to classify EEG data effectively, even in low-data settings.",
+      "engineering_relevance": "It offers a lightweight, label-free alternative to deep EEG models that can preserve interpretability while reducing data, compute, and parameter needs.",
+      "method": [
+        "Learn shift-invariant k-means waveform atoms from unlabeled EEG",
+        "Convert continuous signals into atom tokens and n-gram transition counts",
+        "Extend to multichannel regional and cross-channel spatial atoms"
+      ],
+      "evidence_signal": "The method was evaluated on three datasets spanning low-data mouse genotype clustering, resting-state dementia classification, and the six-class TUEV EEG event benchmark, with performance competitive with strong deep and foundation models.",
+      "watch_item": "The approach depends on the quality and stability of learned atoms, so performance may vary with preprocessing choices, dictionary size, and how well the learned templates generalize across cohorts or recording setups.",
+      "hashtags": [
+        "#EEG",
+        "#ExplainableAI",
+        "#BiomedicalSignalProcessing",
+        "#LowDataLearning",
+        "#ComputationalNeuroscience"
+      ],
+      "paper_id": "2026-07-24-arxiv-interpretable_eeg_biomarkers_with_bag_of_waves_spatial_and_temporal_waveform_dictionaries",
+      "paper_title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
+      "paper_date": "2026-07-24",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-28T16:12:31",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-24-arxiv-learning_to_prepare_molecular_ground_states_with_transformer_models",
+    "arxiv_id": "2607.22468v1",
+    "date": "2026-07-24",
+    "title": "Learning to Prepare Molecular Ground States with Transformer Models",
+    "authors": "Alex Koziell-Pipe, Jasmine Brewer, Jem Guhit, Marwa H. Farag, Kripa Panchagnula, Gabriel Laude",
+    "abstract": "Quantum state preparation is a key component of many quantum algorithms. Performing this step efficiently is essential for realizing practical quantum advantage in quantum chemistry applications. Iterative algorithms like ADAPT-VQE can produce shallow ground-state preparation circuits, but become computationally prohibitive for the larger molecules relevant to materials science and pharmaceutical development. Here, we introduce ADAPT-GQE, a generative AI framework that learns to synthesize ground-state preparation circuits for electronic structure calculations. We first use ADAPT-VQE to generate high-quality reference circuits, which are then used as targets for training models for circuit generation. Once trained, the model can efficiently propose and score circuits, enabling reinforcement learning (RL) to drive circuit generation accuracy beyond the accuracy of the ADAPT-VQE training data. This pipeline achieves order-of-magnitude reductions in circuit generation time relative to ADAPT-VQE while maintaining comparable or improved state-preparation accuracy. We demonstrate ADAPT-GQE on imipramine, a well-established tricyclic antidepressant that serves as a representative, challenging target for computational modelling in drug stability protocols. We execute generated circuits on Quantinuum Helios-1, representing a milestone for AI-generated quantum chemistry circuits on state-of-the-art quantum hardware. These results establish a pathway toward automated quantum circuit synthesis for utility-scale quantum computational chemistry.",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-07-24T16:32:40Z",
+    "updated": "2026-07-24T16:32:40Z",
+    "primary_category": "quant-ph",
+    "categories": [
+      "quant-ph",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.22468v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.22468v1"
+      }
+    ],
+    "score": 59,
+    "infographic": {
+      "key_insight": "ADAPT-GQE uses transformer-based generative AI plus reinforcement learning to learn and improve molecular ground-state circuit synthesis beyond the quality of its ADAPT-VQE training examples.",
+      "engineering_relevance": "This could dramatically reduce the time and human effort needed to prepare quantum chemistry circuits, making utility-scale quantum simulation workflows more practical for drug and materials applications.",
+      "method": [
+        "Generate reference ground-state circuits with ADAPT-VQE",
+        "Train transformer models to propose and score candidate circuits",
+        "Use reinforcement learning to refine circuits beyond the training data"
+      ],
+      "evidence_signal": "The abstract reports order-of-magnitude faster circuit generation than ADAPT-VQE while maintaining comparable or improved state-preparation accuracy, and demonstrates execution on Quantinuum Helios-1 using imipramine as a test case.",
+      "watch_item": "Performance may depend on the quality and coverage of ADAPT-VQE reference circuits, so generalization to larger or chemically diverse molecules still needs careful validation.",
+      "hashtags": [
+        "#QuantumChemistry",
+        "#QuantumComputing",
+        "#GenerativeAI",
+        "#TransformerModels",
+        "#ReinforcementLearning"
+      ],
+      "paper_id": "2026-07-24-arxiv-learning_to_prepare_molecular_ground_states_with_transformer_models",
+      "paper_title": "Learning to Prepare Molecular Ground States with Transformer Models",
+      "paper_date": "2026-07-24",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-07-28T16:12:33",
+      "generator": "openai"
+    }
+  }
+]
