@@ -1,0 +1,1038 @@
+[
+  {
+    "id": "2026-07-28-arxiv-large_language_model_for_operations_research_formulation_selection_in_multi_warehouse_inve",
+    "arxiv_id": "2607.25956v1",
+    "date": "2026-07-28",
+    "title": "Large Language Model for Operations Research Formulation Selection in Multi-Warehouse Inventory Allocation",
+    "authors": "Jintao Xu, Yingzheng Ma, Jiong Dong, Yongzhi Qi, Jianshen Zhang",
+    "abstract": "Multi-warehouse inventory allocation is typically formulated as a mixed-integer programming (MIP) problem, yet no single formulation consistently matches heterogeneous instance-level regimes induced by demand concentration, inventory imbalance, replenishment scale, service constraints, and forecast volatility. We study this issue as instance-wise operations research (OR) formulation selection, where each allocation instance is assigned to a solver-executable formulation from a candidate OR expert library. We propose a solver-guided large language model (LLM) framework for OR formulation selection, in which each OR expert corresponds to a MIP formulation encoding a distinct allocation priority. To train the selector, the framework first constructs balanced expert-conditioned supervised fine-tuning (SFT) records for schema learning, and then uses MIP solver evaluation on historical instances to convert solver-evaluated allocation-quality gaps into margin-weighted identity preference optimization (IPO) preferences and per-instance expert-score metadata for reward lookup during group relative policy optimization (GRPO) to assign rewards to sampled responses. Experiments on multi-warehouse inventory allocation instances from JD$\\mathord{.}$com, one of China's largest e-retailers, demonstrate that GRPO substantially improves expert-selection accuracy relative to the SFT+IPO selector and, more importantly, produces higher realized allocation quality than both the preference-trained selector and the best fixed formulation. With GRPO, Hit Ratio@1 and Hit Ratio@2 increase from 21.45% to 50.42% and from 70.47% to 82.31%. The resulting selector achieves an allocation accuracy gain of 12.57 percentage points over the incumbent baseline, outperforming both the SFT+IPO selector and the best fixed OR expert, and reduces the gap to the ex-post oracle to 4.85 percentage points.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-28T16:41:54Z",
+    "updated": "2026-07-28T16:41:54Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "math.OC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25956v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25956v1"
+      }
+    ],
+    "score": 83,
+    "infographic": {
+      "key_insight": "A solver-guided LLM can choose the best mixed-integer formulation for each multi-warehouse inventory instance, improving allocation quality beyond any single fixed formulation.",
+      "engineering_relevance": "This enables instance-wise optimization in supply chain systems, where formulation choice adapts to changing demand, inventory, and service conditions instead of relying on one static model.",
+      "method": [
+        "Built an OR expert library of solver-executable MIP formulations, each encoding a different allocation priority.",
+        "Trained the selector with balanced expert-conditioned supervised fine-tuning, then converted solver-evaluated quality gaps into IPO preferences and GRPO rewards.",
+        "Used per-instance expert-score metadata for reward lookup during policy optimization."
+      ],
+      "evidence_signal": "On JD.com multi-warehouse inventory instances, GRPO raised Hit Ratio@1 from 21.45% to 50.42% and improved allocation accuracy by 12.57 percentage points, reducing the gap to the ex-post oracle to 4.85 points.",
+      "watch_item": "Performance depends on high-quality solver-evaluated labels and a curated expert library, so deployment may be sensitive to solver cost, instance shift, and formulation coverage.",
+      "hashtags": [
+        "#OperationsResearch",
+        "#LargeLanguageModels",
+        "#MixedIntegerProgramming",
+        "#SupplyChainOptimization",
+        "#ReinforcementLearning"
+      ],
+      "paper_id": "2026-07-28-arxiv-large_language_model_for_operations_research_formulation_selection_in_multi_warehouse_inve",
+      "paper_title": "Large Language Model for Operations Research Formulation Selection in Multi-Warehouse Inventory Allocation",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-29T15:50:49",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-reinforcement_learning_for_code_optimization",
+    "arxiv_id": "2607.25970v1",
+    "date": "2026-07-28",
+    "title": "Reinforcement Learning for Code Optimization",
+    "authors": "Pierre Chambon, Kunhao Zheng, Juliette Decugis, Benoit Sagot, Gabriel Synnaeve",
+    "abstract": "RL for code correctness is now established: have the model generate a program, run it against hidden test cases, and reward solutions that pass. Extending this to code optimization seems straightforward: just add execution time to the reward. But in practice, once timing drives the reward, small problems in measurement noise, reward sparsity, or GRPO instability overwhelm the signal and make RL fail: generated solutions are barely faster, and more of them can fail. We make execution time learnable through three stages: (1) how code is tested, by building DMC-Optim with large optimization tests and a calibrated sandbox; (2) how speed is turned into reward, by composing correctness and speed in the RL environment and using an offline simulator to predict the most promising configurations; and (3) how the model learns from that reward, by adapting GRPO and evaluation to the sparser, noisier timed-execution setting. On DMC-Optim, the strongest optimization-aware configurations improve strict top-50% pass@1 from 18.0% to 31.3% on Qwen 2.5 7B and from 30.7% to 50.4% on CWM 32B. These gains further increase at stricter percentiles such as top-30%, with 125% relative improvement for CWM 32B, while preserving pure-correctness scores. When the timing sandbox is degraded, robust optimization RL reaches 100% to 200% improvement over standard RLVR, depending on the evaluation criterion. On LCB, CWM 32B wins up to 83% of median-sample speed comparisons against standard RLVR. Relative to the fastest correct human submissions per problem, it reaches about half the human rate of complexity-class improvements (14% vs. 28%).",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-28T16:52:31Z",
+    "updated": "2026-07-28T16:52:31Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25970v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25970v1"
+      }
+    ],
+    "score": 77,
+    "infographic": {
+      "key_insight": "Reinforcement learning can improve code speed, but only if correctness, timing reward design, and training stability are made robust enough to overcome noisy execution measurements.",
+      "engineering_relevance": "The paper shows how to turn execution time into a usable optimization objective for program synthesis systems, which is directly relevant to compiler-like code generation, automated refactoring, and high-performance code assistants.",
+      "method": [
+        "Build DMC-Optim with large optimization tests and a calibrated sandbox for more reliable timing.",
+        "Compose correctness and speed into the RL reward, then use an offline simulator to choose promising configurations.",
+        "Adapt GRPO and evaluation for sparse, noisy timed-execution rewards."
+      ],
+      "evidence_signal": "On DMC-Optim, strict top-50% pass@1 rises from 18.0% to 31.3% on Qwen 2.5 7B and from 30.7% to 50.4% on CWM 32B, with stronger gains at stricter percentiles.",
+      "watch_item": "Performance depends on timing-sandbox quality, so degraded measurement environments can destabilize training and reduce the reliability of speed-based rewards.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#CodeOptimization",
+        "#ProgramSynthesis",
+        "#LLM",
+        "#HighPerformanceComputing"
+      ],
+      "paper_id": "2026-07-28-arxiv-reinforcement_learning_for_code_optimization",
+      "paper_title": "Reinforcement Learning for Code Optimization",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-29T15:50:53",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-minimizing_targeted_activations_input_only_suppression_of_evaluation_awareness_latents_in",
+    "arxiv_id": "2607.25907v1",
+    "date": "2026-07-28",
+    "title": "Minimizing Targeted Activations: Input-Only Suppression of Evaluation-Awareness Latents in Large Language Models",
+    "authors": "Deepanshu Mody, Samarth Agarwal, Utkarsh Mittal, Dipesh Mahato",
+    "abstract": "Activation steering controls model behavior by editing internal activations at inference time. We study its input-side dual: optimizing a fluent prompt so that a chosen internal latent is driven toward zero, with no inference-time model access. Our target is an \"evaluation-awareness\" latent-linearly readable and steerable in recent work-whose control would threaten the validity of safety evaluations if models behave differently when they detect being tested. Adapting Fluent Dreaming / EPO with a negated feature term (GCG-style token optimization plus a self-cross-entropy fluency regularizer, swept over a fluency weight), we suppress the latent under five target constructions-a CAA direction, a subspace norm, an SAE feature, a single MLP neuron, and a behavioral logit-on Llama-3.2-3B and Llama-3.1-8B. The latent is robustly suppressible ($z\\approx-7$), and a causally-validated Llama Scope SAE feature can be fully and selectively turned off. But our controls tell a cautionary story about the CAA direction: a placebo random direction is suppressed just as hard and shifts behavior just as far, and when we hold a real eval passage in context and optimize only a prefix, suppressing the eval-direction fails to reduce-and slightly increases-the model's behavioral eval judgment. Activation-readability, in short, is not behavioral controllability. We further find that a single MLP neuron is eval-correlated but not causal at both scales, and that scanning the real Pile yields a natural-text baseline competitive with the optimizer for the internal direction. A positive control validates our erasure detector, bounding an erasure-vs-rotation question earlier left open.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-28T16:01:48Z",
+    "updated": "2026-07-28T16:01:48Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25907v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25907v1"
+      }
+    ],
+    "score": 77,
+    "infographic": {
+      "key_insight": "Input-only prompt optimization can strongly suppress some internal “evaluation-awareness” latents, but linear readout of a latent does not guarantee causal control over the model’s behavior.",
+      "engineering_relevance": "This suggests safety probes and evaluation-aware detectors should not be treated as reliable control levers, because fluent prompt edits can erase or mimic internal signals without consistently changing downstream judgments.",
+      "method": [
+        "Use input-side optimization (GCG-style token search + self-cross-entropy fluency regularizer) to minimize a targeted latent toward zero.",
+        "Sweep fluency weight to balance suppression against prompt naturalness.",
+        "Test five target types across Llama-3.2-3B and Llama-3.1-8B: CAA direction, subspace norm, SAE feature, MLP neuron, and behavioral logit."
+      ],
+      "evidence_signal": "Across models, the targeted latent was robustly suppressible (around z≈-7), a causally validated SAE feature could be selectively turned off, but a held-in-context eval-direction did not reduce behavioral eval judgment and sometimes slightly increased it.",
+      "watch_item": "A major limitation is that suppressing a readout direction can fail to change behavior—and may even track placebo effects—so apparent latent control may not reflect genuine causal intervention.",
+      "hashtags": [
+        "#LLMSafety",
+        "#ActivationSteering",
+        "#Interpretability",
+        "#PromptOptimization",
+        "#AIEvaluation"
+      ],
+      "paper_id": "2026-07-28-arxiv-minimizing_targeted_activations_input_only_suppression_of_evaluation_awareness_latents_in",
+      "paper_title": "Minimizing Targeted Activations: Input-Only Suppression of Evaluation-Awareness Latents in Large Language Models",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-29T15:50:57",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-decoevo_score_decoupled_co_evolution_of_solver_and_rubric_generator_skills_in_text_space",
+    "arxiv_id": "2607.25675v1",
+    "date": "2026-07-28",
+    "title": "DecoEvo: Score-Decoupled Co-Evolution of Solver and Rubric-Generator Skills in Text Space",
+    "authors": "Jiangwang Chen, Zixin Song, Junlin Liu, Shuaiyu Zhou, Haiyan Wu, Haihan Shi",
+    "abstract": "Text-space optimization adapts large language models (LLMs) by editing external natural-language artifacts rather than model weights, so the optimized artifacts remain inspectable and the model can be treated as a black box. However, most existing text-space methods keep evaluation fixed. On open-ended tasks, this can become a bottleneck: once the solver improves on the criteria a rubric measures, omitted dimensions remain invisible to the optimization signal. Simply evolving the rubric is also unreliable when updates are selected by the current solver's score, because apparent progress can come from making the rubric easier to satisfy. We introduce DecoEvo (Decoupled Co-Evolution), which co-evolves a solver skill and a rubric-generator skill under decoupled objectives without using gold rubrics during optimization. The solver skill is updated using criterion-level feedback, while the rubric-generator skill is revised through complementary audits of requirement coverage and response discrimination that are independent of aggregate solver score. This separation focuses generator updates on newly exposed solver weaknesses, reducing repeated emphasis on criteria the solver already satisfies. Under each benchmark's official evaluation, DecoEvo outperforms all compared methods across five benchmarks and three LLM backbones, yielding 2.8--5.0\\% relative gains over SkillOpt in the five-benchmark average.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-28T12:53:30Z",
+    "updated": "2026-07-28T12:53:30Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25675v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25675v1"
+      }
+    ],
+    "score": 77,
+    "infographic": {
+      "key_insight": "DecoEvo improves text-space optimization by decoupling solver learning from rubric generation, so evolving criteria do not simply become easier for the current solver to satisfy.",
+      "engineering_relevance": "For LLM adaptation systems that must remain black-box and inspectable, DecoEvo offers a practical way to keep optimization signals aligned with newly exposed weaknesses instead of overfitting to stale evaluation criteria.",
+      "method": [
+        "Update the solver with criterion-level feedback rather than only aggregate scores.",
+        "Revise the rubric-generator using complementary audits of requirement coverage and response discrimination.",
+        "Avoid using gold rubrics during optimization by separating the objectives for solver skill and rubric quality."
+      ],
+      "evidence_signal": "Under each benchmark's official evaluation, the method outperforms all compared methods across five benchmarks and three LLM backbones, with 2.8–5.0% relative gains over SkillOpt on the five-benchmark average.",
+      "watch_item": "Decoupled co-evolution still depends on the quality of the criterion-level audits; if those audits miss important dimensions, the system may shift weakness detection rather than fully solve it.",
+      "hashtags": [
+        "#LLMOptimization",
+        "#TextSpaceLearning",
+        "#CoEvolution",
+        "#RubricGeneration",
+        "#BlackBoxAI"
+      ],
+      "paper_id": "2026-07-28-arxiv-decoevo_score_decoupled_co_evolution_of_solver_and_rubric_generator_skills_in_text_space",
+      "paper_title": "DecoEvo: Score-Decoupled Co-Evolution of Solver and Rubric-Generator Skills in Text Space",
+      "paper_date": "2026-07-28",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-29T15:51:00",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-charm_a_multimodal_graph_foundation_model_with_hierarchical_context_modeling_for_zero_shot",
+    "arxiv_id": "2607.26023v1",
+    "date": "2026-07-28",
+    "title": "CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer",
+    "authors": "Ankang Yang, Jitao Zhao, Di Jin, Yuxiao Huang, Dongxiao He",
+    "abstract": "Graph foundation models (GFMs) have emerged as a promising paradigm for transferring knowledge across graph domains and tasks. Real-world graphs associate nodes with text, images, and other modalities, making multimodal graphs essential for representing complex entities and relations. Moreover, collecting labels and adapting models for every new graph domain is costly and often infeasible, motivating zero-shot transfer. Unfortunately, zero-shot transfer on multimodal graphs remains underexplored. Existing GNN-based graph foundation models typically require downstream adaptation, whereas LLM-based graph methods mainly address unimodal graphs or tasks within a single domain. This setting presents two key challenges. First, models must generalize knowledge from individual modalities while capturing transferable cross-modal relations. Second, without target-domain fine-tuning, node representations remain entangled with domain-specific structures and modality-specific characteristics, obscuring shared concepts in unseen domains. To address these challenges, we propose CHARM, a multimodal graph foundation model with hierarchical context modeling for zero-shot transfer. CHARM replaces isolated raw nodes with hierarchical graph contexts that capture multimodal semantics and cross-modal relations. These contexts map domain-specific node patterns to shared high-level concepts, reducing reliance on target-domain supervision or adaptation. A modality-aware graph context encoder integrates multimodal information with graph structure and converts the resulting representations into graph tokens for a large language model . Experiments show consistent improvements on zero-shot multimodal graph tasks.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-28T17:35:26Z",
+    "updated": "2026-07-28T17:35:26Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.26023v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.26023v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "CHARM enables zero-shot transfer on multimodal graphs by replacing raw nodes with hierarchical graph contexts that capture shared semantics and cross-modal relations.",
+      "engineering_relevance": "It offers a practical path to deploy graph foundation models on new domains without costly target-specific labels or fine-tuning.",
+      "method": [
+        "Builds hierarchical graph contexts instead of isolated node representations.",
+        "Uses a modality-aware graph context encoder to fuse graph structure with text/image modalities.",
+        "Converts context representations into graph tokens for an LLM to support transfer."
+      ],
+      "evidence_signal": "The abstract reports consistent improvements on zero-shot multimodal graph tasks, indicating stronger generalization across unseen domains.",
+      "watch_item": "Performance may depend on how well hierarchical contexts and modality alignment are constructed, which could increase model complexity and preprocessing overhead.",
+      "hashtags": [
+        "#GraphFoundationModels",
+        "#MultimodalLearning",
+        "#ZeroShotTransfer",
+        "#GraphNeuralNetworks",
+        "#LLM"
+      ],
+      "paper_id": "2026-07-28-arxiv-charm_a_multimodal_graph_foundation_model_with_hierarchical_context_modeling_for_zero_shot",
+      "paper_title": "CHARM: A Multimodal Graph Foundation Model with Hierarchical Context Modeling for Zero-Shot Transfer",
+      "paper_date": "2026-07-28",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-29T15:51:02",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-lowering_the_implementation_barrier_of_neutral_atom_quantum_computing_with_agentic_workflo",
+    "arxiv_id": "2607.25834v1",
+    "date": "2026-07-28",
+    "title": "Lowering the implementation barrier of neutral-atom quantum computing with agentic workflows",
+    "authors": "Constantin Dalyac, Alexandre Dauphin, Loïc Henriet, Christophe Jurczak",
+    "abstract": "Quantum computers are moving from research laboratories to industrial machines accessible via the cloud and integrated into high-performance computing facilities. However, translating theoretical quantum protocols into hardware experiments remains a major bottleneck, requiring expertise across protocol design, compilation, simulation, and cloud execution. Here, we introduce an agentic workflow that automates this pipeline on neutral-atom quantum processors (here two Pasqal QPUs available on the cloud) while keeping the researcher in the loop for critical validation. In three case studies from many-body physics and optimization, the agent went from published paper or patent to a QPU campaign run overnight. In particular, human intervention was crucial to ensure scientific validity: the agent selected an inadequate observable in one experiment and constructed a plausible but incorrect hardware diagnosis in another, with both failures detected only through domain-expert review. Finally, we use a second agent to classify a corpus of 633 Rydberg-array arXiv papers and show that nearly half are implementable on present-day QPUs while identifying specific hardware upgrades needed for the rest. Together, these results demonstrate that agentic workflows provide a practical bridge between theoretical ideas and physical hardware, opening quantum experimentation to a much broader scientific community.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-28T15:13:14Z",
+    "updated": "2026-07-28T15:13:14Z",
+    "primary_category": "quant-ph",
+    "categories": [
+      "quant-ph",
+      "cond-mat.quant-gas",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25834v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25834v1"
+      }
+    ],
+    "score": 73,
+    "infographic": {
+      "key_insight": "An agentic workflow can convert published neutral-atom quantum ideas into overnight QPU experiments, but expert review remains essential to catch scientific and hardware-level mistakes.",
+      "engineering_relevance": "This lowers the barrier to running quantum hardware campaigns by automating protocol translation, compilation, simulation, and cloud execution for neutral-atom processors.",
+      "method": [
+        "Agent plans and executes the end-to-end quantum workflow on cloud-accessible Pasqal QPUs.",
+        "Human researcher validates critical steps to preserve scientific correctness.",
+        "A second agent screens 633 Rydberg-array arXiv papers for current hardware feasibility and upgrade needs."
+      ],
+      "evidence_signal": "In three case studies, the agent moved from a published paper or patent to an overnight QPU campaign, and in a corpus of 633 papers it found nearly half appear implementable on present-day QPUs.",
+      "watch_item": "The workflow can produce plausible but incorrect choices or diagnoses, so expert oversight is required before trusting results.",
+      "hashtags": [
+        "#QuantumComputing",
+        "#AgenticAI",
+        "#NeutralAtoms",
+        "#ResearchAutomation",
+        "#HPC"
+      ],
+      "paper_id": "2026-07-28-arxiv-lowering_the_implementation_barrier_of_neutral_atom_quantum_computing_with_agentic_workflo",
+      "paper_title": "Lowering the implementation barrier of neutral-atom quantum computing with agentic workflows",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-29T15:51:05",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-re_thinking_mammography_transfer_learning_the_dataset_informed_transfer_learning_ditl_fram",
+    "arxiv_id": "2607.26043v1",
+    "date": "2026-07-28",
+    "title": "Re-thinking Mammography Transfer Learning: The Dataset-Informed Transfer Learning (DITL) Framework for Breast Cancer Screening and Lesion Diagnosis",
+    "authors": "Adarsh Bhandary Panambur, Siming Bayer, Andreas Maier",
+    "abstract": "Enhancing classification performance in mammography remains a persistent challenge across both small curated datasets and large-scale clinical cohorts. Conventional transfer learning approaches often neglect dataset-specific characteristics, while recent neighborhood-informed methods have been restricted to narrow tasks with rigid formulations, limiting their scalability to population-level datasets. To address these challenges, we propose the Dataset-Informed Transfer Learning (DITL) framework, which integrates dataset-derived difficulty signals with neighborhood-based triplet supervision in a unified objective. DITL introduces two adaptive components: (i) Adaptive Difficulty-Weighted Cross-Entropy (A-DWCE), which assigns per-sample weights based on k-nearest neighbor label purity in a self-supervised feature space, and (ii) Adaptive Neighborhood Representation Triplet (A-NR-Triplet), which enforces intra-class compactness and inter-class separation using a learnable margin. Unlike focal loss, DITL requires no hyperparameter tuning, removes heuristic weighting and fixed margins, and incurs negligible computational overhead, yielding a robust and scalable optimization strategy. On the large-scale VinDR-Mammo dataset, DITL achieves state-of-the-art performance for whole-image breast density classification, with significant improvements across accuracy, F1-score, and AUC (p < 0.0001). Beyond large cohorts, DITL also delivers consistent, statistically significant gains on small ROI datasets (p < 0.0001). By bridging small-scale lesion analysis with large-scale density estimation, DITL establishes a clinically relevant, scalable, and generalizable framework for mammography classification, spanning the full breast cancer screening-to-diagnosis spectrum.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-07-28T17:52:36Z",
+    "updated": "2026-07-28T17:52:36Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.26043v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.26043v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "DITL improves mammography classification by adapting transfer learning to dataset-specific difficulty and neighborhood structure instead of using fixed generic losses.",
+      "engineering_relevance": "The framework is practical for medical imaging pipelines because it adds little computational cost while scaling from small lesion datasets to large clinical cohorts.",
+      "method": [
+        "A-DWCE weights each sample by k-nearest-neighbor label purity in a self-supervised feature space.",
+        "A-NR-Triplet uses neighborhood-based triplet supervision with a learnable margin to shape embeddings.",
+        "The combined objective removes manual tuning used in focal loss and fixed-margin triplet setups."
+      ],
+      "evidence_signal": "On the large-scale VinDR-Mammo dataset, DITL achieved state-of-the-art whole-image breast density classification with significant gains in accuracy, F1-score, and AUC (p < 0.0001), and it also improved performance on small ROI datasets with the same significance.",
+      "watch_item": "Performance depends on the quality of the self-supervised feature space and kNN neighborhood purity, so degraded embeddings or dataset shift could weaken the adaptive weighting.",
+      "hashtags": [
+        "#Mammography",
+        "#TransferLearning",
+        "#BreastCancerAI",
+        "#MedicalImaging",
+        "#DeepLearning"
+      ],
+      "paper_id": "2026-07-28-arxiv-re_thinking_mammography_transfer_learning_the_dataset_informed_transfer_learning_ditl_fram",
+      "paper_title": "Re-thinking Mammography Transfer Learning: The Dataset-Informed Transfer Learning (DITL) Framework for Breast Cancer Screening and Lesion Diagnosis",
+      "paper_date": "2026-07-28",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-07-29T15:51:08",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-extracting_atomic_environments_for_machine_learning_interatomic_potentials",
+    "arxiv_id": "2607.26018v1",
+    "date": "2026-07-28",
+    "title": "Extracting Atomic Environments for Machine Learning Interatomic Potentials",
+    "authors": "Jared C. Stimac, Fei Zhou, Kyle Bushick, Bo Lei, Sebastien Hamel, Amit Samanta",
+    "abstract": "In order to appropriately capture large-scale material features and emergent phenomena via atomistic simulations, such as Molecular Dynamics (MD), the system scale can range up to hundreds of millions of atoms. However, the force-field models that drive those simulations are generally trained with Density Functional Theory (DFT) reference data, limited to relatively small configurations on the order of 100s or 1000s of atoms. To compute DFT forces on atoms in regions of interest, for example for active-learning or on-the-fly training of interatomic potentials, one needs to extract a small set of atoms from the larger simulation box, and typical work with periodic boundary conditions for DFT; however, methods to select the shape and size of this extracted set of atoms, as well as to generate a potentially necessary passivating envelope, have not been systematically analyzed. In this work, we present a benchmark of various techniques to extract atomic environments from large, bulk configurations and embed them into smaller configurations suitable for DFT calculations with periodic boundary conditions. We test with a diverse set of material systems, which includes amorphous $\\mathrm{SiO_2}$, Ta with screw dislocations, and molten C. We demonstrated a notably simple procedure, a method we refer to as deletions, yields superior performance over an array of alternative extraction methods.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-28T17:28:41Z",
+    "updated": "2026-07-28T17:28:41Z",
+    "primary_category": "cond-mat.mtrl-sci",
+    "categories": [
+      "cond-mat.mtrl-sci"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.26018v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.26018v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "A simple atom-extraction strategy called “deletions” outperforms more complex ways of carving out local atomic environments for DFT-based training data.",
+      "engineering_relevance": "This work helps make active-learning and on-the-fly fitting of machine-learned interatomic potentials more practical by producing smaller periodic DFT-ready structures from large-scale simulations.",
+      "method": [
+        "Benchmark multiple extraction shapes and sizes for local atomic environments.",
+        "Compare strategies for embedding extracted atoms into periodic DFT calculations, including passivation needs.",
+        "Evaluate a simple deletion-based procedure against alternative methods across diverse materials."
+      ],
+      "evidence_signal": "The abstract reports benchmarking on amorphous SiO2, Ta with screw dislocations, and molten C, with deletions showing superior performance across the tested cases.",
+      "watch_item": "Results may depend on the material system, defect type, and how periodic-boundary-compatible extraction and passivation are implemented.",
+      "hashtags": [
+        "#MachineLearningInteratomicPotentials",
+        "#DensityFunctionalTheory",
+        "#MolecularDynamics",
+        "#MaterialsSimulation",
+        "#ActiveLearning"
+      ],
+      "paper_id": "2026-07-28-arxiv-extracting_atomic_environments_for_machine_learning_interatomic_potentials",
+      "paper_title": "Extracting Atomic Environments for Machine Learning Interatomic Potentials",
+      "paper_date": "2026-07-28",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-29T15:51:11",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-toward_standardized_cross_vendor_agent_tool_trust_management_in_autonomous_networks",
+    "arxiv_id": "2607.25914v1",
+    "date": "2026-07-28",
+    "title": "Toward Standardized Cross-Vendor Agent Tool Trust Management in Autonomous Networks",
+    "authors": "Ravi Kant Sharma, Ashutosh Uttam, Ajay Kumar",
+    "abstract": "Autonomous Network Levels 4-5 require AI agents to invoke tools across vendor boundaries without human oversight, yet existing management standards lack a standardized mechanism for cross-vendor trust visibility. When a tool from Vendor B is compromised, agents from Vendor A continue invoking it -- unaware of the trust degradation -- causing cascading service impact. We present AgentToolMO, a proposed 3GPP NRM information model for agent tool trust management. The model comprises: a formally defined trust state machine with provable graduated enforcement, damped cascade propagation with bounded convergence, cross-vendor trust notifications via existing Management Services (MnS) interfaces, and retroactive impact assessment through NRM dependency graph traversal. Simulation-based evaluation across multi-vendor topologies shows that standardized cross-vendor notifications reduce blast radius from hours-scale undetected propagation to near-real-time containment bounded by MnS notification delivery, with cascade convergence guaranteed in bounded iterations and sub-linear notification scaling across vendor domains. The framework operates within existing 3GPP management infrastructure, leverages existing protocols, and provides a standardization pathway for trustworthy multi-vendor autonomous network management.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-07-28T16:06:41Z",
+    "updated": "2026-07-28T16:06:41Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CR",
+      "cs.NI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25914v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25914v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "AgentToolMO adds standardized cross-vendor trust visibility so autonomous network agents can stop using compromised tools quickly instead of continuing blind trust across vendor boundaries.",
+      "engineering_relevance": "For 3GPP autonomous networks, it offers a practical management-layer mechanism to contain cascading failures without changing agent logic or relying on human oversight.",
+      "method": [
+        "Defines a trust state machine with graduated enforcement actions.",
+        "Propagates trust changes through damped cascade rules with bounded convergence.",
+        "Uses existing MnS interfaces and NRM dependency graph traversal for notifications and impact assessment."
+      ],
+      "evidence_signal": "Simulation results in multi-vendor topologies indicate near-real-time containment, bounded cascade convergence, and sub-linear notification scaling across vendor domains.",
+      "watch_item": "Real-world adoption depends on vendors exposing compatible trust metadata and on notification latency staying low enough for the containment guarantees to hold.",
+      "hashtags": [
+        "#AutonomousNetworks",
+        "#3GPP",
+        "#TrustManagement",
+        "#AIAgents",
+        "#NetworkManagement"
+      ],
+      "paper_id": "2026-07-28-arxiv-toward_standardized_cross_vendor_agent_tool_trust_management_in_autonomous_networks",
+      "paper_title": "Toward Standardized Cross-Vendor Agent Tool Trust Management in Autonomous Networks",
+      "paper_date": "2026-07-28",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-07-29T15:51:13",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-hiskill_empowering_llm_agents_with_hierarchical_skill_graphs",
+    "arxiv_id": "2607.25853v1",
+    "date": "2026-07-28",
+    "title": "HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs",
+    "authors": "Yu Hao, Jinxuan Cai, Qi Zhang, Yawen Li, Zhiqiang Zhang, Chuan Shi",
+    "abstract": "Skills have become an important abstraction for enabling large language model (LLM) agents to reuse past experience in long-horizon interactive tasks. However, existing trajectory-to-skill methods often produce flat collections of high-level textual skills that are stored and retrieved independently, leaving skill relations underutilized and maintaining a gap between high-level skills and executable actions. In this paper, we propose HiSkill, a hierarchical skill graph framework that organizes interaction trajectories into a directed graph with skill nodes, AtomicOp nodes, and typed edges. Specifically, the graph connects reusable high-level skills with executable action templates, while also capturing decomposition, temporal transition, compatibility, support, and recovery relations among them. At inference time, HiSkill retrieves a compact task-relevant subgraph and performs subgraph-guided task execution, where a symbolic task state, an active skill, and the retrieved subgraph guide the LLM agent to switch skills, select AtomicOps, and ground executable actions iteratively. Experiments on three interactive environments show that HiSkill outperforms state-of-the-art baselines while reducing inference token consumption, demonstrating the effectiveness of bridging high-level skills and executable action grounding through a hierarchical skill graph. Our data and code is available at https://github.com/BUPT-GAMMA/HiSkill.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-28T15:25:47Z",
+    "updated": "2026-07-28T15:25:47Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25853v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25853v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "HiSkill turns past interactions into a hierarchical skill graph so an LLM agent can reuse high-level skills and ground them into executable actions more effectively.",
+      "engineering_relevance": "The framework is useful for long-horizon agent systems because it improves task execution while reducing inference token usage through structured skill retrieval and guidance.",
+      "method": [
+        "Builds a directed graph with skill nodes, AtomicOp nodes, and typed edges.",
+        "Models decomposition, temporal transition, compatibility, support, and recovery relations.",
+        "Retrieves a compact task-relevant subgraph and uses it to guide skill switching and action grounding during execution."
+      ],
+      "evidence_signal": "The paper reports experiments on three interactive environments, where HiSkill outperforms state-of-the-art baselines and uses fewer inference tokens.",
+      "watch_item": "Graph construction and subgraph retrieval may add implementation complexity and require careful design to avoid noisy or incomplete skill relations.",
+      "hashtags": [
+        "#LLMAgents",
+        "#SkillGraphs",
+        "#HierarchicalPlanning",
+        "#InteractiveAI",
+        "#ResearchInfographic"
+      ],
+      "paper_id": "2026-07-28-arxiv-hiskill_empowering_llm_agents_with_hierarchical_skill_graphs",
+      "paper_title": "HiSkill: Empowering LLM Agents with Hierarchical Skill Graphs",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-29T15:51:31",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-from_deterministic_to_generative_deep_learning_for_urban_air_quality_reconstruction_from_s",
+    "arxiv_id": "2607.25687v1",
+    "date": "2026-07-28",
+    "title": "From Deterministic to Generative Deep Learning for Urban Air Quality Reconstruction from Sparse Observations",
+    "authors": "Abhishek A. Sabnis, Mihai Mitrea, Lya Lugon, Karine Sartelet, Marc Bocquet, Xiaoyuan Cheng",
+    "abstract": "Full-field reconstruction of air pollution is essential for evaluating pollution exposure and supporting public health decision-making. However, the complex interactions among pollutants, hard-to-predict weather patterns, and limited monitoring station coverage make this a complex task. We apply deep learning techniques to provide fast and accurate reconstructions from sparse observations of four key pollutants: NO2, O3, PM2.5 and PM10. Models are trained on full-field simulation data and evaluated on real-world observations collected from 9 to 28 monitoring stations in the city of Paris. We introduce a diffusion-based generative framework for multi-pollutant reconstruction and benchmark its performance against deterministic deep learning models. Despite noisy observations and strong spatial variability, the models achieve high structural similarity on simulated validation data and produce realistic spatial patterns on real-world observations, as indicated by power-spectrum analysis. We introduce data augmentation methods that enable transfer to real-world observations without retraining, allowing the models to generalise beyond the training period. These findings highlight the potential of ML models for reliable real-world deployment in air pollution reconstruction tasks.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-28T13:03:09Z",
+    "updated": "2026-07-28T13:03:09Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25687v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25687v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "A diffusion-based generative model can reconstruct city-scale air pollution fields from sparse station readings and better preserve realistic spatial structure than purely deterministic approaches.",
+      "engineering_relevance": "This enables faster, more reliable urban air-quality mapping for exposure assessment, public health monitoring, and deployment in sensor-limited cities.",
+      "method": [
+        "Trains deep learning models on full-field air-quality simulation data for NO2, O3, PM2.5, and PM10.",
+        "Benchmarks deterministic reconstruction models against a diffusion-based generative framework.",
+        "Uses data augmentation to transfer models to real-world Paris observations without retraining."
+      ],
+      "evidence_signal": "Models were evaluated on Paris observations from 9 to 28 monitoring stations and showed high structural similarity on simulated validation data plus realistic spatial patterns on real observations, supported by power-spectrum analysis.",
+      "watch_item": "Generalization to operational use may still depend on station coverage, observation noise, and how well simulation-trained models match the target city's meteorology and emission patterns.",
+      "hashtags": [
+        "#AirQuality",
+        "#DeepLearning",
+        "#DiffusionModels",
+        "#ScientificML",
+        "#UrbanEnvironment"
+      ],
+      "paper_id": "2026-07-28-arxiv-from_deterministic_to_generative_deep_learning_for_urban_air_quality_reconstruction_from_s",
+      "paper_title": "From Deterministic to Generative Deep Learning for Urban Air Quality Reconstruction from Sparse Observations",
+      "paper_date": "2026-07-28",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-29T15:51:35",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-cognivia_a_cognitive_behavioral_therapy_copilot_for_evidence_based_mental_healthcare",
+    "arxiv_id": "2607.25681v1",
+    "date": "2026-07-28",
+    "title": "Cognivia: A Cognitive Behavioral Therapy Copilot for Evidence-Based Mental Healthcare",
+    "authors": "Qi Chen, Siria Xiyueyao Luo, Jian Wang, Yuan Shi, Haocong Rao, Xuejiao Zhao",
+    "abstract": "Cognitive distortion amplifies negative emotions and contributes to mental health disorders. Cognitive Behavioral Therapy (CBT) is an effective way to address cognitive distortions, but its large-scale application is limited by the shortage of professional therapists. Although large language models (LLMs) have recently been explored for mental health applications, existing methods still suffer from limited domain specificity, overly flattering responses, and the absence of well-defined annotations for cognitive distortions. This paper proposes Cognivia, an evidence-based artificial intelligence therapist that integrates automatic cognitive distortion identification and rational response generation. Our framework is built on authoritative CBT texts widely regarded as core paradigms and standard references. It is further augmented with mental health question-answer (Q and A) data, and employs multi-stage prompting and structured generation strategies under the supervision of behavioral science experts. Then we fine-tune a lightweight LLM on this augmented CBT dataset to obtain Cognivia. In addition, we propose the first hierarchical quality evaluation framework for assessing LLM-generated rational responses, developed through collaboration between AI researchers and behavioral science experts. Cognivia is evaluated using lexical metrics, LLM-based Judges with two complementary criteria, and human evaluation by 10 behavioral science experts. It consistently outperforms the baseline methods in cognitive distortion recognition and rational response generation, demonstrating its effectiveness. Our code is available at https://github.com/SNOWTEAM2023/Cognivia.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-28T12:56:06Z",
+    "updated": "2026-07-28T12:56:06Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25681v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25681v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "Cognivia is an evidence-based CBT copilot that detects cognitive distortions and generates more rational, therapist-aligned responses for mental healthcare.",
+      "engineering_relevance": "It shows how to adapt a lightweight LLM for a specialized clinical support task using curated domain data, structured prompting, and expert-supervised evaluation.",
+      "method": [
+        "Builds an augmented CBT dataset from authoritative CBT texts plus mental health Q&A data.",
+        "Uses multi-stage prompting and structured generation to guide distortion identification and response writing.",
+        "Fine-tunes a lightweight LLM and introduces a hierarchical quality evaluation framework for rational responses."
+      ],
+      "evidence_signal": "The system was tested with lexical metrics, LLM-based judges, and human evaluation by 10 behavioral science experts, where it consistently outperformed baselines.",
+      "watch_item": "As a clinical-support model, it still requires careful expert oversight to avoid overconfident or inappropriate advice in sensitive mental health settings.",
+      "hashtags": [
+        "#CBT",
+        "#MentalHealthAI",
+        "#LLM",
+        "#ClinicalNLP",
+        "#EvidenceBasedAI"
+      ],
+      "paper_id": "2026-07-28-arxiv-cognivia_a_cognitive_behavioral_therapy_copilot_for_evidence_based_mental_healthcare",
+      "paper_title": "Cognivia: A Cognitive Behavioral Therapy Copilot for Evidence-Based Mental Healthcare",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-29T15:51:38",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-interactive_reward_agent_gui_task_evaluation_via_environment_state_verification",
+    "arxiv_id": "2607.25904v1",
+    "date": "2026-07-28",
+    "title": "Interactive Reward Agent: GUI Task Evaluation via Environment-State Verification",
+    "authors": "Chenrui Shi, Yuwei Wu, Yang Liu, Ruining Feng, Zirui Shang, Zhi Gao",
+    "abstract": "Graphical user interface task evaluation aims to determine whether a GUI agent has successfully completed a user instruction. Automated GUI task evaluation has received increasing attention because the evaluation results can serve as reward signals for both test-time scaling and post-training. However, reliable GUI task evaluation remains challenging because the judgments often require access to environment states, such as system configurations, file data, and application settings, beyond the screenshots of execution trajectories. In this paper, we propose an interactive reward agent (IRA) based on a propose-then-verify framework to acquire and verify evidence from the post-execution environment. Given a task instruction and a GUI environment after the GUI agent execution, IRA first proposes the task completion conditions and then verifies them by invoking system tools, application tools, and GUI tools. This design combines evidence from both visible interfaces and the environment state in an interactive process. We further introduce GUI-RewardBench, a benchmark of 321 GUI task trajectories spanning 10 Ubuntu desktop application categories. Experiments show that IRA achieves 86.9% accuracy on GUI-RewardBench, outperforming existing evaluator baselines. We further apply IRA to reinforcement learning of GUI agents, achieving a 34.0% OSWorld success rate, which demonstrates that IRA can provide effective reward signals for training GUI agents.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-07-28T16:01:38Z",
+    "updated": "2026-07-28T16:01:38Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25904v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25904v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "IRA evaluates GUI task success by proposing completion criteria and then verifying them against both screenshots and post-execution environment state.",
+      "engineering_relevance": "This provides a practical reward signal for training and testing GUI agents where visual evidence alone is insufficient.",
+      "method": [
+        "Propose task completion conditions from the instruction.",
+        "Verify the conditions using system, application, and GUI tools.",
+        "Combine visible UI evidence with environment-state checks in an interactive propose-then-verify loop."
+      ],
+      "evidence_signal": "On GUI-RewardBench, a 321-trajectory benchmark across 10 Ubuntu desktop application categories, IRA reached 86.9% accuracy and improved OSWorld RL success to 34.0%.",
+      "watch_item": "The approach depends on access to reliable tool APIs and environment permissions, so verification can be brittle when state is hidden, inaccessible, or inconsistent.",
+      "hashtags": [
+        "#GUIAgents",
+        "#RewardModeling",
+        "#EnvironmentVerification",
+        "#UbuntuDesktop",
+        "#AIEvaluation"
+      ],
+      "paper_id": "2026-07-28-arxiv-interactive_reward_agent_gui_task_evaluation_via_environment_state_verification",
+      "paper_title": "Interactive Reward Agent: GUI Task Evaluation via Environment-State Verification",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-07-29T15:51:43",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-tools_are_not_islands_set_level_tool_retrieval_for_llm_agents_via_query_conditioned_hypere",
+    "arxiv_id": "2607.25718v1",
+    "date": "2026-07-28",
+    "title": "Tools Are Not Islands: Set-Level Tool Retrieval for LLM Agents via Query-Conditioned Hyperedge Prediction",
+    "authors": "Xinyi Hong, Pinjun Dong, Xinyang Yu, Binyan Jiang",
+    "abstract": "Large language model (LLM) agents increasingly rely on invoking external tools to complete real-world tasks. Tool retrieval, which selects a small task-relevant subset from a library of thousands of tools before the agent acts, has therefore become a critical component of LLM agent pipelines. However, existing retrievers either score each tool in isolation or assemble the tool set sequentially, so the joint utility of a candidate set is never evaluated as a whole. In this paper, we propose HYSET, short for HYperedge-based SEt-level Tool retrieval. Our contributions are threefold: (i) we formulate tool retrieval as query-conditioned hyperedge prediction on a tool co-invocation hypergraph, under which the tool set itself becomes the unit of scoring and most existing retrieval paradigms reduce to restricted instances; (ii) we capture size-dependent tool compatibility through cardinality-specific interactions; and (iii) we design HYSET as a pre-selection module requiring no modification to the downstream agent. Experiments on ToolBench demonstrate that HYSET consistently outperforms state-of-the-art baselines in both tool retrieval performance and end-to-end task success. Beyond the in-domain setting, HYSET further supports zero-shot/few-shot transfer, generalizing to held-out tools/categories and unseen domains with minimal supervision.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-28T13:45:08Z",
+    "updated": "2026-07-28T13:45:08Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25718v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25718v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "HYSET reframes tool retrieval from ranking individual tools to predicting the best tool set jointly as a hyperedge, capturing compatibility among tools for LLM agents.",
+      "engineering_relevance": "This can improve real-world agent reliability by selecting smaller, more task-relevant tool subsets before execution, without changing the downstream LLM agent.",
+      "method": [
+        "Formulate tool retrieval as query-conditioned hyperedge prediction on a tool co-invocation hypergraph.",
+        "Model set utility directly, including size-dependent tool compatibility via cardinality-specific interactions.",
+        "Use HYSET as a pre-selection module that plugs into existing agent pipelines without downstream changes."
+      ],
+      "evidence_signal": "On ToolBench, HYSET outperforms strong baselines in both tool retrieval metrics and end-to-end task success, and it also transfers to held-out tools, categories, and unseen domains with little supervision.",
+      "watch_item": "Performance depends on the quality and coverage of the tool co-invocation hypergraph, so sparse or biased historical tool-use data may limit generalization.",
+      "hashtags": [
+        "#LLMAgents",
+        "#ToolRetrieval",
+        "#HypergraphLearning",
+        "#ToolBench",
+        "#KnowledgeMining"
+      ],
+      "paper_id": "2026-07-28-arxiv-tools_are_not_islands_set_level_tool_retrieval_for_llm_agents_via_query_conditioned_hypere",
+      "paper_title": "Tools Are Not Islands: Set-Level Tool Retrieval for LLM Agents via Query-Conditioned Hyperedge Prediction",
+      "paper_date": "2026-07-28",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-29T15:51:45",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-a_cost_effective_multimodal_llm_reasoning_framework_for_question_answering_over_irregular",
+    "arxiv_id": "2607.25947v1",
+    "date": "2026-07-28",
+    "title": "A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series",
+    "authors": "Frank Nie, Ethan B Liu, Yuan Zhu, Wei Fan, Jindong Han",
+    "abstract": "Question answering (QA) over irregular clinical time series (ICTS) plays a pivotal role in a wide range of healthcare applications. Although recent multimodal time-series large language models (LLMs) have shown considerable promise in general-purpose time-series QA, they remain poorly equipped to model the sparsity, asynchrony, and irregular sampling patterns of clinical observations. To fill this gap, we propose ClinPRISM, a cost-effective multimodal LLM reasoning framework for question answering over ICTS data. First, we devise an irregularity-aware multi-scale encoder to capture sparse clinical evidence at diverse temporal scales. Then, we propose a temporal evidence distiller to integrate representations across these scales and compress them into a small number of LLM-compatible tokens. Moreover, we introduce a progressive alignment strategy that sequentially aligns the irregular trajectories with the LLM's textual embedding space. To facilitate training, we construct 30,000 clinical time series paired with multi-scale descriptions, together with 41,000 instruction-tuning instances spanning 11 tasks. Using a 4-billion-parameter LLM backbone, ClinPRISM achieves state-of-the-art performance on the held-out evaluation benchmark while using only 16 time-series tokens and achieving an average inference latency of 0.15 seconds per question.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-28T16:33:41Z",
+    "updated": "2026-07-28T16:33:41Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25947v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25947v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "ClinPRISM makes irregular clinical time-series question answering practical by compressing sparse, asynchronous observations into a small set of LLM-friendly tokens without sacrificing accuracy.",
+      "engineering_relevance": "The framework is designed for efficient healthcare deployment, combining multimodal reasoning with low token usage and fast inference for cost-effective clinical QA.",
+      "method": [
+        "Irregularity-aware multi-scale encoder captures sparse clinical evidence across multiple temporal resolutions.",
+        "Temporal evidence distiller merges multi-scale signals into a compact token set compatible with the LLM.",
+        "Progressive alignment gradually maps irregular trajectories into the LLM textual embedding space."
+      ],
+      "evidence_signal": "The authors trained on 30,000 clinical time series with multi-scale descriptions and 41,000 instruction-tuning instances across 11 tasks, and report state-of-the-art results with only 16 time-series tokens and 0.15 s average inference latency per question.",
+      "watch_item": "Performance may depend on the quality and representativeness of irregular clinical annotations, and the compact token budget could limit fidelity for highly complex trajectories.",
+      "hashtags": [
+        "#ClinicalAI",
+        "#TimeSeriesQA",
+        "#MultimodalLLM",
+        "#HealthcareML",
+        "#EfficientAI"
+      ],
+      "paper_id": "2026-07-28-arxiv-a_cost_effective_multimodal_llm_reasoning_framework_for_question_answering_over_irregular",
+      "paper_title": "A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series",
+      "paper_date": "2026-07-28",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-29T15:51:48",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-a_machine_learning_based_gas_lift_optimization_workflow_for_unconventional_fields",
+    "arxiv_id": "2607.25885v1",
+    "date": "2026-07-28",
+    "title": "A Machine-Learning-Based Gas Lift Optimization Workflow for Unconventional Fields",
+    "authors": "Sha, Miao, Alexandra Vendetti, Logan Smart, Gunta Chomchalerm, Yang Chen",
+    "abstract": "In this paper, we present an automated data-driven workflow using Machine Learning (ML) for gas lift optimization in unconventional fields. This workflow integrates a ML model that accurately forecasts the Gas Lift Performance Curve, and a Bayesian Optimization Framework to solve for the optimal gas injection rates under the constraints of facility capacity. The ML model leverages the historical production time series data without requiring downhole gauges or multi-rate well tests. We piloted this workflow on 30 wells across 5 well pads in Bakken and obtained >5% production uplift on average. With the success of the pilot, we have now fully-deployed this workflow in Bakken across 200+ gas lift and plunger-assisted gas lift (PAGL) wells. Moreover, the ML-based gas lift optimization workflow presented in this paper is an effective and economic solution for other assets where downhole data or multi-rate testing are not available/feasible due to cost or facility constraints.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-28T15:46:22Z",
+    "updated": "2026-07-28T15:46:22Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.SE"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25885v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25885v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "An automated machine-learning and Bayesian optimization workflow can optimize gas lift rates directly from historical production data, without downhole gauges or multi-rate tests.",
+      "engineering_relevance": "This provides a practical, scalable control method for unconventional oilfields where facility limits and missing downhole measurements make conventional optimization difficult.",
+      "method": [
+        "Train an ML model to forecast the gas lift performance curve from historical time-series production data.",
+        "Use Bayesian optimization to search for the gas injection rate that maximizes production under facility capacity constraints.",
+        "Deploy the workflow across wells to automate recommendation of optimal gas lift settings."
+      ],
+      "evidence_signal": "In the Bakken pilot on 30 wells across 5 pads, the workflow achieved more than 5% average production uplift and was later deployed across 200+ gas lift and PAGL wells.",
+      "watch_item": "Performance depends on the quality and representativeness of historical production data, and the model may need retraining when operating conditions or facility constraints change.",
+      "hashtags": [
+        "#MachineLearning",
+        "#GasLift",
+        "#BayesianOptimization",
+        "#UnconventionalWells",
+        "#ProductionOptimization"
+      ],
+      "paper_id": "2026-07-28-arxiv-a_machine_learning_based_gas_lift_optimization_workflow_for_unconventional_fields",
+      "paper_title": "A Machine-Learning-Based Gas Lift Optimization Workflow for Unconventional Fields",
+      "paper_date": "2026-07-28",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-29T15:51:51",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-speculate_while_you_reason_teaching_agents_to_predict_their_next_tool_call_via_joint_agent",
+    "arxiv_id": "2607.25816v1",
+    "date": "2026-07-28",
+    "title": "Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL",
+    "authors": "Jiabao Ji, Yujian Liu, Li An, Rohit Jain, Gungor Polatkan, Siyu Zhu",
+    "abstract": "Large language model agents often spend substantial wall-clock time waiting for tool call results. Tool-call speculation can hide this latency by predicting and pre-executing an agent's next tool call if the prediction matches the agent's eventual tool call, but existing speculators are typically separate draft models or cached traces that are poorly aligned with the deployed agent's own behavior. We identify this speculator-agent gap and show that the target agent itself is a strong next-call speculator. This points to a simpler design: unifying the agent and speculator within the same model. In this paper, we introduce the self-speculating agent, a single model that both solves tasks in agent mode and predicts its next tool call from partial trajectories in speculator mode, fully reusing prefix KV cache. To enable this dual-mode agent without degrading performance, we propose a joint agent-speculator reinforcement learning method, which derives speculation targets from the agent's own rollouts and alternates agent and speculator updates. Across agentic search QA and conversational tool-use agentic tasks, our method improves average next tool-call Hit@1 from 44.1 to 61.2 for Qwen3-4B and from 48.9 to 66.3 for Qwen3.5-4B, while preserving agent task success.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-07-28T15:00:10Z",
+    "updated": "2026-07-28T15:00:10Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25816v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25816v1"
+      }
+    ],
+    "score": 68,
+    "infographic": {
+      "key_insight": "A single LLM can act as both an agent and its own next-tool-call speculator, reducing tool latency by predicting and pre-executing the agent’s next action from partial trajectories.",
+      "engineering_relevance": "This simplifies deployment by reusing one model and one prefix KV cache, making tool-augmented systems faster without adding a separate draft/speculator model.",
+      "method": [
+        "Train a self-speculating agent in two modes: agent mode for task solving and speculator mode for predicting the next tool call.",
+        "Use joint agent-speculator reinforcement learning to derive speculation targets from the agent’s own rollouts.",
+        "Alternate updates between agent and speculator behavior so speculation aligns with the deployed agent."
+      ],
+      "evidence_signal": "On agentic search QA and conversational tool-use tasks, average next-tool-call Hit@1 improved from 44.1 to 61.2 for Qwen3-4B and from 48.9 to 66.3 for Qwen3.5-4B, while maintaining task success.",
+      "watch_item": "The approach depends on the model’s ability to preserve agent performance while learning speculation, so RL stability and mismatch between predicted and actual tool calls remain practical concerns.",
+      "hashtags": [
+        "#LLMAgents",
+        "#ToolUse",
+        "#ReinforcementLearning",
+        "#SpeculativeExecution",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-07-28-arxiv-speculate_while_you_reason_teaching_agents_to_predict_their_next_tool_call_via_joint_agent",
+      "paper_title": "Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL",
+      "paper_date": "2026-07-28",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-07-29T15:52:05",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-sharpness_aware_minimization_and_muon_robustness_under_the_spectral_norm",
+    "arxiv_id": "2607.26001v1",
+    "date": "2026-07-28",
+    "title": "Sharpness-Aware Minimization and Muon: Robustness under the Spectral Norm",
+    "authors": "Wenzhi Zhong, Edward Milsom, Michael Murray",
+    "abstract": "Sharpness-Aware Minimization (SAM) aims to improve generalization by encouraging insensitivity to small, worst-case parameter perturbations. However, the notion of a \"small\" perturbation is inherently geometry-dependent: while existing SAM variants have explored a wide range of choices, a clear perspective on which geometries are most effective in practice remains elusive. Recent work on matrix-aware optimization, particularly the Muon optimizer, suggests that respecting the matrix structure of hidden-layer weights can lead to strong empirical performance. Motivated by this, we study matrix-aware geometry in both stages of SAM: we introduce a layerwise spectral inner perturbation for matrix-valued hidden-layer parameters and combine it with either AdamW/SGDW or Muon in the outer update. Across ImageNet-1K experiments on ViT-Small/16 and ResNet-50, we find that the combination of a spectral inner step with a Muon outer step performs consistently strongly, achieving the best validation accuracy on both models among the evaluated methods.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-28T17:18:11Z",
+    "updated": "2026-07-28T17:18:11Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.26001v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.26001v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "SAM works best when its perturbation geometry matches the parameter structure, and a layerwise spectral inner perturbation combined with Muon gives the strongest robustness/generalization in this study.",
+      "engineering_relevance": "For vision model training, choosing matrix-aware optimization geometry can materially improve validation accuracy, especially for hidden-layer weights in Transformers and CNNs.",
+      "method": [
+        "Replace the usual SAM inner step with a layerwise spectral-norm perturbation for matrix-valued hidden-layer parameters.",
+        "Use either AdamW/SGDW or Muon for the outer update, and compare matrix-aware versus standard geometry choices.",
+        "Evaluate the spectral-inner + Muon pairing on ImageNet-1K for ViT-Small/16 and ResNet-50."
+      ],
+      "evidence_signal": "On ImageNet-1K, the spectral inner step plus Muon outer step achieved the best validation accuracy on both ViT-Small/16 and ResNet-50 among the methods tested.",
+      "watch_item": "The approach is geometry- and architecture-sensitive, so gains may depend on careful implementation of the spectral perturbation and Muon update for matrix-shaped layers.",
+      "hashtags": [
+        "#SharpnessAwareMinimization",
+        "#MuonOptimizer",
+        "#SpectralNorm",
+        "#ImageNet",
+        "#DeepLearningOptimization"
+      ],
+      "paper_id": "2026-07-28-arxiv-sharpness_aware_minimization_and_muon_robustness_under_the_spectral_norm",
+      "paper_title": "Sharpness-Aware Minimization and Muon: Robustness under the Spectral Norm",
+      "paper_date": "2026-07-28",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-29T15:52:08",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-observable_estimation_in_the_absence_of_classical_verification",
+    "arxiv_id": "2607.25998v1",
+    "date": "2026-07-28",
+    "title": "Observable Estimation in the Absence of Classical Verification",
+    "authors": "Samantha V. Barron, Bradley Mitchell, Vinay Tripathi, Francesco Grieco, Ilan Rosen, Francesca Pietracaprina",
+    "abstract": "The predictive success of quantum mechanics underpins many areas of modern science, even as the exact simulation of large, interacting quantum systems remains beyond the reach of classical computation. This success has been enabled by the remarkable advancement of scalable numerical approximation methods, which often demonstrate practical accuracy despite the absence of formal guarantees. As quantum simulation pushes into regimes where these approximations struggle, a fundamental challenge arises: How can quantum outcomes be trusted when reliable classical benchmarks are unavailable? Here, we establish a framework for the independent validation of quantum estimates in this setting and present evidence that they provide the most credible result among several considered methods, in the absence of an immediately accessible ground-truth solution. We apply our framework to the semi-scrambling dynamics of a physical model that strains several leading classical simulation methods yet remains experimentally accessible, in part through our introduction of the \\textit{operator Loschmidt echo}. We systematically design a series of experiments using quantum heuristics that, taken together, test the underlying assumptions and provide strong confidence in the observable estimates obtained from the quantum computer. We then show how this framework can be extended to place accuracy bounds on quantum estimates via careful characterization and manipulation of the device noise, transforming the problem of validating the observable estimation to validating the noise model. These results establish a route towards trusted quantum computation for scientific discovery, independent of classical verification.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-28T17:14:26Z",
+    "updated": "2026-07-28T17:14:26Z",
+    "primary_category": "quant-ph",
+    "categories": [
+      "quant-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25998v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25998v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "The paper proposes a framework to validate quantum observable estimates even when classical ground-truth simulation is unavailable, using experiment design and noise-aware bounds to build trust.",
+      "engineering_relevance": "It supports trustworthy quantum simulation workflows for scientific computing by replacing direct classical verification with principled validation of the estimation process and device noise.",
+      "method": [
+        "Designs a suite of quantum heuristic experiments to test the assumptions behind observable estimates.",
+        "Introduces the operator Loschmidt echo to probe semi-scrambling dynamics in an experimentally accessible regime.",
+        "Extends validation to accuracy bounds by characterizing and manipulating device noise, effectively validating the noise model."
+      ],
+      "evidence_signal": "The abstract reports that the framework was applied to a physical model that strains leading classical simulators, and the resulting quantum estimates were judged the most credible among several candidate methods.",
+      "watch_item": "The approach depends on careful noise characterization and assumptions about the noise model, so validity may weaken if device behavior drifts or is not well captured by the model.",
+      "hashtags": [
+        "#QuantumComputing",
+        "#QuantumSimulation",
+        "#ScientificComputing",
+        "#ModelingAndSimulation",
+        "#ErrorMitigation"
+      ],
+      "paper_id": "2026-07-28-arxiv-observable_estimation_in_the_absence_of_classical_verification",
+      "paper_title": "Observable Estimation in the Absence of Classical Verification",
+      "paper_date": "2026-07-28",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-29T15:52:11",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-28-arxiv-can_deep_generative_models_reproduce_non_stationary_gaussian_random_fields",
+    "arxiv_id": "2607.25929v1",
+    "date": "2026-07-28",
+    "title": "Can Deep Generative Models Reproduce Non-Stationary Gaussian Random Fields?",
+    "authors": "Daniel Kua, Yan Song",
+    "abstract": "Deep generative models (DGMs) are widely used for complex high-dimensional data and increasingly applied to spatial and spatio-temporal modeling. Their generated samples implicitly represent the learned data distribution and associated uncertainty. However, for real-world data, assessing whether DGMs have learned the underlying process is difficult because the ground truth is unknown and evaluation often relies on observations alone. We evaluate representative DGMs, flow matching (FM), DDPM, score-SDE, and VAE, on a known non-stationary Gaussian random field. This paper provides comprehensive metrics to assess recovery of the ground-truth mean and covariance structures, with oracle samples and a stationary control as references. All four models recover the mean surface, while their covariance recovery differs across model families: DDPM and score-SDE recover the covariance structure reasonably well, FM exhibits mildly attenuated non-stationarity and slight variance under-dispersion, and VAE has difficulty recovering the covariance structure. An experiment on ERA5 temperature anomalies further demonstrates how the framework can support the validation and development of DGMs for complex real-world spatio-temporal data.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-07-28T16:15:39Z",
+    "updated": "2026-07-28T16:15:39Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.25929v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.25929v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "All four deep generative models reconstruct the mean of a non-stationary Gaussian random field, but they differ substantially in how well they recover its covariance structure.",
+      "engineering_relevance": "For spatio-temporal modeling workflows, this paper shows that matching visual sample quality is not enough; covariance diagnostics are essential to validate uncertainty and non-stationarity in generated fields.",
+      "method": [
+        "Benchmarked flow matching (FM), DDPM, score-SDE, and VAE on a known non-stationary Gaussian random field.",
+        "Compared generated samples against oracle samples and a stationary control using mean and covariance recovery metrics.",
+        "Extended the validation framework to ERA5 temperature anomalies to test applicability on real-world spatio-temporal data."
+      ],
+      "evidence_signal": "The evaluation uses a synthetic ground-truth field with known mean and covariance, enabling direct recovery assessment rather than observation-only comparison.",
+      "watch_item": "Results may not transfer directly to real data where the true process is unknown, so covariance metrics and controls must be used carefully when interpreting model fidelity.",
+      "hashtags": [
+        "#DeepGenerativeModels",
+        "#GaussianRandomFields",
+        "#SpatioTemporalModeling",
+        "#UncertaintyQuantification",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-07-28-arxiv-can_deep_generative_models_reproduce_non_stationary_gaussian_random_fields",
+      "paper_title": "Can Deep Generative Models Reproduce Non-Stationary Gaussian Random Fields?",
+      "paper_date": "2026-07-28",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-07-29T15:52:14",
+      "generator": "openai"
+    }
+  }
+]
