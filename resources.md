@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-07-30
+Generated: 2026-07-31
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. PIKS: Universal Physics-Informed Kernel Methods
+## 1. Cybersecurity Detection Classification with Reasoning-enabled Language Models
 
-- Date: 2026-07-29
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.27062v1
-- PDF: https://arxiv.org/pdf/2607.27062v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-piks_universal_physics_informed_kernel_methods_infographic.json
+- Date: 2026-07-30
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.28460v1
+- PDF: https://arxiv.org/pdf/2607.28460v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-cybersecurity_detection_classification_with_reasoning_enabled_language_models_infographic.json
 
-## 2. Equilibrium Training of Energy-Based Models with Parallel Trajectory Tempering
+## 2. HARGO: Heterogeneity-Aware Reward-Guided Optimization for RL Post-Training of LLMs on HPC Tasks
 
-- Date: 2026-07-29
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.27077v1
-- PDF: https://arxiv.org/pdf/2607.27077v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-equilibrium_training_of_energy_based_models_with_parallel_trajectory_tempering_infographic.json
-
-## 3. Amortized Moment Matching for Visual Generation
-
-- Date: 2026-07-29
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.26860v1
-- PDF: https://arxiv.org/pdf/2607.26860v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-amortized_moment_matching_for_visual_generation_infographic.json
-
-## 4. Linguistic Monoculture in LLM-Assisted Language Use
-
-- Date: 2026-07-29
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.27134v1
-- PDF: https://arxiv.org/pdf/2607.27134v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-linguistic_monoculture_in_llm_assisted_language_use_infographic.json
-
-## 5. Surrogate assisted diversity estimation in neural ensemble search
-
-- Date: 2026-07-29
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.26940v1
-- PDF: https://arxiv.org/pdf/2607.26940v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-surrogate_assisted_diversity_estimation_in_neural_ensemble_search_infographic.json
-
-## 6. From Classification to Regression: Using a Fruitfly to Solve Equations
-
-- Date: 2026-07-29
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.27196v1
-- PDF: https://arxiv.org/pdf/2607.27196v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-from_classification_to_regression_using_a_fruitfly_to_solve_equations_infographic.json
-
-## 7. OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding
-
-- Date: 2026-07-29
+- Date: 2026-07-30
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.27155v1
-- PDF: https://arxiv.org/pdf/2607.27155v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-omegause_officeval_benchmarking_llm_agents_on_long_horizon_office_suite_tasks_with_economi_infographic.json
+- arXiv: https://arxiv.org/abs/2607.28301v1
+- PDF: https://arxiv.org/pdf/2607.28301v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-hargo_heterogeneity_aware_reward_guided_optimization_for_rl_post_training_of_llms_on_hpc_t_infographic.json
 
-## 8. AgentMap: Joint Equivalence and Subsumption Discovery for Ontology Matching
+## 3. MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems
 
-- Date: 2026-07-29
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28527v1
+- PDF: https://arxiv.org/pdf/2607.28527v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-manta_multi_agent_network_topology_adaptation_for_self_evolving_multi_agent_systems_infographic.json
+
+## 4. A foundation model of numerical intelligence with cross-disciplinary generalization
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28432v1
+- PDF: https://arxiv.org/pdf/2607.28432v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-a_foundation_model_of_numerical_intelligence_with_cross_disciplinary_generalization_infographic.json
+
+## 5. Hierarchical Multilevel Monte Carlo for Order-Optimal Neural Actor-Critic in Average-Reward CMDPs
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28390v1
+- PDF: https://arxiv.org/pdf/2607.28390v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-hierarchical_multilevel_monte_carlo_for_order_optimal_neural_actor_critic_in_average_rewar_infographic.json
+
+## 6. $β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation
+
+- Date: 2026-07-30
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.28582v1
+- PDF: https://arxiv.org/pdf/2607.28582v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-opsd_deriving_with_policy_optimization_training_with_self_distillation_infographic.json
+
+## 7. The Role of Causality in Algorithmic Recourse
+
+- Date: 2026-07-30
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.28497v1
+- PDF: https://arxiv.org/pdf/2607.28497v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-the_role_of_causality_in_algorithmic_recourse_infographic.json
+
+## 8. Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus
+
+- Date: 2026-07-30
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2607.28304v1
+- PDF: https://arxiv.org/pdf/2607.28304v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-semi_supervised_learning_for_molecular_graphs_via_ensemble_consensus_infographic.json
+
+## 9. AISPA: User-Centric System Prompt Auditing for Large Language Model Applications
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28617v1
+- PDF: https://arxiv.org/pdf/2607.28617v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-aispa_user_centric_system_prompt_auditing_for_large_language_model_applications_infographic.json
+
+## 10. Fully Inductive Cardinality Estimation
+
+- Date: 2026-07-30
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2607.27130v1
-- PDF: https://arxiv.org/pdf/2607.27130v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-agentmap_joint_equivalence_and_subsumption_discovery_for_ontology_matching_infographic.json
+- arXiv: https://arxiv.org/abs/2607.28311v1
+- PDF: https://arxiv.org/pdf/2607.28311v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-fully_inductive_cardinality_estimation_infographic.json
 
-## 9. ToxScreen: Detecting Whether an LLM Has Been Poisoned
+## 11. Graph Neural Multilevel Preconditioners for Iterative Solvers
 
-- Date: 2026-07-29
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.26849v1
-- PDF: https://arxiv.org/pdf/2607.26849v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-toxscreen_detecting_whether_an_llm_has_been_poisoned_infographic.json
-
-## 10. Partner Capability Estimation for Task-Agnostic Adaptation in Ad-Hoc Teamwork
-
-- Date: 2026-07-29
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2607.27177v1
-- PDF: https://arxiv.org/pdf/2607.27177v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-partner_capability_estimation_for_task_agnostic_adaptation_in_ad_hoc_teamwork_infographic.json
-
-## 11. When Do Learned Diffusion Proposals Help Constraint Solving? A Controlled Study on Continuous Algebraic Systems
-
-- Date: 2026-07-29
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2607.27169v1
-- PDF: https://arxiv.org/pdf/2607.27169v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-when_do_learned_diffusion_proposals_help_constraint_solving_a_controlled_study_on_continuo_infographic.json
-
-## 12. Materials Behavior as Mechanism Ensembles: A Probabilistic Framework for Emergent Behaviors
-
-- Date: 2026-07-29
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.27163v1
-- PDF: https://arxiv.org/pdf/2607.27163v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-materials_behavior_as_mechanism_ensembles_a_probabilistic_framework_for_emergent_behaviors_infographic.json
-
-## 13. ReCo: Reweighting GRPO Against Distributional Concentration
-
-- Date: 2026-07-29
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.26862v1
-- PDF: https://arxiv.org/pdf/2607.26862v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-reco_reweighting_grpo_against_distributional_concentration_infographic.json
-
-## 14. Improving Item Discoverability in e-Commerce Search via Related Intent Generation
-
-- Date: 2026-07-29
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.27172v1
-- PDF: https://arxiv.org/pdf/2607.27172v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-improving_item_discoverability_in_e_commerce_search_via_related_intent_generation_infographic.json
-
-## 15. Minimal Markovization via Stable Quotients in Holonomy-Cover Decision Processes
-
-- Date: 2026-07-29
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2607.27132v1
-- PDF: https://arxiv.org/pdf/2607.27132v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-minimal_markovization_via_stable_quotients_in_holonomy_cover_decision_processes_infographic.json
-
-## 16. Hierarchical Spatio-Temporal Transformer for Coherent Emergency Department Forecasting
-
-- Date: 2026-07-29
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.27106v1
-- PDF: https://arxiv.org/pdf/2607.27106v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-hierarchical_spatio_temporal_transformer_for_coherent_emergency_department_forecasting_infographic.json
-
-## 17. Scores Are Not Decisions: Cost-Aware Stopping for Tool Acquisition in LLM Agents
-
-- Date: 2026-07-29
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.27083v1
-- PDF: https://arxiv.org/pdf/2607.27083v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-scores_are_not_decisions_cost_aware_stopping_for_tool_acquisition_in_llm_agents_infographic.json
-
-## 18. On-Policy Distillation for LLM Safety: A Routing Approach to Template-Robust Realignment
-
-- Date: 2026-07-29
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2607.27081v1
-- PDF: https://arxiv.org/pdf/2607.27081v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-on_policy_distillation_for_llm_safety_a_routing_approach_to_template_robust_realignment_infographic.json
-
-## 19. Parameter-Free Dynamic Regret for Online Convex Optimization under Heavy-Tailed Noise
-
-- Date: 2026-07-29
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.27073v1
-- PDF: https://arxiv.org/pdf/2607.27073v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-parameter_free_dynamic_regret_for_online_convex_optimization_under_heavy_tailed_noise_infographic.json
-
-## 20. From Crop and Energy Data to Optimized Lighting Scheduling: A Surrogate-Based MILP Framework for Vertical Farming
-
-- Date: 2026-07-29
+- Date: 2026-07-30
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2607.26968v1
-- PDF: https://arxiv.org/pdf/2607.26968v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-29-arxiv-from_crop_and_energy_data_to_optimized_lighting_scheduling_a_surrogate_based_milp_framewor_infographic.json
+- arXiv: https://arxiv.org/abs/2607.28456v1
+- PDF: https://arxiv.org/pdf/2607.28456v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-graph_neural_multilevel_preconditioners_for_iterative_solvers_infographic.json
+
+## 12. On-Policy and Off-Policy Learning for Large Action Spaces
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28408v1
+- PDF: https://arxiv.org/pdf/2607.28408v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-on_policy_and_off_policy_learning_for_large_action_spaces_infographic.json
+
+## 13. KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28608v1
+- PDF: https://arxiv.org/pdf/2607.28608v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-kaisen_reproducible_subgroup_fairness_auditing_for_clinical_risk_models_infographic.json
+
+## 14. APO: Unsupervised Atomic Policy Optimization for 3D Structure Prediction of Atomic Systems
+
+- Date: 2026-07-30
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2607.28553v1
+- PDF: https://arxiv.org/pdf/2607.28553v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-apo_unsupervised_atomic_policy_optimization_for_3d_structure_prediction_of_atomic_systems_infographic.json
+
+## 15. Graph Neural Network Force Fields for Spin Dynamics in Metallic Magnets
+
+- Date: 2026-07-30
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2607.28537v1
+- PDF: https://arxiv.org/pdf/2607.28537v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-graph_neural_network_force_fields_for_spin_dynamics_in_metallic_magnets_infographic.json
+
+## 16. Machines that know they are aging: a framework for hardware-aware autonomous intelligence
+
+- Date: 2026-07-30
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2607.28451v1
+- PDF: https://arxiv.org/pdf/2607.28451v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-machines_that_know_they_are_aging_a_framework_for_hardware_aware_autonomous_intelligence_infographic.json
+
+## 17. TCA-SIR: Learning Target-Conditioned Abstractions for Scientific Inspiration Retrieval
+
+- Date: 2026-07-30
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2607.28498v1
+- PDF: https://arxiv.org/pdf/2607.28498v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-tca_sir_learning_target_conditioned_abstractions_for_scientific_inspiration_retrieval_infographic.json
+
+## 18. OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models
+
+- Date: 2026-07-30
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.28609v1
+- PDF: https://arxiv.org/pdf/2607.28609v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-osreward_instituting_standardized_evaluation_for_cross_platform_computer_use_reward_models_infographic.json
+
+## 19. DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28580v1
+- PDF: https://arxiv.org/pdf/2607.28580v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-dualg_mrag_decoupling_macro_reasoning_and_micro_matching_for_multimodal_retrieval_augmente_infographic.json
+
+## 20. ORCA-bench: How Ready Are Language Model Agents for Oncall?
+
+- Date: 2026-07-30
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2607.28545v1
+- PDF: https://arxiv.org/pdf/2607.28545v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-orca_bench_how_ready_are_language_model_agents_for_oncall_infographic.json
