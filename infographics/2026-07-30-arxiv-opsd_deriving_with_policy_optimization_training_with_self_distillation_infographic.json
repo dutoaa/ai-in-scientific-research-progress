@@ -1,24 +1,24 @@
 {
-  "key_insight": "β-OPSD reframes on-policy self-distillation as policy optimization with a tunable KL anchor, then uses the closed-form solution as an efficient distillation target.",
-  "engineering_relevance": "This gives practitioners a simple knob to trade off stability and teacher guidance, reducing the brittle tuning and engineering overhead of vanilla OPSD.",
+  "key_insight": "β-OPSD reframes on-policy self-distillation as a policy-optimization problem with a tunable KL weight β, then uses the closed-form solution as an efficient distillation target.",
+  "engineering_relevance": "It offers a more stable and controllable way to train reasoning LMs, reducing the brittleness and engineering overhead of vanilla OPSD while preserving efficiency.",
   "method": [
-    "Introduce β as a controllable KL-regularization weight in the OPSD objective.",
+    "Generalize OPSD with a KL-regularized policy objective where β controls the trade-off between reference-policy anchoring and teacher guidance.",
     "Derive the optimal policy as a geometric interpolation between the reference policy and the privileged teacher.",
-    "Approximate the RL optimum by mixing token-level logits and apply return-to-go credit assignment for sequence-level alignment."
+    "Approximate this solution cheaply by mixing token-level logits and using return-to-go credit assignment to align token updates with sequence-level objectives."
   ],
-  "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks where β-OPSD consistently improves both optimization stability and downstream reasoning performance over vanilla OPSD.",
-  "watch_item": "The method still depends on careful selection of β and on efficient, correct implementation of the logit-mixing and return-to-go training pipeline.",
+  "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks, where β-OPSD consistently improves optimization stability and downstream reasoning performance over vanilla OPSD.",
+  "watch_item": "The method depends on well-chosen β and an efficient logit-mixing/distillation implementation; poor calibration could weaken the intended optimization-distillation match.",
   "hashtags": [
+    "#LLMReasoning",
     "#SelfDistillation",
     "#PolicyOptimization",
-    "#ReasoningModels",
-    "#LLMTraining",
-    "#MachineLearning"
+    "#ReinforcementLearning",
+    "#MathBenchmarks"
   ],
   "paper_id": "2026-07-30-arxiv-opsd_deriving_with_policy_optimization_training_with_self_distillation",
   "paper_title": "$β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
   "paper_date": "2026-07-30",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-31T16:02:38",
+  "generated_at": "2026-08-01T15:04:12",
   "generator": "openai"
 }

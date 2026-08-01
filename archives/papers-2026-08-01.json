@@ -25,29 +25,29 @@
         "url": "https://arxiv.org/pdf/2607.28460v1"
       }
     ],
-    "score": 82,
+    "score": 87,
     "infographic": {
-      "key_insight": "Training LLMs to reason about security detections, not just predict a label, improves triage quality and makes automated decisions more reliable when paired with a separate confidence calibrator.",
-      "engineering_relevance": "For SOC automation, this approach can reduce alert fatigue while preserving high-confidence handling of benign and malicious endpoint detections.",
+      "key_insight": "Reasoning-enabled LLMs can improve cybersecurity triage by learning to think through endpoint detections and calibrate confidence separately from the final label.",
+      "engineering_relevance": "For SOC automation, this approach boosts high-confidence benign and malicious detection performance, making automated alert filtering more reliable.",
       "method": [
         "Train a chain-of-thought triage classifier on human-labeled Windows endpoint detections.",
-        "Use automated prompt optimization, self-training, and reinforcement learning with verifiable rewards.",
-        "Add a separate calibrator that reads the full reasoning trace to estimate verdict correctness."
+        "Combine prompt optimization, self-training, and reinforcement learning with verifiable rewards.",
+        "Add a separate calibrator that reads the reasoning trace to estimate whether the verdict is correct."
       ],
-      "evidence_signal": "The system reports 82.6% test accuracy and, at the high-confidence automated-triage setting, improves benign recall by 43.0% and malicious recall by 18.3% over a direct-label LLM classifier.",
-      "watch_item": "Reasoning can degrade label-token probabilities, so automated triage needs a trained calibrator; an untrained confidence judge collapses high-confidence recall to zero.",
+      "evidence_signal": "On real labeled Windows endpoint detection data, the system achieved 82.6% test accuracy and improved high-confidence benign recall by 43.0% and malicious recall by 18.3% over a direct-label LLM classifier.",
+      "watch_item": "CoT reasoning can hurt label-token probabilities used by automated triage, so confidence must be explicitly calibrated rather than inferred from the raw model output.",
       "hashtags": [
-        "#CybersecurityAI",
-        "#LLMReasoning",
+        "#Cybersecurity",
+        "#LLM",
+        "#ChainOfThought",
         "#SOCAutomation",
-        "#ThreatDetection",
-        "#MachineLearning"
+        "#AIForSecurity"
       ],
       "paper_id": "2026-07-30-arxiv-cybersecurity_detection_classification_with_reasoning_enabled_language_models",
       "paper_title": "Cybersecurity Detection Classification with Reasoning-enabled Language Models",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-01T15:03:44",
+      "generated_at": "2026-07-31T16:02:24",
       "generator": "openai"
     }
   },
@@ -76,29 +76,131 @@
         "url": "https://arxiv.org/pdf/2607.28301v1"
       }
     ],
-    "score": 79,
+    "score": 84,
     "infographic": {
-      "key_insight": "HARGO improves RL post-training for HPC LLMs by weighting each response with heterogeneity-aware reward signals, making optimization adapt to very different task types without needing task labels.",
-      "engineering_relevance": "For HPC AI systems, this yields better alignment across mixed workloads such as data-race detection, benchmark QA, and semantic generation, where one-size-fits-all RL can underperform.",
+      "key_insight": "HARGO improves RL post-training for heterogeneous HPC tasks by weighting each response with a confidence-modulated advantage, instead of using uniform reward updates.",
+      "engineering_relevance": "It offers a practical alignment method for LLMs used in HPC workflows where tasks differ sharply in output format, length, and reward behavior.",
       "method": [
-        "Compute a discrimination signal from group-level reward contrast.",
-        "Compute a confidence signal from reference-model log-probabilities.",
-        "Modulate the advantage into per-response importance weights before RL updates."
+        "Compute a group-level discrimination signal from reward contrast.",
+        "Compute a confidence signal from reference model log-probabilities.",
+        "Modulate the advantage to produce per-response importance weights without task-type labels."
       ],
-      "evidence_signal": "Across four HPC tasks and nine methods, HARGO reports the best overall results on all three main metrics: WinRate 54.62%, Data Race F1 91.30%, and PLP Similarity 0.8558.",
-      "watch_item": "The method adds extra weighting logic and depends on reward quality and reference-model calibration, so performance may be sensitive to implementation details and task setup.",
+      "evidence_signal": "Across four HPC tasks and nine methods, HARGO achieved the best reported results on all three primary metrics: WinRate 54.62%, Data Race F1 91.30%, and PLP Similarity 0.8558.",
+      "watch_item": "The method depends on accurate reward signals and reference-model confidence estimates, so performance may be sensitive to reward design and implementation details in new HPC tasks.",
       "hashtags": [
-        "#LLM",
+        "#LLMAlignment",
         "#HPC",
         "#ReinforcementLearning",
-        "#RewardOptimization",
-        "#AIAssurance"
+        "#PostTraining",
+        "#RewardModeling"
       ],
       "paper_id": "2026-07-30-arxiv-hargo_heterogeneity_aware_reward_guided_optimization_for_rl_post_training_of_llms_on_hpc_t",
       "paper_title": "HARGO: Heterogeneity-Aware Reward-Guided Optimization for RL Post-Training of LLMs on HPC Tasks",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:03:46",
+      "generated_at": "2026-07-31T16:02:27",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-30-arxiv-manta_multi_agent_network_topology_adaptation_for_self_evolving_multi_agent_systems",
+    "arxiv_id": "2607.28527v1",
+    "date": "2026-07-30",
+    "title": "MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems",
+    "authors": "Mao-xun Huang, Jerry Wang, Yi-Cheng Lai, Zhengxin Zhang, Claire Cardie, Hen-Hsen Huang",
+    "abstract": "Large language model-based multi-agent systems improve complex problem solving through task decomposition, agent specialization, information exchange, and intermediate validation. However, existing systems typically treat communication topology as a fixed design choice or an offline optimization target. We introduce MANTA, a framework for Multi-Agent Network Topology Adaptation that enables communication structures to self-evolve at inference time. Before execution, MANTA initializes a task-conditioned topology from prior structural experience. During deployment, it monitors collaboration traces and applies bounded structural updates when the current organization becomes insufficient. These updates can modify agent roles, communication links, execution order, information visibility, and validation pathways while preserving the task interface and agent budget. We evaluate MANTA against representative single-agent and multi-agent baselines on five benchmarks spanning information seeking, tool use, planning, workflow execution, and mathematical reasoning. MANTA achieves the highest average score of 74.0, outperforming the strongest baseline by 5.8 percentage points and obtaining the best result on PlanCraft. These results show that inference-time self-improvement can extend to the architecture of collaboration itself.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-30T17:01:27Z",
+    "updated": "2026-07-30T17:01:27Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.28527v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.28527v1"
+      }
+    ],
+    "score": 82,
+    "infographic": {
+      "key_insight": "MANTA lets a multi-agent system adapt its communication topology during inference, so collaboration can self-evolve when the current organization is no longer effective.",
+      "engineering_relevance": "This suggests a practical route to more robust agent orchestration by updating roles, links, order, visibility, and validation without changing the task interface or agent budget.",
+      "method": [
+        "Initialize a task-conditioned communication topology from prior structural experience.",
+        "Monitor collaboration traces during execution and apply bounded structural updates when needed.",
+        "Adjust agent roles, communication links, execution order, information visibility, and validation pathways."
+      ],
+      "evidence_signal": "Across five benchmarks spanning information seeking, tool use, planning, workflow execution, and mathematical reasoning, MANTA achieved the highest average score of 74.0, beating the strongest baseline by 5.8 points and ranking best on PlanCraft.",
+      "watch_item": "Adaptive topology updates may add runtime complexity and require careful safeguards to avoid destabilizing coordination or overfitting structural changes to specific tasks.",
+      "hashtags": [
+        "#MultiAgentSystems",
+        "#LLMs",
+        "#TopologyAdaptation",
+        "#InferenceTimeAdaptation",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-07-30-arxiv-manta_multi_agent_network_topology_adaptation_for_self_evolving_multi_agent_systems",
+      "paper_title": "MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems",
+      "paper_date": "2026-07-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-31T16:02:29",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-30-arxiv-a_foundation_model_of_numerical_intelligence_with_cross_disciplinary_generalization",
+    "arxiv_id": "2607.28432v1",
+    "date": "2026-07-30",
+    "title": "A foundation model of numerical intelligence with cross-disciplinary generalization",
+    "authors": "Chenghan Wu, Zongmin Yu, Liu Yang",
+    "abstract": "Intelligence is commonly understood as the ability to acquire and apply knowledge, adapt to unfamiliar situations and solve new problems. Large language models exhibit this capacity by inferring task-relevant knowledge from textual context and applying it to new tasks. Yet intelligence need not be confined to language. For scientific and social systems, we need models that acquire and apply knowledge from numerical context-an ability we call numerical intelligence. Here we introduce UNified In-Context Operator Networks (UNICON), a foundation model that exhibits numerical intelligence across disciplines. Using graph-based examples from a system as context, UNICON infers the predictive relation shared across them and applies it to queries from the same system. Across scientific and social systems, including those from disciplines absent from training, the same model approaches specialist performance without retraining. Combining UNICON with language-model agents yields further gains, enabling it to surpass state-of-the-art specialists in a discipline unseen in training. We further show that training-corpus diversity improves generalization to unseen disciplines. Together, these results establish UNICON as a foundation model of numerical intelligence and position it as a building block for a broader ecosystem of artificial intelligence.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-30T16:09:45Z",
+    "updated": "2026-07-30T16:09:45Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.28432v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.28432v1"
+      }
+    ],
+    "score": 80,
+    "infographic": {
+      "key_insight": "UNICON is a foundation model that learns predictive relationships from numerical examples in context and transfers them across scientific and social domains, even to disciplines unseen during training.",
+      "engineering_relevance": "It suggests a new general-purpose modeling approach for scientific forecasting and decision support when labeled data are sparse, heterogeneous, or out-of-domain.",
+      "method": [
+        "Uses graph-based in-context examples from a system to infer the underlying predictive relation.",
+        "Applies the learned relation to new queries from the same system without retraining.",
+        "Combines with language-model agents to improve performance on unseen disciplines."
+      ],
+      "evidence_signal": "The abstract reports that across multiple scientific and social systems, including unseen disciplines, UNICON approaches specialist performance without retraining and can surpass state-of-the-art specialists when paired with language-model agents.",
+      "watch_item": "Generalization depends on the diversity of the training corpus, so performance may weaken on highly novel systems if the numerical context is too different from the training distribution.",
+      "hashtags": [
+        "#FoundationModel",
+        "#NumericalIntelligence",
+        "#InContextLearning",
+        "#ScientificAI",
+        "#CrossDisciplinaryGeneralization"
+      ],
+      "paper_id": "2026-07-30-arxiv-a_foundation_model_of_numerical_intelligence_with_cross_disciplinary_generalization",
+      "paper_title": "A foundation model of numerical intelligence with cross-disciplinary generalization",
+      "paper_date": "2026-07-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-31T16:02:33",
       "generator": "openai"
     }
   },
@@ -129,129 +231,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "A hierarchical multilevel Monte Carlo neural critic removes the bias–compute bottleneck in average-reward CMDPs, enabling order-optimal primal-dual actor-critic learning with neural function approximation.",
-      "engineering_relevance": "This gives a practical route to safe reinforcement learning controllers that can optimize long-run performance while enforcing long-run constraints without needing the mixing time.",
+      "key_insight": "A hierarchical multilevel Monte Carlo neural critic removes the bias-cost bottleneck in primal-dual actor-critic learning, enabling order-optimal convergence for average-reward CMDPs.",
+      "engineering_relevance": "This makes safe reinforcement learning more practical for safety-critical systems by providing neural-critic guarantees for both reward optimization and constraint satisfaction without requiring prior mixing-time knowledge.",
       "method": [
-        "Uses a hierarchical MLMC neural critic to debias both trajectory sampling and critic optimization.",
-        "Builds a primal-dual Natural Actor-Critic algorithm on top of the estimator.",
-        "Achieves tilde{O}(T^{-1/2}) optimality gap and constraint violation with general policy parameterization."
+        "Use a hierarchical MLMC neural critic to debias estimates across both trajectory sampling and critic optimization.",
+        "Combine the critic with a primal-dual natural actor-critic framework for average-reward CMDPs.",
+        "Leverage NTK-based analysis to achieve long-run critic accuracy at only logarithmic expected sample cost."
       ],
-      "evidence_signal": "The abstract reports theoretical convergence guarantees with order-optimal tilde{O}(T^{-1/2}) rates for both reward optimality and constraint satisfaction, including in the unconstrained setting.",
-      "watch_item": "The method relies on neural tangent kernel-based analysis and hierarchical MLMC design, so practical performance may depend on approximation quality, optimization stability, and implementation complexity.",
+      "evidence_signal": "The abstract reports O(T^{-1/2}) convergence for both optimality gap and constraint violation, establishing the first order-optimal guarantees for infinite-horizon average-reward CMDPs with neural critics.",
+      "watch_item": "The approach relies on NTK-style assumptions and a hierarchical MLMC implementation, so practical performance may depend on model width, tuning, and the cost of multilevel critic optimization.",
       "hashtags": [
         "#ReinforcementLearning",
         "#CMDP",
-        "#MultilevelMonteCarlo",
-        "#NeuralActors",
-        "#SafeRL"
+        "#ActorCritic",
+        "#MonteCarlo",
+        "#NeuralNetworks"
       ],
       "paper_id": "2026-07-30-arxiv-hierarchical_multilevel_monte_carlo_for_order_optimal_neural_actor_critic_in_average_rewar",
       "paper_title": "Hierarchical Multilevel Monte Carlo for Order-Optimal Neural Actor-Critic in Average-Reward CMDPs",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:03:49",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-07-30-arxiv-manta_multi_agent_network_topology_adaptation_for_self_evolving_multi_agent_systems",
-    "arxiv_id": "2607.28527v1",
-    "date": "2026-07-30",
-    "title": "MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems",
-    "authors": "Mao-xun Huang, Jerry Wang, Yi-Cheng Lai, Zhengxin Zhang, Claire Cardie, Hen-Hsen Huang",
-    "abstract": "Large language model-based multi-agent systems improve complex problem solving through task decomposition, agent specialization, information exchange, and intermediate validation. However, existing systems typically treat communication topology as a fixed design choice or an offline optimization target. We introduce MANTA, a framework for Multi-Agent Network Topology Adaptation that enables communication structures to self-evolve at inference time. Before execution, MANTA initializes a task-conditioned topology from prior structural experience. During deployment, it monitors collaboration traces and applies bounded structural updates when the current organization becomes insufficient. These updates can modify agent roles, communication links, execution order, information visibility, and validation pathways while preserving the task interface and agent budget. We evaluate MANTA against representative single-agent and multi-agent baselines on five benchmarks spanning information seeking, tool use, planning, workflow execution, and mathematical reasoning. MANTA achieves the highest average score of 74.0, outperforming the strongest baseline by 5.8 percentage points and obtaining the best result on PlanCraft. These results show that inference-time self-improvement can extend to the architecture of collaboration itself.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-07-30T17:01:27Z",
-    "updated": "2026-07-30T17:01:27Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2607.28527v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2607.28527v1"
-      }
-    ],
-    "score": 77,
-    "infographic": {
-      "key_insight": "MANTA lets a multi-agent system adapt its communication topology at inference time, so collaboration structure can self-evolve when the current organization is no longer effective.",
-      "engineering_relevance": "This offers a practical way to improve robustness and task performance in deployed multi-agent workflows without changing the task interface or increasing the agent budget.",
-      "method": [
-        "Initialize a task-conditioned topology from prior structural experience before execution.",
-        "Monitor collaboration traces during deployment and trigger bounded structural updates when needed.",
-        "Adapt roles, links, execution order, visibility, and validation pathways while preserving the agent budget."
-      ],
-      "evidence_signal": "Across five benchmarks spanning information seeking, tool use, planning, workflow execution, and mathematical reasoning, MANTA achieved the highest average score of 74.0 and beat the strongest baseline by 5.8 points, with the best result on PlanCraft.",
-      "watch_item": "Runtime topology adaptation may add implementation complexity and requires careful safeguards to avoid unstable or over-aggressive structural changes.",
-      "hashtags": [
-        "#MultiAgentSystems",
-        "#LLMAgents",
-        "#TopologyAdaptation",
-        "#InferenceTimeLearning",
-        "#AIResearch"
-      ],
-      "paper_id": "2026-07-30-arxiv-manta_multi_agent_network_topology_adaptation_for_self_evolving_multi_agent_systems",
-      "paper_title": "MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems",
-      "paper_date": "2026-07-30",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:03:51",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-07-30-arxiv-a_foundation_model_of_numerical_intelligence_with_cross_disciplinary_generalization",
-    "arxiv_id": "2607.28432v1",
-    "date": "2026-07-30",
-    "title": "A foundation model of numerical intelligence with cross-disciplinary generalization",
-    "authors": "Chenghan Wu, Zongmin Yu, Liu Yang",
-    "abstract": "Intelligence is commonly understood as the ability to acquire and apply knowledge, adapt to unfamiliar situations and solve new problems. Large language models exhibit this capacity by inferring task-relevant knowledge from textual context and applying it to new tasks. Yet intelligence need not be confined to language. For scientific and social systems, we need models that acquire and apply knowledge from numerical context-an ability we call numerical intelligence. Here we introduce UNified In-Context Operator Networks (UNICON), a foundation model that exhibits numerical intelligence across disciplines. Using graph-based examples from a system as context, UNICON infers the predictive relation shared across them and applies it to queries from the same system. Across scientific and social systems, including those from disciplines absent from training, the same model approaches specialist performance without retraining. Combining UNICON with language-model agents yields further gains, enabling it to surpass state-of-the-art specialists in a discipline unseen in training. We further show that training-corpus diversity improves generalization to unseen disciplines. Together, these results establish UNICON as a foundation model of numerical intelligence and position it as a building block for a broader ecosystem of artificial intelligence.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-07-30T16:09:45Z",
-    "updated": "2026-07-30T16:09:45Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2607.28432v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2607.28432v1"
-      }
-    ],
-    "score": 75,
-    "infographic": {
-      "key_insight": "UNICON is a foundation model for \"numerical intelligence\" that learns predictive relationships from in-context graph examples and transfers them across scientific and social domains, including unseen disciplines.",
-      "engineering_relevance": "It suggests a reusable model layer for domain-agnostic forecasting and inference, reducing the need to retrain specialist models when moving to new systems or disciplines.",
-      "method": [
-        "Uses graph-based examples from a system as context to infer the shared predictive operator.",
-        "Applies the inferred relation to new query points from the same system.",
-        "Can be combined with language-model agents for stronger cross-disciplinary reasoning."
-      ],
-      "evidence_signal": "The abstract reports that UNICON approaches specialist performance across scientific and social systems, including disciplines absent from training, and can surpass state-of-the-art specialists in an unseen discipline when paired with language-model agents.",
-      "watch_item": "Generalization claims depend on the diversity of the training corpus, so performance may degrade when the model is moved to domains that are structurally or distributionally far from the training mix.",
-      "hashtags": [
-        "#FoundationModel",
-        "#InContextLearning",
-        "#NumericalIntelligence",
-        "#CrossDomainGeneralization",
-        "#ScientificAI"
-      ],
-      "paper_id": "2026-07-30-arxiv-a_foundation_model_of_numerical_intelligence_with_cross_disciplinary_generalization",
-      "paper_title": "A foundation model of numerical intelligence with cross-disciplinary generalization",
-      "paper_date": "2026-07-30",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:03:53",
+      "generated_at": "2026-07-31T16:02:36",
       "generator": "openai"
     }
   },
@@ -280,29 +280,29 @@
         "url": "https://arxiv.org/pdf/2607.28582v1"
       }
     ],
-    "score": 72,
+    "score": 77,
     "infographic": {
-      "key_insight": "β-OPSD reframes on-policy self-distillation as a policy-optimization problem with a tunable KL weight β, then uses the closed-form solution as an efficient distillation target.",
-      "engineering_relevance": "It offers a more stable and controllable way to train reasoning LMs, reducing the brittleness and engineering overhead of vanilla OPSD while preserving efficiency.",
+      "key_insight": "β-OPSD reframes on-policy self-distillation as policy optimization with a tunable KL anchor, then uses the closed-form solution as an efficient distillation target.",
+      "engineering_relevance": "This gives practitioners a simple knob to trade off stability and teacher guidance, reducing the brittle tuning and engineering overhead of vanilla OPSD.",
       "method": [
-        "Generalize OPSD with a KL-regularized policy objective where β controls the trade-off between reference-policy anchoring and teacher guidance.",
+        "Introduce β as a controllable KL-regularization weight in the OPSD objective.",
         "Derive the optimal policy as a geometric interpolation between the reference policy and the privileged teacher.",
-        "Approximate this solution cheaply by mixing token-level logits and using return-to-go credit assignment to align token updates with sequence-level objectives."
+        "Approximate the RL optimum by mixing token-level logits and apply return-to-go credit assignment for sequence-level alignment."
       ],
-      "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks, where β-OPSD consistently improves optimization stability and downstream reasoning performance over vanilla OPSD.",
-      "watch_item": "The method depends on well-chosen β and an efficient logit-mixing/distillation implementation; poor calibration could weaken the intended optimization-distillation match.",
+      "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks where β-OPSD consistently improves both optimization stability and downstream reasoning performance over vanilla OPSD.",
+      "watch_item": "The method still depends on careful selection of β and on efficient, correct implementation of the logit-mixing and return-to-go training pipeline.",
       "hashtags": [
-        "#LLMReasoning",
         "#SelfDistillation",
         "#PolicyOptimization",
-        "#ReinforcementLearning",
-        "#MathBenchmarks"
+        "#ReasoningModels",
+        "#LLMTraining",
+        "#MachineLearning"
       ],
       "paper_id": "2026-07-30-arxiv-opsd_deriving_with_policy_optimization_training_with_self_distillation",
       "paper_title": "$β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-01T15:04:12",
+      "generated_at": "2026-07-31T16:02:38",
       "generator": "openai"
     }
   },
@@ -333,29 +333,238 @@
         "url": "https://arxiv.org/pdf/2607.28497v1"
       }
     ],
-    "score": 72,
+    "score": 77,
     "infographic": {
-      "key_insight": "Causal recourse is needed because recommendation policies that only flip predictions can trigger strategic behavior, degrade true outcomes, and become unstable after retraining.",
-      "engineering_relevance": "For decision systems in lending and other high-stakes settings, the paper shows that modeling causal response can produce more stable recourse policies and reduce retraining churn.",
+      "key_insight": "Algorithmic recourse is only reliable when it accounts for causal effects; otherwise, recommended changes can trigger strategic gaming, shift the data distribution, and undermine future model performance.",
+      "engineering_relevance": "For deployed decision systems in credit and lending, causal recourse can improve fairness and stability by producing actionable recommendations that remain valid after user responses and model retraining.",
       "method": [
-        "Formulate recourse in a causal performative framework using a structural causal model.",
-        "Analyze how recourse actions affect both features and true labels, creating a non-convex optimization problem.",
-        "Derive conditions for performative stability and compute solutions with simple iterative dynamics."
+        "Model recourse actions through a structural causal model to capture feature interactions and true-label effects.",
+        "Formulate the resulting recourse problem in a causal performative framework, yielding a non-convex optimization landscape.",
+        "Use simple iterative dynamics to search for performatively stable solutions."
       ],
-      "evidence_signal": "Experiments on semi-synthetic and real credit datasets show the causal approach outperforms standard empirical risk minimization while reducing repeated retraining needs.",
-      "watch_item": "The method depends on having a credible causal model of feature dynamics and label effects, which may be difficult to specify or validate in practice.",
+      "evidence_signal": "Experiments on semi-synthetic and real credit datasets show the proposed causal recourse approach outperforms standard empirical risk minimization while reducing the need for repeated retraining under strategic behavior.",
+      "watch_item": "The approach depends on specifying a credible causal model; misspecified causal assumptions could weaken stability and the quality of recourse recommendations.",
       "hashtags": [
         "#AlgorithmicRecourse",
         "#CausalInference",
         "#PerformativePrediction",
-        "#FairML",
+        "#ResponsibleAI",
         "#CreditRisk"
       ],
       "paper_id": "2026-07-30-arxiv-the_role_of_causality_in_algorithmic_recourse",
       "paper_title": "The Role of Causality in Algorithmic Recourse",
       "paper_date": "2026-07-30",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-08-01T15:04:15",
+      "generated_at": "2026-07-31T16:02:41",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-30-arxiv-semi_supervised_learning_for_molecular_graphs_via_ensemble_consensus",
+    "arxiv_id": "2607.28304v1",
+    "date": "2026-07-30",
+    "title": "Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus",
+    "authors": "Rasmus Tirsgaard, Laurits Fredsgaard, Marisa Wodrich, Mikkel Jordahn, Mikkel N. Schmidt",
+    "abstract": "Machine learning is transforming molecular sciences by accelerating property prediction, simulation, and the discovery of new molecules and materials. Acquiring labeled data in these domains is often costly and time-consuming, whereas large collections of unlabeled molecular data are readily available. Standard semi-supervised learning methods often rely on label-preserving augmentations, which are challenging to design in the molecular domain, where minor changes can drastically alter properties. In this work, we show that semi-supervised methods that rely on an ensemble consensus can boost predictive accuracy across a diverse range of molecular datasets, task types, and graph neural network architectures. We find that training with an ensemble consensus objective increases robustness in models and exhibits an effect similar to knowledge distillation; an individual member of an ensemble trained this way outperforms a full ensemble trained in a traditional supervised fashion in almost all cases. In addition, this type of semi-supervised training reduces calibration error.",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-07-30T14:43:55Z",
+    "updated": "2026-07-30T14:43:55Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.28304v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.28304v1"
+      }
+    ],
+    "score": 77,
+    "infographic": {
+      "key_insight": "Semi-supervised learning with ensemble consensus improves molecular graph prediction without needing label-preserving augmentations, and can make a single model outperform a traditionally trained ensemble.",
+      "engineering_relevance": "This offers a practical way to leverage abundant unlabeled molecular data to improve prediction accuracy, robustness, and calibration in drug discovery and materials informatics workflows.",
+      "method": [
+        "Train graph neural networks with an ensemble consensus objective on labeled and unlabeled molecular graphs.",
+        "Use consensus among ensemble members as a learning signal instead of relying on handcrafted molecular augmentations.",
+        "Distill ensemble behavior into individual models to gain ensemble-like benefits at lower inference cost."
+      ],
+      "evidence_signal": "The approach was evaluated across diverse molecular datasets, task types, and GNN architectures, and the abstract reports improved predictive accuracy and reduced calibration error in almost all cases.",
+      "watch_item": "Performance gains depend on a suitable ensemble-consensus training setup, so added training complexity and compute overhead may be a practical concern.",
+      "hashtags": [
+        "#MolecularGraphLearning",
+        "#SemiSupervisedLearning",
+        "#GraphNeuralNetworks",
+        "#DrugDiscovery",
+        "#Calibration"
+      ],
+      "paper_id": "2026-07-30-arxiv-semi_supervised_learning_for_molecular_graphs_via_ensemble_consensus",
+      "paper_title": "Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus",
+      "paper_date": "2026-07-30",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-07-31T16:02:43",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-30-arxiv-aispa_user_centric_system_prompt_auditing_for_large_language_model_applications",
+    "arxiv_id": "2607.28617v1",
+    "date": "2026-07-30",
+    "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+    "authors": "Xiangning Lin, Shenzhe Zhu, Shu Yang, Zhenyu Zhang, Haoqian Zhang, Yipeng Zhao",
+    "abstract": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of AI systems. In this paper, we introduce Artificial Intelligence System Prompt Assurance (AISPA), a user-centric framework for systematically auditing system prompts in AI systems. AISPA examines specific parts of a system prompt and evaluates them along eight dimensions that matter to users. We then use this framework to review 3,249 instructions from system prompts in 88 commercial AI products, classifying each instruction as either protective (of users) or problematic. Our audit surfaces four core findings. First, system prompt design varies substantially across products and developers, with some organizations averaging over 60 protective instructions per product while others average fewer than 5. Second, protective instructions are widely adopted but shallow in scope: 98.9% of products contain at least one, yet only 24% cover all eight dimensions of the AISPA taxonomy. Third, system prompts have grown steadily longer and more protective of users, suggesting that user protection is becoming a more visible concern in commercial prompt design. Fourth, despite this progress, problematic instructions remain pervasive: roughly 40% of products contain at least one instruction that works against user interests, and protective and problematic instructions frequently coexist within the same prompt. Our findings highlight the need for greater transparency, standardization, and independent oversight for system prompts in commercial AI products.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-07-30T17:58:58Z",
+    "updated": "2026-07-30T17:58:58Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CY",
+      "cs.HC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.28617v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.28617v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "AISPA is a user-centric audit framework that systematically evaluates hidden system prompts in commercial LLM applications, revealing that protective instructions are common but often incomplete and frequently coexist with user-harming ones.",
+      "engineering_relevance": "For AI product teams, the paper shows that prompt governance needs measurable auditing standards to improve transparency, user safety, and accountability in deployed systems.",
+      "method": [
+        "Defined AISPA to audit system prompt instructions across 8 user-relevant dimensions",
+        "Labeled each instruction as protective or problematic",
+        "Applied the framework to 3,249 instructions from 88 commercial AI products"
+      ],
+      "evidence_signal": "The authors analyzed 3,249 system-prompt instructions across 88 commercial products and found that 98.9% of products had at least one protective instruction, but only 24% covered all eight AISPA dimensions.",
+      "watch_item": "The audit relies on available system prompts and instruction-level classification, so results may vary with prompt access, versioning, and subjective labeling boundaries.",
+      "hashtags": [
+        "#LLMSafety",
+        "#SystemPrompts",
+        "#AIAuditing",
+        "#TrustworthyAI",
+        "#PromptEngineering"
+      ],
+      "paper_id": "2026-07-30-arxiv-aispa_user_centric_system_prompt_auditing_for_large_language_model_applications",
+      "paper_title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+      "paper_date": "2026-07-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-07-31T16:02:46",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-30-arxiv-fully_inductive_cardinality_estimation",
+    "arxiv_id": "2607.28311v1",
+    "date": "2026-07-30",
+    "title": "Fully Inductive Cardinality Estimation",
+    "authors": "Tim Schwabe, Lukas Ketzer, Maribel Acosta",
+    "abstract": "Query optimization of Basic Graph Patterns (BGP) SPARQL queries over Knowledge Graphs (KG) requires accurate cardinality estimation. Recently published learned estimators outperform statistics- and sampling-based approaches, but share a limitation preventing their adoption in real-world triplestores: they are transductive and require retraining when the underlying graph changes or when applied to new graphs. We present FICE (Fully Inductive Cardinality Estimation), the first learned cardinality estimator for BGP queries over KGs that generalizes to entirely unseen graphs (including unseen relations), without any retraining. FICE is a graph neural network (GNN) with two coupled components. First, an encoder GNN over a factor-graph view of the KG produces entity and relation embeddings. We prove that BGP cardinality is a local function of the 2-hop neighborhood around bound terms in this view, motivating the local message-passing encoder. A decoder GNN then composes these embeddings along the join topology of the query to predict log-cardinality. The encoder and decoder are trained jointly, making the embeddings specialized for cardinality estimation. FICE is trained using neighborhood sampling to scale to KGs with millions of triples, and decouples embedding generation from cardinality decoding to enable estimation latency below a millisecond. Compared to learned and non-learned baselines over 10 KGs, FICE reduces the overall median q-error from 13.54 (for the best competitor) to 5.34 and dominates all approaches in tail behavior.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-07-30T14:46:43Z",
+    "updated": "2026-07-30T14:46:43Z",
+    "primary_category": "cs.DB",
+    "categories": [
+      "cs.DB",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.28311v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.28311v1"
+      }
+    ],
+    "score": 74,
+    "infographic": {
+      "key_insight": "FICE is the first fully inductive learned cardinality estimator for SPARQL Basic Graph Patterns, able to generalize to unseen graphs and relations without retraining.",
+      "engineering_relevance": "It targets real triplestores by making cardinality estimation fast enough for sub-millisecond inference while staying robust to graph changes.",
+      "method": [
+        "Encoder GNN builds entity and relation embeddings from a local factor-graph view of the knowledge graph.",
+        "Decoder GNN composes these embeddings along the query join structure to predict log-cardinality.",
+        "Joint training and neighborhood sampling make the model scalable to million-triple knowledge graphs."
+      ],
+      "evidence_signal": "Across 10 knowledge graphs, FICE reduced median q-error to 5.34 versus 13.54 for the best competitor and showed stronger tail performance.",
+      "watch_item": "The approach depends on graph-neighborhood message passing and joint encoder-decoder training, so deployment may require careful tuning for very large or highly dynamic graphs.",
+      "hashtags": [
+        "#KnowledgeGraphs",
+        "#CardinalityEstimation",
+        "#GraphNeuralNetworks",
+        "#SPARQL",
+        "#QueryOptimization"
+      ],
+      "paper_id": "2026-07-30-arxiv-fully_inductive_cardinality_estimation",
+      "paper_title": "Fully Inductive Cardinality Estimation",
+      "paper_date": "2026-07-30",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-07-31T16:02:48",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-07-30-arxiv-graph_neural_multilevel_preconditioners_for_iterative_solvers",
+    "arxiv_id": "2607.28456v1",
+    "date": "2026-07-30",
+    "title": "Graph Neural Multilevel Preconditioners for Iterative Solvers",
+    "authors": "Zechen Zhang, Rui Peng Li, Yousef Saad",
+    "abstract": "Solving large, sparse linear systems is a core task in scientific computing, and efficient iterative solvers rely critically on effective and robust preconditioning. While classical methods such as algebraic multigrid (AMG) are highly scalable, their robustness can degrade on indefinite or nonsymmetric systems where heuristics originally developed for elliptic PDEs are less reliable. Recently, Graph Neural Networks (GNNs) have emerged as data-driven preconditioners; yet, the practical impact of imposing an AMG-style hierarchy remains underexplored for general sparse matrices. In this work, we propose a Graph Neural Multilevel Preconditioner (GMP) that adopts an AMG hierarchy as a structural prior and learns smoothing, restriction, and interpolation operators in a unified framework. Our method targets general sparse systems and is instantiated as a drop-in preconditioner for standard Krylov solvers. On a benchmark of over 800 sparse matrices, we compare against classical AMG, single-level ILUT, and state-of-the-art GNN preconditioners, and characterize the regimes where multilevel graph neural preconditioning improves convergence or, conversely, introduces overhead relative to strong single-level baselines. These results highlight both the promise and the limitations of enforcing AMG-style multilevel structure in learned preconditioners for large-scale scientific simulations.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-07-30T16:19:41Z",
+    "updated": "2026-07-30T16:19:41Z",
+    "primary_category": "math.NA",
+    "categories": [
+      "math.NA",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2607.28456v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2607.28456v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "Graph neural networks can be used as multilevel preconditioners by borrowing an AMG-style hierarchy, potentially improving Krylov solver convergence on general sparse linear systems.",
+      "engineering_relevance": "This could make iterative solvers more robust for large scientific simulations, especially when classical AMG heuristics are less effective on indefinite or nonsymmetric matrices.",
+      "method": [
+        "Use an AMG-like multilevel structure as a prior for the preconditioner.",
+        "Learn smoothing, restriction, and interpolation operators with a GNN.",
+        "Deploy the learned preconditioner as a drop-in component for standard Krylov solvers."
+      ],
+      "evidence_signal": "The paper evaluates the method on more than 800 sparse matrices and compares it with classical AMG, ILUT, and state-of-the-art GNN preconditioners.",
+      "watch_item": "The multilevel learned approach may add overhead and does not always outperform strong single-level baselines, so cost-benefit depends on the matrix regime.",
+      "hashtags": [
+        "#GraphNeuralNetworks",
+        "#Preconditioning",
+        "#IterativeSolvers",
+        "#ScientificComputing",
+        "#Multigrid"
+      ],
+      "paper_id": "2026-07-30-arxiv-graph_neural_multilevel_preconditioners_for_iterative_solvers",
+      "paper_title": "Graph Neural Multilevel Preconditioners for Iterative Solvers",
+      "paper_date": "2026-07-30",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-07-31T16:02:51",
       "generator": "openai"
     }
   },
@@ -389,236 +598,27 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "The thesis shows that large action spaces can be made tractable by sharing structure across actions, using Bayesian exploration for on-policy learning and regularized latent/policy-weighted objectives for off-policy learning.",
-      "engineering_relevance": "These methods are relevant for recommender systems, ranking, and interactive decision-making pipelines where action counts are huge and logged feedback is sparse or biased.",
+      "key_insight": "The thesis shows that in very large action spaces, sharing structure across actions is crucial for both online exploration and offline learning, enabling better sample efficiency and more stable policy optimization.",
+      "engineering_relevance": "The methods are relevant for recommender systems, ad selection, and other decision engines where action sets are huge and feedback is sparse or logged.",
       "method": [
-        "meTS: mixed-effect Thompson sampling that shares statistical strength across actions.",
-        "dTS: diffusion-inspired priors to model dependencies among actions and reduce effective action complexity.",
-        "sDM and pessimistic policy-weighted objectives: latent-variable direct modeling plus concave, differentiable estimators to stabilize off-policy optimization."
+        "meTS: a mixed-effect Thompson sampling method that shares statistical strength across actions for on-policy learning.",
+        "dTS: a diffusion-inspired structured prior for modeling dependencies between actions and improving regret in large action spaces.",
+        "sDM plus pessimistic off-policy objectives: latent-variable direct modeling and concave, efficiently optimizable policy-weighted likelihood / importance-sampling formulations."
       ],
-      "evidence_signal": "The abstract reports theoretical regret guarantees for on-policy methods and emphasizes that optimization error can dominate estimation error in large-action off-policy settings, with PAC-Bayesian control of bias-variance trade-offs.",
-      "watch_item": "Performance may depend on the quality of structural assumptions and on careful optimization, since misspecification or unstable importance weights can still undermine off-policy estimates.",
+      "evidence_signal": "The abstract reports regret guarantees for the on-policy methods and emphasizes optimization-vs-estimation trade-offs, bias-variance control, and PAC-Bayesian bounds in the off-policy setting.",
+      "watch_item": "These approaches rely on structured assumptions and careful optimization; in practice, misspecified action dependencies or unstable importance weights can still hurt performance.",
       "hashtags": [
         "#ContextualBandits",
-        "#OnPolicyLearning",
-        "#OffPolicyLearning",
+        "#OfflineRL",
+        "#ThompsonSampling",
         "#LargeActionSpaces",
-        "#PACBayes"
+        "#PolicyLearning"
       ],
       "paper_id": "2026-07-30-arxiv-on_policy_and_off_policy_learning_for_large_action_spaces",
       "paper_title": "On-Policy and Off-Policy Learning for Large Action Spaces",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:04:21",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-07-30-arxiv-semi_supervised_learning_for_molecular_graphs_via_ensemble_consensus",
-    "arxiv_id": "2607.28304v1",
-    "date": "2026-07-30",
-    "title": "Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus",
-    "authors": "Rasmus Tirsgaard, Laurits Fredsgaard, Marisa Wodrich, Mikkel Jordahn, Mikkel N. Schmidt",
-    "abstract": "Machine learning is transforming molecular sciences by accelerating property prediction, simulation, and the discovery of new molecules and materials. Acquiring labeled data in these domains is often costly and time-consuming, whereas large collections of unlabeled molecular data are readily available. Standard semi-supervised learning methods often rely on label-preserving augmentations, which are challenging to design in the molecular domain, where minor changes can drastically alter properties. In this work, we show that semi-supervised methods that rely on an ensemble consensus can boost predictive accuracy across a diverse range of molecular datasets, task types, and graph neural network architectures. We find that training with an ensemble consensus objective increases robustness in models and exhibits an effect similar to knowledge distillation; an individual member of an ensemble trained this way outperforms a full ensemble trained in a traditional supervised fashion in almost all cases. In addition, this type of semi-supervised training reduces calibration error.",
-    "category": "Biomedical and Physical Sciences",
-    "source": "arXiv",
-    "published": "2026-07-30T14:43:55Z",
-    "updated": "2026-07-30T14:43:55Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2607.28304v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2607.28304v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "Semi-supervised learning with ensemble consensus improves molecular graph prediction by leveraging unlabeled data without requiring tricky label-preserving augmentations.",
-      "engineering_relevance": "This offers a practical way to boost accuracy and calibration in molecular property prediction models across diverse datasets and graph neural networks.",
-      "method": [
-        "Train graph neural networks using an ensemble consensus objective on labeled and unlabeled molecular graphs.",
-        "Use agreement among ensemble members as the learning signal instead of hand-designed molecule augmentations.",
-        "Evaluate both individual ensemble members and full supervised ensembles across tasks and architectures."
-      ],
-      "evidence_signal": "The abstract reports consistent gains across a diverse range of molecular datasets, task types, and GNN architectures, with improved robustness and reduced calibration error.",
-      "watch_item": "Performance may depend on how well the ensemble consensus is configured and on the availability and quality of unlabeled molecular data.",
-      "hashtags": [
-        "#MolecularML",
-        "#GraphNeuralNetworks",
-        "#SemiSupervisedLearning",
-        "#DrugDiscovery",
-        "#UncertaintyQuantification"
-      ],
-      "paper_id": "2026-07-30-arxiv-semi_supervised_learning_for_molecular_graphs_via_ensemble_consensus",
-      "paper_title": "Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus",
-      "paper_date": "2026-07-30",
-      "paper_category": "Biomedical and Physical Sciences",
-      "generated_at": "2026-08-01T15:04:22",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-07-30-arxiv-aispa_user_centric_system_prompt_auditing_for_large_language_model_applications",
-    "arxiv_id": "2607.28617v1",
-    "date": "2026-07-30",
-    "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
-    "authors": "Xiangning Lin, Shenzhe Zhu, Shu Yang, Zhenyu Zhang, Haoqian Zhang, Yipeng Zhao",
-    "abstract": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to the public or regulators, creating a serious trust and accountability gap in the wide deployment of AI systems. In this paper, we introduce Artificial Intelligence System Prompt Assurance (AISPA), a user-centric framework for systematically auditing system prompts in AI systems. AISPA examines specific parts of a system prompt and evaluates them along eight dimensions that matter to users. We then use this framework to review 3,249 instructions from system prompts in 88 commercial AI products, classifying each instruction as either protective (of users) or problematic. Our audit surfaces four core findings. First, system prompt design varies substantially across products and developers, with some organizations averaging over 60 protective instructions per product while others average fewer than 5. Second, protective instructions are widely adopted but shallow in scope: 98.9% of products contain at least one, yet only 24% cover all eight dimensions of the AISPA taxonomy. Third, system prompts have grown steadily longer and more protective of users, suggesting that user protection is becoming a more visible concern in commercial prompt design. Fourth, despite this progress, problematic instructions remain pervasive: roughly 40% of products contain at least one instruction that works against user interests, and protective and problematic instructions frequently coexist within the same prompt. Our findings highlight the need for greater transparency, standardization, and independent oversight for system prompts in commercial AI products.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-07-30T17:58:58Z",
-    "updated": "2026-07-30T17:58:58Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.CL",
-      "cs.CY",
-      "cs.HC"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2607.28617v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2607.28617v1"
-      }
-    ],
-    "score": 70,
-    "infographic": {
-      "key_insight": "AISPA shows that commercial AI system prompts increasingly include user-protective instructions, but those protections are uneven, incomplete, and often mixed with instructions that can still harm user interests.",
-      "engineering_relevance": "For AI product teams, the paper provides a practical audit framework to evaluate system prompts against user-centered safety and accountability goals before deployment.",
-      "method": [
-        "Defined AISPA, a user-centric taxonomy with eight user-relevant dimensions for auditing system prompt instructions.",
-        "Manually reviewed 3,249 instructions from system prompts across 88 commercial AI products.",
-        "Labeled each instruction as protective or problematic to compare prompt design patterns across products."
-      ],
-      "evidence_signal": "The study analyzes 3,249 instructions from 88 commercial AI products and finds that 98.9% of products include at least one protective instruction, while about 40% also contain at least one problematic instruction.",
-      "watch_item": "Because system prompts are often undisclosed and auditing depends on available prompt text, the findings may underrepresent hidden or frequently changing prompt behavior.",
-      "hashtags": [
-        "#AISPA",
-        "#LLMAudit",
-        "#SystemPrompts",
-        "#AISafety",
-        "#TrustworthyAI"
-      ],
-      "paper_id": "2026-07-30-arxiv-aispa_user_centric_system_prompt_auditing_for_large_language_model_applications",
-      "paper_title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
-      "paper_date": "2026-07-30",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:04:25",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-07-30-arxiv-fully_inductive_cardinality_estimation",
-    "arxiv_id": "2607.28311v1",
-    "date": "2026-07-30",
-    "title": "Fully Inductive Cardinality Estimation",
-    "authors": "Tim Schwabe, Lukas Ketzer, Maribel Acosta",
-    "abstract": "Query optimization of Basic Graph Patterns (BGP) SPARQL queries over Knowledge Graphs (KG) requires accurate cardinality estimation. Recently published learned estimators outperform statistics- and sampling-based approaches, but share a limitation preventing their adoption in real-world triplestores: they are transductive and require retraining when the underlying graph changes or when applied to new graphs. We present FICE (Fully Inductive Cardinality Estimation), the first learned cardinality estimator for BGP queries over KGs that generalizes to entirely unseen graphs (including unseen relations), without any retraining. FICE is a graph neural network (GNN) with two coupled components. First, an encoder GNN over a factor-graph view of the KG produces entity and relation embeddings. We prove that BGP cardinality is a local function of the 2-hop neighborhood around bound terms in this view, motivating the local message-passing encoder. A decoder GNN then composes these embeddings along the join topology of the query to predict log-cardinality. The encoder and decoder are trained jointly, making the embeddings specialized for cardinality estimation. FICE is trained using neighborhood sampling to scale to KGs with millions of triples, and decouples embedding generation from cardinality decoding to enable estimation latency below a millisecond. Compared to learned and non-learned baselines over 10 KGs, FICE reduces the overall median q-error from 13.54 (for the best competitor) to 5.34 and dominates all approaches in tail behavior.",
-    "category": "Scientific Discovery",
-    "source": "arXiv",
-    "published": "2026-07-30T14:46:43Z",
-    "updated": "2026-07-30T14:46:43Z",
-    "primary_category": "cs.DB",
-    "categories": [
-      "cs.DB",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2607.28311v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2607.28311v1"
-      }
-    ],
-    "score": 69,
-    "infographic": {
-      "key_insight": "FICE is the first fully inductive learned cardinality estimator for SPARQL basic graph patterns, generalizing to unseen graphs and relations without retraining.",
-      "engineering_relevance": "It enables fast, sub-millisecond query optimization for real-world triplestores that must handle evolving knowledge graphs.",
-      "method": [
-        "Encoder GNN learns entity and relation embeddings on a factor-graph view of the knowledge graph.",
-        "Decoder GNN composes those embeddings along the query join structure to predict log-cardinality.",
-        "Joint training with neighborhood sampling scales to multi-million-triple graphs."
-      ],
-      "evidence_signal": "Across 10 knowledge graphs, FICE improved median q-error to 5.34 versus 13.54 for the best competitor and showed better tail performance.",
-      "watch_item": "Performance depends on accurate local neighborhood aggregation, so scalability and quality may be sensitive to graph sparsity or noisy sampling choices.",
-      "hashtags": [
-        "#GraphNeuralNetworks",
-        "#KnowledgeGraphs",
-        "#SPARQL",
-        "#CardinalityEstimation",
-        "#QueryOptimization"
-      ],
-      "paper_id": "2026-07-30-arxiv-fully_inductive_cardinality_estimation",
-      "paper_title": "Fully Inductive Cardinality Estimation",
-      "paper_date": "2026-07-30",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-08-01T15:04:27",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-07-30-arxiv-graph_neural_multilevel_preconditioners_for_iterative_solvers",
-    "arxiv_id": "2607.28456v1",
-    "date": "2026-07-30",
-    "title": "Graph Neural Multilevel Preconditioners for Iterative Solvers",
-    "authors": "Zechen Zhang, Rui Peng Li, Yousef Saad",
-    "abstract": "Solving large, sparse linear systems is a core task in scientific computing, and efficient iterative solvers rely critically on effective and robust preconditioning. While classical methods such as algebraic multigrid (AMG) are highly scalable, their robustness can degrade on indefinite or nonsymmetric systems where heuristics originally developed for elliptic PDEs are less reliable. Recently, Graph Neural Networks (GNNs) have emerged as data-driven preconditioners; yet, the practical impact of imposing an AMG-style hierarchy remains underexplored for general sparse matrices. In this work, we propose a Graph Neural Multilevel Preconditioner (GMP) that adopts an AMG hierarchy as a structural prior and learns smoothing, restriction, and interpolation operators in a unified framework. Our method targets general sparse systems and is instantiated as a drop-in preconditioner for standard Krylov solvers. On a benchmark of over 800 sparse matrices, we compare against classical AMG, single-level ILUT, and state-of-the-art GNN preconditioners, and characterize the regimes where multilevel graph neural preconditioning improves convergence or, conversely, introduces overhead relative to strong single-level baselines. These results highlight both the promise and the limitations of enforcing AMG-style multilevel structure in learned preconditioners for large-scale scientific simulations.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-07-30T16:19:41Z",
-    "updated": "2026-07-30T16:19:41Z",
-    "primary_category": "math.NA",
-    "categories": [
-      "math.NA",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2607.28456v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2607.28456v1"
-      }
-    ],
-    "score": 67,
-    "infographic": {
-      "key_insight": "A graph neural preconditioner that preserves an AMG-style multilevel hierarchy can improve iterative solver convergence on some sparse systems, but its benefits are not universal.",
-      "engineering_relevance": "This could enable plug-in preconditioners for Krylov solvers on large scientific computing workloads, especially where classical AMG is less robust.",
-      "method": [
-        "Use an AMG-like multilevel hierarchy as a structural prior.",
-        "Learn smoothing, restriction, and interpolation operators with a GNN.",
-        "Deploy as a drop-in preconditioner for standard Krylov methods."
-      ],
-      "evidence_signal": "The paper evaluates the approach on more than 800 sparse matrices and compares it with classical AMG, ILUT, and prior GNN preconditioners.",
-      "watch_item": "The learned multilevel design may add overhead and can underperform strong single-level baselines depending on the matrix class.",
-      "hashtags": [
-        "#ScientificMachineLearning",
-        "#GraphNeuralNetworks",
-        "#Preconditioning",
-        "#AlgebraicMultigrid",
-        "#IterativeSolvers"
-      ],
-      "paper_id": "2026-07-30-arxiv-graph_neural_multilevel_preconditioners_for_iterative_solvers",
-      "paper_title": "Graph Neural Multilevel Preconditioners for Iterative Solvers",
-      "paper_date": "2026-07-30",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-08-01T15:04:30",
+      "generated_at": "2026-07-31T16:02:53",
       "generator": "openai"
     }
   },
@@ -648,29 +648,29 @@
         "url": "https://arxiv.org/pdf/2607.28608v1"
       }
     ],
-    "score": 66,
+    "score": 71,
     "infographic": {
-      "key_insight": "KAISEN shows that subgroup fairness audits can be reproducible yet still fail in specific components, especially when proxy assumptions, calibration choices, or drift thresholds do not transfer across cohorts.",
-      "engineering_relevance": "For clinical ML deployment, the work highlights that fairness reporting should emphasize subgroup-specific variability, not just average metrics, and that audit thresholds must be validated for each setting.",
+      "key_insight": "KAISEN shows that subgroup fairness audits for clinical risk models are only reliable when each step is stress-tested, because significance, mitigation, diagnostics, and drift monitoring can all behave very differently under known ground truth.",
+      "engineering_relevance": "For deployed clinical ML systems, the paper argues that audit outputs should report subgroup-specific variability, detectable-effect floors, and transfer risk across cohorts rather than a single aggregate fairness score.",
       "method": [
-        "Five-phase audit pipeline: stratify subgroups, measure disparity, diagnose mechanisms, mitigate post-hoc, and monitor drift.",
-        "Evaluated on a synthetic benchmark with 16 disease tasks, 15 social-determinant axes, and 3 intersections.",
-        "Stress-tested each component to failure with known ground truth."
+        "Five-phase reproducible audit pipeline: stratification, disparity measurement, mechanism diagnostics, mitigation, and drift monitoring.",
+        "Evaluated on a synthetic benchmark with 16 disease tasks, 15 social-determinant axes, and three subgroup intersections.",
+        "Stress-tested each component against known ground truth to probe where the audit succeeds or fails."
       ],
-      "evidence_signal": "On the synthetic benchmark, per-group threshold optimization reduced equalized-odds difference in all 48 held-out runs, while group-wise Platt scaling improved EOD in only 19 of 48 runs and CUSUM false alarms/missed shifts were strongly seed-dependent (chi-squared p = 0.002).",
-      "watch_item": "Results are entirely synthetic, so the audit conclusions and thresholds may not transfer to real clinical cohorts without revalidation.",
+      "evidence_signal": "Across 48 held-out runs, group-wise threshold optimization reduced equalized-odds disparity in every run, while group-wise Platt scaling improved it in only 19 of 48; the diagnostic also failed on all 48 model-driven proxy-misspecification cases.",
+      "watch_item": "Results are fully synthetic, so the pipeline’s apparent performance and failure modes may not transfer to real clinical data without further validation.",
       "hashtags": [
         "#FairnessAuditing",
         "#ClinicalML",
-        "#Reproducibility",
         "#EqualizedOdds",
-        "#DriftMonitoring"
+        "#DriftMonitoring",
+        "#Reproducibility"
       ],
       "paper_id": "2026-07-30-arxiv-kaisen_reproducible_subgroup_fairness_auditing_for_clinical_risk_models",
       "paper_title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:04:32",
+      "generated_at": "2026-07-31T16:02:56",
       "generator": "openai"
     }
   },
@@ -701,29 +701,29 @@
         "url": "https://arxiv.org/pdf/2607.28553v1"
       }
     ],
-    "score": 66,
+    "score": 71,
     "infographic": {
-      "key_insight": "APO is a fully unsupervised policy-optimization framework for 3D atomic structure prediction that replaces ground-truth coordinate supervision with intrinsic, physics-based rewards.",
-      "engineering_relevance": "It offers a practical path for modeling crystals and proteins in low-label regimes, where experimental structures are expensive or unavailable.",
+      "key_insight": "APO is an unsupervised alignment method that improves 3D atomic structure prediction by optimizing physically plausible structures without requiring ground-truth coordinates.",
+      "engineering_relevance": "This could reduce labeling cost and accelerate structure prediction workflows for crystals and proteins in data-scarce scientific and engineering applications.",
       "method": [
-        "Adapts group-relative policy optimization to 3D atomic environments.",
-        "Uses a dual-reward design: a latent structural mode reward from eigen-decomposition of sample similarities and a thermodynamic stability reward.",
-        "Lets the model self-correct by favoring physically plausible configurations within each sampled group."
+        "Uses group-relative policy optimization adapted to 3D atomic systems.",
+        "Introduces a dual-reward design: a structural-mode reward from eigen-decomposition of sample similarities and a thermodynamic stability reward.",
+        "Lets the model self-correct by favoring physically consistent configurations within sampled groups."
       ],
-      "evidence_signal": "The abstract reports benchmarks on crystal and antibody structure prediction, where APO outperforms fully supervised baselines and improves match rates, structural fidelity, and inference efficiency.",
-      "watch_item": "Performance may depend on the quality of the unsupervised reward signals and the stability of the group-sampling/eigendecomposition procedure in diverse atomic systems.",
+      "evidence_signal": "The abstract reports benchmark gains on crystal and antibody structure prediction, with better match rates, structural fidelity, and more efficient inference via straighter probability paths.",
+      "watch_item": "Performance may depend on how well the unsupervised rewards capture true physical validity, so stability criteria and similarity grouping likely need careful tuning.",
       "hashtags": [
-        "#ScientificDiscovery",
-        "#3DStructurePrediction",
-        "#UnsupervisedLearning",
-        "#AtomicSystems",
-        "#ComputationalScience"
+        "#AIforScience",
+        "#MolecularModeling",
+        "#ProteinStructure",
+        "#CrystalPrediction",
+        "#UnsupervisedLearning"
       ],
       "paper_id": "2026-07-30-arxiv-apo_unsupervised_atomic_policy_optimization_for_3d_structure_prediction_of_atomic_systems",
       "paper_title": "APO: Unsupervised Atomic Policy Optimization for 3D Structure Prediction of Atomic Systems",
       "paper_date": "2026-07-30",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-08-01T15:04:34",
+      "generated_at": "2026-07-31T16:02:58",
       "generator": "openai"
     }
   },
@@ -754,29 +754,29 @@
         "url": "https://arxiv.org/pdf/2607.28537v1"
       }
     ],
-    "score": 66,
+    "score": 71,
     "infographic": {
-      "key_insight": "A graph neural network can learn the effective magnetic energy landscape of metallic magnets, enabling fast prediction of spin torques and nonequilibrium spin dynamics without repeatedly solving the electronic problem.",
-      "engineering_relevance": "This provides a scalable surrogate model for predictive spin-dynamics simulation, reducing the computational cost of studying large, time-evolving magnetic systems.",
+      "key_insight": "A graph neural network can learn an effective magnetic energy functional from electronic calculations and rapidly predict spin torques and dynamics in metallic magnets.",
+      "engineering_relevance": "This provides a scalable surrogate for expensive electronic simulations, enabling larger and longer nonequilibrium magnetism studies across multiple length and time scales.",
       "method": [
-        "Train a GNN on electronic-structure data to represent the magnetic energy functional.",
-        "Differentiate the learned energy to obtain spin torques for dynamics simulation.",
-        "Apply the model to collinear, noncollinear, and noncoplanar metallic magnets."
+        "Train a GNN on electronic-calculation data to represent the magnetic energy functional.",
+        "Use the learned functional to evaluate spin torques efficiently during time evolution.",
+        "Benchmark on collinear, noncollinear, and noncoplanar metallic magnetic systems."
       ],
-      "evidence_signal": "The abstract reports that the learned force fields accurately reproduce electronically generated spin torques and match direct electronic simulations across representative magnetic systems.",
-      "watch_item": "Performance may depend on the diversity and quality of electronic training data, so extrapolation to unfamiliar materials or magnetic states should be validated carefully.",
+      "evidence_signal": "The abstract reports that the learned force fields accurately reproduce electronically generated spin torques and match direct electronic-simulation spin dynamics across representative test systems.",
+      "watch_item": "Performance may depend on the diversity and quality of the electronic training data, especially for extrapolating to new magnetic textures or out-of-distribution dynamics.",
       "hashtags": [
         "#GraphNeuralNetworks",
-        "#Magnetism",
         "#SpinDynamics",
-        "#MachineLearningForScience",
+        "#MagneticMaterials",
+        "#MachineLearningPotentials",
         "#ComputationalPhysics"
       ],
       "paper_id": "2026-07-30-arxiv-graph_neural_network_force_fields_for_spin_dynamics_in_metallic_magnets",
       "paper_title": "Graph Neural Network Force Fields for Spin Dynamics in Metallic Magnets",
       "paper_date": "2026-07-30",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-08-01T15:04:37",
+      "generated_at": "2026-07-31T16:03:00",
       "generator": "openai"
     }
   },
@@ -806,29 +806,29 @@
         "url": "https://arxiv.org/pdf/2607.28451v1"
       }
     ],
-    "score": 66,
+    "score": 71,
     "infographic": {
-      "key_insight": "The paper argues that autonomous AI should continuously model its own hardware aging so it can adapt decisions before degradation causes mission failure.",
-      "engineering_relevance": "This framework is relevant for long-lived, safety-critical autonomous systems because it connects prognostics with planning, resource management, and graceful degradation.",
+      "key_insight": "The paper proposes Aging-Aware Autonomous Intelligence (AAAI), a closed-loop framework that makes autonomous systems aware of hardware degradation so they can adapt reasoning and mission execution as they age.",
+      "engineering_relevance": "This is important for long-duration, safety-critical platforms because it can improve resilience, extend operational lifetime, and enable graceful degradation when hardware health declines.",
       "method": [
-        "Continuously estimate the health of power, sensing, memory, and compute subsystems using physics-of-failure models.",
+        "Continuously estimate subsystem health for power, sensing, memory, and computation using physics-of-failure models.",
         "Adapt inference complexity, planning horizon, and task priorities to match remaining hardware capability.",
-        "Allocate remaining operational life across mission goals through optimization, conservation, and graceful degradation."
+        "Optimize how remaining operational life is allocated across mission objectives to support survival-centric behavior."
       ],
-      "evidence_signal": "The abstract presents a conceptual framework and application domains rather than reporting experimental results or quantitative evaluation.",
-      "watch_item": "A practical challenge is reliably estimating hardware health in real time without adding excessive sensing, compute, or control overhead.",
+      "evidence_signal": "The abstract is a conceptual framework paper and does not report experimental datasets or quantitative evaluation results.",
+      "watch_item": "A key implementation concern is that accurate health estimation and control policies must be reliable enough to avoid compounding errors or overly conservative behavior.",
       "hashtags": [
         "#AutonomousSystems",
         "#HardwareAwareAI",
         "#Prognostics",
         "#ResilientRobotics",
-        "#AgingAwareAI"
+        "#LifecycleManagement"
       ],
       "paper_id": "2026-07-30-arxiv-machines_that_know_they_are_aging_a_framework_for_hardware_aware_autonomous_intelligence",
       "paper_title": "Machines that know they are aging: a framework for hardware-aware autonomous intelligence",
       "paper_date": "2026-07-30",
       "paper_category": "Autonomous Labs",
-      "generated_at": "2026-08-01T15:04:39",
+      "generated_at": "2026-07-31T16:03:03",
       "generator": "openai"
     }
   },
@@ -859,29 +859,29 @@
         "url": "https://arxiv.org/pdf/2607.28498v1"
       }
     ],
-    "score": 65,
+    "score": 70,
     "infographic": {
-      "key_insight": "TCA-SIR reframes scientific inspiration retrieval as extracting target-conditioned, transferable abstractions rather than ranking papers by topical similarity.",
-      "engineering_relevance": "This can improve AI-for-Science systems by retrieving sources that better support hypothesis transfer, especially for remote inspirations with reusable principles.",
+      "key_insight": "TCA-SIR reframes scientific inspiration retrieval as learning a transferable, target-conditioned abstraction rather than just ranking papers by topical similarity.",
+      "engineering_relevance": "For AI-for-Science systems, this enables retrieval of sources that better support hypothesis generation by explicitly modeling how a candidate’s mechanism can transfer to the target problem.",
       "method": [
         "Generate a target-conditioned abstraction from each candidate source paper.",
-        "Use the learned abstraction representation to score transferability to the target problem.",
-        "Return both a ranked retrieval list and an interpretable rationale for why a source transfers."
+        "Represent the abstraction and use it to predict transferability to the target.",
+        "Use the learned abstraction both for retrieval ranking and for interpretable rationale generation."
       ],
       "evidence_signal": "On ResearchBench, TCA-SIR outperforms prior SIR methods and direct LLM retrieval, improving HitRate@top4% over MOOSE-Chem by more than 10 percentage points.",
-      "watch_item": "Performance depends on the quality of learned abstractions, so weak target conditioning or noisy source text could reduce transferability gains.",
+      "watch_item": "Performance depends on the quality of learned abstractions, so noisy or weak target conditioning could reduce transferability ranking reliability.",
       "hashtags": [
-        "#AIForscience",
         "#ScientificDiscovery",
+        "#AIforScience",
         "#InformationRetrieval",
         "#LLM",
-        "#TransferLearning"
+        "#KnowledgeTransfer"
       ],
       "paper_id": "2026-07-30-arxiv-tca_sir_learning_target_conditioned_abstractions_for_scientific_inspiration_retrieval",
       "paper_title": "TCA-SIR: Learning Target-Conditioned Abstractions for Scientific Inspiration Retrieval",
       "paper_date": "2026-07-30",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-08-01T15:04:41",
+      "generated_at": "2026-07-31T16:03:05",
       "generator": "openai"
     }
   },
@@ -912,20 +912,20 @@
         "url": "https://arxiv.org/pdf/2607.28609v1"
       }
     ],
-    "score": 64,
+    "score": 69,
     "infographic": {
-      "key_insight": "OSReward shows that even top vision-language model judges are systematically too lenient on computer-use trajectories, so they are not yet reliable as drop-in reward models.",
-      "engineering_relevance": "For CUA systems, training, evaluation, and data curation need cheaper and more stable reward signals than frontier VLM judges currently provide.",
+      "key_insight": "OSReward shows that today’s best vision-language judges for computer-use trajectories are still unreliable, with a consistent tendency to over-credit failed runs, so specialized reward models are needed.",
+      "engineering_relevance": "For computer-using agents, dependable low-cost reward signals are essential for evaluation, data filtering, and RL training at scale.",
       "method": [
-        "Built OSReward, a cross-platform benchmark with human-verified instructions and multi-stage human-labeled ground-truth verdicts.",
-        "Created OSReward-Hard for genuinely difficult cases and OSReward-Multi for fine-grained efficiency/alignment scoring.",
-        "Trained OS-Shepherd-100K and open OS-Shepherd models (9B/35B) to provide low-cost trajectory judgments."
+        "Built OSReward, a cross-platform benchmark with human-verified instructions and rigorously annotated ground-truth verdicts.",
+        "Derived OSReward-Hard for genuinely difficult cases and OSReward-Multi for finer-grained efficiency/alignment scoring.",
+        "Trained open OS-Shepherd reward models (9B, 35B) on OS-Shepherd-100K, a reasoning-annotated judgment corpus."
       ],
-      "evidence_signal": "The benchmark supports the most comprehensive evaluation to date, revealing a systematic leniency bias in state-of-the-art VLM judges and a cost-quality gap between frontier and open models.",
-      "watch_item": "Reliability depends on high-quality trajectory labels, so deployment should account for annotation standards, domain shift across platforms, and the risk of lenient false positives.",
+      "evidence_signal": "The benchmark evaluation finds even state-of-the-art VLM judges exhibit systematic leniency, while the best reliable judges are costly and open models lag behind.",
+      "watch_item": "Performance and cost tradeoffs may vary across platforms and task types, so deployment should be validated on the target agent environment before trusting scores.",
       "hashtags": [
         "#ComputerUseAgents",
-        "#RewardModels",
+        "#RewardModel",
         "#VisionLanguageModels",
         "#Benchmarking",
         "#AIAlignment"
@@ -934,7 +934,7 @@
       "paper_title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-01T15:04:43",
+      "generated_at": "2026-07-31T16:03:08",
       "generator": "openai"
     }
   },
@@ -963,29 +963,29 @@
         "url": "https://arxiv.org/pdf/2607.28580v1"
       }
     ],
-    "score": 64,
+    "score": 69,
     "infographic": {
-      "key_insight": "DualG-MRAG separates global multi-hop reasoning from fine-grained evidence matching by using two graphs, reducing noise while preserving local visual and textual details.",
-      "engineering_relevance": "The framework offers a practical design pattern for building more accurate multimodal retrieval-augmented generation systems on complex, multi-hop queries.",
+      "key_insight": "DualG-MRAG separates coarse global reasoning from fine local evidence matching to reduce noise and improve multimodal multi-hop retrieval.",
+      "engineering_relevance": "The framework offers a practical design pattern for building more reliable multimodal RAG systems that need both structural reasoning and precise cross-modal verification.",
       "method": [
-        "Build a Macro Graph for global topological routing across heterogeneous documents and modalities.",
-        "Build a Micro Graph for precise local verification of fine-grained evidence.",
-        "Use a GNN Retriever for query-driven message passing and dynamic-programming decoding to extract reasoning paths for generation."
+        "Builds two graph levels: a Macro Graph for global routing and a Micro Graph for local evidence matching.",
+        "Uses a GNN Retriever to perform query-driven message passing across heterogeneous multimodal evidence.",
+        "Applies dynamic-programming decoding to extract explicit reasoning paths for generation instead of isolated chunks."
       ],
-      "evidence_signal": "The abstract reports extensive experiments showing improvements in both evidence recall and complex QA accuracy over baselines.",
-      "watch_item": "The dual-graph and dynamic path-extraction pipeline may add implementation complexity and higher compute/memory costs in large multimodal retrieval settings.",
+      "evidence_signal": "The abstract reports extensive experiments showing improved evidence recall and complex QA accuracy over baselines.",
+      "watch_item": "The dual-graph and path-decoding pipeline may add implementation complexity and computational overhead, especially for large multimodal corpora.",
       "hashtags": [
-        "#MMRAG",
-        "#MultimodalAI",
+        "#MultimodalRAG",
         "#GraphNeuralNetworks",
         "#RetrievalAugmentedGeneration",
-        "#ReasoningAI"
+        "#MultiHopReasoning",
+        "#AIResearch"
       ],
       "paper_id": "2026-07-30-arxiv-dualg_mrag_decoupling_macro_reasoning_and_micro_matching_for_multimodal_retrieval_augmente",
       "paper_title": "DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-01T15:04:45",
+      "generated_at": "2026-07-31T16:03:10",
       "generator": "openai"
     }
   },
@@ -1016,29 +1016,29 @@
         "url": "https://arxiv.org/pdf/2607.28545v1"
       }
     ],
-    "score": 64,
+    "score": 69,
     "infographic": {
-      "key_insight": "ORCA-bench shows that frontier language model agents are still far from reliable on production-style oncall root cause analysis, even with access to telemetry and source code.",
-      "engineering_relevance": "For SRE and platform teams, the results suggest agentic debugging tools need much stronger reasoning and incident-context handling before they can be trusted for real operational response.",
+      "key_insight": "ORCA-bench shows that frontier coding agents are still poor at realistic oncall root-cause analysis, with accuracy dropping sharply on harder incident settings.",
+      "engineering_relevance": "For production SRE teams, the result suggests current agents can assist with investigation, but are not yet reliable enough to trust for autonomous incident diagnosis.",
       "method": [
-        "Built a production-fidelity microservice testbed with OpenTelemetry instrumentation and six days of metrics, logs, and traces.",
-        "Created 1,079 RCA tasks with varying report specificity, detection delay, and co-occurring faults.",
-        "Evaluated frontier coding agents using real telemetry interfaces plus full source-code access."
+        "Built a production-fidelity benchmark around a live OpenTelemetry-instrumented microservice system",
+        "Provided six days of metrics, logs, traces, and full source-code access through real tools like Prometheus, Jaeger, OpenSearch, and Grafana",
+        "Created 1,079 RCA tasks that vary report specificity, detection delay, and overlapping faults"
       ],
-      "evidence_signal": "The benchmark was curated by expert SREs and validated with human rescoring of the LLM judge (weighted Cohen’s kappa = 0.90), with best RCA accuracy only 25.3% on Medium tasks and 10.0% on Hard.",
-      "watch_item": "Performance is measured on a curated 50 GB, six-day testbed, so real production systems may be even harder and results may underestimate the deployment gap.",
+      "evidence_signal": "Across five frontier agents, best RCA accuracy reached only 25.3% on Medium tasks and 10.0% on Hard, with human validation showing strong agreement for the judge labels (Cohen’s κw=0.90).",
+      "watch_item": "The benchmark is curated and relatively small compared with real production environments, so real-world deployment risk is likely even higher than the reported results.",
       "hashtags": [
         "#LLMAgents",
         "#SRE",
         "#RootCauseAnalysis",
-        "#Observability",
-        "#Benchmark"
+        "#Benchmark",
+        "#AIOps"
       ],
       "paper_id": "2026-07-30-arxiv-orca_bench_how_ready_are_language_model_agents_for_oncall",
       "paper_title": "ORCA-bench: How Ready Are Language Model Agents for Oncall?",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-01T15:04:47",
+      "generated_at": "2026-07-31T16:03:13",
       "generator": "openai"
     }
   }

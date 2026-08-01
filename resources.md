@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-07-31
+Generated: 2026-08-01
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Cybersecurity Detection Classification with Reasoning-enabled Language Models
@@ -19,7 +19,15 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.28301v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-hargo_heterogeneity_aware_reward_guided_optimization_for_rl_post_training_of_llms_on_hpc_t_infographic.json
 
-## 3. MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems
+## 3. Hierarchical Multilevel Monte Carlo for Order-Optimal Neural Actor-Critic in Average-Reward CMDPs
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28390v1
+- PDF: https://arxiv.org/pdf/2607.28390v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-hierarchical_multilevel_monte_carlo_for_order_optimal_neural_actor_critic_in_average_rewar_infographic.json
+
+## 4. MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems
 
 - Date: 2026-07-30
 - Category: Literature and Knowledge Mining
@@ -27,21 +35,13 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.28527v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-manta_multi_agent_network_topology_adaptation_for_self_evolving_multi_agent_systems_infographic.json
 
-## 4. A foundation model of numerical intelligence with cross-disciplinary generalization
+## 5. A foundation model of numerical intelligence with cross-disciplinary generalization
 
 - Date: 2026-07-30
 - Category: Literature and Knowledge Mining
 - arXiv: https://arxiv.org/abs/2607.28432v1
 - PDF: https://arxiv.org/pdf/2607.28432v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-a_foundation_model_of_numerical_intelligence_with_cross_disciplinary_generalization_infographic.json
-
-## 5. Hierarchical Multilevel Monte Carlo for Order-Optimal Neural Actor-Critic in Average-Reward CMDPs
-
-- Date: 2026-07-30
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.28390v1
-- PDF: https://arxiv.org/pdf/2607.28390v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-hierarchical_multilevel_monte_carlo_for_order_optimal_neural_actor_critic_in_average_rewar_infographic.json
 
 ## 6. $β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation
 
@@ -59,7 +59,15 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.28497v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-the_role_of_causality_in_algorithmic_recourse_infographic.json
 
-## 8. Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus
+## 8. On-Policy and Off-Policy Learning for Large Action Spaces
+
+- Date: 2026-07-30
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2607.28408v1
+- PDF: https://arxiv.org/pdf/2607.28408v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-on_policy_and_off_policy_learning_for_large_action_spaces_infographic.json
+
+## 9. Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus
 
 - Date: 2026-07-30
 - Category: Biomedical and Physical Sciences
@@ -67,7 +75,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.28304v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-semi_supervised_learning_for_molecular_graphs_via_ensemble_consensus_infographic.json
 
-## 9. AISPA: User-Centric System Prompt Auditing for Large Language Model Applications
+## 10. AISPA: User-Centric System Prompt Auditing for Large Language Model Applications
 
 - Date: 2026-07-30
 - Category: Literature and Knowledge Mining
@@ -75,7 +83,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.28617v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-aispa_user_centric_system_prompt_auditing_for_large_language_model_applications_infographic.json
 
-## 10. Fully Inductive Cardinality Estimation
+## 11. Fully Inductive Cardinality Estimation
 
 - Date: 2026-07-30
 - Category: Scientific Discovery
@@ -83,21 +91,13 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2607.28311v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-fully_inductive_cardinality_estimation_infographic.json
 
-## 11. Graph Neural Multilevel Preconditioners for Iterative Solvers
+## 12. Graph Neural Multilevel Preconditioners for Iterative Solvers
 
 - Date: 2026-07-30
 - Category: Scientific Machine Learning
 - arXiv: https://arxiv.org/abs/2607.28456v1
 - PDF: https://arxiv.org/pdf/2607.28456v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-graph_neural_multilevel_preconditioners_for_iterative_solvers_infographic.json
-
-## 12. On-Policy and Off-Policy Learning for Large Action Spaces
-
-- Date: 2026-07-30
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2607.28408v1
-- PDF: https://arxiv.org/pdf/2607.28408v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-07-30-arxiv-on_policy_and_off_policy_learning_for_large_action_spaces_infographic.json
 
 ## 13. KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models
 

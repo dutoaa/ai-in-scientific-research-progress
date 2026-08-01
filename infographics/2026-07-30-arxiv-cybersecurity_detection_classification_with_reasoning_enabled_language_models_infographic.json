@@ -1,24 +1,24 @@
 {
-  "key_insight": "Reasoning-enabled LLMs can improve cybersecurity triage by learning to think through endpoint detections and calibrate confidence separately from the final label.",
-  "engineering_relevance": "For SOC automation, this approach boosts high-confidence benign and malicious detection performance, making automated alert filtering more reliable.",
+  "key_insight": "Training LLMs to reason about security detections, not just predict a label, improves triage quality and makes automated decisions more reliable when paired with a separate confidence calibrator.",
+  "engineering_relevance": "For SOC automation, this approach can reduce alert fatigue while preserving high-confidence handling of benign and malicious endpoint detections.",
   "method": [
     "Train a chain-of-thought triage classifier on human-labeled Windows endpoint detections.",
-    "Combine prompt optimization, self-training, and reinforcement learning with verifiable rewards.",
-    "Add a separate calibrator that reads the reasoning trace to estimate whether the verdict is correct."
+    "Use automated prompt optimization, self-training, and reinforcement learning with verifiable rewards.",
+    "Add a separate calibrator that reads the full reasoning trace to estimate verdict correctness."
   ],
-  "evidence_signal": "On real labeled Windows endpoint detection data, the system achieved 82.6% test accuracy and improved high-confidence benign recall by 43.0% and malicious recall by 18.3% over a direct-label LLM classifier.",
-  "watch_item": "CoT reasoning can hurt label-token probabilities used by automated triage, so confidence must be explicitly calibrated rather than inferred from the raw model output.",
+  "evidence_signal": "The system reports 82.6% test accuracy and, at the high-confidence automated-triage setting, improves benign recall by 43.0% and malicious recall by 18.3% over a direct-label LLM classifier.",
+  "watch_item": "Reasoning can degrade label-token probabilities, so automated triage needs a trained calibrator; an untrained confidence judge collapses high-confidence recall to zero.",
   "hashtags": [
-    "#Cybersecurity",
-    "#LLM",
-    "#ChainOfThought",
+    "#CybersecurityAI",
+    "#LLMReasoning",
     "#SOCAutomation",
-    "#AIForSecurity"
+    "#ThreatDetection",
+    "#MachineLearning"
   ],
   "paper_id": "2026-07-30-arxiv-cybersecurity_detection_classification_with_reasoning_enabled_language_models",
   "paper_title": "Cybersecurity Detection Classification with Reasoning-enabled Language Models",
   "paper_date": "2026-07-30",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-07-31T16:02:24",
+  "generated_at": "2026-08-01T15:03:44",
   "generator": "openai"
 }
