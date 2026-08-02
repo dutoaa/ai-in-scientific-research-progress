@@ -25,29 +25,29 @@
         "url": "https://arxiv.org/pdf/2607.28460v1"
       }
     ],
-    "score": 77,
+    "score": 82,
     "infographic": {
-      "key_insight": "Reasoning-enabled LLMs can improve SOC detection triage, but they need a separate confidence calibrator because chain-of-thought hurts direct label confidence.",
-      "engineering_relevance": "For security operations, this means automation can be safer and more effective when models both reason about threats and estimate verdict reliability before triage decisions.",
+      "key_insight": "Training LLMs to reason about security detections, not just predict a label, improves triage quality and makes automated decisions more reliable when paired with a separate confidence calibrator.",
+      "engineering_relevance": "For SOC automation, this approach can reduce alert fatigue while preserving high-confidence handling of benign and malicious endpoint detections.",
       "method": [
         "Train a chain-of-thought triage classifier on human-labeled Windows endpoint detections.",
         "Use automated prompt optimization, self-training, and reinforcement learning with verifiable rewards.",
-        "Add a separate calibrator that reads the full reasoning trace to predict whether the verdict is correct."
+        "Add a separate calibrator that reads the full reasoning trace to estimate verdict correctness."
       ],
-      "evidence_signal": "On real Windows endpoint detection data, the system reached 82.6% test accuracy and improved high-confidence benign recall by 43.0% and malicious recall by 18.3% over a direct-label classifier.",
-      "watch_item": "High-confidence automation depends on the trained calibrator; without it, an untrained confidence judge can collapse recall at the operating point used for triage.",
+      "evidence_signal": "The system reports 82.6% test accuracy and, at the high-confidence automated-triage setting, improves benign recall by 43.0% and malicious recall by 18.3% over a direct-label LLM classifier.",
+      "watch_item": "Reasoning can degrade label-token probabilities, so automated triage needs a trained calibrator; an untrained confidence judge collapses high-confidence recall to zero.",
       "hashtags": [
         "#CybersecurityAI",
-        "#SOCAutomation",
         "#LLMReasoning",
+        "#SOCAutomation",
         "#ThreatDetection",
-        "#CalibratedConfidence"
+        "#MachineLearning"
       ],
       "paper_id": "2026-07-30-arxiv-cybersecurity_detection_classification_with_reasoning_enabled_language_models",
       "paper_title": "Cybersecurity Detection Classification with Reasoning-enabled Language Models",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-02T15:07:16",
+      "generated_at": "2026-08-01T15:03:44",
       "generator": "openai"
     }
   },
@@ -76,19 +76,19 @@
         "url": "https://arxiv.org/pdf/2607.28301v1"
       }
     ],
-    "score": 74,
+    "score": 79,
     "infographic": {
-      "key_insight": "HARGO improves RL post-training for LLMs on HPC by adapting reward optimization to heterogeneous task behavior instead of using one uniform weighting scheme.",
-      "engineering_relevance": "For HPC workflows that mix classification, factual QA, and generation, HARGO offers a practical alignment method that better matches model behavior to task-specific requirements.",
+      "key_insight": "HARGO improves RL post-training for HPC LLMs by weighting each response with heterogeneity-aware reward signals, making optimization adapt to very different task types without needing task labels.",
+      "engineering_relevance": "For HPC AI systems, this yields better alignment across mixed workloads such as data-race detection, benchmark QA, and semantic generation, where one-size-fits-all RL can underperform.",
       "method": [
-        "Computes a group-level discrimination signal from reward contrast.",
-        "Uses reference-model log-probabilities to estimate confidence.",
-        "Combines both signals to modulate advantages and derive per-response weights without task labels."
+        "Compute a discrimination signal from group-level reward contrast.",
+        "Compute a confidence signal from reference-model log-probabilities.",
+        "Modulate the advantage into per-response importance weights before RL updates."
       ],
-      "evidence_signal": "Across four HPC tasks and nine methods, HARGO achieved the best reported primary metrics: WinRate 54.62%, Data Race F1 91.30%, and PLP Similarity 0.8558.",
-      "watch_item": "The method adds extra reward/weighting logic, so performance and stability may depend on how well confidence and reward signals are calibrated across very different task types.",
+      "evidence_signal": "Across four HPC tasks and nine methods, HARGO reports the best overall results on all three main metrics: WinRate 54.62%, Data Race F1 91.30%, and PLP Similarity 0.8558.",
+      "watch_item": "The method adds extra weighting logic and depends on reward quality and reference-model calibration, so performance may be sensitive to implementation details and task setup.",
       "hashtags": [
-        "#LLMAlignment",
+        "#LLM",
         "#HPC",
         "#ReinforcementLearning",
         "#RewardOptimization",
@@ -98,7 +98,7 @@
       "paper_title": "HARGO: Heterogeneity-Aware Reward-Guided Optimization for RL Post-Training of LLMs on HPC Tasks",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:07:19",
+      "generated_at": "2026-08-01T15:03:46",
       "generator": "openai"
     }
   },
@@ -127,29 +127,29 @@
         "url": "https://arxiv.org/pdf/2607.28390v1"
       }
     ],
-    "score": 73,
+    "score": 78,
     "infographic": {
-      "key_insight": "A hierarchical multilevel Monte Carlo critic removes the neural bias-cost bottleneck, enabling order-optimal primal-dual actor-critic learning for average-reward CMDPs with neural critics.",
-      "engineering_relevance": "This gives a practical path to safe reinforcement learning in long-horizon control systems where both reward maximization and constraint satisfaction must be guaranteed.",
+      "key_insight": "A hierarchical multilevel Monte Carlo neural critic removes the bias–compute bottleneck in average-reward CMDPs, enabling order-optimal primal-dual actor-critic learning with neural function approximation.",
+      "engineering_relevance": "This gives a practical route to safe reinforcement learning controllers that can optimize long-run performance while enforcing long-run constraints without needing the mixing time.",
       "method": [
-        "Use an MLMC neural critic to debias estimates across both trajectory sampling and critic optimization.",
-        "Embed the critic inside a primal-dual natural actor-critic framework for average-reward CMDPs.",
-        "Leverage the estimator’s logarithmic expected sample cost to achieve tilde{O}(T^{-1/2}) optimality gap and constraint violation."
+        "Uses a hierarchical MLMC neural critic to debias both trajectory sampling and critic optimization.",
+        "Builds a primal-dual Natural Actor-Critic algorithm on top of the estimator.",
+        "Achieves tilde{O}(T^{-1/2}) optimality gap and constraint violation with general policy parameterization."
       ],
-      "evidence_signal": "The abstract claims the first order-optimal convergence guarantees for infinite-horizon average-reward CMDPs with general policy parameterization and neural critics, without requiring knowledge of mixing time.",
-      "watch_item": "The approach relies on NTK-style analysis and a hierarchical MLMC critic, so practical performance may depend on approximation quality, optimization stability, and careful implementation of multi-level sampling.",
+      "evidence_signal": "The abstract reports theoretical convergence guarantees with order-optimal tilde{O}(T^{-1/2}) rates for both reward optimality and constraint satisfaction, including in the unconstrained setting.",
+      "watch_item": "The method relies on neural tangent kernel-based analysis and hierarchical MLMC design, so practical performance may depend on approximation quality, optimization stability, and implementation complexity.",
       "hashtags": [
         "#ReinforcementLearning",
         "#CMDP",
-        "#NeuralCritic",
         "#MultilevelMonteCarlo",
+        "#NeuralActors",
         "#SafeRL"
       ],
       "paper_id": "2026-07-30-arxiv-hierarchical_multilevel_monte_carlo_for_order_optimal_neural_actor_critic_in_average_rewar",
       "paper_title": "Hierarchical Multilevel Monte Carlo for Order-Optimal Neural Actor-Critic in Average-Reward CMDPs",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:07:21",
+      "generated_at": "2026-08-01T15:03:49",
       "generator": "openai"
     }
   },
@@ -178,20 +178,20 @@
         "url": "https://arxiv.org/pdf/2607.28527v1"
       }
     ],
-    "score": 72,
+    "score": 77,
     "infographic": {
-      "key_insight": "MANTA lets a multi-agent system adapt its communication topology during inference, so collaboration can self-evolve when the current structure is no longer sufficient.",
-      "engineering_relevance": "This suggests a practical way to improve LLM agent systems without changing the task interface or agent budget, by dynamically updating roles, links, ordering, visibility, and validation.",
+      "key_insight": "MANTA lets a multi-agent system adapt its communication topology at inference time, so collaboration structure can self-evolve when the current organization is no longer effective.",
+      "engineering_relevance": "This offers a practical way to improve robustness and task performance in deployed multi-agent workflows without changing the task interface or increasing the agent budget.",
       "method": [
         "Initialize a task-conditioned topology from prior structural experience before execution.",
         "Monitor collaboration traces during deployment and trigger bounded structural updates when needed.",
-        "Adapt communication structure while preserving the same agents and overall task interface."
+        "Adapt roles, links, execution order, visibility, and validation pathways while preserving the agent budget."
       ],
-      "evidence_signal": "Across five benchmarks in information seeking, tool use, planning, workflow execution, and mathematical reasoning, MANTA achieved the highest average score of 74.0 and beat the strongest baseline by 5.8 points, with the best result on PlanCraft.",
-      "watch_item": "Dynamic topology updates add runtime complexity and may be sensitive to when and how structural changes are triggered.",
+      "evidence_signal": "Across five benchmarks spanning information seeking, tool use, planning, workflow execution, and mathematical reasoning, MANTA achieved the highest average score of 74.0 and beat the strongest baseline by 5.8 points, with the best result on PlanCraft.",
+      "watch_item": "Runtime topology adaptation may add implementation complexity and requires careful safeguards to avoid unstable or over-aggressive structural changes.",
       "hashtags": [
         "#MultiAgentSystems",
-        "#LLMs",
+        "#LLMAgents",
         "#TopologyAdaptation",
         "#InferenceTimeLearning",
         "#AIResearch"
@@ -200,7 +200,7 @@
       "paper_title": "MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:07:24",
+      "generated_at": "2026-08-01T15:03:51",
       "generator": "openai"
     }
   },
@@ -229,21 +229,21 @@
         "url": "https://arxiv.org/pdf/2607.28432v1"
       }
     ],
-    "score": 70,
+    "score": 75,
     "infographic": {
-      "key_insight": "UNICON is a foundation model that learns predictive relations from numerical context and generalizes them across scientific and social domains, including unseen disciplines.",
-      "engineering_relevance": "It suggests a scalable way to build cross-domain surrogate and inference systems that can transfer across problems without retraining.",
+      "key_insight": "UNICON is a foundation model for \"numerical intelligence\" that learns predictive relationships from in-context graph examples and transfers them across scientific and social domains, including unseen disciplines.",
+      "engineering_relevance": "It suggests a reusable model layer for domain-agnostic forecasting and inference, reducing the need to retrain specialist models when moving to new systems or disciplines.",
       "method": [
-        "Uses graph-based examples as in-context demonstrations to infer the underlying relation.",
-        "Applies the inferred operator to queries from the same system.",
-        "Combines with language-model agents to improve performance further."
+        "Uses graph-based examples from a system as context to infer the shared predictive operator.",
+        "Applies the inferred relation to new query points from the same system.",
+        "Can be combined with language-model agents for stronger cross-disciplinary reasoning."
       ],
-      "evidence_signal": "The abstract reports that UNICON approaches specialist performance across multiple scientific and social systems, and can surpass state-of-the-art specialists in an unseen discipline when paired with language-model agents.",
-      "watch_item": "Generalization depends on the diversity of the training corpus, so performance may degrade in domains far from the training distribution or with weak contextual examples.",
+      "evidence_signal": "The abstract reports that UNICON approaches specialist performance across scientific and social systems, including disciplines absent from training, and can surpass state-of-the-art specialists in an unseen discipline when paired with language-model agents.",
+      "watch_item": "Generalization claims depend on the diversity of the training corpus, so performance may degrade when the model is moved to domains that are structurally or distributionally far from the training mix.",
       "hashtags": [
-        "#FoundationModels",
-        "#NumericalIntelligence",
+        "#FoundationModel",
         "#InContextLearning",
+        "#NumericalIntelligence",
         "#CrossDomainGeneralization",
         "#ScientificAI"
       ],
@@ -251,7 +251,7 @@
       "paper_title": "A foundation model of numerical intelligence with cross-disciplinary generalization",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:07:27",
+      "generated_at": "2026-08-01T15:03:53",
       "generator": "openai"
     }
   },
@@ -280,29 +280,29 @@
         "url": "https://arxiv.org/pdf/2607.28582v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "β-OPSD generalizes vanilla OPSD by treating the KL anchor as a tunable β parameter, turning self-distillation into a principled policy-optimization family with a closed-form teacher-reference interpolation.",
-      "engineering_relevance": "It offers a more stable and controllable recipe for training reasoning models, preserving OPSD’s efficiency while reducing brittle hyperparameter and engineering dependence.",
+      "key_insight": "β-OPSD reframes on-policy self-distillation as a policy-optimization problem with a tunable KL weight β, then uses the closed-form solution as an efficient distillation target.",
+      "engineering_relevance": "It offers a more stable and controllable way to train reasoning LMs, reducing the brittleness and engineering overhead of vanilla OPSD while preserving efficiency.",
       "method": [
-        "Recasts OPSD as policy optimization with a β-weighted KL penalty to a reference policy.",
-        "Derives an optimal policy as geometric interpolation between the reference policy and privileged teacher.",
-        "Uses the closed-form optimum as a distillation target via token-level logit mixing, with return-to-go for sequence-level credit assignment."
+        "Generalize OPSD with a KL-regularized policy objective where β controls the trade-off between reference-policy anchoring and teacher guidance.",
+        "Derive the optimal policy as a geometric interpolation between the reference policy and the privileged teacher.",
+        "Approximate this solution cheaply by mixing token-level logits and using return-to-go credit assignment to align token updates with sequence-level objectives."
       ],
-      "evidence_signal": "Experiments on mathematical reasoning benchmarks in the abstract report consistent gains over vanilla OPSD in both optimization stability and downstream reasoning performance.",
-      "watch_item": "Directly implementing the RL objective is high-variance and costly, so the distillation approximation must still be carefully aligned with the intended β setting and sequence-level credit assignment.",
+      "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks, where β-OPSD consistently improves optimization stability and downstream reasoning performance over vanilla OPSD.",
+      "watch_item": "The method depends on well-chosen β and an efficient logit-mixing/distillation implementation; poor calibration could weaken the intended optimization-distillation match.",
       "hashtags": [
+        "#LLMReasoning",
         "#SelfDistillation",
         "#PolicyOptimization",
-        "#LLMs",
-        "#ReasoningModels",
-        "#MachineLearning"
+        "#ReinforcementLearning",
+        "#MathBenchmarks"
       ],
       "paper_id": "2026-07-30-arxiv-opsd_deriving_with_policy_optimization_training_with_self_distillation",
       "paper_title": "$β$-OPSD: Deriving with Policy Optimization, Training with Self-Distillation",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-02T15:07:29",
+      "generated_at": "2026-08-01T15:04:12",
       "generator": "openai"
     }
   },
@@ -333,17 +333,17 @@
         "url": "https://arxiv.org/pdf/2607.28497v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "Recourse policies must account for causal effects on both features and true outcomes, or they can accidentally encourage gaming instead of genuine improvement.",
-      "engineering_relevance": "For high-stakes decision systems, causal recourse can improve stability, reduce distribution shift from strategic behavior, and lessen the need for frequent retraining.",
+      "key_insight": "Causal recourse is needed because recommendation policies that only flip predictions can trigger strategic behavior, degrade true outcomes, and become unstable after retraining.",
+      "engineering_relevance": "For decision systems in lending and other high-stakes settings, the paper shows that modeling causal response can produce more stable recourse policies and reduce retraining churn.",
       "method": [
-        "Model recourse actions inside a structural causal model",
-        "Formulate recourse as a causal performative optimization problem",
-        "Use iterative dynamics to find performatively stable solutions"
+        "Formulate recourse in a causal performative framework using a structural causal model.",
+        "Analyze how recourse actions affect both features and true labels, creating a non-convex optimization problem.",
+        "Derive conditions for performative stability and compute solutions with simple iterative dynamics."
       ],
-      "evidence_signal": "Experiments on semi-synthetic and real credit datasets show the causal approach outperforms standard empirical risk minimization while reducing retraining needs under strategic behavior.",
-      "watch_item": "The optimization becomes non-convex, so implementation may be sensitive to initialization, model specification, and causal assumptions.",
+      "evidence_signal": "Experiments on semi-synthetic and real credit datasets show the causal approach outperforms standard empirical risk minimization while reducing repeated retraining needs.",
+      "watch_item": "The method depends on having a credible causal model of feature dynamics and label effects, which may be difficult to specify or validate in practice.",
       "hashtags": [
         "#AlgorithmicRecourse",
         "#CausalInference",
@@ -355,7 +355,7 @@
       "paper_title": "The Role of Causality in Algorithmic Recourse",
       "paper_date": "2026-07-30",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-08-02T15:07:31",
+      "generated_at": "2026-08-01T15:04:15",
       "generator": "openai"
     }
   },
@@ -387,29 +387,29 @@
         "url": "https://arxiv.org/pdf/2607.28408v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "The thesis shows that large action spaces can be made tractable by sharing statistical strength across actions, using structured Bayesian exploration on-policy and latent-variable or pessimistic objectives off-policy.",
-      "engineering_relevance": "These methods are relevant for recommender systems, interactive decision-making, and other large-scale control problems where sparse feedback and many candidate actions make naive exploration or off-policy correction unstable.",
+      "key_insight": "The thesis shows that large action spaces can be made tractable by sharing structure across actions, using Bayesian exploration for on-policy learning and regularized latent/policy-weighted objectives for off-policy learning.",
+      "engineering_relevance": "These methods are relevant for recommender systems, ranking, and interactive decision-making pipelines where action counts are huge and logged feedback is sparse or biased.",
       "method": [
-        "meTS: mixed-effect Thompson sampling for on-policy learning with shared structure across actions.",
-        "dTS: diffusion-inspired priors that encode action dependencies and improve exploration efficiency.",
-        "sDM and pessimistic log-likelihood / PAC-Bayesian objectives for off-policy learning with better optimization and bias-variance control."
+        "meTS: mixed-effect Thompson sampling that shares statistical strength across actions.",
+        "dTS: diffusion-inspired priors to model dependencies among actions and reduce effective action complexity.",
+        "sDM and pessimistic policy-weighted objectives: latent-variable direct modeling plus concave, differentiable estimators to stabilize off-policy optimization."
       ],
-      "evidence_signal": "The abstract reports regret guarantees for the on-policy methods and theoretical/optimization results showing that optimization error can dominate estimation error in large-action off-policy learning.",
-      "watch_item": "The proposed approaches rely on structured assumptions and efficient optimization; performance may degrade if the action relationships or logged-policy support are misspecified.",
+      "evidence_signal": "The abstract reports theoretical regret guarantees for on-policy methods and emphasizes that optimization error can dominate estimation error in large-action off-policy settings, with PAC-Bayesian control of bias-variance trade-offs.",
+      "watch_item": "Performance may depend on the quality of structural assumptions and on careful optimization, since misspecification or unstable importance weights can still undermine off-policy estimates.",
       "hashtags": [
         "#ContextualBandits",
-        "#ReinforcementLearning",
+        "#OnPolicyLearning",
         "#OffPolicyLearning",
-        "#ThompsonSampling",
-        "#LargeActionSpaces"
+        "#LargeActionSpaces",
+        "#PACBayes"
       ],
       "paper_id": "2026-07-30-arxiv-on_policy_and_off_policy_learning_for_large_action_spaces",
       "paper_title": "On-Policy and Off-Policy Learning for Large Action Spaces",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:07:34",
+      "generated_at": "2026-08-01T15:04:21",
       "generator": "openai"
     }
   },
@@ -438,21 +438,21 @@
         "url": "https://arxiv.org/pdf/2607.28304v1"
       }
     ],
-    "score": 67,
+    "score": 72,
     "infographic": {
-      "key_insight": "An ensemble-consensus semi-supervised objective improves molecular graph prediction by using unlabeled data without needing label-preserving augmentations.",
-      "engineering_relevance": "This offers a practical route to more accurate and better-calibrated property predictors for drug discovery and materials screening, especially when labels are scarce but unlabeled molecules are abundant.",
+      "key_insight": "Semi-supervised learning with ensemble consensus improves molecular graph prediction by leveraging unlabeled data without requiring tricky label-preserving augmentations.",
+      "engineering_relevance": "This offers a practical way to boost accuracy and calibration in molecular property prediction models across diverse datasets and graph neural networks.",
       "method": [
-        "Train graph neural networks with an ensemble consensus loss on labeled and unlabeled molecular graphs.",
-        "Use agreement among ensemble members as the learning signal instead of hand-designed molecular augmentations.",
-        "Leverage the consensus objective to increase robustness and reduce calibration error, with single members sometimes surpassing traditional supervised ensembles."
+        "Train graph neural networks using an ensemble consensus objective on labeled and unlabeled molecular graphs.",
+        "Use agreement among ensemble members as the learning signal instead of hand-designed molecule augmentations.",
+        "Evaluate both individual ensemble members and full supervised ensembles across tasks and architectures."
       ],
-      "evidence_signal": "The abstract reports consistent gains across a diverse range of molecular datasets, task types, and GNN architectures, including improved accuracy and calibration.",
-      "watch_item": "Performance gains may depend on reliable ensemble diversity and careful tuning of the consensus objective, so implementation overhead and stability should be checked.",
+      "evidence_signal": "The abstract reports consistent gains across a diverse range of molecular datasets, task types, and GNN architectures, with improved robustness and reduced calibration error.",
+      "watch_item": "Performance may depend on how well the ensemble consensus is configured and on the availability and quality of unlabeled molecular data.",
       "hashtags": [
         "#MolecularML",
-        "#SemiSupervisedLearning",
         "#GraphNeuralNetworks",
+        "#SemiSupervisedLearning",
         "#DrugDiscovery",
         "#UncertaintyQuantification"
       ],
@@ -460,7 +460,7 @@
       "paper_title": "Semi-Supervised Learning for Molecular Graphs via Ensemble Consensus",
       "paper_date": "2026-07-30",
       "paper_category": "Biomedical and Physical Sciences",
-      "generated_at": "2026-08-02T15:07:36",
+      "generated_at": "2026-08-01T15:04:22",
       "generator": "openai"
     }
   },
@@ -492,29 +492,29 @@
         "url": "https://arxiv.org/pdf/2607.28617v1"
       }
     ],
-    "score": 65,
+    "score": 70,
     "infographic": {
-      "key_insight": "AISPA is a user-centric framework that audits hidden system prompts in commercial AI products and shows that protective and problematic instructions often coexist.",
-      "engineering_relevance": "For AI system builders, the paper highlights the need for transparent, standardized prompt governance to reduce user-risk and improve accountability.",
+      "key_insight": "AISPA shows that commercial AI system prompts increasingly include user-protective instructions, but those protections are uneven, incomplete, and often mixed with instructions that can still harm user interests.",
+      "engineering_relevance": "For AI product teams, the paper provides a practical audit framework to evaluate system prompts against user-centered safety and accountability goals before deployment.",
       "method": [
-        "Defines an 8-dimension AISPA taxonomy for prompt auditing",
-        "Classifies 3,249 system-prompt instructions from 88 commercial AI products as protective or problematic",
-        "Compares prompt design patterns across products and developers"
+        "Defined AISPA, a user-centric taxonomy with eight user-relevant dimensions for auditing system prompt instructions.",
+        "Manually reviewed 3,249 instructions from system prompts across 88 commercial AI products.",
+        "Labeled each instruction as protective or problematic to compare prompt design patterns across products."
       ],
-      "evidence_signal": "The audit covers 3,249 instructions from 88 commercial AI products and finds that 98.9% of products include at least one protective instruction, but only 24% cover all eight AISPA dimensions.",
-      "watch_item": "The framework depends on prompt access and human/criteria-based classification, so results may be incomplete or harder to reproduce when prompts are undisclosed or frequently updated.",
+      "evidence_signal": "The study analyzes 3,249 instructions from 88 commercial AI products and finds that 98.9% of products include at least one protective instruction, while about 40% also contain at least one problematic instruction.",
+      "watch_item": "Because system prompts are often undisclosed and auditing depends on available prompt text, the findings may underrepresent hidden or frequently changing prompt behavior.",
       "hashtags": [
-        "#AIPromptAuditing",
+        "#AISPA",
+        "#LLMAudit",
         "#SystemPrompts",
-        "#LLMGovernance",
-        "#AITransparency",
+        "#AISafety",
         "#TrustworthyAI"
       ],
       "paper_id": "2026-07-30-arxiv-aispa_user_centric_system_prompt_auditing_for_large_language_model_applications",
       "paper_title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:07:39",
+      "generated_at": "2026-08-01T15:04:25",
       "generator": "openai"
     }
   },
@@ -544,21 +544,21 @@
         "url": "https://arxiv.org/pdf/2607.28311v1"
       }
     ],
-    "score": 64,
+    "score": 69,
     "infographic": {
-      "key_insight": "FICE is the first fully inductive learned cardinality estimator for SPARQL Basic Graph Patterns, able to generalize to unseen graphs and relations without retraining.",
-      "engineering_relevance": "It targets real triplestore deployment by combining sub-millisecond latency with improved cardinality estimates for query optimization.",
+      "key_insight": "FICE is the first fully inductive learned cardinality estimator for SPARQL basic graph patterns, generalizing to unseen graphs and relations without retraining.",
+      "engineering_relevance": "It enables fast, sub-millisecond query optimization for real-world triplestores that must handle evolving knowledge graphs.",
       "method": [
-        "Encoder GNN builds entity and relation embeddings on a factor-graph view of the KG.",
-        "A decoder GNN composes these embeddings along the query join structure to predict log-cardinality.",
-        "Joint training and neighborhood sampling make the model scalable to millions of triples."
+        "Encoder GNN learns entity and relation embeddings on a factor-graph view of the knowledge graph.",
+        "Decoder GNN composes those embeddings along the query join structure to predict log-cardinality.",
+        "Joint training with neighborhood sampling scales to multi-million-triple graphs."
       ],
-      "evidence_signal": "Across 10 knowledge graphs, FICE cuts median q-error to 5.34 versus 13.54 for the best competitor and shows stronger tail performance.",
-      "watch_item": "Performance depends on accurate neighborhood-based message passing, so scalability and quality may be sensitive to graph structure and sampling choices.",
+      "evidence_signal": "Across 10 knowledge graphs, FICE improved median q-error to 5.34 versus 13.54 for the best competitor and showed better tail performance.",
+      "watch_item": "Performance depends on accurate local neighborhood aggregation, so scalability and quality may be sensitive to graph sparsity or noisy sampling choices.",
       "hashtags": [
+        "#GraphNeuralNetworks",
         "#KnowledgeGraphs",
         "#SPARQL",
-        "#GraphNeuralNetworks",
         "#CardinalityEstimation",
         "#QueryOptimization"
       ],
@@ -566,7 +566,7 @@
       "paper_title": "Fully Inductive Cardinality Estimation",
       "paper_date": "2026-07-30",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-08-02T15:07:41",
+      "generated_at": "2026-08-01T15:04:27",
       "generator": "openai"
     }
   },
@@ -596,29 +596,29 @@
         "url": "https://arxiv.org/pdf/2607.28456v1"
       }
     ],
-    "score": 62,
+    "score": 67,
     "infographic": {
-      "key_insight": "The paper shows that graph neural preconditioners can benefit from an AMG-style multilevel hierarchy, but the gains depend strongly on the matrix type and can be offset by added overhead.",
-      "engineering_relevance": "This work points to a practical path for accelerating Krylov solvers on large sparse systems by learning preconditioning components while preserving a scalable multilevel structure.",
+      "key_insight": "A graph neural preconditioner that preserves an AMG-style multilevel hierarchy can improve iterative solver convergence on some sparse systems, but its benefits are not universal.",
+      "engineering_relevance": "This could enable plug-in preconditioners for Krylov solvers on large scientific computing workloads, especially where classical AMG is less robust.",
       "method": [
-        "Uses an AMG-like hierarchy as a structural prior for the preconditioner.",
-        "Learns smoothing, restriction, and interpolation operators in a unified GNN framework.",
-        "Acts as a drop-in preconditioner for standard Krylov iterative solvers."
+        "Use an AMG-like multilevel hierarchy as a structural prior.",
+        "Learn smoothing, restriction, and interpolation operators with a GNN.",
+        "Deploy as a drop-in preconditioner for standard Krylov methods."
       ],
-      "evidence_signal": "The authors benchmarked the method on more than 800 sparse matrices and compared it against classical AMG, ILUT, and prior GNN preconditioners.",
-      "watch_item": "Multilevel graph neural preconditioning may add runtime and implementation complexity, and its robustness can vary on indefinite or nonsymmetric systems.",
+      "evidence_signal": "The paper evaluates the approach on more than 800 sparse matrices and compares it with classical AMG, ILUT, and prior GNN preconditioners.",
+      "watch_item": "The learned multilevel design may add overhead and can underperform strong single-level baselines depending on the matrix class.",
       "hashtags": [
+        "#ScientificMachineLearning",
         "#GraphNeuralNetworks",
         "#Preconditioning",
-        "#Multigrid",
-        "#ScientificComputing",
+        "#AlgebraicMultigrid",
         "#IterativeSolvers"
       ],
       "paper_id": "2026-07-30-arxiv-graph_neural_multilevel_preconditioners_for_iterative_solvers",
       "paper_title": "Graph Neural Multilevel Preconditioners for Iterative Solvers",
       "paper_date": "2026-07-30",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-08-02T15:07:43",
+      "generated_at": "2026-08-01T15:04:30",
       "generator": "openai"
     }
   },
@@ -648,29 +648,29 @@
         "url": "https://arxiv.org/pdf/2607.28608v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "KAISEN is a five-phase, reproducible auditing pipeline that stress-tests subgroup fairness checks for clinical risk models and shows that some audit components are reliable while others can fail silently under realistic conditions.",
-      "engineering_relevance": "For ML systems in healthcare, the work shows that fairness audits must report subgroup-specific uncertainty, sensitivity to thresholds, and cohort drift rather than relying on a single aggregate disparity number.",
+      "key_insight": "KAISEN shows that subgroup fairness audits can be reproducible yet still fail in specific components, especially when proxy assumptions, calibration choices, or drift thresholds do not transfer across cohorts.",
+      "engineering_relevance": "For clinical ML deployment, the work highlights that fairness reporting should emphasize subgroup-specific variability, not just average metrics, and that audit thresholds must be validated for each setting.",
       "method": [
-        "Synthetic benchmark across 16 disease tasks, 15 Healthy People 2030 social-determinant axes, and three intersectional subgroups",
-        "Five audit phases: subgroup stratification, disparity measurement, mechanism diagnostics, post-hoc mitigation, and drift monitoring",
-        "Stress-tested each component to failure with controlled ground truth and released reproducible code/artifacts"
+        "Five-phase audit pipeline: stratify subgroups, measure disparity, diagnose mechanisms, mitigate post-hoc, and monitor drift.",
+        "Evaluated on a synthetic benchmark with 16 disease tasks, 15 social-determinant axes, and 3 intersections.",
+        "Stress-tested each component to failure with known ground truth."
       ],
-      "evidence_signal": "Evaluation on synthetic data with known ground truth found strong disparity-detection trends across axes, 48/48 EOD improvements from per-group threshold tuning, but zero recovery of 48 model-driven mechanism cases under proxy misspecification and cohort-dependent CUSUM failures.",
-      "watch_item": "The benchmark is synthetic, so the reported audit behavior and fairness conclusions do not establish clinical validity or guarantee transfer to real patient cohorts.",
+      "evidence_signal": "On the synthetic benchmark, per-group threshold optimization reduced equalized-odds difference in all 48 held-out runs, while group-wise Platt scaling improved EOD in only 19 of 48 runs and CUSUM false alarms/missed shifts were strongly seed-dependent (chi-squared p = 0.002).",
+      "watch_item": "Results are entirely synthetic, so the audit conclusions and thresholds may not transfer to real clinical cohorts without revalidation.",
       "hashtags": [
         "#FairnessAuditing",
         "#ClinicalML",
-        "#AlgorithmicFairness",
-        "#ReproducibleResearch",
+        "#Reproducibility",
+        "#EqualizedOdds",
         "#DriftMonitoring"
       ],
       "paper_id": "2026-07-30-arxiv-kaisen_reproducible_subgroup_fairness_auditing_for_clinical_risk_models",
       "paper_title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:07:46",
+      "generated_at": "2026-08-01T15:04:32",
       "generator": "openai"
     }
   },
@@ -701,29 +701,29 @@
         "url": "https://arxiv.org/pdf/2607.28553v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "APO is an unsupervised alignment method that learns 3D atomic structures without ground-truth coordinates by combining group-relative policy optimization with physics-based rewards.",
-      "engineering_relevance": "This could reduce dependence on expensive experimental labels for crystal and biomolecular structure prediction, making structure modeling more practical in data-scarce engineering workflows.",
+      "key_insight": "APO is a fully unsupervised policy-optimization framework for 3D atomic structure prediction that replaces ground-truth coordinate supervision with intrinsic, physics-based rewards.",
+      "engineering_relevance": "It offers a practical path for modeling crystals and proteins in low-label regimes, where experimental structures are expensive or unavailable.",
       "method": [
-        "Uses group-relative policy optimization adapted to 3D atomic environments",
-        "Adds a dual-reward signal: latent structural mode reinforcement via eigen-decomposition of sample similarities and a thermodynamic stability reward",
-        "Lets the model self-correct by selecting physically plausible configurations from sampled groups"
+        "Adapts group-relative policy optimization to 3D atomic environments.",
+        "Uses a dual-reward design: a latent structural mode reward from eigen-decomposition of sample similarities and a thermodynamic stability reward.",
+        "Lets the model self-correct by favoring physically plausible configurations within each sampled group."
       ],
-      "evidence_signal": "The abstract reports extensive benchmarks on crystal and antibody structure prediction, where APO outperforms fully supervised baselines on match rates and structural fidelity and improves inference efficiency by straightening probability paths.",
-      "watch_item": "Performance likely depends on the quality of the similarity-based latent reward and stability proxy, so careful implementation is needed to avoid rewarding implausible or biased structural modes.",
+      "evidence_signal": "The abstract reports benchmarks on crystal and antibody structure prediction, where APO outperforms fully supervised baselines and improves match rates, structural fidelity, and inference efficiency.",
+      "watch_item": "Performance may depend on the quality of the unsupervised reward signals and the stability of the group-sampling/eigendecomposition procedure in diverse atomic systems.",
       "hashtags": [
         "#ScientificDiscovery",
         "#3DStructurePrediction",
         "#UnsupervisedLearning",
-        "#MolecularModeling",
-        "#AtomicPolicyOptimization"
+        "#AtomicSystems",
+        "#ComputationalScience"
       ],
       "paper_id": "2026-07-30-arxiv-apo_unsupervised_atomic_policy_optimization_for_3d_structure_prediction_of_atomic_systems",
       "paper_title": "APO: Unsupervised Atomic Policy Optimization for 3D Structure Prediction of Atomic Systems",
       "paper_date": "2026-07-30",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-08-02T15:07:48",
+      "generated_at": "2026-08-01T15:04:34",
       "generator": "openai"
     }
   },
@@ -754,29 +754,29 @@
         "url": "https://arxiv.org/pdf/2607.28537v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "A graph neural network can learn an effective magnetic energy functional from electronic calculations and rapidly predict spin torques and dynamics in metallic magnets.",
-      "engineering_relevance": "This enables scalable, lower-cost simulation of nonequilibrium magnetism without repeatedly solving expensive electronic structure problems.",
+      "key_insight": "A graph neural network can learn the effective magnetic energy landscape of metallic magnets, enabling fast prediction of spin torques and nonequilibrium spin dynamics without repeatedly solving the electronic problem.",
+      "engineering_relevance": "This provides a scalable surrogate model for predictive spin-dynamics simulation, reducing the computational cost of studying large, time-evolving magnetic systems.",
       "method": [
-        "Train a GNN on electronic-structure-derived magnetic energies/torques",
-        "Use the learned force field to evaluate spin torques during time evolution",
-        "Apply to collinear, noncollinear, and noncoplanar metallic magnetic systems"
+        "Train a GNN on electronic-structure data to represent the magnetic energy functional.",
+        "Differentiate the learned energy to obtain spin torques for dynamics simulation.",
+        "Apply the model to collinear, noncollinear, and noncoplanar metallic magnets."
       ],
-      "evidence_signal": "The abstract reports that the learned force fields accurately reproduce electronically generated spin torques and match direct electronic simulations for nonequilibrium spin dynamics across representative benchmark systems.",
-      "watch_item": "Performance likely depends on the diversity and quality of training data, so extrapolation to unseen magnetic materials or extreme dynamical regimes may require caution.",
+      "evidence_signal": "The abstract reports that the learned force fields accurately reproduce electronically generated spin torques and match direct electronic simulations across representative magnetic systems.",
+      "watch_item": "Performance may depend on the diversity and quality of electronic training data, so extrapolation to unfamiliar materials or magnetic states should be validated carefully.",
       "hashtags": [
         "#GraphNeuralNetworks",
         "#Magnetism",
         "#SpinDynamics",
-        "#MachineLearningForPhysics",
-        "#ComputationalMaterials"
+        "#MachineLearningForScience",
+        "#ComputationalPhysics"
       ],
       "paper_id": "2026-07-30-arxiv-graph_neural_network_force_fields_for_spin_dynamics_in_metallic_magnets",
       "paper_title": "Graph Neural Network Force Fields for Spin Dynamics in Metallic Magnets",
       "paper_date": "2026-07-30",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-08-02T15:07:51",
+      "generated_at": "2026-08-01T15:04:37",
       "generator": "openai"
     }
   },
@@ -806,29 +806,29 @@
         "url": "https://arxiv.org/pdf/2607.28451v1"
       }
     ],
-    "score": 61,
+    "score": 66,
     "infographic": {
-      "key_insight": "The paper proposes Aging-Aware Autonomous Intelligence (AAAI), a framework where autonomous systems continuously account for hardware degradation in their reasoning, planning, and execution.",
-      "engineering_relevance": "AAAI is relevant for mission-critical platforms because it can improve resilience and graceful degradation in systems whose batteries, sensors, memory, and processors age over time.",
+      "key_insight": "The paper argues that autonomous AI should continuously model its own hardware aging so it can adapt decisions before degradation causes mission failure.",
+      "engineering_relevance": "This framework is relevant for long-lived, safety-critical autonomous systems because it connects prognostics with planning, resource management, and graceful degradation.",
       "method": [
-        "Hardware self-awareness: estimate subsystem health with physics-of-failure models",
-        "Self-adaptive reasoning: tune inference complexity, planning horizon, and task priorities to remaining capability",
-        "Survival-centric intelligence: allocate remaining operational life across mission objectives with performance and resource trade-offs"
+        "Continuously estimate the health of power, sensing, memory, and compute subsystems using physics-of-failure models.",
+        "Adapt inference complexity, planning horizon, and task priorities to match remaining hardware capability.",
+        "Allocate remaining operational life across mission goals through optimization, conservation, and graceful degradation."
       ],
-      "evidence_signal": "The abstract presents a conceptual framework and motivation rather than reporting experimental results, datasets, or quantitative evaluation.",
-      "watch_item": "A key implementation challenge is obtaining accurate, online health estimates without adding excessive computational overhead or false confidence.",
+      "evidence_signal": "The abstract presents a conceptual framework and application domains rather than reporting experimental results or quantitative evaluation.",
+      "watch_item": "A practical challenge is reliably estimating hardware health in real time without adding excessive sensing, compute, or control overhead.",
       "hashtags": [
         "#AutonomousSystems",
-        "#AgingAwareAI",
-        "#HardwareHealth",
+        "#HardwareAwareAI",
+        "#Prognostics",
         "#ResilientRobotics",
-        "#PredictiveMaintenance"
+        "#AgingAwareAI"
       ],
       "paper_id": "2026-07-30-arxiv-machines_that_know_they_are_aging_a_framework_for_hardware_aware_autonomous_intelligence",
       "paper_title": "Machines that know they are aging: a framework for hardware-aware autonomous intelligence",
       "paper_date": "2026-07-30",
       "paper_category": "Autonomous Labs",
-      "generated_at": "2026-08-02T15:07:53",
+      "generated_at": "2026-08-01T15:04:39",
       "generator": "openai"
     }
   },
@@ -859,29 +859,29 @@
         "url": "https://arxiv.org/pdf/2607.28498v1"
       }
     ],
-    "score": 60,
+    "score": 65,
     "infographic": {
-      "key_insight": "TCA-SIR reframes scientific inspiration retrieval as generating a transferable, target-conditioned abstraction rather than merely ranking papers by topical similarity.",
-      "engineering_relevance": "This enables retrieval systems for AI for Science to surface remote but reusable problem-solving principles, improving both retrieval quality and interpretability for hypothesis generation.",
+      "key_insight": "TCA-SIR reframes scientific inspiration retrieval as extracting target-conditioned, transferable abstractions rather than ranking papers by topical similarity.",
+      "engineering_relevance": "This can improve AI-for-Science systems by retrieving sources that better support hypothesis transfer, especially for remote inspirations with reusable principles.",
       "method": [
-        "Learns to generate a target-conditioned abstraction from each candidate paper.",
-        "Uses the abstraction representation to predict how well the candidate transfers to the target problem.",
-        "Retrieves inspirations that better match the target’s underlying mechanism, not just its topic."
+        "Generate a target-conditioned abstraction from each candidate source paper.",
+        "Use the learned abstraction representation to score transferability to the target problem.",
+        "Return both a ranked retrieval list and an interpretable rationale for why a source transfers."
       ],
       "evidence_signal": "On ResearchBench, TCA-SIR outperforms prior SIR methods and direct LLM retrieval, improving HitRate@top4% over MOOSE-Chem by more than 10 percentage points.",
-      "watch_item": "Because the approach depends on learned abstractions, performance may be sensitive to prompt design, representation quality, and how well the model generalizes to truly novel scientific domains.",
+      "watch_item": "Performance depends on the quality of learned abstractions, so weak target conditioning or noisy source text could reduce transferability gains.",
       "hashtags": [
+        "#AIForscience",
         "#ScientificDiscovery",
         "#InformationRetrieval",
-        "#AIforScience",
-        "#HypothesisGeneration",
-        "#LLM4Science"
+        "#LLM",
+        "#TransferLearning"
       ],
       "paper_id": "2026-07-30-arxiv-tca_sir_learning_target_conditioned_abstractions_for_scientific_inspiration_retrieval",
       "paper_title": "TCA-SIR: Learning Target-Conditioned Abstractions for Scientific Inspiration Retrieval",
       "paper_date": "2026-07-30",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-08-02T15:07:56",
+      "generated_at": "2026-08-01T15:04:41",
       "generator": "openai"
     }
   },
@@ -912,20 +912,20 @@
         "url": "https://arxiv.org/pdf/2607.28609v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "OSReward shows that current VLM-based judges for computer-use agent trajectories are not yet reliable, with a strong tendency to be overly lenient and misclassify failures as successes.",
-      "engineering_relevance": "The paper provides a practical path to low-cost, scalable reward modeling for computer-use agents, enabling more trustworthy evaluation, data curation, and RL training across platforms.",
+      "key_insight": "OSReward shows that even top vision-language model judges are systematically too lenient on computer-use trajectories, so they are not yet reliable as drop-in reward models.",
+      "engineering_relevance": "For CUA systems, training, evaluation, and data curation need cheaper and more stable reward signals than frontier VLM judges currently provide.",
       "method": [
-        "Built OSReward, a cross-platform benchmark of human-verified CUA trajectories with ground-truth verdicts from multi-stage annotation.",
-        "Created OSReward-Hard for genuinely difficult judgments and OSReward-Multi for fine-grained efficiency/alignment scoring.",
-        "Trained OS-Shepherd-100K and resulting OS-Shepherd reward models (9B/35B) as open, reasoning-annotated judges."
+        "Built OSReward, a cross-platform benchmark with human-verified instructions and multi-stage human-labeled ground-truth verdicts.",
+        "Created OSReward-Hard for genuinely difficult cases and OSReward-Multi for fine-grained efficiency/alignment scoring.",
+        "Trained OS-Shepherd-100K and open OS-Shepherd models (9B/35B) to provide low-cost trajectory judgments."
       ],
-      "evidence_signal": "The benchmark evaluation spans diverse agent backbones and shows even state-of-the-art VLM judges still fall short of ideal reliability, with systematic leniency bias.",
-      "watch_item": "Performance depends on high-quality trajectory annotations and careful judge calibration; the most reliable frontier models are still costly, so deployment tradeoffs matter.",
+      "evidence_signal": "The benchmark supports the most comprehensive evaluation to date, revealing a systematic leniency bias in state-of-the-art VLM judges and a cost-quality gap between frontier and open models.",
+      "watch_item": "Reliability depends on high-quality trajectory labels, so deployment should account for annotation standards, domain shift across platforms, and the risk of lenient false positives.",
       "hashtags": [
         "#ComputerUseAgents",
-        "#RewardModeling",
+        "#RewardModels",
         "#VisionLanguageModels",
         "#Benchmarking",
         "#AIAlignment"
@@ -934,7 +934,7 @@
       "paper_title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-02T15:07:59",
+      "generated_at": "2026-08-01T15:04:43",
       "generator": "openai"
     }
   },
@@ -963,29 +963,29 @@
         "url": "https://arxiv.org/pdf/2607.28580v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "DualG-MRAG separates global reasoning from local evidence matching with two graph levels, improving multimodal multi-hop retrieval and generation.",
-      "engineering_relevance": "The decoupled macro/micro graph design offers a practical way to reduce retrieval noise while preserving fine-grained visual and textual evidence for multimodal QA systems.",
+      "key_insight": "DualG-MRAG separates global multi-hop reasoning from fine-grained evidence matching by using two graphs, reducing noise while preserving local visual and textual details.",
+      "engineering_relevance": "The framework offers a practical design pattern for building more accurate multimodal retrieval-augmented generation systems on complex, multi-hop queries.",
       "method": [
-        "Builds a Macro Graph for global topological routing across documents and modalities.",
-        "Builds a Micro Graph for fine-grained local verification of candidate evidence.",
-        "Uses a GNN Retriever with query-driven message passing and dynamic programming decoding to extract reasoning paths for generation."
+        "Build a Macro Graph for global topological routing across heterogeneous documents and modalities.",
+        "Build a Micro Graph for precise local verification of fine-grained evidence.",
+        "Use a GNN Retriever for query-driven message passing and dynamic-programming decoding to extract reasoning paths for generation."
       ],
-      "evidence_signal": "The abstract reports extensive experiments showing higher evidence recall and better complex QA accuracy than baselines.",
-      "watch_item": "The dual-graph and dynamic path extraction pipeline may add implementation complexity and runtime overhead, especially for large multimodal corpora.",
+      "evidence_signal": "The abstract reports extensive experiments showing improvements in both evidence recall and complex QA accuracy over baselines.",
+      "watch_item": "The dual-graph and dynamic path-extraction pipeline may add implementation complexity and higher compute/memory costs in large multimodal retrieval settings.",
       "hashtags": [
         "#MMRAG",
-        "#GraphNeuralNetworks",
         "#MultimodalAI",
+        "#GraphNeuralNetworks",
         "#RetrievalAugmentedGeneration",
-        "#MultiHopReasoning"
+        "#ReasoningAI"
       ],
       "paper_id": "2026-07-30-arxiv-dualg_mrag_decoupling_macro_reasoning_and_micro_matching_for_multimodal_retrieval_augmente",
       "paper_title": "DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation",
       "paper_date": "2026-07-30",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-08-02T15:08:01",
+      "generated_at": "2026-08-01T15:04:45",
       "generator": "openai"
     }
   },
@@ -1016,29 +1016,29 @@
         "url": "https://arxiv.org/pdf/2607.28545v1"
       }
     ],
-    "score": 59,
+    "score": 64,
     "infographic": {
-      "key_insight": "ORCA-bench shows that frontier coding agents are still far from reliable oncall root-cause analysis, with best accuracy only 25.3% on realistic medium-difficulty incidents and 10.0% on hard ones.",
-      "engineering_relevance": "The benchmark suggests teams should not yet trust general-purpose LLM agents for production reliability work without substantial human oversight and domain-specific tooling.",
+      "key_insight": "ORCA-bench shows that frontier language model agents are still far from reliable on production-style oncall root cause analysis, even with access to telemetry and source code.",
+      "engineering_relevance": "For SRE and platform teams, the results suggest agentic debugging tools need much stronger reasoning and incident-context handling before they can be trusted for real operational response.",
       "method": [
-        "Built a production-fidelity oncall benchmark using a live OpenTelemetry-instrumented microservice system.",
-        "Provided agents with real telemetry interfaces for metrics, logs, and traces, plus full source-code access.",
-        "Created 1,079 RCA tasks that vary report specificity, detection delay, and co-occurring faults."
+        "Built a production-fidelity microservice testbed with OpenTelemetry instrumentation and six days of metrics, logs, and traces.",
+        "Created 1,079 RCA tasks with varying report specificity, detection delay, and co-occurring faults.",
+        "Evaluated frontier coding agents using real telemetry interfaces plus full source-code access."
       ],
-      "evidence_signal": "Evaluation on a curated 50 GB, six-day testbed found strong performance gaps across five frontier agents, with human-rescored judge agreement reported at Cohen’s κw=0.90.",
-      "watch_item": "The benchmark is still a curated, isolated testbed, so real production environments may be even more dynamic, making direct deployment risk higher than the reported results suggest.",
+      "evidence_signal": "The benchmark was curated by expert SREs and validated with human rescoring of the LLM judge (weighted Cohen’s kappa = 0.90), with best RCA accuracy only 25.3% on Medium tasks and 10.0% on Hard.",
+      "watch_item": "Performance is measured on a curated 50 GB, six-day testbed, so real production systems may be even harder and results may underestimate the deployment gap.",
       "hashtags": [
         "#LLMAgents",
+        "#SRE",
         "#RootCauseAnalysis",
-        "#Oncall",
-        "#Benchmark",
-        "#Observability"
+        "#Observability",
+        "#Benchmark"
       ],
       "paper_id": "2026-07-30-arxiv-orca_bench_how_ready_are_language_model_agents_for_oncall",
       "paper_title": "ORCA-bench: How Ready Are Language Model Agents for Oncall?",
       "paper_date": "2026-07-30",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-08-02T15:08:03",
+      "generated_at": "2026-08-01T15:04:47",
       "generator": "openai"
     }
   }

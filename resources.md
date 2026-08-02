@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-01
+Generated: 2026-08-02
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Cybersecurity Detection Classification with Reasoning-enabled Language Models

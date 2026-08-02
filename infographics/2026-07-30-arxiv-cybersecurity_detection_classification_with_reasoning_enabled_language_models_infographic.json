@@ -1,24 +1,24 @@
 {
-  "key_insight": "Training LLMs to reason about security detections, not just predict a label, improves triage quality and makes automated decisions more reliable when paired with a separate confidence calibrator.",
-  "engineering_relevance": "For SOC automation, this approach can reduce alert fatigue while preserving high-confidence handling of benign and malicious endpoint detections.",
+  "key_insight": "Reasoning-enabled LLMs can improve SOC detection triage, but they need a separate confidence calibrator because chain-of-thought hurts direct label confidence.",
+  "engineering_relevance": "For security operations, this means automation can be safer and more effective when models both reason about threats and estimate verdict reliability before triage decisions.",
   "method": [
     "Train a chain-of-thought triage classifier on human-labeled Windows endpoint detections.",
     "Use automated prompt optimization, self-training, and reinforcement learning with verifiable rewards.",
-    "Add a separate calibrator that reads the full reasoning trace to estimate verdict correctness."
+    "Add a separate calibrator that reads the full reasoning trace to predict whether the verdict is correct."
   ],
-  "evidence_signal": "The system reports 82.6% test accuracy and, at the high-confidence automated-triage setting, improves benign recall by 43.0% and malicious recall by 18.3% over a direct-label LLM classifier.",
-  "watch_item": "Reasoning can degrade label-token probabilities, so automated triage needs a trained calibrator; an untrained confidence judge collapses high-confidence recall to zero.",
+  "evidence_signal": "On real Windows endpoint detection data, the system reached 82.6% test accuracy and improved high-confidence benign recall by 43.0% and malicious recall by 18.3% over a direct-label classifier.",
+  "watch_item": "High-confidence automation depends on the trained calibrator; without it, an untrained confidence judge can collapse recall at the operating point used for triage.",
   "hashtags": [
     "#CybersecurityAI",
-    "#LLMReasoning",
     "#SOCAutomation",
+    "#LLMReasoning",
     "#ThreatDetection",
-    "#MachineLearning"
+    "#CalibratedConfidence"
   ],
   "paper_id": "2026-07-30-arxiv-cybersecurity_detection_classification_with_reasoning_enabled_language_models",
   "paper_title": "Cybersecurity Detection Classification with Reasoning-enabled Language Models",
   "paper_date": "2026-07-30",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-08-01T15:03:44",
+  "generated_at": "2026-08-02T15:07:16",
   "generator": "openai"
 }

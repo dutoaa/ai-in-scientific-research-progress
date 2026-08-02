@@ -1,15 +1,15 @@
 {
-  "key_insight": "HARGO improves RL post-training for HPC LLMs by weighting each response with heterogeneity-aware reward signals, making optimization adapt to very different task types without needing task labels.",
-  "engineering_relevance": "For HPC AI systems, this yields better alignment across mixed workloads such as data-race detection, benchmark QA, and semantic generation, where one-size-fits-all RL can underperform.",
+  "key_insight": "HARGO improves RL post-training for LLMs on HPC by adapting reward optimization to heterogeneous task behavior instead of using one uniform weighting scheme.",
+  "engineering_relevance": "For HPC workflows that mix classification, factual QA, and generation, HARGO offers a practical alignment method that better matches model behavior to task-specific requirements.",
   "method": [
-    "Compute a discrimination signal from group-level reward contrast.",
-    "Compute a confidence signal from reference-model log-probabilities.",
-    "Modulate the advantage into per-response importance weights before RL updates."
+    "Computes a group-level discrimination signal from reward contrast.",
+    "Uses reference-model log-probabilities to estimate confidence.",
+    "Combines both signals to modulate advantages and derive per-response weights without task labels."
   ],
-  "evidence_signal": "Across four HPC tasks and nine methods, HARGO reports the best overall results on all three main metrics: WinRate 54.62%, Data Race F1 91.30%, and PLP Similarity 0.8558.",
-  "watch_item": "The method adds extra weighting logic and depends on reward quality and reference-model calibration, so performance may be sensitive to implementation details and task setup.",
+  "evidence_signal": "Across four HPC tasks and nine methods, HARGO achieved the best reported primary metrics: WinRate 54.62%, Data Race F1 91.30%, and PLP Similarity 0.8558.",
+  "watch_item": "The method adds extra reward/weighting logic, so performance and stability may depend on how well confidence and reward signals are calibrated across very different task types.",
   "hashtags": [
-    "#LLM",
+    "#LLMAlignment",
     "#HPC",
     "#ReinforcementLearning",
     "#RewardOptimization",
@@ -19,6 +19,6 @@
   "paper_title": "HARGO: Heterogeneity-Aware Reward-Guided Optimization for RL Post-Training of LLMs on HPC Tasks",
   "paper_date": "2026-07-30",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-08-01T15:03:46",
+  "generated_at": "2026-08-02T15:07:19",
   "generator": "openai"
 }

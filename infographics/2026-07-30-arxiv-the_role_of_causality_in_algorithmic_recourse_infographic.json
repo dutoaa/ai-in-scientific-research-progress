@@ -1,13 +1,13 @@
 {
-  "key_insight": "Causal recourse is needed because recommendation policies that only flip predictions can trigger strategic behavior, degrade true outcomes, and become unstable after retraining.",
-  "engineering_relevance": "For decision systems in lending and other high-stakes settings, the paper shows that modeling causal response can produce more stable recourse policies and reduce retraining churn.",
+  "key_insight": "Recourse policies must account for causal effects on both features and true outcomes, or they can accidentally encourage gaming instead of genuine improvement.",
+  "engineering_relevance": "For high-stakes decision systems, causal recourse can improve stability, reduce distribution shift from strategic behavior, and lessen the need for frequent retraining.",
   "method": [
-    "Formulate recourse in a causal performative framework using a structural causal model.",
-    "Analyze how recourse actions affect both features and true labels, creating a non-convex optimization problem.",
-    "Derive conditions for performative stability and compute solutions with simple iterative dynamics."
+    "Model recourse actions inside a structural causal model",
+    "Formulate recourse as a causal performative optimization problem",
+    "Use iterative dynamics to find performatively stable solutions"
   ],
-  "evidence_signal": "Experiments on semi-synthetic and real credit datasets show the causal approach outperforms standard empirical risk minimization while reducing repeated retraining needs.",
-  "watch_item": "The method depends on having a credible causal model of feature dynamics and label effects, which may be difficult to specify or validate in practice.",
+  "evidence_signal": "Experiments on semi-synthetic and real credit datasets show the causal approach outperforms standard empirical risk minimization while reducing retraining needs under strategic behavior.",
+  "watch_item": "The optimization becomes non-convex, so implementation may be sensitive to initialization, model specification, and causal assumptions.",
   "hashtags": [
     "#AlgorithmicRecourse",
     "#CausalInference",
@@ -19,6 +19,6 @@
   "paper_title": "The Role of Causality in Algorithmic Recourse",
   "paper_date": "2026-07-30",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-08-01T15:04:15",
+  "generated_at": "2026-08-02T15:07:31",
   "generator": "openai"
 }

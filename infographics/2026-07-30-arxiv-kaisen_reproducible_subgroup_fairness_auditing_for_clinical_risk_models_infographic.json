@@ -1,24 +1,24 @@
 {
-  "key_insight": "KAISEN shows that subgroup fairness audits can be reproducible yet still fail in specific components, especially when proxy assumptions, calibration choices, or drift thresholds do not transfer across cohorts.",
-  "engineering_relevance": "For clinical ML deployment, the work highlights that fairness reporting should emphasize subgroup-specific variability, not just average metrics, and that audit thresholds must be validated for each setting.",
+  "key_insight": "KAISEN is a five-phase, reproducible auditing pipeline that stress-tests subgroup fairness checks for clinical risk models and shows that some audit components are reliable while others can fail silently under realistic conditions.",
+  "engineering_relevance": "For ML systems in healthcare, the work shows that fairness audits must report subgroup-specific uncertainty, sensitivity to thresholds, and cohort drift rather than relying on a single aggregate disparity number.",
   "method": [
-    "Five-phase audit pipeline: stratify subgroups, measure disparity, diagnose mechanisms, mitigate post-hoc, and monitor drift.",
-    "Evaluated on a synthetic benchmark with 16 disease tasks, 15 social-determinant axes, and 3 intersections.",
-    "Stress-tested each component to failure with known ground truth."
+    "Synthetic benchmark across 16 disease tasks, 15 Healthy People 2030 social-determinant axes, and three intersectional subgroups",
+    "Five audit phases: subgroup stratification, disparity measurement, mechanism diagnostics, post-hoc mitigation, and drift monitoring",
+    "Stress-tested each component to failure with controlled ground truth and released reproducible code/artifacts"
   ],
-  "evidence_signal": "On the synthetic benchmark, per-group threshold optimization reduced equalized-odds difference in all 48 held-out runs, while group-wise Platt scaling improved EOD in only 19 of 48 runs and CUSUM false alarms/missed shifts were strongly seed-dependent (chi-squared p = 0.002).",
-  "watch_item": "Results are entirely synthetic, so the audit conclusions and thresholds may not transfer to real clinical cohorts without revalidation.",
+  "evidence_signal": "Evaluation on synthetic data with known ground truth found strong disparity-detection trends across axes, 48/48 EOD improvements from per-group threshold tuning, but zero recovery of 48 model-driven mechanism cases under proxy misspecification and cohort-dependent CUSUM failures.",
+  "watch_item": "The benchmark is synthetic, so the reported audit behavior and fairness conclusions do not establish clinical validity or guarantee transfer to real patient cohorts.",
   "hashtags": [
     "#FairnessAuditing",
     "#ClinicalML",
-    "#Reproducibility",
-    "#EqualizedOdds",
+    "#AlgorithmicFairness",
+    "#ReproducibleResearch",
     "#DriftMonitoring"
   ],
   "paper_id": "2026-07-30-arxiv-kaisen_reproducible_subgroup_fairness_auditing_for_clinical_risk_models",
   "paper_title": "KAISEN: Reproducible Subgroup Fairness Auditing for Clinical Risk Models",
   "paper_date": "2026-07-30",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-08-01T15:04:32",
+  "generated_at": "2026-08-02T15:07:46",
   "generator": "openai"
 }
