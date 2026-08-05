@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-04
+Generated: 2026-08-05
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Bridging Artificial Intelligence and Power Systems Education Using a Hands-On Executable Framework
+## 1. TACT: Taxonomy-Aligned Post-Training for Pedagogically Adaptive English Tutoring
 
-- Date: 2026-08-03
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.02599v1
-- PDF: https://arxiv.org/pdf/2608.02599v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-bridging_artificial_intelligence_and_power_systems_education_using_a_hands_on_executable_f_infographic.json
-
-## 2. Agentic Incident Response through Digital Twin-Enhanced Multiscale Planning
-
-- Date: 2026-08-03
+- Date: 2026-08-04
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02422v1
-- PDF: https://arxiv.org/pdf/2608.02422v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-agentic_incident_response_through_digital_twin_enhanced_multiscale_planning_infographic.json
+- arXiv: https://arxiv.org/abs/2608.03952v1
+- PDF: https://arxiv.org/pdf/2608.03952v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-tact_taxonomy_aligned_post_training_for_pedagogically_adaptive_english_tutoring_infographic.json
 
-## 3. Cooperative Coevolution for Resource-Constrained Agentic LLM Post-Training
+## 2. TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning
 
-- Date: 2026-08-03
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.02391v1
-- PDF: https://arxiv.org/pdf/2608.02391v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-cooperative_coevolution_for_resource_constrained_agentic_llm_post_training_infographic.json
-
-## 4. GradCuit: Credit-Assigned Gradient Flow Enables Robust and Interpretable Test-Time Latent Reasoning
-
-- Date: 2026-08-03
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02585v1
-- PDF: https://arxiv.org/pdf/2608.02585v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-gradcuit_credit_assigned_gradient_flow_enables_robust_and_interpretable_test_time_latent_r_infographic.json
-
-## 5. CMuon: Accelerating and Stabilizing Diffusion Transformer Training via Chunked Momentum Orthogonalization
-
-- Date: 2026-08-03
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.02502v1
-- PDF: https://arxiv.org/pdf/2608.02502v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-cmuon_accelerating_and_stabilizing_diffusion_transformer_training_via_chunked_momentum_ort_infographic.json
-
-## 6. Why Large Language Models Fail at Tabular Prediction
-
-- Date: 2026-08-03
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.02412v1
-- PDF: https://arxiv.org/pdf/2608.02412v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-why_large_language_models_fail_at_tabular_prediction_infographic.json
-
-## 7. Hard Constraints, Smooth Gradients: Learning Feasible Inventory Policies via Differentiable Projection
-
-- Date: 2026-08-03
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02343v1
-- PDF: https://arxiv.org/pdf/2608.02343v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-hard_constraints_smooth_gradients_learning_feasible_inventory_policies_via_differentiable_infographic.json
-
-## 8. ECLAIR: A Causally-Grounded AI Framework for Scientific Discovery in Empirical Software Engineering
-
-- Date: 2026-08-03
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2608.02323v1
-- PDF: https://arxiv.org/pdf/2608.02323v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-eclair_a_causally_grounded_ai_framework_for_scientific_discovery_in_empirical_software_eng_infographic.json
-
-## 9. BRiG-AFA: Bellman Risk-to-Go Learning for Non-Myopic Active Feature Acquisition
-
-- Date: 2026-08-03
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02305v1
-- PDF: https://arxiv.org/pdf/2608.02305v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-brig_afa_bellman_risk_to_go_learning_for_non_myopic_active_feature_acquisition_infographic.json
-
-## 10. AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies
-
-- Date: 2026-08-03
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.02569v1
-- PDF: https://arxiv.org/pdf/2608.02569v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-atumai_a_principled_framework_for_agentic_generation_of_datacenter_control_plane_policies_infographic.json
-
-## 11. RoMeRL: Balancing Feedback Coverage and the Memory-Reward Trap in Self-Evolving Agent Memory via Reduced-Order Utility States
-
-- Date: 2026-08-03
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02508v1
-- PDF: https://arxiv.org/pdf/2608.02508v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-romerl_balancing_feedback_coverage_and_the_memory_reward_trap_in_self_evolving_agent_memor_infographic.json
-
-## 12. Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning
-
-- Date: 2026-08-03
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.02332v1
-- PDF: https://arxiv.org/pdf/2608.02332v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-diffusion_policy_with_behavioral_advantage_correction_for_offline_reinforcement_learning_infographic.json
-
-## 13. Benchmarking Sheaf Neural Networks for Inductive Tasks
-
-- Date: 2026-08-03
+- Date: 2026-08-04
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.02558v1
-- PDF: https://arxiv.org/pdf/2608.02558v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-benchmarking_sheaf_neural_networks_for_inductive_tasks_infographic.json
+- arXiv: https://arxiv.org/abs/2608.04007v1
+- PDF: https://arxiv.org/pdf/2608.04007v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-turnsight_turn_level_hindsight_self_distillation_for_tool_integrated_reasoning_infographic.json
 
-## 14. Abduction Without a Body? Representational Grounding and the Abduction Loop for Scientific Hypothesis Generation
+## 3. Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent
 
-- Date: 2026-08-03
+- Date: 2026-08-04
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02505v1
-- PDF: https://arxiv.org/pdf/2608.02505v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-abduction_without_a_body_representational_grounding_and_the_abduction_loop_for_scientific_infographic.json
+- arXiv: https://arxiv.org/abs/2608.03979v1
+- PDF: https://arxiv.org/pdf/2608.03979v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-video_deepresearch_towards_the_next_generation_multimodal_deepresearch_agent_infographic.json
 
-## 15. SWE-Touch: Benchmarking Coding Agents When Users Touch the Code
+## 4. Socially Grounded Agentic AI: Coordinating Plural Perspectives through Social Theory
 
-- Date: 2026-08-03
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2608.02499v1
-- PDF: https://arxiv.org/pdf/2608.02499v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-swe_touch_benchmarking_coding_agents_when_users_touch_the_code_infographic.json
+- Date: 2026-08-04
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2608.03910v1
+- PDF: https://arxiv.org/pdf/2608.03910v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-socially_grounded_agentic_ai_coordinating_plural_perspectives_through_social_theory_infographic.json
 
-## 16. Private Generative Bootstrap via Blocking
+## 5. CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement
 
-- Date: 2026-08-03
+- Date: 2026-08-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.03890v1
+- PDF: https://arxiv.org/pdf/2608.03890v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-care_x_towards_clinically_useful_radiology_vlms_with_auxiliary_supervision_reward_aligned_infographic.json
+
+## 6. The Transformer Revolution, Part 1: Dynamic Processing through Output- Weight Interconnections
+
+- Date: 2026-08-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.03921v1
+- PDF: https://arxiv.org/pdf/2608.03921v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-the_transformer_revolution_part_1_dynamic_processing_through_output_weight_interconnection_infographic.json
+
+## 7. Can Large Language Models Recover Semantic Optimization Opportunities That Compilers Miss?
+
+- Date: 2026-08-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.03983v1
+- PDF: https://arxiv.org/pdf/2608.03983v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-can_large_language_models_recover_semantic_optimization_opportunities_that_compilers_miss_infographic.json
+
+## 8. ContinualSkillBench: Can LLM Agents Truly Evolve Their Capabilities?
+
+- Date: 2026-08-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.03874v1
+- PDF: https://arxiv.org/pdf/2608.03874v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-continualskillbench_can_llm_agents_truly_evolve_their_capabilities_infographic.json
+
+## 9. Muon Meets Mamba: Spectral Optimization for State Space Models
+
+- Date: 2026-08-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.03941v1
+- PDF: https://arxiv.org/pdf/2608.03941v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-muon_meets_mamba_spectral_optimization_for_state_space_models_infographic.json
+
+## 10. FedCritic-MIMO: Communication-Efficient Serverless Federated Critic Learning for Massive-MIMO Resource Control in Open and Disaggregated 6G RANs
+
+- Date: 2026-08-04
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.02480v1
-- PDF: https://arxiv.org/pdf/2608.02480v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-private_generative_bootstrap_via_blocking_infographic.json
+- arXiv: https://arxiv.org/abs/2608.03852v1
+- PDF: https://arxiv.org/pdf/2608.03852v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-fedcritic_mimo_communication_efficient_serverless_federated_critic_learning_for_massive_mi_infographic.json
 
-## 17. Pseudorandom Streams within Diffusion Models Act as Learnable Inputs That Affect Generation Quality
+## 11. Physics-Informed Machine Learning for Refractory Alloy Design
 
-- Date: 2026-08-03
+- Date: 2026-08-04
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2608.02575v1
-- PDF: https://arxiv.org/pdf/2608.02575v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-pseudorandom_streams_within_diffusion_models_act_as_learnable_inputs_that_affect_generatio_infographic.json
+- arXiv: https://arxiv.org/abs/2608.03805v1
+- PDF: https://arxiv.org/pdf/2608.03805v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-physics_informed_machine_learning_for_refractory_alloy_design_infographic.json
 
-## 18. KC-Agent: A Dual-Process Cognitive Architecture for Efficient ML Model Improvement
+## 12. Operationally Feasible Synthetic Power-Grid Scenarios via Learning the AC-Operable Joint Distribution
 
-- Date: 2026-08-03
+- Date: 2026-08-04
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02351v1
-- PDF: https://arxiv.org/pdf/2608.02351v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-kc_agent_a_dual_process_cognitive_architecture_for_efficient_ml_model_improvement_infographic.json
+- arXiv: https://arxiv.org/abs/2608.03878v1
+- PDF: https://arxiv.org/pdf/2608.03878v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-operationally_feasible_synthetic_power_grid_scenarios_via_learning_the_ac_operable_joint_d_infographic.json
 
-## 19. Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection
+## 13. Guided Synthesis of EMT Zeolites by Machine Learning
 
-- Date: 2026-08-03
+- Date: 2026-08-04
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02560v1
-- PDF: https://arxiv.org/pdf/2608.02560v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-structured_memory_for_edge_language_models_persistent_context_and_corpus_retrieval_via_o_1_infographic.json
+- arXiv: https://arxiv.org/abs/2608.03760v1
+- PDF: https://arxiv.org/pdf/2608.03760v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-guided_synthesis_of_emt_zeolites_by_machine_learning_infographic.json
 
-## 20. A Taxonomy of Cognitive Capability Gaps in Generative and Agentic AI
+## 14. Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility
 
-- Date: 2026-08-03
+- Date: 2026-08-04
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.02553v1
-- PDF: https://arxiv.org/pdf/2608.02553v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-03-arxiv-a_taxonomy_of_cognitive_capability_gaps_in_generative_and_agentic_ai_infographic.json
+- arXiv: https://arxiv.org/abs/2608.04001v1
+- PDF: https://arxiv.org/pdf/2608.04001v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-test_time_scaling_in_reasoning_llms_inference_regimes_evaluation_and_reproducibility_infographic.json
+
+## 15. A game theory for foundation models shows new paths to rational cooperation through similarity inference
+
+- Date: 2026-08-04
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2608.03958v1
+- PDF: https://arxiv.org/pdf/2608.03958v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-a_game_theory_for_foundation_models_shows_new_paths_to_rational_cooperation_through_simila_infographic.json
+
+## 16. Latent Reward Registers for Diffusion Preference Alignment
+
+- Date: 2026-08-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.03929v1
+- PDF: https://arxiv.org/pdf/2608.03929v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-latent_reward_registers_for_diffusion_preference_alignment_infographic.json
+
+## 17. Omega-S: A Functional Resilience Index for LLM Fine-Tuning
+
+- Date: 2026-08-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.03887v1
+- PDF: https://arxiv.org/pdf/2608.03887v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-omega_s_a_functional_resilience_index_for_llm_fine_tuning_infographic.json
+
+## 18. Beyond Representational Similarity: Source-Conditioned Description-Length Gain for Generative Plagiarism Detection and Candidate Source Reranking
+
+- Date: 2026-08-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.03859v1
+- PDF: https://arxiv.org/pdf/2608.03859v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-beyond_representational_similarity_source_conditioned_description_length_gain_for_generati_infographic.json
+
+## 19. Should We Type or Talk to LLM Agents? A Comprehensive Study of Voice and Keyboard Input Perturbations
+
+- Date: 2026-08-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.03970v1
+- PDF: https://arxiv.org/pdf/2608.03970v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-should_we_type_or_talk_to_llm_agents_a_comprehensive_study_of_voice_and_keyboard_input_per_infographic.json
+
+## 20. Interpretable Adaptive Sampling for LLM Test-Time Scaling
+
+- Date: 2026-08-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.03961v1
+- PDF: https://arxiv.org/pdf/2608.03961v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-04-arxiv-interpretable_adaptive_sampling_for_llm_test_time_scaling_infographic.json
