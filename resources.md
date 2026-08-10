@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-09
+Generated: 2026-08-10
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Kastor: An efficient fine-tuning strategy for generative emulation of PDE simulations
+## 1. ResidencyRL: Reinforcement Learning in Simulated Clinical Environments
 
-- Date: 2026-08-06
+- Date: 2026-08-07
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.06107v1
-- PDF: https://arxiv.org/pdf/2608.06107v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-kastor_an_efficient_fine_tuning_strategy_for_generative_emulation_of_pde_simulations_infographic.json
+- arXiv: https://arxiv.org/abs/2608.07418v1
+- PDF: https://arxiv.org/pdf/2608.07418v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-residencyrl_reinforcement_learning_in_simulated_clinical_environments_infographic.json
 
-## 2. iARCS: Iterative Agentic RL for Controllable 3D Scene Generation
+## 2. Beyond Post-Hoc Temperature Scaling: Bilevel Optimization for LLM Calibration
 
-- Date: 2026-08-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.06161v1
-- PDF: https://arxiv.org/pdf/2608.06161v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-iarcs_iterative_agentic_rl_for_controllable_3d_scene_generation_infographic.json
-
-## 3. Contextual Information Policy Optimization for Search Agents
-
-- Date: 2026-08-06
+- Date: 2026-08-07
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.06128v1
-- PDF: https://arxiv.org/pdf/2608.06128v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-contextual_information_policy_optimization_for_search_agents_infographic.json
+- arXiv: https://arxiv.org/abs/2608.07419v1
+- PDF: https://arxiv.org/pdf/2608.07419v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-beyond_post_hoc_temperature_scaling_bilevel_optimization_for_llm_calibration_infographic.json
 
-## 4. HarnessOpt-Bench: Evaluating LLMs at Harness Optimization
+## 3. WNM-3D: A World Navigation Model with 3D Scene Conditioning for Closed-Loop VLN
 
-- Date: 2026-08-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.06301v1
-- PDF: https://arxiv.org/pdf/2608.06301v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-harnessopt_bench_evaluating_llms_at_harness_optimization_infographic.json
-
-## 5. From Siloed Algorithms to Compliance-First Agentic Platforms: A Multi-Layered Architecture for Hospital AI Systems
-
-- Date: 2026-08-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.06112v1
-- PDF: https://arxiv.org/pdf/2608.06112v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-from_siloed_algorithms_to_compliance_first_agentic_platforms_a_multi_layered_architecture_infographic.json
-
-## 6. MicroEvo: Knowledge-Guided LLM Sampling for Efficient Microarchitecture Design Space Exploration
-
-- Date: 2026-08-06
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.06183v1
-- PDF: https://arxiv.org/pdf/2608.06183v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-microevo_knowledge_guided_llm_sampling_for_efficient_microarchitecture_design_space_explor_infographic.json
-
-## 7. ECHO: A Locally-Deployable Agentic Health Assistant with Temporal Memory, Safety Guardrails, and Speech Assessment
-
-- Date: 2026-08-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.06110v1
-- PDF: https://arxiv.org/pdf/2608.06110v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-echo_a_locally_deployable_agentic_health_assistant_with_temporal_memory_safety_guardrails_infographic.json
-
-## 8. EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning
-
-- Date: 2026-08-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.06197v1
-- PDF: https://arxiv.org/pdf/2608.06197v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-envace_internalizing_environment_dynamics_via_world_rehearsal_for_agentic_reinforcement_le_infographic.json
-
-## 9. A Six-Dimensional Taxonomy of Post-Training Adaptation Techniques with Applications in AI Governance
-
-- Date: 2026-08-06
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.06246v1
-- PDF: https://arxiv.org/pdf/2608.06246v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-a_six_dimensional_taxonomy_of_post_training_adaptation_techniques_with_applications_in_ai_infographic.json
-
-## 10. TS-RAG: Retrieval Augmented Generation for Time Series Forecasting
-
-- Date: 2026-08-06
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.06223v1
-- PDF: https://arxiv.org/pdf/2608.06223v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-ts_rag_retrieval_augmented_generation_for_time_series_forecasting_infographic.json
-
-## 11. Domain-Grounded Candidate Selection for Agentic Image Editing: A Shadow Removal Case
-
-- Date: 2026-08-06
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2608.06075v1
-- PDF: https://arxiv.org/pdf/2608.06075v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-domain_grounded_candidate_selection_for_agentic_image_editing_a_shadow_removal_case_infographic.json
-
-## 12. RxnCLF: Contrastive Transformation-Aware Reaction Foundation Model for Improved Reactivity Prediction
-
-- Date: 2026-08-06
+- Date: 2026-08-07
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.06259v1
-- PDF: https://arxiv.org/pdf/2608.06259v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-rxnclf_contrastive_transformation_aware_reaction_foundation_model_for_improved_reactivity_infographic.json
+- arXiv: https://arxiv.org/abs/2608.07267v1
+- PDF: https://arxiv.org/pdf/2608.07267v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-wnm_3d_a_world_navigation_model_with_3d_scene_conditioning_for_closed_loop_vln_infographic.json
 
-## 13. QuanTiMedAI: Quantum-Enhanced Time-Series Model guided by Agentic AI for Cardiac Arrest Mortality Prediction
+## 4. Aftab: A Comprehensive Benchmark of CNN Encoders and Advanced Value Functions in Parallelized Q-Networks
 
-- Date: 2026-08-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.06294v1
-- PDF: https://arxiv.org/pdf/2608.06294v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-quantimedai_quantum_enhanced_time_series_model_guided_by_agentic_ai_for_cardiac_arrest_mor_infographic.json
+- Date: 2026-08-07
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.07335v1
+- PDF: https://arxiv.org/pdf/2608.07335v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-aftab_a_comprehensive_benchmark_of_cnn_encoders_and_advanced_value_functions_in_paralleliz_infographic.json
 
-## 14. From Passive Mirrors to Active Agents: Holonic Digital Twins for Physical AI over Networks
+## 5. Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing
 
-- Date: 2026-08-06
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2608.06227v1
-- PDF: https://arxiv.org/pdf/2608.06227v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-from_passive_mirrors_to_active_agents_holonic_digital_twins_for_physical_ai_over_networks_infographic.json
+- Date: 2026-08-07
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2608.07437v1
+- PDF: https://arxiv.org/pdf/2608.07437v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-fisher_r1_training_llm_agents_for_reliable_hypothesis_testing_infographic.json
 
-## 15. Evaluating Investment Logic in Large Language Models: A Real-World Benchmark Towards Personalzied Financial Agents
+## 6. Permutation invariant neural network prediction of vacancy formation under deformation and varying chemical environment in FCC high entropy alloys
 
-- Date: 2026-08-06
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.06108v1
-- PDF: https://arxiv.org/pdf/2608.06108v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-evaluating_investment_logic_in_large_language_models_a_real_world_benchmark_towards_person_infographic.json
-
-## 16. Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering
-
-- Date: 2026-08-06
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.06366v1
-- PDF: https://arxiv.org/pdf/2608.06366v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-tracing_the_heart_an_evidence_linked_pipeline_for_heart_failure_feature_engineering_infographic.json
-
-## 17. RRC: Unlocking Generative Reward Models in LLM Reinforcement Learning via Ranking-Based Reward Construction
-
-- Date: 2026-08-06
+- Date: 2026-08-07
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.06310v1
-- PDF: https://arxiv.org/pdf/2608.06310v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-rrc_unlocking_generative_reward_models_in_llm_reinforcement_learning_via_ranking_based_rew_infographic.json
+- arXiv: https://arxiv.org/abs/2608.07445v1
+- PDF: https://arxiv.org/pdf/2608.07445v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-permutation_invariant_neural_network_prediction_of_vacancy_formation_under_deformation_and_infographic.json
 
-## 18. LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm
+## 7. When GNNs Fail: Quantifying and Overcoming Temporal Correlation Volatility in Time Series
 
-- Date: 2026-08-06
+- Date: 2026-08-07
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2608.07333v1
+- PDF: https://arxiv.org/pdf/2608.07333v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-when_gnns_fail_quantifying_and_overcoming_temporal_correlation_volatility_in_time_series_infographic.json
+
+## 8. Omni-modal decomposition autoencoders learn full-stack wearable disentangled representations
+
+- Date: 2026-08-07
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2608.07385v1
+- PDF: https://arxiv.org/pdf/2608.07385v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-omni_modal_decomposition_autoencoders_learn_full_stack_wearable_disentangled_representatio_infographic.json
+
+## 9. An End-to-End Agent Auditing Engine
+
+- Date: 2026-08-07
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.06135v1
-- PDF: https://arxiv.org/pdf/2608.06135v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-llm_inference_under_bursty_workload_distribution_modifying_the_wait_algorithm_infographic.json
+- arXiv: https://arxiv.org/abs/2608.07346v1
+- PDF: https://arxiv.org/pdf/2608.07346v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-an_end_to_end_agent_auditing_engine_infographic.json
 
-## 19. Scalable estimation of VARMA models
+## 10. Recipes for Creativity: Iterative Generation and Evaluation in Large Language Models
 
-- Date: 2026-08-06
+- Date: 2026-08-07
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.07243v1
+- PDF: https://arxiv.org/pdf/2608.07243v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-recipes_for_creativity_iterative_generation_and_evaluation_in_large_language_models_infographic.json
+
+## 11. SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent
+
+- Date: 2026-08-07
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.06340v1
-- PDF: https://arxiv.org/pdf/2608.06340v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-scalable_estimation_of_varma_models_infographic.json
+- arXiv: https://arxiv.org/abs/2608.07449v1
+- PDF: https://arxiv.org/pdf/2608.07449v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-skillprox_self_evolving_agent_skills_via_proximal_textual_gradient_descent_infographic.json
 
-## 20. NestyNet. II. Coherent Function-Space Posteriors from Scientific Neural Surrogates (or How to Avoid Expensive MCMC)
+## 12. Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools
 
-- Date: 2026-08-06
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.06274v1
-- PDF: https://arxiv.org/pdf/2608.06274v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-06-arxiv-nestynet_ii_coherent_function_space_posteriors_from_scientific_neural_surrogates_or_how_to_infographic.json
+- Date: 2026-08-07
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.07446v1
+- PDF: https://arxiv.org/pdf/2608.07446v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-taxonomy_driven_analysis_of_open_source_ai_risk_mitigation_tools_infographic.json
+
+## 13. Diffusion LLMs as Targets and Adversaries: Mechanistic Safety Exploits
+
+- Date: 2026-08-07
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.07430v1
+- PDF: https://arxiv.org/pdf/2608.07430v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-diffusion_llms_as_targets_and_adversaries_mechanistic_safety_exploits_infographic.json
+
+## 14. CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity
+
+- Date: 2026-08-07
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.07460v1
+- PDF: https://arxiv.org/pdf/2608.07460v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-creativeinstruct_scalably_teaching_llms_to_balance_quality_creativity_and_diversity_infographic.json
+
+## 15. Trajectory-Relative Hindsight Distillation for Agentic Reinforcement Learning
+
+- Date: 2026-08-07
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2608.07371v1
+- PDF: https://arxiv.org/pdf/2608.07371v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-trajectory_relative_hindsight_distillation_for_agentic_reinforcement_learning_infographic.json
+
+## 16. People Are Not Just Their Countries. Disentangling Social Determinants of LLM Value Alignment Across Europe
+
+- Date: 2026-08-07
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.07367v1
+- PDF: https://arxiv.org/pdf/2608.07367v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-people_are_not_just_their_countries_disentangling_social_determinants_of_llm_value_alignme_infographic.json
+
+## 17. PsychoAgent: An Affect-Sensitive Cognitive Architecture for Conflict-Aware Memory in LLM Agents
+
+- Date: 2026-08-07
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.07438v1
+- PDF: https://arxiv.org/pdf/2608.07438v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-psychoagent_an_affect_sensitive_cognitive_architecture_for_conflict_aware_memory_in_llm_ag_infographic.json
+
+## 18. Blast Radius
+
+- Date: 2026-08-07
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2608.07440v1
+- PDF: https://arxiv.org/pdf/2608.07440v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-blast_radius_infographic.json
+
+## 19. DynaCrys: Crystal Generation with Dynamic Space-Group Diffusion
+
+- Date: 2026-08-07
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2608.07401v1
+- PDF: https://arxiv.org/pdf/2608.07401v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-dynacrys_crystal_generation_with_dynamic_space_group_diffusion_infographic.json
+
+## 20. SCALE: Scientific Concept Aggregation via LLMs and Embeddings for Fine-Grained Taxonomy Extension
+
+- Date: 2026-08-07
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.07254v1
+- PDF: https://arxiv.org/pdf/2608.07254v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-07-arxiv-scale_scientific_concept_aggregation_via_llms_and_embeddings_for_fine_grained_taxonomy_ext_infographic.json
