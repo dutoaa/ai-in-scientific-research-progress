@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-10
+Generated: 2026-08-11
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. ResidencyRL: Reinforcement Learning in Simulated Clinical Environments
