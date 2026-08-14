@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-13
+Generated: 2026-08-14
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence
+## 1. Intern-S2-Preview: Scientific Agentic Foundation Model
 
-- Date: 2026-08-12
+- Date: 2026-08-13
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.12290v1
-- PDF: https://arxiv.org/pdf/2608.12290v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-beyond_trial_and_error_agentic_optimization_for_image_to_video_adherence_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13505v1
+- PDF: https://arxiv.org/pdf/2608.13505v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-intern_s2_preview_scientific_agentic_foundation_model_infographic.json
 
-## 2. PatternFormer: Learning Multiple Solution Patterns in Reaction--Diffusion Systems
+## 2. OmniScientist: An Omni-Modal Omni-Discipline AI Scientist
 
-- Date: 2026-08-12
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2608.12286v1
-- PDF: https://arxiv.org/pdf/2608.12286v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-patternformer_learning_multiple_solution_patterns_in_reaction_diffusion_systems_infographic.json
+- Date: 2026-08-13
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2608.13558v1
+- PDF: https://arxiv.org/pdf/2608.13558v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-omniscientist_an_omni_modal_omni_discipline_ai_scientist_infographic.json
 
-## 3. Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment
+## 3. RAIL: An Automatic Classifier of the Artificial Intelligence Readiness Level
 
-- Date: 2026-08-12
+- Date: 2026-08-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.13428v1
+- PDF: https://arxiv.org/pdf/2608.13428v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-rail_an_automatic_classifier_of_the_artificial_intelligence_readiness_level_infographic.json
+
+## 4. Wasserstein Filtering: A Sample Selection Method for Robust Distribution Learning
+
+- Date: 2026-08-13
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2608.13418v1
+- PDF: https://arxiv.org/pdf/2608.13418v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-wasserstein_filtering_a_sample_selection_method_for_robust_distribution_learning_infographic.json
+
+## 5. Reduced Matrix Multiplication: Input-Adaptive Matrix-Product Reduction for LLM Inference
+
+- Date: 2026-08-13
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.12198v1
-- PDF: https://arxiv.org/pdf/2608.12198v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-learning_based_behavior_planning_for_automated_driving_real_world_integration_and_deployme_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13426v1
+- PDF: https://arxiv.org/pdf/2608.13426v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-reduced_matrix_multiplication_input_adaptive_matrix_product_reduction_for_llm_inference_infographic.json
 
-## 4. PACE-SIMS: Checkpoint-Gated Autonomous SIMS Characterization with AI-Agent Quality Control
+## 6. Enhancing Virtual Agents through SLMs and Edge-Computing: An Exploratory Evaluation of Think and Memory Processes
 
-- Date: 2026-08-12
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.12277v1
-- PDF: https://arxiv.org/pdf/2608.12277v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-pace_sims_checkpoint_gated_autonomous_sims_characterization_with_ai_agent_quality_control_infographic.json
-
-## 5. One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL
-
-- Date: 2026-08-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.12253v1
-- PDF: https://arxiv.org/pdf/2608.12253v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-one_frozen_simulator_is_not_enough_simulator_collapse_in_multi_agent_rl_infographic.json
-
-## 6. Preference Tree Optimization: Enhancing Goal-Oriented Dialogue with Look-Ahead Simulations
-
-- Date: 2026-08-12
+- Date: 2026-08-13
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.12062v1
-- PDF: https://arxiv.org/pdf/2608.12062v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-preference_tree_optimization_enhancing_goal_oriented_dialogue_with_look_ahead_simulations_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13420v1
+- PDF: https://arxiv.org/pdf/2608.13420v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-enhancing_virtual_agents_through_slms_and_edge_computing_an_exploratory_evaluation_of_thin_infographic.json
 
-## 7. How to Spend Your Oracle Budget: Practical Guidance for Protein Structure Prediction Models
+## 7. Jointly Predicting Courses and Grades Using a Transformer-Based Model
 
-- Date: 2026-08-12
+- Date: 2026-08-13
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.12192v1
-- PDF: https://arxiv.org/pdf/2608.12192v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-how_to_spend_your_oracle_budget_practical_guidance_for_protein_structure_prediction_models_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13409v1
+- PDF: https://arxiv.org/pdf/2608.13409v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-jointly_predicting_courses_and_grades_using_a_transformer_based_model_infographic.json
 
-## 8. A Neighborhood Attention Transformer Network for Enhanced 3D Segmentation of the Left Anterior Descending Artery
+## 8. Rules or Character? Scaling Laws for AI Safety Design
 
-- Date: 2026-08-12
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.12274v1
-- PDF: https://arxiv.org/pdf/2608.12274v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-a_neighborhood_attention_transformer_network_for_enhanced_3d_segmentation_of_the_left_ante_infographic.json
+- Date: 2026-08-13
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2608.13345v1
+- PDF: https://arxiv.org/pdf/2608.13345v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-rules_or_character_scaling_laws_for_ai_safety_design_infographic.json
 
-## 9. Class Activation Mapping in Explainable Computer Vision: A Method-Centered Review of CNN, Transformer, and Foundation-Model-Era Visual Explanations
+## 9. LLM-Guided Graph Generation for Structure-Based Local Improvement Methods
 
-- Date: 2026-08-12
+- Date: 2026-08-13
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.12299v1
-- PDF: https://arxiv.org/pdf/2608.12299v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-class_activation_mapping_in_explainable_computer_vision_a_method_centered_review_of_cnn_tr_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13333v1
+- PDF: https://arxiv.org/pdf/2608.13333v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-llm_guided_graph_generation_for_structure_based_local_improvement_methods_infographic.json
 
-## 10. ScreenShot: A Foundation Model for Few-Shot Combination Drug Screening
+## 10. Novel Knowledge-Guided Generative Methods for Synthetic Transcriptomic Data
 
-- Date: 2026-08-12
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2608.12219v1
-- PDF: https://arxiv.org/pdf/2608.12219v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-screenshot_a_foundation_model_for_few_shot_combination_drug_screening_infographic.json
+- Date: 2026-08-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.13256v1
+- PDF: https://arxiv.org/pdf/2608.13256v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-novel_knowledge_guided_generative_methods_for_synthetic_transcriptomic_data_infographic.json
 
-## 11. Diagram-MMU: A Multi-Modal Benchmark for Scientific Diagrams
+## 11. StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems
 
-- Date: 2026-08-12
+- Date: 2026-08-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.13317v1
+- PDF: https://arxiv.org/pdf/2608.13317v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-statebridge_training_free_hidden_state_alignment_for_latent_communication_in_llm_multi_age_infographic.json
+
+## 12. MLLM-Routed Heterogeneous Ensembles for Robust Cross-Dataset Image Classification
+
+- Date: 2026-08-13
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2608.13463v1
+- PDF: https://arxiv.org/pdf/2608.13463v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-mllm_routed_heterogeneous_ensembles_for_robust_cross_dataset_image_classification_infographic.json
+
+## 13. AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design
+
+- Date: 2026-08-13
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.12262v1
-- PDF: https://arxiv.org/pdf/2608.12262v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-diagram_mmu_a_multi_modal_benchmark_for_scientific_diagrams_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13560v1
+- PDF: https://arxiv.org/pdf/2608.13560v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-autodesign_meta_harness_optimization_for_long_horizon_agentic_design_infographic.json
 
-## 12. Faithful, Sufficient and Understandable: Rethinking Graph Counterfactual Explanations via Discrete Diffusion Inversion
+## 14. UniTexture: Cross-Task Universal Adversarial Textures for Vision-Language-Action Models
 
-- Date: 2026-08-12
-- Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2608.12083v1
-- PDF: https://arxiv.org/pdf/2608.12083v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-faithful_sufficient_and_understandable_rethinking_graph_counterfactual_explanations_via_di_infographic.json
+- Date: 2026-08-13
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2608.13453v1
+- PDF: https://arxiv.org/pdf/2608.13453v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-unitexture_cross_task_universal_adversarial_textures_for_vision_language_action_models_infographic.json
 
-## 13. HCGRec: Hint-Conditioned Generative Recommendation with Semantic IDs
+## 15. Simulation-to-real transfer learning for infrared spectroscopic chemical sensing and analysis from molecules to complex samples
 
-- Date: 2026-08-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.11980v1
-- PDF: https://arxiv.org/pdf/2608.11980v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-hcgrec_hint_conditioned_generative_recommendation_with_semantic_ids_infographic.json
+- Date: 2026-08-13
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2608.13341v1
+- PDF: https://arxiv.org/pdf/2608.13341v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-simulation_to_real_transfer_learning_for_infrared_spectroscopic_chemical_sensing_and_analy_infographic.json
 
-## 14. HAMP-LIC: Hessian-Aware Mixed-Precision Post-Training Quantization for Learned Image Compression
+## 16. The Time Value of Evolution
 
-- Date: 2026-08-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.12239v1
-- PDF: https://arxiv.org/pdf/2608.12239v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-hamp_lic_hessian_aware_mixed_precision_post_training_quantization_for_learned_image_compre_infographic.json
-
-## 15. Who Thinks Best Depends on How Long You Let Them: Budget-Dependent Rankings in LLM Evaluation
-
-- Date: 2026-08-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.12150v1
-- PDF: https://arxiv.org/pdf/2608.12150v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-who_thinks_best_depends_on_how_long_you_let_them_budget_dependent_rankings_in_llm_evaluati_infographic.json
-
-## 16. Confidence Calibration of Deep Learning Systems
-
-- Date: 2026-08-12
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.12100v1
-- PDF: https://arxiv.org/pdf/2608.12100v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-confidence_calibration_of_deep_learning_systems_infographic.json
-
-## 17. Mechanist: AI as a Scientific Instrument for Discovering the Mechanisms of Intelligence
-
-- Date: 2026-08-12
+- Date: 2026-08-13
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2608.12036v1
-- PDF: https://arxiv.org/pdf/2608.12036v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-mechanist_ai_as_a_scientific_instrument_for_discovering_the_mechanisms_of_intelligence_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13297v1
+- PDF: https://arxiv.org/pdf/2608.13297v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-the_time_value_of_evolution_infographic.json
 
-## 18. Dual-Model Sentiment Analysis of Consumer Reviews in the Retail Coffee Sector Using Machine Learning and Deep Learning Approaches
+## 17. EEG Decoding Using CNN and LSTM Network
 
-- Date: 2026-08-12
+- Date: 2026-08-13
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.12007v1
-- PDF: https://arxiv.org/pdf/2608.12007v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-dual_model_sentiment_analysis_of_consumer_reviews_in_the_retail_coffee_sector_using_machin_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13285v1
+- PDF: https://arxiv.org/pdf/2608.13285v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-eeg_decoding_using_cnn_and_lstm_network_infographic.json
 
-## 19. Constructing Dynamic Master Logic Models as Knowledge Graphs for Complex System Diagnostics Using Retrieval-Augmented Large Language Models
+## 18. Virtual Temperature Sensors in Power Transformers Using Neural Ordinary Differential Equations
 
-- Date: 2026-08-12
+- Date: 2026-08-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2608.13260v1
+- PDF: https://arxiv.org/pdf/2608.13260v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-virtual_temperature_sensors_in_power_transformers_using_neural_ordinary_differential_equat_infographic.json
+
+## 19. QuoteBench: How Matched Scores Can Hide Command-Path Failures
+
+- Date: 2026-08-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.13547v1
+- PDF: https://arxiv.org/pdf/2608.13547v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-quotebench_how_matched_scores_can_hide_command_path_failures_infographic.json
+
+## 20. TabSOM: A tabular-to-image encoding method based on self-organizing maps
+
+- Date: 2026-08-13
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.12304v1
-- PDF: https://arxiv.org/pdf/2608.12304v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-constructing_dynamic_master_logic_models_as_knowledge_graphs_for_complex_system_diagnostic_infographic.json
-
-## 20. Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents
-
-- Date: 2026-08-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.12273v1
-- PDF: https://arxiv.org/pdf/2608.12273v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-12-arxiv-convergent_detour_hijacking_task_preserving_resource_amplification_in_skill_based_llm_agen_infographic.json
+- arXiv: https://arxiv.org/abs/2608.13513v1
+- PDF: https://arxiv.org/pdf/2608.13513v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-13-arxiv-tabsom_a_tabular_to_image_encoding_method_based_on_self_organizing_maps_infographic.json
