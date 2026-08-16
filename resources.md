@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-15
+Generated: 2026-08-16
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Intern-S2-Preview: Scientific Agentic Foundation Model
