@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-22
+Generated: 2026-08-23
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Optimal Skill Selection for LLM Agents with Provable Bicriteria Guarantees
