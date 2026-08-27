@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-26
+Generated: 2026-08-27
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. IAPO: Influence-Aware Policy Optimization for Credit Assignment in Multi-Turn Service Agents
+## 1. Bayesian Optimization for Self-Driving Materials Laboratories: From Algorithms to Physics-Informed Workflows
 
-- Date: 2026-08-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.24588v1
-- PDF: https://arxiv.org/pdf/2608.24588v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-iapo_influence_aware_policy_optimization_for_credit_assignment_in_multi_turn_service_agent_infographic.json
-
-## 2. Joint Optimization of Tool Creation and Use for Large Language Model Agents
-
-- Date: 2026-08-25
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.24571v1
-- PDF: https://arxiv.org/pdf/2608.24571v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-joint_optimization_of_tool_creation_and_use_for_large_language_model_agents_infographic.json
-
-## 3. Multiscale Modelling of Ferroelectrics using a Physics-Informed Neural Network Driven by Molecular Dynamics Data: Parameter Identification and Field Reconstruction
-
-- Date: 2026-08-25
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.24733v1
-- PDF: https://arxiv.org/pdf/2608.24733v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-multiscale_modelling_of_ferroelectrics_using_a_physics_informed_neural_network_driven_by_m_infographic.json
-
-## 4. Bellman Calibration for Marginalized Importance Weighting in Offline Reinforcement Learning
-
-- Date: 2026-08-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.24858v1
-- PDF: https://arxiv.org/pdf/2608.24858v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-bellman_calibration_for_marginalized_importance_weighting_in_offline_reinforcement_learnin_infographic.json
-
-## 5. Parason: Revealing Subtask and Trial Parallelism in LLM Reasoning
-
-- Date: 2026-08-25
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.24658v1
-- PDF: https://arxiv.org/pdf/2608.24658v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-parason_revealing_subtask_and_trial_parallelism_in_llm_reasoning_infographic.json
-
-## 6. SPO++: Stream-Aligned Policy Optimization for Asynchronous Agentic RL
-
-- Date: 2026-08-25
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.24870v1
-- PDF: https://arxiv.org/pdf/2608.24870v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-spo_stream_aligned_policy_optimization_for_asynchronous_agentic_rl_infographic.json
-
-## 7. Neurosymbolic Alignment for Physiologically-Safe Clinical Language Models
-
-- Date: 2026-08-25
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2608.24534v1
-- PDF: https://arxiv.org/pdf/2608.24534v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-neurosymbolic_alignment_for_physiologically_safe_clinical_language_models_infographic.json
-
-## 8. Improving Cross-Problem Vehicle Routing with Locally Augmented Preferences and Representation Disentanglement
-
-- Date: 2026-08-25
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.24859v1
-- PDF: https://arxiv.org/pdf/2608.24859v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-improving_cross_problem_vehicle_routing_with_locally_augmented_preferences_and_representat_infographic.json
-
-## 9. CAFE: Self-Improving Search Agents Need Co-Evolving Feedback
-
-- Date: 2026-08-25
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.24794v1
-- PDF: https://arxiv.org/pdf/2608.24794v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-cafe_self_improving_search_agents_need_co_evolving_feedback_infographic.json
-
-## 10. A Dual-Dimensional LLM Framework for Automated Item Incidental Content Similarity Analysis in Large-Scale Assessments
-
-- Date: 2026-08-25
+- Date: 2026-08-26
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.24825v1
-- PDF: https://arxiv.org/pdf/2608.24825v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-a_dual_dimensional_llm_framework_for_automated_item_incidental_content_similarity_analysis_infographic.json
+- arXiv: https://arxiv.org/abs/2608.26016v1
+- PDF: https://arxiv.org/pdf/2608.26016v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-bayesian_optimization_for_self_driving_materials_laboratories_from_algorithms_to_physics_i_infographic.json
 
-## 11. Across the Loss Landscape with Progressive Growth
+## 2. HypoForge: A Self-Improving Multi-Agent Framework for Automated Hypothesis Generation and Testing via Scientific Skill Learning
 
-- Date: 2026-08-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.24568v1
-- PDF: https://arxiv.org/pdf/2608.24568v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-across_the_loss_landscape_with_progressive_growth_infographic.json
-
-## 12. Enhancing Bayesian Optimization and Active Learning Through Kernel Diversity
-
-- Date: 2026-08-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.24721v1
-- PDF: https://arxiv.org/pdf/2608.24721v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-enhancing_bayesian_optimization_and_active_learning_through_kernel_diversity_infographic.json
-
-## 13. Simthesizer: An Agent-Driven Simulation Framework for LLM Serving Systems
-
-- Date: 2026-08-25
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.24650v1
-- PDF: https://arxiv.org/pdf/2608.24650v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-simthesizer_an_agent_driven_simulation_framework_for_llm_serving_systems_infographic.json
-
-## 14. Constrained Hyperparameter Optimization for Streaming Data
-
-- Date: 2026-08-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.24712v1
-- PDF: https://arxiv.org/pdf/2608.24712v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-constrained_hyperparameter_optimization_for_streaming_data_infographic.json
-
-## 15. When "Must" Becomes "Maybe": Constraint Weakening in LLM Agent Workflows
-
-- Date: 2026-08-25
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.24569v1
-- PDF: https://arxiv.org/pdf/2608.24569v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-when_must_becomes_maybe_constraint_weakening_in_llm_agent_workflows_infographic.json
-
-## 16. What FID Hides: Detecting, Ranking, and Diagnosing Deviations in Generative Evaluation
-
-- Date: 2026-08-25
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.24881v1
-- PDF: https://arxiv.org/pdf/2608.24881v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-what_fid_hides_detecting_ranking_and_diagnosing_deviations_in_generative_evaluation_infographic.json
-
-## 17. Constrained Entity Selection under Partial Knowledge for LLM-Based Knowledge Graph QA
-
-- Date: 2026-08-25
+- Date: 2026-08-26
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2608.24824v1
-- PDF: https://arxiv.org/pdf/2608.24824v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-constrained_entity_selection_under_partial_knowledge_for_llm_based_knowledge_graph_qa_infographic.json
+- arXiv: https://arxiv.org/abs/2608.25770v1
+- PDF: https://arxiv.org/pdf/2608.25770v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-hypoforge_a_self_improving_multi_agent_framework_for_automated_hypothesis_generation_and_t_infographic.json
 
-## 18. Score-Based Ideal Observer Approximation via Denoising Score Matching for Signal-Known-Exactly Detection Tasks
+## 3. Robust CurveMoE: Multi-Norm Adversarial Defense for Mixture-of-Experts Models via Mode Connectivity
 
-- Date: 2026-08-25
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.24768v1
-- PDF: https://arxiv.org/pdf/2608.24768v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-score_based_ideal_observer_approximation_via_denoising_score_matching_for_signal_known_exa_infographic.json
+- Date: 2026-08-26
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.26043v1
+- PDF: https://arxiv.org/pdf/2608.26043v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-robust_curvemoe_multi_norm_adversarial_defense_for_mixture_of_experts_models_via_mode_conn_infographic.json
 
-## 19. Evidence Blindness in Direct Corpus Interaction: Persistent Navigation with AtlasNav
+## 4. Planetary Prediction Engine: Autonomous Geospatial Prediction via Intelligent Data Selection and Foundation Model Embeddings
 
-- Date: 2026-08-25
+- Date: 2026-08-26
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.24764v1
-- PDF: https://arxiv.org/pdf/2608.24764v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-evidence_blindness_in_direct_corpus_interaction_persistent_navigation_with_atlasnav_infographic.json
+- arXiv: https://arxiv.org/abs/2608.26088v1
+- PDF: https://arxiv.org/pdf/2608.26088v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-planetary_prediction_engine_autonomous_geospatial_prediction_via_intelligent_data_selectio_infographic.json
 
-## 20. Optimal Alternating Regret for Online Learning and Games
+## 5. MetaSieve: Faster Relational Deep Learning through SQL-Based Metapath Selection
 
-- Date: 2026-08-25
+- Date: 2026-08-26
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.25903v1
+- PDF: https://arxiv.org/pdf/2608.25903v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-metasieve_faster_relational_deep_learning_through_sql_based_metapath_selection_infographic.json
+
+## 6. CEDAR: Controlled and Event-Driven Demand Forecasting via Residual Decomposition
+
+- Date: 2026-08-26
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2608.25871v1
+- PDF: https://arxiv.org/pdf/2608.25871v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-cedar_controlled_and_event_driven_demand_forecasting_via_residual_decomposition_infographic.json
+
+## 7. Cooperative Multi-Agent Reinforcement Learning for Adaptive Aggregation in Semi-Supervised Federated Learning with non-IID Data
+
+- Date: 2026-08-26
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.25794v1
+- PDF: https://arxiv.org/pdf/2608.25794v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-cooperative_multi_agent_reinforcement_learning_for_adaptive_aggregation_in_semi_supervised_infographic.json
+
+## 8. How Edge of Stability Hinders SCAFFOLD in Federated Optimization
+
+- Date: 2026-08-26
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.24731v1
-- PDF: https://arxiv.org/pdf/2608.24731v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-25-arxiv-optimal_alternating_regret_for_online_learning_and_games_infographic.json
+- arXiv: https://arxiv.org/abs/2608.25873v1
+- PDF: https://arxiv.org/pdf/2608.25873v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-how_edge_of_stability_hinders_scaffold_in_federated_optimization_infographic.json
+
+## 9. TraceML: An Empirical Analysis of Human-Agent Planning in Machine Learning Development
+
+- Date: 2026-08-26
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2608.26086v1
+- PDF: https://arxiv.org/pdf/2608.26086v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-traceml_an_empirical_analysis_of_human_agent_planning_in_machine_learning_development_infographic.json
+
+## 10. ProgRouter: Online Progress-Guided Orchestration for Multi-Agent LLM Workflows under Quality-Cost Tradeoffs
+
+- Date: 2026-08-26
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2608.25992v1
+- PDF: https://arxiv.org/pdf/2608.25992v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-progrouter_online_progress_guided_orchestration_for_multi_agent_llm_workflows_under_qualit_infographic.json
+
+## 11. Repair or Resample? Rethinking Failure Debugging in LLM Multi-Agent Systems
+
+- Date: 2026-08-26
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.25920v1
+- PDF: https://arxiv.org/pdf/2608.25920v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-repair_or_resample_rethinking_failure_debugging_in_llm_multi_agent_systems_infographic.json
+
+## 12. ToST: A Tree-of-Thought Socratic Teaching Framework for Multi-Path Guidance and Parallel Thinking
+
+- Date: 2026-08-26
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.25775v1
+- PDF: https://arxiv.org/pdf/2608.25775v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-tost_a_tree_of_thought_socratic_teaching_framework_for_multi_path_guidance_and_parallel_th_infographic.json
+
+## 13. Machine learning methods for modelling local, linear gyrokinetic simulations of MAST-U pedestal turbulence
+
+- Date: 2026-08-26
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2608.25945v1
+- PDF: https://arxiv.org/pdf/2608.25945v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-machine_learning_methods_for_modelling_local_linear_gyrokinetic_simulations_of_mast_u_pede_infographic.json
+
+## 14. VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning
+
+- Date: 2026-08-26
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.26105v1
+- PDF: https://arxiv.org/pdf/2608.26105v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-vbvr_pro_a_scalable_and_verifiable_suite_for_native_visual_reasoning_infographic.json
+
+## 15. Agentic Autoresearch for Cell-Edge Power Control: Radically Redefining the Researcher's Role
+
+- Date: 2026-08-26
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2608.26093v1
+- PDF: https://arxiv.org/pdf/2608.26093v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-agentic_autoresearch_for_cell_edge_power_control_radically_redefining_the_researcher_s_rol_infographic.json
+
+## 16. SwarmWorld: Stigmergic technological evolution in societies of language-model agents
+
+- Date: 2026-08-26
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2608.26081v1
+- PDF: https://arxiv.org/pdf/2608.26081v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-swarmworld_stigmergic_technological_evolution_in_societies_of_language_model_agents_infographic.json
+
+## 17. Trace Integrity for LLM Data Agents: A Vision for Auditable Structured Reasoning in Real-World Systems
+
+- Date: 2026-08-26
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.26036v1
+- PDF: https://arxiv.org/pdf/2608.26036v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-trace_integrity_for_llm_data_agents_a_vision_for_auditable_structured_reasoning_in_real_wo_infographic.json
+
+## 18. Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon
+
+- Date: 2026-08-26
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.25990v1
+- PDF: https://arxiv.org/pdf/2608.25990v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-spectral_allocation_why_muon_outperforms_adam_and_how_to_improve_muon_infographic.json
+
+## 19. Multi-Granularity Context-Enhanced RAG over Multimodal Knowledge Graphs
+
+- Date: 2026-08-26
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.25986v1
+- PDF: https://arxiv.org/pdf/2608.25986v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-multi_granularity_context_enhanced_rag_over_multimodal_knowledge_graphs_infographic.json
+
+## 20. SciMIF: Understanding Multimodal Instruction Following in Scientific Domains
+
+- Date: 2026-08-26
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.25973v1
+- PDF: https://arxiv.org/pdf/2608.25973v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-26-arxiv-scimif_understanding_multimodal_instruction_following_in_scientific_domains_infographic.json
