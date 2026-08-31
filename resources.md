@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-08-30
+Generated: 2026-08-31
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Inductive Correlation Clustering with Graph Neural Networks
+## 1. LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control
 
-- Date: 2026-08-27
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27153v1
-- PDF: https://arxiv.org/pdf/2608.27153v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-inductive_correlation_clustering_with_graph_neural_networks_infographic.json
-
-## 2. WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution
-
-- Date: 2026-08-27
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27454v1
-- PDF: https://arxiv.org/pdf/2608.27454v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-wikiskill_compiling_agent_experience_into_persistent_knowledge_for_skill_evolution_infographic.json
-
-## 3. LLMs Can Design Near-Optimal OR Algorithms
-
-- Date: 2026-08-27
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.27296v1
-- PDF: https://arxiv.org/pdf/2608.27296v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-llms_can_design_near_optimal_or_algorithms_infographic.json
-
-## 4. Importance Scoring of Transformer Attention Heads in Learning Tabular Data
-
-- Date: 2026-08-27
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.27241v1
-- PDF: https://arxiv.org/pdf/2608.27241v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-importance_scoring_of_transformer_attention_heads_in_learning_tabular_data_infographic.json
-
-## 5. GRAIN: Bridging Name and Narrative Shifts in Real-World Graph Reasoning through Invariance-Rewarded Agentic RL
-
-- Date: 2026-08-27
+- Date: 2026-08-28
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.27142v1
-- PDF: https://arxiv.org/pdf/2608.27142v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-grain_bridging_name_and_narrative_shifts_in_real_world_graph_reasoning_through_invariance_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28437v1
+- PDF: https://arxiv.org/pdf/2608.28437v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-lucid_an_agentic_ai_framework_on_digital_twin_in_the_loop_for_qos_guaranteeing_robotic_con_infographic.json
 
-## 6. Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO
+## 2. Automated Dislocation Detection in Electron Channelling Contrast Imaging: A Comparative Study of Rule-Based, Neural Network, and Deep Learning Approaches
 
-- Date: 2026-08-27
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27351v1
-- PDF: https://arxiv.org/pdf/2608.27351v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-understanding_evolution_strategies_for_llm_reasoning_broader_reasoning_coverage_than_grpo_infographic.json
+- Date: 2026-08-28
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2608.28495v1
+- PDF: https://arxiv.org/pdf/2608.28495v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-automated_dislocation_detection_in_electron_channelling_contrast_imaging_a_comparative_stu_infographic.json
 
-## 7. Naive Prompt Optimization: Rethinking the Need for Complex Prompt Search
+## 3. QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs
 
-- Date: 2026-08-27
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2608.27266v1
-- PDF: https://arxiv.org/pdf/2608.27266v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-naive_prompt_optimization_rethinking_the_need_for_complex_prompt_search_infographic.json
-
-## 8. TraceBench: Controlled Evaluation of LLM Agents for Time-Series Root-Cause Attribution
-
-- Date: 2026-08-27
+- Date: 2026-08-28
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.27182v1
-- PDF: https://arxiv.org/pdf/2608.27182v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-tracebench_controlled_evaluation_of_llm_agents_for_time_series_root_cause_attribution_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28589v1
+- PDF: https://arxiv.org/pdf/2608.28589v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-qgpinns_a_physics_informed_neural_network_framework_for_nonlocal_differential_equations_on_infographic.json
 
-## 9. Diffusion Policies for Short-Horizon Planning in Robot Crowd Navigation
+## 4. MAIL: Memory-driven, Adaptive, Incremental, and Literature-grounded Framework for Hypothesis Generation in Chemistry
 
-- Date: 2026-08-27
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.27158v1
-- PDF: https://arxiv.org/pdf/2608.27158v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-diffusion_policies_for_short_horizon_planning_in_robot_crowd_navigation_infographic.json
-
-## 10. LAAF: A Layered Accountability Architecture Framework for LLM Applications
-
-- Date: 2026-08-27
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.27102v1
-- PDF: https://arxiv.org/pdf/2608.27102v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-laaf_a_layered_accountability_architecture_framework_for_llm_applications_infographic.json
-
-## 11. Puro-2B: Poor Lab's Qwen2-1.5B Trained on RTX 5090 within $5090
-
-- Date: 2026-08-27
+- Date: 2026-08-28
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27370v1
-- PDF: https://arxiv.org/pdf/2608.27370v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-puro_2b_poor_lab_s_qwen2_1_5b_trained_on_rtx_5090_within_5090_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28315v1
+- PDF: https://arxiv.org/pdf/2608.28315v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-mail_memory_driven_adaptive_incremental_and_literature_grounded_framework_for_hypothesis_g_infographic.json
 
-## 12. Benchmarking of Fast and Interpretable UF Machine Learning Potentials
+## 5. Learning to Use Tools: Reinforcement Learning for Tool-Integrated Mathematical Reasoning
 
-- Date: 2026-08-27
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2608.27277v1
-- PDF: https://arxiv.org/pdf/2608.27277v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-benchmarking_of_fast_and_interpretable_uf_machine_learning_potentials_infographic.json
+- Date: 2026-08-28
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.28447v1
+- PDF: https://arxiv.org/pdf/2608.28447v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-learning_to_use_tools_reinforcement_learning_for_tool_integrated_mathematical_reasoning_infographic.json
 
-## 13. ANTShapes Benchmarking Datasets for Event-Based Neuromorphic Object Classification
+## 6. SymboLLM-FE: LLM-Accelerated Symbolic Regression for Automated Feature Engineering on Tabular Data
 
-- Date: 2026-08-27
+- Date: 2026-08-28
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.28408v1
+- PDF: https://arxiv.org/pdf/2608.28408v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-symbollm_fe_llm_accelerated_symbolic_regression_for_automated_feature_engineering_on_tabul_infographic.json
+
+## 7. Parser States Already Know: Structure-Conditioned KV Persistence for Structured Generation
+
+- Date: 2026-08-28
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2608.28276v1
+- PDF: https://arxiv.org/pdf/2608.28276v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-parser_states_already_know_structure_conditioned_kv_persistence_for_structured_generation_infographic.json
+
+## 8. Real-time virtual circuits for plasma shape control via neural network emulators: experimental demonstration on MAST Upgrade
+
+- Date: 2026-08-28
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2608.27150v1
-- PDF: https://arxiv.org/pdf/2608.27150v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-antshapes_benchmarking_datasets_for_event_based_neuromorphic_object_classification_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28468v1
+- PDF: https://arxiv.org/pdf/2608.28468v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-real_time_virtual_circuits_for_plasma_shape_control_via_neural_network_emulators_experimen_infographic.json
 
-## 14. Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit
+## 9. RetailAgent: Structured Adverse Timing in Self-Conditioned Multimodal LLM Trading Agents
 
-- Date: 2026-08-27
+- Date: 2026-08-28
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2608.27427v1
-- PDF: https://arxiv.org/pdf/2608.27427v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-persona_execution_separation_an_architecture_pattern_for_evolving_llm_agents_under_executi_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28399v1
+- PDF: https://arxiv.org/pdf/2608.28399v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-retailagent_structured_adverse_timing_in_self_conditioned_multimodal_llm_trading_agents_infographic.json
 
-## 15. BrailleBench: Investigating Multi-Criteria Braille Comprehension in Large Language Models
+## 10. Casimir-electrostatic pull-in in nanoelectromechanical actuators: Differentiable design sensitivities and the damping-dependent collapse boundary
 
-- Date: 2026-08-27
+- Date: 2026-08-28
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2608.28494v1
+- PDF: https://arxiv.org/pdf/2608.28494v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-casimir_electrostatic_pull_in_in_nanoelectromechanical_actuators_differentiable_design_sen_infographic.json
+
+## 11. Work Function and High-Coverage Adsorption Energy as Hydrogen-Evolution Descriptors on Ag-Au-Pd-Pt Alloys
+
+- Date: 2026-08-28
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27268v1
-- PDF: https://arxiv.org/pdf/2608.27268v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-braillebench_investigating_multi_criteria_braille_comprehension_in_large_language_models_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28347v1
+- PDF: https://arxiv.org/pdf/2608.28347v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-work_function_and_high_coverage_adsorption_energy_as_hydrogen_evolution_descriptors_on_ag_infographic.json
 
-## 16. What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents
+## 12. Blog: Survey of Optimizers
 
-- Date: 2026-08-27
+- Date: 2026-08-28
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.28557v1
+- PDF: https://arxiv.org/pdf/2608.28557v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-blog_survey_of_optimizers_infographic.json
+
+## 13. LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment
+
+- Date: 2026-08-28
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27260v1
-- PDF: https://arxiv.org/pdf/2608.27260v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-what_makes_good_agentic_data_an_ace_lens_on_data_generation_for_llm_agents_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28490v1
+- PDF: https://arxiv.org/pdf/2608.28490v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-llm_based_agents_for_software_and_systems_security_approaches_applications_and_assessment_infographic.json
 
-## 17. Calibrated Enough to Know, Not Calibrated to Act: Fabricated Evidence Makes LLM Agents Commit to the Unknowable
+## 14. ARC-CT: Anatomy-Routed Contrastive Vision-Language Learning for 3D Chest CT
 
-- Date: 2026-08-27
+- Date: 2026-08-28
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.28455v1
+- PDF: https://arxiv.org/pdf/2608.28455v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-arc_ct_anatomy_routed_contrastive_vision_language_learning_for_3d_chest_ct_infographic.json
+
+## 15. Program Learning with Verifiable Rewards: Symbolic Backpropagation for Post-Training LLMs
+
+- Date: 2026-08-28
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27167v1
-- PDF: https://arxiv.org/pdf/2608.27167v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-calibrated_enough_to_know_not_calibrated_to_act_fabricated_evidence_makes_llm_agents_commi_infographic.json
+- arXiv: https://arxiv.org/abs/2608.28421v1
+- PDF: https://arxiv.org/pdf/2608.28421v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-program_learning_with_verifiable_rewards_symbolic_backpropagation_for_post_training_llms_infographic.json
 
-## 18. Safety Does Not Compose: Non-Decaying Loop State for Autonomous LLM Agents
+## 16. EvoUndo: Recoverability-Constrained Self-Evolution for LLM Agent Harnesses
 
-- Date: 2026-08-27
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2608.27141v1
-- PDF: https://arxiv.org/pdf/2608.27141v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-safety_does_not_compose_non_decaying_loop_state_for_autonomous_llm_agents_infographic.json
+- Date: 2026-08-28
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.28363v1
+- PDF: https://arxiv.org/pdf/2608.28363v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-evoundo_recoverability_constrained_self_evolution_for_llm_agent_harnesses_infographic.json
 
-## 19. TransMeme: A Multi-Agent Framework for Cross-Cultural Meme Transcreation
+## 17. Finding Where the Buck Stops: An Automated Failure Attribution-Based Reflection Framework for Multi-Agent Collaboration
 
-- Date: 2026-08-27
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27127v1
-- PDF: https://arxiv.org/pdf/2608.27127v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-transmeme_a_multi_agent_framework_for_cross_cultural_meme_transcreation_infographic.json
+- Date: 2026-08-28
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.28264v1
+- PDF: https://arxiv.org/pdf/2608.28264v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-finding_where_the_buck_stops_an_automated_failure_attribution_based_reflection_framework_f_infographic.json
 
-## 20. LLMs in Digital EDA: A perspective on shifting roles from Generation to Orchestration
+## 18. REPLICANT: Learning Policies for Evading and Hardening Malware Detectors
 
-- Date: 2026-08-27
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2608.27184v1
-- PDF: https://arxiv.org/pdf/2608.27184v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-27-arxiv-llms_in_digital_eda_a_perspective_on_shifting_roles_from_generation_to_orchestration_infographic.json
+- Date: 2026-08-28
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.28499v1
+- PDF: https://arxiv.org/pdf/2608.28499v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-replicant_learning_policies_for_evading_and_hardening_malware_detectors_infographic.json
+
+## 19. GRACE:Gradient-guided Coreset Selection for LLM Unlearning
+
+- Date: 2026-08-28
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.28361v1
+- PDF: https://arxiv.org/pdf/2608.28361v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-grace_gradient_guided_coreset_selection_for_llm_unlearning_infographic.json
+
+## 20. Deriving Scaling Laws for OpenEuroLLM Models: Learning Rate, Batch Size and Loss
+
+- Date: 2026-08-28
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2608.28308v1
+- PDF: https://arxiv.org/pdf/2608.28308v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-08-28-arxiv-deriving_scaling_laws_for_openeurollm_models_learning_rate_batch_size_and_loss_infographic.json
