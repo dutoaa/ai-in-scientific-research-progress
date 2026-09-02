@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-01
+Generated: 2026-09-02
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Learning to Evaluate Before Improving: Automatic Rubric Induction for Automatic Research Agents
