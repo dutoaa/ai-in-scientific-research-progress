@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-04
+Generated: 2026-09-05
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center
