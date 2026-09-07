@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-06
+Generated: 2026-09-07
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. SENTINEL-RL: Offloading Topological Reasoning from LLM Agents in the Security Operations Center
+## 1. Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference
 
-- Date: 2026-09-03
+- Date: 2026-09-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.05275v1
+- PDF: https://arxiv.org/pdf/2609.05275v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-don_t_drop_dropout_optimizing_layer_sparsity_for_efficient_llm_training_and_inference_infographic.json
+
+## 2. Large Language Models for HVAC Operations in Building Energy Systems: A Critical Review of Methods, Applications, and Deployment Readiness
+
+- Date: 2026-09-04
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2609.04159v1
-- PDF: https://arxiv.org/pdf/2609.04159v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-sentinel_rl_offloading_topological_reasoning_from_llm_agents_in_the_security_operations_ce_infographic.json
+- arXiv: https://arxiv.org/abs/2609.05314v1
+- PDF: https://arxiv.org/pdf/2609.05314v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-large_language_models_for_hvac_operations_in_building_energy_systems_a_critical_review_of_infographic.json
 
-## 2. LLM4CKD: Large Language Models for Early Stage Chronic Kidney Disease Screening
+## 3. GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity
 
-- Date: 2026-09-03
+- Date: 2026-09-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.05284v1
+- PDF: https://arxiv.org/pdf/2609.05284v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-gut_quantifying_and_optimizing_the_reasoning_uncertainty_of_llms_via_graph_complexity_infographic.json
+
+## 4. A Unified Physics-Aware Quantum Machine Learning Framework across Power GaN HEMTs and Logic Nanowire FETs: Predicting Unseen Process Splits and Held-Out Geometry Combinations with Lower Error and Tighter Split-to-Split Variability
+
+- Date: 2026-09-04
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2609.05251v1
+- PDF: https://arxiv.org/pdf/2609.05251v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-a_unified_physics_aware_quantum_machine_learning_framework_across_power_gan_hemts_and_logi_infographic.json
+
+## 5. Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization
+
+- Date: 2026-09-04
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2609.05258v1
+- PDF: https://arxiv.org/pdf/2609.05258v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-ask_before_you_optimize_dynamic_pre_formulation_clarification_for_interactive_optimization_infographic.json
+
+## 6. PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting
+
+- Date: 2026-09-04
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2609.05235v1
+- PDF: https://arxiv.org/pdf/2609.05235v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-price_a_systematic_study_of_llm_adaptation_choices_for_bitcoin_price_forecasting_infographic.json
+
+## 7. UniMate: One Unified Model to Animate Diverse Skeletons
+
+- Date: 2026-09-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.05415v1
+- PDF: https://arxiv.org/pdf/2609.05415v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-unimate_one_unified_model_to_animate_diverse_skeletons_infographic.json
+
+## 8. A Schema Bounded Language Model for Refining Robot Policies Without Destabilizing Local Learning
+
+- Date: 2026-09-04
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2609.05133v1
+- PDF: https://arxiv.org/pdf/2609.05133v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-a_schema_bounded_language_model_for_refining_robot_policies_without_destabilizing_local_le_infographic.json
+
+## 9. Distill Globally, Adapt Locally: Reasoning Distillation and Product-Type Test-Time Training for Scalable Trade-Up Recommendation
+
+- Date: 2026-09-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.05363v1
+- PDF: https://arxiv.org/pdf/2609.05363v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-distill_globally_adapt_locally_reasoning_distillation_and_product_type_test_time_training_infographic.json
+
+## 10. A Hybrid Predictive Ensemble of Machine Learning and Deep Neural Networks for Early Cardiovascular Disease Risk Assessment
+
+- Date: 2026-09-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.05146v1
+- PDF: https://arxiv.org/pdf/2609.05146v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-a_hybrid_predictive_ensemble_of_machine_learning_and_deep_neural_networks_for_early_cardio_infographic.json
+
+## 11. Commonsense Reasoning in Computer Vision: Foundations, Recent Advancements, and Future Directions
+
+- Date: 2026-09-04
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2609.04013v1
-- PDF: https://arxiv.org/pdf/2609.04013v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-llm4ckd_large_language_models_for_early_stage_chronic_kidney_disease_screening_infographic.json
+- arXiv: https://arxiv.org/abs/2609.05257v1
+- PDF: https://arxiv.org/pdf/2609.05257v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-commonsense_reasoning_in_computer_vision_foundations_recent_advancements_and_future_direct_infographic.json
 
-## 3. Hierarchical automation of scanning probe microscopy through agentic orchestration and algorithmic control
+## 12. A Deep Generative Model for Synthesizing Labeled Wireless Signals
 
-- Date: 2026-09-03
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2609.04015v1
-- PDF: https://arxiv.org/pdf/2609.04015v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-hierarchical_automation_of_scanning_probe_microscopy_through_agentic_orchestration_and_alg_infographic.json
-
-## 4. DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training
-
-- Date: 2026-09-03
+- Date: 2026-09-04
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.04094v1
-- PDF: https://arxiv.org/pdf/2609.04094v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-draco_fine_grained_credit_assignment_with_dynamic_rubrics_for_long_horizon_agent_training_infographic.json
+- arXiv: https://arxiv.org/abs/2609.05396v1
+- PDF: https://arxiv.org/pdf/2609.05396v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-a_deep_generative_model_for_synthesizing_labeled_wireless_signals_infographic.json
 
-## 5. FiMI Banking: A Sovereign Model for Indian Retail Banking
+## 13. Embedded Graph Flows for Categorical Graph Generation
 
-- Date: 2026-09-03
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.03960v1
-- PDF: https://arxiv.org/pdf/2609.03960v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-fimi_banking_a_sovereign_model_for_indian_retail_banking_infographic.json
+- Date: 2026-09-04
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2609.05328v1
+- PDF: https://arxiv.org/pdf/2609.05328v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-embedded_graph_flows_for_categorical_graph_generation_infographic.json
 
-## 6. Spurious Advantage Hidden in GRPO
+## 14. Trace2Tower: Transition-Aware EigenTrace Induction of Multi-Level Skills for LLM Agents
 
-- Date: 2026-09-03
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.04063v1
-- PDF: https://arxiv.org/pdf/2609.04063v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-spurious_advantage_hidden_in_grpo_infographic.json
-
-## 7. TAP-Path: Task-Adaptive Structural and Token Pruning for Efficient and Trustworthy Pathology Foundation Models
-
-- Date: 2026-09-03
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.04071v1
-- PDF: https://arxiv.org/pdf/2609.04071v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-tap_path_task_adaptive_structural_and_token_pruning_for_efficient_and_trustworthy_patholog_infographic.json
-
-## 8. Representational alignment yields generalizable safety in language models
-
-- Date: 2026-09-03
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.04022v1
-- PDF: https://arxiv.org/pdf/2609.04022v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-representational_alignment_yields_generalizable_safety_in_language_models_infographic.json
-
-## 9. RATL: Learning from Retrieved Residuals for Robust Multivariate Time-Series Forecasting
-
-- Date: 2026-09-03
+- Date: 2026-09-04
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.03937v1
-- PDF: https://arxiv.org/pdf/2609.03937v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-ratl_learning_from_retrieved_residuals_for_robust_multivariate_time_series_forecasting_infographic.json
+- arXiv: https://arxiv.org/abs/2609.05261v1
+- PDF: https://arxiv.org/pdf/2609.05261v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-trace2tower_transition_aware_eigentrace_induction_of_multi_level_skills_for_llm_agents_infographic.json
 
-## 10. Subspace Inference Enables Efficient Active Reward Learning from Preferences
+## 15. NEAT-POCKET: Pocket-Conditioned Autoregressive 3D Molecular Generation with a Neighborhood-Guided Set Transformer
 
-- Date: 2026-09-03
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2609.04066v1
-- PDF: https://arxiv.org/pdf/2609.04066v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-subspace_inference_enables_efficient_active_reward_learning_from_preferences_infographic.json
+- Date: 2026-09-04
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2609.05097v1
+- PDF: https://arxiv.org/pdf/2609.05097v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-neat_pocket_pocket_conditioned_autoregressive_3d_molecular_generation_with_a_neighborhood_infographic.json
 
-## 11. Unlocking Lossless Speedups in LLMs via Discrete Diffusion
+## 16. ProCA: Progressive Contrastive Alignment for Robust EEG Visual Decoding
 
-- Date: 2026-09-03
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2609.04010v1
-- PDF: https://arxiv.org/pdf/2609.04010v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-unlocking_lossless_speedups_in_llms_via_discrete_diffusion_infographic.json
-
-## 12. Headroom-Drift Replay: A Primitive for Principled Replay Control in GRPO
-
-- Date: 2026-09-03
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2609.03941v1
-- PDF: https://arxiv.org/pdf/2609.03941v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-headroom_drift_replay_a_primitive_for_principled_replay_control_in_grpo_infographic.json
-
-## 13. A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms
-
-- Date: 2026-09-03
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2609.04170v1
-- PDF: https://arxiv.org/pdf/2609.04170v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-a_case_study_on_emergent_cheating_and_whistleblowing_in_autonomous_research_swarms_infographic.json
-
-## 14. A Low-Cost, Open Platform for End-to-End Autonomous Driving on a Miniature Ackermann Vehicle
-
-- Date: 2026-09-03
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2609.04147v1
-- PDF: https://arxiv.org/pdf/2609.04147v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-a_low_cost_open_platform_for_end_to_end_autonomous_driving_on_a_miniature_ackermann_vehicl_infographic.json
-
-## 15. ESPO: Error-Structured Prompt Optimization via Diagnose, Diversify, and Stabilize
-
-- Date: 2026-09-03
+- Date: 2026-09-04
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.04197v1
-- PDF: https://arxiv.org/pdf/2609.04197v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-espo_error_structured_prompt_optimization_via_diagnose_diversify_and_stabilize_infographic.json
+- arXiv: https://arxiv.org/abs/2609.05094v1
+- PDF: https://arxiv.org/pdf/2609.05094v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-proca_progressive_contrastive_alignment_for_robust_eeg_visual_decoding_infographic.json
 
-## 16. InSituMeasure: Probing Situated Measurement Grounding in Industrial Scenes with Multimodal Large Language Models
+## 17. Necessary or Sufficient? Evaluating LLM Explanations With Behavioural Evidence
 
-- Date: 2026-09-03
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.04014v1
-- PDF: https://arxiv.org/pdf/2609.04014v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-insitumeasure_probing_situated_measurement_grounding_in_industrial_scenes_with_multimodal_infographic.json
-
-## 17. Sparse auto-regressive modeling for scene generation from multi-view images
-
-- Date: 2026-09-03
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2609.03931v1
-- PDF: https://arxiv.org/pdf/2609.03931v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-sparse_auto_regressive_modeling_for_scene_generation_from_multi_view_images_infographic.json
-
-## 18. Speak for Me: Giving LLMs the Situational Awareness to Participate in a Meeting
-
-- Date: 2026-09-03
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.03923v1
-- PDF: https://arxiv.org/pdf/2609.03923v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-speak_for_me_giving_llms_the_situational_awareness_to_participate_in_a_meeting_infographic.json
-
-## 19. Value-Preserving Architectures for Agentic AI Systems
-
-- Date: 2026-09-03
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2609.03920v1
-- PDF: https://arxiv.org/pdf/2609.03920v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-value_preserving_architectures_for_agentic_ai_systems_infographic.json
-
-## 20. Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints
-
-- Date: 2026-09-03
+- Date: 2026-09-04
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.04198v1
-- PDF: https://arxiv.org/pdf/2609.04198v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-03-arxiv-clean_engineering_unstable_measurement_a_preregistered_reliability_failure_of_black_box_ll_infographic.json
+- arXiv: https://arxiv.org/abs/2609.05385v1
+- PDF: https://arxiv.org/pdf/2609.05385v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-necessary_or_sufficient_evaluating_llm_explanations_with_behavioural_evidence_infographic.json
+
+## 18. ACE: Adaptive Calibration-Free Expert Skipping for MoE-based LLMs
+
+- Date: 2026-09-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.05228v1
+- PDF: https://arxiv.org/pdf/2609.05228v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-ace_adaptive_calibration_free_expert_skipping_for_moe_based_llms_infographic.json
+
+## 19. A Human-in-the-Loop Framework for AI-Assisted Scoring in Large-Scale Writing Assessment
+
+- Date: 2026-09-04
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.05143v1
+- PDF: https://arxiv.org/pdf/2609.05143v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-a_human_in_the_loop_framework_for_ai_assisted_scoring_in_large_scale_writing_assessment_infographic.json
+
+## 20. Molecular Déjà Vu: Digit-Level Retrieval of Published Values in Frontier Language Models
+
+- Date: 2026-09-04
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.05381v1
+- PDF: https://arxiv.org/pdf/2609.05381v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-molecular_d_j_vu_digit_level_retrieval_of_published_values_in_frontier_language_models_infographic.json
