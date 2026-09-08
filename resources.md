@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-07
+Generated: 2026-09-08
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference
@@ -43,21 +43,21 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2609.05258v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-ask_before_you_optimize_dynamic_pre_formulation_clarification_for_interactive_optimization_infographic.json
 
-## 6. PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting
-
-- Date: 2026-09-04
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2609.05235v1
-- PDF: https://arxiv.org/pdf/2609.05235v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-price_a_systematic_study_of_llm_adaptation_choices_for_bitcoin_price_forecasting_infographic.json
-
-## 7. UniMate: One Unified Model to Animate Diverse Skeletons
+## 6. UniMate: One Unified Model to Animate Diverse Skeletons
 
 - Date: 2026-09-04
 - Category: AI scientific research
 - arXiv: https://arxiv.org/abs/2609.05415v1
 - PDF: https://arxiv.org/pdf/2609.05415v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-unimate_one_unified_model_to_animate_diverse_skeletons_infographic.json
+
+## 7. PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting
+
+- Date: 2026-09-04
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2609.05235v1
+- PDF: https://arxiv.org/pdf/2609.05235v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-price_a_systematic_study_of_llm_adaptation_choices_for_bitcoin_price_forecasting_infographic.json
 
 ## 8. A Schema Bounded Language Model for Refining Robot Policies Without Destabilizing Local Learning
 
@@ -155,10 +155,10 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2609.05143v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-a_human_in_the_loop_framework_for_ai_assisted_scoring_in_large_scale_writing_assessment_infographic.json
 
-## 20. Molecular Déjà Vu: Digit-Level Retrieval of Published Values in Frontier Language Models
+## 20. RegionFed: Federated Learning for Personalized Query Understanding in Heterogeneous Retail Environments
 
 - Date: 2026-09-04
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.05381v1
-- PDF: https://arxiv.org/pdf/2609.05381v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-molecular_d_j_vu_digit_level_retrieval_of_published_values_in_frontier_language_models_infographic.json
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.05403v1
+- PDF: https://arxiv.org/pdf/2609.05403v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-04-arxiv-regionfed_federated_learning_for_personalized_query_understanding_in_heterogeneous_retail_infographic.json
