@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-10
+Generated: 2026-09-11
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. RAP: Research Attention Prediction Reveals Target-Conditioned Evidence Acquisition Biases
+## 1. MindTopo: Can Foundation Models Reason in Topological Space?
 
-- Date: 2026-09-09
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2609.10092v1
-- PDF: https://arxiv.org/pdf/2609.10092v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-rap_research_attention_prediction_reveals_target_conditioned_evidence_acquisition_biases_infographic.json
-
-## 2. Agent-Based ML-LLM Fusion with Self-Optimizing Prompts for Plateau Weather Alerts
-
-- Date: 2026-09-09
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2609.10135v1
-- PDF: https://arxiv.org/pdf/2609.10135v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-agent_based_ml_llm_fusion_with_self_optimizing_prompts_for_plateau_weather_alerts_infographic.json
-
-## 3. ConvMem: Convolutional Memory for Long-Context Reasoning
-
-- Date: 2026-09-09
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.10441v1
-- PDF: https://arxiv.org/pdf/2609.10441v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-convmem_convolutional_memory_for_long_context_reasoning_infographic.json
-
-## 4. Learning with Covariance Matrices: Principal Component Analysis Meets Learning with Graphs
-
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10490v1
-- PDF: https://arxiv.org/pdf/2609.10490v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-learning_with_covariance_matrices_principal_component_analysis_meets_learning_with_graphs_infographic.json
-
-## 5. Deep Learning-Based Detection of Electrical Faults and Power Quality Disturbances in Aerospace Power Systems
-
-- Date: 2026-09-09
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2609.10479v1
-- PDF: https://arxiv.org/pdf/2609.10479v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-deep_learning_based_detection_of_electrical_faults_and_power_quality_disturbances_in_aeros_infographic.json
-
-## 6. TRACE: Training Reasoning Agents for Causal Exploration with Synthesized Rewards
-
-- Date: 2026-09-09
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2609.10315v1
-- PDF: https://arxiv.org/pdf/2609.10315v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-trace_training_reasoning_agents_for_causal_exploration_with_synthesized_rewards_infographic.json
-
-## 7. Why Sample What You Can Enumerate? Exact Policy Optimization for Genomic Tool Selection
-
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10221v1
-- PDF: https://arxiv.org/pdf/2609.10221v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-why_sample_what_you_can_enumerate_exact_policy_optimization_for_genomic_tool_selection_infographic.json
-
-## 8. Physics-Informed Multi-Task Surrogate Model for the Martian Nightside Thermosphere
-
-- Date: 2026-09-09
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2609.10077v1
-- PDF: https://arxiv.org/pdf/2609.10077v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-physics_informed_multi_task_surrogate_model_for_the_martian_nightside_thermosphere_infographic.json
-
-## 9. Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs
-
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10439v1
-- PDF: https://arxiv.org/pdf/2609.10439v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-forgetting_only_what_matters_layer_selective_unlearning_toward_robust_llms_infographic.json
-
-## 10. Context operations to architecture modelling output from large language models and evaluation criteria for their use in systems engineering design
-
-- Date: 2026-09-09
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2609.10132v1
-- PDF: https://arxiv.org/pdf/2609.10132v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-context_operations_to_architecture_modelling_output_from_large_language_models_and_evaluat_infographic.json
-
-## 11. A Systematic Evaluation of Molecule Generation Models for De Novo Drug Design: From Benchmarks to Practical Insights
-
-- Date: 2026-09-09
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2609.10099v1
-- PDF: https://arxiv.org/pdf/2609.10099v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-a_systematic_evaluation_of_molecule_generation_models_for_de_novo_drug_design_from_benchma_infographic.json
-
-## 12. Surrogate-Assisted Inverse Design and Temperature-Dependent Electrothermal Analysis of an All-Oxide Narrowband Thermophotovoltaic Emitter
-
-- Date: 2026-09-09
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2609.10252v1
-- PDF: https://arxiv.org/pdf/2609.10252v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-surrogate_assisted_inverse_design_and_temperature_dependent_electrothermal_analysis_of_an_infographic.json
-
-## 13. Direct Diversity Optimization for Diverse Successful Trajectories in Preference Post-Training
-
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10052v1
-- PDF: https://arxiv.org/pdf/2609.10052v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-direct_diversity_optimization_for_diverse_successful_trajectories_in_preference_post_train_infographic.json
-
-## 14. Are You Learning Biological Signal or Shortcuts? Auditing and Mitigating Bias in Protein-Protein Interaction Datasets
-
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10193v1
-- PDF: https://arxiv.org/pdf/2609.10193v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-are_you_learning_biological_signal_or_shortcuts_auditing_and_mitigating_bias_in_protein_pr_infographic.json
-
-## 15. pyeCE: A Python Implementation of the Embedded Cluster Expansion
-
-- Date: 2026-09-09
+- Date: 2026-09-10
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2609.10190v1
-- PDF: https://arxiv.org/pdf/2609.10190v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-pyece_a_python_implementation_of_the_embedded_cluster_expansion_infographic.json
+- arXiv: https://arxiv.org/abs/2609.11900v1
+- PDF: https://arxiv.org/pdf/2609.11900v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-mindtopo_can_foundation_models_reason_in_topological_space_infographic.json
 
-## 16. Quantum Feature Engineering for Credit Default Prediction: When and Why IQP Circuits Help Linear Classifiers
+## 2. COBRA-Skills: Contextual Bandit-Guided Evolution for Agent Skill Optimization
 
-- Date: 2026-09-09
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2609.10505v1
-- PDF: https://arxiv.org/pdf/2609.10505v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-quantum_feature_engineering_for_credit_default_prediction_when_and_why_iqp_circuits_help_l_infographic.json
+- Date: 2026-09-10
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.11682v1
+- PDF: https://arxiv.org/pdf/2609.11682v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-cobra_skills_contextual_bandit_guided_evolution_for_agent_skill_optimization_infographic.json
 
-## 17. Emergency Department Revisit Quality Review Screening: Exploring Human Decision-Making and Artificial Intelligence Support
+## 3. Explainability Assistant: A Conversational XAI Interface for Interpreting Energy Consumption Models
 
-- Date: 2026-09-09
+- Date: 2026-09-10
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.11860v1
+- PDF: https://arxiv.org/pdf/2609.11860v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-explainability_assistant_a_conversational_xai_interface_for_interpreting_energy_consumptio_infographic.json
+
+## 4. Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact
+
+- Date: 2026-09-10
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2609.11915v1
+- PDF: https://arxiv.org/pdf/2609.11915v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-generative_marketing_mix_modeling_a_causal_inference_framework_linking_geo_and_gem_to_busi_infographic.json
+
+## 5. Language-Augmented Semantic Priors for B-Spline Surface Fitting
+
+- Date: 2026-09-10
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.11708v1
+- PDF: https://arxiv.org/pdf/2609.11708v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-language_augmented_semantic_priors_for_b_spline_surface_fitting_infographic.json
+
+## 6. Ecdysis: Efficient and Effective Training of Runtime Harnesses for LLM Agents
+
+- Date: 2026-09-10
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.11677v1
+- PDF: https://arxiv.org/pdf/2609.11677v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-ecdysis_efficient_and_effective_training_of_runtime_harnesses_for_llm_agents_infographic.json
+
+## 7. MAPLE: Memory-Augmented Planning with Language and Evolution
+
+- Date: 2026-09-10
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.11636v1
+- PDF: https://arxiv.org/pdf/2609.11636v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-maple_memory_augmented_planning_with_language_and_evolution_infographic.json
+
+## 8. RetroThinker: Enabling Retrospective Thinking in Speech LLMs
+
+- Date: 2026-09-10
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.11864v1
+- PDF: https://arxiv.org/pdf/2609.11864v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-retrothinker_enabling_retrospective_thinking_in_speech_llms_infographic.json
+
+## 9. Musec: MomentUm SpEctral Clipping for Stable Muon-type Training
+
+- Date: 2026-09-10
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.11655v1
+- PDF: https://arxiv.org/pdf/2609.11655v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-musec_momentum_spectral_clipping_for_stable_muon_type_training_infographic.json
+
+## 10. Domain-Specific Hallucination Detection in Large Language Models
+
+- Date: 2026-09-10
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.11878v1
+- PDF: https://arxiv.org/pdf/2609.11878v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-domain_specific_hallucination_detection_in_large_language_models_infographic.json
+
+## 11. Making Alternative Data Work: Context-Augmented LLMs for Financial Forecasting
+
+- Date: 2026-09-10
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2609.11607v1
+- PDF: https://arxiv.org/pdf/2609.11607v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-making_alternative_data_work_context_augmented_llms_for_financial_forecasting_infographic.json
+
+## 12. Biology-in-the-loop: Amortized Adaptive Hit Discovery in CRISPR Screens
+
+- Date: 2026-09-10
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2609.10421v1
-- PDF: https://arxiv.org/pdf/2609.10421v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-emergency_department_revisit_quality_review_screening_exploring_human_decision_making_and_infographic.json
+- arXiv: https://arxiv.org/abs/2609.11877v1
+- PDF: https://arxiv.org/pdf/2609.11877v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-biology_in_the_loop_amortized_adaptive_hit_discovery_in_crispr_screens_infographic.json
 
-## 18. Beyond Surface Imitation: Contrastive Modeling for Reasoning Path Alignment in Multimodal In-Context Learning
+## 13. Distributed Optimization of Modular Production Systems using Model-based Reinforcement Learning with Inverse Models
 
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10177v1
-- PDF: https://arxiv.org/pdf/2609.10177v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-beyond_surface_imitation_contrastive_modeling_for_reasoning_path_alignment_in_multimodal_i_infographic.json
+- Date: 2026-09-10
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2609.11615v1
+- PDF: https://arxiv.org/pdf/2609.11615v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-distributed_optimization_of_modular_production_systems_using_model_based_reinforcement_lea_infographic.json
 
-## 19. Active Adaptation, Not Static Defense: Temporal Dynamics of Preventative Steering in Adversarial Fine-Tuning
+## 14. The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement
 
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10142v1
-- PDF: https://arxiv.org/pdf/2609.10142v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-active_adaptation_not_static_defense_temporal_dynamics_of_preventative_steering_in_adversa_infographic.json
+- Date: 2026-09-10
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2609.11873v1
+- PDF: https://arxiv.org/pdf/2609.11873v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-the_last_ai_built_by_humans_toward_genuine_recursive_self_improvement_infographic.json
 
-## 20. Hierarchical and Permutation-Invariant Feature Transformation Learning via Policy-Guided Embedding Search
+## 15. Physics-Informed Neural Networks to Infer the Perpendicular Energy Conductivity in the Scrape-Off Layer of Stellarator Devices
 
-- Date: 2026-09-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2609.10225v1
-- PDF: https://arxiv.org/pdf/2609.10225v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-09-arxiv-hierarchical_and_permutation_invariant_feature_transformation_learning_via_policy_guided_e_infographic.json
+- Date: 2026-09-10
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2609.11628v1
+- PDF: https://arxiv.org/pdf/2609.11628v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-physics_informed_neural_networks_to_infer_the_perpendicular_energy_conductivity_in_the_scr_infographic.json
+
+## 16. Identifiability of Nonnegative Tensor Decompositions via Positive Scattering
+
+- Date: 2026-09-10
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.11606v1
+- PDF: https://arxiv.org/pdf/2609.11606v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-identifiability_of_nonnegative_tensor_decompositions_via_positive_scattering_infographic.json
+
+## 17. 3D Point Splatting for mmWave Radar Novel View Synthesis
+
+- Date: 2026-09-10
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2609.11894v1
+- PDF: https://arxiv.org/pdf/2609.11894v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-3d_point_splatting_for_mmwave_radar_novel_view_synthesis_infographic.json
+
+## 18. AdamX: Cosine similarity meets gradient descent
+
+- Date: 2026-09-10
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.11867v1
+- PDF: https://arxiv.org/pdf/2609.11867v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-adamx_cosine_similarity_meets_gradient_descent_infographic.json
+
+## 19. Why Does Post-Training Quantization Work?
+
+- Date: 2026-09-10
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.11716v1
+- PDF: https://arxiv.org/pdf/2609.11716v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-why_does_post_training_quantization_work_infographic.json
+
+## 20. When Agents Disagree: Bayesian Backward Reasoning as a Label-Free Anchor for Multi-Agent Collective Decision-Making
+
+- Date: 2026-09-10
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2609.11709v1
+- PDF: https://arxiv.org/pdf/2609.11709v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-09-10-arxiv-when_agents_disagree_bayesian_backward_reasoning_as_a_label_free_anchor_for_multi_agent_co_infographic.json
