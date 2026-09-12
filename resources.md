@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-11
+Generated: 2026-09-12
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. MindTopo: Can Foundation Models Reason in Topological Space?
