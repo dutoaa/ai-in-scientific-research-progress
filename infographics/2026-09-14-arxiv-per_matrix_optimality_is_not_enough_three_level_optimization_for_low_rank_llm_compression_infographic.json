@@ -1,0 +1,24 @@
+{
+  "key_insight": "Per-matrix SVD is locally optimal, but better low-rank compression comes from optimizing across matrices, Transformer blocks, and the full language model in sequence.",
+  "engineering_relevance": "For LLM compression, treating each matrix independently can leave accuracy on the table; a three-level refinement chain yields much better perplexity at the same compression rate.",
+  "method": [
+    "L1: whitened SVD truncation for each matrix",
+    "L2: block-level joint optimization across compressed matrices",
+    "L3: end-to-end language-model loss refinement using 256 calibration sequences"
+  ],
+  "evidence_signal": "On LLaMA-7B at 60% compression, WikiText-2 perplexity improved from 42.1 to 19.1 to 11.4 across the three stages, with gains reported across 20-80% compression and multiple architectures.",
+  "watch_item": "The reported cross-architecture and compression-sweep results use architecture-specific setups, and the method improves perplexity/compression fidelity rather than downstream task accuracy.",
+  "hashtags": [
+    "#LLMCompression",
+    "#SVD",
+    "#LowRankApproximation",
+    "#TransformerOptimization",
+    "#ModelEfficiency"
+  ],
+  "paper_id": "2026-09-14-arxiv-per_matrix_optimality_is_not_enough_three_level_optimization_for_low_rank_llm_compression",
+  "paper_title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
+  "paper_date": "2026-09-14",
+  "paper_category": "Modeling and Simulation",
+  "generated_at": "2026-09-15T18:03:06",
+  "generator": "openai"
+}
