@@ -1,24 +1,24 @@
 {
-  "key_insight": "Per-matrix SVD is locally optimal, but better low-rank compression comes from optimizing across matrices, Transformer blocks, and the full language model in sequence.",
-  "engineering_relevance": "For LLM compression, treating each matrix independently can leave accuracy on the table; a three-level refinement chain yields much better perplexity at the same compression rate.",
+  "key_insight": "Compressing each matrix optimally is not enough; the paper shows that low-rank LLM compression works best when optimization is widened from per-matrix SVD to block-level and then full-model refinement.",
+  "engineering_relevance": "For practitioners deploying compressed Transformers, the three-level scheme offers a practical path to better perplexity and fidelity without instruction or recovery data, but it requires careful calibration and extra offline compute.",
   "method": [
-    "L1: whitened SVD truncation for each matrix",
-    "L2: block-level joint optimization across compressed matrices",
-    "L3: end-to-end language-model loss refinement using 256 calibration sequences"
+    "L1: whitened per-matrix SVD truncation on individual weights.",
+    "L2: joint optimization over each Transformer block to account for nonlinear error compounding.",
+    "L3: end-to-end language-modeling loss refinement on 256 calibration sequences."
   ],
-  "evidence_signal": "On LLaMA-7B at 60% compression, WikiText-2 perplexity improved from 42.1 to 19.1 to 11.4 across the three stages, with gains reported across 20-80% compression and multiple architectures.",
-  "watch_item": "The reported cross-architecture and compression-sweep results use architecture-specific setups, and the method improves perplexity/compression fidelity rather than downstream task accuracy.",
+  "evidence_signal": "On LLaMA-7B at 60% compression, WikiText-2 perplexity improves from 42.1 to 19.1 to 11.4 across the three optimization levels, with gains reported across 20–80% compression and multiple architectures.",
+  "watch_item": "The block-level stage is important and the results are not directly comparable across all settings because some sweeps use architecture-specific configurations; downstream task accuracy remains below the dense model.",
   "hashtags": [
     "#LLMCompression",
-    "#SVD",
     "#LowRankApproximation",
+    "#SVD",
     "#TransformerOptimization",
-    "#ModelEfficiency"
+    "#Perplexity"
   ],
   "paper_id": "2026-09-14-arxiv-per_matrix_optimality_is_not_enough_three_level_optimization_for_low_rank_llm_compression",
   "paper_title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
   "paper_date": "2026-09-14",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-09-15T18:03:06",
+  "generated_at": "2026-09-16T18:01:04",
   "generator": "openai"
 }
