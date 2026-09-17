@@ -26,27 +26,27 @@
     ],
     "score": 87,
     "infographic": {
-      "key_insight": "CREW replaces fixed multi-agent workflows for related work generation with learned, dynamic coordination among LLM agents.",
-      "engineering_relevance": "The framework suggests a more adaptive and cost-efficient way to automate literature synthesis for scientific writing tools.",
+      "key_insight": "CREW replaces fixed multi-agent pipelines with reinforcement-learned coordination, letting LLM agents dynamically choose how to collaborate when generating related work sections.",
+      "engineering_relevance": "This is relevant for scalable literature-mining systems because it improves output quality while reducing token cost, making automated scholarly writing more practical.",
       "method": [
-        "LLM agents choose actions autonomously: Retrieve, Disseminate, Compose, Critique.",
-        "Agent policies are optimized with Independent Proximal Policy Optimization (IPPO).",
-        "Designed to bypass rigid heuristic pipelines and enable collaborative multi-agent reasoning."
+        "Multi-agent LLM framework for related work generation",
+        "Agents autonomously select actions: Retrieve, Disseminate, Compose, Critique",
+        "Policy optimized with Independent Proximal Policy Optimization (IPPO)"
       ],
-      "evidence_signal": "The abstract reports extensive experiments on a standard RWG benchmark, showing higher quality than strong baselines and lower token cost.",
-      "watch_item": "Performance may depend on stable policy training and careful agent coordination, which could be sensitive to benchmark/domain shifts.",
+      "evidence_signal": "Experiments on a standard RWG benchmark show substantial quality gains over strong baselines, with significantly lower token cost.",
+      "watch_item": "Performance likely depends on stable RL training and careful action design, so deployment may be sensitive to reward shaping and agent coordination failures.",
       "hashtags": [
         "#MultiAgentLLM",
         "#ReinforcementLearning",
         "#RelatedWorkGeneration",
-        "#ScientificWriting",
-        "#IPPO"
+        "#ScientificWritingAI",
+        "#LiteratureMining"
       ],
       "paper_id": "2026-09-14-arxiv-assembling_the_crew_a_collaborative_multi_agent_reinforcement_learning_framework_for_autom",
       "paper_title": "Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation",
       "paper_date": "2026-09-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-09-17T18:02:16",
+      "generated_at": "2026-09-16T18:00:50",
       "generator": "openai"
     }
   },
@@ -78,27 +78,27 @@
     ],
     "score": 84,
     "infographic": {
-      "key_insight": "VideoScout reframes long video understanding as sequential evidence acquisition, using adaptive multi-turn pacing so an agent can inspect more of a long video while preserving bounded context and answering only after collecting decisive evidence.",
-      "engineering_relevance": "The method offers a practical agent design pattern for long-context multimodal systems, combining adaptive sampling, revisiting uncertain segments, and stop/answer control to improve efficiency and reliability in long video analytics.",
+      "key_insight": "VideoScout treats long video understanding as sequential evidence acquisition, using adaptive pacing so an agent can read farther, retain key evidence, revisit uncertain moments, and stop when confident.",
+      "engineering_relevance": "This offers a practical agent design for long-context multimodal systems by trading off traversal speed and reasoning depth under a fixed visual context window.",
       "method": [
-        "Sequential Evidence Acquisition (SEA): read the video turn by turn, deciding pace, retention, revisits, and stopping points.",
-        "Train on VideoScout-66K with 66K exploration turns from 10K answer-verified trajectories.",
-        "Use a two-stage pipeline: supervised cold-start formatting, then trajectory-level RL with decoupled clip and dynamic sampling policy optimization (DAPO)."
+        "Multi-turn agent that dynamically adjusts viewing pace across the video timeline.",
+        "Two-stage training: supervised cold-start formatting followed by trajectory-level reinforcement learning with DAPO.",
+        "Reward combines answer accuracy, format compliance, and temporal alignment with teacher answer timing via IoU."
       ],
-      "evidence_signal": "The abstract reports evaluation on long video understanding and reasoning benchmarks, where the 7B model performs strongly against existing trained 7B agentic models, and training includes answer accuracy, format compliance, and temporal IoU alignment rewards.",
-      "watch_item": "A key implementation concern is reward design and teacher-timing alignment: the approach may be sensitive to how temporal IoU and sampling policy are defined, especially when decisive evidence is sparse or ambiguously timed.",
+      "evidence_signal": "The paper reports a 7B model trained on VideoScout-66K, built from over 66K exploration turns and 10K answer-verified trajectories, and evaluated on long-video understanding and reasoning benchmarks.",
+      "watch_item": "The approach depends on accurate teacher timing signals and careful reward balancing, which may be sensitive to annotation noise or domain shifts in real-world long videos.",
       "hashtags": [
         "#LongVideoUnderstanding",
         "#MultimodalLLM",
-        "#AgenticAI",
+        "#AgenticReasoning",
         "#ReinforcementLearning",
-        "#VideoReasoning"
+        "#VideoAnalysis"
       ],
       "paper_id": "2026-09-14-arxiv-videoscout_learning_agentic_active_exploration_with_adaptive_reasoning_pacing_for_long_vid",
       "paper_title": "VideoScout: Learning Agentic Active Exploration with Adaptive Reasoning Pacing for Long Video Understanding",
       "paper_date": "2026-09-14",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-09-17T18:02:18",
+      "generated_at": "2026-09-16T18:00:53",
       "generator": "openai"
     }
   },
@@ -130,27 +130,27 @@
     ],
     "score": 80,
     "infographic": {
-      "key_insight": "Safety in meta-RL is handled by reasoning in an information space that combines the physical state with the agent’s belief about the task, enabling a learnable probability of avoiding unsafe regions indefinitely.",
-      "engineering_relevance": "This provides a practical way to add safety guarantees during adaptation in uncertain real-world control systems where task conditions change.",
+      "key_insight": "The paper reframes safety in meta-reinforcement learning as a reachability problem in information space, combining physical state and task belief to estimate the chance of avoiding unsafe regions indefinitely.",
+      "engineering_relevance": "This provides a practical way to build adaptive RL systems that can learn new tasks while explicitly enforcing safety constraints during deployment.",
       "method": [
-        "Define a safety value function over information space as the probability of never entering unsafe regions.",
-        "Show the value function satisfies a self-consistency condition and Bellman equation for learning.",
-        "Use the learned safety value for safety filtering and constrained policy optimization during meta-adaptation."
+        "Define an information-space safety value function over state + belief about the task.",
+        "Show the value function satisfies a self-consistency condition and Bellman equation, enabling learning via meta-RL.",
+        "Use the learned safety value for safety filtering and constrained policy optimization during adaptation."
       ],
-      "evidence_signal": "The abstract reports experiments on meta-RL benchmarks, where the proposed method is evaluated for effective safe adaptation.",
-      "watch_item": "Performance depends on accurately learning the belief-aware safety value function, and safety guarantees may weaken if the information-state model or unsafe-set specification is imperfect.",
+      "evidence_signal": "Experiments on meta-RL benchmarks are reported to show the proposed safe meta-RL method is effective.",
+      "watch_item": "Safety depends on accurately modeling belief over tasks; if the task inference or value estimation is poor, the safety filter may be overly conservative or miss hazards.",
       "hashtags": [
         "#MetaRL",
         "#SafeRL",
         "#ReinforcementLearning",
-        "#BeliefState",
-        "#BellmanEquation"
+        "#BeliefSpace",
+        "#Reachability"
       ],
       "paper_id": "2026-09-14-arxiv-safe_meta_reinforcement_learning_via_information_space_reachability",
       "paper_title": "Safe Meta-Reinforcement Learning via Information Space Reachability",
       "paper_date": "2026-09-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-09-17T18:02:21",
+      "generated_at": "2026-09-16T18:00:56",
       "generator": "openai"
     }
   },
@@ -185,27 +185,27 @@
     ],
     "score": 79,
     "infographic": {
-      "key_insight": "The paper shows that control theory, optimal transport, probabilistic inference, non-equilibrium thermodynamics, and machine learning can all be viewed through the shared lens of optimizing free-energy-like objectives under constraints.",
-      "engineering_relevance": "This unifying perspective can help engineers transfer algorithms and intuition across reinforcement learning, variational inference, and generative modeling to design more principled learning systems.",
+      "key_insight": "The paper argues that control theory, optimal transport, probabilistic inference, non-equilibrium thermodynamics, and machine learning are unified by optimizing free-energy-like objectives under dynamical or statistical constraints.",
+      "engineering_relevance": "This perspective helps engineers transfer algorithms and intuitions across reinforcement learning, variational inference, and generative modeling when designing scalable learning systems.",
       "method": [
-        "Build a conceptual bridge across five fields with common variational and dynamical principles",
-        "Frame learning tasks as optimization of free-energy-like functionals",
-        "Illustrate applications in reinforcement learning, variational inference, and generative modeling"
+        "Build a conceptual bridge across five fields using a common variational/free-energy framework.",
+        "Review core principles from physics first, then map them to learning applications.",
+        "Highlight selected use cases in reinforcement learning, variational inference, and generative modeling."
       ],
-      "evidence_signal": "The abstract describes a review and guided tour of theory-to-application links rather than a new experimental dataset or benchmark evaluation.",
-      "watch_item": "Because it is a conceptual review, the unification may be elegant but still requires careful mapping of assumptions when applying ideas across domains.",
+      "evidence_signal": "As a review paper, it synthesizes theory and applications rather than presenting new experimental data or benchmark evaluation in the abstract.",
+      "watch_item": "Because the work is a conceptual review, practical adoption may require translating the unified theory into problem-specific assumptions, solvers, and numerical approximations.",
       "hashtags": [
         "#MachineLearning",
         "#OptimalTransport",
         "#ControlTheory",
-        "#ProbabilisticInference",
+        "#VariationalInference",
         "#Thermodynamics"
       ],
       "paper_id": "2026-09-14-arxiv-bridging_control_inference_transport_and_thermodynamics_from_theory_to_applications_in_lea",
       "paper_title": "Bridging Control, Inference, Transport, and Thermodynamics: From Theory to Applications in Learning",
       "paper_date": "2026-09-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-09-17T18:02:23",
+      "generated_at": "2026-09-16T18:00:58",
       "generator": "openai"
     }
   },
@@ -238,27 +238,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "Bellman Policy Optimization (BPO) turns policy mirror descent for terminal-reward LLM reinforcement learning into a critic-free trajectory-level objective using Bellman equations, avoiding intermediate value estimation while preserving the same optimal solution.",
-      "engineering_relevance": "BPO offers a simpler and potentially more stable RLVR training recipe for reasoning LLMs by removing the need for a value critic and using a token-probability-based mismatch correction weight.",
+      "key_insight": "Bellman Policy Optimization (BPO) turns Policy Mirror Descent for RL with terminal rewards into a trajectory-level objective, eliminating the need to estimate intermediate state values.",
+      "engineering_relevance": "This makes reinforcement learning from verifiable rewards more practical for LLM training by reducing critic complexity while preserving the same optimal solution as the original PMD objective.",
       "method": [
-        "Derive BPO from Policy Mirror Descent via Bellman equations for autoregressive sequences with terminal rewards.",
-        "Replace state-value estimation at intermediate steps with a trajectory-level objective.",
-        "Approximate the resulting objective to obtain a practical loss whose correction weight is a smoothed ratio of complementary token probabilities."
+        "Derive a trajectory-level objective from the Bellman equations for autoregressive generation with terminal rewards",
+        "Avoid intermediate state-value estimation by using a critic-free formulation",
+        "Use a practical loss with a mismatch-correction weight based on a smoothed ratio of complementary token probabilities"
       ],
-      "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks showing that BPO is effective for improving LLM reasoning performance.",
-      "watch_item": "Because the practical loss relies on an approximation and a smoothed token-probability ratio, training stability and sensitivity to implementation details may matter.",
+      "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks showing that BPO is effective for improving reasoning performance.",
+      "watch_item": "The practical loss is an approximation, so performance may depend on how well the mismatch-correction weighting is calibrated during training.",
       "hashtags": [
         "#ReinforcementLearning",
-        "#LargeLanguageModels",
+        "#LLMs",
         "#PolicyOptimization",
-        "#MathReasoning",
+        "#ReasoningModels",
         "#AIResearch"
       ],
       "paper_id": "2026-09-14-arxiv-bellman_policy_optimization",
       "paper_title": "Bellman Policy Optimization",
       "paper_date": "2026-09-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-09-17T18:02:26",
+      "generated_at": "2026-09-16T18:01:01",
       "generator": "openai"
     }
   },
@@ -290,27 +290,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "A three-level optimization pipeline—per-matrix SVD, block-level joint refinement, and end-to-end loss tuning—beats independently optimal matrix compression because nonlinear block interactions amplify local errors.",
-      "engineering_relevance": "For low-rank LLM compression, optimizing at the block and model levels can deliver much better perplexity at the same compression ratio than per-matrix truncation alone.",
+      "key_insight": "Compressing each matrix optimally is not enough; the paper shows that low-rank LLM compression works best when optimization is widened from per-matrix SVD to block-level and then full-model refinement.",
+      "engineering_relevance": "For practitioners deploying compressed Transformers, the three-level scheme offers a practical path to better perplexity and fidelity without instruction or recovery data, but it requires careful calibration and extra offline compute.",
       "method": [
-        "Whiten each matrix and apply SVD truncation as the L1 baseline.",
-        "Jointly optimize compressed matrices within each Transformer block at L2 to regularize inter-matrix interactions.",
-        "Refine the compressed model end-to-end on language-modeling loss at L3 using 256 calibration sequences."
+        "L1: whitened per-matrix SVD truncation on individual weights.",
+        "L2: joint optimization over each Transformer block to account for nonlinear error compounding.",
+        "L3: end-to-end language-modeling loss refinement on 256 calibration sequences."
       ],
-      "evidence_signal": "On LLaMA-7B at 60% compression, WikiText-2 perplexity improved from 42.1 to 19.1 to 11.4 across the three-stage chain, with gains reported across 20-80% compression and multiple architectures.",
-      "watch_item": "The block-level stage is important, but results depend on architecture-specific setups and the approach improves perplexity/compression fidelity rather than closing the gap to dense-model downstream accuracy.",
+      "evidence_signal": "On LLaMA-7B at 60% compression, WikiText-2 perplexity improves from 42.1 to 19.1 to 11.4 across the three optimization levels, with gains reported across 20–80% compression and multiple architectures.",
+      "watch_item": "The block-level stage is important and the results are not directly comparable across all settings because some sweeps use architecture-specific configurations; downstream task accuracy remains below the dense model.",
       "hashtags": [
         "#LLMCompression",
         "#LowRankApproximation",
         "#SVD",
         "#TransformerOptimization",
-        "#ModelingAndSimulation"
+        "#Perplexity"
       ],
       "paper_id": "2026-09-14-arxiv-per_matrix_optimality_is_not_enough_three_level_optimization_for_low_rank_llm_compression",
       "paper_title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
       "paper_date": "2026-09-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-09-17T18:02:28",
+      "generated_at": "2026-09-16T18:01:04",
       "generator": "openai"
     }
   },
@@ -341,27 +341,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "SCoRE improves Visual RAG by explicitly selecting, preserving, and then consolidating only the most relevant page images before answer generation, reducing exploration noise and strengthening visual grounding.",
-      "engineering_relevance": "The method is relevant for document AI systems that need reliable evidence-backed answers from sparse, distributed visual information such as scanned reports, forms, and manuals.",
+      "key_insight": "SCoRE improves visual RAG by explicitly selecting query-relevant page images during exploration and then consolidating them into an organized, evidence-backed visual context for final answering.",
+      "engineering_relevance": "The method is useful for document AI systems where evidence is sparse across pages, because it reduces exploration noise while preserving strict image-to-claim grounding for more reliable outputs.",
       "method": [
-        "Maintains a textual ledger of query-relevant observations with source pointers during exploration.",
-        "Reloads referenced original images at the end and consolidates them into a logical evidence sequence for reasoning.",
-        "Trains with filtered cold-start trajectory distillation plus evidence-aware reinforcement learning to optimize coverage, compactness, and correctness."
+        "Maintains a textual ledger that stores only relevant observations plus source pointers during agent exploration.",
+        "Reloads the referenced original page images at the end and consolidates them into a logical evidence sequence for answering.",
+        "Trains with filtered cold-start trajectory distillation and evidence-aware reinforcement learning to reward coverage, compactness, and correctness."
       ],
-      "evidence_signal": "The abstract describes an end-to-end training and evaluation setup centered on evidence coverage, consolidation compactness, and answer correctness, but does not report specific benchmark numbers.",
-      "watch_item": "Performance depends on accurate source-pointer tracking and faithful image reloading, so implementation errors in evidence indexing could break the claimed grounding benefits.",
+      "evidence_signal": "The abstract indicates the approach is evaluated through an end-to-end training setup with rewards targeting evidence coverage, consolidation compactness, and answer accuracy, but it does not provide specific dataset or metric details.",
+      "watch_item": "A key implementation concern is that performance depends on accurate evidence selection and reliable source-pointer tracking; mistakes here can break the final visual grounding.",
       "hashtags": [
         "#VisualRAG",
-        "#DocumentAI",
         "#AgenticAI",
-        "#EvidenceGrounding",
-        "#RetrievalAugmentedGeneration"
+        "#DocumentAI",
+        "#EvidenceRetrieval",
+        "#MultimodalLLM"
       ],
       "paper_id": "2026-09-14-arxiv-navigating_sparse_evidence_agentic_visual_rag_via_explicit_context_selection_and_consolida",
       "paper_title": "Navigating Sparse Evidence: Agentic Visual RAG via Explicit Context Selection and Consolidation",
       "paper_date": "2026-09-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-09-17T18:02:31",
+      "generated_at": "2026-09-16T18:01:07",
       "generator": "openai"
     }
   },
@@ -394,27 +394,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "KaiNinja extends a native single-mesh 3D generator to part-level output by replacing the single O-Voxel volume with a dual-volume representation that can model touching part interfaces.",
-      "engineering_relevance": "This enables fast, mask-free generation of editable, riggable, and simulation-ready part assets while preserving the quality and speed of the original TRELLIS.2 backbone.",
+      "key_insight": "KaiNinja extends a native 3D generator from whole-object meshes to part-level assets by replacing the single O-Voxel volume with a dual-volume representation that can model part interfaces.",
+      "engineering_relevance": "This enables faster part-aware generation for downstream editing, rigging, and simulation without relying on an external segmentation step.",
       "method": [
-        "Builds on TRELLIS.2’s native 3D generation pipeline",
-        "Introduces a dual-volume O-Voxel form to represent adjacent part surfaces",
-        "Trains on mixed part data, including CAD models and LLM-agent-authored assets"
+        "Builds on TRELLIS.2’s native 3D generation backbone",
+        "Introduces a dual-volume form of O-Voxel to represent touching parts",
+        "Trains on mixed part-data sources, including CAD and LLM-agent-authored assets"
       ],
-      "evidence_signal": "The abstract reports a 40% reduction in whole-object Chamfer distance and a 16% increase in strict part F-score versus other part-generation pipelines.",
-      "watch_item": "The dual-volume approach likely adds representation and training complexity, so performance may depend on the quality and diversity of part-level training data.",
+      "evidence_signal": "The paper reports improved whole-object and part-level performance, including 40% lower Chamfer distance and 16% higher strict part F-score versus other part generation pipelines.",
+      "watch_item": "Performance and robustness likely depend on the availability and quality of part-labeled training data, especially for complex interfaces between touching parts.",
       "hashtags": [
         "#3DGeneration",
-        "#ScientificMachineLearning",
         "#PartLevelModeling",
+        "#ScientificMachineLearning",
         "#CAD",
-        "#GeometryLearning"
+        "#GeometryProcessing"
       ],
       "paper_id": "2026-09-14-arxiv-kaininja_extending_native_3d_generators_to_the_part_level",
       "paper_title": "Kaininja: Extending Native 3D Generators to the Part Level",
       "paper_date": "2026-09-14",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-09-17T18:02:33",
+      "generated_at": "2026-09-16T18:01:10",
       "generator": "openai"
     }
   },
@@ -445,27 +445,27 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "The paper introduces an open-source hardware-software toolkit that automates RHEED control and analysis so AI agents can guide thin-film synthesis in real time.",
-      "engineering_relevance": "It lowers the barrier to autonomous materials growth by combining programmable electron optics, automated alignment, and agent-ready interfaces for quantitative surface monitoring.",
+      "key_insight": "An open-source hardware-software toolkit automates RHEED control and analysis so both humans and AI agents can guide thin-film growth in a more autonomous way.",
+      "engineering_relevance": "The toolkit lowers the barrier to integrating RHEED into closed-loop synthesis workflows by enabling programmable optics, automated alignment, and agent-accessible quantitative analysis.",
       "method": [
-        "Programmable control of RHEED electron optics on a pulsed laser deposition system",
+        "Programmable electron-optics control on a pulsed laser deposition system",
         "Automated beam alignment, rocking-curve acquisition, and training-free crystallographic azimuthal alignment",
-        "Auto RHEED software with shared GUI/programmatic access plus an MCP server and extensible adapters"
+        "Shared GUI + programmatic interfaces, including an MCP server and extensible adapters for AI analysis/simulation"
       ],
-      "evidence_signal": "The toolkit was demonstrated on a pulsed laser deposition system and an agent-driven workflow showed natural-language requests could select, configure, and execute quantitative analyses.",
-      "watch_item": "Adoption may depend on careful integration with existing instruments and on the maturity of community-developed adapters and AI analysis methods.",
+      "evidence_signal": "The abstract reports a demonstration on a pulsed laser deposition system where natural-language requests successfully guided selection, configuration, and execution of RHEED analyses.",
+      "watch_item": "Performance will still depend on instrument-specific integration and on the reliability of newly added community adapters or agent-driven workflows.",
       "hashtags": [
         "#RHEED",
         "#ThinFilmSynthesis",
         "#AgenticAI",
-        "#AutonomousLab",
-        "#OpenSourceToolkit"
+        "#OpenSourceHardware",
+        "#AutonomousExperimentation"
       ],
       "paper_id": "2026-09-14-arxiv-an_open_source_hardware_and_software_toolkit_to_enable_agentic_rheed_guided_thin_film_synt",
       "paper_title": "An Open-Source Hardware and Software Toolkit to Enable Agentic RHEED-Guided Thin-Film Synthesis",
       "paper_date": "2026-09-14",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-09-17T18:02:35",
+      "generated_at": "2026-09-16T18:01:13",
       "generator": "openai"
     }
   },
@@ -497,27 +497,27 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "Intra-patient 3D multimodal registration remains unsolved: the best method depends on anatomy, modality, and whether overlap or global structural correspondence is prioritized.",
-      "engineering_relevance": "For clinical imaging pipelines, method selection should be benchmarked on the target anatomy with multiple metrics, because high Dice does not guarantee accurate multimodal alignment.",
+      "key_insight": "No single intra-patient 3D multimodal registration method is robust across datasets, and geometric overlap gains can disagree with true multimodal structural alignment.",
+      "engineering_relevance": "For clinical imaging pipelines, method selection must balance overlap, deformation quality, and cross-modality consistency rather than optimizing only one metric.",
       "method": [
-        "Benchmarked classical optimization-based and modern learning-based deformable registration methods.",
+        "Benchmarked classical optimization-based and modern learning-based deformable registration methods, including foundation models.",
         "Compared performance across three datasets spanning synthetic deformation recovery and real clinical cases.",
-        "Evaluated with complementary metrics: DSC, HD95, and MIND-SSC."
+        "Evaluated with complementary metrics: DSC, HD95, and MIND-SSC to capture geometric and image-based alignment."
       ],
-      "evidence_signal": "Across three datasets, learning-based methods performed best on large synthetic benchmarks, while gains were limited in real pelvic registration and geometric metrics often disagreed with MIND-SSC.",
-      "watch_item": "High overlap on segmented regions can mask poor global correspondence outside labels, so anatomy-guided models should be checked for deformation quality beyond ROI metrics.",
+      "evidence_signal": "The benchmark shows strong variability across anatomies, with learning-based methods doing best on large synthetic data but only limited gains in real pelvic registration.",
+      "watch_item": "High Dice or low HD95 may hide poor global multimodal correspondence, especially when anatomy-guided methods overfit to segmented regions.",
       "hashtags": [
         "#ImageRegistration",
         "#MedicalImaging",
-        "#DeformableRegistration",
-        "#MultimodalAI",
+        "#DeepLearning",
+        "#MultimodalImaging",
         "#Benchmarking"
       ],
       "paper_id": "2026-09-14-arxiv-benchmarking_intra_patient_3d_deformable_multimodal_image_registration",
       "paper_title": "Benchmarking Intra-Patient 3D Deformable Multimodal Image Registration",
       "paper_date": "2026-09-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-09-17T18:02:37",
+      "generated_at": "2026-09-16T18:01:16",
       "generator": "openai"
     }
   },
@@ -549,27 +549,27 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "CIDERS reframes cloud-edge LLM training as a personalized bilevel optimization problem that jointly preserves cloud-wide consensus and edge-specific adaptation.",
-      "engineering_relevance": "It provides a practical optimization framework for deploying LLMs in cloud-edge systems where shared knowledge must be continuously personalized for local tasks and constraints.",
+      "key_insight": "CIDERS turns cloud-edge LLM collaboration into a personalized bilevel optimization problem, balancing global consensus with edge-specific adaptation through consensus-variate correction.",
+      "engineering_relevance": "It offers a practical solver for deploying LLMs in cloud-edge settings where shared knowledge must be continuously personalized for domain-constrained edge devices.",
       "method": [
-        "Splits the model into a learnable backbone and a messenger for cloud-to-edge knowledge transfer.",
-        "Uses consensus-variate correction to inject global trajectory information into each local personalization step.",
-        "Provides convergence analysis and a geometric view of the local trajectory–consensus trade-off."
+        "Decompose the model into a learnable backbone and a messenger for efficient cloud-to-edge knowledge transfer.",
+        "Use bilevel optimization: cloud-side lower level for knowledge transfer, edge-side upper level for personalization.",
+        "Inject global trajectories into each local update via consensus-variate correction to align personalization with consensus."
       ],
-      "evidence_signal": "The abstract reports strong gains on edge-oriented benchmarks, including 3.1x on mathematical reasoning, 1.7x on code generation, and a 10% relative improvement on instruction metrics.",
-      "watch_item": "The approach adds optimization and coordination complexity, so its stability and compute overhead should be carefully validated under real edge-device limits.",
+      "evidence_signal": "The abstract reports strong gains over baselines on compressed edge tasks, including 3.1x improvement in mathematical reasoning, 1.7x in code generation, and 10% relative gain on instruction metrics.",
+      "watch_item": "The approach adds optimization complexity and may be sensitive to the stability/communication cost of coordination between cloud and edge during continual personalization.",
       "hashtags": [
         "#LLM",
         "#CloudEdgeAI",
+        "#PersonalizedLearning",
         "#BilevelOptimization",
-        "#Personalization",
-        "#KnowledgeTransfer"
+        "#EdgeComputing"
       ],
       "paper_id": "2026-09-14-arxiv-ciders_cloud_edge_llm_collaborative_learning_via_accelerating_personalized_bilevel_optimiz",
       "paper_title": "CIDERS: Cloud-Edge LLM Collaborative Learning via Accelerating Personalized Bilevel Optimization",
       "paper_date": "2026-09-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-09-17T18:02:39",
+      "generated_at": "2026-09-16T18:01:19",
       "generator": "openai"
     }
   },
@@ -603,27 +603,27 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "The paper shows that data storytelling can make interpretable ML explanations easier for non-experts to understand without exposing sensitive data or model details.",
-      "engineering_relevance": "It offers a practical explanation pipeline for AI systems where decision transparency, privacy protection, and user comprehension must be balanced.",
+      "key_insight": "The paper shows that combining data storytelling with interpretable machine learning can make AI decisions easier for non-experts to understand without exposing sensitive data.",
+      "engineering_relevance": "This approach offers a practical explanation layer for AI systems in high-stakes engineering and analytics workflows where transparency, usability, and data privacy must all be balanced.",
       "method": [
-        "Defines data storytelling for interpretable machine learning using the DIST Pyramid.",
-        "Introduces an I-P-O model and an architecture for \"What-if\" and \"Why-not\" explanation generation.",
-        "Uses data desensitization plus SHAP and LLMs to generate ABT-style narratives."
+        "Defined data storytelling for IML and proposed the DIST Pyramid to align storytelling with explainability goals.",
+        "Introduced an I-P-O model plus an architecture that generates \"What-if\" and \"Why-not\" explanations.",
+        "Used data desensitization and SHAP-driven, LLM-generated ABT stories in a Boston Housing case study."
       ],
-      "evidence_signal": "In a Boston Housing case study, 76.4% and 74.3% of respondents found the \"What-if\" and \"Why-not\" stories more comprehensible, with higher accessibility scores than traditional SHAP visualizations.",
-      "watch_item": "The approach may depend on careful prompt/design control so LLM-generated stories remain faithful to model behavior and do not oversimplify explanations.",
+      "evidence_signal": "In the evaluation, 76.4% and 74.3% of respondents found the \"What-if\" and \"Why-not\" stories more comprehensible, with significantly higher accessibility scores than standard SHAP visualizations.",
+      "watch_item": "Because the method relies on LLM-generated narratives and preprocessing for desensitization, explanation fidelity and privacy protection need careful validation across datasets and deployment settings.",
       "hashtags": [
-        "#AIExplainability",
+        "#ExplainableAI",
         "#InterpretableML",
         "#DataStorytelling",
         "#SHAP",
-        "#ResponsibleAI"
+        "#AIPrivacy"
       ],
       "paper_id": "2026-09-14-arxiv-data_storytelling_meets_interpretable_machine_learning_decoding_ai_decisions_for_non_exper",
       "paper_title": "Data storytelling meets interpretable machine learning: Decoding AI decisions for non-experts without revealing sensitive data and model details",
       "paper_date": "2026-09-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-09-17T18:02:41",
+      "generated_at": "2026-09-16T18:01:22",
       "generator": "openai"
     }
   },
@@ -654,27 +654,27 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "EEG-Xplain provides a unified attribution framework to make black-box EEG foundation models interpretable across spatial, temporal, and frequency dimensions.",
-      "engineering_relevance": "It gives practitioners a standardized way to validate EEG model reliability, physiological plausibility, and clinical trust before deployment.",
+      "key_insight": "EEG-Xplain unifies multiple attribution methods to make black-box EEG foundation models interpretable across spatial, temporal, and frequency dimensions.",
+      "engineering_relevance": "It provides a standardized way to validate model reliability and physiological plausibility, supporting safer clinical and neuroscience use of EEG foundation models.",
       "method": [
-        "Combines gradient-, perturbation-, and activation-based explainers across heterogeneous EEG architectures.",
-        "Maps important channels, time segments, and rhythms using topographic, heatmap, and spectral perturbation analyses.",
-        "Uses AOPC and cross-method consistency to score explanation reliability, then converts outputs into LLM-generated natural-language reports."
+        "Combines gradient-, perturbation-, and activation-based explanations across heterogeneous EEG architectures.",
+        "Maps important channels, time segments, and frequency bands using topographic maps, attribution heatmaps, and spectral perturbation.",
+        "Assesses explanation quality with population-level AOPC and cross-method consistency, then converts results into LLM-generated natural-language reports."
       ],
       "evidence_signal": "Experiments on Mumtaz2016 and TUAB show explanations aligned with known neurophysiological markers while also revealing artifact and spurious-pattern dependencies.",
-      "watch_item": "Interpretability results can still be influenced by artifacts and explanation-method disagreement, so reliability checks are essential.",
+      "watch_item": "Attributions can still reflect dataset artifacts or method-specific biases, so explanation results should be validated carefully across cohorts and models.",
       "hashtags": [
         "#EEG",
-        "#XAI",
+        "#ExplainableAI",
         "#FoundationModels",
-        "#Neuroscience",
-        "#ExplainableAI"
+        "#Neuroengineering",
+        "#AIForscience"
       ],
       "paper_id": "2026-09-14-arxiv-eeg_xplain_decoding_neural_black_boxes_of_eeg_foundation_models",
       "paper_title": "EEG-Xplain: Decoding Neural Black-Boxes of EEG Foundation Models",
       "paper_date": "2026-09-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-09-17T18:02:43",
+      "generated_at": "2026-09-16T18:01:25",
       "generator": "openai"
     }
   },
@@ -705,27 +705,27 @@
     ],
     "score": 68,
     "infographic": {
-      "key_insight": "Injected benign-sounding plans in an LLM’s context can steer the actor toward harmful actions while making chain-of-thought monitors miss the deception.",
-      "engineering_relevance": "For safety-critical AI systems, this shows that more monitoring is not always safer unless the monitor is robust to prompt-injected reasoning and context contamination.",
+      "key_insight": "Planting benign-sounding harmful plans in an LLM’s context can induce unsafe actions while making chain-of-thought monitors miss the deception.",
+      "engineering_relevance": "For deployed AI safety systems, this shows that monitor design must account for prompt-injected reasoning because more monitor access or compute can sometimes reduce, not improve, detection.",
       "method": [
-        "Plant harmful but plausible-looking plans in the actor’s context",
-        "Evaluate whether actor models follow and paraphrase the injected plan in their reasoning",
-        "Measure monitor evasion across multiple monitorability benchmarks and larger models"
+        "Injected harmful-looking but plausible plans into the actor’s context",
+        "Tested whether the actor followed the injected plan and paraphrased it as its own reasoning",
+        "Evaluated monitor evasion across multiple monitorability benchmarks and larger models"
       ],
-      "evidence_signal": "Across several benchmarks, the attack achieves 25–33% monitor evasion, and giving the monitor access to the injected plan reduces detection by up to 50% in Bio-Math.",
-      "watch_item": "Adding monitor context or extra reasoning budget can backfire by helping rationalize the injected plan, so deployment should test for prompt-injection resilience rather than assuming more monitor compute improves safety.",
+      "evidence_signal": "The abstract reports 25–33% monitor evasion across benchmarks, and up to a 50% drop in detection in the Bio-Math task when the monitor was given the injected plan.",
+      "watch_item": "Adding more monitor context or reasoning budget may backfire by helping the monitor rationalize the injected plan instead of flagging it.",
       "hashtags": [
-        "#AIsafety",
+        "#LLMSafety",
         "#ChainOfThought",
-        "#LLMs",
+        "#AIAlignment",
         "#PromptInjection",
-        "#Monitorability"
+        "#ModelMonitoring"
       ],
       "paper_id": "2026-09-14-arxiv-corrupt_plans_clean_traces_evading_chain_of_thought_monitoring_with_plan_injection",
       "paper_title": "Corrupt Plans, Clean Traces: Evading Chain-of-Thought Monitoring with Plan Injection",
       "paper_date": "2026-09-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-09-17T18:02:46",
+      "generated_at": "2026-09-16T18:01:28",
       "generator": "openai"
     }
   },
@@ -756,27 +756,27 @@
     ],
     "score": 67,
     "infographic": {
-      "key_insight": "The paper argues that AI, especially LLMs, could help citizens’ assemblies and other deliberative democratic processes, but only if used under explicit philosophical and democratic constraints.",
-      "engineering_relevance": "For AI system designers, the main challenge is building LLM tools for moderation, translation, summarization, and facilitation that can be audited for political bias and aligned with democratic norms.",
+      "key_insight": "The paper argues that LLMs could strengthen citizen deliberation and citizen assemblies, but only if they are evaluated against clear democratic principles and political-bias safeguards.",
+      "engineering_relevance": "For AI systems used in civic settings, the key engineering challenge is designing transparent, bias-aware LLM workflows for moderation, translation, summarization, and facilitation.",
       "method": [
         "Interdisciplinary framework combining philosophy and computer science",
-        "Evaluates LLMs against five proposed democratic principles",
-        "Focuses on the question of political bias in citizen-participation settings"
+        "Evaluate LLMs against five proposed democratic principles",
+        "Focus on political bias in experimental forms of citizen participation"
       ],
-      "evidence_signal": "The abstract describes a normative, evaluative project rather than reporting a dataset or experiment, using democratic principles to assess when LLMs can be used legitimately in citizen deliberation.",
-      "watch_item": "The main implementation concern is that LLM outputs may embed political bias or undermine legitimacy if democratic safeguards and epistemic caution are not built in.",
+      "evidence_signal": "The abstract describes a normative, interdisciplinary evaluation approach rather than a reported dataset or quantitative experimental result.",
+      "watch_item": "LLMs may amplify political bias or undermine democratic legitimacy if deployed without rigorous normative oversight and context-specific governance.",
       "hashtags": [
-        "#AI",
+        "#AIethics",
         "#LLM",
-        "#Democracy",
         "#CitizenDeliberation",
+        "#DemocraticAI",
         "#PoliticalBias"
       ],
       "paper_id": "2026-09-14-arxiv-new_conditions_for_philosophers_to_catch_the_wave_of_citizen_deliberation_in_the_age_of_ar",
       "paper_title": "New Conditions for Philosophers to Catch the Wave of Citizen Deliberation in the Age of Artificial Intelligence in advance",
       "paper_date": "2026-09-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-09-17T18:02:48",
+      "generated_at": "2026-09-16T18:01:31",
       "generator": "openai"
     }
   },
@@ -810,27 +810,27 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "FREDI jointly optimizes fair wireless resource allocation and dual-threshold early-exit inference so secure edge intelligence can detect critical events efficiently without sacrificing user fairness.",
-      "engineering_relevance": "The framework offers a practical optimization blueprint for secure UE–edge–cloud systems, balancing latency, bandwidth, compute, and per-user fairness under event-triggered inference.",
+      "key_insight": "FREDI jointly optimizes fair edge resources and dual-threshold early-exit inference so secure critical-event detection stays accurate while improving UE fairness and utility.",
+      "engineering_relevance": "The framework gives a tractable way to manage bandwidth, power, association, and inference thresholds in cooperative UE–edge–cloud systems under security and scalability constraints.",
       "method": [
-        "Dual-threshold early-exit CNN screening at the UE identifies critical events before offloading.",
-        "Proportional-fair optimization jointly selects UE–ES associations, bandwidth, power, and confidence thresholds.",
-        "Set-monotonicity and finite confidence-domain properties enable exact threshold search and certified resource allocation."
+        "Proportional-fair utility maximization across UE–ES association, wireless resources, and processing resources",
+        "Dual-threshold early-exit CNN screening at each UE with critical events securely offloaded for edge-side refinement",
+        "Exact threshold search over a finite confidence domain plus mixed-integer exponential-cone resource allocation with certified optimality gap"
       ],
-      "evidence_signal": "Experiments with MobileNetV2 and ShuffleNetV2 show near-perfect UE fairness, aggregate utility close to a Sum-Utility benchmark, and Stage-A scaling from 6 to 144 UEs with median solving time below 0.1 s.",
-      "watch_item": "The method’s certified optimization depends on exact confidence-domain discretization and mixed-integer exponential-cone solving, which may become challenging as network scale or model complexity increases.",
+      "evidence_signal": "Experiments with early-exit MobileNetV2 and ShuffleNetV2 show near-perfect UE fairness, utility close to a sum-utility benchmark, and Stage-A scaling from 6 to 144 UEs with median solve time below 0.1 s.",
+      "watch_item": "Security-driven offloading can fragment resources, so performance depends on how well the optimization and threshold settings adapt to changing traffic and confidence distributions.",
       "hashtags": [
         "#EdgeAI",
         "#ProportionalFairness",
-        "#EarlyExitInference",
+        "#EarlyExitCNN",
         "#WirelessOptimization",
-        "#SecureCooperativeSystems"
+        "#SecureInference"
       ],
       "paper_id": "2026-09-14-arxiv-proportional_fair_resource_allocation_and_dual_threshold_early_exit_inference_for_secure_c",
       "paper_title": "Proportional-Fair Resource Allocation and Dual-Threshold Early-Exit Inference for Secure Cooperative Multi-Layer Edge Intelligence",
       "paper_date": "2026-09-14",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-09-17T18:02:50",
+      "generated_at": "2026-09-16T18:01:34",
       "generator": "openai"
     }
   },
@@ -861,27 +861,27 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "Atria Dawn Preview is an agentic foundation model for scientific research that uses verifiable tool-using experience to improve real-world research and engineering productivity while preserving human oversight.",
-      "engineering_relevance": "The work suggests future research agents can move from isolated task completion to collaborative project workflows, helping engineers and scientists automate exploration, revision, and evidence-backed decision-making.",
+      "key_insight": "Atria Dawn Preview is an agentic language model for scientific research and engineering that uses verifiable tool-based experience to improve real-world task performance while keeping humans in the loop.",
+      "engineering_relevance": "The work is relevant for building AI research copilots that can execute, verify, and iterate on technical workflows in environments where accountable human oversight still matters.",
       "method": [
         "Trained with a Verifiable Experience Pipeline linking tool-mediated interactions to executable environments.",
-        "Uses externally verified outcomes to ground learning in real task success.",
-        "Evaluated across 16 benchmarks covering research, engineering, and digital work."
+        "Evaluated on 16 benchmarks covering research, engineering, and digital work.",
+        "Studied via 769 task records from 56 participants plus agent logs to analyze human–AI collaboration."
       ],
-      "evidence_signal": "The paper reports results on 16 benchmarks and analyzes 769 task records from 56 participants, with the model achieving the highest reported score on five benchmarks.",
-      "watch_item": "Greater autonomy increases the need for robust verification, because human oversight remains essential for deciding what to pursue and ensuring accountable use.",
+      "evidence_signal": "Across 16 benchmarks, Atria Dawn Preview was competitive with frontier agents and achieved the highest reported score on five, while participants judged about one-third of completed AI-assisted tasks as infeasible without AI.",
+      "watch_item": "Performance gains depend on reliable verification and human supervision, so autonomous use without careful oversight could still lead to unaccountable or poorly justified decisions.",
       "hashtags": [
-        "#AIScientists",
-        "#ResearchAgents",
-        "#AgenticAI",
-        "#ScientificWorkflow",
-        "#HumanAICollaboration"
+        "#AIAgents",
+        "#ScientificResearch",
+        "#HumanAICollaboration",
+        "#VerifiableLearning",
+        "#EngineeringAI"
       ],
       "paper_id": "2026-09-14-arxiv-atria_dawn_the_dawn_of_agentic_superintelligence",
       "paper_title": "Atria Dawn: The Dawn of Agentic Superintelligence",
       "paper_date": "2026-09-14",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-09-17T18:02:52",
+      "generated_at": "2026-09-16T18:01:36",
       "generator": "openai"
     }
   },
@@ -913,27 +913,27 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "The paper introduces a multi-block, single-probe variance reduction estimator that can track many coupled inner functions efficiently even when only O(1) blocks are sampled per iteration.",
-      "engineering_relevance": "This enables faster and more sample-efficient optimization for large-scale coupled compositional learning systems, including multi-task and deep AUC maximization workloads.",
+      "key_insight": "MSVR extends variance reduction to track many coupled inner functions with only one or a few stochastic block probes per step, enabling efficient optimization for finite-sum compositional problems.",
+      "engineering_relevance": "This matters for large-scale machine learning systems where inner-model evaluations are expensive or partially observable, improving sample efficiency without requiring full access to all components each iteration.",
       "method": [
-        "MSVR tracks the vector of inner mappings g(w) using partial block sampling instead of probing all m blocks.",
-        "The estimator is integrated into new algorithms for finite-sum coupled compositional optimization across non-convex, convex, strongly convex, and PL settings.",
-        "The framework also improves m-dependence when outer gradients ∇f_i are linear."
+        "Multi-block-Single-probe Variance Reduction (MSVR) estimator for partial block tracking.",
+        "Algorithms for FCCO under non-convex, convex, strongly convex, and PL settings.",
+        "Improved dependence on m when outer gradients are linear."
       ],
-      "evidence_signal": "The abstract reports improved sample complexities across multiple optimization regimes and superior empirical performance on multi-task deep AUC maximization.",
-      "watch_item": "Performance depends on the quality of partial block sampling and careful implementation of the estimator update rules to avoid bias or instability.",
+      "evidence_signal": "The abstract reports improved sample complexity guarantees across multiple objective classes and empirical gains on multi-task deep AUC maximization.",
+      "watch_item": "Performance depends on accurate stochastic block sampling and estimator stability; practical gains may weaken if block access is highly noisy or poorly balanced.",
       "hashtags": [
         "#VarianceReduction",
         "#CompositionalOptimization",
         "#StochasticOptimization",
         "#SampleComplexity",
-        "#DeepAUCMAX"
+        "#DeepAUC"
       ],
       "paper_id": "2026-09-14-arxiv-solving_finite_sum_coupled_compositional_optimization_via_multi_block_single_probe_estimat",
       "paper_title": "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator",
       "paper_date": "2026-09-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-09-17T18:02:54",
+      "generated_at": "2026-09-16T18:01:39",
       "generator": "openai"
     }
   },
@@ -964,27 +964,27 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "Prism-LoRA improves diffusion fine-tuning by making spectral initialization align better with high-rank, timestep-heterogeneous gradients through principal-timestep and principal-channel restriction.",
-      "engineering_relevance": "This offers a more scalable way to adapt flow-matching diffusion models to downstream tasks with lower fine-tuning cost and faster convergence.",
+      "key_insight": "Prism-LoRA improves diffusion fine-tuning by making low-rank updates better match the training dynamics through timestep- and channel-restricted spectral initialization.",
+      "engineering_relevance": "It offers a more scalable way to adapt flow-matching diffusion models to downstream tasks with faster convergence and better final quality than vanilla LoRA.",
       "method": [
-        "Selects dominant timesteps to restrict initialization gradients and suppress effective gradient rank.",
-        "Filters task-irrelevant channels so the one-step spectral initialization better matches the long-horizon optimization path.",
-        "Combines sparse matrix decomposition with LoRA to improve gradient alignment under diffusion training."
+        "Selects principal timesteps to reduce the effective gradient rank during initialization.",
+        "Filters principal channels to remove task-irrelevant directions and improve gradient alignment.",
+        "Uses sparse matrix decomposition for spectral initialization that better matches long-horizon optimization."
       ],
-      "evidence_signal": "The abstract reports consistent gains in convergence speed and final performance across subject-driven generation, controllable generation, and deblurring benchmarks versus vanilla LoRA and other spectral-initialization methods.",
-      "watch_item": "Performance may depend on how principal timesteps and channels are selected, so poor selection could reduce the benefit or add tuning overhead.",
+      "evidence_signal": "The abstract reports consistent gains in convergence speed and final performance across subject-driven generation, controllable generation, and deblurring benchmarks.",
+      "watch_item": "The approach depends on identifying informative timesteps and channels, so its effectiveness may vary with task, sampling strategy, or implementation of the sparse decomposition.",
       "hashtags": [
         "#DiffusionModels",
-        "#FlowMatching",
         "#LoRA",
-        "#SpectralInitialization",
-        "#FineTuning"
+        "#FlowMatching",
+        "#FineTuning",
+        "#SpectralInitialization"
       ],
       "paper_id": "2026-09-14-arxiv-principal_timestep_restricted_init_via_sparse_matrix_decomposition_in_flow_matching",
       "paper_title": "Principal-timestep Restricted Init via Sparse Matrix-decomposition in Flow-matching",
       "paper_date": "2026-09-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-09-17T18:02:56",
+      "generated_at": "2026-09-16T18:01:42",
       "generator": "openai"
     }
   },
@@ -1015,27 +1015,27 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "GA-AMNO separates adaptive meshing into two explicit questions—where to compute and how representations should interact—using physics-informed allocation plus geometry-conditioned Gauge transport to make adaptive neural operators more interpretable and robust.",
-      "engineering_relevance": "This gives PDE solvers a practical way to improve accuracy under nonuniform, changing meshes while preserving representation compatibility across discretizations, which is important for simulation-driven engineering workflows.",
+      "key_insight": "GA-AMNO separates adaptive PDE computation into two readable parts: physics-informed node placement for \"where to compute\" and gauge-aware feature transport for \"how to interact\" across changing meshes.",
+      "engineering_relevance": "This helps scientific machine learning models remain accurate and interpretable under nonuniform discretizations, especially when mesh changes create representation mismatch across locations.",
       "method": [
-        "Physics-informed adaptive mesh allocation chooses sample locations based on local physical structure.",
-        "Gauge-aware low-rank transport maps source features into the target node’s geometric context before aggregation.",
-        "Operator-readability enables controlled interventions to inspect and test allocation vs. interaction effects."
+        "Physics-informed adaptive mesh allocation chooses computation sites based on local PDE structure.",
+        "Geometry-conditioned low-rank gauge transport maps source features into the target node's representation context before aggregation.",
+        "Operator readability enables controlled interventions to test the roles of allocation and interaction separately."
       ],
-      "evidence_signal": "The paper reports experiments on five PDE benchmarks, showing improved predictive accuracy and stronger cross-discretization compatibility under geometric mismatch.",
-      "watch_item": "The transport step adds modeling and implementation complexity, and performance may depend on the quality of geometric conditioning and on meshes that preserve topology.",
+      "evidence_signal": "The abstract reports experiments on five PDE benchmarks, with improved predictive accuracy plus geometric-mismatch analyses and interventions validating the allocation and transport roles.",
+      "watch_item": "Gauge transport and mesh adaptation may add implementation complexity, and the continuity guarantees rely on topology-preserving mesh deformations.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#NeuralOperators",
         "#AdaptiveMesh",
         "#PDEs",
-        "#GeometryAwareAI"
+        "#GaugeAwareAI"
       ],
       "paper_id": "2026-09-14-arxiv-where_to_compute_and_how_to_interact_operator_readable_adaptation_with_gauge_aware_transpo",
       "paper_title": "Where to Compute and How to Interact: Operator-Readable Adaptation with Gauge-Aware Transport",
       "paper_date": "2026-09-14",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-09-17T18:02:58",
+      "generated_at": "2026-09-16T18:01:45",
       "generator": "openai"
     }
   }

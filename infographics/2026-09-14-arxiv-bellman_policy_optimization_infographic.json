@@ -1,24 +1,24 @@
 {
-  "key_insight": "Bellman Policy Optimization (BPO) turns Policy Mirror Descent for RL with terminal rewards into a trajectory-level objective, eliminating the need to estimate intermediate state values.",
-  "engineering_relevance": "This makes reinforcement learning from verifiable rewards more practical for LLM training by reducing critic complexity while preserving the same optimal solution as the original PMD objective.",
+  "key_insight": "Bellman Policy Optimization (BPO) turns policy mirror descent for terminal-reward LLM reinforcement learning into a critic-free trajectory-level objective using Bellman equations, avoiding intermediate value estimation while preserving the same optimal solution.",
+  "engineering_relevance": "BPO offers a simpler and potentially more stable RLVR training recipe for reasoning LLMs by removing the need for a value critic and using a token-probability-based mismatch correction weight.",
   "method": [
-    "Derive a trajectory-level objective from the Bellman equations for autoregressive generation with terminal rewards",
-    "Avoid intermediate state-value estimation by using a critic-free formulation",
-    "Use a practical loss with a mismatch-correction weight based on a smoothed ratio of complementary token probabilities"
+    "Derive BPO from Policy Mirror Descent via Bellman equations for autoregressive sequences with terminal rewards.",
+    "Replace state-value estimation at intermediate steps with a trajectory-level objective.",
+    "Approximate the resulting objective to obtain a practical loss whose correction weight is a smoothed ratio of complementary token probabilities."
   ],
-  "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks showing that BPO is effective for improving reasoning performance.",
-  "watch_item": "The practical loss is an approximation, so performance may depend on how well the mismatch-correction weighting is calibrated during training.",
+  "evidence_signal": "The abstract reports experiments on mathematical reasoning benchmarks showing that BPO is effective for improving LLM reasoning performance.",
+  "watch_item": "Because the practical loss relies on an approximation and a smoothed token-probability ratio, training stability and sensitivity to implementation details may matter.",
   "hashtags": [
     "#ReinforcementLearning",
-    "#LLMs",
+    "#LargeLanguageModels",
     "#PolicyOptimization",
-    "#ReasoningModels",
+    "#MathReasoning",
     "#AIResearch"
   ],
   "paper_id": "2026-09-14-arxiv-bellman_policy_optimization",
   "paper_title": "Bellman Policy Optimization",
   "paper_date": "2026-09-14",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-09-16T18:01:01",
+  "generated_at": "2026-09-17T18:02:26",
   "generator": "openai"
 }
