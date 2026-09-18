@@ -1,17 +1,17 @@
 {
-  "key_insight": "Prism-LoRA improves diffusion fine-tuning by making spectral initialization align better with high-rank, timestep-heterogeneous gradients through principal-timestep and principal-channel restriction.",
-  "engineering_relevance": "This offers a more scalable way to adapt flow-matching diffusion models to downstream tasks with lower fine-tuning cost and faster convergence.",
+  "key_insight": "Prism-LoRA improves diffusion fine-tuning by making sparse spectral initialization better match the high-rank, timestep-varying gradients of flow-matching models.",
+  "engineering_relevance": "It offers a more scalable way to adapt diffusion generators for downstream tasks with faster convergence and better final quality than vanilla LoRA.",
   "method": [
-    "Selects dominant timesteps to restrict initialization gradients and suppress effective gradient rank.",
-    "Filters task-irrelevant channels so the one-step spectral initialization better matches the long-horizon optimization path.",
-    "Combines sparse matrix decomposition with LoRA to improve gradient alignment under diffusion training."
+    "Selects principal timesteps to constrain initialization to dominant gradient directions.",
+    "Filters principal channels to remove task-irrelevant features before spectral init.",
+    "Uses sparse matrix decomposition to align one-step initialization with long-horizon training dynamics."
   ],
-  "evidence_signal": "The abstract reports consistent gains in convergence speed and final performance across subject-driven generation, controllable generation, and deblurring benchmarks versus vanilla LoRA and other spectral-initialization methods.",
-  "watch_item": "Performance may depend on how principal timesteps and channels are selected, so poor selection could reduce the benefit or add tuning overhead.",
+  "evidence_signal": "The abstract reports consistent gains in convergence speed and final performance across subject-driven generation, controllable generation, and deblurring benchmarks versus baseline LoRA and other spectral-initialization methods.",
+  "watch_item": "The approach depends on timestep and channel selection quality, so poor selection or added tuning complexity could reduce the expected gains.",
   "hashtags": [
     "#DiffusionModels",
-    "#FlowMatching",
     "#LoRA",
+    "#FlowMatching",
     "#SpectralInitialization",
     "#FineTuning"
   ],
@@ -19,6 +19,6 @@
   "paper_title": "Principal-timestep Restricted Init via Sparse Matrix-decomposition in Flow-matching",
   "paper_date": "2026-09-14",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-09-17T18:02:56",
+  "generated_at": "2026-09-18T17:36:04",
   "generator": "openai"
 }

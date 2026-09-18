@@ -1,24 +1,24 @@
 {
-  "key_insight": "VideoScout reframes long video understanding as sequential evidence acquisition, using adaptive multi-turn pacing so an agent can inspect more of a long video while preserving bounded context and answering only after collecting decisive evidence.",
-  "engineering_relevance": "The method offers a practical agent design pattern for long-context multimodal systems, combining adaptive sampling, revisiting uncertain segments, and stop/answer control to improve efficiency and reliability in long video analytics.",
+  "key_insight": "VideoScout treats long video understanding as sequential evidence acquisition, using adaptive multi-turn pacing to decide what to watch, retain, revisit, and when to stop and answer.",
+  "engineering_relevance": "The approach offers a practical agent design for long-context multimodal systems, improving coverage of long videos while respecting limited visual context windows.",
   "method": [
-    "Sequential Evidence Acquisition (SEA): read the video turn by turn, deciding pace, retention, revisits, and stopping points.",
-    "Train on VideoScout-66K with 66K exploration turns from 10K answer-verified trajectories.",
-    "Use a two-stage pipeline: supervised cold-start formatting, then trajectory-level RL with decoupled clip and dynamic sampling policy optimization (DAPO)."
+    "Builds a multi-turn exploration agent with adaptive viewing pace over the temporal axis.",
+    "Trains on VideoScout-66K, containing 66K+ exploration turns from 10K answer-verified trajectories.",
+    "Uses supervised cold-start tuning followed by trajectory-level RL with DAPO and a composite reward for accuracy, format compliance, and timing alignment (IoU)."
   ],
-  "evidence_signal": "The abstract reports evaluation on long video understanding and reasoning benchmarks, where the 7B model performs strongly against existing trained 7B agentic models, and training includes answer accuracy, format compliance, and temporal IoU alignment rewards.",
-  "watch_item": "A key implementation concern is reward design and teacher-timing alignment: the approach may be sensitive to how temporal IoU and sampling policy are defined, especially when decisive evidence is sparse or ambiguously timed.",
+  "evidence_signal": "The abstract reports extensive evaluation on long video understanding and reasoning benchmarks, where the 7B model outperforms existing trained 7B agentic models.",
+  "watch_item": "The method depends on accurate teacher timing signals and reward shaping, so performance may be sensitive to noisy temporal alignment or annotation quality.",
   "hashtags": [
     "#LongVideoUnderstanding",
     "#MultimodalLLM",
-    "#AgenticAI",
+    "#AgenticReasoning",
     "#ReinforcementLearning",
-    "#VideoReasoning"
+    "#VideoAnalysis"
   ],
   "paper_id": "2026-09-14-arxiv-videoscout_learning_agentic_active_exploration_with_adaptive_reasoning_pacing_for_long_vid",
   "paper_title": "VideoScout: Learning Agentic Active Exploration with Adaptive Reasoning Pacing for Long Video Understanding",
   "paper_date": "2026-09-14",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-09-17T18:02:18",
+  "generated_at": "2026-09-18T17:35:21",
   "generator": "openai"
 }
