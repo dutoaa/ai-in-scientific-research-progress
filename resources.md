@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-18
+Generated: 2026-09-19
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Assembling the CREW: A Collaborative Multi-agent Reinforcement Learning Framework for Automated Related Work Generation
