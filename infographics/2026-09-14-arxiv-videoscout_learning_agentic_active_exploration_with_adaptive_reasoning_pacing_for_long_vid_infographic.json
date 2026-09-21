@@ -1,24 +1,24 @@
 {
-  "key_insight": "VideoScout reframes long video understanding as sequential evidence acquisition, letting an agent adapt its viewing pace, revisit uncertainty, and stop when enough evidence is gathered.",
-  "engineering_relevance": "The approach offers a practical way to extend long-video reasoning under a fixed visual context window by trading off exploration depth and efficiency through adaptive pacing.",
+  "key_insight": "VideoScout reframes long video understanding as sequential evidence acquisition, using adaptive pacing to decide how quickly to read, what to keep, when to revisit, and when to answer.",
+  "engineering_relevance": "The method offers a practical agent design for long-horizon multimodal systems by expanding usable context coverage without requiring larger visual windows.",
   "method": [
-    "Builds a multi-turn agent that controls how fast to read video segments and what evidence to keep.",
-    "Trains on VideoScout-66K using supervised cold start, then trajectory-level RL with DAPO.",
-    "Uses a composite reward for answer accuracy, format compliance, and temporal alignment between agent progress and teacher answer timing."
+    "Multi-turn agent that controls viewing pace over the temporal axis",
+    "Two-stage training: supervised cold-start formatting, then trajectory-level RL with DAPO",
+    "Composite reward balances answer accuracy, format compliance, and timing alignment via IoU"
   ],
-  "evidence_signal": "The paper reports experiments on long video understanding and reasoning benchmarks, with a 7B model showing strong performance against existing trained 7B agentic models.",
-  "watch_item": "The method depends on high-quality temporal supervision and reward design, so performance may be sensitive to alignment quality and the cost of generating exploration trajectories.",
+  "evidence_signal": "The paper reports training on VideoScout-66K, built from over 66K exploration turns and 10K answer-verified trajectories, and evaluates a 7B model on long-video understanding and reasoning benchmarks.",
+  "watch_item": "Performance may depend on the quality of timing-alignment rewards and trajectory labels, so weak teacher timing or noisy exploration traces could limit robustness.",
   "hashtags": [
     "#LongVideoUnderstanding",
     "#MultimodalLLM",
     "#AgenticReasoning",
-    "#VideoAnalysis",
-    "#ReinforcementLearning"
+    "#ReinforcementLearning",
+    "#VideoQuestionAnswering"
   ],
   "paper_id": "2026-09-14-arxiv-videoscout_learning_agentic_active_exploration_with_adaptive_reasoning_pacing_for_long_vid",
   "paper_title": "VideoScout: Learning Agentic Active Exploration with Adaptive Reasoning Pacing for Long Video Understanding",
   "paper_date": "2026-09-14",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-09-20T17:20:54",
+  "generated_at": "2026-09-21T19:09:32",
   "generator": "openai"
 }
