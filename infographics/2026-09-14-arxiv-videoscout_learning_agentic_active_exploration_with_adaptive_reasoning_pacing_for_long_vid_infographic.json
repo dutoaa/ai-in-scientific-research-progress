@@ -1,24 +1,24 @@
 {
-  "key_insight": "VideoScout reframes long video understanding as sequential evidence acquisition, using adaptive pacing to decide how quickly to read, what to keep, when to revisit, and when to answer.",
-  "engineering_relevance": "The method offers a practical agent design for long-horizon multimodal systems by expanding usable context coverage without requiring larger visual windows.",
+  "key_insight": "VideoScout treats long video understanding as sequential evidence acquisition, letting an agent dynamically adjust viewing pace, revisit uncertain segments, and stop when enough evidence is collected.",
+  "engineering_relevance": "The method improves long-video reasoning under a bounded visual context window, offering a practical agent design for scalable video analysis in systems where compute and context length are constrained.",
   "method": [
-    "Multi-turn agent that controls viewing pace over the temporal axis",
-    "Two-stage training: supervised cold-start formatting, then trajectory-level RL with DAPO",
-    "Composite reward balances answer accuracy, format compliance, and timing alignment via IoU"
+    "Multi-turn agent reads videos temporally with adaptive pacing instead of uniform frame sampling.",
+    "Trained on VideoScout-66K via supervised cold start, then trajectory-level RL with DAPO.",
+    "Reward combines answer accuracy, format compliance, and temporal alignment to teacher answer timing (IoU)."
   ],
-  "evidence_signal": "The paper reports training on VideoScout-66K, built from over 66K exploration turns and 10K answer-verified trajectories, and evaluates a 7B model on long-video understanding and reasoning benchmarks.",
-  "watch_item": "Performance may depend on the quality of timing-alignment rewards and trajectory labels, so weak teacher timing or noisy exploration traces could limit robustness.",
+  "evidence_signal": "The abstract reports extensive evaluation on long-video understanding and reasoning benchmarks, with a 7B model outperforming existing trained 7B agentic models.",
+  "watch_item": "The approach depends on high-quality turn-level trajectories and timing-aligned supervision, which may be costly to collect and could limit transfer to domains with weaker teacher signals.",
   "hashtags": [
     "#LongVideoUnderstanding",
     "#MultimodalLLM",
     "#AgenticReasoning",
     "#ReinforcementLearning",
-    "#VideoQuestionAnswering"
+    "#VideoAnalysis"
   ],
   "paper_id": "2026-09-14-arxiv-videoscout_learning_agentic_active_exploration_with_adaptive_reasoning_pacing_for_long_vid",
   "paper_title": "VideoScout: Learning Agentic Active Exploration with Adaptive Reasoning Pacing for Long Video Understanding",
   "paper_date": "2026-09-14",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-09-21T19:09:32",
+  "generated_at": "2026-09-22T18:00:11",
   "generator": "openai"
 }

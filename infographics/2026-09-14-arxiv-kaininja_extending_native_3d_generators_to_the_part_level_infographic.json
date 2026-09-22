@@ -1,24 +1,24 @@
 {
-  "key_insight": "KaiNinja extends a native single-object 3D generator to produce part-level assets by replacing the fused O-Voxel representation with a dual-volume form that can represent part interfaces without a separate segmenter.",
-  "engineering_relevance": "This enables fast, mask-free generation of editable, riggable, and simulation-ready 3D parts while preserving the quality and speed of the underlying TRELLIS.2 backbone.",
+  "key_insight": "KaiNinja extends a native 3D generator from producing one fused object to producing part-level 3D assets by using a dual-volume representation that can model touching part interfaces.",
+  "engineering_relevance": "This enables faster, mask-free part-aware generation for downstream workflows like editing, rigging, and simulation while preserving the quality and speed of the original generator.",
   "method": [
-    "Build on TRELLIS.2's O-Voxel generator with a dual-volume representation to encode touching parts separately.",
-    "Train on mixed part-level data, including CAD models and LLM-agent-authored assets.",
-    "Generate part-level 3D directly, avoiding post-hoc segmentation or mask prediction."
+    "Replace the single O-Voxel volume with a dual-volume form to represent adjacent parts without losing boundary detail.",
+    "Build the model as an extension of TRELLIS.2, keeping native 3D generation and avoiding a separate segmentation stage.",
+    "Train on mixed part-level data, including CAD models and agent-authored assets."
   ],
-  "evidence_signal": "The abstract reports improved whole-object fidelity and part accuracy, including 40% lower Chamfer distance and 16% higher strict part F-score versus other part generation pipelines.",
-  "watch_item": "A dual-volume approach adds representation complexity, so practical performance may depend on robust training data coverage for fine part interfaces and contact regions.",
+  "evidence_signal": "The abstract reports a 40% lower whole-object Chamfer distance and a 16% higher strict part F-score versus part-generation pipelines, with the surprising result that whole-object fidelity also improves over the same backbone fine-tuned on the same data.",
+  "watch_item": "The dual-volume design is meant to overcome the single-surface-per-voxel limitation, but its practical robustness may depend on data diversity and how well it generalizes beyond the training asset types.",
   "hashtags": [
-    "#ScientificMachineLearning",
     "#3DGeneration",
-    "#PartLevel3D",
-    "#CAD",
-    "#GeometryLearning"
+    "#PartLevelModeling",
+    "#ScientificMachineLearning",
+    "#MeshGeneration",
+    "#ComputerVision"
   ],
   "paper_id": "2026-09-14-arxiv-kaininja_extending_native_3d_generators_to_the_part_level",
   "paper_title": "Kaininja: Extending Native 3D Generators to the Part Level",
   "paper_date": "2026-09-14",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-09-21T19:09:45",
+  "generated_at": "2026-09-22T18:00:24",
   "generator": "openai"
 }

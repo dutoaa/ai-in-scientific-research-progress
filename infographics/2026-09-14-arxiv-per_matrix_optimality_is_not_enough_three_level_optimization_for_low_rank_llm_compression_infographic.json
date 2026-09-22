@@ -1,24 +1,24 @@
 {
-  "key_insight": "A three-level optimization chain—matrix SVD, block-level joint refinement, and end-to-end loss tuning—beats independent per-matrix compression because local optimality does not prevent nonlinear error accumulation in Transformer blocks.",
-  "engineering_relevance": "This offers a practical low-rank LLM compression recipe that can improve perplexity at high compression rates using only a small calibration set and no instruction or recovery data.",
+  "key_insight": "A three-level optimization pipeline outperforms per-matrix SVD truncation by jointly refining compressed weights at the matrix, block, and full-model levels.",
+  "engineering_relevance": "For low-rank LLM compression, optimizing only each matrix is insufficient; block- and model-level refinement can dramatically improve perplexity at the same compression ratio.",
   "method": [
-    "Whiten each matrix and apply truncated SVD (L1).",
-    "Jointly optimize compressed matrices within each Transformer block (L2).",
-    "Refine the compressed model end-to-end on language modeling loss (L3)."
+    "L1: whitened SVD truncation on individual matrices",
+    "L2: joint optimization within Transformer blocks to regularize compounded errors",
+    "L3: end-to-end language-model loss refinement using only 256 calibration sequences"
   ],
-  "evidence_signal": "On LLaMA-7B at 60% compression, WikiText-2 perplexity improved from 42.1 to 19.1 to 11.4 across the three stages, with results reported on 256 calibration sequences and tests across 20–80% compression and multiple model families.",
-  "watch_item": "The reported gains are primarily perplexity/compression-fidelity improvements; downstream task accuracy remains below the dense model, and cross-architecture results use architecture-specific settings.",
+  "evidence_signal": "On LLaMA-7B at 60% compression, WikiText-2 perplexity improved from 42.1 after L1 to 19.1 after L2 and 11.4 after L3, with gains reported across 20-80% compression and up to 13B parameters.",
+  "watch_item": "Reported gains are primarily in perplexity/compression fidelity; downstream task accuracy remains well below the dense model, and cross-architecture results use architecture-specific settings rather than one common protocol.",
   "hashtags": [
     "#LLMCompression",
-    "#LowRankApproximation",
     "#SVD",
-    "#TransformerOptimization",
-    "#ModelEfficiency"
+    "#LowRankApproximation",
+    "#ModelOptimization",
+    "#Perplexity"
   ],
   "paper_id": "2026-09-14-arxiv-per_matrix_optimality_is_not_enough_three_level_optimization_for_low_rank_llm_compression",
   "paper_title": "Per-Matrix Optimality Is Not Enough: Three-Level Optimization for Low-Rank LLM Compression",
   "paper_date": "2026-09-14",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-09-21T19:09:40",
+  "generated_at": "2026-09-22T18:00:20",
   "generator": "openai"
 }
