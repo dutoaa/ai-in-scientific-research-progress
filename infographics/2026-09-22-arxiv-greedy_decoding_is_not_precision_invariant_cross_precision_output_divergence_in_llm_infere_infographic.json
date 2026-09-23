@@ -1,0 +1,24 @@
+{
+  "key_insight": "Greedy decoding in LLMs is not fully deterministic: the same prompt and model can produce different outputs in BF16 versus FP16 because tiny precision changes can flip the top token and cascade through generation.",
+  "engineering_relevance": "Inference systems that assume precision-invariant greedy decoding may see reproducibility failures; selective FP32 recomputation of the LM head can improve agreement with low latency cost in small-batch settings.",
+  "method": [
+    "Compared BF16 vs FP16 greedy decoding on identical hardware across 6 models, 3 benchmarks, and up to 12B parameters",
+    "Analyzed error propagation to relate output flips to top-2 logit margin versus directional perturbation at the LM head",
+    "Tested a selective FP32 LM-head recomputation trigger when the margin falls below a threshold"
+  ],
+  "evidence_signal": "Across the evaluated models and benchmarks, 49-100% of prompts diverged across precisions, and the best mitigation improved exact agreement by +22-36 percentage points on A10G with under 4% latency overhead at batch size ≤4.",
+  "watch_item": "The mitigation is not universal: its benefit declines when body-layer error dominates, especially at batch size ≥8 and under end-to-end FP8.",
+  "hashtags": [
+    "#LLMInference",
+    "#PrecisionStability",
+    "#GreedyDecoding",
+    "#FP16",
+    "#BF16"
+  ],
+  "paper_id": "2026-09-22-arxiv-greedy_decoding_is_not_precision_invariant_cross_precision_output_divergence_in_llm_infere",
+  "paper_title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
+  "paper_date": "2026-09-22",
+  "paper_category": "Scientific Discovery",
+  "generated_at": "2026-09-23T18:20:10",
+  "generator": "openai"
+}
