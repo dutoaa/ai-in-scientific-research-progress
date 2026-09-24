@@ -1,17 +1,17 @@
 {
-  "key_insight": "Transferring a PRNG’s full internal state does not guarantee identical random streams across software libraries, even when they claim to implement the same algorithm.",
-  "engineering_relevance": "For reproducible scientific machine learning, engineers must verify PRNG fidelity at the implementation level rather than assuming state portability across frameworks.",
+  "key_insight": "Reproducible AI depends not just on PRNG seeds, but on matching the exact internal state and implementation across software libraries.",
+  "engineering_relevance": "For scientific ML pipelines, cross-library randomness can silently break experiment reproducibility, so state portability and algorithm fidelity must be verified explicitly.",
   "method": [
-    "Compared Mersenne Twister and Philox across Random, NumPy, PyTorch, and TensorFlow.",
-    "Initialized each implementation from equivalent internal states and compared generated sequences to reference algorithms.",
-    "Assessed cross-library output fidelity under identical initialization conditions."
+    "Compared Mersenne Twister and Philox implementations.",
+    "Tested four Python ecosystems: Random, NumPy, PyTorch, and TensorFlow.",
+    "Matched outputs against reference algorithm sequences under identical initialization."
   ],
-  "evidence_signal": "The evaluation found that some implementations matched the reference exactly, but others diverged; PyTorch’s Philox showed fundamental incompatibility with the reference algorithm.",
-  "watch_item": "State transfer alone is not a safe portability guarantee, so reproducibility checks should be done per library, version, and PRNG implementation.",
+  "evidence_signal": "The abstract reports that some libraries reproduced reference outputs, but others showed significant mismatches, with PyTorch’s Philox notably incompatible with the reference algorithm.",
+  "watch_item": "Even a full PRNG state transfer may not guarantee identical streams if the target library’s implementation details differ from the reference.",
   "hashtags": [
     "#Reproducibility",
-    "#Randomness",
-    "#ScientificMachineLearning",
+    "#ScientificML",
+    "#RandomNumberGenerators",
     "#PyTorch",
     "#NumPy"
   ],
@@ -19,6 +19,6 @@
   "paper_title": "Reproducible AI Requires Reproducible Randomness",
   "paper_date": "2026-09-22",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-09-23T18:20:03",
+  "generated_at": "2026-09-24T18:20:27",
   "generator": "openai"
 }

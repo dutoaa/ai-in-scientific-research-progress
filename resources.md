@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-09-23
+Generated: 2026-09-24
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Recursive self-improvement of AI research agents
