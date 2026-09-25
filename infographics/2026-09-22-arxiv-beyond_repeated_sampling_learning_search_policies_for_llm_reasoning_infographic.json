@@ -1,24 +1,24 @@
 {
-  "key_insight": "Instead of relying on repeated sampling of full answers, the paper learns a small semantic search policy that generates diverse concepts/hints to steer a larger LLM toward better reasoning solutions.",
-  "engineering_relevance": "This suggests a practical way to spend test-time compute more efficiently by training a lightweight controller that improves a frozen model’s reasoning performance without retraining the large model itself.",
+  "key_insight": "Instead of relying on repeated sampling of near-duplicate LLM answers, the paper learns a small concept-level search policy that proposes diverse reasoning ideas to guide downstream solution generation.",
+  "engineering_relevance": "This suggests a practical way to spend test-time compute more effectively for hard reasoning tasks by training a lightweight policy model that can improve and transfer search quality for larger frozen LLMs.",
   "method": [
-    "Sample problem-specific concepts, hints, or strategies before answer generation rather than only adding decoding noise.",
-    "Use a multi-concept trajectory to encourage semantic diversity in the search space.",
-    "Train a small concept generator with reinforcement learning so its outputs maximize downstream success of a fixed large answer model."
+    "Sample problem-specific concepts, hints, or strategies first, then condition answer generation on them.",
+    "Generate many diverse concepts in a single trajectory to increase semantic exploration beyond local decoding noise.",
+    "Train a small concept generator with reinforcement learning so its concepts maximize the success of a frozen answer generator."
   ],
-  "evidence_signal": "On hard mathematical reasoning tasks, the trained concept generator improved pass@k over naive repeated sampling at the same answer-generation budget and transferred to unseen answer models, including a different model family.",
-  "watch_item": "The approach adds a learned intermediate generation step, so its gains may depend on careful reward design and robust concept quality across tasks and target models.",
+  "evidence_signal": "On hard mathematical reasoning problems, the trained concept generator improves pass@k over naive repeated sampling at the same answer budget and transfers to unseen answer models, including a different model family.",
+  "watch_item": "Performance gains depend on a separately trained concept policy and the quality of the downstream answer generator, so training cost, transfer reliability, and domain specificity need careful validation.",
   "hashtags": [
     "#LLMReasoning",
-    "#TestTimeCompute",
+    "#SearchPolicies",
     "#ReinforcementLearning",
-    "#SearchPolicy",
-    "#AIResearch"
+    "#TestTimeCompute",
+    "#MathReasoning"
   ],
   "paper_id": "2026-09-22-arxiv-beyond_repeated_sampling_learning_search_policies_for_llm_reasoning",
   "paper_title": "Beyond Repeated Sampling: Learning Search Policies for LLM Reasoning",
   "paper_date": "2026-09-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-09-24T18:20:41",
+  "generated_at": "2026-09-25T18:21:34",
   "generator": "openai"
 }

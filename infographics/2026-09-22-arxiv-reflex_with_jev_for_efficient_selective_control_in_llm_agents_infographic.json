@@ -1,24 +1,24 @@
 {
-  "key_insight": "REFLEX uses Jev as a fast typed decision layer to avoid many expensive LLM calls while preserving task success through selective fallback to a stronger model.",
-  "engineering_relevance": "For LLM agents, this suggests a practical control strategy that can cut inference cost and latency when decisions are mostly bounded and confidence can be reliably estimated.",
+  "key_insight": "REFLEX uses a fast typed decision layer (Jev) to route only uncertain or generative cases to a strong LLM, cutting compute while preserving task success.",
+  "engineering_relevance": "This suggests a practical control pattern for LLM agents: use cheap deterministic routing for bounded actions and reserve expensive model calls for low-confidence decisions.",
   "method": [
-    "Jev handles fast, typed decisions and routes low-confidence or generative cases to a strong LLM.",
-    "The system was tested on a frozen 100-task benchmark with controlled fallback comparisons.",
-    "Interventions examined when selective control works best, especially around action-set size and authorization-boundary edge cases."
+    "Jev handles fast, typed action selection for bounded decisions.",
+    "A strong LLM is called only when confidence is low or generation is required.",
+    "The approach is tested against fallback families and external benchmarks."
   ],
-  "evidence_signal": "On a 100-task benchmark, REFLEX achieved 95% success while reducing strong-model calls by 72.7%, with similar savings across three fallback families.",
-  "watch_item": "Benefits appear limited when ordinary routing is already highly accurate, so the added control layer may not justify complexity in all deployments.",
+  "evidence_signal": "On a frozen 100-task benchmark, REFLEX reaches 95% success while making 72.7% fewer strong-model calls than a strong-only agent.",
+  "watch_item": "Benefits may be limited when ordinary routing is already highly accurate, especially on external BFCL and τ-style evaluations.",
   "hashtags": [
     "#LLMAgents",
     "#SelectiveControl",
-    "#InferenceEfficiency",
-    "#ModelRouting",
+    "#ComputeEfficiency",
+    "#Routing",
     "#AIResearch"
   ],
   "paper_id": "2026-09-22-arxiv-reflex_with_jev_for_efficient_selective_control_in_llm_agents",
   "paper_title": "REFLEX with Jev for Efficient Selective Control in LLM Agents",
   "paper_date": "2026-09-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-09-24T18:20:11",
+  "generated_at": "2026-09-25T18:21:10",
   "generator": "openai"
 }

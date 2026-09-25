@@ -1,24 +1,24 @@
 {
-  "key_insight": "Block-triangular joint drifting turns standard one-step trajectory data into a generative surrogate that can sample the next state directly in a single model evaluation per timestep.",
-  "engineering_relevance": "This enables fast stochastic simulation for scientific computing workflows by reducing generative overhead while preserving accurate marginal and trajectory-level behavior.",
+  "key_insight": "Block-triangular joint drifting turns standard one-step trajectory data into a one-step generative surrogate by preserving the current-state marginal while directly sampling the conditional next-state distribution.",
+  "engineering_relevance": "This enables stochastic trajectory simulation with one model evaluation per time step, reducing runtime and avoiding auxiliary generative substeps compared with diffusion, flow, and distillation approaches.",
   "method": [
-    "Apply a projected drift field to the joint distribution of consecutive states, rather than only to the conditional next-state distribution.",
-    "Use a block-triangular architecture so the current-state marginal is preserved and the second block samples the conditional next-state distribution.",
-    "Generate stochastic trajectories without auxiliary diffusion, flow, or distillation steps between time steps."
+    "Apply a projected drift field to the empirical joint distribution of consecutive states.",
+    "Use a block-triangular architecture so the first block keeps the current-state marginal unchanged.",
+    "Make the second block a direct sampler for the conditional distribution of possible next states."
   ],
-  "evidence_signal": "The abstract reports numerical experiments showing accurate marginal and trajectory-dependent statistics and favorable accuracy-cost tradeoffs against deterministic, diffusion-, flow-, and distillation-based surrogates.",
-  "watch_item": "Performance may depend on how well the joint-state drift projection is learned from limited trajectory data, especially when the conditional dynamics are highly multimodal or sparse.",
+  "evidence_signal": "The abstract reports numerical experiments showing accurate marginal and trajectory-dependent statistics and favorable accuracy-cost tradeoffs versus deterministic, diffusion-, flow-, and distillation-based surrogates.",
+  "watch_item": "Performance depends on the quality and coverage of observed trajectory pairs, since standard data provide only one realized next state per current state and may limit conditional-learning fidelity.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#GenerativeModels",
-    "#StochasticSimulation",
     "#SurrogateModeling",
-    "#ComputationalScience"
+    "#StochasticSimulation",
+    "#Drifting"
   ],
   "paper_id": "2026-09-22-arxiv-one_step_generative_surrogate_models_via_block_triangular_joint_drifting",
   "paper_title": "One-Step Generative Surrogate Models via Block-Triangular Joint Drifting",
   "paper_date": "2026-09-22",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-09-24T18:20:18",
+  "generated_at": "2026-09-25T18:21:16",
   "generator": "openai"
 }

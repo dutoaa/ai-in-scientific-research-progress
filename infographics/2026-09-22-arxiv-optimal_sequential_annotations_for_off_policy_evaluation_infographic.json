@@ -1,13 +1,13 @@
 {
-  "key_insight": "The paper shows how to choose which rewards to annotate, sequentially and under budget, so off-policy evaluation stays accurate even when raw outcomes are noisy or missing.",
-  "engineering_relevance": "This provides a practical way to turn low-cost but imperfect AI labels into trustworthy evaluation pipelines for safety-critical or text/image-based decision systems.",
+  "key_insight": "The paper shows how to spend a limited annotation budget optimally over time to reduce variance in off-policy evaluation when rewards are costly or missing.",
+  "engineering_relevance": "It provides a practical way to obtain trustworthy policy-value estimates from sequential, partially labeled data such as clinical notes, safety reviews, or human preference records.",
   "method": [
-    "Derive variance-optimal annotation probabilities for sequential forward-monotone annotation.",
     "Use doubly robust off-policy evaluation with missing rewards.",
-    "Provide a batch-adaptive implementation for feasible budgeted annotation."
+    "Derive variance-optimal annotation probabilities for sequential forward-monotone protocols.",
+    "Implement a feasible batch-adaptive annotation strategy under a fixed labeling budget."
   ],
-  "evidence_signal": "Across simulations and two real datasets, the method reduced RMSE by 34–65% on housing placement, 17–68% on housing-application progress, and 55–62% on LMArena at all budgets tested.",
-  "watch_item": "Performance depends on the annotation protocol and the assumed missing-reward/off-policy setup, so deployment needs careful calibration of annotation bias, budget, and sequential feasibility.",
+  "evidence_signal": "Across simulations and two real datasets, the method reduced RMSE by 34–65% on the homelessness casenote task and 17–68% on the housing-application progress task at 40% annotation budget and above, and by 55–62% on LMArena across all budgets.",
+  "watch_item": "The approach depends on a sequential annotation design and accurate implementation of the batch-adaptive policy, so gains may weaken if annotation decisions or missingness assumptions are poorly matched to the data.",
   "hashtags": [
     "#OffPolicyEvaluation",
     "#ReinforcementLearning",
@@ -19,6 +19,6 @@
   "paper_title": "Optimal Sequential Annotations for Off-Policy Evaluation",
   "paper_date": "2026-09-22",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-09-24T18:20:20",
+  "generated_at": "2026-09-25T18:21:18",
   "generator": "openai"
 }
