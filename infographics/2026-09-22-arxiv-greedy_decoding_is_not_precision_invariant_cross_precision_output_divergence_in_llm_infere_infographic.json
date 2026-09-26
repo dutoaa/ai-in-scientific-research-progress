@@ -1,24 +1,24 @@
 {
-  "key_insight": "Greedy decoding is not fully deterministic across numeric precision: the same prompt/model can diverge between BF16 and FP16 because tiny logit-margins get flipped by accumulated numerical error.",
-  "engineering_relevance": "Inference systems that mix precisions can change LLM outputs, so precision policy, batch size, and selective high-precision recomputation matter for reliability in deployed serving stacks.",
+  "key_insight": "Greedy decoding in LLMs is not fully deterministic across numerical precision: the same prompt and model can diverge between BF16 and FP16 because tiny logit-margin differences can flip the chosen token and cascade downstream.",
+  "engineering_relevance": "Inference stacks that assume precision-invariant greedy decoding may need selective higher-precision recomputation at the LM head to improve output stability with minimal latency overhead in low-batch serving.",
   "method": [
-    "Measured cross-precision output divergence for 6 LLMs across 3 benchmarks on identical hardware.",
-    "Analyzed error propagation and found top-2 logit margin at the LM head is the main predictor of flip vs. no-flip outcomes.",
-    "Evaluated selective FP32 LM-head recomputation as a low-overhead mitigation."
+    "Compared BF16 vs FP16 greedy decoding on six models across three benchmarks, plus a 12B case, to measure exact output divergence.",
+    "Analyzed error propagation and found divergence is driven mainly by the top-two logit margin relative to perturbation between candidate tokens, not by accumulated body error alone.",
+    "Tested selective FP32 LM-head recomputation when the margin falls below a threshold as a low-overhead mitigation."
   ],
-  "evidence_signal": "Across six models (1.1B–7B, plus 12B characterization) and three benchmarks, 49–100% of prompts diverged between BF16 and FP16; selective FP32 LM-head recomputation improved exact agreement by 22–36 percentage points on A10G with under 4% latency overhead at batch size ≤4.",
-  "watch_item": "The mitigation is not a universal fix: its benefit fades when body-originated error dominates, especially at batch size ≥8 or under end-to-end FP8.",
+  "evidence_signal": "Across the evaluated models and benchmarks, 49–100% of prompts diverged across precision, and selective FP32 LM-head recomputation improved exact agreement by 22–36 percentage points on A10G with under 4% latency overhead in low-batch single-stream inference.",
+  "watch_item": "The mitigation is not universal: its benefit drops when body-originated error dominates, especially at batch size ≥8 and under end-to-end FP8.",
   "hashtags": [
     "#LLMInference",
     "#NumericalPrecision",
     "#GreedyDecoding",
-    "#FP16",
-    "#BF16"
+    "#ModelStability",
+    "#ScientificDiscovery"
   ],
   "paper_id": "2026-09-22-arxiv-greedy_decoding_is_not_precision_invariant_cross_precision_output_divergence_in_llm_infere",
   "paper_title": "Greedy Decoding Is Not Precision-Invariant: Cross-Precision Output Divergence in LLM Inference",
   "paper_date": "2026-09-22",
   "paper_category": "Scientific Discovery",
-  "generated_at": "2026-09-25T18:21:27",
+  "generated_at": "2026-09-26T17:40:25",
   "generator": "openai"
 }

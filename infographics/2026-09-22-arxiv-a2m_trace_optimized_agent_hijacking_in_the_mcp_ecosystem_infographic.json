@@ -1,24 +1,24 @@
 {
-  "key_insight": "A2M shows that MCP agents can be hijacked by first attracting tool selection through adversarial metadata and then manipulating outcomes using execution-trace-guided tool returns.",
-  "engineering_relevance": "For agentic systems that consume third-party tools, the study highlights the need for stricter tool vetting, runtime isolation, and defenses against semantic supply-chain attacks.",
+  "key_insight": "A2M shows that MCP agents can be hijacked by optimizing tool metadata to attract selection and then using execution traces to manipulate outcomes through attacker-controlled tool returns.",
+  "engineering_relevance": "For MCP-based agent systems, this highlights the need for stricter tool vetting, provenance checks, and runtime isolation before third-party tools are allowed to influence decisions or actions.",
   "method": [
-    "Optimize attacker-controlled tool metadata to maximize invocation likelihood.",
-    "Use execution traces to iteratively refine malicious tool outputs.",
-    "Run the framework in a black-box setting across multiple MCP scenarios and transfer it to other models."
+    "Attraction: black-box optimize tool metadata to maximize the chance an agent selects the malicious tool.",
+    "Manipulation: use execution traces to refine adversarial outputs that steer the agent toward attacker goals.",
+    "Evaluate transferability by testing attacks on other models without re-optimization."
   ],
-  "evidence_signal": "On LiveMCPBench, the method reached 93.6% malicious tool invocation, 32.4× benign token cost under Cognitive Denial of Service, and 74.4% mean attack success across three attack types.",
-  "watch_item": "The results are strongest on the evaluated MCP benchmark and may depend on how well attack objectives transfer to different agent policies, tools, and runtime defenses.",
+  "evidence_signal": "On LiveMCPBench, the attack achieved 93.6% malicious tool invocation, 32.4× token-cost inflation under Cognitive Denial of Service, and 74.4% mean attack success across three harmful scenarios; transfer to four other models still reached 63.6%, 2.7× cost, and 24.5% success.",
+  "watch_item": "Results depend on black-box optimization against specific MCP behaviors, so real-world effectiveness may vary with stronger tool validation, monitoring, and tighter output sanitization.",
   "hashtags": [
     "#MCP",
     "#AgentSecurity",
+    "#AdversarialAI",
     "#ToolHijacking",
-    "#PromptInjection",
     "#CyberSafety"
   ],
   "paper_id": "2026-09-22-arxiv-a2m_trace_optimized_agent_hijacking_in_the_mcp_ecosystem",
   "paper_title": "A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem",
   "paper_date": "2026-09-22",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-09-25T18:21:32",
+  "generated_at": "2026-09-26T17:40:30",
   "generator": "openai"
 }

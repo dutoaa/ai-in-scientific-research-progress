@@ -1,24 +1,24 @@
 {
-  "key_insight": "REFLEX uses a fast typed decision layer (Jev) to route only uncertain or generative cases to a strong LLM, cutting compute while preserving task success.",
-  "engineering_relevance": "This suggests a practical control pattern for LLM agents: use cheap deterministic routing for bounded actions and reserve expensive model calls for low-confidence decisions.",
+  "key_insight": "REFLEX uses a fast typed decision layer (Jev) to defer only low-confidence or generative cases to a strong LLM, cutting expensive calls while keeping task success high.",
+  "engineering_relevance": "This suggests a practical control strategy for LLM agents: replace many routine decisions with cheaper selective routing, and reserve strong-model inference for boundary cases and hard actions.",
   "method": [
-    "Jev handles fast, typed action selection for bounded decisions.",
-    "A strong LLM is called only when confidence is low or generation is required.",
-    "The approach is tested against fallback families and external benchmarks."
+    "Use Jev as a typed, low-latency decision layer for bounded actions.",
+    "Fallback to a strong LLM only when confidence is low or free-form generation is needed.",
+    "Test selective control against multiple fallback families and boundary-condition interventions."
   ],
-  "evidence_signal": "On a frozen 100-task benchmark, REFLEX reaches 95% success while making 72.7% fewer strong-model calls than a strong-only agent.",
-  "watch_item": "Benefits may be limited when ordinary routing is already highly accurate, especially on external BFCL and τ-style evaluations.",
+  "evidence_signal": "On a frozen 100-task benchmark, REFLEX reached 95% success while reducing strong-model calls by 72.7%; external BFCL and τ-style evaluations showed only limited gains over a cheap generative cascade when routing was already highly accurate.",
+  "watch_item": "Benefits appear smaller when ordinary routing is already very accurate, so implementation gains may depend strongly on action-set size and the presence of near-valid alternatives near authorization boundaries.",
   "hashtags": [
     "#LLMAgents",
     "#SelectiveControl",
-    "#ComputeEfficiency",
-    "#Routing",
+    "#InferenceEfficiency",
+    "#Jev",
     "#AIResearch"
   ],
   "paper_id": "2026-09-22-arxiv-reflex_with_jev_for_efficient_selective_control_in_llm_agents",
   "paper_title": "REFLEX with Jev for Efficient Selective Control in LLM Agents",
   "paper_date": "2026-09-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-09-25T18:21:10",
+  "generated_at": "2026-09-26T17:40:09",
   "generator": "openai"
 }

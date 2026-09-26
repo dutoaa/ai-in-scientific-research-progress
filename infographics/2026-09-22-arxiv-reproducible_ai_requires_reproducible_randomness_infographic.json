@@ -1,24 +1,24 @@
 {
-  "key_insight": "Reproducible AI depends not just on sharing a PRNG seed or state, but on matching the exact generator implementation across software ecosystems.",
-  "engineering_relevance": "For scientific machine learning pipelines, cross-library RNG differences can silently break experiment reproducibility, validation, and debugging.",
+  "key_insight": "Passing the full internal state of a PRNG does not guarantee identical random streams across libraries, even when they claim the same algorithm.",
+  "engineering_relevance": "For reproducible AI and scientific computing, teams must validate PRNG behavior implementation-by-implementation rather than assuming state transfer alone is enough.",
   "method": [
     "Compared Mersenne Twister and Philox across Random, NumPy, PyTorch, and TensorFlow.",
-    "Initialized generators with identical internal states and compared output streams to reference algorithms.",
-    "Checked whether full state transfer preserves exact sequence fidelity across implementations."
+    "Initialized each implementation from identical internal state conditions.",
+    "Checked generated sequences against the original reference algorithms for exact match."
   ],
-  "evidence_signal": "The study found that some implementations matched reference outputs, but others diverged; the clearest failure was PyTorch’s Philox, which did not reproduce the reference sequence exactly.",
-  "watch_item": "A full PRNG state is not a universal portability guarantee, so implementation-specific behavior must be verified before relying on cross-platform reproducibility.",
+  "evidence_signal": "The abstract reports that several implementations matched the reference streams, but others showed major discrepancies, with PyTorch’s Philox failing to reproduce the reference outputs exactly.",
+  "watch_item": "A critical concern is that an implementation may share the same algorithm name yet still differ in state layout or output mapping, breaking cross-library reproducibility.",
   "hashtags": [
-    "#Reproducibility",
-    "#Randomness",
-    "#ScientificML",
-    "#PyTorch",
-    "#NumPy"
+    "#ReproducibleAI",
+    "#PRNG",
+    "#ScientificMachineLearning",
+    "#NumPy",
+    "#PyTorch"
   ],
   "paper_id": "2026-09-22-arxiv-reproducible_ai_requires_reproducible_randomness",
   "paper_title": "Reproducible AI Requires Reproducible Randomness",
   "paper_date": "2026-09-22",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-09-25T18:21:23",
+  "generated_at": "2026-09-26T17:40:22",
   "generator": "openai"
 }

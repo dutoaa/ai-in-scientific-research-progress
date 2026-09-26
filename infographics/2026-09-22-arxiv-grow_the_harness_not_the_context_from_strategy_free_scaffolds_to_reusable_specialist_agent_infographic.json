@@ -1,24 +1,24 @@
 {
-  "key_insight": "Growing Harness turns repeated agent control decisions into reusable executable code, so the LLM focuses on task-specific reasoning instead of rebuilding strategy in every context.",
-  "engineering_relevance": "This can substantially cut inference cost and improve robustness for deployed agents, especially when smaller models must handle long-running streams of related tasks.",
+  "key_insight": "Grow the Harness learns recurring agent control as reusable code, so the LLM focuses on task-specific reasoning instead of rebuilding the same strategy in every prompt.",
+  "engineering_relevance": "This can sharply cut inference cost and model calls while keeping agent performance stable across smaller deployment models.",
   "method": [
-    "Start from a strategy-free scaffold with fixed model and tool interfaces.",
-    "Use function-level execution traces to localize failures, then repair a window of failures jointly.",
-    "Keep only edits that pass a success-first held-out gate; accepted fixes accumulate in one shared harness."
+    "Start from a strategy-free scaffold with fixed model/tool interfaces but no built-in controller.",
+    "Use function-level execution traces to localize failures, then repair a small code window jointly.",
+    "Keep accepted edits in one shared harness, with a held-out success gate to roll back harmful changes."
   ],
-  "evidence_signal": "Across BrowseComp-Plus and WebArena-Verified with 4B to 120B deployment models, the method achieved the best mean success in 5 of 6 settings and reduced LLM calls by 76.0–91.8% versus Tool-Calling.",
-  "watch_item": "Because the harness is grown by failure-guided edits, performance depends on trace quality, rollback policy, and whether the learned control generalizes beyond the evaluated task streams.",
+  "evidence_signal": "Across BrowseComp-Plus and WebArena-Verified with 4B to 120B models, the method achieved the best mean success in 5 of 6 settings and reduced LLM calls by 76.0–91.8%.",
+  "watch_item": "Because the harness itself evolves from feedback, careful rollback and validation are needed to avoid accumulating brittle or task-specific control logic.",
   "hashtags": [
     "#LLMAgents",
-    "#WebArena",
-    "#ToolCalling",
-    "#AgenticAI",
-    "#EfficientInference"
+    "#AgentHarness",
+    "#ProgramSynthesis",
+    "#CostReduction",
+    "#WebArena"
   ],
   "paper_id": "2026-09-22-arxiv-grow_the_harness_not_the_context_from_strategy_free_scaffolds_to_reusable_specialist_agent",
   "paper_title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
   "paper_date": "2026-09-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-09-25T18:21:12",
+  "generated_at": "2026-09-26T17:40:10",
   "generator": "openai"
 }
