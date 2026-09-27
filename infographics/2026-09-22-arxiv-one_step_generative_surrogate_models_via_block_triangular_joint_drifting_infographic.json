@@ -1,24 +1,24 @@
 {
-  "key_insight": "Block-triangular joint drifting turns ordinary one-step trajectory data into a one-step generative surrogate by preserving the current-state marginal while directly sampling the conditional next-state distribution.",
-  "engineering_relevance": "This enables fast stochastic simulation with only one model evaluation per time step, making it attractive for uncertainty quantification and large-scale scientific computing workflows.",
+  "key_insight": "The paper turns one-step generative surrogate modeling for stochastic dynamics into a joint-drift problem, using a block-triangular structure so the current state is preserved while the next state can be sampled conditionally in one model call.",
+  "engineering_relevance": "This enables fast stochastic trajectory generation with one evaluation per time step, making it attractive for computational science workflows that need accurate uncertainty propagation at lower cost.",
   "method": [
-    "Apply drift not to next-state conditionals alone, but to the empirical joint distribution of consecutive states.",
-    "Use a block-triangular architecture so the first component preserves the current-state marginal and the second component generates the next state conditionally.",
-    "Produce stochastic trajectories without auxiliary intermediate generative steps between time steps."
+    "Apply drifting to the empirical joint distribution of consecutive states instead of requiring multiple next-state samples per current state.",
+    "Use a block-triangular projected drift field that keeps the current-state marginal unchanged.",
+    "Make the second block act as a direct sampler of the conditional distribution of the next state."
   ],
   "evidence_signal": "The abstract reports numerical experiments showing accurate marginal and trajectory-dependent statistics, with favorable accuracy-cost tradeoffs versus deterministic, diffusion-, flow-, and distillation-based surrogates.",
-  "watch_item": "Performance may depend on how well the projected joint drift is learned from limited one-realization-per-state trajectory data and on preserving stability across long rollouts.",
+  "watch_item": "The approach relies on having representative trajectory pairs and on the projection/drift architecture being well-conditioned; performance may degrade if the observed joint data are sparse or poorly cover rare transitions.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#GenerativeModels",
-    "#SurrogateModeling",
     "#StochasticDynamics",
+    "#SurrogateModeling",
     "#UncertaintyQuantification"
   ],
   "paper_id": "2026-09-22-arxiv-one_step_generative_surrogate_models_via_block_triangular_joint_drifting",
   "paper_title": "One-Step Generative Surrogate Models via Block-Triangular Joint Drifting",
   "paper_date": "2026-09-22",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-09-26T17:40:15",
+  "generated_at": "2026-09-27T18:09:33",
   "generator": "openai"
 }

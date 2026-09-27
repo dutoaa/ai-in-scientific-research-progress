@@ -1,24 +1,24 @@
 {
-  "key_insight": "REFLEX uses a fast typed decision layer (Jev) to defer only low-confidence or generative cases to a strong LLM, cutting expensive calls while keeping task success high.",
-  "engineering_relevance": "This suggests a practical control strategy for LLM agents: replace many routine decisions with cheaper selective routing, and reserve strong-model inference for boundary cases and hard actions.",
+  "key_insight": "REFLEX uses a fast typed decision layer (Jev) to avoid expensive LLM calls whenever the action is confident enough, while falling back to a strong model only when needed.",
+  "engineering_relevance": "This shows how LLM agents can cut inference cost and latency in bounded decision tasks without sacrificing success, especially when action spaces are constrained.",
   "method": [
-    "Use Jev as a typed, low-latency decision layer for bounded actions.",
-    "Fallback to a strong LLM only when confidence is low or free-form generation is needed.",
-    "Test selective control against multiple fallback families and boundary-condition interventions."
+    "Jev handles selective control for bounded actions and routes uncertain cases to a strong LLM.",
+    "The agent falls back to generation only when confidence is low or free-form output is required.",
+    "The design was tested across multiple fallback families and compared against cheap routing baselines."
   ],
-  "evidence_signal": "On a frozen 100-task benchmark, REFLEX reached 95% success while reducing strong-model calls by 72.7%; external BFCL and τ-style evaluations showed only limited gains over a cheap generative cascade when routing was already highly accurate.",
-  "watch_item": "Benefits appear smaller when ordinary routing is already very accurate, so implementation gains may depend strongly on action-set size and the presence of near-valid alternatives near authorization boundaries.",
+  "evidence_signal": "On a frozen 100-task benchmark, REFLEX reached 95% success while reducing strong-model calls by 72.7%, with additional evaluation on BFCL and τ-style settings.",
+  "watch_item": "Benefits appear limited when ordinary routing is already highly accurate, so the added control layer may not justify complexity in every deployment.",
   "hashtags": [
     "#LLMAgents",
     "#SelectiveControl",
     "#InferenceEfficiency",
-    "#Jev",
+    "#ModelRouting",
     "#AIResearch"
   ],
   "paper_id": "2026-09-22-arxiv-reflex_with_jev_for_efficient_selective_control_in_llm_agents",
   "paper_title": "REFLEX with Jev for Efficient Selective Control in LLM Agents",
   "paper_date": "2026-09-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-09-26T17:40:09",
+  "generated_at": "2026-09-27T18:09:26",
   "generator": "openai"
 }

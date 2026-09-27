@@ -1,24 +1,24 @@
 {
-  "key_insight": "Passing the full internal state of a PRNG does not guarantee identical random streams across libraries, even when they claim the same algorithm.",
-  "engineering_relevance": "For reproducible AI and scientific computing, teams must validate PRNG behavior implementation-by-implementation rather than assuming state transfer alone is enough.",
+  "key_insight": "Passing a PRNG’s full internal state is not always enough to guarantee identical random streams across software libraries, even when they claim to implement the same algorithm.",
+  "engineering_relevance": "For reproducible AI and scientific computing, teams must verify generator behavior across frameworks instead of assuming that state transfer alone ensures deterministic results.",
   "method": [
-    "Compared Mersenne Twister and Philox across Random, NumPy, PyTorch, and TensorFlow.",
-    "Initialized each implementation from identical internal state conditions.",
-    "Checked generated sequences against the original reference algorithms for exact match."
+    "Compared Mersenne Twister and Philox implementations.",
+    "Tested four Python ecosystems: Random, NumPy, PyTorch, and TensorFlow.",
+    "Checked outputs against reference algorithms under identical initialization."
   ],
-  "evidence_signal": "The abstract reports that several implementations matched the reference streams, but others showed major discrepancies, with PyTorch’s Philox failing to reproduce the reference outputs exactly.",
-  "watch_item": "A critical concern is that an implementation may share the same algorithm name yet still differ in state layout or output mapping, breaking cross-library reproducibility.",
+  "evidence_signal": "The study found that some implementations matched the reference sequences, but others showed significant discrepancies, with PyTorch’s Philox failing to reproduce the reference exactly.",
+  "watch_item": "A full state snapshot is not a portability guarantee; implementation details, state layout, and library-specific algorithm variants can break reproducibility.",
   "hashtags": [
     "#ReproducibleAI",
     "#PRNG",
-    "#ScientificMachineLearning",
-    "#NumPy",
+    "#ScientificML",
+    "#Determinism",
     "#PyTorch"
   ],
   "paper_id": "2026-09-22-arxiv-reproducible_ai_requires_reproducible_randomness",
   "paper_title": "Reproducible AI Requires Reproducible Randomness",
   "paper_date": "2026-09-22",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-09-26T17:40:22",
+  "generated_at": "2026-09-27T18:09:42",
   "generator": "openai"
 }
