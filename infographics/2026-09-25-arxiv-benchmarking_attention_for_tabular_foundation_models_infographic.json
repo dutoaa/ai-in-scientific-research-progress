@@ -1,0 +1,24 @@
+{
+  "key_insight": "Tabular attention is not a one-size-fits-all problem: the best backend depends on whether the model is doing row or column attention, the GPU generation, and the sequence/head-dimension regime.",
+  "engineering_relevance": "For table-native foundation models, backend selection can materially affect throughput, so practitioners should benchmark row and column attention separately rather than reusing language-model defaults.",
+  "method": [
+    "Built a reproducible benchmark for tabular attention with realistic table-shaped workloads",
+    "Compared multiple attention backends: Torch SDPA, FlashAttention-2/3/4, vLLM, and SageAttention",
+    "Measured both forward and backward throughput on A100, H100, and B200 GPUs"
+  ],
+  "evidence_signal": "The study evaluates realistic tabular shapes across three GPU generations and finds that FlashAttention variants usually perform best overall, with CuDNN sometimes winning for long-sequence column attention and SageAttention strong for large row-attention cases.",
+  "watch_item": "Backend choice is highly shape- and hardware-dependent, so results may not transfer without retesting on the exact row/column sequence lengths and head dimensions used in a given model.",
+  "hashtags": [
+    "#TabularAI",
+    "#AttentionBenchmarking",
+    "#FlashAttention",
+    "#GPUPerformance",
+    "#FoundationModels"
+  ],
+  "paper_id": "2026-09-25-arxiv-benchmarking_attention_for_tabular_foundation_models",
+  "paper_title": "Benchmarking Attention for Tabular Foundation Models",
+  "paper_date": "2026-09-25",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-09-28T20:26:46",
+  "generator": "openai"
+}

@@ -1,0 +1,24 @@
+{
+  "key_insight": "EAServe makes the multimodal Encode stage the control point for a three-stage EPD serving pipeline, coordinating downstream admission, prefill placement, and GPU sharing to fix resource imbalance.",
+  "engineering_relevance": "For MLLM serving, this provides a practical way to raise throughput and GPU utilization under SLO constraints by jointly managing pipeline flow and co-located execution.",
+  "method": [
+    "Runtime: adaptive micro-batching plus rate-controlled partial offload from Encode to a co-resident Prefill worker.",
+    "Runtime: dynamic SM partitioning for predictable GPU co-location.",
+    "HAS config layer: profiles stage capacity, prunes unbalanced GPU allocations, then uses TPE-based Bayesian optimization over GPU allocation, encode batch size, and offload ratio."
+  ],
+  "evidence_signal": "On three MLLM architectures spanning image, video, and audio, the system achieved up to 4.3x better goodput than NVIDIA Dynamo and 1.7x over vLLM under the same SLOs.",
+  "watch_item": "Performance depends on accurate per-stage capacity profiling and careful GPU partitioning/offload tuning, which may be harder to generalize across hardware and model variants.",
+  "hashtags": [
+    "#MLLMServing",
+    "#GPUOptimization",
+    "#DisaggregatedServing",
+    "#MultimodalAI",
+    "#SystemsResearch"
+  ],
+  "paper_id": "2026-09-25-arxiv-easerve_encode_aware_disaggregated_serving_for_multimodal_large_language_models",
+  "paper_title": "EAServe: Encode-Aware Disaggregated Serving for Multimodal Large Language Models",
+  "paper_date": "2026-09-25",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-09-28T20:26:18",
+  "generator": "openai"
+}
