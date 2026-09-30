@@ -1,0 +1,24 @@
+{
+  "key_insight": "Probe-space preconditioning plus larger perturbation batches makes zero-order training much faster and more stable without backpropagation.",
+  "engineering_relevance": "The method cuts training memory from backprop-like levels to inference-mode levels, enabling much larger models to be trained on commodity GPUs.",
+  "method": [
+    "Use 1SPSA with many probes per step and fewer overall optimization steps.",
+    "Add a single clean forward pass to form a diagonal preconditioner in probe-space (1.5-SPSA).",
+    "Combine 8-bit RNG packing, Triton fused kernels, and distributed parallelism for efficient large-model training."
+  ],
+  "evidence_signal": "The authors benchmarked on six post-training datasets across Qwen3 and OPT, reporting state-of-the-art zero-order results and +3.1% SST-2 accuracy for OPT-13B in only 70 steps versus MeZO’s 100,000.",
+  "watch_item": "Zero-order methods still depend on careful probe scaling and implementation efficiency, so instability or compute overhead can appear if the preconditioner and kernels are not tuned well.",
+  "hashtags": [
+    "#ZeroOrderOptimization",
+    "#SPSA",
+    "#Preconditioning",
+    "#EfficientTraining",
+    "#LargeLanguageModels"
+  ],
+  "paper_id": "2026-09-29-arxiv-probe_space_preconditioning_for_fast_and_stable_zero_order_training",
+  "paper_title": "Probe-Space Preconditioning for Fast and Stable Zero-Order Training",
+  "paper_date": "2026-09-29",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-09-30T18:57:05",
+  "generator": "openai"
+}
