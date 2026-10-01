@@ -1,0 +1,24 @@
+{
+  "key_insight": "Learnable Subspace Projections jointly learns which weight subspaces to remove end-to-end, avoiding the local compression criteria that fail when errors accumulate across deep models.",
+  "engineering_relevance": "The method turns frozen pretrained layers into standard low-rank factors and can substantially cut memory, KV-cache size, and inference cost on standard hardware.",
+  "method": [
+    "Assign an orthogonal projector to each linear layer or tied layer group.",
+    "Optimize all projectors jointly with a global objective such as KL to the dense model or the original training loss while keeping pretrained weights frozen.",
+    "Initialize from whitened SVD truncation and allocate ranks by output KL per parameter saved; merge projectors into low-rank factors after training."
+  ],
+  "evidence_signal": "Evaluated on OPT-125M/1.3B, Qwen3-4B, Llama-2-7B, and ViT-B/16, with LSP outperforming baselines more strongly at higher compression; at -70% compression on Llama-2-7B it reached 10.9 WikiText-2 perplexity and 42.2% mean zero-shot accuracy versus 13.3 and 36.0% for the strongest baseline.",
+  "watch_item": "Training requires optimizing a new set of projectors and careful rank allocation, and the approach relies on a good initialization and the assumption that frozen weights remain adequate after compression.",
+  "hashtags": [
+    "#NeuralCompression",
+    "#LowRank",
+    "#LLMOptimization",
+    "#ModelEfficiency",
+    "#Transformers"
+  ],
+  "paper_id": "2026-09-30-arxiv-learning_functional_subspaces_for_neural_network_compression",
+  "paper_title": "Learning Functional Subspaces for Neural Network Compression",
+  "paper_date": "2026-09-30",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-10-01T19:20:58",
+  "generator": "openai"
+}
