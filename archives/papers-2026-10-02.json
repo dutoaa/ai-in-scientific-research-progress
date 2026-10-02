@@ -1,0 +1,1040 @@
+[
+  {
+    "id": "2026-09-30-arxiv-semifactual_credit_augmented_policy_optimization",
+    "arxiv_id": "2609.40360v1",
+    "date": "2026-09-30",
+    "title": "Semifactual Credit-Augmented Policy Optimization",
+    "authors": "Junshu Pan, Zhizhang Fu, Shulin Huang, Yiran Ding, Zifan Cheng, Wenqi Shao",
+    "abstract": "Reinforcement learning with verifiable rewards (RLVR) has improved the reasoning capabilities of large language models (LLMs), yet their predictions remain sensitive to task-irrelevant prompt features. We investigate this sensitivity through semifactual prompt interventions that preserve the underlying problem and its answer. Our analysis reveals substantial variation in token-level sensitivity and shows that suppressing high-drift token candidates during decoding improves reasoning accuracy without updating model weights. These findings highlight a limitation of Group Relative Policy Optimization (GRPO), which assigns the same outcome-derived advantage to every response token and may reinforce potential spurious dependence alongside useful reasoning. Motivated by this observation, we introduce Semifactual Credit-Augmented Policy Optimization (SCAPO), a causally inspired variant of GRPO that incorporates semifactual stability into token-level credit assignment. SCAPO measures token probability drift for fixed responses under semifactual interventions and uses normalized stability scores to reduce advantages for relatively unstable tokens during early training, while granting no additional credit for stability alone. On Qwen3-4B-Base and Qwen3-1.7B-Base, SCAPO improves AIME 2024-2026 accuracy over GRPO by 5.63 and 4.17 percentage points, respectively. At both model scales, SCAPO achieves the best results on most evaluated mathematics benchmarks and all evaluated out-of-distribution benchmarks among the compared methods. These results suggest that semifactual stability provides an effective training signal for improving reasoning and generalization through finer-grained credit assignment in RLVR. The code is available at https://github.com/DtYXs/SCAPO.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-09-30T17:59:56Z",
+    "updated": "2026-09-30T17:59:56Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40360v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40360v1"
+      }
+    ],
+    "score": 84,
+    "infographic": {
+      "key_insight": "Semifactual prompt stability can be used to assign finer-grained credit in RLVR, reducing spurious token dependence and improving reasoning accuracy without changing model weights.",
+      "engineering_relevance": "SCAPO offers a practical training signal for LLM alignment pipelines that may improve generalization on math and out-of-distribution tasks with minimal architectural change.",
+      "method": [
+        "Measure token probability drift under semifactual prompt interventions that preserve the problem and answer.",
+        "Normalize stability scores to downweight unstable tokens during early policy optimization.",
+        "Use these stability-based credits within GRPO-style training without granting extra reward for stability alone."
+      ],
+      "evidence_signal": "On Qwen3-4B-Base and Qwen3-1.7B-Base, SCAPO improved AIME 2024-2026 accuracy by 5.63 and 4.17 points over GRPO and achieved the best results on most math and all OOD benchmarks among compared methods.",
+      "watch_item": "Stability-based credit assignment depends on how semifactual interventions are defined and may be sensitive to early-training heuristics or prompt perturbation design.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#LLMReasoning",
+        "#PolicyOptimization",
+        "#ScientificAI",
+        "#Generalization"
+      ],
+      "paper_id": "2026-09-30-arxiv-semifactual_credit_augmented_policy_optimization",
+      "paper_title": "Semifactual Credit-Augmented Policy Optimization",
+      "paper_date": "2026-09-30",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-01T19:20:35",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-ranking_aware_prompt_optimization_for_multimodal_clinical_diagnosis",
+    "arxiv_id": "2609.40361v1",
+    "date": "2026-09-30",
+    "title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+    "authors": "Tian Xia, Minghao Liu, Yiqing Liang, Laixi Shi, Jiayun Wang",
+    "abstract": "Multimodal large language models (MLLMs) are rapidly advancing clinical diagnosis, yet their adaptation pipelines remain anchored to accuracy-based objectives. Clinical data are heavily class-imbalanced: a constant-majority predictor can score above 90% accuracy while being clinically useless. We therefore evaluate and optimize for AUROC, a threshold-free score that ranks positives above negatives and is invariant to class balance. We focus on prompt optimization in MLLMs. Reflective methods such as GEPA use a binary scores matrix with one row per evaluation instance and one column per candidate prompt; cells record per-instance correctness, so the column average is accuracy and drives candidate selection. We introduce pair-level Pareto prompt evolution (Ranking-PE), which replaces each correctness row with a pairwise-ordering row over (positive, negative) instance pairs: the cell is 1 if the candidate scores the positive higher than the paired negative. The column average then equals empirical AUROC (by the Wilcoxon-Mann-Whitney identity). We apply this swap at all three layers the prompt evolution search reads from - the scores matrix that decides Pareto dominance, the per-example feedback to the reflection LM, and final candidate selection - at no extra model calls and with no surrogate loss. Across three diseases on MIMIC, accuracy-based prompt evolution can degrade ranking; Ranking-PE reverses this, beating the accuracy-based recipe by +5.8 AUROC pp on fine-tuned Qwen3-VL-8B and +16.2 pp on MedGemma-4B. Ablations examine each design component and show that a medical-grade visual backbone - via vision-encoder-tuned SFT or medical pretraining - is a prerequisite that prompt search cannot replace - our recipe extends reflective prompt evolution from text-only data to multimodal clinical decision-making.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-09-30T17:59:56Z",
+    "updated": "2026-09-30T17:59:56Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40361v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40361v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "Ranking-Aware Prompt Optimization (Ranking-PE) changes prompt search from accuracy-based correctness to pairwise ranking, so the optimization target matches AUROC and improves clinical diagnosis ranking in imbalanced multimodal data.",
+      "engineering_relevance": "For multimodal clinical AI systems, this shows prompt optimization can be made label-imbalance robust without extra model calls by optimizing the metric that actually matters for triage and ranking tasks.",
+      "method": [
+        "Replace per-example correctness with pairwise positive-vs-negative ordering in the scores matrix.",
+        "Use the column average of pairwise wins as empirical AUROC via the Wilcoxon-Mann-Whitney identity.",
+        "Apply the swap consistently in Pareto dominance, reflection feedback, and final candidate selection."
+      ],
+      "evidence_signal": "Evaluated across three diseases on MIMIC, where Ranking-PE outperformed the accuracy-based recipe by +5.8 AUROC points on fine-tuned Qwen3-VL-8B and +16.2 points on MedGemma-4B.",
+      "watch_item": "The method still depends on a strong medical visual backbone; if the vision encoder is weak, prompt search alone cannot recover performance.",
+      "hashtags": [
+        "#MultimodalAI",
+        "#ClinicalDiagnosis",
+        "#AUROC",
+        "#PromptOptimization",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-09-30-arxiv-ranking_aware_prompt_optimization_for_multimodal_clinical_diagnosis",
+      "paper_title": "Ranking-Aware Prompt Optimization for Multimodal Clinical Diagnosis",
+      "paper_date": "2026-09-30",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-01T19:20:38",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-evoduet_bilevel_co_evolution_of_web_searching_and_task_solving_for_scientific_discovery",
+    "arxiv_id": "2609.40340v1",
+    "date": "2026-09-30",
+    "title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+    "authors": "Young-Jun Lee, Jinheon Baek, Soyeong Jeong, Minki Kang, Seungyeon Jwa, Jonghyun Choi",
+    "abstract": "Evolutionary search with large language models (LLMs) can stall when progress requires external knowledge the model lacks. Supplying relevant documents helps, but simply adding web search tool can keep returning the same pages as solutions change. We introduce EvoDuet, a bi-level optimization method that co-evolves solutions and search queries with fixed model parameters. At each iteration, a retrieval gate lets the LLM assess its knowledge gap and choose to retrieve new documents, reuse stored ones, or proceed without them. An inner loop refines queries and ranks documents by the solution scores they are predicted to yield; an outer loop generates candidates in parallel from these documents and records the evaluated outcomes for later searches. Across 21 optimization tasks with one candidate per iteration, EvoDuet raises OpenEvolve's normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, whereas Qwen3.5-9B does not benefit. Our best runs surpass the previously reported best scores on eight tasks, including Swap Reduction on Q20 and Rosetta, and match them on three more. EvoDuet also improves with other scaffolds (e.g., Top-K, EvoX) on Sums/Diffs and Denoising, demonstrating its applicability across evolutionary search scaffolds.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-09-30T17:58:28Z",
+    "updated": "2026-09-30T17:58:28Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40340v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40340v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "EvoDuet co-evolves web search queries and candidate solutions so an LLM can fetch better evidence exactly when its knowledge is insufficient, improving scientific-discovery search quality without changing model parameters.",
+      "engineering_relevance": "The method adds a retrieval gate plus inner/outer evolutionary loops to make LLM-based optimization more robust in knowledge-heavy tasks where naive web search repeatedly returns stale or unhelpful pages.",
+      "method": [
+        "Retrieval gate lets the LLM decide whether to search, reuse stored documents, or solve without retrieval.",
+        "Inner loop refines search queries and ranks documents by the solution quality they are expected to produce.",
+        "Outer loop generates candidate solutions in parallel from retrieved documents and logs outcomes for future searches."
+      ],
+      "evidence_signal": "Across 21 optimization tasks, EvoDuet improved OpenEvolve normalized discovery gain from 74.1% to 78.0% with GPT-5.6-Luna and from 61.3% to 82.3% with Gemini-3.8-Flash, with best runs surpassing prior scores on eight tasks.",
+      "watch_item": "Benefits are model- and scaffold-dependent, since Qwen3.5-9B did not improve and the method still relies on effective retrieval/document ranking in each iteration.",
+      "hashtags": [
+        "#LLMSearch",
+        "#ScientificDiscovery",
+        "#WebRetrieval",
+        "#EvolutionaryOptimization",
+        "#KnowledgeMining"
+      ],
+      "paper_id": "2026-09-30-arxiv-evoduet_bilevel_co_evolution_of_web_searching_and_task_solving_for_scientific_discovery",
+      "paper_title": "EvoDuet: Bilevel Co-Evolution of Web Searching and Task Solving for Scientific Discovery",
+      "paper_date": "2026-09-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-01T19:20:40",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-pmosfm_preconditioned_manifold_matching_for_one_step_physics_constrained_generation",
+    "arxiv_id": "2609.40287v1",
+    "date": "2026-09-30",
+    "title": "PMosFM: Preconditioned Manifold Matching for One-Step Physics-Constrained Generation",
+    "authors": "Zhangyong Liang, Haibin Ling",
+    "abstract": "Physics-constrained generative models aim to generate physical fields that match a target distribution and satisfy prescribed constraints. However, enforcing these constraints often increases sampling costs through iterative corrections or training costs through residual optimization and trajectory unrolling. To address this issue, we introduce \\textbf{P}reconditioned \\textbf{M}anifold \\textbf{o}ne-\\textbf{s}tep \\textbf{F}low \\textbf{M}atching (\\textbf{PMosFM}), a preconditioned manifold matching framework for one-step physics-constrained generation. By encoding constraints in a manifold decoder, PMosFM learns transport in intrinsic coordinates without separate residual losses or terminal residual unrolling. A geometric preconditioner rescales coordinates using the decoder-induced metric, while a regularized covariance transform approximately whitens the interpolation-state inputs. A finite-interval objective couples velocity supervision with consistency between decoded endpoints in physical space. We show that exact parameterization removes residual-induced Gauss--Newton curvature, that geometric and covariance effects separate in a local conditioning bound, and that physical flow-map error bounds endpoint distributional error. Controlled ablations examine conditioning, and experiments evaluate optimizer-update time and memory footprint. At inference, PMosFM uses one neural transport evaluation followed by physical decoding. Experiments across benchmarks show lower training and sampling time than the multi-step baselines at comparable physical and distributional fidelity. Code and datasets will be released publicly.",
+    "category": "Biomedical and Physical Sciences",
+    "source": "arXiv",
+    "published": "2026-09-30T17:48:21Z",
+    "updated": "2026-09-30T17:48:21Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40287v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40287v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "PMosFM learns physics-constrained generation in intrinsic manifold coordinates, enabling one-step sampling while preserving physical constraints and distributional fidelity.",
+      "engineering_relevance": "It reduces the training and inference overhead of constraint enforcement, making physics-aware generative modeling more practical for fast scientific simulation and design.",
+      "method": [
+        "Encode constraints with a manifold decoder so transport happens in intrinsic coordinates.",
+        "Use a geometric preconditioner plus a covariance whitening transform to improve conditioning.",
+        "Train with a finite-interval objective that matches velocities and decoded physical endpoints without residual unrolling."
+      ],
+      "evidence_signal": "The paper reports controlled ablations and benchmark experiments showing lower training and sampling time than multi-step baselines at comparable physical and distributional fidelity.",
+      "watch_item": "Performance depends on accurate manifold decoding and stable conditioning, so imperfect decoder geometry or whitening may limit gains in harder problems.",
+      "hashtags": [
+        "#PhysicsConstrainedGeneration",
+        "#FlowMatching",
+        "#ScientificMachineLearning",
+        "#ManifoldLearning",
+        "#GenerativeModels"
+      ],
+      "paper_id": "2026-09-30-arxiv-pmosfm_preconditioned_manifold_matching_for_one_step_physics_constrained_generation",
+      "paper_title": "PMosFM: Preconditioned Manifold Matching for One-Step Physics-Constrained Generation",
+      "paper_date": "2026-09-30",
+      "paper_category": "Biomedical and Physical Sciences",
+      "generated_at": "2026-10-01T19:20:43",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-how_much_of_a_harness_does_a_strong_agent_need_for_autonomous_ml_engineering",
+    "arxiv_id": "2609.40303v1",
+    "date": "2026-09-30",
+    "title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+    "authors": "Kirill Brilliantov, Alejandro Hernández-Cano, Emmanuel Abbé",
+    "abstract": "Recent autonomous machine learning engineering (MLE) agents have made significant progress on public leaderboards. Often motivated by progress stagnation over long-horizon cycles and limited Large Language Model (LLM) primitives, modern MLE agents are deployed on top of increasingly elaborate machinery: multi-agent orchestrators, dedicated retrieval subagents, and more. While such harnesses expand, the use of more primitive but improved coding agents - where LLMs have direct access to the execution environment through read, write, and bash primitives - has received little attention in the field. In this paper we find that, under an equal time budget and the same frontier LLM backbone, open-source state-of-the-art harnesses provide no advantages over a single session of a minimal-harness coding agent baseline, pointing to the backbone as the primary driver for performance. Via a series of large-scale systematic ablation studies, we argue that the machinery layers become redundant in the coding agent setting. We conclude that the effort spent elaborating hand-crafted harnesses around strong models yields poor returns for current MLE benchmarks.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-09-30T17:51:30Z",
+    "updated": "2026-09-30T17:51:30Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40303v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40303v1"
+      }
+    ],
+    "score": 73,
+    "infographic": {
+      "key_insight": "For autonomous ML engineering, a strong frontier model appears to matter more than an elaborate agent harness, with minimal-harness coding agents matching open-source state-of-the-art systems under the same time budget.",
+      "engineering_relevance": "For practitioners, this suggests that investing in better model backbones may deliver higher returns than adding multi-agent orchestration, retrieval subagents, or other complex scaffolding for current MLE benchmarks.",
+      "method": [
+        "Compared a minimal-harness coding agent with open-source state-of-the-art harnessed agents.",
+        "Held the backbone LLM and time budget constant to isolate harness effects.",
+        "Ran large-scale systematic ablation studies across harness machinery layers."
+      ],
+      "evidence_signal": "The abstract reports that, under equal time and the same frontier LLM backbone, open-source state-of-the-art harnesses showed no advantage over a single-session minimal-harness baseline.",
+      "watch_item": "These conclusions are benchmark-dependent, so results may not transfer to tasks where long-horizon planning, tool diversity, or more complex environments make extra harness structure more valuable.",
+      "hashtags": [
+        "#AutonomousMLE",
+        "#LLMAgents",
+        "#AgentHarness",
+        "#AblationStudy",
+        "#MachineLearningEngineering"
+      ],
+      "paper_id": "2026-09-30-arxiv-how_much_of_a_harness_does_a_strong_agent_need_for_autonomous_ml_engineering",
+      "paper_title": "How Much of a Harness Does a Strong Agent Need for Autonomous ML Engineering?",
+      "paper_date": "2026-09-30",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-10-01T19:20:45",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-reinforcement_learning_guided_graph_transformations_for_sptrsv_optimization",
+    "arxiv_id": "2609.40159v1",
+    "date": "2026-09-30",
+    "title": "Reinforcement Learning-Guided Graph Transformations for SpTRSV Optimization",
+    "authors": "Buse Yılmaz",
+    "abstract": "Sparse triangular solve (SpTRSV) is a fundamental kernel in numerous scientific and engineering applications. However, the data dependencies inherent in sparse triangular matrices significantly limit the available parallelism and make efficient workload distribution challenging. Recent graph transformation techniques address these limitations by modifying the dependency graph of the input matrix to improve parallel execution. Existing graph transformation strategies, however, rely on manually designed heuristics, making their development and adaptation to different optimization objectives challenging. This work proposes a reinforcement learning-guided graph transformation framework for SpTRSV, in which graph transformation is formulated as a sequential decision-making problem and an RL agent learns matrix-dependent transformation policies. Experimental results on real-world sparse matrices demonstrate level reductions of up to 94% and reductions of up to 80% in the coefficient of variation of level costs, while modifying only 1.50% of the rows in the highest case. On average, the RL- guided graph transformation achieves a 23% reduction in the number of levels and a 29% reduction in the coefficient of variation of level costs while rewriting only 0.82% of the matrix rows. Although the heuristic strategies generally achieve more aggressive level reduction(between 31% and 46%), the RL-based approach achieves the largest average reduction in the coefficient of variation of level costs, demonstrating its ability to balance competing graph transformation objectives. The results further show that the learned policies can be transferred to previously unseen matrices through curriculum learning and fine-tuning, while zero-shot experiments provide insights into the limitations of generalizing graph transformation policies across different sparsity patterns.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-09-30T16:56:09Z",
+    "updated": "2026-09-30T16:56:09Z",
+    "primary_category": "cs.DC",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40159v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40159v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "The paper reframes sparse triangular solve graph transformation as a reinforcement learning problem, enabling matrix-specific rewiring that balances parallelism gains with workload regularity.",
+      "engineering_relevance": "This can improve SpTRSV performance in scientific computing pipelines by reducing dependency depth and balancing level costs, which is important for efficient parallel execution on real sparse matrices.",
+      "method": [
+        "Formulate graph transformation as a sequential decision-making task over the matrix dependency graph.",
+        "Train an RL agent to learn transformation policies tailored to each matrix’s sparsity structure.",
+        "Use curriculum learning and fine-tuning to transfer learned policies to unseen matrices."
+      ],
+      "evidence_signal": "Across real-world sparse matrices, the method achieved up to 94% level reduction and up to 80% lower coefficient of variation in level costs, with an average 23% fewer levels and 29% lower variability while rewriting only 0.82% of rows on average.",
+      "watch_item": "The learned policies may not generalize well across very different sparsity patterns, and the implementation must manage the tradeoff between aggressive level reduction and improved load balance.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#SparseLinearAlgebra",
+        "#GraphTransformation",
+        "#HPC",
+        "#SpTRSV"
+      ],
+      "paper_id": "2026-09-30-arxiv-reinforcement_learning_guided_graph_transformations_for_sptrsv_optimization",
+      "paper_title": "Reinforcement Learning-Guided Graph Transformations for SpTRSV Optimization",
+      "paper_date": "2026-09-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-01T19:20:47",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-from_spectra_to_joint_schedules_in_llm_pre_training_3_3_2_scaling_law_regimes",
+    "arxiv_id": "2609.40148v1",
+    "date": "2026-09-30",
+    "title": "From Spectra to Joint Schedules in LLM Pre-training: 3+3(+2) Scaling-Law Regimes",
+    "authors": "Yichen Wang, Fanghui Liu, Yudong Chen",
+    "abstract": "Power-law learning curves are often treated as fixed properties of a model and its data, although learning-rate and batch-size schedules can change the observed loss. We study this dependence in noisy online SGD with linear random features. Conditional on the representation, an exact Volterra equation separates two response components: a forcing term that propagates unresolved target error and a memory kernel that propagates stochastic-error injections. We prove that either component follows a power law if and only if its cumulative weighted spectral mass has the corresponding low-spectrum scaling; individual eigenvalues and target coefficients need not obey coordinatewise power laws. Under a joint schedule, intrinsic time $T_t=\\sum_{s<t}η_s$ controls optimization progress, while $r_t=B_t/η_t$ controls noise injection. Their interaction yields sharp conditions under which a schedule preserves, changes, or destroys the clean power law, together with a memory ceiling on noise reduction. The power-law random-feature model realizes this mechanism in $3+3(+2)$ propagation regimes with phase-dependent compute rates. Controlled nanoGPT experiments show that (1) learning-rate and batch-size schedules with matched $B/η$ paths are nearly equivalent in intrinsic time, (2) a forcing-memory surrogate accurately predicts loss across schedules, and (3) its fitted exponents across real-world datasets identify the regime of LLMs in $3+3(+2)$ map.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-09-30T16:53:23Z",
+    "updated": "2026-09-30T16:53:23Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40148v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40148v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "Power-law loss curves in LLM pre-training are not fixed; they depend on how learning-rate and batch-size schedules jointly shape intrinsic optimization time and noise injection.",
+      "engineering_relevance": "This gives practitioners a way to design or compare schedules by matching the $B/\\eta$ path in intrinsic time, helping predict when a schedule will preserve, alter, or worsen scaling behavior.",
+      "method": [
+        "Exact Volterra equation separates forcing (target-error propagation) from memory (stochastic-error propagation).",
+        "Derive low-spectrum scaling conditions that are necessary and sufficient for power-law behavior in each component.",
+        "Analyze joint schedules via intrinsic time $T_t$ and noise ratio $r_t=B_t/\\eta_t$ to characterize scaling-regime transitions."
+      ],
+      "evidence_signal": "The abstract reports controlled nanoGPT experiments showing matched $B/\\eta$ schedules are nearly equivalent in intrinsic time and that a forcing-memory surrogate predicts loss across schedules and datasets.",
+      "watch_item": "The regime conclusions rely on a linear random-feature model and surrogate fitting, so transferring the exact phase map to full-scale LLM training may require additional validation.",
+      "hashtags": [
+        "#LLMTraining",
+        "#ScalingLaws",
+        "#LearningRateSchedule",
+        "#BatchSizeSchedule",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-09-30-arxiv-from_spectra_to_joint_schedules_in_llm_pre_training_3_3_2_scaling_law_regimes",
+      "paper_title": "From Spectra to Joint Schedules in LLM Pre-training: 3+3(+2) Scaling-Law Regimes",
+      "paper_date": "2026-09-30",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-01T19:20:50",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-smart_machine_learning_for_solving_the_full_electron_nuclear_schr_dinger_equation_with_a_q",
+    "arxiv_id": "2609.40112v1",
+    "date": "2026-09-30",
+    "title": "Smart Machine Learning for Solving the Full Electron-Nuclear Schrödinger Equation with a Quantum-Chemically Inspired Wavefunction Ansatz",
+    "authors": "Yaolong Zhang, Bin Jiang, Hua Guo",
+    "abstract": "Directly solving the full electron-nuclear Schrödinger equation remains one of the grand challenges in quantum mechanics. Here, we propose a quantum-chemically motivated orbital-based neural network wavefunction ansatz with explicit many-body electron-electron correlation terms, with parameters depending on the entire electron-nuclear configuration, enabling an accurate description of strongly correlated and/or multi-reference electronic structures by a single Slater-determinant across a broad nuclear configuration space. To train this wavefunction, we further develop an efficient hybrid optimization strategy that combines the variational Monte Carlo technique with local-energy constraints, mitigating the intrinsic sampling bias of the former and considerably reducing the statistical error. These advances are embedded in a unified neural network framework, Schrödinger, enabling the determination of globally accurate potential energy surfaces with a single training for systems ranging from strongly correlated diatomic molecules, triatomic reactions containing conical intersections, to polyatomic multi-reference molecules. This work offers a practical machine-learning tool for solving the electron-nuclear Schrödinger equation and capturing full quantum effects beyond the Born-Oppenheimer approximation.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-09-30T16:40:41Z",
+    "updated": "2026-09-30T16:40:41Z",
+    "primary_category": "physics.chem-ph",
+    "categories": [
+      "physics.chem-ph",
+      "physics.comp-ph",
+      "quant-ph"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40112v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40112v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "The paper introduces a neural-network wavefunction ansatz plus a hybrid training strategy that can solve the full electron-nuclear Schrödinger equation across diverse molecular systems with a single model.",
+      "engineering_relevance": "This enables globally accurate potential energy surfaces and full quantum simulations beyond the Born-Oppenheimer approximation, which is valuable for reaction dynamics, excited-state chemistry, and strongly correlated systems.",
+      "method": [
+        "Quantum-chemically inspired orbital-based neural wavefunction with explicit electron-electron correlation",
+        "Wavefunction parameters depend on the full electron-nuclear configuration, supporting multi-reference and strongly correlated states",
+        "Hybrid optimization combines variational Monte Carlo with local-energy constraints to reduce sampling bias and statistical error"
+      ],
+      "evidence_signal": "The abstract reports successful evaluation on strongly correlated diatomic molecules, triatomic reactions with conical intersections, and polyatomic multi-reference molecules using a single training framework.",
+      "watch_item": "Performance likely depends on careful sampling and optimization stability, so scaling to larger systems may still be computationally demanding.",
+      "hashtags": [
+        "#QuantumChemistry",
+        "#MachineLearning",
+        "#SchrodingerEquation",
+        "#VariationalMonteCarlo",
+        "#NeuralWavefunction"
+      ],
+      "paper_id": "2026-09-30-arxiv-smart_machine_learning_for_solving_the_full_electron_nuclear_schr_dinger_equation_with_a_q",
+      "paper_title": "Smart Machine Learning for Solving the Full Electron-Nuclear Schrödinger Equation with a Quantum-Chemically Inspired Wavefunction Ansatz",
+      "paper_date": "2026-09-30",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-01T19:20:52",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-accelerated_algorithm_for_sparse_regularized_partial_optimal_transport",
+    "arxiv_id": "2609.40075v1",
+    "date": "2026-09-30",
+    "title": "Accelerated Algorithm for Sparse Regularized Partial Optimal Transport",
+    "authors": "Khoa Nguyen, Dung T. Nguyen, Thong Huynh, Hoang-Hiep Nguyen-Mau, Anh Nguyen, Minh Ngoc Dinh",
+    "abstract": "Partial Optimal Transport (POT) extends the classical optimal transport problem by relaxing the strict mass conservation constraint, enabling its use in a wide range of real-world applications. In many of these settings, sparse transport plans are preferred for their interpretability and computational benefits. While smooth and strongly convex regularizers - such as quadratic or elastic net - have been vastly used in various machine learning applications to induce sparsity and accelerate computation, they have received less algorithmic attention compared to entropic approaches for computational POT. In this paper, we propose a new optimization framework that leverages these regularizers through a penalty-based reformulation, enabling efficient gradient-based updates while preserving the structure of the original problem. Our method accommodates a broad class of regularizers that promote structured and sparse transport plans. Building on this formulation, we design an accelerated first-order algorithm that alternates between smooth updates and simple projection steps. Through empirical benchmarks on color transfer, domain adaptation, and point cloud registration, our approach consistently outperforms established baselines - achieving lower transport cost, higher sparsity, and faster convergence - making it a practical and scalable solution for modern transport problems.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-09-30T16:25:53Z",
+    "updated": "2026-09-30T16:25:53Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40075v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40075v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "The paper reframes sparse regularized partial optimal transport as a penalty-based smooth optimization problem, enabling an accelerated first-order solver that preserves sparsity and improves efficiency.",
+      "engineering_relevance": "This provides a practical, scalable way to compute interpretable transport plans for applications like color transfer, domain adaptation, and point cloud registration.",
+      "method": [
+        "Uses a penalty reformulation to handle partial OT with smooth, strongly convex sparsity-inducing regularizers.",
+        "Applies an accelerated first-order scheme with alternating smooth gradient updates and simple projection steps.",
+        "Supports a broad class of regularizers, including quadratic and elastic-net style penalties."
+      ],
+      "evidence_signal": "Across benchmarks on color transfer, domain adaptation, and point cloud registration, the method reports lower transport cost, higher sparsity, and faster convergence than established baselines.",
+      "watch_item": "Performance depends on careful penalty and step-size tuning, and projection quality may affect stability and convergence in large-scale settings.",
+      "hashtags": [
+        "#OptimalTransport",
+        "#SparseOptimization",
+        "#FirstOrderMethods",
+        "#MachineLearning",
+        "#ComputationalGeometry"
+      ],
+      "paper_id": "2026-09-30-arxiv-accelerated_algorithm_for_sparse_regularized_partial_optimal_transport",
+      "paper_title": "Accelerated Algorithm for Sparse Regularized Partial Optimal Transport",
+      "paper_date": "2026-09-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-01T19:20:53",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-role_adaptive_policy_optimization_for_offline_reinforcement_learning",
+    "arxiv_id": "2609.40149v1",
+    "date": "2026-09-30",
+    "title": "Role-Adaptive Policy Optimization for Offline Reinforcement Learning",
+    "authors": "Seonvin Cho, Soohyun Choi, Songnam Hong",
+    "abstract": "Policy regularization in offline reinforcement learning balances policy improvement against reliance on uncertain value estimates. This balance can differ between selecting actions for execution and supplying actions for critic bootstrapping, yet methods such as TD3+BC couple these roles through a shared policy. We propose Role-Adaptive Policy Optimization (RAPO), which adapts policy-update coefficients according to their roles in value learning and execution. RAPO learns these coefficients by differentiating through candidate policy updates formed using the base algorithm's actor objective. For TD3+BC, RAPO separates bootstrap and execution actors and adapts their coefficients independently: the bootstrap objective penalizes policy-induced changes in target values, while the execution objective evaluates a local policy-improvement surrogate. For IQL, whose value learning is already independent of the execution actor, RAPO preserves the original value updates and adapts only the inverse temperature in advantage-weighted policy extraction. Experiments on D4RL locomotion and AntMaze tasks show improvements over both base algorithms, with larger gains for TD3+BC, whose RAPO instantiation outperforms baselines on average.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-09-30T16:53:45Z",
+    "updated": "2026-09-30T16:53:45Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40149v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40149v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "RAPO improves offline RL by adapting policy regularization separately for value-learning and action-execution roles instead of forcing one shared policy coefficient.",
+      "engineering_relevance": "The method offers a practical way to stabilize offline policy optimization by tuning actor regularization where it matters most in the learning pipeline.",
+      "method": [
+        "Differentiates through candidate policy updates built from the base actor objective to learn role-specific coefficients.",
+        "For TD3+BC, splits bootstrap and execution actors and adapts their coefficients independently.",
+        "For IQL, keeps value learning unchanged and adapts only the inverse temperature used for advantage-weighted policy extraction."
+      ],
+      "evidence_signal": "The abstract reports experiments on D4RL locomotion and AntMaze benchmarks, with RAPO outperforming the base algorithms and especially improving TD3+BC on average.",
+      "watch_item": "RAPO adds an extra meta-optimization step, so implementation complexity and sensitivity to update stability may matter in practice.",
+      "hashtags": [
+        "#OfflineRL",
+        "#PolicyOptimization",
+        "#ReinforcementLearning",
+        "#D4RL",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-09-30-arxiv-role_adaptive_policy_optimization_for_offline_reinforcement_learning",
+      "paper_title": "Role-Adaptive Policy Optimization for Offline Reinforcement Learning",
+      "paper_date": "2026-09-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-01T19:20:55",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-learning_functional_subspaces_for_neural_network_compression",
+    "arxiv_id": "2609.40127v1",
+    "date": "2026-09-30",
+    "title": "Learning Functional Subspaces for Neural Network Compression",
+    "authors": "Massimo Bini, Anders Christensen, Stephan Alaniz, Judah Goldfeder, Ole Winther, Yann LeCun",
+    "abstract": "Modern transformers pair impressive capabilities with substantial memory and compute demands. Low-rank weight factorization reduces both while keeping the matrices dense, and thus efficient on standard hardware. Existing methods, however, choose the subspace to remove from each weight matrix with local closed-form criteria: activation energy, layer-wise reconstruction error, or a quadratic approximation of the loss. These criteria ignore how errors propagate through the network, so at high compression the errors compound with depth and performance collapses. We introduce Learnable Subspace Projections (LSP), which instead learns the subspaces to discard end-to-end. Each linear layer, or tied group of layers that read the same activations, is assigned an orthogonal projector. All projectors are optimized jointly against a global objective--the KL divergence to the dense model's output distribution or the model's original training loss--while the pretrained weights remain frozen. Projectors are initialized from a whitened SVD truncation, and ranks are allocated by the output KL each projector induces per parameter saved. After training, the projectors merge into standard low-rank factors, with each tied group sharing one factor. In attention, this also lets the model cache one narrow latent in place of full keys and values. Across LLMs (OPT-125M/1.3B, Qwen3-4B, Llama-2-7B) and ViT-B/16, LSP outperforms baselines, and its advantage widens as compression increases. At -70% compression, LSP brings Llama-2-7B to 10.9 WikiText-2 perplexity and 42.2% mean zero-shot accuracy, versus 13.3 and 36.0% for the strongest baseline. The factorized model decodes up to 1.6x faster than the dense model at small batch sizes, and aching the shared latent shrinks the combined memory of weights and KV cache by 13.5x at a 128k-token context, versus at most 6.5x for untied baseline factorizations.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-09-30T16:47:35Z",
+    "updated": "2026-09-30T16:47:35Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40127v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40127v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "Learnable Subspace Projections jointly learns which weight subspaces to remove end-to-end, avoiding the local compression criteria that fail when errors accumulate across deep models.",
+      "engineering_relevance": "The method turns frozen pretrained layers into standard low-rank factors and can substantially cut memory, KV-cache size, and inference cost on standard hardware.",
+      "method": [
+        "Assign an orthogonal projector to each linear layer or tied layer group.",
+        "Optimize all projectors jointly with a global objective such as KL to the dense model or the original training loss while keeping pretrained weights frozen.",
+        "Initialize from whitened SVD truncation and allocate ranks by output KL per parameter saved; merge projectors into low-rank factors after training."
+      ],
+      "evidence_signal": "Evaluated on OPT-125M/1.3B, Qwen3-4B, Llama-2-7B, and ViT-B/16, with LSP outperforming baselines more strongly at higher compression; at -70% compression on Llama-2-7B it reached 10.9 WikiText-2 perplexity and 42.2% mean zero-shot accuracy versus 13.3 and 36.0% for the strongest baseline.",
+      "watch_item": "Training requires optimizing a new set of projectors and careful rank allocation, and the approach relies on a good initialization and the assumption that frozen weights remain adequate after compression.",
+      "hashtags": [
+        "#NeuralCompression",
+        "#LowRank",
+        "#LLMOptimization",
+        "#ModelEfficiency",
+        "#Transformers"
+      ],
+      "paper_id": "2026-09-30-arxiv-learning_functional_subspaces_for_neural_network_compression",
+      "paper_title": "Learning Functional Subspaces for Neural Network Compression",
+      "paper_date": "2026-09-30",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-01T19:20:58",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-turbo_harness_instance_adaptive_harness_optimization",
+    "arxiv_id": "2609.40330v1",
+    "date": "2026-09-30",
+    "title": "Turbo Harness: Instance-Adaptive Harness Optimization",
+    "authors": "Tunyu Zhang, Hao Wang, Kai Xu, Dimitris N. Metaxas",
+    "abstract": "Automating the search for effective harnesses is an important step toward enabling agents to recursively self-improve. Existing harness optimizations typically produce a single global harness that is applied uniformly across task instances. However, a harness that works well on average may not be optimal for every instance. We introduce Turbo Harness, a framework that can adapt a globally optimized harness to each instance by reusing information generated during the original optimization process. Specifically, Turbo Harness recycles artifacts produced during a completed global harness optimization run, and summarizes them into a structured playbook. We train a harness editor to leverage this prior optimization experience to generate instance-specific patches to the global harness. At inference time, the editor uses the instance and the playbook to construct a tailored harness in which the execution model operates. Through numerical experiments, we show that Turbo Harness consistently outperforms existing harness optimization baselines across seven benchmarks spanning interactive agent tasks, software engineering, and long-horizon terminal tasks.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-09-30T17:56:09Z",
+    "updated": "2026-09-30T17:56:09Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40330v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40330v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "Turbo Harness turns a one-size-fits-all global harness into an instance-adaptive harness by reusing prior optimization artifacts to generate tailored patches for each task.",
+      "engineering_relevance": "This enables more reliable agent execution across heterogeneous inputs, improving harness design for interactive agents, software engineering, and long-horizon terminal workflows.",
+      "method": [
+        "Recycle outputs from a completed global harness optimization run.",
+        "Summarize artifacts into a structured playbook.",
+        "Train a harness editor to produce instance-specific harness patches at inference time."
+      ],
+      "evidence_signal": "The abstract reports consistent gains over existing harness optimization baselines across seven benchmarks spanning interactive agent tasks, software engineering, and long-horizon terminal tasks.",
+      "watch_item": "Performance depends on the quality and coverage of the original optimization artifacts, so the approach may be less effective when prior runs are sparse or poorly representative.",
+      "hashtags": [
+        "#AgenticAI",
+        "#HarnessOptimization",
+        "#InstanceAdaptive",
+        "#LLMSystems",
+        "#SoftwareEngineering"
+      ],
+      "paper_id": "2026-09-30-arxiv-turbo_harness_instance_adaptive_harness_optimization",
+      "paper_title": "Turbo Harness: Instance-Adaptive Harness Optimization",
+      "paper_date": "2026-09-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-01T19:20:59",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-phantomenvironments_training_llm_agents_in_fictional_worlds",
+    "arxiv_id": "2609.40221v1",
+    "date": "2026-09-30",
+    "title": "PhantomEnvironments: Training LLM Agents in Fictional Worlds",
+    "authors": "Anmol Kabra, Swathi Saravana Selvam, Albert Gong, Chao Wan, Christian Belardi, Dongyoung Go",
+    "abstract": "Training LLM agents with reinforcement learning (RL) is bottlenecked by environments, which must provide verifiable rewards, support long-horizon interaction, and scale cheaply. Existing approaches rely on costly human-curated data or on LLM-generated environments that risk hallucinations and benchmark contamination. We show that LLMs can instead be trained into capable search agents using synthetic environments generated entirely by rules, whose generation requires no LLM and has zero marginal cost. We build PhantomEnvironments, multi-turn RL environments from fictional worlds, where agents must search a corpus of templated articles to answer multi-hop questions. Despite sharing no facts with the real world, these strikingly simple environments yield agents that transfer to real-world multi-hop search benchmarks, often outperforming real-world training data on newer benchmarks. Trained agents generalize to unseen fictional universes, and Qwen models learn to scale their search budget roughly linearly with question difficulty, suggesting emergent search scaling from environment interaction alone. Ablating environment complexity reveals that hop count drives transfer more than constraints or comparisons: even the simplest rule-generated environments are a surprisingly effective, free resource for training generalizable LLM agents.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-09-30T17:26:57Z",
+    "updated": "2026-09-30T17:26:57Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40221v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40221v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "Rule-generated fictional environments can train LLM search agents that generalize to real-world multi-hop tasks, despite containing no real facts.",
+      "engineering_relevance": "This suggests a low-cost, scalable RL data source for building transferable agents without human-curated environments or LLM-generated worlds.",
+      "method": [
+        "Build multi-turn RL environments from fictional worlds with templated articles.",
+        "Require agents to search the corpus and answer multi-hop questions with verifiable rewards.",
+        "Train on synthetic environments and evaluate transfer to real-world multi-hop search benchmarks."
+      ],
+      "evidence_signal": "The abstract reports that agents trained in PhantomEnvironments transfer well to real-world benchmarks, often beating agents trained on real-world data on newer tasks, and Qwen models scale search budget roughly linearly with question difficulty.",
+      "watch_item": "Even though the environments are cheap and synthetic, transfer may depend strongly on hop count and other task design choices, so broader generalization should be validated carefully.",
+      "hashtags": [
+        "#LLMAgents",
+        "#ReinforcementLearning",
+        "#SyntheticEnvironments",
+        "#MultiHopReasoning",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-09-30-arxiv-phantomenvironments_training_llm_agents_in_fictional_worlds",
+      "paper_title": "PhantomEnvironments: Training LLM Agents in Fictional Worlds",
+      "paper_date": "2026-09-30",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-01T19:21:02",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-partial_identification_with_entropy_regularized_optimal_transport",
+    "arxiv_id": "2609.40156v1",
+    "date": "2026-09-30",
+    "title": "Partial identification with entropy regularized optimal transport",
+    "authors": "Bruno N. Costa, Florian F. Gunsilius",
+    "abstract": "In many statistical settings, the available data and maintained assumptions do not suffice to uniquely identify the model parameters of interest. In such cases, one can only identify sets which are guaranteed to contain the true parameters. These are often characterized through linear programs that optimize over models compatible with the observed data. These programs can be infinite-dimensional in the optimizer and the number of constraints. We provide a unified way to characterize and solve such optimization problems by phrasing them as optimal transport problems on path spaces. This allows us to regularize the problem with an entropy penalty, recasting it as a multi-marginal entropic optimal transport problem, which can be solved efficiently via Sinkhorn iterations. In addition, it allows us to establish convergence of the regularized value to the sharpest bound, derive consistency rates for a plug-in estimator, and obtain asymptotic distribution for approximate bounds. The method is general and accommodates settings ranging from instrumental variable models with continuous variables to welfare estimation in heterogeneous demand models. We verify the statistical and computational properties in simulations and provide an application to demand estimation.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-09-30T16:55:57Z",
+    "updated": "2026-09-30T16:55:57Z",
+    "primary_category": "econ.EM",
+    "categories": [
+      "econ.EM",
+      "math.ST",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40156v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40156v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "The paper turns partially identified estimation problems into entropy-regularized multi-marginal optimal transport, enabling efficient computation of sharp bounds with Sinkhorn iterations.",
+      "engineering_relevance": "It provides a practical and scalable way to compute partial-identification bounds in statistical models where exact parameter recovery is impossible or ill-posed.",
+      "method": [
+        "Reformulate infinite-dimensional linear programs as optimal transport problems on path spaces.",
+        "Add an entropy penalty to obtain a multi-marginal entropic OT problem.",
+        "Solve the regularized problem efficiently with Sinkhorn iterations and analyze convergence/statistical rates."
+      ],
+      "evidence_signal": "The authors validate computational and statistical properties in simulations and demonstrate an application to demand estimation.",
+      "watch_item": "Regularization makes the problem tractable but introduces approximation error, so entropy strength and convergence diagnostics must be chosen carefully.",
+      "hashtags": [
+        "#OptimalTransport",
+        "#Sinkhorn",
+        "#PartialIdentification",
+        "#ScientificMachineLearning",
+        "#Econometrics"
+      ],
+      "paper_id": "2026-09-30-arxiv-partial_identification_with_entropy_regularized_optimal_transport",
+      "paper_title": "Partial identification with entropy regularized optimal transport",
+      "paper_date": "2026-09-30",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-01T19:21:04",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-beyond_model_ranking_regime_diagnosis_for_distributional_statistical_misspecification_in_i",
+    "arxiv_id": "2609.40117v1",
+    "date": "2026-09-30",
+    "title": "Beyond Model Ranking: Regime Diagnosis for Distributional-Statistical Misspecification in Industrial Time-Series Forecasting",
+    "authors": "Pengyu Nie, Chenglang Xu, Yaoshi Chen, Chaogan Ren, Wei Hu, Chao Yang",
+    "abstract": "Time-series forecasting models achieve strong benchmark performance but exhibit severe systematic bias in industrial deployments. This train--deploy gap is conventionally attributed to temporal-structural errors or distribution shifts. We characterize a complementary source that these explanations overlook: canonical losses embed fixed statistical priors, while industrial demand mixes benign and pathological regimes---zero-inflation, skewness, high variability---in which these priors are systematically violated. The induced bias persists even under perfect temporal modeling, remains in a distributional-shape component that normalization cannot remove, and creates an aggregation trade-off invisible to aggregate metrics. We turn these observations into an evaluation toolkit centered on the Regime-wise Relative Bias Vector (RBV): a metric-agnostic, regime-decomposed diagnostic that audits how pooled training allocates systematic mismatch across pathological subpopulations. A controlled attribution analysis decomposes RBV into a model-independent intrinsic floor, set by each loss's estimand, and an excess component attributable to training, tracing observed bias to the loss rather than the model. A large-scale study---13 loss objectives, 3 seeds, 60,000+ series spanning RetailShiftBench and M5, with random-split controls---shows that regime-aware diagnosis separates optimization-type from bias-type failure, and that regime-aware training resolves the pooling-induced bias that capacity scaling cannot, for mean-type losses. A formal structural observation, that risk under evaluation-distribution contamination is affine in the pathology mixture weight, grounds these findings. Our work complements model ranking with mechanism-grounded, regime-oriented evaluation.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-09-30T16:43:26Z",
+    "updated": "2026-09-30T16:43:26Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40117v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40117v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "Industrial forecasting errors can come from the loss function’s built-in statistical prior, which creates regime-specific bias even when the temporal model is otherwise correct.",
+      "engineering_relevance": "For deployed forecasting systems, regime-aware diagnostics can reveal and reduce pooling-induced bias that ordinary model ranking or scaling up model capacity may miss.",
+      "method": [
+        "Introduced Regime-wise Relative Bias Vector (RBV) to decompose bias by demand regime.",
+        "Separated bias into an intrinsic floor from the loss estimand and an excess component from training.",
+        "Used controlled experiments to compare 13 loss objectives across multiple seeds and datasets."
+      ],
+      "evidence_signal": "Across 60,000+ time series from RetailShiftBench and M5, with random-split controls, the study shows that regime-aware evaluation distinguishes optimization failures from bias failures.",
+      "watch_item": "RBV depends on reliable regime labeling or detection, so practical deployment may be sensitive to how pathological subpopulations are defined.",
+      "hashtags": [
+        "#TimeSeriesForecasting",
+        "#DistributionShift",
+        "#BiasDiagnosis",
+        "#LossFunctions",
+        "#IndustrialAI"
+      ],
+      "paper_id": "2026-09-30-arxiv-beyond_model_ranking_regime_diagnosis_for_distributional_statistical_misspecification_in_i",
+      "paper_title": "Beyond Model Ranking: Regime Diagnosis for Distributional-Statistical Misspecification in Industrial Time-Series Forecasting",
+      "paper_date": "2026-09-30",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-10-01T19:21:07",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-scalable_cox_regression_via_grouped_risk_sets_and_sharper_logsumexp_rates",
+    "arxiv_id": "2609.40120v1",
+    "date": "2026-09-30",
+    "title": "Scalable Cox Regression via Grouped Risk Sets and Sharper LogSumExp Rates",
+    "authors": "Elizaveta Iashchinskaia, Egor Gladin",
+    "abstract": "Motivated by the computational challenges of large-scale Cox regression, we study stochastic minimization of LogSumExp objectives over large sets. Mini-batch normalizer estimates generally yield biased gradients. We instead use a softplus surrogate that introduces one auxiliary scalar per normalizer and admits unbiased single-sample gradients. For smooth convex LogSumExp objectives, we prove an $O(T^{-1/2})$ averaged objective bound, improving the previous $T^{-1/4}$ analysis. With a strongly convex regularizer on the original variable, we also obtain a last-iterate squared-error rate of $\\widetilde{O}(T^{-1})$ without strong convexity in the auxiliary variables. For Cox regression, the normalizers are defined over nested risk sets. We exploit this structure by grouping neighboring failures and sharing one auxiliary variable per group. The resulting compressed objective admits uniform score and curvature bounds that control the errors from grouping and softplus approximation. Together with the general optimization result, these bounds give a mean-square rate of $T^{-4/5}$, up to logarithmic factors, relative to the full Cox solution. The compressed estimator also matches the full estimator's asymptotic distribution. Experiments on synthetic and real survival datasets with slowly decreasing risk sets show a favorable performance relative to stochastic baselines.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-09-30T16:45:00Z",
+    "updated": "2026-09-30T16:45:00Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40120v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40120v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "The paper replaces biased mini-batch Cox normalizer estimates with a softplus-based grouped surrogate that enables unbiased stochastic gradients and sharper convergence guarantees.",
+      "engineering_relevance": "This makes large-scale survival analysis more practical by reducing optimization bias and memory/computation costs while preserving the full Cox estimator’s asymptotic behavior.",
+      "method": [
+        "Introduce one auxiliary scalar per LogSumExp normalizer and optimize a softplus surrogate with unbiased single-sample gradients.",
+        "Prove improved optimization rates for smooth convex objectives and a last-iterate guarantee under strong convexity in the main variable.",
+        "For Cox regression, group neighboring failures to share auxiliary variables, using uniform score/curvature bounds to control approximation error."
+      ],
+      "evidence_signal": "Experiments on synthetic and real survival datasets with slowly decreasing risk sets show favorable performance compared with stochastic baselines, and the compressed estimator matches the full estimator’s asymptotic distribution.",
+      "watch_item": "The grouped compression introduces approximation error, so performance depends on how well neighboring failures can be clustered and on the risk-set structure.",
+      "hashtags": [
+        "#CoxRegression",
+        "#SurvivalAnalysis",
+        "#LogSumExp",
+        "#StochasticOptimization",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-09-30-arxiv-scalable_cox_regression_via_grouped_risk_sets_and_sharper_logsumexp_rates",
+      "paper_title": "Scalable Cox Regression via Grouped Risk Sets and Sharper LogSumExp Rates",
+      "paper_date": "2026-09-30",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-01T19:21:09",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-removing_timing_shortcuts_improves_non_invasive_brain_to_text",
+    "arxiv_id": "2609.40359v1",
+    "date": "2026-09-30",
+    "title": "Removing Timing Shortcuts Improves Non-Invasive Brain-to-Text",
+    "authors": "Dulhan Jayalath, Oiwi Parker Jones",
+    "abstract": "We find that major reported improvements in decoding words from non-invasive brain recordings are largely reproducible without any brain data. In the influential work of d'Ascoli et al. (2025), time series of brain activity from subjects perceiving continuous speech are segmented into fixed-length windows starting at each word. A neural network then generates predictions for all of the words in a sentence together. Neighbouring windows partially overlap, implicitly revealing the interval between words. Since these intervals indicate the duration of the words spoken, and different words tend to have different durations - for example, \"the\" is much shorter than \"supercalifragilisticexpialidocious\" - the neural network can improve its predictions of words without relying on the underlying brain activity. Consistent with this, the method reaches 22.0% balanced accuracy on synthetic signals containing no brain information, compared with 22.3% on real brain recordings. To prevent the network from learning this shortcut, we make a single, simple change. Instead of jointly encoding all windows in a sentence, we process each independently. As a result, the neural network achieves better performance by learning underlying word-specific information from brain recordings. This makes two existing strategies become much more effective than before. Both aggregating predictions from distinct neural responses to the same word and using a pretrained LLM as a linguistic prior now substantially improve results. On our perceived speech benchmark, this simple recipe (SimpleB2T) achieves a word error rate of 36.6% with five observations per word, approaching past invasive speech decoding performance, albeit under different conditions. The results in this work expose an important shortcut in brain-to-text decoding and show that removing it leads to a simple and considerably more effective strategy.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-09-30T17:59:52Z",
+    "updated": "2026-09-30T17:59:52Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "q-bio.NC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40359v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40359v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "The reported gains in non-invasive brain-to-text decoding are largely explained by a timing shortcut from overlapping word windows, and removing it reveals the true benefit of brain-derived signals.",
+      "engineering_relevance": "For robust decoding systems, independently encoding each word window and combining repeated observations with a pretrained language model can substantially improve performance without leaking timing information.",
+      "method": [
+        "Encode each brain window independently instead of jointly across a sentence.",
+        "Aggregate predictions from multiple neural responses to the same word.",
+        "Use a pretrained LLM as a linguistic prior during decoding."
+      ],
+      "evidence_signal": "The shortcut-sensitive method scored 22.0% balanced accuracy on synthetic no-brain signals versus 22.3% on real brain recordings, while the revised SimpleB2T reached 36.6% word error rate with five observations per word on the perceived-speech benchmark.",
+      "watch_item": "Performance depends on careful windowing and evaluation design, because overlapping segments can silently leak word-duration information and inflate apparent decoding quality.",
+      "hashtags": [
+        "#BrainToText",
+        "#NeuralDecoding",
+        "#BrainComputerInterface",
+        "#MLforNeuroscience",
+        "#SpeechDecoding"
+      ],
+      "paper_id": "2026-09-30-arxiv-removing_timing_shortcuts_improves_non_invasive_brain_to_text",
+      "paper_title": "Removing Timing Shortcuts Improves Non-Invasive Brain-to-Text",
+      "paper_date": "2026-09-30",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-01T19:21:11",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-prefpi_preference_guided_steering_into_out_of_distribution_behaviors",
+    "arxiv_id": "2609.40165v1",
+    "date": "2026-09-30",
+    "title": "PrefPI: Preference-Guided Steering into Out-of-Distribution Behaviors",
+    "authors": "Seungeun Rho, Wontaek Kim, Danfei Xu, Sehoon Ha",
+    "abstract": "We present PrefPI (Preference-Guided Policy Iteration), an iterative framework for steering pretrained generative robot policies using only relative preferences over self-generated trajectories. Unlike prior preference-learning methods that primarily sharpen modes already represented by the policy, we study steering beyond the initial effective support, where desired behaviors are rarely or never observed under the initial policy. Our key idea is to formulate preference learning as preference-conditioned generative modeling: preferred trajectories define a conditional distribution, whose density ratio with the broader behavior prior provides an implicit preference signal amplified by classifier-free guidance (CFG). Repeating this preference-conditioned modeling and guidance step yields a form of preference-guided policy iteration, turning incremental improvements toward previously inaccessible behaviors. Across diffusion policies and the PI0.5 flow- matching VLA in simulation and the real world, PrefPI produces substantial behavioral shifts with limited feedback. In particular, PrefPI increases object transport height from 10.7 cm to 19.8 cm on real hardware with only 150 preference-labeled trajectories.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-09-30T16:58:38Z",
+    "updated": "2026-09-30T16:58:38Z",
+    "primary_category": "cs.RO",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40165v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40165v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "PrefPI uses relative preferences to iteratively steer pretrained robot policies beyond their original behavior support, enabling new behaviors that were rarely or never seen before.",
+      "engineering_relevance": "For robotics and autonomy, this offers a practical way to adapt generative policies with limited feedback, without requiring full retraining or dense reward design.",
+      "method": [
+        "Learn a preference-conditioned generative model from self-generated trajectories.",
+        "Use the density ratio between preferred trajectories and the broader behavior prior as an implicit preference signal.",
+        "Amplify the signal with classifier-free guidance and repeat the process as preference-guided policy iteration."
+      ],
+      "evidence_signal": "The abstract reports substantial behavior shifts in simulation and real hardware, including increasing object transport height from 10.7 cm to 19.8 cm using only 150 preference-labeled trajectories.",
+      "watch_item": "Because the method relies on iterative guidance from limited preferences, it may be sensitive to feedback quality and could accumulate errors or bias if the preference data is noisy or unrepresentative.",
+      "hashtags": [
+        "#RobotLearning",
+        "#PreferenceLearning",
+        "#GenerativePolicies",
+        "#OutOfDistribution",
+        "#ClassiferFreeGuidance"
+      ],
+      "paper_id": "2026-09-30-arxiv-prefpi_preference_guided_steering_into_out_of_distribution_behaviors",
+      "paper_title": "PrefPI: Preference-Guided Steering into Out-of-Distribution Behaviors",
+      "paper_date": "2026-09-30",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-10-01T19:21:13",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-agent_error_dataset_scaling_50_000_error_diagnosis_pairs_for_failure_analysis_and_error_aw",
+    "arxiv_id": "2609.40111v1",
+    "date": "2026-09-30",
+    "title": "Agent Error Dataset: Scaling 50,000 Error--Diagnosis Pairs for Failure Analysis and Error-Aware Post-Training",
+    "authors": "Kunlun Zhu, Xuyan Ye, Yibo Li, Cheng Qian, Beibin Li, Heng Ji",
+    "abstract": "An unsuccessful LLM agent rollout contains more information than its final reward: the observations available to the agent, the actions it chose, and the environment's responses. Reusing this experience for learning requires identifying a decision to revise and testing a concrete alternative. We introduce the Agent Error Dataset (AED), comprising 50,228 error-diagnosis pairs from 9,961 source tasks across 33 environments, 19 harness families, and 23 policy models in text-based agent systems. We retain source traces and execution metadata to support cross-setting failure analysis and re-diagnosis without repeating the original rollout. Our five-stage Agentic Error-to-Training (AET) pipeline collects natural failures, generates diagnoses and proposed corrections, and checks them against recorded evidence. Where replay is supported, we compare corrections with original-action retries from the same checkpoint under matched execution settings. We then construct separate training views for diagnosis and actor recovery. Across 3,062 matched replay pairs, first-proposal corrections raise verifier pass rates from 18.4% to 51.1%, a gain of 32.7 percentage points. Using a separately frozen diagnosis release, full-diagnosis fine-tuning on 1,656 source tasks raises Qwen3-8B's exact-step agreement with internal teacher labels from 47.2% to 63.6%, averaged over three seeds on a 943-case holdout. The strongest prompted reference in this comparison scores 54.7%, and mean agreement improves at each of four increasing training-set sizes. In a single-seed comparison of actor-training recipes, action-only repair training scores 6.67 percentage points higher on WebShop-lite than success-only training.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-09-30T16:40:22Z",
+    "updated": "2026-09-30T16:40:22Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40111v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40111v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "The paper turns failed LLM-agent rollouts into a large, reusable error-to-diagnosis dataset and shows that evidence-checked corrections can substantially improve failure recovery.",
+      "engineering_relevance": "For agentic systems, the dataset and training pipeline offer a practical way to diagnose recurring errors and fine-tune policies using recorded traces instead of rerunning expensive environment rollouts.",
+      "method": [
+        "Built the Agent Error Dataset (AED) with 50,228 error-diagnosis pairs from 9,961 tasks spanning 33 environments, 19 harness families, and 23 policy models.",
+        "Designed a five-stage Agentic Error-to-Training (AET) pipeline to collect failures, generate diagnoses and corrections, and verify them against stored execution evidence.",
+        "Separated training views for diagnosis and actor recovery, and compared corrections with replayed retries when matched replay support was available."
+      ],
+      "evidence_signal": "Across 3,062 matched replay pairs, first-proposal corrections increased verifier pass rates from 18.4% to 51.1%, and diagnosis fine-tuning raised exact-step agreement from 47.2% to 63.6% on a 943-case holdout.",
+      "watch_item": "Results depend on recorded traces, execution metadata, and replay support, so portability may be limited in environments without consistent logging or reproducible checkpoints.",
+      "hashtags": [
+        "#LLMAgents",
+        "#FailureAnalysis",
+        "#PostTraining",
+        "#ErrorRecovery",
+        "#AgentData"
+      ],
+      "paper_id": "2026-09-30-arxiv-agent_error_dataset_scaling_50_000_error_diagnosis_pairs_for_failure_analysis_and_error_aw",
+      "paper_title": "Agent Error Dataset: Scaling 50,000 Error--Diagnosis Pairs for Failure Analysis and Error-Aware Post-Training",
+      "paper_date": "2026-09-30",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-01T19:21:16",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-09-30-arxiv-gromov_wasserstein_distillation_for_inductive_multi_view_embedding",
+    "arxiv_id": "2609.40047v1",
+    "date": "2026-09-30",
+    "title": "Gromov-Wasserstein Distillation for Inductive Multi-View Embedding",
+    "authors": "Rafael Pereira Eufrazio, Eduardo Fernandes Montesuma, Charles Casimiro Cavalcante",
+    "abstract": "Gromov-Wasserstein multidimensional scaling (GW-MDS) learns low-dimensional representations from relational data but remains transductive, providing no explicit mapping for unseen samples. We introduce an inductive framework based on barycentric distillation. A GW-MDS teacher learns a latent support and an optimal transport plan from the training data, and barycentric projection converts the resulting coupling into sample-aligned targets. A neural student then learns an explicit out-of-sample mapping, avoiding additional relational-matrix construction and GW optimization at inference. We formulate the approach for single-view data and extend it to Mean-GWMDS and Multi-GWMDS teachers through consensus and selected-projection targets learned by a multi-view student with view-specific encoders. We also investigate a direct neural baseline trained solely with a GW objective. Experiments on synthetic and real-world data using Euclidean, geodesic, and cosine relations show that the distilled models preserve the teacher geometry on unseen samples and consistently outperform direct neural GW training in sample-indexed relational preservation. These results establish barycentric projection as an effective bridge between transductive GW embeddings and inductive neural mappings.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-09-30T16:14:13Z",
+    "updated": "2026-09-30T16:14:13Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2609.40047v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2609.40047v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Barycentric distillation turns transductive Gromov-Wasserstein embeddings into an inductive neural mapping that preserves the teacher geometry for unseen samples.",
+      "engineering_relevance": "This enables fast out-of-sample inference for multi-view representation learning without recomputing relational matrices or solving GW optimization at test time.",
+      "method": [
+        "Train a GW-MDS teacher to learn a latent support and optimal transport coupling.",
+        "Use barycentric projection to convert the coupling into sample-aligned target embeddings.",
+        "Train a neural student with view-specific encoders, extending to Mean-GWMDS and Multi-GWMDS variants."
+      ],
+      "evidence_signal": "The method was evaluated on synthetic and real-world datasets using Euclidean, geodesic, and cosine relations, and distilled models preserved teacher geometry while outperforming direct neural GW training on unseen samples.",
+      "watch_item": "Performance may depend on the quality of the teacher coupling and barycentric targets, so noisy or unstable transport plans could affect student generalization.",
+      "hashtags": [
+        "#GromovWasserstein",
+        "#InductiveLearning",
+        "#MultiViewEmbedding",
+        "#OptimalTransport",
+        "#RepresentationLearning"
+      ],
+      "paper_id": "2026-09-30-arxiv-gromov_wasserstein_distillation_for_inductive_multi_view_embedding",
+      "paper_title": "Gromov-Wasserstein Distillation for Inductive Multi-View Embedding",
+      "paper_date": "2026-09-30",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-01T19:21:18",
+      "generator": "openai"
+    }
+  }
+]
