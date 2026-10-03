@@ -1,13 +1,13 @@
 {
-  "key_insight": "ZFO separates “which direction to move” from “how far to move,” using first-order gradients for direction and cheap zeroth-order probes to adaptively choose the step size.",
-  "engineering_relevance": "This gives LLM fine-tuning a lightweight, curvature-aware step selection mechanism that can be more stable than fixed-step training without the cost of a full line search.",
+  "key_insight": "Decouple “where to go” from “how far to go”: use a trusted first-order direction, then cheaply tune the step with zeroth-order function evaluations along that single direction.",
+  "engineering_relevance": "This gives a lightweight, curvature-aware step-size strategy for LLM fine-tuning that can outperform fixed-step baselines without the cost of full line search.",
   "method": [
-    "Use a trusted first-order optimizer to set the descent direction.",
-    "Evaluate the objective at two additional points along that direction to fit a local 1D model.",
-    "Choose a bounded, near-optimal step from the model using shared-sample finite-difference curvature estimates."
+    "First-order optimizer provides the descent direction.",
+    "Evaluate the objective at two additional points along that direction.",
+    "Fit a local 1D model to choose a bounded, near-optimal step size."
   ],
-  "evidence_signal": "The abstract reports that across evaluated language models and datasets, ZFO often improved optimization and final performance over fixed-step first-order baselines.",
-  "watch_item": "Performance depends on the objective and the local model choice, so the method may require careful tuning of the search interval and model form.",
+  "evidence_signal": "The abstract reports evaluations across multiple language-model and dataset settings, where ZFO often improved optimization and final performance over fixed-step first-order baselines.",
+  "watch_item": "Performance depends on the local model choice and the method still relies on extra objective evaluations, so noisy or expensive function queries may limit practicality.",
   "hashtags": [
     "#LLMFineTuning",
     "#Optimization",
@@ -19,6 +19,6 @@
   "paper_title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
   "paper_date": "2026-10-01",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-02T19:04:05",
+  "generated_at": "2026-10-03T17:50:49",
   "generator": "openai"
 }

@@ -1,0 +1,24 @@
+{
+  "key_insight": "TACO replaces dense optimizer state with a column-wise one-sparse update rule that preserves AdamW-like fine-tuning behavior while making optimizer memory nearly negligible.",
+  "engineering_relevance": "This enables full-parameter LLM fine-tuning of much larger models on a single GPU by dramatically lowering persistent and peak memory without sacrificing accuracy or runtime.",
+  "method": [
+    "Uses the exact steepest-descent direction under a dimension-normalized 1→1 operator norm.",
+    "For each matrix column, keeps only the sign of the largest-magnitude gradient entry.",
+    "Maintains a small set of low-precision gradient components per column instead of dense optimizer state."
+  ],
+  "evidence_signal": "On OPT-13B, TACO reduced persistent optimizer state from 27.7 GB to 0.16 GB and peak training memory from 80.6 GB to 27.5 GB, with comparable accuracy and runtime; it also enabled 30–32B model fine-tuning on a single 80 GB H100.",
+  "watch_item": "The one-sparse, column-wise geometry is tailored to matrix-shaped parameters, so careful implementation is needed to ensure stable behavior across all model layers and training setups.",
+  "hashtags": [
+    "#LLMFineTuning",
+    "#OptimizerCompression",
+    "#MemoryEfficiency",
+    "#HPC",
+    "#AIResearch"
+  ],
+  "paper_id": "2026-10-01-arxiv-taco_ternary_absolute_max_column_wise_one_sparse_optimizer_for_llm_fine_tuning",
+  "paper_title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+  "paper_date": "2026-10-01",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-10-03T17:51:17",
+  "generator": "openai"
+}

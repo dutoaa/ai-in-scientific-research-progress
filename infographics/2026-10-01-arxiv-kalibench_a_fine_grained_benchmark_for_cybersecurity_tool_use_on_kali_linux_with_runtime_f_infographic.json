@@ -1,17 +1,17 @@
 {
-  "key_insight": "KaliBench shows that translating natural-language cybersecurity intent into exact Kali Linux commands is still hard, with minor CLI mistakes causing major execution failures.",
-  "engineering_relevance": "The benchmark provides a practical way to train and evaluate agentic cybersecurity tools using deterministic, verifiable command outputs rather than vague end-task scores.",
+  "key_insight": "KaliBench shows that translating natural-language intent into executable cybersecurity CLI commands is still very hard for LLMs, even when the task is narrowed to tool use rather than open-ended agent behavior.",
+  "engineering_relevance": "The benchmark provides a reproducible way to train and evaluate models for real Kali Linux tool invocation, which is directly relevant to building reliable security copilots and autonomous penetration-testing agents.",
   "method": [
-    "Built a fine-grained dataset of 8,504 query-command pairs covering 1,642 tools, 23 capability dimensions, and 5 security phases.",
-    "Used manuscript-grounded command generation with deterministic canonicalization and alias-aware evaluation to assess tool choice and argument construction.",
-    "Added multi-stage verification with LLM checks, sandboxed terminal execution, and human review, enabling runtime-free verifiable rewards."
+    "8,504 natural-language query–command pairs covering 1,642 Kali Linux tools",
+    "Manuscript-grounded dataset creation with deterministic canonicalization and alias-aware evaluation",
+    "Multi-stage verification using LLM checks, sandboxed terminal execution, and human refinement"
   ],
-  "evidence_signal": "Across 24 model configurations, no open-weight model exceeded 42% exact-command accuracy in the unrestricted setting.",
-  "watch_item": "Results may depend on command canonicalization and sandboxed verification rules, so deployment quality can vary if real tool environments differ from the benchmark.",
+  "evidence_signal": "Across 24 model/configuration settings, no open-weight model exceeded 42% exact-command accuracy in the unrestricted setting, and the benchmark supports runtime-free verifiable rewards for training.",
+  "watch_item": "Exact-command success is sensitive to syntax, flag binding, and argument order, so any deployment must preserve strict command validation and sandboxing to avoid unsafe or invalid execution.",
   "hashtags": [
     "#CybersecurityAI",
-    "#KaliLinux",
     "#LLMAgents",
+    "#KaliLinux",
     "#Benchmarking",
     "#VerifiableRewards"
   ],
@@ -19,6 +19,6 @@
   "paper_title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
   "paper_date": "2026-10-01",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-10-02T19:04:40",
+  "generated_at": "2026-10-03T17:51:14",
   "generator": "openai"
 }
