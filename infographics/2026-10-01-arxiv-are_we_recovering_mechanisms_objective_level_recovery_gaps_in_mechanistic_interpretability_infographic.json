@@ -1,24 +1,24 @@
 {
-  "key_insight": "Mechanistic interpretability can fail at the objective level: a faithfulness metric may prefer a circuit that is less behaviorally accurate even when the better mechanism is equally sized.",
-  "engineering_relevance": "For automated circuit discovery, improving search or attribution is not enough unless the evaluation objective reliably ranks truly better circuits above worse ones.",
+  "key_insight": "Objective-level evaluation can misrank mechanistic circuits: a circuit that scores better on faithfulness can actually reproduce model behavior worse than an equally sized alternative.",
+  "engineering_relevance": "For mechanistic interpretability pipelines, improving the discovery algorithm is not enough unless the validation objective reliably tracks true behavioral recovery.",
   "method": [
-    "Compare validation faithfulness against held-out behavioral agreement under ordinary resampling.",
-    "Test controlled reference edits plus outputs from EAP, EAP-IG, ACDC, and Edge-SP.",
-    "Diagnose context distortion by restoring excluded signals from intact-model execution."
+    "Compared validation faithfulness against held-out behavioral agreement under ordinary resampling across four human-reference tasks and InterpBench.",
+    "Tested controlled reference edits and outputs from EAP, EAP-IG, ACDC, and Edge-SP to expose misranking without relying on any single discovery method.",
+    "Analyzed context distortion by restoring excluded signals from the intact-model execution to see whether rankings could be repaired."
   ],
-  "evidence_signal": "Across four human-reference tasks and InterpBench, KL under resampling misranked 9.4%–41.2% of candidate pairs, and restoring signals fixed 96 of 100 persistent misrankings.",
-  "watch_item": "The behavioral criterion depends on held-out prompt agreement (or semantic accuracy on Greater-Than), so conclusions may shift with different task definitions or resampling choices.",
+  "evidence_signal": "Under resampling, KL misranked 9.4%–41.2% of candidate pairs on the human-reference tasks, and restoring selected signals fixed 96 of 100 persistent misrankings in the study pool.",
+  "watch_item": "Faithfulness metrics can be sensitive to distribution shifts caused by exclusion-based interventions, so validation setups must check whether the retained subcircuit is being evaluated on distorted inputs.",
   "hashtags": [
     "#MechanisticInterpretability",
-    "#CircuitDiscovery",
+    "#ScientificDiscovery",
+    "#ModelEvaluation",
     "#Faithfulness",
-    "#AIResearch",
-    "#ScientificDiscovery"
+    "#AIResearch"
   ],
   "paper_id": "2026-10-01-arxiv-are_we_recovering_mechanisms_objective_level_recovery_gaps_in_mechanistic_interpretability",
   "paper_title": "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
   "paper_date": "2026-10-01",
   "paper_category": "Scientific Discovery",
-  "generated_at": "2026-10-02T19:04:31",
+  "generated_at": "2026-10-04T18:03:53",
   "generator": "openai"
 }

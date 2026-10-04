@@ -1,24 +1,24 @@
 {
-  "key_insight": "Mem++ preserves full document history and shifts memory selection to query time, enabling LLM agents to answer time-sensitive organizational questions without destructive summarization.",
-  "engineering_relevance": "This design is important for production LLM systems that must track evolving decisions and versioned records accurately over long time horizons.",
+  "key_insight": "Mem++ changes LLM agent memory from “compress at write time” to “select at read time,” preserving full document history so answers can reflect the correct version at a given time.",
+  "engineering_relevance": "This is useful for organizational AI systems that need auditable, time-aware memory across evolving documents, decisions, and revisions without losing older context.",
   "method": [
-    "Store each document intact with its timestamp and author; no write-time generation or compression.",
-    "At read time, filter to documents dated no later than the question’s reference time.",
-    "Fuse lexical and semantic retrieval rankings before passing context to the answering model."
+    "Stores every document in full with date and author metadata.",
+    "Performs retrieval only over documents available up to the question’s time.",
+    "Fuses lexical and semantic ranking signals at read time instead of generating summaries during ingestion."
   ],
-  "evidence_signal": "On OrgMemBench, Mem++ outperforms the strongest memory baseline by 8.0 to 13.1 points across two answering models, and with gpt-4.1-mini it scores 2.6 points above RAG overall.",
-  "watch_item": "Keeping all document versions may increase storage and retrieval complexity, so systems need efficient indexing and time-aware retrieval at scale.",
+  "evidence_signal": "On OrgMemBench, Mem++ outperformed the strongest memory baseline by 8.0–13.1 points across two answering models, and with gpt-4.1-mini it beat RAG by 2.6 points overall.",
+  "watch_item": "Keeping all documents intact may increase storage and retrieval complexity, so performance depends on careful indexing and time-filtering implementation.",
   "hashtags": [
     "#LLMAgents",
     "#MemorySystems",
     "#RAG",
-    "#InformationRetrieval",
-    "#OrgMemBench"
+    "#OrgMemBench",
+    "#KnowledgeMining"
   ],
   "paper_id": "2026-10-01-arxiv-mem_non_destructive_memory_for_long_term_organizational_llm_agents",
   "paper_title": "Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents",
   "paper_date": "2026-10-01",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-03T17:51:02",
+  "generated_at": "2026-10-04T18:03:34",
   "generator": "openai"
 }

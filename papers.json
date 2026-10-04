@@ -25,29 +25,29 @@
         "url": "https://arxiv.org/pdf/2610.02182v1"
       }
     ],
-    "score": 89,
+    "score": 79,
     "infographic": {
-      "key_insight": "SoftServe is a scalable quasi-Newton framework that keeps curvature estimates positive definite by construction, enabling deep-learning optimization without line searches or manual curvature fixes.",
-      "engineering_relevance": "It offers a GPU-friendly path to faster, more stable training on large, ill-conditioned neural networks by replacing expensive matrix decompositions with coupled Newton-Schulz iterations.",
+      "key_insight": "SoftServe turns quasi-Newton optimization into a scalable deep-learning method by constructing positive-definite curvature estimates that remain stable even under non-convexity and negative curvature.",
+      "engineering_relevance": "It offers a GPU-friendly alternative to first-order optimizers for large, ill-conditioned models, with variants that scale to massive parameter counts without line searches or manual curvature fixes.",
       "method": [
-        "Builds curvature from a variational objective even when negative curvature is present",
-        "Provides diagonal and Kronecker-factored variants that remain positive definite",
-        "Uses stable coupled Newton-Schulz iterations for matrix operations on GPUs"
+        "Derives curvature from the variational objective of Berglund et al. (2025) to keep updates positive definite.",
+        "Provides diagonal and Kronecker-factored SoftServe variants for large-scale neural networks.",
+        "Uses the coupled Newton-Schulz iteration to replace costly matrix decompositions with matrix multiplications."
       ],
-      "evidence_signal": "The abstract reports strong results on ill-conditioned benchmarks including recurrent networks, deep autoencoders, physics-informed neural networks, and a 136M-parameter diffusion model, often outperforming Adam, Muon, and SOAP.",
-      "watch_item": "Performance depends on iterative matrix approximations, so numerical stability, iteration count, and memory/compute cost should be validated for each model and hardware setting.",
+      "evidence_signal": "The abstract reports strong performance on severely ill-conditioned benchmarks, including recurrent networks, deep autoencoders, PINNs, and a 136M-parameter diffusion model, often outperforming Adam, Muon, and SOAP.",
+      "watch_item": "Performance and stability may depend on careful implementation of the Newton-Schulz iteration and its numerical behavior at very large scale.",
       "hashtags": [
-        "#QuasiNewton",
-        "#DeepLearningOptimization",
         "#ScientificMachineLearning",
-        "#PhysicsInformedML",
-        "#GPUComputing"
+        "#QuasiNewton",
+        "#DeepLearning",
+        "#Optimization",
+        "#PhysicsInformedNN"
       ],
       "paper_id": "2026-10-01-arxiv-softserve_a_scalable_quasi_newton_method_for_deep_learning",
       "paper_title": "SoftServe: A Scalable Quasi-Newton Method for Deep Learning",
       "paper_date": "2026-10-01",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-03T17:50:42",
+      "generated_at": "2026-10-04T18:03:17",
       "generator": "openai"
     }
   },
@@ -76,29 +76,29 @@
         "url": "https://arxiv.org/pdf/2610.02014v1"
       }
     ],
-    "score": 81,
+    "score": 76,
     "infographic": {
-      "key_insight": "AI/ML is becoming a core chemical engineering tool, especially when combined with first-principles and physics-informed models.",
-      "engineering_relevance": "These methods improve prediction, discovery, and decision-making across scales from atoms to industrial processes while preserving thermodynamic and conservation-law consistency.",
+      "key_insight": "AI/ML is transforming chemical engineering by augmenting first-principles models across scales, from atoms and materials to process operations, with physics-informed hybrids emerging as the dominant direction.",
+      "engineering_relevance": "For chemical engineers, these methods improve prediction, design, and control when data are sparse, systems are complex, and reliability matters.",
       "method": [
-        "Hybrid ML + first-principles modeling",
-        "Physics-informed and constraint-aware learning",
-        "Human-AI collaboration for task-specific abstraction"
+        "Hybridize ML with first-principles models",
+        "Embed physics constraints such as conservation laws and thermodynamic consistency",
+        "Use AI/ML across multiscale tasks including discovery, transport, separations, and operations"
       ],
-      "evidence_signal": "The abstract synthesizes representative applications across atomic-scale simulation, materials discovery, transport, separations, process systems engineering, and industrial operations rather than reporting a single benchmark study.",
-      "watch_item": "Performance can degrade under data scarcity or extrapolation, so model interpretability, consistency, and lifecycle management remain critical.",
+      "evidence_signal": "The paper is a perspective that synthesizes recent methodological developments and representative applications across multiple chemical engineering domains rather than reporting a single new dataset or benchmark.",
+      "watch_item": "Black-box models can struggle with extrapolation, interpretability, and lifecycle management, so deployment requires careful validation and domain-aware constraints.",
       "hashtags": [
         "#ChemicalEngineering",
         "#MachineLearning",
         "#ArtificialIntelligence",
         "#PhysicsInformedML",
-        "#ProcessSystemsEngineering"
+        "#ScientificML"
       ],
       "paper_id": "2026-10-01-arxiv-atoms_to_processes_the_role_of_artificial_intelligence_and_machine_learning_in_chemical_en",
       "paper_title": "Atoms to Processes: The Role of Artificial Intelligence and Machine Learning in Chemical Engineering",
       "paper_date": "2026-10-01",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-03T17:50:44",
+      "generated_at": "2026-10-04T18:03:19",
       "generator": "openai"
     }
   },
@@ -129,19 +129,19 @@
         "url": "https://arxiv.org/pdf/2610.02039v1"
       }
     ],
-    "score": 79,
+    "score": 74,
     "infographic": {
-      "key_insight": "CARM prevents positive and negative token-level probability changes from canceling out, making response-level off-policy masking more sensitive and reliable for LLM RL.",
-      "engineering_relevance": "It gives practitioners a theoretically grounded way to filter rollout responses during RL post-training, which can improve stability and quality in reasoning and code models.",
+      "key_insight": "CARM improves response-level off-policy control in LLM reinforcement learning by masking whole samples using the average absolute token log-ratio, so opposing probability shifts cannot cancel out.",
+      "engineering_relevance": "It gives practitioners a more robust sequence-level acceptance rule for RL post-training pipelines where rollout and training engines differ, helping reduce harmful off-policy updates in reasoning and code models.",
       "method": [
-        "Compute token log-ratios between sampled rollout and training policies.",
-        "Take the absolute value of each token log-ratio before averaging at the sequence level.",
-        "Accept responses only when the masked statistic satisfies a joint bound on out-of-band ratio frequency and mean log-distance."
+        "Compute token log-ratios between sampled rollout probabilities and training-engine probabilities.",
+        "Use the mean absolute log-ratio across the sequence instead of the signed geometric mean to avoid cancellation.",
+        "Accept only responses that satisfy a joint bound on out-of-band token ratios and mean log-distance beyond the band."
       ],
-      "evidence_signal": "On math reasoning and code generation benchmarks, CARM improved mean@16 by up to 3.13 points over geometric-mean masking and raised average pass@1 by 2.88 points over the strongest baseline.",
-      "watch_item": "Absolute-value masking may be more conservative and depends on careful thresholding to avoid rejecting useful but shifted responses.",
+      "evidence_signal": "On mathematical reasoning and code generation benchmarks, CARM improved mean@16 on AIME 2024/2025/2026 plus BeyondAIME by up to 3.13 points, and raised average pass@1 on four code benchmarks by 2.88 points over the strongest baseline.",
+      "watch_item": "Because masking is stricter and sequence-level, the method may reduce usable samples or require careful tuning of the ratio band and acceptance threshold.",
       "hashtags": [
-        "#LLMRL",
+        "#LLMReinforcementLearning",
         "#OffPolicyControl",
         "#ResponseMasking",
         "#MathematicalReasoning",
@@ -151,7 +151,7 @@
       "paper_title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
       "paper_date": "2026-10-01",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-03T17:50:47",
+      "generated_at": "2026-10-04T18:03:22",
       "generator": "openai"
     }
   },
@@ -181,29 +181,29 @@
         "url": "https://arxiv.org/pdf/2610.02190v1"
       }
     ],
-    "score": 78,
+    "score": 68,
     "infographic": {
-      "key_insight": "Decouple “where to go” from “how far to go”: use a trusted first-order direction, then cheaply tune the step with zeroth-order function evaluations along that single direction.",
-      "engineering_relevance": "This gives a lightweight, curvature-aware step-size strategy for LLM fine-tuning that can outperform fixed-step baselines without the cost of full line search.",
+      "key_insight": "ZFO decouples optimizer direction from step-size by using first-order gradients for direction and cheap zeroth-order evaluations to adaptively choose the step length along that direction.",
+      "engineering_relevance": "This offers a practical, low-overhead alternative to full line search for LLM fine-tuning, improving stability and convergence without adding many objective evaluations.",
       "method": [
-        "First-order optimizer provides the descent direction.",
-        "Evaluate the objective at two additional points along that direction.",
-        "Fit a local 1D model to choose a bounded, near-optimal step size."
+        "Use a trusted first-order optimizer to propose the descent direction.",
+        "Evaluate the objective at two extra points along that direction to build a local 1D model.",
+        "Select a curvature-aware step within a bounded interval using shared-sample finite differences."
       ],
-      "evidence_signal": "The abstract reports evaluations across multiple language-model and dataset settings, where ZFO often improved optimization and final performance over fixed-step first-order baselines.",
-      "watch_item": "Performance depends on the local model choice and the method still relies on extra objective evaluations, so noisy or expensive function queries may limit practicality.",
+      "evidence_signal": "Across multiple language-model and dataset settings, the method often outperformed fixed-step first-order baselines in both optimization behavior and final performance.",
+      "watch_item": "The gains depend on the objective and local model choice, so implementation details and tuning of the bounded search interval may affect robustness.",
       "hashtags": [
         "#LLMFineTuning",
         "#Optimization",
         "#ZeroOrderMethods",
         "#FirstOrderMethods",
-        "#MachineLearningResearch"
+        "#MachineLearning"
       ],
       "paper_id": "2026-10-01-arxiv-trust_the_direction_search_the_step_zero_and_first_order_methods_for_llm_fine_tuning",
       "paper_title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
       "paper_date": "2026-10-01",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-03T17:50:49",
+      "generated_at": "2026-10-04T18:03:24",
       "generator": "openai"
     }
   },
@@ -232,29 +232,29 @@
         "url": "https://arxiv.org/pdf/2610.02144v1"
       }
     ],
-    "score": 73,
+    "score": 68,
     "infographic": {
-      "key_insight": "Faynt shows that a single Transformer policy can be scaled and optimized to control all 26 Super Smash Bros. Melee characters and achieve strong competitive performance.",
-      "engineering_relevance": "The paper demonstrates a practical recipe for multi-character game AI that combines large-scale replay pretraining, distillation, curriculum learning, and low-latency inference.",
+      "key_insight": "Faynt shows that a single Transformer policy can be scaled and post-trained to play all 26 Super Smash Bros. Melee characters competitively, with strong win rates against specialist baselines.",
+      "engineering_relevance": "The paper demonstrates a practical pipeline for large-scale policy pretraining, distillation, and low-latency inference in a complex real-time game environment.",
       "method": [
-        "Pretrained 10M and 75M Transformer policies on about 840,000 human replays.",
-        "Applied post-training with rank- and outcome-based curricula, 75M-to-10M distillation, and Fox mirror-match RL.",
-        "Optimized inference on recorded game states to support real-time decision making."
+        "Pretrain 10M and 75M Transformer policies on about 840,000 human replays.",
+        "Use post-training with rank- and outcome-based curricula, 75M-to-10M distillation, and Fox-mirror RL.",
+        "Optimize inference on recorded game states for fast decision-making on GPU."
       ],
-      "evidence_signal": "On the 152-game benchmark, the supervised 10M won 69.7% of games, and after RL it won 240 of 244 same-character games (98.4%) against 14 baselines, plus all 68 games against a zero-delay Slippi-AI model.",
-      "watch_item": "The authors note they did not isolate the effect of Faynt’s zero added delay versus opponents’ 21- or 24-frame delays, so fairness and latency effects remain a confound.",
+      "evidence_signal": "On the 152-game benchmark, the supervised 10M model won 69.7% of games, and after RL it won 240 of 244 same-character games (98.4%) against fourteen baseline releases.",
+      "watch_item": "The reported gains are confounded by different action delays between Faynt and several baselines, so the effect of latency is not isolated.",
       "hashtags": [
         "#ReinforcementLearning",
         "#GameAI",
         "#Transformers",
-        "#ModelScaling",
-        "#MachineLearning"
+        "#ModelDistillation",
+        "#LowLatencyInference"
       ],
       "paper_id": "2026-10-01-arxiv-faynt_scaling_and_optimizing_policies_for_competitive_melee",
       "paper_title": "Faynt: Scaling and Optimizing Policies for Competitive Melee",
       "paper_date": "2026-10-01",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-03T17:50:52",
+      "generated_at": "2026-10-04T18:03:26",
       "generator": "openai"
     }
   },
@@ -283,29 +283,185 @@
         "url": "https://arxiv.org/pdf/2610.02038v1"
       }
     ],
-    "score": 73,
+    "score": 68,
     "infographic": {
-      "key_insight": "Mimir shows that a physics-grounded LLM agent can improve long-horizon irrigation decisions by combining numerical simulation with persistent experience, while keeping physical rules and actuator constraints fixed.",
-      "engineering_relevance": "The paper suggests a practical control architecture for safety-critical cyber-physical systems where language-based reasoning must be bounded by deterministic models and verified actions.",
+      "key_insight": "Mimir shows that long-horizon irrigation control can improve when an LLM is constrained by immutable physics, numerical verification, and persistent memory of past failures rather than free-form decision making.",
+      "engineering_relevance": "The work is relevant for cyber-physical control systems because it demonstrates a safe agent pattern that can act, check, and adapt over long time horizons without overriding the underlying physical model.",
       "method": [
-        "Fast loop: LLM proposal -> structured physical interface -> deterministic simulation -> numerical check/revision -> bounded action selection.",
-        "Slow loop: recurring failure patterns are distilled into persistent contextual principles that guide later decisions.",
-        "The physical model, evaluator, and execution constraints remain immutable to preserve safety and physical consistency."
+        "Uses a structured physical interface plus deterministic simulation to convert LLM proposals into bounded executable actions.",
+        "Repairs failures on two timescales: fast numerical revision before action and slow consolidation of recurring failure patterns into persistent context.",
+        "Keeps the simulator, evaluator, and action constraints fixed while allowing the agent’s contextual guidance to evolve."
       ],
-      "evidence_signal": "Across multiple sites, crops, and years under a common retrospective evaluator, Mimir reports the lowest aggregate control cost among compared methods and uses about 51% less irrigation than replaying the historical schedule.",
-      "watch_item": "Performance may depend on the quality of the simulator and evaluator, and the reported gains do not increase monotonically with larger LLMs, so scale alone is not a reliable path to improvement.",
+      "evidence_signal": "Across multiple sites, crops, and years under a common retrospective evaluator, Mimir achieved the lowest reported aggregate control cost and used about 51% less irrigation than the historical schedule replay.",
+      "watch_item": "Performance depends on the fidelity of the physics model and the evaluator, so any mismatch between simulation and field conditions could limit transfer to new irrigation settings.",
       "hashtags": [
         "#LLMAgents",
         "#PhysicsGroundedAI",
         "#IrrigationControl",
-        "#ModelingAndSimulation",
-        "#CyberPhysicalSystems"
+        "#CyberPhysicalSystems",
+        "#ScientificML"
       ],
       "paper_id": "2026-10-01-arxiv-mimir_physics_grounded_llm_agents_for_long_horizon_irrigation_control",
       "paper_title": "Mimir: Physics-Grounded LLM Agents for Long-Horizon Irrigation Control",
       "paper_date": "2026-10-01",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-03T17:50:56",
+      "generated_at": "2026-10-04T18:03:29",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-homomorphic_advantage_operator_stabilizing_reinforcement_learning_under_fully_homomorphic",
+    "arxiv_id": "2610.02074v1",
+    "date": "2026-10-01",
+    "title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
+    "authors": "Abid Mohamed Nadhir, Ahmad Al Hanbali, Beggas Mounir",
+    "abstract": "Privacy-preserving machine learning presents significant deployment challenges on the cloud for intelligent systems with confidential data. Fully Homomorphic Encryption (FHE) offers a compelling solution for secure computation, preserving data confidentiality of cloud computations. However, applying FHE to reinforcement learning (RL) requires replacing non-linear operations with polynomial approximations, which diverge catastrophically due to a unique recursive error phenomenon known as the Bellman drift. This article introduces the Homomorphic Advantage Operator (HAO), a stabilization framework designed to prevent polynomial approximation divergence in FHE-based deep RL. HAO adapts the zero-mean centering projection from advantage-based value estimation directly to temporal-difference (TD) targets. This linear projection annihilates the uniform state-value baseline that drives the Bellman drift, maintaining per-state action rankings while requiring zero additional non-linear multiplicative depth and avoiding expensive ciphertext bootstrapping. The proposed HAO framework was evaluated using a three-tier experimental methodology, including a tabular Markov Decision Process (MDP), an encrypted CartPole environment using real CKKS cryptographic operations, and a 20-node logistics routing benchmark with dense continuous features. The results demonstrate that the proposed HAO strictly bounds network pre-activations within the safe polynomial approximation domain. The proposed HAO RL agents achieved 0% boundary breaches across all random seeds used, whereas regularization alone (L2 weight decay and gradient clipping) breached the bound on 3 of 5 seeds and the unstabilized baseline did so in 83.8% of episodes. Finally, HAO agents improve optimal policy accuracy by 18.0 percentage points in tabular domains and remain stable when DP-SGD-style Gaussian noise is added to the clipped gradients.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-01T17:14:32Z",
+    "updated": "2026-10-01T17:14:32Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CR"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02074v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02074v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "The Homomorphic Advantage Operator (HAO) stabilizes deep reinforcement learning under fully homomorphic encryption by zero-centering temporal-difference targets, preventing Bellman drift without adding nonlinear depth.",
+      "engineering_relevance": "HAO makes privacy-preserving cloud RL more practical by preserving policy rankings and avoiding costly bootstrapping while staying within FHE polynomial approximation limits.",
+      "method": [
+        "Applies advantage-style zero-mean centering directly to TD targets.",
+        "Uses a linear projection that removes the uniform state-value baseline driving divergence.",
+        "Keeps ciphertext computation shallow, with no extra nonlinear multiplicative depth."
+      ],
+      "evidence_signal": "Across a tabular MDP, encrypted CKKS CartPole, and a 20-node logistics benchmark, HAO achieved 0% boundary breaches and improved tabular policy accuracy by 18.0 percentage points.",
+      "watch_item": "Performance depends on the quality of the polynomial approximation region, so implementation must still manage encryption precision, clipping thresholds, and noise growth carefully.",
+      "hashtags": [
+        "#FullyHomomorphicEncryption",
+        "#ReinforcementLearning",
+        "#PrivacyPreservingAI",
+        "#DeepRL",
+        "#CyberPhysicalSystems"
+      ],
+      "paper_id": "2026-10-01-arxiv-homomorphic_advantage_operator_stabilizing_reinforcement_learning_under_fully_homomorphic",
+      "paper_title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
+      "paper_date": "2026-10-01",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-04T18:03:32",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-mem_non_destructive_memory_for_long_term_organizational_llm_agents",
+    "arxiv_id": "2610.02002v1",
+    "date": "2026-10-01",
+    "title": "Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents",
+    "authors": "Ahmad Yehia, Aly O. Abdelkareem, Islam Ahmed, Hesham Omran, Khaled Alashmouny, Christian Claudel",
+    "abstract": "Large Language Model (LLM) agents now take part in organizational work, where many authors record decisions across documents over months. Because a revised decision arrives as a new document rather than an edit, answering a question requires knowing which version held at a given time. However, most memory systems compress the record at write time. By distilling each document into facts, notes or graph edges, these methods fix what can be answered before any question is asked. To address this, we propose Mem++, a non-destructive memory framework shifting from write-time distillation to read-time selection. Mem++ stores every document whole with its date and author, and it calls no generative model at write time. At read time, it retrieves only documents dated up to the time a question asks about and fuses lexical and semantic rankings. Unlike systems that overwrite older versions, Mem++ keeps them and leaves the choice to the answering model. Evaluations on the organizational benchmark OrgMemBench demonstrate that Mem++ surpasses the strongest memory system baseline by 8.0 to 13.1 points across two answering models. With gpt-4.1-mini, it also achieves the best overall score, 2.6 points above RAG. In addition, Mem++ achieves the best average LLM-judge score on LoCoMo and ranks second on LongMemEval-S, behind only its entity-graph variant. Code for benchmark evaluation is available at https://github.com/AIDAChip-Inc/mem-plus-plus.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-01T16:32:38Z",
+    "updated": "2026-10-01T16:32:38Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02002v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02002v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "Mem++ changes LLM agent memory from “compress at write time” to “select at read time,” preserving full document history so answers can reflect the correct version at a given time.",
+      "engineering_relevance": "This is useful for organizational AI systems that need auditable, time-aware memory across evolving documents, decisions, and revisions without losing older context.",
+      "method": [
+        "Stores every document in full with date and author metadata.",
+        "Performs retrieval only over documents available up to the question’s time.",
+        "Fuses lexical and semantic ranking signals at read time instead of generating summaries during ingestion."
+      ],
+      "evidence_signal": "On OrgMemBench, Mem++ outperformed the strongest memory baseline by 8.0–13.1 points across two answering models, and with gpt-4.1-mini it beat RAG by 2.6 points overall.",
+      "watch_item": "Keeping all documents intact may increase storage and retrieval complexity, so performance depends on careful indexing and time-filtering implementation.",
+      "hashtags": [
+        "#LLMAgents",
+        "#MemorySystems",
+        "#RAG",
+        "#OrgMemBench",
+        "#KnowledgeMining"
+      ],
+      "paper_id": "2026-10-01-arxiv-mem_non_destructive_memory_for_long_term_organizational_llm_agents",
+      "paper_title": "Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents",
+      "paper_date": "2026-10-01",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-04T18:03:34",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-on_language_drift_during_rlvr_post_training",
+    "arxiv_id": "2610.02015v1",
+    "date": "2026-10-01",
+    "title": "On Language Drift during RLVR Post-Training",
+    "authors": "Michael Sullivan, Alexander Koller",
+    "abstract": "Recent advances in LLM reasoning models---driven primarily by the paradigm of post-training via reinforcement learning with verifiable reward (RLVR)---have enabled them to accomplish impressively complex tasks. However, in parallel with their rising capabilities, LLMs have increasingly displayed signs of language drift in their chains of thought (CoTs): unusual, non-standard, and seemingly nonsensical language use. Although it is well-documented---and can potentially impair CoT monitorability---the causes of language drift are thus far poorly understood. In this paper, we identify the conditions under which language drift occurs: we prove theoretically that RLVR optimization pressure permits unbounded language drift, while supervised fine-tuning does not. We then show empirically that language drift specifically arises during RLVR on novel reasoning tasks---i.e. when the target behavior cannot be drawn out of the base model. Finally, we prove that it is not possible to constrain language drift without constraining expected reward, suggesting that CoT monitorability cannot be improved without harming performance during RLVR post-training at the frontier.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-01T16:39:48Z",
+    "updated": "2026-10-01T16:39:48Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02015v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02015v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "RLVR can drive unbounded language drift in chain-of-thought reasoning, especially when the task requires behaviors not already present in the base model.",
+      "engineering_relevance": "For frontier LLM post-training, improving CoT monitorability may require accepting a tradeoff with reward and task performance.",
+      "method": [
+        "Theoretical proof that RLVR optimization pressure allows unbounded language drift.",
+        "Contrast with supervised fine-tuning, which does not permit the same drift behavior.",
+        "Empirical analysis of RLVR on novel reasoning tasks where the target behavior is not in the base model."
+      ],
+      "evidence_signal": "The abstract reports both theoretical results and empirical demonstrations showing drift emerges during RLVR on novel reasoning tasks.",
+      "watch_item": "Attempts to constrain language drift may also constrain expected reward, so mitigation could reduce post-training performance.",
+      "hashtags": [
+        "#LLM",
+        "#RLVR",
+        "#ChainOfThought",
+        "#LanguageDrift",
+        "#AIAlignment"
+      ],
+      "paper_id": "2026-10-01-arxiv-on_language_drift_during_rlvr_post_training",
+      "paper_title": "On Language Drift during RLVR Post-Training",
+      "paper_date": "2026-10-01",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-04T18:03:36",
       "generator": "openai"
     }
   },
@@ -337,133 +493,29 @@
         "url": "https://arxiv.org/pdf/2610.02198v1"
       }
     ],
-    "score": 72,
+    "score": 62,
     "infographic": {
-      "key_insight": "FERPO improves continuous-control policies by fitting the actor to a forward-KL target distribution derived from critic values, avoiding direct differentiation of the critic with respect to actions.",
-      "engineering_relevance": "The method offers a more stable on-policy policy-improvement pathway for robotics and control tasks where accurate value estimates do not guarantee reliable action gradients.",
+      "key_insight": "FERPO improves continuous-control policies by fitting the actor to an entropy-regularized target action distribution, avoiding unreliable critic action-gradients while encouraging broad exploration.",
+      "engineering_relevance": "The method offers a practical on-policy RL update rule that can yield more stable actor learning and faster updates in robotics/control systems where value accuracy does not guarantee useful policy gradients.",
       "method": [
-        "Derive an entropy- and KL-regularized optimal target action distribution from critic values.",
-        "Fit the actor with a forward-KL objective estimated via self-normalized importance sampling from rollout-policy actions.",
-        "Use KL regularization to keep importance weights well behaved while encouraging coverage of multiple high-value modes."
+        "Derive a target action distribution from a policy-improvement objective with entropy and KL regularization.",
+        "Fit the actor with a forward-KL objective estimated via self-normalized importance sampling from rollout actions.",
+        "Constrain the target to stay near the rollout policy so importance weights remain well behaved and multimodal coverage is preserved."
       ],
-      "evidence_signal": "The paper reports competitive performance and sample-efficiency gains on MuJoCo Playground and ManiSkill, plus faster actor updates than REPPO in computational benchmarks.",
-      "watch_item": "Performance depends on well-behaved importance sampling, so overly weak KL regularization or a target too far from the rollout policy could destabilize training.",
+      "evidence_signal": "The paper reports experiments and ablations on MuJoCo Playground and ManiSkill, showing competitive performance, sample-efficiency gains, and faster actor updates than REPPO.",
+      "watch_item": "Forward-KL fitting depends on importance-sampling quality, so unstable weights or poor rollout coverage can hurt optimization if the KL constraint is too loose.",
       "hashtags": [
         "#ReinforcementLearning",
         "#ContinuousControl",
+        "#MaximumEntropyRL",
         "#PolicyOptimization",
-        "#EntropyRegularization",
-        "#RoboticsAI"
+        "#Robotics"
       ],
       "paper_id": "2026-10-01-arxiv-ferpo_forward_entropy_regularized_policy_optimization",
       "paper_title": "FERPO: Forward Entropy-Regularized Policy Optimization",
       "paper_date": "2026-10-01",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-03T17:50:58",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-homomorphic_advantage_operator_stabilizing_reinforcement_learning_under_fully_homomorphic",
-    "arxiv_id": "2610.02074v1",
-    "date": "2026-10-01",
-    "title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
-    "authors": "Abid Mohamed Nadhir, Ahmad Al Hanbali, Beggas Mounir",
-    "abstract": "Privacy-preserving machine learning presents significant deployment challenges on the cloud for intelligent systems with confidential data. Fully Homomorphic Encryption (FHE) offers a compelling solution for secure computation, preserving data confidentiality of cloud computations. However, applying FHE to reinforcement learning (RL) requires replacing non-linear operations with polynomial approximations, which diverge catastrophically due to a unique recursive error phenomenon known as the Bellman drift. This article introduces the Homomorphic Advantage Operator (HAO), a stabilization framework designed to prevent polynomial approximation divergence in FHE-based deep RL. HAO adapts the zero-mean centering projection from advantage-based value estimation directly to temporal-difference (TD) targets. This linear projection annihilates the uniform state-value baseline that drives the Bellman drift, maintaining per-state action rankings while requiring zero additional non-linear multiplicative depth and avoiding expensive ciphertext bootstrapping. The proposed HAO framework was evaluated using a three-tier experimental methodology, including a tabular Markov Decision Process (MDP), an encrypted CartPole environment using real CKKS cryptographic operations, and a 20-node logistics routing benchmark with dense continuous features. The results demonstrate that the proposed HAO strictly bounds network pre-activations within the safe polynomial approximation domain. The proposed HAO RL agents achieved 0% boundary breaches across all random seeds used, whereas regularization alone (L2 weight decay and gradient clipping) breached the bound on 3 of 5 seeds and the unstabilized baseline did so in 83.8% of episodes. Finally, HAO agents improve optimal policy accuracy by 18.0 percentage points in tabular domains and remain stable when DP-SGD-style Gaussian noise is added to the clipped gradients.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-01T17:14:32Z",
-    "updated": "2026-10-01T17:14:32Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.CR"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02074v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02074v1"
-      }
-    ],
-    "score": 71,
-    "infographic": {
-      "key_insight": "The Homomorphic Advantage Operator stabilizes deep reinforcement learning under fully homomorphic encryption by zero-centering TD targets to prevent Bellman drift without adding nonlinear depth.",
-      "engineering_relevance": "This enables privacy-preserving RL on encrypted cloud compute while preserving action rankings and avoiding expensive bootstrapping in CKKS-style deployments.",
-      "method": [
-        "Apply a linear zero-mean centering projection to temporal-difference targets.",
-        "Remove the uniform state-value baseline that amplifies recursive approximation error.",
-        "Keep the operator homomorphic-friendly with no extra nonlinear multiplicative depth."
-      ],
-      "evidence_signal": "Across a tabular MDP, encrypted CKKS CartPole, and a 20-node logistics benchmark, HAO achieved 0% boundary breaches across seeds and improved tabular policy accuracy by 18.0 percentage points.",
-      "watch_item": "Performance depends on keeping activations within the polynomial approximation range, so ciphertext noise growth and implementation-specific CKKS precision remain important constraints.",
-      "hashtags": [
-        "#HomomorphicEncryption",
-        "#ReinforcementLearning",
-        "#FederatedAI",
-        "#PrivacyPreservingML",
-        "#CKKS"
-      ],
-      "paper_id": "2026-10-01-arxiv-homomorphic_advantage_operator_stabilizing_reinforcement_learning_under_fully_homomorphic",
-      "paper_title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
-      "paper_date": "2026-10-01",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-03T17:51:00",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-mem_non_destructive_memory_for_long_term_organizational_llm_agents",
-    "arxiv_id": "2610.02002v1",
-    "date": "2026-10-01",
-    "title": "Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents",
-    "authors": "Ahmad Yehia, Aly O. Abdelkareem, Islam Ahmed, Hesham Omran, Khaled Alashmouny, Christian Claudel",
-    "abstract": "Large Language Model (LLM) agents now take part in organizational work, where many authors record decisions across documents over months. Because a revised decision arrives as a new document rather than an edit, answering a question requires knowing which version held at a given time. However, most memory systems compress the record at write time. By distilling each document into facts, notes or graph edges, these methods fix what can be answered before any question is asked. To address this, we propose Mem++, a non-destructive memory framework shifting from write-time distillation to read-time selection. Mem++ stores every document whole with its date and author, and it calls no generative model at write time. At read time, it retrieves only documents dated up to the time a question asks about and fuses lexical and semantic rankings. Unlike systems that overwrite older versions, Mem++ keeps them and leaves the choice to the answering model. Evaluations on the organizational benchmark OrgMemBench demonstrate that Mem++ surpasses the strongest memory system baseline by 8.0 to 13.1 points across two answering models. With gpt-4.1-mini, it also achieves the best overall score, 2.6 points above RAG. In addition, Mem++ achieves the best average LLM-judge score on LoCoMo and ranks second on LongMemEval-S, behind only its entity-graph variant. Code for benchmark evaluation is available at https://github.com/AIDAChip-Inc/mem-plus-plus.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-10-01T16:32:38Z",
-    "updated": "2026-10-01T16:32:38Z",
-    "primary_category": "cs.CL",
-    "categories": [
-      "cs.CL",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02002v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02002v1"
-      }
-    ],
-    "score": 71,
-    "infographic": {
-      "key_insight": "Mem++ preserves full document history and shifts memory selection to query time, enabling LLM agents to answer time-sensitive organizational questions without destructive summarization.",
-      "engineering_relevance": "This design is important for production LLM systems that must track evolving decisions and versioned records accurately over long time horizons.",
-      "method": [
-        "Store each document intact with its timestamp and author; no write-time generation or compression.",
-        "At read time, filter to documents dated no later than the question’s reference time.",
-        "Fuse lexical and semantic retrieval rankings before passing context to the answering model."
-      ],
-      "evidence_signal": "On OrgMemBench, Mem++ outperforms the strongest memory baseline by 8.0 to 13.1 points across two answering models, and with gpt-4.1-mini it scores 2.6 points above RAG overall.",
-      "watch_item": "Keeping all document versions may increase storage and retrieval complexity, so systems need efficient indexing and time-aware retrieval at scale.",
-      "hashtags": [
-        "#LLMAgents",
-        "#MemorySystems",
-        "#RAG",
-        "#InformationRetrieval",
-        "#OrgMemBench"
-      ],
-      "paper_id": "2026-10-01-arxiv-mem_non_destructive_memory_for_long_term_organizational_llm_agents",
-      "paper_title": "Mem++: Non-Destructive Memory for Long-Term Organizational LLM Agents",
-      "paper_date": "2026-10-01",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-03T17:51:02",
+      "generated_at": "2026-10-04T18:03:38",
       "generator": "openai"
     }
   },
@@ -492,134 +544,29 @@
         "url": "https://arxiv.org/pdf/2610.02189v1"
       }
     ],
-    "score": 70,
+    "score": 60,
     "infographic": {
-      "key_insight": "IDiom is an autoregressive protein language model for intrinsically disordered regions, and RL-SAE lets designers steer sequence generation by rewarding sparse autoencoder features tied to desired functions.",
-      "engineering_relevance": "This provides a more interpretable and composable route to protein design for disordered regions, which could aid engineered regulation, localization, and signaling in synthetic biology.",
+      "key_insight": "IDiom is an autoregressive protein language model for intrinsically disordered regions (IDRs), and RL-SAE steers generation by rewarding sparse autoencoder features linked to desired biological functions.",
+      "engineering_relevance": "This provides a controllable, interpretable design workflow for protein engineering where conventional structure-based methods are ineffective, enabling rapid generation of IDRs with targeted functional properties.",
       "method": [
-        "Trained IDiom on IDiom-DB, a corpus of 54 million predicted IDRs from the AlphaFold Database.",
-        "Added RL-SAE post-training to reward activation of specified sparse autoencoder feature sets during generation.",
-        "Compared against activation steering and supervised fine-tuning across multiple IDR design tasks."
+        "Train IDiom on IDiom-DB, a dataset of 54 million predicted IDRs curated from AlphaFold Database.",
+        "Use reinforcement learning with sparse autoencoder features (RL-SAE) to explicitly reward activation of selected feature sets.",
+        "Generate sequences that preserve natural IDR properties while composing features associated with specific functions."
       ],
       "evidence_signal": "Across eight IDR design tasks, RL-SAE sequences activated about 90% of 30 targeted features on average, versus 24% for activation steering, and improved predicted localization and transcriptional activity.",
-      "watch_item": "Performance is based on predicted features and downstream annotations rather than direct wet-lab validation, so biological success may depend on experimental confirmation.",
+      "watch_item": "Results are based on predicted features and computational evaluations, so experimental validation is still needed before assuming the designed IDRs will behave as intended in vivo.",
       "hashtags": [
         "#ProteinDesign",
-        "#IntrinsicDisorder",
         "#GenerativeAI",
+        "#IntrinsicDisorder",
         "#ReinforcementLearning",
-        "#ComputationalBiology"
+        "#Bioinformatics"
       ],
       "paper_id": "2026-10-01-arxiv-generative_modeling_of_intrinsically_disordered_protein_regions_by_reinforcing_sparse_auto",
       "paper_title": "Generative modeling of intrinsically disordered protein regions by reinforcing sparse autoencoder features",
       "paper_date": "2026-10-01",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-03T17:51:05",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-on_language_drift_during_rlvr_post_training",
-    "arxiv_id": "2610.02015v1",
-    "date": "2026-10-01",
-    "title": "On Language Drift during RLVR Post-Training",
-    "authors": "Michael Sullivan, Alexander Koller",
-    "abstract": "Recent advances in LLM reasoning models---driven primarily by the paradigm of post-training via reinforcement learning with verifiable reward (RLVR)---have enabled them to accomplish impressively complex tasks. However, in parallel with their rising capabilities, LLMs have increasingly displayed signs of language drift in their chains of thought (CoTs): unusual, non-standard, and seemingly nonsensical language use. Although it is well-documented---and can potentially impair CoT monitorability---the causes of language drift are thus far poorly understood. In this paper, we identify the conditions under which language drift occurs: we prove theoretically that RLVR optimization pressure permits unbounded language drift, while supervised fine-tuning does not. We then show empirically that language drift specifically arises during RLVR on novel reasoning tasks---i.e. when the target behavior cannot be drawn out of the base model. Finally, we prove that it is not possible to constrain language drift without constraining expected reward, suggesting that CoT monitorability cannot be improved without harming performance during RLVR post-training at the frontier.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-01T16:39:48Z",
-    "updated": "2026-10-01T16:39:48Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02015v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02015v1"
-      }
-    ],
-    "score": 70,
-    "infographic": {
-      "key_insight": "RLVR can induce unbounded language drift in chain-of-thought outputs, especially on novel reasoning tasks, whereas supervised fine-tuning does not.",
-      "engineering_relevance": "For deploying and monitoring reasoning LLMs, improving CoT interpretability under RLVR may require accepting some reduction in reward or task performance.",
-      "method": [
-        "Theoretical proof that RLVR optimization pressure permits unbounded language drift.",
-        "Theoretical contrast showing supervised fine-tuning does not create the same drift pressure.",
-        "Empirical analysis showing drift emerges when RLVR targets novel reasoning behaviors not already present in the base model."
-      ],
-      "evidence_signal": "The paper combines formal proofs with empirical RLVR experiments on novel reasoning tasks to link drift to the difficulty of eliciting the target behavior from the base model.",
-      "watch_item": "Attempts to constrain language drift may inherently constrain expected reward, so monitorability interventions could trade off against model performance.",
-      "hashtags": [
-        "#RLVR",
-        "#LLMReasoning",
-        "#ChainOfThought",
-        "#LanguageDrift",
-        "#AIAlignment"
-      ],
-      "paper_id": "2026-10-01-arxiv-on_language_drift_during_rlvr_post_training",
-      "paper_title": "On Language Drift during RLVR Post-Training",
-      "paper_date": "2026-10-01",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-03T17:51:07",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-reconstruct_practice_go_real_guided_self_improvement_for_embodied_agents",
-    "arxiv_id": "2610.02204v1",
-    "date": "2026-10-01",
-    "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
-    "authors": "Yen-Jen Wang, Haozhe Jiang, Shuying Deng, Haoru Xue, Weirui Ye, Rocky Duan",
-    "abstract": "Building reliable robot capabilities across diverse tasks requires substantial human effort to develop and maintain skills, design rewards, and integrate perception with control. We present Reconstruct, Practice, Go Real (RPG), a framework for autonomous improvement of robot execution systems without updating model weights. RPG identifies manipulation capabilities in an offline dataset and constructs related practice tasks in simulation. During practice, RPG uses execution feedback, privileged simulator state, and available dataset videos to diagnose failures. It develops new reusable symbolic skills, refines existing skills, and revises the system prompt based on these diagnoses. Cross-task evaluation tests individual candidate changes and merged revisions before they are retained for reuse. At test time, a multimodal LLM uses the resulting system prompt and skill library to coordinate perception and robot control. On held-out initializations of 22 manipulation tasks, RPG improves task success from 28.6% after the first practice round to 95.0% after 15 rounds, outperforming all evaluated baselines, including ASPIRE (75.5%) and CaP-Agent0 powered by GPT-6 Astra Pro (60.0%). After a common calibration and hardware-adaptation procedure, the frozen system succeeds in all 30 physical trials, with ten trials on each of three tasks. Project Website: https://rpg-robot.github.io/",
-    "category": "Autonomous Labs",
-    "source": "arXiv",
-    "published": "2026-10-01T17:59:50Z",
-    "updated": "2026-10-01T17:59:50Z",
-    "primary_category": "cs.RO",
-    "categories": [
-      "cs.RO",
-      "cs.AI",
-      "eess.SY"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02204v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02204v1"
-      }
-    ],
-    "score": 65,
-    "infographic": {
-      "key_insight": "RPG lets embodied agents improve robot execution by reconstructing skills from offline data, practicing in simulation, and retaining only validated prompt/skill updates—without changing model weights.",
-      "engineering_relevance": "This offers a practical path to continually upgrade robot autonomy while preserving a frozen policy stack, reducing the cost of retraining and simplifying deployment across tasks and hardware.",
-      "method": [
-        "Mine an offline dataset to identify manipulation capabilities and generate related practice tasks in simulation.",
-        "Use execution feedback, privileged simulator state, and dataset videos to diagnose failures and create/refine symbolic skills and prompts.",
-        "Cross-test candidate revisions on held-out tasks before merging them into the reusable skill library and system prompt."
-      ],
-      "evidence_signal": "On 22 held-out manipulation tasks, success rose from 28.6% after the first practice round to 95.0% after 15 rounds; after calibration, the frozen system achieved 30/30 physical trial successes across three tasks.",
-      "watch_item": "The approach depends on high-quality offline data, simulator fidelity, and careful calibration/hardware adaptation, so gains may not transfer uniformly to new robots or poorly modeled environments.",
-      "hashtags": [
-        "#EmbodiedAI",
-        "#RobotLearning",
-        "#Sim2Real",
-        "#LLMAgents",
-        "#AutonomousLabs"
-      ],
-      "paper_id": "2026-10-01-arxiv-reconstruct_practice_go_real_guided_self_improvement_for_embodied_agents",
-      "paper_title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
-      "paper_date": "2026-10-01",
-      "paper_category": "Autonomous Labs",
-      "generated_at": "2026-10-03T17:51:10",
+      "generated_at": "2026-10-04T18:03:41",
       "generator": "openai"
     }
   },
@@ -648,186 +595,29 @@
         "url": "https://arxiv.org/pdf/2610.02005v1"
       }
     ],
-    "score": 65,
+    "score": 60,
     "infographic": {
-      "key_insight": "Bayesian Dialectical Argumentation turns multi-LLM discussion traces into reliability estimates, so the council can produce calibrated probabilities and resist persistent bad actors.",
-      "engineering_relevance": "For deployed LLM councils, BDA offers a zero-extra-call way to improve trustworthiness, making confidence scores closer to true correctness likelihood while remaining robust to unreliable participants.",
+      "key_insight": "Bayesian Dialectical Argumentation turns a multi-LLM council’s debate trace into per-agent reliability estimates, producing calibrated probabilities and resilience to persistently unreliable or adversarial models.",
+      "engineering_relevance": "It offers a zero-extra-call aggregation layer for deployed LLM councils where both confidence calibration and robustness to bad actors matter.",
       "method": [
-        "Model typed council moves (propose/challenge/concede) as observations in a Bayesian annotator framework.",
-        "Infer per-agent reliability from the deliberation trace, including the possibility of adversarial or inverted agents.",
-        "Aggregate answers by weighting evidence with inferred reliability to output calibrated posteriors."
+        "Treat typed debate moves (propose, challenge, concede) as observations in a classical annotator model.",
+        "Infer per-agent reliabilities with Bayesian updates from the deliberation trace.",
+        "Weight or invert agent contributions to produce posterior probabilities over candidate answers."
       ],
-      "evidence_signal": "The abstract reports evaluation on binary and multi-class benchmarks, where BDA achieved the best calibration among zero-cost council aggregation methods and improved robustness under persistent adversarial coalitions.",
-      "watch_item": "Performance depends on the quality and consistency of typed deliberation traces, so councils that do not log clear move types may be harder to model reliably.",
+      "evidence_signal": "Across binary and multi-class benchmarks, the method is reported to achieve the best calibration among zero-cost council aggregation methods and stronger robustness under persistent adversarial coalitions, while remaining competitive in clean settings.",
+      "watch_item": "Performance depends on informative deliberation traces; if agent actions are sparse, noisy, or strategically opaque, reliability inference may be less dependable.",
       "hashtags": [
-        "#LLM",
-        "#BayesianInference",
+        "#LLMCouncil",
         "#Calibration",
-        "#MultiAgentAI",
-        "#RobustAI"
+        "#BayesianInference",
+        "#AdversarialRobustness",
+        "#MultiAgentAI"
       ],
       "paper_id": "2026-10-01-arxiv-counting_moves_weighing_voices_bayesian_dialectical_argumentation_for_calibrated_multi_llm",
       "paper_title": "Counting Moves, Weighing Voices: Bayesian Dialectical Argumentation for Calibrated Multi-LLM Councils under Persistent Adversaries",
       "paper_date": "2026-10-01",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-03T17:51:12",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-kalibench_a_fine_grained_benchmark_for_cybersecurity_tool_use_on_kali_linux_with_runtime_f",
-    "arxiv_id": "2610.02206v1",
-    "date": "2026-10-01",
-    "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
-    "authors": "Pengfei Li, Naufal Suryanto, Sicheng Zhang, Muzammal Naseer",
-    "abstract": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable commands for real-world cybersecurity tools. This gap is critical because cybersecurity operations rely on strict command-line interfaces (CLIs), where minor syntax errors, incorrect flag--value bindings, or argument misordering can invalidate execution. We introduce KaliBench, a fine-grained benchmark and dataset for natural-language--to--CLI translation on Kali Linux, comprising 8,504 query--command pairs spanning 1,642 tools across 23 capability dimensions and 5 security phases. KaliBench is constructed via a manuscript-grounded pipeline with deterministic canonicalization and alias-aware evaluation, enabling precise and reproducible assessment of tool selection and argument construction. To ensure both semantic correctness and practical executability, we develop a multi-stage verification pipeline that combines LLM-based validation, sandboxed terminal execution, and human-in-the-loop refinement. Building on these fine-grained, deterministic signals, KaliBench further enables runtime-free verifiable rewards for training. Across three evaluation modes and 24 configurations of general-purpose and security-focused open-weight models, no open-weight model exceeds 42% exact-command accuracy in the unrestricted setting, highlighting the difficulty of accurate CLI-based cybersecurity tool use without explicit tool hints. We further show that supervised fine-tuning and reinforcement learning with verifiable rewards derived from KaliBench significantly improve an 8B model and achieve performance comparable to a 685B MoE model.",
-    "category": "AI Scientists and Research Agents",
-    "source": "arXiv",
-    "published": "2026-10-01T17:59:55Z",
-    "updated": "2026-10-01T17:59:55Z",
-    "primary_category": "cs.CL",
-    "categories": [
-      "cs.CL",
-      "cs.AI",
-      "cs.CR"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02206v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02206v1"
-      }
-    ],
-    "score": 64,
-    "infographic": {
-      "key_insight": "KaliBench shows that translating natural-language intent into executable cybersecurity CLI commands is still very hard for LLMs, even when the task is narrowed to tool use rather than open-ended agent behavior.",
-      "engineering_relevance": "The benchmark provides a reproducible way to train and evaluate models for real Kali Linux tool invocation, which is directly relevant to building reliable security copilots and autonomous penetration-testing agents.",
-      "method": [
-        "8,504 natural-language query–command pairs covering 1,642 Kali Linux tools",
-        "Manuscript-grounded dataset creation with deterministic canonicalization and alias-aware evaluation",
-        "Multi-stage verification using LLM checks, sandboxed terminal execution, and human refinement"
-      ],
-      "evidence_signal": "Across 24 model/configuration settings, no open-weight model exceeded 42% exact-command accuracy in the unrestricted setting, and the benchmark supports runtime-free verifiable rewards for training.",
-      "watch_item": "Exact-command success is sensitive to syntax, flag binding, and argument order, so any deployment must preserve strict command validation and sandboxing to avoid unsafe or invalid execution.",
-      "hashtags": [
-        "#CybersecurityAI",
-        "#LLMAgents",
-        "#KaliLinux",
-        "#Benchmarking",
-        "#VerifiableRewards"
-      ],
-      "paper_id": "2026-10-01-arxiv-kalibench_a_fine_grained_benchmark_for_cybersecurity_tool_use_on_kali_linux_with_runtime_f",
-      "paper_title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
-      "paper_date": "2026-10-01",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-03T17:51:14",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-taco_ternary_absolute_max_column_wise_one_sparse_optimizer_for_llm_fine_tuning",
-    "arxiv_id": "2610.02199v1",
-    "date": "2026-10-01",
-    "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
-    "authors": "Jichao Jiang, Cristian McGee, El Houcine Bergou, Hanqin Cai, Aritra Dutta",
-    "abstract": "Full-parameter fine-tuning of large language models (LLMs) incurs substantial optimizer state memory overhead, limiting the model sizes that fit on modern GPUs. Existing approaches either compress optimizer state, abandon first-order gradients, or change the update geometry while retaining dense state. The recently introduced Muon optimizer reduces optimizer memory through matrix-valued updates. Still, its geometry differs from AdamW and can lead to performance degradation when fine-tuning AdamW-pretrained models. To reduce optimizer memory without sacrificing accuracy or computational efficiency in LLM fine-tuning, we propose Ternary Absolute-max Column-wise One-sparse optimizer, or TACO, which follows Muon's operator-norm steepest-descent view but takes the geometric route further. TACO computes the exact steepest-descent direction under a dimension-normalized $1\\to1$ operator norm by selecting the sign of the largest magnitude entry in each column of two-dimensional weight matrices. This retains first-order gradients while making optimizer state memory nearly negligible. Our practical TACO optimizer maintains only a small set of low precision gradient components per column, reducing persistent optimizer state by $174\\times$ relative to AdamW8bit (from 27.7 GB to 0.16 GB) and peak training memory by $2.9\\times$ (from 80.6 GB to 27.5 GB) on OPT-13B, while achieving comparable accuracy and runtime. TACO further enables full-parameter fine-tuning of 30-32B-parameter models on a single 80 GB H100 GPU across multiple model families and tasks.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-01T17:59:42Z",
-    "updated": "2026-10-01T17:59:42Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "math.OC"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02199v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02199v1"
-      }
-    ],
-    "score": 64,
-    "infographic": {
-      "key_insight": "TACO replaces dense optimizer state with a column-wise one-sparse update rule that preserves AdamW-like fine-tuning behavior while making optimizer memory nearly negligible.",
-      "engineering_relevance": "This enables full-parameter LLM fine-tuning of much larger models on a single GPU by dramatically lowering persistent and peak memory without sacrificing accuracy or runtime.",
-      "method": [
-        "Uses the exact steepest-descent direction under a dimension-normalized 1→1 operator norm.",
-        "For each matrix column, keeps only the sign of the largest-magnitude gradient entry.",
-        "Maintains a small set of low-precision gradient components per column instead of dense optimizer state."
-      ],
-      "evidence_signal": "On OPT-13B, TACO reduced persistent optimizer state from 27.7 GB to 0.16 GB and peak training memory from 80.6 GB to 27.5 GB, with comparable accuracy and runtime; it also enabled 30–32B model fine-tuning on a single 80 GB H100.",
-      "watch_item": "The one-sparse, column-wise geometry is tailored to matrix-shaped parameters, so careful implementation is needed to ensure stable behavior across all model layers and training setups.",
-      "hashtags": [
-        "#LLMFineTuning",
-        "#OptimizerCompression",
-        "#MemoryEfficiency",
-        "#HPC",
-        "#AIResearch"
-      ],
-      "paper_id": "2026-10-01-arxiv-taco_ternary_absolute_max_column_wise_one_sparse_optimizer_for_llm_fine_tuning",
-      "paper_title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
-      "paper_date": "2026-10-01",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-03T17:51:17",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-higher_order_molecular_grammars_for_generative_and_foundation_models_in_chemistry",
-    "arxiv_id": "2610.02186v1",
-    "date": "2026-10-01",
-    "title": "Higher-Order Molecular Grammars for Generative and Foundation Models in Chemistry",
-    "authors": "Yiming Huang, Yujie Zeng, Vijay Prakash Dwivedi, Simone Foti, Jianmin Wang, Jure Leskovec",
-    "abstract": "Molecular learning models are strongly shaped by their underlying representations. Yet standard sequential and graph formalisms struggle to explicitly encode higher-order topology, such as ring systems and recurring motifs. Existing higher-order representations can capture these structures directly, but they are often computationally demanding and difficult to decode into valid molecules. Here, we introduce Higher-order Grammar Representation (HGR), a principled, topology-aware framework that lifts molecules to combinatorial complexes and parses each complex into a compact sequence of production rules under a context-free higher-order grammar. By serialising higher-order topology into rule sequences, HGR makes these structures directly compatible with standard sequence models, avoiding the computational overhead of explicit higher-order encodings while preserving topological expressiveness. To reduce benchmark bias towards simple ring systems, we construct RingDiv, a ring-enriched benchmark containing 1.18 million molecules, including the curated RingDiv300k subset, and introduce the ring diversity index (RDI) to quantify ring-system coverage. In molecular generation, HGR-based models uniquely combine 100% validity by construction with leading distributional alignment, ranking first in FCD on all five generation benchmarks. In representation learning, HGR-FM achieves the highest mean AUC across seven MoleculeNet benchmarks under both transfer protocols, improving on the strongest baseline by 8.3 and 3.3 AUC points under probing and full fine-tuning, respectively. Collectively, these results establish HGR as an efficient higher-order representation for molecular generation and transferable representation learning.",
-    "category": "Biomedical and Physical Sciences",
-    "source": "arXiv",
-    "published": "2026-10-01T17:58:45Z",
-    "updated": "2026-10-01T17:58:45Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02186v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02186v1"
-      }
-    ],
-    "score": 64,
-    "infographic": {
-      "key_insight": "Higher-Order Grammar Representation (HGR) converts molecules with ring and motif topology into compact grammar rule sequences, making higher-order structure usable by standard sequence models while preserving expressiveness.",
-      "engineering_relevance": "HGR offers a practical, scalable representation for molecular generative and foundation models that improves validity, distribution matching, and downstream prediction across multiple benchmarks.",
-      "method": [
-        "Lift molecules to combinatorial complexes to explicitly capture higher-order topology.",
-        "Parse each complex into a sequence of production rules under a context-free higher-order grammar.",
-        "Use the resulting sequence representation for both generation and transferable representation learning."
-      ],
-      "evidence_signal": "The paper reports 100% validity by construction and first-place FCD on all five generation benchmarks, plus the best mean AUC across seven MoleculeNet tasks with gains of 8.3 and 3.3 points over the strongest baseline under probing and full fine-tuning.",
-      "watch_item": "Performance depends on the quality of the higher-order grammar and benchmark coverage; constructing and decoding these representations may be less straightforward for novel chemistries or very large molecular systems.",
-      "hashtags": [
-        "#Chemoinformatics",
-        "#GraphLearning",
-        "#MolecularGenerativeModels",
-        "#FoundationModels",
-        "#HigherOrderRepresentation"
-      ],
-      "paper_id": "2026-10-01-arxiv-higher_order_molecular_grammars_for_generative_and_foundation_models_in_chemistry",
-      "paper_title": "Higher-Order Molecular Grammars for Generative and Foundation Models in Chemistry",
-      "paper_date": "2026-10-01",
-      "paper_category": "Biomedical and Physical Sciences",
-      "generated_at": "2026-10-03T17:51:19",
+      "generated_at": "2026-10-04T18:03:44",
       "generator": "openai"
     }
   },
@@ -857,132 +647,29 @@
         "url": "https://arxiv.org/pdf/2610.02023v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "SPHERE turns VR scene generation into a continuous co-creation loop by learning a user's spatial preferences from speech and controller edits, then adapting future layouts with human-in-the-loop reinforcement learning.",
-      "engineering_relevance": "The framework is relevant for immersive design tools because it can reduce repetitive corrective editing and physical fatigue while preserving user-specific layout preferences across sessions.",
+      "key_insight": "SPHERE turns VR indoor scene generation into a continuous, preference-aware co-creation loop by learning each user’s spatial preferences from speech, controller edits, and final scene corrections.",
+      "engineering_relevance": "The framework is relevant for interactive XR and generative design systems because it reduces repetitive manual corrections while producing layouts that better match user-specific spatial intent.",
       "method": [
-        "Extracts persistent preferences from multimodal VR interactions (speech + controller edits).",
-        "Converts raw edits into hierarchical spatial constraints capturing local function and global topology.",
-        "Uses human-in-the-loop RL to update retrieval policies from the user's final edited scenes."
+        "Extracts persistent spatial preferences from multimodal VR interactions.",
+        "Abstracts edits into hierarchical constraints capturing local function and global topology.",
+        "Uses human-in-the-loop RL to update retrieval policies from final edited scenes."
       ],
-      "evidence_signal": "A mixed-design user study with 42 participants plus offline ablations show fewer corrective edits and lower physical demand, while improving alignment to user profiles and geometric resilience.",
-      "watch_item": "The approach may depend on high-quality interaction traces and careful policy updates to avoid overfitting to shallow object-level preferences or noisy edits.",
+      "evidence_signal": "The abstract reports a mixed-design user study with N=42 plus an offline ablation, showing fewer corrective edits and lower physical demand.",
+      "watch_item": "The approach may depend on reliable interpretation of natural language, controller actions, and final edits, which could be brittle across users, tasks, or VR setups.",
       "hashtags": [
         "#VR",
-        "#LLM",
-        "#SpatialLearning",
-        "#HumanInTheLoopRL",
-        "#3DSceneGeneration"
+        "#3DGeneration",
+        "#HumanInTheLoop",
+        "#ReinforcementLearning",
+        "#LLM"
       ],
       "paper_id": "2026-10-01-arxiv-sphere_adaptive_vr_indoor_scene_generation_via_llm_enhanced_spatial_preference_learning_an",
       "paper_title": "SPHERE: Adaptive VR Indoor Scene Generation via LLM-Enhanced Spatial Preference Learning and Human-in-the-Loop RL",
       "paper_date": "2026-10-01",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-03T17:51:21",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-the_missing_primitive_diagnosing_and_repairing_mathematical_reasoning_in_large_language_mo",
-    "arxiv_id": "2610.02191v1",
-    "date": "2026-10-01",
-    "title": "The Missing Primitive: Diagnosing and Repairing Mathematical Reasoning in Large Language Models",
-    "authors": "Shuo Xing, Zilin Dai, Chengyuan Qian, Fangzhou Lin, Wenjing Chen, Ping He",
-    "abstract": "While Large Language Models (LLMs) have demonstrated striking capabilities on frontier mathematical problems, it remains unclear whether they possess the structural mathematical understanding underlying their solutions. In this paper, we take a first step toward systematically studying mathematical understanding in LLMs, from diagnosing its distinct capabilities to leveraging these findings to improve post-training. First, we introduce the notion of Mathematical Primitive to probe structural mathematical understanding and propose \\hlei{}, a novel benchmark that evaluates mathematical reasoning along four distinct dimensions: Discovery, Generation, Digestion, and Execution. Second, our systematic diagnosis shows that solution accuracy masks distinct capability profiles, primitives unlock substantial latent execution capacity, and Discovery is the dominant bottleneck in mathematical reasoning. Our post-training analysis further shows that discovery-limited failures are particularly amenable to repair. Finally, building on these findings, we introduce \\abs{}, a primitive-privileged self-distillation framework that selectively transfers primitive-guided reasoning into the student model. Extensive experiments demonstrate that \\abs{} consistently improves mathematical reasoning over baselines across model scales and challenging benchmarks.",
-    "category": "Scientific Discovery",
-    "source": "arXiv",
-    "published": "2026-10-01T17:59:32Z",
-    "updated": "2026-10-01T17:59:32Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02191v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02191v1"
-      }
-    ],
-    "score": 63,
-    "infographic": {
-      "key_insight": "Mathematical reasoning in LLMs is limited less by final-answer accuracy than by a missing structural primitive, with Discovery emerging as the main bottleneck and the most repairable failure mode.",
-      "engineering_relevance": "For building more reliable reasoning models, the work suggests post-training should target primitive-level capabilities—especially discovery—rather than only optimizing outcome accuracy.",
-      "method": [
-        "Defined a \"Mathematical Primitive\" to probe structural understanding.",
-        "Introduced \\hlei{}, a benchmark spanning Discovery, Generation, Digestion, and Execution.",
-        "Built \\abs{}, a primitive-privileged self-distillation framework that transfers primitive-guided reasoning to a student model."
-      ],
-      "evidence_signal": "The paper reports systematic diagnosis across a four-dimension benchmark plus post-training experiments, showing primitives can unlock latent execution capacity and that discovery-limited failures are especially amenable to repair.",
-      "watch_item": "The framework depends on reliable primitive-level supervision and benchmark design, so gains may be sensitive to how well the discovery signals generalize beyond the evaluated math tasks.",
-      "hashtags": [
-        "#LLMReasoning",
-        "#MathAI",
-        "#ScientificDiscovery",
-        "#SelfDistillation",
-        "#Benchmarking"
-      ],
-      "paper_id": "2026-10-01-arxiv-the_missing_primitive_diagnosing_and_repairing_mathematical_reasoning_in_large_language_mo",
-      "paper_title": "The Missing Primitive: Diagnosing and Repairing Mathematical Reasoning in Large Language Models",
-      "paper_date": "2026-10-01",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-10-03T17:51:24",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-01-arxiv-effective_resistance_and_graph_neural_network_reliability_in_tissue_specific_interactomes",
-    "arxiv_id": "2610.02175v1",
-    "date": "2026-10-01",
-    "title": "Effective Resistance and Graph Neural Network Reliability in Tissue-Specific Interactomes",
-    "authors": "Jianru Shen",
-    "abstract": "Protein function annotation needs to know which predictions to distrust, not only what a model predicts. We ask whether tissue-specific interaction structure carries that information. Our candidate signal is effective resistance, used previously to relieve over-squashing by rewiring. Across 24 tissue-specific interactomes it is dominated by inverse degree, and the degeneration deepens as the co-expression filtered network grows, with a Spearman correlation of -0.955. The residual departure from that limit exceeds degree-preserving null graphs in all 24 networks. Controlling for predictive entropy, degree, annotation cardinality, local structure and feature-only difficulty, the residual explains additional per-node loss in 19 of 24 held-out networks once a permutation floor is subtracted, at every depth, and the effect strengthens monotonically with depth. The increment reaches 0.37% of the variance the controls leave unexplained, 5.6 times a permutation floor, against 1.5 times when the model is retrained in a degree-preserving null world. Selective prediction improves negligibly. The signal is reproducible; degree degeneration bounds it.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-01T17:57:10Z",
-    "updated": "2026-10-01T17:57:10Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "q-bio.MN"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.02175v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.02175v1"
-      }
-    ],
-    "score": 63,
-    "infographic": {
-      "key_insight": "Effective resistance in tissue-specific interactomes contains a reproducible, depth-dependent residual signal for graph neural network reliability, even after accounting for degree and other node-level confounders.",
-      "engineering_relevance": "For protein function annotation, this suggests tissue-specific graph structure can help estimate which GNN predictions to distrust, enabling more reliable selective prediction and uncertainty screening.",
-      "method": [
-        "Analyzed 24 tissue-specific protein interactomes and compared effective resistance against degree and degree-preserving null graphs.",
-        "Controlled for predictive entropy, degree, annotation count, local graph structure, and feature-only difficulty while evaluating held-out GNN loss across depths.",
-        "Tested whether the residual resistance signal improves reliability estimation beyond baseline controls and permutation floors."
-      ],
-      "evidence_signal": "Across 24 networks, residual effective resistance exceeded degree-preserving null graphs, explained extra held-out per-node loss in 19/24 networks, and its effect grew monotonically with depth.",
-      "watch_item": "Because effective resistance strongly degenerates toward inverse degree as co-expression filtering increases, its utility may be limited when graph structure is dominated by degree effects or when networks are highly sparse.",
-      "hashtags": [
-        "#GraphNeuralNetworks",
-        "#ProteinFunctionAnnotation",
-        "#EffectiveResistance",
-        "#Interactomics",
-        "#UncertaintyEstimation"
-      ],
-      "paper_id": "2026-10-01-arxiv-effective_resistance_and_graph_neural_network_reliability_in_tissue_specific_interactomes",
-      "paper_title": "Effective Resistance and Graph Neural Network Reliability in Tissue-Specific Interactomes",
-      "paper_date": "2026-10-01",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-03T17:51:27",
+      "generated_at": "2026-10-04T18:03:46",
       "generator": "openai"
     }
   },
@@ -1013,29 +700,341 @@
         "url": "https://arxiv.org/pdf/2610.02092v1"
       }
     ],
-    "score": 63,
+    "score": 58,
     "infographic": {
-      "key_insight": "The paper shows that replacing per-sample weights with a selection network in meta-learning for data selection requires a different objective, because the obvious formulation can destabilize training and hurt transfer.",
-      "engineering_relevance": "TESS offers a scalable way to score and select training data for large language models, improving dataset curation across different data scales and model sizes.",
+      "key_insight": "The paper shows that replacing per-sample data weights with a transferable selection network is promising, but only if trained with a new pointwise value-matching loss rather than standard meta-learning objectives.",
+      "engineering_relevance": "TESS offers a scalable way to score and select training data for large language models across datasets and model sizes, making data curation more practical for safety and instruction tuning.",
       "method": [
-        "Introduces Transferable Example Scoring and Selection (TESS) for data selection.",
-        "Uses a Pointwise Value Matching (PVM) objective instead of standard meta-learning losses.",
-        "Addresses weight suppression and over-reliance on easy features to improve stability and transferability."
+        "Introduces Transferable Example Scoring and Selection (TESS) for learned data selection.",
+        "Uses Pointwise Value Matching (PVM) instead of direct incorporation into existing MTS losses.",
+        "Targets stability and transferability by avoiding weight suppression and over-reliance on easy features."
       ],
-      "evidence_signal": "Experiments on LLM safety and targeted instruction tuning show transfer from subsets to full corpora and from smaller to larger models.",
-      "watch_item": "The selection-network approach is sensitive to loss design, so direct reuse of existing MTS objectives may lead to unstable optimization and poor generalization.",
+      "evidence_signal": "The abstract reports strong transfer across datasets, from subsets to full corpora, and from smaller to larger models on LLM safety and targeted instruction tuning.",
+      "watch_item": "A key implementation concern is that directly plugging a selection network into existing meta-learning objectives can cause unstable optimization and poor generalization.",
       "hashtags": [
-        "#LLM",
-        "#DataSelection",
         "#MetaLearning",
-        "#ModelTraining",
+        "#DataSelection",
+        "#LLMTraining",
+        "#TransferLearning",
         "#AIResearch"
       ],
       "paper_id": "2026-10-01-arxiv-scalable_transferable_meta_network_for_data_selection_requires_a_different_loss_and_why_th",
       "paper_title": "Scalable, Transferable Meta-network for Data Selection Requires a Different Loss (and Why the Obvious Choice is Problematic)",
       "paper_date": "2026-10-01",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-03T17:51:29",
+      "generated_at": "2026-10-04T18:03:48",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-bellman_meets_lyapunov_unsupervised_reinforcement_learning_via_mastering_chaos",
+    "arxiv_id": "2610.02012v1",
+    "date": "2026-10-01",
+    "title": "Bellman Meets Lyapunov: Unsupervised Reinforcement Learning via Mastering Chaos",
+    "authors": "Tristan Shah, Wooyoung Chung, Volodomyr Makarenko, Juan Wachs, Stas Tiomkin",
+    "abstract": "Reinforcement learning (RL) is a powerful paradigm for training agents, yet its success rests on domain expertise of human engineers who design informative reward signals for every new task. Unsupervised RL aims to reduce this engineering with intrinsic motivation (IM): reward signals that emerge from the agent environment interaction itself. Existing IM objectives, however, involve the selection of information variables, which re-introduces domain expertise the field has sought to eliminate. We introduce Forward CIP (F-CIP), an RL-native formulation of the Controllable Information Production (CIP) objective, which is defined by the system's dynamics alone and requires no such selection. We prove that F-CIP is compatible with RL and demonstrate its effectiveness with existing algorithms. Training agents with F-CIP results in unsupervised discovery of primitive behaviors such as balancing and maintaining controllability, which are essential for more complex robot behaviors. Paired with a simple forward-velocity reward, our method produces coordinated gaits such as hopping and running which otherwise require reward engineering to learn.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-10-01T16:38:03Z",
+    "updated": "2026-10-01T16:38:03Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02012v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02012v1"
+      }
+    ],
+    "score": 57,
+    "infographic": {
+      "key_insight": "Forward CIP (F-CIP) turns controllable information production into a reward signal derived only from system dynamics, enabling unsupervised RL to discover useful behaviors without hand-designed intrinsic rewards.",
+      "engineering_relevance": "This reduces reward-engineering effort for new robots and tasks, while still producing primitive skills that can be combined with simple task rewards to learn coordinated locomotion.",
+      "method": [
+        "Reformulate Controllable Information Production as an RL-native objective called Forward CIP.",
+        "Use the environment’s dynamics directly, avoiding the need to choose information variables by hand.",
+        "Pair F-CIP with existing RL algorithms to learn intrinsic behaviors such as balancing and controllability."
+      ],
+      "evidence_signal": "The paper reports that agents trained with F-CIP discovered primitive behaviors like balancing and, when combined with a simple forward-velocity reward, learned coordinated gaits such as hopping and running.",
+      "watch_item": "Performance depends on the quality and compatibility of the environment dynamics with the F-CIP objective, so results may vary across tasks and implementations.",
+      "hashtags": [
+        "#ReinforcementLearning",
+        "#UnsupervisedRL",
+        "#IntrinsicMotivation",
+        "#RobotLearning",
+        "#ScientificDiscovery"
+      ],
+      "paper_id": "2026-10-01-arxiv-bellman_meets_lyapunov_unsupervised_reinforcement_learning_via_mastering_chaos",
+      "paper_title": "Bellman Meets Lyapunov: Unsupervised Reinforcement Learning via Mastering Chaos",
+      "paper_date": "2026-10-01",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-10-04T18:03:50",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-are_we_recovering_mechanisms_objective_level_recovery_gaps_in_mechanistic_interpretability",
+    "arxiv_id": "2610.02098v1",
+    "date": "2026-10-01",
+    "title": "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
+    "authors": "Chuqin Geng, Li Zhang, Haolin Ye, Mark Zhang, Luke Zhang, Xujie Si",
+    "abstract": "Mechanistic interpretability aims to recover the internal computations responsible for model behavior. Progress in automated circuit discovery is often framed as a search problem: better attribution or optimization should identify better mechanisms. This assumes that the evaluation objective can recognize a better circuit once it is found. We show that intervention-defined faithfulness can instead prefer an equally sized circuit that reproduces the model's behavior less well, creating an objective-level recovery gap. Across four human-reference tasks and InterpBench, we compare validation faithfulness with behavior on held-out prompts under fixed ordinary resampling. The behavioral criterion is agreement with the intact model, including its mistakes, except on Greater-Than, where we use semantic accuracy. Controlled reference edits reveal misranking without any discovery algorithm, and outputs of EAP, EAP-IG, ACDC, and Edge-SP exhibit the same failure. Under resampling, KL misranks 9.4%-41.2% of candidate pairs across these methods on the human-reference tasks. We investigate context distortion as an explanation: replacing excluded signals changes the inputs on which retained components operate. Restoring selected signals from the recipient's intact-model execution repairs 96 of 100 persistent KL misrankings from the discovery pool on both validation and held-out prompts. The circuits and their original behavioral scores remain unchanged. These findings show why better discovery alone is insufficient when its objective rewards the wrong candidate.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-10-01T17:25:23Z",
+    "updated": "2026-10-01T17:25:23Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02098v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02098v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "Objective-level evaluation can misrank mechanistic circuits: a circuit that scores better on faithfulness can actually reproduce model behavior worse than an equally sized alternative.",
+      "engineering_relevance": "For mechanistic interpretability pipelines, improving the discovery algorithm is not enough unless the validation objective reliably tracks true behavioral recovery.",
+      "method": [
+        "Compared validation faithfulness against held-out behavioral agreement under ordinary resampling across four human-reference tasks and InterpBench.",
+        "Tested controlled reference edits and outputs from EAP, EAP-IG, ACDC, and Edge-SP to expose misranking without relying on any single discovery method.",
+        "Analyzed context distortion by restoring excluded signals from the intact-model execution to see whether rankings could be repaired."
+      ],
+      "evidence_signal": "Under resampling, KL misranked 9.4%–41.2% of candidate pairs on the human-reference tasks, and restoring selected signals fixed 96 of 100 persistent misrankings in the study pool.",
+      "watch_item": "Faithfulness metrics can be sensitive to distribution shifts caused by exclusion-based interventions, so validation setups must check whether the retained subcircuit is being evaluated on distorted inputs.",
+      "hashtags": [
+        "#MechanisticInterpretability",
+        "#ScientificDiscovery",
+        "#ModelEvaluation",
+        "#Faithfulness",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-10-01-arxiv-are_we_recovering_mechanisms_objective_level_recovery_gaps_in_mechanistic_interpretability",
+      "paper_title": "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
+      "paper_date": "2026-10-01",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-10-04T18:03:53",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-distributionally_robust_schr_dinger_bridge",
+    "arxiv_id": "2610.02043v1",
+    "date": "2026-10-01",
+    "title": "Distributionally Robust Schrödinger Bridge",
+    "authors": "Jinhwan Sul, Panagiotis Theodoropoulos, Vincent Pacelli, Jaemoo Choi, Evangelos Theodorou",
+    "abstract": "Schrödinger bridge (SB) learns stochastic transport between prescribed initial and target distributions. When the initial distribution shifts at test time, the learned dynamics can fail to recover the target distribution. We introduce the Distributionally Robust Schrödinger Bridge (DRSB), which learns a single controller that accounts for uncertainty in the initial distribution. The DRSB objective consists of control energy and a KL penalty between the resulting terminal distribution and the target distribution. DRSB seeks a single controller that minimizes the worst-case value of this objective as the initial distribution varies within an ambiguity set around the nominal distribution. We derive an exact variational formulation of this objective and connect its fixed-terminal-cost subproblem to stochastic optimal control and distributionally robust optimization. This formulation motivates an alternating algorithm that updates the adversarial initial distribution, estimates the terminal log-density ratio, and trains the controller. We develop Wasserstein and Sinkhorn variants using stochastic control optimality conditions to approximate the gradients required for adversarial updates. Experiments on two-dimensional transport tasks and image-to-image translation show improved robustness to input perturbations relative to standard SB, with a tradeoff in nominal performance. On Gaussian mixture transport, Sinkhorn DRSB also achieves lower mean sliced Wasserstein distance than fixed-level noise augmentation at both tested unseen noise levels.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-10-01T16:54:34Z",
+    "updated": "2026-10-01T16:54:34Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02043v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02043v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "Distributionally Robust Schrödinger Bridge learns one stochastic controller that remains effective when the initial distribution shifts, by optimizing worst-case transport performance over an uncertainty set around the nominal start distribution.",
+      "engineering_relevance": "This is relevant for robust generative modeling and control in safety-critical systems where input uncertainty or domain shift can break standard Schrödinger bridge performance.",
+      "method": [
+        "Formulates DRSB as a worst-case control-energy plus terminal KL objective over perturbed initial distributions.",
+        "Derives an exact variational form and links the fixed-terminal-cost subproblem to stochastic optimal control and distributionally robust optimization.",
+        "Uses an alternating algorithm to update the adversarial initial distribution, estimate terminal log-density ratios, and train the controller, with Wasserstein and Sinkhorn gradient approximations."
+      ],
+      "evidence_signal": "Experiments on 2D transport and image-to-image translation show improved robustness to input perturbations versus standard SB, and Sinkhorn DRSB achieved lower mean sliced Wasserstein distance than fixed noise augmentation on Gaussian mixture transport at two unseen noise levels.",
+      "watch_item": "The robustness gains come with a tradeoff in nominal performance, and adversarial updates depend on approximating gradients via stochastic control conditions, which may increase implementation complexity.",
+      "hashtags": [
+        "#SchrodingerBridge",
+        "#DistributionallyRobustOptimization",
+        "#StochasticControl",
+        "#RobustGenerativeModeling",
+        "#WassersteinDistance"
+      ],
+      "paper_id": "2026-10-01-arxiv-distributionally_robust_schr_dinger_bridge",
+      "paper_title": "Distributionally Robust Schrödinger Bridge",
+      "paper_date": "2026-10-01",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-10-04T18:03:56",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-training_free_diffusion_planning_with_analytical_local_scores",
+    "arxiv_id": "2610.01959v1",
+    "date": "2026-10-01",
+    "title": "Training-Free Diffusion Planning with Analytical Local Scores",
+    "authors": "Michael Y. Fatemi, Jinhao Liang, Ferdinando Fioretto",
+    "abstract": "Path finding and multi-robot motion planning require trajectories that are smooth, goal-directed, and collision-free in environments with complex geometric constraints. Recent diffusion-based planners have shown that trajectory generation can be cast as iterative denoising which has opened the doors to learning-based approaches that can handle multi-modal trajectory distributions and refine entire trajectories. However, a key limitation is that diffusion planners require training on large collections of feasible trajectories, rendering them map-specific, and difficult to deploy when high-quality demonstrations are unavailable. This paper introduces a training-free diffusion-based motion planner that replaces learned global trajectory scores with analytical local scores derived from obstacle, smoothness, velocity, and inter-agent feasibility terms. The proposed idea relies on a key observation: the score of a trajectory can be reconstructed by considering only local interactions between neighboring waypoints and nearby constraints. This structure exploitation yields a decomposed denoising procedure that retains the optimization structure of classical trajectory methods while inheriting the iterative refinement behavior of diffusion models. Experiments on a large collection of complex environments and large multi-agent planning tasks show that the proposed analytical score produces smooth and feasible trajectories within limited computational costs, for example in generating feasible paths for 300+ agents in environments containing 100+ obstacles in under 6 seconds on a GPU, outperforming strong learning-based and optimization baselines, while avoiding the data requirements of learned diffusion planners.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-01T16:15:15Z",
+    "updated": "2026-10-01T16:15:15Z",
+    "primary_category": "cs.RO",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.01959v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.01959v1"
+      }
+    ],
+    "score": 56,
+    "infographic": {
+      "key_insight": "The paper replaces learned diffusion trajectory scores with analytical local scores built from obstacle, smoothness, velocity, and inter-agent constraints, enabling training-free motion planning.",
+      "engineering_relevance": "This makes diffusion-style planning easier to deploy in new maps and multi-robot settings where demonstration data is scarce or unavailable.",
+      "method": [
+        "Decompose the trajectory score into local interactions between neighboring waypoints and nearby constraints.",
+        "Use analytical terms for feasibility, smoothness, and collision avoidance instead of training a global score model.",
+        "Run iterative denoising to refine entire trajectories while preserving classical optimization structure."
+      ],
+      "evidence_signal": "The method was evaluated on complex environments and large multi-agent tasks, including 300+ agents with 100+ obstacles, producing feasible paths in under 6 seconds on a GPU and outperforming strong baselines.",
+      "watch_item": "Performance depends on the quality and completeness of the analytical local terms, so edge cases in constraint modeling or dense environments may reduce feasibility.",
+      "hashtags": [
+        "#DiffusionPlanning",
+        "#MotionPlanning",
+        "#MultiRobotSystems",
+        "#TrajectoryOptimization",
+        "#TrainingFreeAI"
+      ],
+      "paper_id": "2026-10-01-arxiv-training_free_diffusion_planning_with_analytical_local_scores",
+      "paper_title": "Training-Free Diffusion Planning with Analytical Local Scores",
+      "paper_date": "2026-10-01",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-04T18:03:59",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-reconstruct_practice_go_real_guided_self_improvement_for_embodied_agents",
+    "arxiv_id": "2610.02204v1",
+    "date": "2026-10-01",
+    "title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+    "authors": "Yen-Jen Wang, Haozhe Jiang, Shuying Deng, Haoru Xue, Weirui Ye, Rocky Duan",
+    "abstract": "Building reliable robot capabilities across diverse tasks requires substantial human effort to develop and maintain skills, design rewards, and integrate perception with control. We present Reconstruct, Practice, Go Real (RPG), a framework for autonomous improvement of robot execution systems without updating model weights. RPG identifies manipulation capabilities in an offline dataset and constructs related practice tasks in simulation. During practice, RPG uses execution feedback, privileged simulator state, and available dataset videos to diagnose failures. It develops new reusable symbolic skills, refines existing skills, and revises the system prompt based on these diagnoses. Cross-task evaluation tests individual candidate changes and merged revisions before they are retained for reuse. At test time, a multimodal LLM uses the resulting system prompt and skill library to coordinate perception and robot control. On held-out initializations of 22 manipulation tasks, RPG improves task success from 28.6% after the first practice round to 95.0% after 15 rounds, outperforming all evaluated baselines, including ASPIRE (75.5%) and CaP-Agent0 powered by GPT-6 Astra Pro (60.0%). After a common calibration and hardware-adaptation procedure, the frozen system succeeds in all 30 physical trials, with ten trials on each of three tasks. Project Website: https://rpg-robot.github.io/",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-10-01T17:59:50Z",
+    "updated": "2026-10-01T17:59:50Z",
+    "primary_category": "cs.RO",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02204v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02204v1"
+      }
+    ],
+    "score": 55,
+    "infographic": {
+      "key_insight": "RPG lets embodied agents improve robot execution without weight updates by iteratively reconstructing tasks, practicing in simulation, and upgrading a reusable skill/prompt system from failure feedback.",
+      "engineering_relevance": "This offers a practical path to cheaper, safer robot capability scaling by reusing offline data and simulator feedback instead of expensive end-to-end retraining.",
+      "method": [
+        "Mine capabilities from offline datasets and turn them into practice tasks in simulation",
+        "Use execution feedback, simulator state, and dataset videos to diagnose failures",
+        "Retain better symbolic skills and prompt revisions after cross-task evaluation"
+      ],
+      "evidence_signal": "On 22 held-out manipulation tasks, success rose from 28.6% after the first practice round to 95.0% after 15 rounds, and the frozen system achieved 30/30 successes in physical trials after calibration and hardware adaptation.",
+      "watch_item": "Because the approach depends on good simulator fidelity, dataset coverage, and a robust calibration/adaptation step, performance may degrade when tasks or hardware differ significantly from the practice setting.",
+      "hashtags": [
+        "#RobotLearning",
+        "#EmbodiedAI",
+        "#Sim2Real",
+        "#LLMforRobotics",
+        "#AutonomousLabs"
+      ],
+      "paper_id": "2026-10-01-arxiv-reconstruct_practice_go_real_guided_self_improvement_for_embodied_agents",
+      "paper_title": "Reconstruct, Practice, Go Real: Guided Self-Improvement for Embodied Agents",
+      "paper_date": "2026-10-01",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-10-04T18:04:01",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-01-arxiv-kalibench_a_fine_grained_benchmark_for_cybersecurity_tool_use_on_kali_linux_with_runtime_f",
+    "arxiv_id": "2610.02206v1",
+    "date": "2026-10-01",
+    "title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
+    "authors": "Pengfei Li, Naufal Suryanto, Sicheng Zhang, Muzammal Naseer",
+    "abstract": "LLMs are increasingly applied to cybersecurity workflows, where they are expected to translate analysts' intent into tool invocations. However, existing evaluations focus on knowledge-based assessments or end-to-end agentic tasks, and do not directly measure LLMs' ability to generate executable commands for real-world cybersecurity tools. This gap is critical because cybersecurity operations rely on strict command-line interfaces (CLIs), where minor syntax errors, incorrect flag--value bindings, or argument misordering can invalidate execution. We introduce KaliBench, a fine-grained benchmark and dataset for natural-language--to--CLI translation on Kali Linux, comprising 8,504 query--command pairs spanning 1,642 tools across 23 capability dimensions and 5 security phases. KaliBench is constructed via a manuscript-grounded pipeline with deterministic canonicalization and alias-aware evaluation, enabling precise and reproducible assessment of tool selection and argument construction. To ensure both semantic correctness and practical executability, we develop a multi-stage verification pipeline that combines LLM-based validation, sandboxed terminal execution, and human-in-the-loop refinement. Building on these fine-grained, deterministic signals, KaliBench further enables runtime-free verifiable rewards for training. Across three evaluation modes and 24 configurations of general-purpose and security-focused open-weight models, no open-weight model exceeds 42% exact-command accuracy in the unrestricted setting, highlighting the difficulty of accurate CLI-based cybersecurity tool use without explicit tool hints. We further show that supervised fine-tuning and reinforcement learning with verifiable rewards derived from KaliBench significantly improve an 8B model and achieve performance comparable to a 685B MoE model.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-10-01T17:59:55Z",
+    "updated": "2026-10-01T17:59:55Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CR"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.02206v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.02206v1"
+      }
+    ],
+    "score": 54,
+    "infographic": {
+      "key_insight": "KaliBench shows that translating natural language into exact, executable Kali Linux commands is much harder than standard cybersecurity benchmarks suggest, especially without explicit tool hints.",
+      "engineering_relevance": "The benchmark provides a deterministic, verifiable way to train and evaluate AI agents for real-world cybersecurity tool use, where small CLI mistakes can break execution.",
+      "method": [
+        "Built 8,504 query-command pairs covering 1,642 tools",
+        "Spans 23 capability dimensions across 5 security phases",
+        "Uses canonicalization, alias-aware evaluation, sandboxed execution, and human review for verification"
+      ],
+      "evidence_signal": "Across 24 model configurations, no open-weight model exceeded 42% exact-command accuracy in the unrestricted setting, but fine-tuning and verifiable-reward RL improved an 8B model substantially.",
+      "watch_item": "Because the benchmark relies on CLI exactness and sandboxed verification, performance may not fully capture robustness to real-world environment variation or unseen tool versions.",
+      "hashtags": [
+        "#CybersecurityAI",
+        "#KaliLinux",
+        "#Benchmarks",
+        "#LLMAgents",
+        "#VerifiableRewards"
+      ],
+      "paper_id": "2026-10-01-arxiv-kalibench_a_fine_grained_benchmark_for_cybersecurity_tool_use_on_kali_linux_with_runtime_f",
+      "paper_title": "KaliBench: A Fine-Grained Benchmark for Cybersecurity Tool Use on Kali Linux with Runtime-Free Verifiable Rewards",
+      "paper_date": "2026-10-01",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-04T18:04:03",
       "generator": "openai"
     }
   }

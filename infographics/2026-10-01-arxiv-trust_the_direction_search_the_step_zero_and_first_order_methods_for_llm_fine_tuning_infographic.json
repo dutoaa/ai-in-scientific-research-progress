@@ -1,24 +1,24 @@
 {
-  "key_insight": "Decouple “where to go” from “how far to go”: use a trusted first-order direction, then cheaply tune the step with zeroth-order function evaluations along that single direction.",
-  "engineering_relevance": "This gives a lightweight, curvature-aware step-size strategy for LLM fine-tuning that can outperform fixed-step baselines without the cost of full line search.",
+  "key_insight": "ZFO decouples optimizer direction from step-size by using first-order gradients for direction and cheap zeroth-order evaluations to adaptively choose the step length along that direction.",
+  "engineering_relevance": "This offers a practical, low-overhead alternative to full line search for LLM fine-tuning, improving stability and convergence without adding many objective evaluations.",
   "method": [
-    "First-order optimizer provides the descent direction.",
-    "Evaluate the objective at two additional points along that direction.",
-    "Fit a local 1D model to choose a bounded, near-optimal step size."
+    "Use a trusted first-order optimizer to propose the descent direction.",
+    "Evaluate the objective at two extra points along that direction to build a local 1D model.",
+    "Select a curvature-aware step within a bounded interval using shared-sample finite differences."
   ],
-  "evidence_signal": "The abstract reports evaluations across multiple language-model and dataset settings, where ZFO often improved optimization and final performance over fixed-step first-order baselines.",
-  "watch_item": "Performance depends on the local model choice and the method still relies on extra objective evaluations, so noisy or expensive function queries may limit practicality.",
+  "evidence_signal": "Across multiple language-model and dataset settings, the method often outperformed fixed-step first-order baselines in both optimization behavior and final performance.",
+  "watch_item": "The gains depend on the objective and local model choice, so implementation details and tuning of the bounded search interval may affect robustness.",
   "hashtags": [
     "#LLMFineTuning",
     "#Optimization",
     "#ZeroOrderMethods",
     "#FirstOrderMethods",
-    "#MachineLearningResearch"
+    "#MachineLearning"
   ],
   "paper_id": "2026-10-01-arxiv-trust_the_direction_search_the_step_zero_and_first_order_methods_for_llm_fine_tuning",
   "paper_title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
   "paper_date": "2026-10-01",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-03T17:50:49",
+  "generated_at": "2026-10-04T18:03:24",
   "generator": "openai"
 }

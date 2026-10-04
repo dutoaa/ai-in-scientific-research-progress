@@ -1,15 +1,15 @@
 {
-  "key_insight": "CARM prevents positive and negative token-level probability changes from canceling out, making response-level off-policy masking more sensitive and reliable for LLM RL.",
-  "engineering_relevance": "It gives practitioners a theoretically grounded way to filter rollout responses during RL post-training, which can improve stability and quality in reasoning and code models.",
+  "key_insight": "CARM improves response-level off-policy control in LLM reinforcement learning by masking whole samples using the average absolute token log-ratio, so opposing probability shifts cannot cancel out.",
+  "engineering_relevance": "It gives practitioners a more robust sequence-level acceptance rule for RL post-training pipelines where rollout and training engines differ, helping reduce harmful off-policy updates in reasoning and code models.",
   "method": [
-    "Compute token log-ratios between sampled rollout and training policies.",
-    "Take the absolute value of each token log-ratio before averaging at the sequence level.",
-    "Accept responses only when the masked statistic satisfies a joint bound on out-of-band ratio frequency and mean log-distance."
+    "Compute token log-ratios between sampled rollout probabilities and training-engine probabilities.",
+    "Use the mean absolute log-ratio across the sequence instead of the signed geometric mean to avoid cancellation.",
+    "Accept only responses that satisfy a joint bound on out-of-band token ratios and mean log-distance beyond the band."
   ],
-  "evidence_signal": "On math reasoning and code generation benchmarks, CARM improved mean@16 by up to 3.13 points over geometric-mean masking and raised average pass@1 by 2.88 points over the strongest baseline.",
-  "watch_item": "Absolute-value masking may be more conservative and depends on careful thresholding to avoid rejecting useful but shifted responses.",
+  "evidence_signal": "On mathematical reasoning and code generation benchmarks, CARM improved mean@16 on AIME 2024/2025/2026 plus BeyondAIME by up to 3.13 points, and raised average pass@1 on four code benchmarks by 2.88 points over the strongest baseline.",
+  "watch_item": "Because masking is stricter and sequence-level, the method may reduce usable samples or require careful tuning of the ratio band and acceptance threshold.",
   "hashtags": [
-    "#LLMRL",
+    "#LLMReinforcementLearning",
     "#OffPolicyControl",
     "#ResponseMasking",
     "#MathematicalReasoning",
@@ -19,6 +19,6 @@
   "paper_title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
   "paper_date": "2026-10-01",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-03T17:50:47",
+  "generated_at": "2026-10-04T18:03:22",
   "generator": "openai"
 }

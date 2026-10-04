@@ -1,24 +1,24 @@
 {
-  "key_insight": "SoftServe is a scalable quasi-Newton framework that keeps curvature estimates positive definite by construction, enabling deep-learning optimization without line searches or manual curvature fixes.",
-  "engineering_relevance": "It offers a GPU-friendly path to faster, more stable training on large, ill-conditioned neural networks by replacing expensive matrix decompositions with coupled Newton-Schulz iterations.",
+  "key_insight": "SoftServe turns quasi-Newton optimization into a scalable deep-learning method by constructing positive-definite curvature estimates that remain stable even under non-convexity and negative curvature.",
+  "engineering_relevance": "It offers a GPU-friendly alternative to first-order optimizers for large, ill-conditioned models, with variants that scale to massive parameter counts without line searches or manual curvature fixes.",
   "method": [
-    "Builds curvature from a variational objective even when negative curvature is present",
-    "Provides diagonal and Kronecker-factored variants that remain positive definite",
-    "Uses stable coupled Newton-Schulz iterations for matrix operations on GPUs"
+    "Derives curvature from the variational objective of Berglund et al. (2025) to keep updates positive definite.",
+    "Provides diagonal and Kronecker-factored SoftServe variants for large-scale neural networks.",
+    "Uses the coupled Newton-Schulz iteration to replace costly matrix decompositions with matrix multiplications."
   ],
-  "evidence_signal": "The abstract reports strong results on ill-conditioned benchmarks including recurrent networks, deep autoencoders, physics-informed neural networks, and a 136M-parameter diffusion model, often outperforming Adam, Muon, and SOAP.",
-  "watch_item": "Performance depends on iterative matrix approximations, so numerical stability, iteration count, and memory/compute cost should be validated for each model and hardware setting.",
+  "evidence_signal": "The abstract reports strong performance on severely ill-conditioned benchmarks, including recurrent networks, deep autoencoders, PINNs, and a 136M-parameter diffusion model, often outperforming Adam, Muon, and SOAP.",
+  "watch_item": "Performance and stability may depend on careful implementation of the Newton-Schulz iteration and its numerical behavior at very large scale.",
   "hashtags": [
-    "#QuasiNewton",
-    "#DeepLearningOptimization",
     "#ScientificMachineLearning",
-    "#PhysicsInformedML",
-    "#GPUComputing"
+    "#QuasiNewton",
+    "#DeepLearning",
+    "#Optimization",
+    "#PhysicsInformedNN"
   ],
   "paper_id": "2026-10-01-arxiv-softserve_a_scalable_quasi_newton_method_for_deep_learning",
   "paper_title": "SoftServe: A Scalable Quasi-Newton Method for Deep Learning",
   "paper_date": "2026-10-01",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-10-03T17:50:42",
+  "generated_at": "2026-10-04T18:03:17",
   "generator": "openai"
 }
