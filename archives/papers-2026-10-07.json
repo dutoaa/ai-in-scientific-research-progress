@@ -1,0 +1,1044 @@
+[
+  {
+    "id": "2026-10-05-arxiv-transcope_what_the_software_hides_about_llm_training_data_the_hardware_reveals_at_scale_an",
+    "arxiv_id": "2610.06848v1",
+    "date": "2026-10-05",
+    "title": "TranScope: What the Software Hides About LLM Training Data, the Hardware Reveals at Scale, and Accelerators Magnify",
+    "authors": "Joshua Kalyanapu, Darsh Asher, Kaushal Mhapsekar, Bita Aslrousta, Rushiraj Chaitanyakumar Sheth, Maharshi Mukeshkumar Oza",
+    "abstract": "Membership is the root privacy primitive in machine learning: to date, no hardware-based out-of-distribution detection on black-box models has been demonstrated against constant-time, static neural networks with masked confidence. This paper performs the first cycle-level examination of how large language models and vision transformers interact with various modern microarchitecture components, including integrated accelerators, as LLMs scale in size and answers the question of whether the data that a model was trained on affects its execution footprint even without any input-dependent branch, dynamic optimization, or early exit and in constant-time models. The results confirm that the answer is yes and identify which modern hardware components, such as TLBs or on-core accelerators, reveal or amplify that effect. The results also answer whether the signal is informative enough to reliably classify the in-/vs/out-of-distribution property of membership. To understand why, we perform a systematic root cause analysis and find that the transformer's tokenization steps, which happen during training, alter the locality of the accesses the model makes to fetch the vocabulary token later during inference and, as a result, change the page table access patterns and TLB in a previously unknown data-dependent way, causing microarchitectural state to vary significantly based on whether or not the input was in the distribution of the transformer training data. Building on the above observation, we introduce TranScope: the first microarchitecture tool for detecting membership information with low cost, no need for a surrogate model, and significantly higher robustness, e.g., 0.6 AUC for PETAL (best previously reported) vs 0.9 AUC (ours). This reintroduces hardware as both an opportunity, e.g., a tool for checking copyright violation for the first time, and a new channel for inferring membership (MIA).",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-05T17:59:42Z",
+    "updated": "2026-10-05T17:59:42Z",
+    "primary_category": "cs.CR",
+    "categories": [
+      "cs.CR"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06848v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06848v1"
+      }
+    ],
+    "score": 98,
+    "infographic": {
+      "key_insight": "Even in constant-time, masked-confidence LLMs, the training data can leave measurable hardware footprints during inference, and TranScope exploits those footprints to infer membership.",
+      "engineering_relevance": "This work shows that modern microarchitectural state—especially TLB behavior and on-core accelerators—can become a privacy side channel, so hardware-aware deployment and auditing of large models are now security concerns.",
+      "method": [
+        "Cycle-level profiling of LLMs and vision transformers on modern microarchitectures",
+        "Root-cause analysis linking training-time tokenization to inference-time memory locality and TLB/page-table patterns",
+        "Design of TranScope for low-cost membership inference without a surrogate model"
+      ],
+      "evidence_signal": "The abstract reports strong classification performance, with TranScope reaching about 0.9 AUC versus 0.6 AUC for the previous best PETAL.",
+      "watch_item": "The attack’s effectiveness may depend on specific hardware features and memory-system behavior, so results may not transfer uniformly across all accelerators or system configurations.",
+      "hashtags": [
+        "#LLMSecurity",
+        "#MembershipInference",
+        "#Microarchitecture",
+        "#HardwareSideChannel",
+        "#ScientificMachineLearning"
+      ],
+      "paper_id": "2026-10-05-arxiv-transcope_what_the_software_hides_about_llm_training_data_the_hardware_reveals_at_scale_an",
+      "paper_title": "TranScope: What the Software Hides About LLM Training Data, the Hardware Reveals at Scale, and Accelerators Magnify",
+      "paper_date": "2026-10-05",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-06T19:21:14",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-frea_a_multi_source_expert_benchmark_for_reaction_feasibility_verification",
+    "arxiv_id": "2610.06614v1",
+    "date": "2026-10-05",
+    "title": "FREA: A Multi-Source Expert Benchmark for Reaction Feasibility Verification",
+    "authors": "Botao Yu, Bo Zhou, Daniel Adu-Ampratwum, Frazier N. Baker, Ziru Chen, Reza Averly",
+    "abstract": "As generative models and AI agents propose chemical reactions at a scale beyond expert review, feasibility verifiers decide which proposals enter synthesis planning. But do their decisions agree with chemists across different kinds of candidates? We introduce FREA, a benchmark of 751 reactions labeled by expert chemists under an explicit feasibility criterion, drawn from retrosynthesis model proposals, zero-yield experimental records, edits by large language models (LLMs), and five negative candidate generation methods. Our evaluation finds that no verifier leads across all sources: LLMs given only the criterion are competitive with dedicated verifiers, while forward models perform best on retrosynthesis proposals but reject most feasible edits of recorded reactions at the evaluated operating points. Looking beyond aggregate scores, both forward models perform below chance when separating infeasible alternative disconnections from feasible generated candidates. To study whether negative supervision addresses these weaknesses, we also release a corpus of over 14 million recorded reactions and generated negative candidates. In matched training comparisons, adding a mixture of generated negatives to forward training raises mean AUROC across sources, but these gains do not extend to retrosynthesis proposals. Varying the generation method further shows that the largest gain on generated candidates coincides with worse proposal screening. These findings motivate evaluating verifiers against experts across sources and designing negatives for transfer to model proposals.",
+    "category": "Scientific Discovery",
+    "source": "arXiv",
+    "published": "2026-10-05T16:17:37Z",
+    "updated": "2026-10-05T16:17:37Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06614v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06614v1"
+      }
+    ],
+    "score": 82,
+    "infographic": {
+      "key_insight": "Feasibility verifiers do not generalize equally across reaction sources: performance depends strongly on where the candidate reaction came from, and no single model wins everywhere.",
+      "engineering_relevance": "For automated reaction planning pipelines, verifier choice and training data must be matched to the proposal source, or good candidates may be incorrectly rejected while infeasible ones slip through.",
+      "method": [
+        "Built FREA, a benchmark of 751 expert-labeled reactions spanning retrosynthesis proposals, zero-yield records, LLM edits, and five negative-generation methods.",
+        "Compared forward models and LLM-based verifiers under an explicit chemist-defined feasibility criterion.",
+        "Released a larger training corpus of 14M+ recorded reactions plus generated negatives to study negative supervision effects."
+      ],
+      "evidence_signal": "Across source-specific evaluations, LLMs with only the criterion were competitive, forward models did best on retrosynthesis proposals, and both forward models fell below chance on separating infeasible alternative disconnections from feasible generated candidates.",
+      "watch_item": "Improvements from adding generated negatives were source-dependent, so gains on synthetic candidates did not reliably transfer to retrosynthesis proposal screening.",
+      "hashtags": [
+        "#ChemistryAI",
+        "#ReactionPrediction",
+        "#Benchmarking",
+        "#Verification",
+        "#ScientificDiscovery"
+      ],
+      "paper_id": "2026-10-05-arxiv-frea_a_multi_source_expert_benchmark_for_reaction_feasibility_verification",
+      "paper_title": "FREA: A Multi-Source Expert Benchmark for Reaction Feasibility Verification",
+      "paper_date": "2026-10-05",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-10-06T19:21:17",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-back_to_the_future_rethinking_eda_infrastructure_for_agentic_systems_in_chip_design_verifi",
+    "arxiv_id": "2610.06790v1",
+    "date": "2026-10-05",
+    "title": "Back to the Future: Rethinking EDA Infrastructure for Agentic Systems in Chip Design Verification",
+    "authors": "Je Yang, Ivan Lobov, Thomas Karpati",
+    "abstract": "The unprecedented computational scale of modern artificial intelligence depends on complex, multi-billion-transistor Systems-on-Chip, yet the workflows that verify these chips remain stubbornly manual. Although Large Language Models (LLMs) have made rapid inroads into Electronic Design Automation (EDA), approximately 74.6% of existing studies target static Register-Transfer Level (RTL) code generation, leaving post-simulation verification and interactive waveform debugging largely untouched. We introduce Back-to-the-Future (BTTF), an end-to-end agentic framework that closes this infrastructural gap. BTTF distills massive, unstructured simulation dumps into a normalized relational SQLite database and couples it with a collaborative multi-agent orchestration engine that translates natural-language verification queries into schema-aware SQL while correlating signal anomalies with versioned RTL repositories. Across a 150-query benchmark, BTTF attains 95.33% execution accuracy, charting a practical path toward autonomous EDA verification.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-10-05T17:48:14Z",
+    "updated": "2026-10-05T17:48:14Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06790v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06790v1"
+      }
+    ],
+    "score": 80,
+    "infographic": {
+      "key_insight": "BTTF rethinks chip verification by turning raw simulation data into a queryable database and using multi-agent LLM orchestration to answer waveform/debugging questions automatically.",
+      "engineering_relevance": "It targets a major gap in EDA workflows beyond RTL generation, making post-simulation verification more scalable and less manual for complex SoC design teams.",
+      "method": [
+        "Normalizes large simulation dumps into a relational SQLite database.",
+        "Uses collaborative agents to translate natural-language verification requests into schema-aware SQL.",
+        "Correlates detected signal anomalies with versioned RTL repositories for debugging context."
+      ],
+      "evidence_signal": "On a 150-query benchmark, BTTF achieved 95.33% execution accuracy.",
+      "watch_item": "Performance may depend on careful schema design and robust handling of diverse simulation formats and RTL versioning conventions.",
+      "hashtags": [
+        "#EDA",
+        "#ChipDesign",
+        "#Verification",
+        "#AgenticAI",
+        "#LLM"
+      ],
+      "paper_id": "2026-10-05-arxiv-back_to_the_future_rethinking_eda_infrastructure_for_agentic_systems_in_chip_design_verifi",
+      "paper_title": "Back to the Future: Rethinking EDA Infrastructure for Agentic Systems in Chip Design Verification",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-06T19:21:19",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-mempilot_orchestrating_on_demand_multimodal_memory_curation_for_llm_agents",
+    "arxiv_id": "2610.06830v1",
+    "date": "2026-10-05",
+    "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+    "authors": "Haozhen Zhang, Haodong Yue, Quanyu Long, Jianzhu Bao, Qingyuan Liu, Tao Feng",
+    "abstract": "Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essential. Recent studies have begun shifting memory processing toward runtime adaptation, but typically specialize in particular operations or fixed processing schemes, leaving flexible control over performance, cost, and latency largely underexplored. To address this challenge, we present \\textbf{MemPilot}, a flexible framework that orchestrates on-demand memory curation under different performance--cost--latency preferences. Specifically, we optimize a multi-step LLM policy via reinforcement learning to iteratively choose between retrieving from query-agnostic memory and delegating query-specific curation of raw multimodal history to heterogeneous LLMs and VLMs. The policy jointly controls evidence amount, curation instructions, model selection, and visual access, enabling fine-grained allocation of runtime computation. To optimize this policy under competing objectives, we adapt objective-wise advantage decoupling by separately estimating each objective's advantage before aggregation. Moreover, we introduce prefix-based marginal utility estimation for fine-grained credit assignment across multi-step rollouts. Experiments on five multimodal agent-memory benchmarks demonstrate favorable performance--cost--latency trade-offs across optimization preferences, with preference sweeps yielding broader frontiers than existing trade-off-aware baselines.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-05T17:58:06Z",
+    "updated": "2026-10-05T17:58:06Z",
+    "primary_category": "cs.CL",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06830v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06830v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "MemPilot lets an LLM agent decide at runtime when to reuse stored memory versus curate raw multimodal history, balancing quality, cost, and latency on demand.",
+      "engineering_relevance": "This framework is relevant for building deployable multimodal agents because it converts memory handling into a controllable runtime policy rather than a fixed preprocessing pipeline.",
+      "method": [
+        "RL-trained multi-step policy selects between retrieval and query-specific curation.",
+        "Policy controls evidence amount, curation instructions, model choice, and visual access.",
+        "Objective-wise advantage decoupling plus prefix-based marginal utility estimation improve multi-objective credit assignment."
+      ],
+      "evidence_signal": "The paper reports evaluation on five multimodal agent-memory benchmarks, with preference sweeps producing broader performance-cost-latency frontiers than prior trade-off-aware baselines.",
+      "watch_item": "The approach adds policy complexity and may be sensitive to reward design, model routing choices, and the compute overhead of multi-step runtime decisions.",
+      "hashtags": [
+        "#LLMAgents",
+        "#MultimodalMemory",
+        "#ReinforcementLearning",
+        "#RuntimeOptimization",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-10-05-arxiv-mempilot_orchestrating_on_demand_multimodal_memory_curation_for_llm_agents",
+      "paper_title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-06T19:21:22",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-deep_learning_for_sleep_heart_rate_estimation_from_accelerometers_toward_population_scale",
+    "arxiv_id": "2610.06823v1",
+    "date": "2026-10-05",
+    "title": "Deep Learning for Sleep Heart Rate Estimation from Accelerometers: Toward Population-Scale Cardiac Insight Without Optical Sensors",
+    "authors": "Tanbin Islam Rohan, Pranjol Sen Gupta, Tanusree Debi, Nazmus Sakib",
+    "abstract": "Large longitudinal cohorts often contain wrist accelerometry without optical heart-rate sensing, motivating recovery of cardiac information from motion signals already collected during sleep. We present SeqSmoother, a transformer-based temporal corrector for sleep heart rate (HR) estimation from wrist accelerometry. SeqSmoother combines spectral descriptors with an intermediate Nightbeat-derived frequency anchor and a physics-motivated sub-harmonic feature designed to identify harmonic frequency lock-on. All inference-time features are derived from wrist accelerometry, while ECG is used only to construct reference HR labels and training-label quality weights. We evaluate SeqSmoother using 13 participant-disjoint held-out folds and compare it with the official Nightbeat implementation under a matched 60-s window and 15-s step protocol. Across all out-of-fold predictions, SeqSmoother achieved a participant-macro MAE of 1.60 bpm. On Nightbeat-retained matched intervals, Nightbeat achieved lower absolute error than SeqSmoother (0.615 versus 1.091 bpm), while SeqSmoother provided estimates over a larger portion of the eligible recording; Nightbeat produced final estimates for 72.85% of the SeqSmoother-eligible out-of-fold grid. Separately, the proposed sub-harmonic ratio achieved an AUROC of 0.972 for identifying reference-defined harmonic lock-on candidates. These findings reveal an accuracy-availability trade-off between learned temporal modeling and quality-gated signal processing while providing empirical support for a physics-informed approach to identifying frequency-tracking failures in accelerometer-based sleep HR estimation.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-05T17:56:57Z",
+    "updated": "2026-10-05T17:56:57Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06823v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06823v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "SeqSmoother uses transformer-based temporal correction plus physics-informed spectral cues to estimate sleep heart rate from wrist accelerometry without requiring optical sensors.",
+      "engineering_relevance": "This enables population-scale cardiac monitoring from accelerometer-rich cohorts where ECG/PPG are unavailable, while highlighting the trade-off between broader coverage and per-window accuracy.",
+      "method": [
+        "Transformer-based temporal smoother for sleep HR estimation",
+        "Combines spectral descriptors with a Nightbeat-derived frequency anchor",
+        "Adds a sub-harmonic feature to detect harmonic lock-on failures"
+      ],
+      "evidence_signal": "Evaluated on 13 participant-disjoint held-out folds with matched 60-s windows and 15-s steps; SeqSmoother reached 1.60 bpm macro MAE, while Nightbeat was more accurate on retained matched intervals but covered only 72.85% as many eligible out-of-fold estimates.",
+      "watch_item": "Performance depends on label quality and quality-gated intervals, so deployment must handle missing estimates and possible harmonic frequency lock-on failures.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#WearableSensing",
+        "#SleepHeartRate",
+        "#Transformers",
+        "#DigitalHealth"
+      ],
+      "paper_id": "2026-10-05-arxiv-deep_learning_for_sleep_heart_rate_estimation_from_accelerometers_toward_population_scale",
+      "paper_title": "Deep Learning for Sleep Heart Rate Estimation from Accelerometers: Toward Population-Scale Cardiac Insight Without Optical Sensors",
+      "paper_date": "2026-10-05",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-06T19:21:27",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-aligning_multimodal_patient_evidence_with_biomedical_knowledge_graphs_for_clinical_llms",
+    "arxiv_id": "2610.06685v1",
+    "date": "2026-10-05",
+    "title": "Aligning Multimodal Patient Evidence with Biomedical Knowledge Graphs for Clinical LLMs",
+    "authors": "Jiawen Du, Arshan Ali Khan, Chenhao Zhang, Zachary Plotkin, Li Shen, Qi Long",
+    "abstract": "Clinical questions often depend on linking a patient's multimodal evidence to external biomedical knowledge, yet existing predictive systems rarely represent such links explicitly, so they can neither be traced to their evidence sources nor removed to measure their contributions. We present MM-KG (Multimodal Knowledge Graph), which represents heterogeneous, multimodal patient observations and biomedical concepts as separate layers in one typed graph, joined by explicit alignment edges. First, modality-specific harmonizers convert EHR text, imaging, genomic, and biospecimen data into typed observations mapped to UMLS concepts, which a route-prioritized aligner links to a biomedical knowledge graph. Query-conditioned retrieval then selects a compact subgraph for downstream use by a large language model or a graph neural network. We build MM-KGs for MIMIC-IV and ADNI, and evaluate them with a 2x2 design that separates patient evidence, biomedical knowledge, and their interaction. On questions that require both sources, neither source alone performs far above chance, whereas their combination yields a drug-controlled AUROC interaction of +0.194 on MIMIC and +0.299 on ADNI. On held-out five-candidate ranking, MM-KG outperforms MindMap by +0.131 Hits@1 and leads an adapted GraphCare on the items that require consulting the patient, and deleting the single answer-bearing relation from the retrieved packet returns Hits@1 to the no-knowledge baseline. Finally, query-conditioned retrieval reaches 0.731 AUROC with 6.8x less context than the strongest generic policy, whereas static knowledge graph context gives no consistent gain on ordinary outcome prediction. Knowledge graphs thus benefit clinical LLMs not as background context but as explicit links between multimodal patient evidence and the relation a question requires, and MM-KG makes these links retrievable, traceable, and testable.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-05T16:51:11Z",
+    "updated": "2026-10-05T16:51:11Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06685v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06685v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "MM-KG explicitly links multimodal patient evidence to biomedical knowledge graph relations, making clinical LLM inputs traceable, retrievable, and testable.",
+      "engineering_relevance": "This provides a modular retrieval pipeline for clinical AI systems that can reduce context size while improving question-specific reasoning over patient data and external knowledge.",
+      "method": [
+        "Harmonize EHR text, imaging, genomic, and biospecimen data into typed observations mapped to UMLS concepts.",
+        "Align observations to a biomedical knowledge graph with route-prioritized edges to form a layered multimodal patient knowledge graph.",
+        "Use query-conditioned retrieval to extract a compact subgraph for an LLM or graph neural network."
+      ],
+      "evidence_signal": "Across MIMIC-IV and ADNI, the combined patient-plus-knowledge setting showed strong interaction gains, including +0.194 AUROC on MIMIC and +0.299 on ADNI, and query-conditioned retrieval reached 0.731 AUROC with 6.8x less context.",
+      "watch_item": "Performance depends on correct observation-to-concept alignment and relation selection, so errors in harmonization or retrieval could remove the answer-bearing edge and weaken downstream clinical reasoning.",
+      "hashtags": [
+        "#ClinicalLLM",
+        "#KnowledgeGraph",
+        "#MultimodalAI",
+        "#BiomedicalAI",
+        "#HealthInformatics"
+      ],
+      "paper_id": "2026-10-05-arxiv-aligning_multimodal_patient_evidence_with_biomedical_knowledge_graphs_for_clinical_llms",
+      "paper_title": "Aligning Multimodal Patient Evidence with Biomedical Knowledge Graphs for Clinical LLMs",
+      "paper_date": "2026-10-05",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-06T19:21:29",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-can_agent_harnesses_and_inference_engines_hear_each_other_the_hear_protocol_for_agentic_ll",
+    "arxiv_id": "2610.06597v1",
+    "date": "2026-10-05",
+    "title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
+    "authors": "Jiaqi Zhao, Haodong Chen, Jitai Hao, Wei Zhao, Jinghao Pang, Qiang Huang",
+    "abstract": "LLM agents increasingly execute complex workflows involving multi-turn reasoning, tool use, and parallel agents. Efficient serving requires decisions that span two layers with complementary information: the agent harness understands workflow dependencies, context lifecycles, and execution objectives, whereas the inference engine observes request queues, KV-cache state, resource pressure, and execution capabilities. Existing interfaces do not systematically connect these views, limiting workflow-aware execution. HEAR, a bidirectional Harness--Engine Pairing protocol for agentic LLM serving. HEAR standardizes how the harness communicates workflow intent and execution requirements and how the engine returns runtime state, capabilities, and outcomes. By separating protocol semantics from optimization policies, HEAR supports diverse coordination strategies without changing workflow or model semantics. We instantiate HEAR for online cache-aware runtime coordination and workload-aware execution-mode selection for agent roles. Across four conversational and research-agent benchmarks under memory-constrained, concurrent serving, HEAR achieves a $1.61\\times$ batch speedup and reduces median time-to-first-token by $2.23\\times$ on SCBench. Mooncake shows that workflow intent and live engine state provide complementary benefits across load regimes. On BrowseComp-Plus and DeepResearchBench, workload-specific configurations yield $1.23\\times$ and $2.45\\times$ end-to-end speedups, respectively, without observed task-quality degradation. These results establish HEAR as a reusable coordination substrate for efficient agentic LLM serving.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-10-05T16:07:33Z",
+    "updated": "2026-10-05T16:07:33Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06597v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06597v1"
+      }
+    ],
+    "score": 78,
+    "infographic": {
+      "key_insight": "HEAR is a bidirectional protocol that lets the agent harness share workflow intent and lets the inference engine return runtime state, enabling more efficient agentic LLM serving without changing model or workflow semantics.",
+      "engineering_relevance": "It gives systems builders a reusable control plane for cache-aware scheduling and execution-mode selection under memory pressure and concurrent agent workloads.",
+      "method": [
+        "Standardizes harness→engine messages for workflow dependencies, context lifecycle, and execution requirements.",
+        "Returns engine→harness signals such as queue state, KV-cache status, resource pressure, and capabilities.",
+        "Separates protocol semantics from optimization policy so different coordination strategies can plug in without redesigning the stack."
+      ],
+      "evidence_signal": "Across four benchmarks under memory-constrained concurrent serving, HEAR delivered up to 1.61× batch speedup and 2.23× lower median time-to-first-token on SCBench, with additional end-to-end speedups of 1.23× on BrowseComp-Plus and 2.45× on DeepResearchBench.",
+      "watch_item": "Adoption depends on integrating the protocol into both harness and engine stacks, and the gains may vary with workload mix, cache pressure, and the chosen coordination policy.",
+      "hashtags": [
+        "#LLMServing",
+        "#AgenticAI",
+        "#SystemsAI",
+        "#KVCache",
+        "#InferenceOptimization"
+      ],
+      "paper_id": "2026-10-05-arxiv-can_agent_harnesses_and_inference_engines_hear_each_other_the_hear_protocol_for_agentic_ll",
+      "paper_title": "Can Agent Harnesses and Inference Engines Hear Each Other? The HEAR Protocol for Agentic LLM Serving",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-06T19:21:32",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-learning_to_read_the_contextual_tokens_in_diffusion_transformers",
+    "arxiv_id": "2610.06844v1",
+    "date": "2026-10-05",
+    "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
+    "authors": "Omer Dahary, Etai Sella, Hadar Averbuch-Elor, Daniel Cohen-Or, Or Patashnik",
+    "abstract": "Multimodal Diffusion Transformers (MM-DiTs) jointly process visual and textual representations throughout generation. These models repeatedly update the text tokens through multimodal attention, forming dynamic contextual tokens whose function is not well understood. In this work, we introduce a framework for reading this contextual space through natural-language interrogation. We train a lightweight bottleneck network that maps intermediate contextual tokens into the input space of a frozen Large Language Model (LLM), allowing the LLM to answer questions about the emerging image directly from these hidden representations. Our reader reveals that contextual tokens encode a rich, global representation of the emerging scene: generation-specific semantics, including attributes left underspecified by the prompt, are accessible surprisingly early in denoising, while increasingly fine-grained details become readable over time. Remarkably, this information remains decodable even when the MM-DiT receives an empty prompt, showing that contextual tokens accumulate substantial image-specific information from the evolving visual representation itself. We further find that generations with more readable contextual representations tend to receive higher human-preference scores. Building on these observations, we introduce Contextual Alignment, a training technique that explicitly reinforces the visual-semantic information encoded in the contextual tokens, improving generation quality and distributional coverage. Together, our results establish contextual tokens as both an interpretable view into the internal dynamics of MM-DiTs and an effective target for improving generative models.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-05T17:59:17Z",
+    "updated": "2026-10-05T17:59:17Z",
+    "primary_category": "cs.CV",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.GR",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06844v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06844v1"
+      }
+    ],
+    "score": 76,
+    "infographic": {
+      "key_insight": "Contextual tokens in multimodal diffusion transformers become readable internal representations of the emerging image, exposing scene semantics and details that grow over denoising.",
+      "engineering_relevance": "This suggests a practical way to inspect, evaluate, and improve diffusion models by probing and aligning their hidden multimodal state rather than only the final output.",
+      "method": [
+        "Train a lightweight bottleneck that maps intermediate contextual tokens into the input space of a frozen LLM.",
+        "Ask the LLM natural-language questions about the hidden state to decode what the model knows at each denoising step.",
+        "Use the readability signal to define Contextual Alignment, reinforcing visual-semantic information during training."
+      ],
+      "evidence_signal": "The abstract reports that contextual information is decodable even with empty prompts, becomes more detailed over time, and correlates with higher human-preference scores.",
+      "watch_item": "The approach depends on a learned probe and LLM-based interpretation, so decoded semantics may reflect the reader’s capacity and prompt design as much as the model’s true internal state.",
+      "hashtags": [
+        "#DiffusionModels",
+        "#VisionLanguage",
+        "#Interpretability",
+        "#GenerativeAI",
+        "#MachineLearning"
+      ],
+      "paper_id": "2026-10-05-arxiv-learning_to_read_the_contextual_tokens_in_diffusion_transformers",
+      "paper_title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
+      "paper_date": "2026-10-05",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-06T19:21:35",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-reading_the_mood_emotion_guided_book_to_music_recommendation_via_cgans_and_llms",
+    "arxiv_id": "2610.06703v1",
+    "date": "2026-10-05",
+    "title": "Reading the Mood: Emotion-Guided Book-to-Music Recommendation via CGANs and LLMs",
+    "authors": "Manousos Linardakis, Georgios Alexandridis",
+    "abstract": "Background music that matches the mood of a text has been shown to make readers feel more immersed and improve their reading experience, motivating recommender systems that pair books with mood-matched music. In this direction, we present Sentiment Aware Generative Adversarial Network for Cross Domain Recommendation (SAGA-CDR), a two-phase cross-domain recommendation framework that personalizes music suggestions and emotionally aligns them with the book being read. In the first phase, transformer-based sentiment embeddings are constructed from user reviews and mapped across domains via a Conditional Generative Adversarial Network, whose mask-conditioned generator handles missing sentiment components and injects stochasticity for richer preference transfer. A compact rating neural network then fuses sentiment-specific interaction scores with a collaborative filtering prior to predict music ratings. In the second phase, large language models classify each book into a valence-arousal emotional quadrant, and candidate tracks are filtered to match that quadrant. Experiments on both the English Amazon and Chinese Douban datasets show that SAGA-CDR achieves the best rating prediction accuracy on Amazon (RMSE 0.98) and the lowest RMSE on Douban (0.91), with ranking performance competitive with the strongest sentiment-aware baseline, even in cross-lingual settings.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-05T17:01:18Z",
+    "updated": "2026-10-05T17:01:18Z",
+    "primary_category": "cs.IR",
+    "categories": [
+      "cs.IR",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06703v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06703v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "SAGA-CDR combines sentiment-based cross-domain recommendation with LLM-driven emotion matching to suggest music that both fits a reader’s preferences and aligns with a book’s mood.",
+      "engineering_relevance": "The paper offers a practical two-phase pipeline for multimodal recommendation systems, showing how generative transfer and emotion classification can be integrated to improve personalization and user experience.",
+      "method": [
+        "Transformer sentiment embeddings from user reviews",
+        "Mask-conditioned CGAN transfers preferences across book and music domains",
+        "LLMs assign books to valence-arousal quadrants to filter candidate tracks"
+      ],
+      "evidence_signal": "Across Amazon and Douban datasets, the method reports strong rating prediction performance, with RMSE 0.98 on Amazon and 0.91 on Douban, plus competitive ranking results versus sentiment-aware baselines.",
+      "watch_item": "The cross-lingual and LLM-based emotion filtering steps may be sensitive to domain shift, label quality, and the availability of reliable review text or candidate-track metadata.",
+      "hashtags": [
+        "#RecommenderSystems",
+        "#CrossDomainLearning",
+        "#GenerativeAI",
+        "#SentimentAnalysis",
+        "#MusicRecommendation"
+      ],
+      "paper_id": "2026-10-05-arxiv-reading_the_mood_emotion_guided_book_to_music_recommendation_via_cgans_and_llms",
+      "paper_title": "Reading the Mood: Emotion-Guided Book-to-Music Recommendation via CGANs and LLMs",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-06T19:21:37",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-affordcraft_scalable_construction_of_task_ready_simulation_assets_from_single_images",
+    "arxiv_id": "2610.06643v1",
+    "date": "2026-10-05",
+    "title": "AffordCraft: Scalable Construction of Task-Ready Simulation Assets from Single Images",
+    "authors": "Haoyun Yang, Xueyang Zhou, Ziyi Xie, Yongchao Chen",
+    "abstract": "Robot learning in simulation depends on the objects the simulator offers. Many tasks need objects with separate parts, joints that allow the required motion, and physical properties that remain valid under contact. Existing methods recover this structure anew for every image: generative models predict parts and joints that mostly fail to settle or move in simulation, and general-purpose agents need a long session of model calls for each photograph. AffordCraft builds such an asset from a single RGB image and a task instruction by retrieval instead of generation: it locates the object and the part to operate, selects a matching entry from a library of articulated assets, and fits it to the image while keeping its parts and joints intact. Without any box or mask marking the object, AffordCraft produces a physically valid asset for 1,703 of 2,000 photographs from 31 categories. Five generative methods pass on at most 45% of the same photographs and, at the median, need 10 to 78 times our GPU time per valid asset. On 50 cluttered images, 162 of 237 annotated objects pass the same physical test after automatic detection. Growing the library from 141 to 11,372 entries needs no change to the method and raises category coverage from 46% to 100% and the share of selections with the requested label from 18% to 51%. We also build manipulation tasks from the constructed assets, both with single objects and in composed scenes; policies trained on scripted demonstrations complete both kinds of tasks from initial states unseen in training.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-05T16:26:48Z",
+    "updated": "2026-10-05T16:26:48Z",
+    "primary_category": "cs.RO",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06643v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06643v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "AffordCraft turns a single RGB image into a task-ready articulated simulation asset by retrieving and fitting a matching object from a library, preserving parts, joints, and physical validity.",
+      "engineering_relevance": "The method offers a scalable way to bootstrap robot manipulation assets and tasks from ordinary photos without manual masks or repeated generative reconstruction.",
+      "method": [
+        "Detect the target object and the operable part from the image and task instruction.",
+        "Retrieve a matching articulated asset from a curated library instead of synthesizing geometry from scratch.",
+        "Fit the retrieved model to the image while keeping its articulation and contact-ready physical structure intact."
+      ],
+      "evidence_signal": "The system produced physically valid assets for 1,703 of 2,000 images across 31 categories, and on 50 cluttered images it passed 162 of 237 annotated objects after automatic detection.",
+      "watch_item": "Performance depends on the coverage and label quality of the asset library, so rare categories or ambiguous part labels may still limit retrieval success.",
+      "hashtags": [
+        "#RobotLearning",
+        "#SimulationAssets",
+        "#ArticulatedObjects",
+        "#ComputerVision",
+        "#RetrievalBasedModeling"
+      ],
+      "paper_id": "2026-10-05-arxiv-affordcraft_scalable_construction_of_task_ready_simulation_assets_from_single_images",
+      "paper_title": "AffordCraft: Scalable Construction of Task-Ready Simulation Assets from Single Images",
+      "paper_date": "2026-10-05",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-06T19:21:40",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-how_to_scale_your_hep_ml_models_a_recipe_for_robust_architecture_comparisons_at_scale",
+    "arxiv_id": "2610.06784v1",
+    "date": "2026-10-05",
+    "title": "How to scale your HEP ML models: A recipe for robust architecture comparisons at scale",
+    "authors": "Matthias Vigl, Nikita Pond, Jackson Barr, Alexander Froch, Dan Guest, Nicole Hartman",
+    "abstract": "Much of the recent progress in machine learning domains such as language models has come from scaling laws that predict performance as a function of training effort. In high-energy physics (HEP) similar behavior has now been observed. To aid further study, we present a systematic procedure to derive robust scaling laws and compare design choices on the relevant budget axes for HEP tasks. We first validate the full scaling trajectory on toy problems and then apply the procedure to multi-task transformers on the ~11 billion-jet ATLAS JetSet2 dataset, in both the compute- and data-constrained regimes. For the latter, we predict, to the best of our knowledge for the first time, the jointly optimal model size, training horizon, learning rate and batch size under early stopping. At compute-optimal scaling, we recover a near-equal $\\sqrt{C}$ dependence of model and dataset size, and find that auxiliary objectives lower the primary jet-classification loss at equal compute budget. Expanding the inputs toward lower-level data systematically lowers the loss while leaving the scaling exponent nearly unchanged. The onset of the power-law regime is itself set by scale: below a threshold in dataset size the loss carries little information about high-compute scaling, underscoring the value of large, high-quality full-simulation datasets as a foundation for scaling studies and the development of foundation models in HEP.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-05T17:44:43Z",
+    "updated": "2026-10-05T17:44:43Z",
+    "primary_category": "hep-ex",
+    "categories": [
+      "hep-ex",
+      "cs.LG",
+      "hep-ph",
+      "physics.data-an"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06784v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06784v1"
+      }
+    ],
+    "score": 71,
+    "infographic": {
+      "key_insight": "The paper shows that high-energy physics jet models follow robust scaling laws, enabling principled choices of model size, data size, and training hyperparameters under compute or data limits.",
+      "engineering_relevance": "These results provide a practical recipe for optimizing HEP foundation models, helping engineers allocate compute and dataset scale more efficiently while comparing architecture choices fairly.",
+      "method": [
+        "Validate full scaling trajectories on toy problems first.",
+        "Apply the procedure to multi-task transformers on the ~11B-jet ATLAS JetSet2 dataset.",
+        "Analyze both compute-constrained and data-constrained regimes, including early-stopping optima."
+      ],
+      "evidence_signal": "The study reports near-√C joint scaling of model and dataset size at compute optimum, and tests how auxiliary objectives and lower-level inputs affect jet-classification loss on the large JetSet2 dataset.",
+      "watch_item": "Scaling conclusions may not transfer below the dataset-size threshold where the power-law regime is not yet informative, so small or low-quality datasets can give misleading extrapolations.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#HighEnergyPhysics",
+        "#ScalingLaws",
+        "#JetClassification",
+        "#FoundationModels"
+      ],
+      "paper_id": "2026-10-05-arxiv-how_to_scale_your_hep_ml_models_a_recipe_for_robust_architecture_comparisons_at_scale",
+      "paper_title": "How to scale your HEP ML models: A recipe for robust architecture comparisons at scale",
+      "paper_date": "2026-10-05",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-06T19:21:42",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-a_solvable_model_of_adaptive_learning_rate_rescaling_acceleration_stability_scaling",
+    "arxiv_id": "2610.06701v1",
+    "date": "2026-10-05",
+    "title": "A Solvable Model of Adaptive Learning Rate Rescaling: Acceleration, Stability & Scaling",
+    "authors": "Itay Lavie, Clarissa Lauditi, Cengiz Pehlevan",
+    "abstract": "A recurring design principle in modern optimizers is to decouple update magnitude from the raw gradient norm, yet its consequences for learning-curve and resource scaling remain unclear. We isolate this mechanism by studying normalized SGD in a random-feature model with power-law teacher and data covariance. Fixed-norm updates induce an effective learning rate that grows as gradients shrink. We derive a dynamical mean-field theory (DMFT) describing the joint dependence of the loss on training time, model width and batch size. Normalization initially accelerates SGD, mapping the power-law exponent $r_{\\rm SGD}<1$ to $2r_{\\rm SGD}/(1-r_{\\rm SGD})$, with exponential convergence at $r_{\\rm SGD}=1$ and formal finite-time convergence for $r_{\\rm SGD}>1$. At finite step size, however, the same feedback ultimately breaks the acceleration and leads to marginal stability. The late-time theory yields width-limited, edge-of-stochastic-stability (EoSS), and deterministic edge-of-stability (EoS) regimes. These phases determine when larger batches or wider models reduce serial training time at comparable compute. We quantify in which of these phases increased batch size or width can compensate the excess compute use per step by fewer optimization steps to target loss. Linearized ResNet experiments on CIFAR-5M support the predicted acceleration, breakdown, and resource-scaling trends. Together, these results connect normalization-induced acceleration, EoS effects, and width--batch allocation within a solvable theory.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-05T17:00:25Z",
+    "updated": "2026-10-05T17:00:25Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cond-mat.dis-nn",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06701v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06701v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "Normalizing SGD updates can accelerate learning by making the effective step size grow as gradients shrink, but this same feedback eventually causes marginal stability and changes the scaling of training time with width and batch size.",
+      "engineering_relevance": "The results give practical guidance for choosing model width and batch size under a fixed compute budget, especially when using normalized or adaptive learning-rate optimizers.",
+      "method": [
+        "Analyzed normalized SGD in a random-feature model with power-law teacher and data covariance.",
+        "Derived a dynamical mean-field theory for loss versus training time, model width, and batch size.",
+        "Identified late-time regimes: width-limited, edge-of-stochastic-stability, and deterministic edge-of-stability."
+      ],
+      "evidence_signal": "The abstract reports linearized ResNet experiments on CIFAR-5M that support the predicted acceleration, breakdown, and resource-scaling trends.",
+      "watch_item": "The acceleration can disappear at finite step size as the system approaches marginal stability, so normalized updates may require careful tuning to avoid unstable training.",
+      "hashtags": [
+        "#AdaptiveOptimization",
+        "#NormalizedSGD",
+        "#ScalingLaws",
+        "#DeepLearningTheory",
+        "#Stability"
+      ],
+      "paper_id": "2026-10-05-arxiv-a_solvable_model_of_adaptive_learning_rate_rescaling_acceleration_stability_scaling",
+      "paper_title": "A Solvable Model of Adaptive Learning Rate Rescaling: Acceleration, Stability & Scaling",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-06T19:21:46",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-the_review_lottery_calibrating_an_observational_estimator_of_peer_review_noise_iclr_2017_2",
+    "arxiv_id": "2610.06591v1",
+    "date": "2026-10-05",
+    "title": "The Review Lottery: Calibrating an Observational Estimator of Peer-Review Noise (ICLR 2017-2025)",
+    "authors": "Feilian Huang",
+    "abstract": "How much of a conference accept/reject decision would change if the same paper were reviewed by a different set of reviewers? Running a second independent program committee is the gold standard for answering this, but it is prohibitively expensive: done only twice (NeurIPS 2014 and 2021). We build an observational estimator of this quantity from public review data alone, calibrate it twice, and apply it to nine years of ICLR (2017-2025; 36,113 papers, 134,912 reviews). The estimator decomposes scores with a Bayesian ordered-probit model into paper quality and reviewer noise, maps scores to decisions with a logistic model, and simulates two independent committees (posterior draws B=1,000; committee sizes k=2,3,4). Estimated disagreement rates are 23-30% at k=2 and 18-24% at k=4; 30-50% of accepted papers would be rejected. External calibration: at the NeurIPS 2021 reviewer-count caliber (k=3), the simulated 2021 disagreement rate is 23.3% [21.7%, 25.0%] vs. reported 23.0% (bias +0.3pp); accept precision and committee correlation agree within 5pp and 0.04. Internal calibration: on 18,740 papers with 4+ reviews, random model-free 2+2 reviewer splits agree with the k=2 simulation within 1pp in 2018 and 2021-2025. Longitudinally, we find no robust time trend in reviewer noise over 2017-2025. The high accepted-paper flip rates of 2020 and 2021 have distinct mechanisms: the 2020 four-point scale compressed scores (23.7% of papers had zero within-paper variance), and a counterfactual shows coarsening the scale raises disagreement by about 7pp; 2021 instead combined the lowest signal-to-noise ratio in the sample with the most threshold-crowded acceptances. For the LLM era, a 2023 breakpoint test on within-paper score variance finds no break, but the design has almost no power, and no post-2022 review text or confidence data exist, so no LLM attribution is attempted.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-05T16:05:17Z",
+    "updated": "2026-10-05T16:05:17Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06591v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06591v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "A review-based observational model can estimate how often conference decisions would flip under a different reviewer set, revealing substantial peer-review noise in ICLR 2017-2025.",
+      "engineering_relevance": "The study gives conference organizers and ML systems researchers a practical, data-driven way to quantify decision stability without running an expensive second committee.",
+      "method": [
+        "Bayesian ordered-probit model separates paper quality from reviewer noise.",
+        "Logistic decision model maps review scores to accept/reject outcomes.",
+        "Monte Carlo simulation of two independent committees estimates disagreement rates for k=2,3,4 reviewers."
+      ],
+      "evidence_signal": "Calibrated on 36,113 papers and 134,912 reviews, the estimator matched NeurIPS 2021 and internal 2+2 reviewer splits, with estimated disagreement around 23.3% at k=3 and accepted-paper flip rates of 30-50%.",
+      "watch_item": "The LLM-era breakpoint test has very low power, and the absence of post-2022 review text/confidence data limits causal attribution.",
+      "hashtags": [
+        "#PeerReview",
+        "#ScientificMachineLearning",
+        "#BayesianModeling",
+        "#ConferenceResearch",
+        "#UncertaintyQuantification"
+      ],
+      "paper_id": "2026-10-05-arxiv-the_review_lottery_calibrating_an_observational_estimator_of_peer_review_noise_iclr_2017_2",
+      "paper_title": "The Review Lottery: Calibrating an Observational Estimator of Peer-Review Noise (ICLR 2017-2025)",
+      "paper_date": "2026-10-05",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-06T19:21:49",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-dga_muon_decoupled_geometry_aligned_adaptive_scaling_for_muon",
+    "arxiv_id": "2610.06578v1",
+    "date": "2026-10-05",
+    "title": "DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon",
+    "authors": "Wenpeng Zhang, Runsheng Yu",
+    "abstract": "While NorMuon has achieved strong empirical performance in large-scale pretraining by enhancing Muon with row-wise adaptive scaling, its underlying adaptive mechanism remains poorly understood. In this work, we provide the first systematic analysis of NorMuon's adaptivity, revealing that it originates primarily from orthogonalization-induced geometry rather than genuine optimization-relevant information. Under exact orthogonalization, the adaptive scaling factors degenerate into a single global scalar for square and wide matrices, while for tall matrices their variation arises from the non-uniform distribution of row energy after orthogonalization. Under approximate orthogonalization, the orthogonality residual introduces additional variation into the scaling factors, leading to the \\textit{Orthogonalization--Adaptivity Paradox}: more accurate orthogonalization weakens adaptivity. We further show that NorMuon's rigid row-wise scaling is geometrically misaligned with the one-sided orthogonal structure of tall matrices. Based on the analysis of these limitations, we propose two core design principles that a desirable adaptive mechanism for Muon should satisfy. First, adaptive scaling should be decoupled from orthogonalization, with the scaling factors computed directly from raw gradients. Second, adaptive scaling should be aligned with the shape-dependent orthogonal structure of the polar factor, using row-wise scaling for wide matrices and column-wise scaling for tall matrices. By incorporating several other design considerations, including sum-based second-moment estimates, bias correction, and adaptive clipping of scaling factors, we obtain the Decoupled Geometry-Aligned Muon (DGA-Muon) optimizer. We establish convergence guarantees for DGA-Muon and empirically validate both our theoretical characterization of NorMuon's scaling degeneration and the superiority of DGA-Muon over NorMuon.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-05T15:56:02Z",
+    "updated": "2026-10-05T15:56:02Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06578v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06578v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "NorMuon’s apparent adaptivity mainly comes from orthogonalization geometry, so DGA-Muon decouples scaling from orthogonalization and aligns it with matrix shape.",
+      "engineering_relevance": "For large-scale training, the paper suggests a more principled Muon optimizer that is better matched to tall vs. wide layers and may improve stability and performance.",
+      "method": [
+        "Compute adaptive scaling directly from raw gradients, not from orthogonalized weights/gradients.",
+        "Use shape-aware scaling: row-wise for wide matrices, column-wise for tall matrices.",
+        "Add sum-based second-moment estimates, bias correction, and adaptive clipping; then prove convergence."
+      ],
+      "evidence_signal": "The abstract reports both theoretical characterization and empirical validation showing NorMuon’s scaling can degenerate while DGA-Muon outperforms NorMuon.",
+      "watch_item": "The added shape-dependent scaling and clipping may need careful tuning and implementation consistency across mixed layer geometries.",
+      "hashtags": [
+        "#Muon",
+        "#Optimizer",
+        "#DeepLearning",
+        "#AdaptiveScaling",
+        "#LargeScaleTraining"
+      ],
+      "paper_id": "2026-10-05-arxiv-dga_muon_decoupled_geometry_aligned_adaptive_scaling_for_muon",
+      "paper_title": "DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-06T19:21:51",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-puncture_evolution_with_physics_informed_neural_networks",
+    "arxiv_id": "2610.06776v1",
+    "date": "2026-10-05",
+    "title": "Puncture Evolution with Physics-Informed Neural Networks",
+    "authors": "Estuti Shukla, Ashwin Suriyanarayanan, David Radice, Romit Maulik, Sebastiano Bernuzzi",
+    "abstract": "We investigate the application of physics-informed neural networks (PINNs) to solve the vacuum Einstein equations in spherical symmetry. Our neural network architecture is designed to solve the 1+1D moving-puncture evolution, by minimizing a loss that combines a data term, the Ricci tensor of the reconstructed spacetime, and the moving-puncture gauge conditions. It represents the lapse, the shift and the Z4c conformal variables $χ$ and $\\widetildeγ_{rr}$, which remain regular at the puncture. We consider the evolution of a single, non-spinning black-hole in the puncture gauge and show that PINNs can interpolate numerical relativity (NR) data, predict its evolution, and reconstruct spacetime in regions where no data is provided. As an interpolant, the network provides a compact, differentiable representation of the NR data. Given only early-time and outer-boundary data, it evolves the puncture forward in time and reproduces the main features of the NR solution. Given only exterior data and no gauge condition, an ill-posed inverse problem, it recovers the interior of a Schwarzschild spacetime in coordinates of its own choosing, which we verify by learning the coordinate transformation to the Kerr--Schild form. Finally, we assess the strengths and limitations of PINNs for NR and outline their prospects for future applications.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-05T17:42:39Z",
+    "updated": "2026-10-05T17:42:39Z",
+    "primary_category": "gr-qc",
+    "categories": [
+      "gr-qc"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06776v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06776v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "Physics-informed neural networks can learn and evolve a puncture-form black-hole spacetime in spherical symmetry while respecting Einstein-equation physics and moving-puncture gauge structure.",
+      "engineering_relevance": "This offers a compact, differentiable surrogate for numerical relativity data that could accelerate interpolation, continuation, and reconstruction of black-hole simulations.",
+      "method": [
+        "Represent lapse, shift, and regular Z4c variables (chi and gamma_tilde_rr) with a PINN.",
+        "Train with a composite loss combining data mismatch, Ricci-tensor residuals, and moving-puncture gauge conditions.",
+        "Use limited data to interpolate, extrapolate time evolution, or infer the interior spacetime from exterior observations."
+      ],
+      "evidence_signal": "The abstract reports successful interpolation of NR data, forward evolution from early-time and outer-boundary data, and interior reconstruction from exterior-only data, verified via a learned transformation to Kerr-Schild coordinates.",
+      "watch_item": "Performance is demonstrated in 1+1D spherical symmetry for a single non-spinning black hole, so generalization to full 3D, more dynamic systems, and harder gauge settings remains an implementation challenge.",
+      "hashtags": [
+        "#PhysicsInformedNeuralNetworks",
+        "#NumericalRelativity",
+        "#BlackHolePhysics",
+        "#ScientificMachineLearning",
+        "#GeneralRelativity"
+      ],
+      "paper_id": "2026-10-05-arxiv-puncture_evolution_with_physics_informed_neural_networks",
+      "paper_title": "Puncture Evolution with Physics-Informed Neural Networks",
+      "paper_date": "2026-10-05",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-06T19:21:54",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-bazaarbench_delegation_safety_in_decentralized_c2c_marketplaces_run_by_llm_agents",
+    "arxiv_id": "2610.06748v1",
+    "date": "2026-10-05",
+    "title": "BazaarBench: Delegation Safety in Decentralized C2C Marketplaces Run by LLM Agents",
+    "authors": "Ziyan Wang, Shuqing Shi, James Oldfield, Samuele Marro, Jialin Yu, Philip Torr",
+    "abstract": "In decentralized consumer-to-consumer (C2C) marketplaces, people list goods, negotiate with strangers, and rate one another, so trust rests on reputation. Large language model (LLM) agents now act for users, raising risks to their money, privacy, and reputation. We introduce BazaarBench, a simulated C2C marketplace and benchmark for evaluating the safety of these agents. It tracks ownership, item condition, and commitments across transactions, combining record checks with rubric-based LLM judgments to identify six failure types across five stages. We run three base markets for 30 simulated days, each with 100 agents using one model and inventories drawn from a public eBay sample. Across 45 continuations, we evaluate five models under ordinary instructions, deadline pressure, or adversarial instructions to exploit other traders. Each continuation runs for seven simulated days from a copy of a market's day-30 state. The tested model controls the same 20 selected agents, retaining their personas, inventories, and histories, while the other 80 keep the base model. All five models attempt to promise the same item to multiple buyers under ordinary instructions. Adding targets and deadlines increases these attempts for every model. Under adversarial instructions, the share of tested sellers' committed transactions completed despite unavailable items or overstated conditions rises from 15.4% to 33.4%, reaching 55.5% for GPT-5.4. Averaged across models and markets, simulated weekly earnings per tested agent rise from USD 20 under ordinary instructions to USD 33 under adversarial instructions. Most of the increase comes from items the sellers never held. We release the simulator, saved market states, evaluation code, and records covering 357,608 agent model calls for evaluating new models and developing safer marketplace agents.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-05T17:26:17Z",
+    "updated": "2026-10-05T17:26:17Z",
+    "primary_category": "cs.MA",
+    "categories": [
+      "cs.MA",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06748v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06748v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "BazaarBench shows that LLM agents in decentralized C2C marketplaces can be pushed into unsafe delegation behaviors that harm trust, ownership, and transaction integrity.",
+      "engineering_relevance": "It provides a realistic benchmark and simulator for stress-testing marketplace agents before deployment in reputation-based trading systems.",
+      "method": [
+        "Simulated a decentralized C2C marketplace with tracked ownership, item condition, and commitments.",
+        "Detected six failure types across five transaction stages using record checks plus rubric-based LLM judgments.",
+        "Evaluated five models across ordinary, deadline-pressure, and adversarial instruction settings on copied market states."
+      ],
+      "evidence_signal": "Across 45 continuations from three 30-day base markets, the study analyzed 357,608 agent model calls and found adversarial instructions raised unsafe completed commitments and weekly earnings.",
+      "watch_item": "Because the benchmark relies on simulated markets and LLM-based judgments for some failures, results may not fully capture real-world marketplace dynamics or labeling uncertainty.",
+      "hashtags": [
+        "#LLMAgents",
+        "#Marketplaces",
+        "#SafetyBenchmark",
+        "#AgentEvaluation",
+        "#DecentralizedSystems"
+      ],
+      "paper_id": "2026-10-05-arxiv-bazaarbench_delegation_safety_in_decentralized_c2c_marketplaces_run_by_llm_agents",
+      "paper_title": "BazaarBench: Delegation Safety in Decentralized C2C Marketplaces Run by LLM Agents",
+      "paper_date": "2026-10-05",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-06T19:21:56",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-decoupling_time_and_space_a_temporally_conditioned_refinement_for_eeg_source_imaging",
+    "arxiv_id": "2610.06726v1",
+    "date": "2026-10-05",
+    "title": "Decoupling Time and Space: A Temporally Conditioned Refinement for EEG Source Imaging",
+    "authors": "Marco Morik, Jesse Palarus, Carmen Vidaurre, Klaus-Robert Müller, Shinichi Nakajima",
+    "abstract": "Electroencephalography (EEG) offers millisecond temporal resolution, but inferring underlying neural sources is a severely ill-posed spatial inverse problem. While deep learning has advanced spatial reconstruction, current architectures face a critical dilemma: frame-by-frame models discard vital temporal context, whereas full 4D spatiotemporal networks introduce an architectural trade-off between reconstruction accuracy and inference cost. We propose a novel two-stream framework that explicitly decouples global temporal representation learning from per-time-point spatial refinement. A Transformer-based Temporal Condition Encoder processes the entire EEG sequence via factorized spatiotemporal attention, retaining sensor-resolved features. A fixed inverse then maps these features into source-indexed conditioning for a per-timestep Source-Space Transformer or volumetric convolutional refiner. Extensive evaluations on realistic synthetic data demonstrate that this temporal prior dramatically improves spatial localization, outperforming classical and spatiotemporal baselines, particularly in high-noise and multi-source regimes. Training across diverse leadfields and explicit operator mismatches improves transfer to unseen head geometries and brings template-based reconstruction closer to subject-specific inversion. Furthermore, we apply the model trained only on synthetic EEG data to real-world EEG. A logistic regressor fit on source power differences in eyes-open, eyes-closed conditions successfully decodes age groups.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-05T17:15:47Z",
+    "updated": "2026-10-05T17:15:47Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06726v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06726v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "The paper shows that separating global temporal modeling from per-time-point spatial refinement can substantially improve EEG source imaging when temporal context is used as a conditioning prior.",
+      "engineering_relevance": "This decoupled design offers a more accurate and potentially more efficient alternative to fully 4D spatiotemporal networks for inverse EEG reconstruction and transfer to new head geometries.",
+      "method": [
+        "Use a Transformer-based Temporal Condition Encoder to process the full EEG sequence with factorized spatiotemporal attention.",
+        "Map the learned temporal representation through a fixed inverse into source-space conditioning for a per-timestep refiner.",
+        "Refine sources with either a Source-Space Transformer or a volumetric convolutional model."
+      ],
+      "evidence_signal": "On realistic synthetic EEG, the method outperformed classical and spatiotemporal baselines, especially under high noise and multiple simultaneous sources, and it also transferred to real EEG for age-group decoding from source power differences.",
+      "watch_item": "Performance depends on synthetic training and operator assumptions, so robustness may vary when leadfield mismatch or real-data distribution shift is stronger than in evaluation.",
+      "hashtags": [
+        "#EEG",
+        "#SourceImaging",
+        "#Transformer",
+        "#SpatiotemporalLearning",
+        "#ComputationalNeuroscience"
+      ],
+      "paper_id": "2026-10-05-arxiv-decoupling_time_and_space_a_temporally_conditioned_refinement_for_eeg_source_imaging",
+      "paper_title": "Decoupling Time and Space: A Temporally Conditioned Refinement for EEG Source Imaging",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-06T19:21:59",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-inverse_cross_spectral_neural_networks_for_multivariate_time_series",
+    "arxiv_id": "2610.06630v1",
+    "date": "2026-10-05",
+    "title": "Inverse Cross-spectral Neural Networks for Multivariate Time Series",
+    "authors": "Lorenzo Marinucci, Leonardo Di Nino, Gabriele D'Acunto, Paolo Di Lorenzo, Sergio Barbarossa",
+    "abstract": "CoVariance Neural Networks and their extensions have emerged as effective tools for processing multivariate data, deriving graph shift operators directly from second-order statistics. These architectures, however, are designed for independent and identically distributed observations and do not fully capture the joint structure of temporal and cross-variable dependencies in multivariate time series. In this work, we introduce Inverse Cross-Spectral Neural Networks (iCSNNs), a class of graph neural networks for stationary multivariate time series whose shift operators are the inverse cross-spectral density (iCSD) matrices. These operators encode frequency-specific conditional relationships among variables, exploiting the decomposition provided by the spectral representation theorem. Leveraging spectral smoothness, frequencies are grouped into bands sharing a single iCSD operator, yielding a compact parametrisation that retains the frequency-dependent structure of the process. We further propose a joint learning procedure to estimate both the Fourier-domain dependence structure and the iCSNN parameters, adapting the iCSD operators to the downstream task. When tested on synthetic data, iCSNN outperforms baselines from different methodological families.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-05T16:24:24Z",
+    "updated": "2026-10-05T16:24:24Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "eess.SP",
+      "stat.ME"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06630v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06630v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "iCSNNs extend graph neural networks to stationary multivariate time series by using inverse cross-spectral density matrices as frequency-specific shift operators, capturing both temporal and cross-variable dependencies.",
+      "engineering_relevance": "The method offers a compact, learnable way to model frequency-dependent interactions in multichannel signals, which is useful for forecasting, diagnosis, and structured representation learning.",
+      "method": [
+        "Derive graph shift operators from inverse cross-spectral density (iCSD) matrices in the Fourier domain.",
+        "Group frequencies into bands that share one iCSD operator to exploit spectral smoothness and reduce parameters.",
+        "Jointly learn the dependence structure and iCSNN weights so the operators adapt to the downstream task."
+      ],
+      "evidence_signal": "On synthetic data, iCSNN outperformed baseline methods from multiple methodological families.",
+      "watch_item": "The approach assumes stationary multivariate time series and relies on accurate estimation of cross-spectral structure, which may be challenging with limited or noisy data.",
+      "hashtags": [
+        "#TimeSeries",
+        "#GraphNeuralNetworks",
+        "#SpectralMethods",
+        "#MultivariateSignals",
+        "#MachineLearning"
+      ],
+      "paper_id": "2026-10-05-arxiv-inverse_cross_spectral_neural_networks_for_multivariate_time_series",
+      "paper_title": "Inverse Cross-spectral Neural Networks for Multivariate Time Series",
+      "paper_date": "2026-10-05",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-06T19:22:01",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-what_matters_for_latent_reasoning_with_flow_matching",
+    "arxiv_id": "2610.06666v1",
+    "date": "2026-10-05",
+    "title": "What Matters for Latent Reasoning with Flow Matching",
+    "authors": "Yassine Ouali, Adrian Bulat, Georgios Tzimiropoulos",
+    "abstract": "Latent reasoning lets a large language model (LLM) think in a continuous space and verbalize only the answer. We argue that an effective latent thought must meet five requirements: it should be useful, helping produce the correct answer rather than merely changing it, diverse, so that resampling yields different reasoning trajectories, explainable, so that a decoded chain of thought (CoT) reflects reasoning the answer actually follows, refinable with more inference compute, and efficient, costing less than an explicit CoT at comparable accuracy. Current methods rarely meet these requirements: they learn shortcuts from the question, distill the explicit CoT into their weights, or imitate it one token at a time. We focus on flow matching in a learned latent space, the family we argue is best placed to meet them, and identify the training choices that make it work. The result is Flow-based Latent Reasoning (FLaRe), a simple recipe covering what the latent space encodes and how to shape it, where to train the flow, how to read out the answer, and a final stage of training on the model's own verified thoughts. A probe for each requirement shows that FLaRe improves on prior latent methods in all five. It also compares favorably with them on arithmetic benchmarks, while reaching 97% of the accuracy of explicit CoT at a quarter of its latency.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-05T16:42:40Z",
+    "updated": "2026-10-05T16:42:40Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06666v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06666v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "Flow-based latent reasoning can be made practical by training a latent space that supports useful, diverse, explainable, refinable, and efficient thoughts, rather than merely compressing explicit chain-of-thought.",
+      "engineering_relevance": "FLaRe offers a lower-latency alternative to explicit CoT for LLM inference, achieving near-CoT accuracy while preserving a latent reasoning process that can be iteratively improved and probed.",
+      "method": [
+        "Use flow matching in a learned latent space instead of token-by-token imitation.",
+        "Shape what the latent space encodes, where the flow is trained, and how answers are decoded.",
+        "Add a final training stage on the model’s own verified thoughts to refine latent reasoning."
+      ],
+      "evidence_signal": "The abstract reports that FLaRe was evaluated with requirement-specific probes and arithmetic benchmarks, reaching 97% of explicit CoT accuracy at about one quarter of the latency.",
+      "watch_item": "Performance depends on careful latent-space design and verification of self-generated thoughts, so the approach may be sensitive to training setup and readout quality.",
+      "hashtags": [
+        "#LatentReasoning",
+        "#FlowMatching",
+        "#LLMInference",
+        "#ChainOfThought",
+        "#EfficientAI"
+      ],
+      "paper_id": "2026-10-05-arxiv-what_matters_for_latent_reasoning_with_flow_matching",
+      "paper_title": "What Matters for Latent Reasoning with Flow Matching",
+      "paper_date": "2026-10-05",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-06T19:22:04",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-05-arxiv-considering_context_when_world_models_need_context_encoders",
+    "arxiv_id": "2610.06651v1",
+    "date": "2026-10-05",
+    "title": "Considering Context: When World Models Need Context Encoders",
+    "authors": "Oleg Smirnov, Sofiane Ennadir, John Pertoft, Bjartur Hjaltason, Sara Karimi",
+    "abstract": "Methods for generalization in model-based reinforcement learning typically assume that an agent cannot recover the latent context governing the environment dynamics from its own experience, and therefore supplies it externally. We formalize and test this assumption with \\emph{predictive sufficiency}, which quantifies what access to the context adds to next-step prediction under the visitation distribution an agent induces, and separates that quantity into a history-recoverable part, a residual requiring the true context, and the deficit added by a finite model. We classify context-aware algorithms by the predictive risk their conditioning set can target and demonstrate across environments of increasing identification difficulty that the headroom does not follow the MDP class. The same task under different priors leaves predictive headroom in one setting and nothing distinguishable from zero in another, where the agent's behavior implicitly identifies the context and any benefit of such a mechanism cannot be attributed to missing information. Where headroom persists, the learned state exposes it only partially, and adding the true context still lowers the risk. Our contribution is a practical criterion for matching contextual mechanisms to the information available to them, estimated from the ordinary trained agent without a reference policy.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-10-05T16:32:15Z",
+    "updated": "2026-10-05T16:32:15Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.06651v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.06651v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "World models only need an explicit context encoder when the agent’s own history cannot already recover the latent context that drives environment dynamics.",
+      "engineering_relevance": "This paper gives a practical test for deciding whether contextual inputs are actually useful in model-based RL, helping avoid unnecessary complexity and mismatched architecture choices.",
+      "method": [
+        "Defines predictive sufficiency to measure what extra next-step prediction power the true context provides beyond agent history.",
+        "Decomposes this into history-recoverable signal, residual context-dependent signal, and finite-model deficit.",
+        "Estimates predictive headroom from ordinary trained agents without needing a reference policy."
+      ],
+      "evidence_signal": "The authors evaluate the criterion across environments with varying identification difficulty, showing that the same task can have either positive predictive headroom or effectively zero depending on the agent’s induced visitation distribution and prior.",
+      "watch_item": "A finite learned state may only partially expose the remaining headroom, so empirical estimates can understate whether a true context encoder would still help.",
+      "hashtags": [
+        "#ModelBasedRL",
+        "#WorldModels",
+        "#ContextEncoding",
+        "#PredictiveSufficiency",
+        "#ReinforcementLearning"
+      ],
+      "paper_id": "2026-10-05-arxiv-considering_context_when_world_models_need_context_encoders",
+      "paper_title": "Considering Context: When World Models Need Context Encoders",
+      "paper_date": "2026-10-05",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-10-06T19:22:06",
+      "generator": "openai"
+    }
+  }
+]
