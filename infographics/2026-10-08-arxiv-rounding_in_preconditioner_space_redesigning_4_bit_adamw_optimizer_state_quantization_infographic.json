@@ -1,0 +1,24 @@
+{
+  "key_insight": "Reframing 4-bit AdamW quantization in preconditioner space, rather than state space, better preserves the second-moment behavior that drives adaptive updates.",
+  "engineering_relevance": "This improves low-memory training for large language models by reducing optimizer-state storage while narrowing the validation-loss gap to full 32-bit AdamW.",
+  "method": [
+    "ZIP-SR: keep zero in the second-moment codebook and use stochastic rounding probabilities in preconditioner space.",
+    "ZE-EDEN: use a zero-excluding second-moment codebook with calibration to counter the positive quantization floor.",
+    "Use 4-bit NF4 for the first moment and targeted stochastic rounding of the LM-head first moment during the final 10% of training."
+  ],
+  "evidence_signal": "Across GPT- and Llama-style pretraining from 130M to 2.7B parameters, both methods reduced TorchAO 4-bit AdamW's mean validation-loss gap to 32-bit AdamW at every evaluated scale, with up to 70% reduction, and also improved supervised fine-tuning results.",
+  "watch_item": "These gains depend on careful codebook design and calibration, so implementation details of the second-moment quantizer may strongly affect stability and reproducibility.",
+  "hashtags": [
+    "#AdamW",
+    "#Quantization",
+    "#LLMs",
+    "#Preconditioning",
+    "#EfficientTraining"
+  ],
+  "paper_id": "2026-10-08-arxiv-rounding_in_preconditioner_space_redesigning_4_bit_adamw_optimizer_state_quantization",
+  "paper_title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+  "paper_date": "2026-10-08",
+  "paper_category": "Literature and Knowledge Mining",
+  "generated_at": "2026-10-09T19:21:14",
+  "generator": "openai"
+}
