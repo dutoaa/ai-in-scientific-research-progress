@@ -1,24 +1,24 @@
 {
-  "key_insight": "OnTrack streams over agent trajectories in real time to detect divergence from successful behavior early enough to alert or stop unsafe or wasteful runs.",
-  "engineering_relevance": "This enables low-latency safeguards for LLM agents in production, reducing cost and risk without adding a full second monitor at every step.",
+  "key_insight": "OnTrack streams agent trajectories in real time and flags likely failure by comparing each step against successful references, tool structure, or even raw logs, enabling millisecond-scale intervention before damage accumulates.",
+  "engineering_relevance": "This gives operators a lightweight safety layer for autonomous LLM systems that can reduce wasted compute and block risky actions without paying the latency and cost of a second model on every step.",
   "method": [
-    "Compares each incoming step and its dependencies against reference successful trajectories using streaming, structure-aware optimal transport.",
-    "Supports three access levels: full history + tool schemas, tool schemas only, or only generated logs.",
-    "Flags plan violations, loops, stalls, and repeated tool calls, with decisions made in about a millisecond per step."
+    "Monitors step-by-step trajectories against prior successful runs using streaming structure-aware optimal transport.",
+    "Supports three access regimes: full reference access, tool-schema-only access, and log-only monitoring.",
+    "Can alert, slow, or abort agents when it detects plan violations, loops, stalls, or repeated tool calls."
   ],
-  "evidence_signal": "On SWE-bench trajectories, using the first 8 steps improved failure-vs-success ranking by +0.057 AUROC over content similarity, and an abort policy saved about 18% compute with 5 of 6 aborts correct.",
-  "watch_item": "Performance depends on the quality and availability of reference trajectories or schemas, so weaker access can reduce detection power and increase false alarms.",
+  "evidence_signal": "On SWE-bench trajectories, using only the first 8 steps, OnTrack ranked failing runs below successful ones better than content-similarity baselines by +0.057 AUROC and saved about 18% of compute with 5 of 6 aborts correctly targeting failures.",
+  "watch_item": "Performance and reliability depend on how much prior structure is available, so log-only settings may miss subtle failures and false aborts remain a practical deployment concern.",
   "hashtags": [
     "#LLMAgents",
-    "#RuntimeMonitoring",
+    "#AIMonitoring",
+    "#OnlineSafety",
     "#OptimalTransport",
-    "#AISafety",
-    "#SWEbench"
+    "#SWEBench"
   ],
   "paper_id": "2026-10-08-arxiv-ontrack_real_time_monitoring_and_intervention_in_llm_agent_trajectories_via_streaming_stru",
   "paper_title": "OnTrack: Real-Time Monitoring and Intervention in LLM Agent Trajectories via Streaming Structure-Aware Optimal Transport",
   "paper_date": "2026-10-08",
   "paper_category": "Autonomous Labs",
-  "generated_at": "2026-10-09T19:21:20",
+  "generated_at": "2026-10-10T18:20:17",
   "generator": "openai"
 }

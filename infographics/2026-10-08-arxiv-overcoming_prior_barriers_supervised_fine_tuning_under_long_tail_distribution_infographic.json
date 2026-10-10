@@ -1,24 +1,24 @@
 {
-  "key_insight": "Prior support for target concepts is highly uneven, so SFT works better when instruction selection adapts to the long-tail “prior barrier” instead of using uniform supervision.",
-  "engineering_relevance": "For LLM fine-tuning pipelines, PASS suggests a budget-aware way to allocate labels or instructions toward undercovered concepts, improving downstream performance under limited annotation budgets.",
+  "key_insight": "The paper shows that SFT difficulty is driven by a long-tail “prior barrier”: rare concepts start with weaker pretrained support and need more targeted supervision than frequent concepts.",
+  "engineering_relevance": "For practical LLM fine-tuning, instruction data should be selected adaptively rather than uniformly so scarce concepts receive enough evidence under limited annotation budgets.",
   "method": [
-    "Defines “prior barrier” to measure how much pretrained support competes against the target concept.",
-    "Builds reference-derived concepts and estimates the distinguishing evidence each instruction provides.",
-    "Adaptively reallocates selection budget to concepts still insufficiently covered under current supervision."
+    "Defines prior barrier to measure how strongly pretrained concepts compete against the target concept",
+    "Analyzes long-tail prior barriers and derives a predictive risk bound linking barrier strength with accumulated SFT evidence",
+    "Introduces PASS, which selects instructions adaptively by estimating evidence coverage and prioritizing under-covered concepts"
   ],
-  "evidence_signal": "The abstract reports that PASS outperforms seven state-of-the-art instruction selection methods across four backbone-budget settings, with ablations showing adaptive allocation is better than uniform allocation.",
-  "watch_item": "The approach depends on estimating prior barriers and instruction evidence accurately, which may be sensitive to backbone choice, task distribution, and reference concept quality.",
+  "evidence_signal": "The method is reported to outperform seven state-of-the-art instruction selection approaches across four backbone-budget settings, with ablations showing adaptive allocation beats uniform allocation.",
+  "watch_item": "PASS depends on estimating concept-level evidence and coverage accurately, so performance may be sensitive to how reference-derived concepts are constructed and how well the selection proxy matches the downstream task.",
   "hashtags": [
-    "#LLM",
-    "#FineTuning",
+    "#LLMFineTuning",
     "#InstructionSelection",
     "#LongTailLearning",
-    "#MachineLearning"
+    "#SupervisedFineTuning",
+    "#AIResearch"
   ],
   "paper_id": "2026-10-08-arxiv-overcoming_prior_barriers_supervised_fine_tuning_under_long_tail_distribution",
   "paper_title": "Overcoming Prior Barriers: Supervised Fine-Tuning under Long-Tail Distribution",
   "paper_date": "2026-10-08",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-09T19:21:24",
+  "generated_at": "2026-10-10T18:20:21",
   "generator": "openai"
 }

@@ -1,24 +1,24 @@
 {
-  "key_insight": "Reframing 4-bit AdamW quantization in preconditioner space, rather than state space, better preserves the second-moment behavior that drives adaptive updates.",
-  "engineering_relevance": "This improves low-memory training for large language models by reducing optimizer-state storage while narrowing the validation-loss gap to full 32-bit AdamW.",
+  "key_insight": "4-bit AdamW fails mainly because quantization should be designed in preconditioner space, not just state space, since small state errors can cause large next-step preconditioner distortions.",
+  "engineering_relevance": "The paper provides two practical 4-bit optimizer-state recipes—ZIP-SR and ZE-EDEN—that improve training stability and validation loss while preserving the memory savings needed for large-model training.",
   "method": [
-    "ZIP-SR: keep zero in the second-moment codebook and use stochastic rounding probabilities in preconditioner space.",
-    "ZE-EDEN: use a zero-excluding second-moment codebook with calibration to counter the positive quantization floor.",
-    "Use 4-bit NF4 for the first moment and targeted stochastic rounding of the LM-head first moment during the final 10% of training."
+    "ZIP-SR: keep zero in the second-moment codebook and do stochastic rounding in preconditioner space.",
+    "ZE-EDEN: use a zero-excluding second-moment codebook with EDEN rescaling to reduce positive-floor distortion.",
+    "Use 4-bit NF4 for the first moment, with targeted stochastic rounding of the LM-head first moment during the final 10% of training."
   ],
-  "evidence_signal": "Across GPT- and Llama-style pretraining from 130M to 2.7B parameters, both methods reduced TorchAO 4-bit AdamW's mean validation-loss gap to 32-bit AdamW at every evaluated scale, with up to 70% reduction, and also improved supervised fine-tuning results.",
-  "watch_item": "These gains depend on careful codebook design and calibration, so implementation details of the second-moment quantizer may strongly affect stability and reproducibility.",
+  "evidence_signal": "Across GPT- and Llama-style pretraining from 130M to 2.7B parameters, both methods reduced the validation-loss gap to 32-bit AdamW at every evaluated size, with up to 70% gap reduction, and also beat TorchAO in supervised fine-tuning.",
+  "watch_item": "The methods depend on careful codebook design and targeted rounding schedules, so implementation details and training-phase tuning may affect reproducibility and generalization.",
   "hashtags": [
-    "#AdamW",
     "#Quantization",
-    "#LLMs",
+    "#AdamW",
     "#Preconditioning",
-    "#EfficientTraining"
+    "#LLMTraining",
+    "#4BitTraining"
   ],
   "paper_id": "2026-10-08-arxiv-rounding_in_preconditioner_space_redesigning_4_bit_adamw_optimizer_state_quantization",
   "paper_title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
   "paper_date": "2026-10-08",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-09T19:21:14",
+  "generated_at": "2026-10-10T18:20:11",
   "generator": "openai"
 }
