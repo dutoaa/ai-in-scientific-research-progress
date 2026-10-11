@@ -1,24 +1,24 @@
 {
-  "key_insight": "SparseDecoding aligns pruning with autoregressive decoding tokens instead of fixed natural-text calibration, improving accuracy and inference speed for LLMs.",
-  "engineering_relevance": "It targets the memory-bound decoding bottleneck with a pruning-and-kernel co-design that can deliver real end-to-end speedups on GPU.",
+  "key_insight": "SparseDecoding improves LLM decoding by pruning with calibration data collected from autoregressive generation, so the pruning objective matches the token distribution seen at inference.",
+  "engineering_relevance": "By aligning pruning and adding a decoding-optimized sparse SpMV kernel, the method targets the actual memory bottleneck in LLM inference and delivers real wall-clock speedups.",
   "method": [
-    "Collect layer-wise activations during dense-model autoregressive generation and use them to build decoding-aware calibration matrices.",
-    "Prune with a Hessian-guided objective matched to generated-token distributions rather than pre-collected text.",
-    "Use an optimized N:M sparse matrix-vector kernel with bitmask indexing and fixed-step traversal for decoding."
+    "Build layer-wise calibration matrices from dense-model autoregressive activations, excluding prefill.",
+    "Prune with a Hessian-guided objective matched to decoding-time activations instead of fixed natural-text calibration.",
+    "Use an optimized N:M SpMV kernel with bitmask indexing and fixed-step traversal for efficient sparse decoding."
   ],
-  "evidence_signal": "The abstract reports tests on Llama-3.1-8B, Llama-3.3-70B, and Qwen3-14B/32B, with consistent gains on long-form generation and up to 1.48x wall-clock decoding speedup on A100 GPUs.",
-  "watch_item": "Speedups depend on an optimized SpMV kernel and hardware support; if sparse decoding paths are not well-implemented, the benefit may be limited.",
+  "evidence_signal": "On Llama-3.1-8B, Llama-3.3-70B, and Qwen3-14B/32B, the method outperforms standard fixed-text calibration on long-form generation and reaches up to 1.48x end-to-end decoding speedup on A100 GPUs.",
+  "watch_item": "The speedup depends on sparse-kernel support and hardware efficiency, so benefits may vary with sparsity pattern, model architecture, and GPU implementation details.",
   "hashtags": [
     "#LLMInference",
-    "#Pruning",
-    "#SparseDecoding",
-    "#GPUOptimization",
-    "#SpMV"
+    "#ModelPruning",
+    "#SparseComputing",
+    "#DecodingEfficiency",
+    "#AISystems"
   ],
   "paper_id": "2026-10-08-arxiv-sparsedecoding_decoding_aware_pruning_for_accurate_and_efficient_llm_inference",
   "paper_title": "SparseDecoding: Decoding-Aware Pruning for Accurate and Efficient LLM Inference",
   "paper_date": "2026-10-08",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-10T18:20:26",
+  "generated_at": "2026-10-11T18:43:11",
   "generator": "openai"
 }

@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-10-10
+Generated: 2026-10-11
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Machine Learning Meets High-Energy Nuclear Physics: From Pattern Recognition to Physics-Integrated Discovery
