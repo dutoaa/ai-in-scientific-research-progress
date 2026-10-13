@@ -1,24 +1,24 @@
 {
-  "key_insight": "PISO tracks the unknown part of a gradient with a running residual estimate, turning partial gradient access plus function probes into an efficient zeroth-order optimization method.",
-  "engineering_relevance": "The method is useful when only some derivatives are available in practice, such as performative learning, reinforcement learning, and bilevel problems with black-box lower levels.",
+  "key_insight": "PISO combines the known gradient part with a tracked estimate of the unknown residual, so zeroth-order noise is controlled by tracking error rather than by the full missing gradient magnitude.",
+  "engineering_relevance": "This makes partially observed optimization practical for systems like performative learning, RL, and bilevel problems where only some derivatives are available and function evaluations are expensive.",
   "method": [
-    "Combine the known gradient component with a residual estimate for the missing part.",
-    "Center zeroth-order probes around the tracked residual to reduce variance from random directions.",
-    "Use a randomized sketch/momentum-style update with explicit contraction and batching options."
+    "Uses the available gradient component directly and updates a running estimate of the residual.",
+    "Centers each zeroth-order probe on the residual estimate to reduce variance and create a contraction step.",
+    "Supports Gaussian or spherical probes with just one probe direction, two function samples, and one known-gradient sample per iteration."
   ],
-  "evidence_signal": "The abstract reports theoretical convergence and function-evaluation complexity guarantees, and says experiments across five settings show improved or competitive performance against baselines with comparable oracle access.",
-  "watch_item": "Performance depends on the residual’s variation and the quality of the tracking estimate, so unstable residual dynamics or noisy evaluations may reduce the benefit.",
+  "evidence_signal": "The abstract reports theoretical convergence rates of O(d^2ε^-6) with Lipschitz gradients and O(d^2ε^-5) with an additional Lipschitz-Hessian assumption, plus empirical gains across five benchmark settings.",
+  "watch_item": "Performance depends on the residual-tracking quality and on independently sampled function evaluations, so noisy or correlated oracle calls may weaken the method's advantages.",
   "hashtags": [
-    "#StochasticOptimization",
     "#ZerothOrderOptimization",
-    "#BilevelOptimization",
+    "#StochasticOptimization",
+    "#ResidualTracking",
     "#PerformativeLearning",
-    "#MachineLearning"
+    "#BilevelOptimization"
   ],
   "paper_id": "2026-10-09-arxiv-partially_informed_stochastic_optimization_via_zeroth_order_residual_tracking",
   "paper_title": "Partially Informed Stochastic Optimization via Zeroth-Order Residual Tracking",
   "paper_date": "2026-10-09",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-12T22:03:02",
+  "generated_at": "2026-10-13T20:08:00",
   "generator": "openai"
 }

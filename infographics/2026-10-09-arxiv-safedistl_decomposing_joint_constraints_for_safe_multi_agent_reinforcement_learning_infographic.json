@@ -1,13 +1,13 @@
 {
-  "key_insight": "SafeDiSTL decomposes shared safety constraint violations in multi-agent RL by using STL robustness sensitivities to assign each cost increment to the agents most responsible, even when effects are delayed.",
-  "engineering_relevance": "This enables safer coordination in multi-agent systems where only team-level constraint signals are available, improving credit assignment without sacrificing task performance.",
+  "key_insight": "SafeDiSTL turns a single team-level safety violation into per-agent credit assignments using STL robustness and action sensitivities, so constrained multi-agent RL can learn safer behavior without losing task performance.",
+  "engineering_relevance": "This is useful for safety-critical cooperative systems because it helps diagnose and steer which agents contribute most to joint constraint violations in transport, navigation, and traffic control.",
   "method": [
-    "Uses Signal Temporal Logic (STL) robustness to quantify episode-level constraint violation.",
-    "Computes smooth, differentiable full-episode robustness and action sensitivities from dynamics.",
-    "Allocates each running-maximum cost increment across agents at the same decision time, accounting for delayed effects."
+    "Use Signal Temporal Logic robustness to measure episode-level constraint violation via running-maximum cost increments.",
+    "Compute smooth full-episode robustness and differentiable action sensitivities to distribute each cost increment across agents at the same decision time.",
+    "Account for delayed effects when weighting each agent’s share of joint safety cost."
   ],
-  "evidence_signal": "Across cooperative payload transport, connected navigation, and networked traffic control, SafeDiSTL outperformed constrained baselines with 1.6–5.1x higher safe-success in transport, 11.1% higher safe-success in navigation, and 50–68% more throughput in traffic.",
-  "watch_item": "The approach depends on differentiable dynamics and accurate robustness gradients, which may limit direct use in highly non-smooth or poorly modeled environments.",
+  "evidence_signal": "Across cooperative payload transport, connected navigation, and networked traffic control, SafeDiSTL improves safe-success rates by 1.6–5.1x, boosts navigation safe-success by 11.1%, and increases traffic throughput by 50–68% versus constrained baselines.",
+  "watch_item": "The approach depends on smooth differentiable dynamics and reliable STL-based robustness signals, so its effectiveness may be reduced in highly non-smooth or poorly modeled environments.",
   "hashtags": [
     "#MultiAgentRL",
     "#SafeRL",
@@ -19,6 +19,6 @@
   "paper_title": "SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning",
   "paper_date": "2026-10-09",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-10-12T22:03:38",
+  "generated_at": "2026-10-13T20:08:36",
   "generator": "openai"
 }

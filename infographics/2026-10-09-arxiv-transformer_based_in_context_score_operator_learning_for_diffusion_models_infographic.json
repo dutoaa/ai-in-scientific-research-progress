@@ -1,24 +1,24 @@
 {
-  "key_insight": "The paper turns diffusion models into in-context learners by using a context set to infer a task-specific score function for previously unseen distributions.",
-  "engineering_relevance": "This enables rapid adaptation of generative models to new scientific or visual datasets without retraining, which is useful for simulation, forecasting, and data-driven design workflows.",
+  "key_insight": "The paper turns diffusion models into in-context learners by conditioning the score function on a small set of task examples, allowing adaptation to unseen distributions without retraining.",
+  "engineering_relevance": "This enables flexible generative modeling for scientific and vision tasks where each new scenario can be specified by a few samples instead of a full retraining pipeline.",
   "method": [
-    "Represent each target distribution as a task specified by context samples at inference time.",
-    "Learn an in-context score operator with a transformer that takes context, noisy query, and diffusion time as input.",
-    "Use a Gaussian-kernel conditional-mean view and Nadaraya–Watson approximation to justify the query-dependent attention architecture."
+    "Treat each target distribution as a task sampled from a meta-distribution and provide an empirical context set at inference.",
+    "Learn an in-context score operator that takes context samples, a noisy query point, and diffusion time to predict the task-dependent score.",
+    "Use a transformer-style query-dependent attention mechanism justified by a Gaussian-kernel conditional-mean / Nadaraya–Watson representation."
   ],
-  "evidence_signal": "The method is evaluated on Navier-Stokes, ERA5 climate data, QuickDraw, and Food-101, where it works well on simpler task families.",
-  "watch_item": "Performance degrades as task complexity increases, so the approach may be sensitive to harder distributions and context quality.",
+  "evidence_signal": "The method was evaluated on Navier-Stokes, ERA5 climate data, QuickDraw, and Food-101, showing strong results on simpler task families but weaker performance as task complexity increased.",
+  "watch_item": "Performance can degrade on more complex task families, so context size, task diversity, and model capacity must be chosen carefully for reliable deployment.",
   "hashtags": [
     "#DiffusionModels",
     "#InContextLearning",
-    "#Transformer",
+    "#Transformers",
     "#ScientificML",
-    "#OperatorLearning"
+    "#GenerativeAI"
   ],
   "paper_id": "2026-10-09-arxiv-transformer_based_in_context_score_operator_learning_for_diffusion_models",
   "paper_title": "Transformer-based In-Context Score Operator Learning for Diffusion Models",
   "paper_date": "2026-10-09",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-10-12T22:03:33",
+  "generated_at": "2026-10-13T20:08:30",
   "generator": "openai"
 }

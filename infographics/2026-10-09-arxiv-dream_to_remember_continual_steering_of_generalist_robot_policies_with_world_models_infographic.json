@@ -1,24 +1,24 @@
 {
-  "key_insight": "Dream to Remember (D2R) continually adapts a frozen generalist robot policy to new tasks by using a pretrained world model to rehearse old skills, reducing catastrophic forgetting without replay data.",
-  "engineering_relevance": "This offers a practical continual-learning recipe for robotics: improve sequential task performance while preserving prior capabilities using fixed policy backbones and imagined rollouts.",
+  "key_insight": "Dream to Remember (D2R) continually adapts a frozen generalist robot policy to new tasks while preventing catastrophic forgetting by rehearsing prior behaviors through a frozen world model.",
+  "engineering_relevance": "It offers a practical continual-learning recipe for robotics that improves task adaptation without replay buffers, while preserving prior robot skills across sequential updates.",
   "method": [
-    "Keep the base generalist policy frozen and train only a steering module.",
-    "Use a frozen world model to generate imagined rollouts that anchor earlier behaviors during new-task learning.",
-    "If the world model is accurate enough, train fully in imagination; otherwise learn new tasks in the environment while still rehearsing old tasks in imagination."
+    "Freeze the base generalist policy and learn only a lightweight steering module.",
+    "Use a pretrained world model to generate imagined rollouts that rehearse earlier tasks.",
+    "Train new tasks in imagination when the world model is accurate enough; otherwise, train in the environment while the world model anchors past behavior."
   ],
-  "evidence_signal": "On CALVIN, D2R raised average success from 63.7% to 74.8% across eight sequential tasks in imagination, while LoRA fine-tuning fell to 11.7%; it also retained performance on LIBERO and improved three real-robot Franka tasks.",
-  "watch_item": "The approach depends on the fidelity of the pretrained world model; when it is not accurate enough, it may only support rehearsal of prior tasks rather than safe or effective optimization of new ones.",
+  "evidence_signal": "Across CALVIN, D2R raised average success from 63.7% to 74.8% over eight sequential tasks in imagination, while LoRA fine-tuning fell to 11.7%; it also retained prior performance on LIBERO and improved three real-robot Franka tasks.",
+  "watch_item": "Performance depends on the fidelity of the frozen world model, so weak model predictions may limit optimization quality and shift training back to real-environment learning.",
   "hashtags": [
     "#ContinualLearning",
     "#Robotics",
     "#WorldModels",
     "#ImitationLearning",
-    "#CatastrophicForgetting"
+    "#ReinforcementLearning"
   ],
   "paper_id": "2026-10-09-arxiv-dream_to_remember_continual_steering_of_generalist_robot_policies_with_world_models",
   "paper_title": "Dream to Remember: Continual Steering of Generalist Robot Policies with World Models",
   "paper_date": "2026-10-09",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-12T22:03:05",
+  "generated_at": "2026-10-13T20:08:03",
   "generator": "openai"
 }

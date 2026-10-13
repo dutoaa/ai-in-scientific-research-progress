@@ -1,24 +1,24 @@
 {
-  "key_insight": "Gaussian process PDE solvers can incorporate linear inequality constraints by conditioning on them after the equality-based physics update, yielding a valid non-Gaussian posterior.",
-  "engineering_relevance": "This lets engineers enforce admissibility such as nonnegativity, monotonicity, and no-arbitrage directly in probabilistic PDE models without changing the core solver.",
+  "key_insight": "Inequality constraints can be incorporated directly into Gaussian process PDE solvers as a valid sequential conditioning step, turning admissibility requirements like positivity, monotonicity, and no-arbitrage into part of the probabilistic update.",
+  "engineering_relevance": "This provides a practical way to enforce physically or economically meaningful constraints in scientific computing without changing the underlying PDE solver pipeline.",
   "method": [
-    "Condition a GP prior on PDE residuals, boundary data, and measurements to obtain the physics-informed posterior.",
-    "Use that posterior as the prior for a finite-dimensional linear inequality event at virtual points.",
-    "Compute the resulting truncated-Gaussian moments to form the constrained posterior and diagnostics."
+    "Condition a GP prior on PDE residuals, boundary data, and measurements to form a physics-informed posterior.",
+    "Treat finite-dimensional inequality constraints as a second conditioning step via truncated-Gaussian moments.",
+    "Use the equality-conditioned posterior as the prior for virtual inequality observations."
   ],
-  "evidence_signal": "Across Poisson, option-pricing, and air-quality experiments, constraints improved key metrics, including a 63% Poisson error reduction, 22% lower option extrapolation error, and a 74% drop in sub-zero-tail proxy.",
-  "watch_item": "The inequality update is only finite-dimensional and relies on virtual points, so constraint placement and scalability may affect performance.",
+  "evidence_signal": "Across Poisson reconstruction, option pricing, and air-quality experiments, the constrained approach improved errors and constraint satisfaction, including a 63% error reduction on Poisson, 22% lower extrapolation error on thin S&P 500 option data, and a 74% reduction in sub-zero-tail proxy for air-quality fields.",
+  "watch_item": "The inequality update is computationally non-Gaussian and depends on virtual-point choices and truncated-moment calculations, which may affect scalability and numerical stability.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#GaussianProcesses",
     "#ProbabilisticNumerics",
     "#PDEs",
-    "#UncertaintyQuantification"
+    "#ConstrainedInference"
   ],
   "paper_id": "2026-10-09-arxiv-constrained_probabilistic_numerics_gaussian_process_solvers_for_linear_pdes_under_linear_i",
   "paper_title": "Constrained Probabilistic Numerics: Gaussian Process Solvers for Linear PDEs under Linear Inequality Constraints",
   "paper_date": "2026-10-09",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-10-12T22:03:18",
+  "generated_at": "2026-10-13T20:08:16",
   "generator": "openai"
 }
