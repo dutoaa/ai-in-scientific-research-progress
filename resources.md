@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-10-13
+Generated: 2026-10-14
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. A Multi-Agent LLM System for Automated Tuning of Specialized Neural Network Models
+## 1. MFG: Multi-turn Feedback Guided Molecular Optimization
 
-- Date: 2026-10-09
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.13663v1
-- PDF: https://arxiv.org/pdf/2610.13663v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-a_multi_agent_llm_system_for_automated_tuning_of_specialized_neural_network_models_infographic.json
-
-## 2. Matched-Context Group Policy Optimization for LLM Agent Training
-
-- Date: 2026-10-09
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.13755v1
-- PDF: https://arxiv.org/pdf/2610.13755v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-matched_context_group_policy_optimization_for_llm_agent_training_infographic.json
-
-## 3. Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning
-
-- Date: 2026-10-09
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.13923v1
-- PDF: https://arxiv.org/pdf/2610.13923v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-goal_oriented_bundle_management_and_flow_control_for_deep_space_communications_via_reinfor_infographic.json
-
-## 4. PhySeqNet: physics-informed fluorescent foci detection for BARseq spatial transcriptomics
-
-- Date: 2026-10-09
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.13779v1
-- PDF: https://arxiv.org/pdf/2610.13779v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-physeqnet_physics_informed_fluorescent_foci_detection_for_barseq_spatial_transcriptomics_infographic.json
-
-## 5. Partially Informed Stochastic Optimization via Zeroth-Order Residual Tracking
-
-- Date: 2026-10-09
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.13871v1
-- PDF: https://arxiv.org/pdf/2610.13871v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-partially_informed_stochastic_optimization_via_zeroth_order_residual_tracking_infographic.json
-
-## 6. Dream to Remember: Continual Steering of Generalist Robot Policies with World Models
-
-- Date: 2026-10-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.13816v1
-- PDF: https://arxiv.org/pdf/2610.13816v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-dream_to_remember_continual_steering_of_generalist_robot_policies_with_world_models_infographic.json
-
-## 7. Studying Comics at Scale with Artificial Intelligence: The PAGE Framework and Three Studies of American Comics and Japanese Manga
-
-- Date: 2026-10-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.13840v1
-- PDF: https://arxiv.org/pdf/2610.13840v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-studying_comics_at_scale_with_artificial_intelligence_the_page_framework_and_three_studies_infographic.json
-
-## 8. Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM
-
-- Date: 2026-10-09
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.13660v1
-- PDF: https://arxiv.org/pdf/2610.13660v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-pretraining_and_test_time_training_budgets_matter_for_arc_a_controlled_study_of_varc_and_t_infographic.json
-
-## 9. Calibration in One Go: Jointly Learning Accurate and Calibrated Neural Networks
-
-- Date: 2026-10-09
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.13693v1
-- PDF: https://arxiv.org/pdf/2610.13693v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-calibration_in_one_go_jointly_learning_accurate_and_calibrated_neural_networks_infographic.json
-
-## 10. RSI-Anything: Unlocking Recursive Self-Improvement with World Models
-
-- Date: 2026-10-09
+- Date: 2026-10-13
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2610.13912v1
-- PDF: https://arxiv.org/pdf/2610.13912v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-rsi_anything_unlocking_recursive_self_improvement_with_world_models_infographic.json
+- arXiv: https://arxiv.org/abs/2610.18851v1
+- PDF: https://arxiv.org/pdf/2610.18851v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-mfg_multi_turn_feedback_guided_molecular_optimization_infographic.json
 
-## 11. Constrained Probabilistic Numerics: Gaussian Process Solvers for Linear PDEs under Linear Inequality Constraints
+## 2. SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection
 
-- Date: 2026-10-09
+- Date: 2026-10-13
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2610.18807v1
+- PDF: https://arxiv.org/pdf/2610.18807v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-skillscaffold_scaffolding_agentic_reinforcement_learning_with_policy_adaptive_skill_credit_infographic.json
+
+## 3. Beyond the Verdict: Agentic Code Judging with Verifiable Feedback
+
+- Date: 2026-10-13
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2610.18760v1
+- PDF: https://arxiv.org/pdf/2610.18760v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-beyond_the_verdict_agentic_code_judging_with_verifiable_feedback_infographic.json
+
+## 4. ProAS: A Progress-Aware Advantage Shaping Framework for Multi-Turn Agentic Reinforcement Learning
+
+- Date: 2026-10-13
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2610.18683v1
+- PDF: https://arxiv.org/pdf/2610.18683v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-proas_a_progress_aware_advantage_shaping_framework_for_multi_turn_agentic_reinforcement_le_infographic.json
+
+## 5. Model-Based Online Decision Making via Generative Trajectory Planning
+
+- Date: 2026-10-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2610.18677v1
+- PDF: https://arxiv.org/pdf/2610.18677v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-model_based_online_decision_making_via_generative_trajectory_planning_infographic.json
+
+## 6. Deterministic Prediction as Global Velocity: Flow Matching for Probabilistic Time-Series Forecast
+
+- Date: 2026-10-13
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2610.18621v1
+- PDF: https://arxiv.org/pdf/2610.18621v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-deterministic_prediction_as_global_velocity_flow_matching_for_probabilistic_time_series_fo_infographic.json
+
+## 7. Self-Evolving Agent Harness
+
+- Date: 2026-10-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.18813v1
+- PDF: https://arxiv.org/pdf/2610.18813v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-self_evolving_agent_harness_infographic.json
+
+## 8. Unlocking Token Rewards via Training-Free Reward Attribution
+
+- Date: 2026-10-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.18704v1
+- PDF: https://arxiv.org/pdf/2610.18704v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-unlocking_token_rewards_via_training_free_reward_attribution_infographic.json
+
+## 9. AIRRI: Towards a Human-Readable, Machine-Resistant Reading Interface
+
+- Date: 2026-10-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.18724v1
+- PDF: https://arxiv.org/pdf/2610.18724v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-airri_towards_a_human_readable_machine_resistant_reading_interface_infographic.json
+
+## 10. Can an Agent Learn to Predict Its Own Failure? Outcome-Grounded Confidence Calibration in LLM Agents
+
+- Date: 2026-10-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.18614v1
+- PDF: https://arxiv.org/pdf/2610.18614v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-can_an_agent_learn_to_predict_its_own_failure_outcome_grounded_confidence_calibration_in_l_infographic.json
+
+## 11. Does self-distillation improve reasoning?
+
+- Date: 2026-10-13
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.18613v1
+- PDF: https://arxiv.org/pdf/2610.18613v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-does_self_distillation_improve_reasoning_infographic.json
+
+## 12. BLADE: Auditing Information Use for Failure Attribution in LLM Multi-Agent Systems
+
+- Date: 2026-10-13
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2610.18780v1
+- PDF: https://arxiv.org/pdf/2610.18780v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-blade_auditing_information_use_for_failure_attribution_in_llm_multi_agent_systems_infographic.json
+
+## 13. Read the Room Before Your Model Generates
+
+- Date: 2026-10-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.18820v1
+- PDF: https://arxiv.org/pdf/2610.18820v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-read_the_room_before_your_model_generates_infographic.json
+
+## 14. BridgeTwist: Twisting Schrödinger Bridges for Training-Free Conditional Sampling
+
+- Date: 2026-10-13
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.13804v1
-- PDF: https://arxiv.org/pdf/2610.13804v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-constrained_probabilistic_numerics_gaussian_process_solvers_for_linear_pdes_under_linear_i_infographic.json
+- arXiv: https://arxiv.org/abs/2610.18658v1
+- PDF: https://arxiv.org/pdf/2610.18658v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-bridgetwist_twisting_schr_dinger_bridges_for_training_free_conditional_sampling_infographic.json
 
-## 12. Amortized Counterfactual Prediction with Graph Neural Networks
+## 15. MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization
 
-- Date: 2026-10-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.13724v1
-- PDF: https://arxiv.org/pdf/2610.13724v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-amortized_counterfactual_prediction_with_graph_neural_networks_infographic.json
-
-## 13. X-AVDD: Cross-Attentive Audio-Visual Dataset Distillation
-
-- Date: 2026-10-09
+- Date: 2026-10-13
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.13687v1
-- PDF: https://arxiv.org/pdf/2610.13687v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-x_avdd_cross_attentive_audio_visual_dataset_distillation_infographic.json
+- arXiv: https://arxiv.org/abs/2610.18642v1
+- PDF: https://arxiv.org/pdf/2610.18642v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-multialloc_budget_aware_precision_allocation_for_kv_cache_quantization_infographic.json
 
-## 14. X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems
+## 16. Exact Topological Compliance: Generating Persistence-Equivalent Graphs
 
-- Date: 2026-10-09
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2610.13886v1
-- PDF: https://arxiv.org/pdf/2610.13886v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-x_agentred_red_teaming_personal_agents_in_evolving_multi_service_ecosystems_infographic.json
-
-## 15. Specialists Learn Faster: Knowledge Organization in Pre-training Shapes Knowledge Update Efficiency
-
-- Date: 2026-10-09
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.13835v1
-- PDF: https://arxiv.org/pdf/2610.13835v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-specialists_learn_faster_knowledge_organization_in_pre_training_shapes_knowledge_update_ef_infographic.json
-
-## 16. QTestBench: A Test Framework for Evaluating LLM-Generated Quantum Code
-
-- Date: 2026-10-09
+- Date: 2026-10-13
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.13811v1
-- PDF: https://arxiv.org/pdf/2610.13811v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-qtestbench_a_test_framework_for_evaluating_llm_generated_quantum_code_infographic.json
+- arXiv: https://arxiv.org/abs/2610.18856v1
+- PDF: https://arxiv.org/pdf/2610.18856v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-exact_topological_compliance_generating_persistence_equivalent_graphs_infographic.json
 
-## 17. Transformer-based In-Context Score Operator Learning for Diffusion Models
+## 17. ChunkAct: Action Chunking for Agentic Robotics
 
-- Date: 2026-10-09
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.13690v1
-- PDF: https://arxiv.org/pdf/2610.13690v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-transformer_based_in_context_score_operator_learning_for_diffusion_models_infographic.json
+- Date: 2026-10-13
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2610.18874v1
+- PDF: https://arxiv.org/pdf/2610.18874v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-chunkact_action_chunking_for_agentic_robotics_infographic.json
 
-## 18. RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics
+## 18. Joint Neural Posterior Estimation and Model Selection for Chemical Reaction Networks
 
-- Date: 2026-10-09
+- Date: 2026-10-13
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2610.18825v1
+- PDF: https://arxiv.org/pdf/2610.18825v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-joint_neural_posterior_estimation_and_model_selection_for_chemical_reaction_networks_infographic.json
+
+## 19. Tiny Recursive Message Passing
+
+- Date: 2026-10-13
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.18649v1
+- PDF: https://arxiv.org/pdf/2610.18649v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-tiny_recursive_message_passing_infographic.json
+
+## 20. Brain Age Gap Progression in Individuals at Risk for Neurodegeneration
+
+- Date: 2026-10-13
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.13889v1
-- PDF: https://arxiv.org/pdf/2610.13889v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-rated_reliability_aware_ai_agent_tool_retrieval_via_execution_dynamics_infographic.json
-
-## 19. SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning
-
-- Date: 2026-10-09
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.13737v1
-- PDF: https://arxiv.org/pdf/2610.13737v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-safedistl_decomposing_joint_constraints_for_safe_multi_agent_reinforcement_learning_infographic.json
-
-## 20. A Baseline Assessment for the Agentic Web Technology Stack
-
-- Date: 2026-10-09
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2610.13703v1
-- PDF: https://arxiv.org/pdf/2610.13703v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-09-arxiv-a_baseline_assessment_for_the_agentic_web_technology_stack_infographic.json
+- arXiv: https://arxiv.org/abs/2610.18794v1
+- PDF: https://arxiv.org/pdf/2610.18794v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-13-arxiv-brain_age_gap_progression_in_individuals_at_risk_for_neurodegeneration_infographic.json

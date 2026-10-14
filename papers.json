@@ -1,1039 +1,1044 @@
 [
   {
-    "id": "2026-10-09-arxiv-a_multi_agent_llm_system_for_automated_tuning_of_specialized_neural_network_models",
-    "arxiv_id": "2610.13663v1",
-    "date": "2026-10-09",
-    "title": "A Multi-Agent LLM System for Automated Tuning of Specialized Neural Network Models",
-    "authors": "Ivan Moloshnikov, Dmitry Kunitsyn, Alexander Sboev, Maksim Skorokhodov, Roman Rybka, Yuanchao Liu",
-    "abstract": "Many machine learning approaches are two-level: an expert selects a class of methods, within this class the choice of key components is critical and usually manual. This paper addresses the automatic tuning of these components and proposes a framework transferable across models of different nature. The multi-agent large language model (LLM) framework has three roles---analyst, coder, and recorder~---with an experiment log and a sandboxed execution environment. Unlike systems that optimize the entire ML script or search architectures in a discrete space, the framework operates over an open but semantically narrow space: the agent generates code only for the specified components, leaving the overall network structure unchanged. The approach is validated in two directions: tuning a classification spiking neural network with correlation learning, and solving high-order differential equations with Physics-Informed Neural Networks (PINN). Across five tasks---spiking classification on MNIST and Digits, and boundary-value problems for the generalized nonlinear Schrödinger equation (GNLSE) and Kuramoto--Sivashinsky (KS) equations---the agent outperforms the baselines: classification accuracy is 13 percentage points (MNIST) and 6 percentage points (Digits) higher; the error against the analytical single-soliton solution is reduced approximately 2491-fold; the invariant-preservation error drops approximately 325-fold in the selected GNLSE run with a Gaussian perturbation and by more than 100-fold on average over repeated initializations; and the mass drift drops 14-fold for the KS problem with a Gaussian perturbation. The framework thus tunes key components on tasks of different nature without changing its internal structure.",
-    "category": "Scientific Machine Learning",
+    "id": "2026-10-13-arxiv-mfg_multi_turn_feedback_guided_molecular_optimization",
+    "arxiv_id": "2610.18851v1",
+    "date": "2026-10-13",
+    "title": "MFG: Multi-turn Feedback Guided Molecular Optimization",
+    "authors": "Trieu Nguyen, Frazier N. Baker, Ruoxi Gao, Daniel Adu-Ampratwum, Xia Ning",
+    "abstract": "Multi-objective molecular optimization is a critical process in drug discovery that aims to modify a given molecule to simultaneously improve multiple properties while maintaining a similar overall structure. This process often requires iterative modifications guided by computational or experimental feedback. Recent large language model (LLM)-based methods have begun to explore this iterative approach; however, these methods are not explicitly trained to leverage such feedback, while existing approaches primarily focus on single-turn molecular optimization. To address this gap, we introduce Multi-turn Feedback Guided (MFG) molecular optimization, a reinforcement learning framework that trains an LLM to progressively optimize molecules using feedback from previous turns. MFG introduces a feedback vector capturing both property improvements and source molecule similarity, alongside a feedback-aligned reward function that promotes progressive improvement across turns. We apply MFG over $\\text{GeLLM}^{3}\\text{O}$, a state-of-the-art LLM model for multi-objective molecular optimization, evaluate $\\text{GeLLM}^{3}\\text{O-MFG}$ on ten multi-objective molecular optimization tasks. The results demonstrate that $\\text{GeLLM}^{3}\\text{O-MFG}$ achieves the highest average similarity-constrained success rate ($81.50%$), outperforming the base model $\\text{GeLLM}^{3}\\text{O}$ ($70.81%$).",
+    "category": "Scientific Discovery",
     "source": "arXiv",
-    "published": "2026-10-09T14:34:22Z",
-    "updated": "2026-10-09T14:34:22Z",
+    "published": "2026-10-13T17:58:41Z",
+    "updated": "2026-10-13T17:58:41Z",
     "primary_category": "cs.AI",
     "categories": [
       "cs.AI",
-      "cs.CL",
       "cs.LG",
-      "cs.MA",
-      "cs.NE"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13663v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13663v1"
-      }
-    ],
-    "score": 81,
-    "infographic": {
-      "key_insight": "A three-agent LLM loop can automatically tune only the critical components of specialized neural models while keeping the overall architecture fixed.",
-      "engineering_relevance": "This offers a transferable workflow for improving domain-specific ML systems without full architecture search or manual hyperparameter tuning.",
-      "method": [
-        "Analyst identifies the component to optimize and defines the tuning target.",
-        "Coder generates code only for the allowed model component inside a sandbox.",
-        "Recorder logs each trial, result, and decision to guide iterative refinement."
-      ],
-      "evidence_signal": "Across five tasks, the system improved spiking classification on MNIST and Digits and reduced errors/drift dramatically on GNLSE and KS PDE benchmarks, including a ~2491-fold error reduction in one GNLSE run.",
-      "watch_item": "Results depend on sandboxed code generation and a carefully constrained search space, so robustness may vary when components or task specifications are less clearly defined.",
-      "hashtags": [
-        "#LLMAgents",
-        "#ScientificMachineLearning",
-        "#AutoTuning",
-        "#PINN",
-        "#SpikingNeuralNetworks"
-      ],
-      "paper_id": "2026-10-09-arxiv-a_multi_agent_llm_system_for_automated_tuning_of_specialized_neural_network_models",
-      "paper_title": "A Multi-Agent LLM System for Automated Tuning of Specialized Neural Network Models",
-      "paper_date": "2026-10-09",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-13T20:07:50",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-matched_context_group_policy_optimization_for_llm_agent_training",
-    "arxiv_id": "2610.13755v1",
-    "date": "2026-10-09",
-    "title": "Matched-Context Group Policy Optimization for LLM Agent Training",
-    "authors": "Chenxu Zhang, Yaorui Shi, Wenlong Zhang, Jianchao Tan, Zihan Wang, Yiming Cheng",
-    "abstract": "Training long-horizon language model agents requires assigning credit to intermediate decisions from sparse terminal feedback. Within a finite group of sibling rollouts, useful action comparisons depend on their context, evidence for both alternatives, and how that evidence enters learning. We propose Matched-Context Group Policy Optimization (MCGPO), a procedure for constructing weighted action preferences from already collected trajectories. MCGPO defines comparison contexts with pre-action state summaries and observed rubric progress, annotated by task rules. Two-action support selects among ordered exact and coarse matching rules. Fixed folds separate candidate decisions from the terminal outcomes used to orient their preferences, and support-dependent evidence weights scale an auxiliary pairwise objective alongside shared GraphGPO task learning. MCGPO reuses rollout data and each response's original history, preserving critic-free training. Across six environment-backbone settings with three training seeds each, MCGPO improves mean success over matched GraphGPO: by 0.47-1.46 percentage points on ALFWorld and WebShop with Qwen2.5-1.5B and 7B, and by 3.96 and 5.16 points on WebShop with Qwen3-4B and 8B. The ALFWorld gains build on baseline success above 92%, where remaining headroom is limited. Integrated success improves in three of four Qwen2.5 settings. Three-seed factorial controls support opposite-fold evidence and evidence weighting; joint state-rubric matching achieves the highest mean in all four representation-control settings.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-09T15:41:37Z",
-    "updated": "2026-10-09T15:41:37Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13755v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13755v1"
-      }
-    ],
-    "score": 63,
-    "infographic": {
-      "key_insight": "MCGPO improves LLM agent training by turning already-collected sibling rollouts into context-matched action preferences with rubric-aware evidence.",
-      "engineering_relevance": "It offers a critic-free, data-efficient way to assign intermediate credit in long-horizon agents while reusing rollout history and terminal feedback.",
-      "method": [
-        "Build comparison contexts from pre-action state summaries plus observed rubric progress.",
-        "Use two-action support with ordered exact/coarse matching to select valid action pairs.",
-        "Apply fixed folds and support-dependent weights to orient preferences and train alongside GraphGPO."
-      ],
-      "evidence_signal": "Across six environment-backbone settings and three seeds each, MCGPO improves mean success over matched GraphGPO on ALFWorld and WebShop, with the largest gains on WebShop using Qwen3-4B and 8B.",
-      "watch_item": "The gains on ALFWorld are modest because baseline success is already above 92%, so remaining improvement headroom is limited.",
-      "hashtags": [
-        "#LLMAgents",
-        "#ReinforcementLearning",
-        "#PolicyOptimization",
-        "#WebShop",
-        "#ALFWorld"
-      ],
-      "paper_id": "2026-10-09-arxiv-matched_context_group_policy_optimization_for_llm_agent_training",
-      "paper_title": "Matched-Context Group Policy Optimization for LLM Agent Training",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-13T20:07:52",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-goal_oriented_bundle_management_and_flow_control_for_deep_space_communications_via_reinfor",
-    "arxiv_id": "2610.13923v1",
-    "date": "2026-10-09",
-    "title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
-    "authors": "Sajjad Baghaeea, Aimin Lib, Shanmugarajan Balasubramanian, Elif Uysal",
-    "abstract": "Deep-space communications operate under intermittent connectivity, long propagation delays, and relay storage constraints. In such networks, the Bundle Protocol enables store-carry-forward communication, requiring relay nodes to manage limited storage and scarce contact opportunities. Relay-side scheduling and dropping decisions are inherently goal-oriented: transmission resources should be allocated to bundles most valuable to downstream mission objectives. Conventional schedulers, such as FIFO, do not explicitly optimize task utility and may provide unfair service across heterogeneous planetary sources. This paper presents a closed-loop modeling and learning framework for relay-side bundle and flow management in a contact-driven deep-space network, where lunar and Martian updates are forwarded through a shared-buffer relay to Earth. We quantify destination-side information freshness using excess age $Δ_i^e(t)=[Δ_i(t)-d_i(t)]^+$, where $Δ_i(t)$ denotes the Age of Information of source $i$ and $d_i(t)$ is a source-dependent delay baseline. Based on this metric, we define a goal-oriented loss that supports source-dependent nonlinear penalties, allowing prioritization according to mission relevance. We formulate relay control as a constrained semi-Markov decision process (CSMDP) and solve it using masked Lagrangian Proximal Policy Optimization (PPO). Feasibility-aware action masking restricts transmissions to bundles that can complete within the remaining contact window. DTNSim simulations indicate improved age-based utility and inter-flow fairness compared with baseline schedulers. The proposed framework jointly optimizes relay-side bundle scheduling, dropping, and flow control under contact-driven dynamics with explicit fairness considerations across heterogeneous sources.",
-    "category": "Modeling and Simulation",
-    "source": "arXiv",
-    "published": "2026-10-09T17:53:46Z",
-    "updated": "2026-10-09T17:53:46Z",
-    "primary_category": "cs.NI",
-    "categories": [
-      "cs.NI",
-      "cs.LG",
-      "eess.SY"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13923v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13923v1"
-      }
-    ],
-    "score": 59,
-    "infographic": {
-      "key_insight": "The paper turns deep-space relay scheduling into a goal-oriented reinforcement learning problem that prioritizes bundles by mission value, freshness, and fairness rather than simple FIFO order.",
-      "engineering_relevance": "This is directly useful for deep-space network relays because it provides a control strategy for scarce storage and intermittent contacts while improving delivery utility across heterogeneous planetary sources.",
-      "method": [
-        "Model relay control as a constrained semi-Markov decision process (CSMDP).",
-        "Use masked Lagrangian PPO to learn scheduling, dropping, and flow-control policies.",
-        "Apply feasibility-aware action masking so only bundles that can finish within the remaining contact window are transmitted."
-      ],
-      "evidence_signal": "DTNSim simulations reported better age-based utility and inter-flow fairness than baseline schedulers such as FIFO.",
-      "watch_item": "Performance depends on accurate contact-window prediction and the ability of the learned policy to generalize across different deep-space traffic patterns and mission priority settings.",
-      "hashtags": [
-        "#DeepSpaceComms",
-        "#ReinforcementLearning",
-        "#BundleProtocol",
-        "#AgeOfInformation",
-        "#NetworkScheduling"
-      ],
-      "paper_id": "2026-10-09-arxiv-goal_oriented_bundle_management_and_flow_control_for_deep_space_communications_via_reinfor",
-      "paper_title": "Goal-Oriented Bundle Management and Flow Control for Deep-Space Communications via Reinforcement Learning",
-      "paper_date": "2026-10-09",
-      "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-13T20:07:55",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-physeqnet_physics_informed_fluorescent_foci_detection_for_barseq_spatial_transcriptomics",
-    "arxiv_id": "2610.13779v1",
-    "date": "2026-10-09",
-    "title": "PhySeqNet: physics-informed fluorescent foci detection for BARseq spatial transcriptomics",
-    "authors": "Neha Goswami, John Hover, Renae Galluccio, Yichen Wu, Huiqing Zhan, Xiaoyin Chen",
-    "abstract": "BARseq enables spatially resolved gene-expression profiling across intact tissue, but its sensitivity depends on accurate detection and decoding of dense fluorescent rolonies. Existing spot-calling approaches can be conservative where signals overlap, while supervised deep learning is limited by the lack of reliable manual ground truth in real tissue images. Here we present PhySeqNet, a physics-informed deep learning framework for annotation-free fluorescent foci detection in BARseq. PhySeqNet trains U-Net detectors entirely on semi-synthetic images generated from an instrument-matched optical model combined with real sample-free experimental noise, and is integrated into pyBARseq, a modular Python pipeline for BARseq analysis. PhySeqNet achieved high detection performance on held-out simulated data across wavelength bands. On real tissue images, where ground truth is unavailable, we evaluated detections by forward-model reconstruction: PhySeqNet with conservative barcode-aware non-maxima suppression (NMSB) achieved higher reconstruction fidelity (NCC and MS-SSIM) than the BarDensr single-shot estimator, tuned classical spot detectors, and a pretrained deep-learning detector. In the analyzed brain section, PhySeqNet with NMSB yielded a median of 51 counts per cell versus 47 for BarDensr, with a similar number of genes detected per cell. The recovered transcripts produced spatial expression patterns qualitatively consistent with Allen MERFISH reference data and preserved cell-type composition after scANVI label transfer. These results show that physics-informed simulation can train practical, annotation-free detectors that improve BARseq sensitivity without disrupting downstream biological interpretation.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-10-09T15:59:41Z",
-    "updated": "2026-10-09T15:59:41Z",
-    "primary_category": "physics.optics",
-    "categories": [
-      "physics.optics",
       "q-bio.QM"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13779v1"
+        "url": "https://arxiv.org/abs/2610.18851v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13779v1"
+        "url": "https://arxiv.org/pdf/2610.18851v1"
       }
     ],
-    "score": 59,
+    "score": 83,
     "infographic": {
-      "key_insight": "PhySeqNet uses physics-informed synthetic training to detect fluorescent BARseq foci without manual annotation, improving sensitivity in dense tissue images.",
-      "engineering_relevance": "The approach offers a practical, modular detector for spatial transcriptomics pipelines that can be deployed where real ground truth is unavailable.",
+      "key_insight": "MFG trains an LLM to optimize molecules over multiple turns using feedback from earlier steps, improving both target properties and structural similarity.",
+      "engineering_relevance": "This enables more practical drug-design pipelines by making iterative, similarity-constrained molecular optimization learnable rather than hand-crafted.",
       "method": [
-        "Trains a U-Net on semi-synthetic images generated from an instrument-matched optical model plus real experimental noise.",
-        "Integrates barcode-aware non-maxima suppression (NMSB) to reduce duplicate detections in crowded regions.",
-        "Built as part of pyBARseq for end-to-end BARseq analysis."
+        "Reinforcement learning framework for multi-turn molecular optimization",
+        "Feedback vector encodes property gains and similarity to the source molecule",
+        "Feedback-aligned reward encourages progressive improvement across turns"
       ],
-      "evidence_signal": "On real tissue, reconstruction-based evaluation showed higher fidelity than BarDensr, tuned classical spot detectors, and a pretrained deep-learning detector, with a median 51 counts per cell versus 47 for BarDensr.",
-      "watch_item": "Performance on real tissue is inferred indirectly through forward-model reconstruction because reliable manual ground truth is unavailable.",
+      "evidence_signal": "Evaluated on ten multi-objective molecular optimization tasks, where GeLLM3O-MFG achieved a highest average similarity-constrained success rate of 81.50% versus 70.81% for the base model.",
+      "watch_item": "Performance depends on the quality of the feedback signal and reward design, so noisy or biased feedback could steer optimization in the wrong direction.",
       "hashtags": [
-        "#ScientificMachineLearning",
-        "#SpatialTranscriptomics",
-        "#BARseq",
-        "#DeepLearning",
-        "#PhysicsInformedAI"
+        "#MolecularOptimization",
+        "#DrugDiscovery",
+        "#ReinforcementLearning",
+        "#LargeLanguageModels",
+        "#ScientificAI"
       ],
-      "paper_id": "2026-10-09-arxiv-physeqnet_physics_informed_fluorescent_foci_detection_for_barseq_spatial_transcriptomics",
-      "paper_title": "PhySeqNet: physics-informed fluorescent foci detection for BARseq spatial transcriptomics",
-      "paper_date": "2026-10-09",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-13T20:07:58",
+      "paper_id": "2026-10-13-arxiv-mfg_multi_turn_feedback_guided_molecular_optimization",
+      "paper_title": "MFG: Multi-turn Feedback Guided Molecular Optimization",
+      "paper_date": "2026-10-13",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-10-14T18:23:46",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-09-arxiv-partially_informed_stochastic_optimization_via_zeroth_order_residual_tracking",
-    "arxiv_id": "2610.13871v1",
-    "date": "2026-10-09",
-    "title": "Partially Informed Stochastic Optimization via Zeroth-Order Residual Tracking",
-    "authors": "El Mahdi Chayti, Alireza Mirrokni, Martin Jaggi",
-    "abstract": "Many optimization problems provide direct access to only part of the gradient, while the remaining component must be inferred from function evaluations. This structure arises in performative prediction, performative reinforcement learning, and bilevel optimization with a black-box lower level. We introduce Partially Informed Stochastic Optimization (PISO), which combines the available gradient component with a running estimate of the residual. By centring each zeroth-order observation on this estimate, PISO makes the variance due to random probing depend on the tracking error rather than the residual's magnitude. This yields a randomized sketch iteration with an explicit contraction mechanism and a principled interpretation of momentum. For smooth nonconvex objectives, we establish convergence guarantees that depend on the residual's variation and initial magnitude, without requiring a uniform bound on the unavailable gradient component. With independently sampled function evaluations and Gaussian or spherical probes, PISO attains leading function-evaluation complexities of \\(O(d^{2}\\varepsilon^{-6})\\) under Lipschitz gradients and \\(O(d^{2}\\varepsilon^{-5})\\) under an additional Lipschitz-Hessian assumption. These rates require only one probe direction, two function samples, and one known-component sample per update. The analysis also quantifies how batching trades observations for fewer deployments. Across five settings, PISO variants improve on the tested baselines with comparable oracle access in three, reach a comparable solution faster in bilevel routing, and perform best among methods without response-model derivatives in performative reinforcement learning.",
-    "category": "AI scientific research",
+    "id": "2026-10-13-arxiv-skillscaffold_scaffolding_agentic_reinforcement_learning_with_policy_adaptive_skill_credit",
+    "arxiv_id": "2610.18807v1",
+    "date": "2026-10-13",
+    "title": "SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection",
+    "authors": "Wenlin Zhong, Hao Wang, Kun Yuan, Fan Yang, Jinluan Yang, Dian Jin",
+    "abstract": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes. Textual skills can improve exploration by distilling prior interactions into reusable guidance. However, existing skill-based RL approaches often either assume skill injection is beneficial or rely on indirect feedback or rollout-intensive evaluation to assess its utility. Our pilot studies show that rollout-based utility estimation for skill credit assignment is costly and unstable under limited sampling, while skill benefits vary across candidates and depend on the current policy's competence on each query. To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection. By reusing outcome-verified training trajectories, SkillScaffold generates candidate skills and estimates their utility through outcome-aware likelihood comparisons, without candidate-specific environment rollouts. The resulting utility guides whether and which skill to inject, retaining skill-free execution when no candidate is estimated to help. Joint training enables the Generator to produce skills tailored to the evolving Executor. Scaffolded RL encourages skill internalization for skill-free inference. Experiments on ALFWorld, WebShop, ScienceWorld, and $τ^2$-Bench demonstrate gains over strong agentic-RL and skill-based RL baselines across both short- and long-horizon tasks. Ablations and further analyses support the importance of utility-based selection and abstention. Our code is available at https://github.com/Vaidurya00/SkillScaffold.",
+    "category": "AI Scientists and Research Agents",
     "source": "arXiv",
-    "published": "2026-10-09T17:20:41Z",
-    "updated": "2026-10-09T17:20:41Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13871v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13871v1"
-      }
-    ],
-    "score": 57,
-    "infographic": {
-      "key_insight": "PISO combines the known gradient part with a tracked estimate of the unknown residual, so zeroth-order noise is controlled by tracking error rather than by the full missing gradient magnitude.",
-      "engineering_relevance": "This makes partially observed optimization practical for systems like performative learning, RL, and bilevel problems where only some derivatives are available and function evaluations are expensive.",
-      "method": [
-        "Uses the available gradient component directly and updates a running estimate of the residual.",
-        "Centers each zeroth-order probe on the residual estimate to reduce variance and create a contraction step.",
-        "Supports Gaussian or spherical probes with just one probe direction, two function samples, and one known-gradient sample per iteration."
-      ],
-      "evidence_signal": "The abstract reports theoretical convergence rates of O(d^2ε^-6) with Lipschitz gradients and O(d^2ε^-5) with an additional Lipschitz-Hessian assumption, plus empirical gains across five benchmark settings.",
-      "watch_item": "Performance depends on the residual-tracking quality and on independently sampled function evaluations, so noisy or correlated oracle calls may weaken the method's advantages.",
-      "hashtags": [
-        "#ZerothOrderOptimization",
-        "#StochasticOptimization",
-        "#ResidualTracking",
-        "#PerformativeLearning",
-        "#BilevelOptimization"
-      ],
-      "paper_id": "2026-10-09-arxiv-partially_informed_stochastic_optimization_via_zeroth_order_residual_tracking",
-      "paper_title": "Partially Informed Stochastic Optimization via Zeroth-Order Residual Tracking",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-13T20:08:00",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-dream_to_remember_continual_steering_of_generalist_robot_policies_with_world_models",
-    "arxiv_id": "2610.13816v1",
-    "date": "2026-10-09",
-    "title": "Dream to Remember: Continual Steering of Generalist Robot Policies with World Models",
-    "authors": "Bahey Tharwat, Iman Nematollahi, Marvin Alles, Xingyuan Zhang, Akshay L Chandra, Abhinav Valada",
-    "abstract": "Generalist robot policies are trained with imitation learning and are bounded by the quality and coverage of their demonstrations. Reinforcement learning can improve and extend them, either by fine-tuning the policy weights or by training a small module to steer the input noise of a frozen generative policy. When tasks arrive sequentially, both approaches suffer from catastrophic forgetting. Fine-tuning on a task degrades prior tasks, and steering only shifts forgetting to the shared steering module. We propose Dream to Remember (D2R), which continually steers a frozen generalist policy toward new tasks, while retaining its earlier skills. As the steering module learns a new task, a frozen pretrained world model rehearses prior tasks through imagined rollouts, anchoring the module to its earlier behavior without a replay buffer or new data. When the world model is faithful enough, D2R learns the new task entirely in imagination. Otherwise, it learns the task in the environment while using the world model only to rehearse prior tasks. On CALVIN, D2R improves eight tasks in sequence entirely in imagination, raising average success from 63.7% to 74.8%, while LoRA fine-tuning on the same sequence drops it to 11.7%. With a frozen off-the-shelf generalist policy and world model, $π_0$ and A2World, D2R learns unseen LIBERO-90 tasks in the environment while keeping $π_0$'s performance on the LIBERO suites it was fine-tuned on, even though the world model is not accurate enough for policy optimization. Finally, on a real Franka robot, D2R improves three tasks in sequence entirely in imagination while retaining the earlier improvements.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-10-09T16:28:01Z",
-    "updated": "2026-10-09T16:28:01Z",
-    "primary_category": "cs.RO",
-    "categories": [
-      "cs.RO",
-      "cs.CV",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13816v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13816v1"
-      }
-    ],
-    "score": 57,
-    "infographic": {
-      "key_insight": "Dream to Remember (D2R) continually adapts a frozen generalist robot policy to new tasks while preventing catastrophic forgetting by rehearsing prior behaviors through a frozen world model.",
-      "engineering_relevance": "It offers a practical continual-learning recipe for robotics that improves task adaptation without replay buffers, while preserving prior robot skills across sequential updates.",
-      "method": [
-        "Freeze the base generalist policy and learn only a lightweight steering module.",
-        "Use a pretrained world model to generate imagined rollouts that rehearse earlier tasks.",
-        "Train new tasks in imagination when the world model is accurate enough; otherwise, train in the environment while the world model anchors past behavior."
-      ],
-      "evidence_signal": "Across CALVIN, D2R raised average success from 63.7% to 74.8% over eight sequential tasks in imagination, while LoRA fine-tuning fell to 11.7%; it also retained prior performance on LIBERO and improved three real-robot Franka tasks.",
-      "watch_item": "Performance depends on the fidelity of the frozen world model, so weak model predictions may limit optimization quality and shift training back to real-environment learning.",
-      "hashtags": [
-        "#ContinualLearning",
-        "#Robotics",
-        "#WorldModels",
-        "#ImitationLearning",
-        "#ReinforcementLearning"
-      ],
-      "paper_id": "2026-10-09-arxiv-dream_to_remember_continual_steering_of_generalist_robot_policies_with_world_models",
-      "paper_title": "Dream to Remember: Continual Steering of Generalist Robot Policies with World Models",
-      "paper_date": "2026-10-09",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-13T20:08:03",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-studying_comics_at_scale_with_artificial_intelligence_the_page_framework_and_three_studies",
-    "arxiv_id": "2610.13840v1",
-    "date": "2026-10-09",
-    "title": "Studying Comics at Scale with Artificial Intelligence: The PAGE Framework and Three Studies of American Comics and Japanese Manga",
-    "authors": "Emilio Ferrara",
-    "abstract": "Comics are one of the great visual records of the twentieth century: hundreds of thousands of pages in which a mass readership saw its leaders, its wars and its heroes. Most of this record has never been studied as a whole; comics scholarship proceeds one book at a time. We argue that artificial intelligence, including generative models, can change this to the benefit of the medium itself. We propose PAGE, a framework that makes artificial intelligence an instrument for comics research. It parses every scan into panels, text and a bibliographic record; annotates each page with a vision-language model that follows a written codebook, as a human coder would; grounds samples of these readings in human annotation; and explains change across an archive, with estimates controlled for publisher and genre. We demonstrate the framework on 3,929 American comic books (1938--1956) and 87 volumes of Japanese manga, in three studies, each resting on a different capability. The first pairs text search with visual reading to recover how a mass medium portrayed political power. The second measures the page's visual form across an industry and recovers the hand of individual artists. The third follows who speaks across two comics traditions, checked against human annotation. Beyond research, the same instruments can make archives searchable by what is drawn, open comics to blind and low-vision readers, and help preserve fragile collections and credit uncredited artists. We outline a research agenda in which artificial intelligence strengthens the study, preservation and reach of the medium.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-10-09T16:49:29Z",
-    "updated": "2026-10-09T16:49:29Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.CL",
-      "cs.CY"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13840v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13840v1"
-      }
-    ],
-    "score": 55,
-    "infographic": {
-      "key_insight": "The PAGE framework uses AI to parse, annotate, and explain comics at archive scale, enabling new quantitative studies of visual storytelling across American comics and Japanese manga.",
-      "engineering_relevance": "This paper shows how multimodal document AI can transform large, scanned cultural archives into searchable, analyzable datasets while preserving links to human-coded validation.",
-      "method": [
-        "Parse every page into panels, text, and bibliographic metadata",
-        "Use a vision-language model guided by a written codebook for page annotations",
-        "Ground model outputs with human annotation and estimate change while controlling for publisher and genre"
-      ],
-      "evidence_signal": "The framework is demonstrated on 3,929 American comic books (1938–1956) and 87 Japanese manga volumes across three studies, with results checked against human annotation.",
-      "watch_item": "Performance may depend on the quality of scans and codebook consistency, and archive-level comparisons must account for publisher and genre confounding.",
-      "hashtags": [
-        "#ComputationalHumanities",
-        "#DocumentAI",
-        "#MultimodalAI",
-        "#ComicStudies",
-        "#DigitalArchives"
-      ],
-      "paper_id": "2026-10-09-arxiv-studying_comics_at_scale_with_artificial_intelligence_the_page_framework_and_three_studies",
-      "paper_title": "Studying Comics at Scale with Artificial Intelligence: The PAGE Framework and Three Studies of American Comics and Japanese Manga",
-      "paper_date": "2026-10-09",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-13T20:08:06",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-pretraining_and_test_time_training_budgets_matter_for_arc_a_controlled_study_of_varc_and_t",
-    "arxiv_id": "2610.13660v1",
-    "date": "2026-10-09",
-    "title": "Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM",
-    "authors": "Adrien Deliege, Marc Van Droogenbroeck",
-    "abstract": "The Abstraction and Reasoning Corpus (ARC) is increasingly used to evaluate whether neural networks can infer task-specific transformations from few demonstrations. Recent ARC models differ in architecture, but also in broader training and evaluation protocols, including pretraining data, data augmentation, test-time setup, and optimization budgets, making conclusions about architecture benefits debatable. In this work, we study how the performance of the vision-inspired VARC and recursion-based TRM models is affected by pretraining and test-time training (TTT) budgets under a common inductive protocol on ARC-AGI-1. We cross five pretraining budgets with four TTT budgets for each test task. Each budget specifies a task-variant count and total sample presentations, defining the controlled training budgets. We observe that increasing TTT sample presentations improves the standard ARC pass@2 metric in all settings for both models. Increasing the TTT task-variant count consistently helps only TRM, whereas VARC often performs better with fewer variants. VARC also remains competitive without pretraining, while TRM benefits much more from it. These results show that pretraining and TTT budgets affect ARC evaluation and motivate reporting at comparable budgets.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-09T14:33:30Z",
-    "updated": "2026-10-09T14:33:30Z",
+    "published": "2026-10-13T17:46:25Z",
+    "updated": "2026-10-13T17:46:25Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13660v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13660v1"
-      }
-    ],
-    "score": 55,
-    "infographic": {
-      "key_insight": "On ARC-AGI-1, both pretraining and test-time training budgets materially change model performance, so architecture comparisons between VARC and TRM must be interpreted through the lens of matched training budgets.",
-      "engineering_relevance": "For engineering teams building few-shot reasoning systems, the study shows that optimizing pretraining and test-time adaptation budgets can matter as much as model design when chasing ARC gains.",
-      "method": [
-        "Crossed 5 pretraining budgets with 4 test-time training (TTT) budgets per test task.",
-        "Evaluated VARC and TRM under the same inductive protocol on ARC-AGI-1.",
-        "Tracked task-variant count and total sample presentations as controlled budget variables."
-      ],
-      "evidence_signal": "The abstract reports that increasing TTT sample presentations improves pass@2 for both models, while more task variants consistently help TRM but often hurt or fail to help VARC.",
-      "watch_item": "Results are tied to a specific ARC-AGI-1 setup and controlled budget grid, so gains may not transfer directly to other datasets or unconstrained evaluation protocols.",
-      "hashtags": [
-        "#ARC",
-        "#TestTimeTraining",
-        "#Pretraining",
-        "#ReasoningModels",
-        "#MachineLearning"
-      ],
-      "paper_id": "2026-10-09-arxiv-pretraining_and_test_time_training_budgets_matter_for_arc_a_controlled_study_of_varc_and_t",
-      "paper_title": "Pretraining and Test-Time Training Budgets Matter for ARC: A Controlled Study of VARC and TRM",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-13T20:08:08",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-calibration_in_one_go_jointly_learning_accurate_and_calibrated_neural_networks",
-    "arxiv_id": "2610.13693v1",
-    "date": "2026-10-09",
-    "title": "Calibration in One Go: Jointly Learning Accurate and Calibrated Neural Networks",
-    "authors": "Nektarios Kalampalikis, Pablo M. Olmos, Isabel Valera",
-    "abstract": "Neural networks (NNs), while highly flexible and versatile, are often poorly calibrated. Post-hoc calibration methods adjust the outputs of an already trained model using a separate calibration dataset and additional calibration parameters. This process adds overhead that requires separate optimization of the calibrator and subsequent model selection. In this paper, we show that standard (post-hoc) calibrators can be trained end-to-end with the backbone via a bilevel Stackelberg formulation. This formulation eliminates the need for a separate calibration set or a dedicated calibration loss by jointly optimizing accuracy and calibration using cross-entropy, introducing only one additional hyperparameter: the calibrator learning rate. Although our framework supports calibrators ranging from temperature and matrix scaling to NN layers, our results show that using the final classification layer itself as the calibrator yields accurate, well-calibrated models with no additional parameters. Our approach outperforms SOTA calibrators with minimal added complexity, while also avoiding the multiplicative overhead of separate calibration components in settings such as multi-task learning.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-09T14:54:35Z",
-    "updated": "2026-10-09T14:54:35Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "stat.ML"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13693v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13693v1"
-      }
-    ],
-    "score": 54,
-    "infographic": {
-      "key_insight": "The paper shows that neural network accuracy and calibration can be learned jointly in one training loop, removing the need for separate post-hoc calibration.",
-      "engineering_relevance": "This simplifies deployment by eliminating a dedicated calibration set and extra calibrator optimization, while improving reliability of model probabilities.",
-      "method": [
-        "Formulate calibration as a bilevel Stackelberg optimization problem trained end-to-end with the backbone.",
-        "Use standard calibrators such as temperature scaling, matrix scaling, or neural layers within the joint objective.",
-        "Find that the final classification layer can act as the calibrator with no extra parameters.",
-        "evidence_signal"
-      ],
-      "paper_id": "2026-10-09-arxiv-calibration_in_one_go_jointly_learning_accurate_and_calibrated_neural_networks",
-      "paper_title": "Calibration in One Go: Jointly Learning Accurate and Calibrated Neural Networks",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-13T20:08:11",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-rsi_anything_unlocking_recursive_self_improvement_with_world_models",
-    "arxiv_id": "2610.13912v1",
-    "date": "2026-10-09",
-    "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
-    "authors": "Taoyong Cui, Pinxian Zeng, Wanghan Xu, Hao Xiao, Shuhan Xue, Qiang Gao",
-    "abstract": "Recursive self-improvement (RSI) aims to transform interaction experience into persistent improvements, yet external feedback is costly and world-model predictions may become unreliable as policies evolve. We introduce RSI-Anything, a domain-general framework built on JEPA-Anything that uses predictive world models to guide action and learning-data selection. Observed feedback drives policy or workflow improvement and conditional world-model adaptation, while component and compatibility checks govern the retention of updated policy-model pairs. Across diverse computational and scientific domains, RSI-Anything demonstrates substantial gains. In code repair, with the coder fixed, success increases from 26.3% with a static verifier to 29.2% through predictive selection and 31.2% after world-model adaptation, at comparable test usage. Graphical user interface (GUI) evaluations showed higher task completion, while average actions decrease by 39.4%. Across five successive policy versions, laboratory-planning scores more than double from 21.80% to 46.01%. In reaction optimization, RSI-Anything achieves 96.15% mean best observed yield versus 82.16% for Bayesian optimization under the same 40-experiment budget. An end-to-end immune-science application further connects workflow evolution and predictive modeling with therapeutic hypothesis generation. These results demonstrate how predictive world models and retained system updates enable recursive improvement across diverse environments.",
-    "category": "Scientific Discovery",
-    "source": "arXiv",
-    "published": "2026-10-09T17:50:30Z",
-    "updated": "2026-10-09T17:50:30Z",
-    "primary_category": "cs.CL",
-    "categories": [
       "cs.CL"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13912v1"
+        "url": "https://arxiv.org/abs/2610.18807v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13912v1"
+        "url": "https://arxiv.org/pdf/2610.18807v1"
       }
     ],
-    "score": 53,
+    "score": 76,
     "infographic": {
-      "key_insight": "RSI-Anything turns interaction data into persistent gains by using predictive world models to select actions and update policies only when improvements remain compatible and reliable.",
-      "engineering_relevance": "The framework offers a practical, domain-general recipe for continuous improvement in systems like code repair, GUI agents, and lab planning without depending solely on expensive external feedback.",
+      "key_insight": "SkillScaffold learns when a generated skill will actually help, then injects it selectively so the agent benefits from reusable guidance without forcing unnecessary skills.",
+      "engineering_relevance": "This offers a practical way to reduce rollout cost and improve stability in agentic RL systems by adapting skill use to the current policy and task difficulty.",
       "method": [
-        "Use a JEPA-based world model to predict outcomes of candidate actions.",
-        "Select learning data and actions based on predicted utility, then adapt the world model conditionally.",
-        "Retain updated policy-model pairs only after component and compatibility checks."
+        "Reuse outcome-verified trajectories to generate candidate textual skills.",
+        "Estimate each skill’s utility via outcome-aware likelihood comparisons instead of extra environment rollouts.",
+        "Inject only helpful skills; abstain and run skill-free when no candidate is predicted to help."
       ],
-      "evidence_signal": "Across multiple benchmarks, the method improved outcomes such as code repair success (26.3% to 31.2%), GUI efficiency (39.4% fewer actions), lab-planning scores (21.80% to 46.01%), and reaction optimization yield (96.15% vs. 82.16%).",
-      "watch_item": "Because the approach depends on predictive world models, performance may degrade if model drift or environment changes make predictions unreliable.",
+      "evidence_signal": "The abstract reports improvements on ALFWorld, WebShop, ScienceWorld, and τ²-Bench across both short- and long-horizon tasks, with ablations supporting utility-based selection and abstention.",
+      "watch_item": "Utility estimation relies on likelihood-based proxies, so performance may depend on how well these scores correlate with real downstream skill benefit under new tasks or policies.",
       "hashtags": [
-        "#RecursiveSelfImprovement",
-        "#WorldModels",
-        "#ScientificDiscovery",
-        "#AgenticAI",
-        "#Optimization"
+        "#AgenticRL",
+        "#LLMAgents",
+        "#SkillLearning",
+        "#ReinforcementLearning",
+        "#AIResearch"
       ],
-      "paper_id": "2026-10-09-arxiv-rsi_anything_unlocking_recursive_self_improvement_with_world_models",
-      "paper_title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
-      "paper_date": "2026-10-09",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-10-13T20:08:14",
+      "paper_id": "2026-10-13-arxiv-skillscaffold_scaffolding_agentic_reinforcement_learning_with_policy_adaptive_skill_credit",
+      "paper_title": "SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-14T18:23:48",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-09-arxiv-constrained_probabilistic_numerics_gaussian_process_solvers_for_linear_pdes_under_linear_i",
-    "arxiv_id": "2610.13804v1",
-    "date": "2026-10-09",
-    "title": "Constrained Probabilistic Numerics: Gaussian Process Solvers for Linear PDEs under Linear Inequality Constraints",
-    "authors": "Boyuan Deng, Kshitiz Upadhyay, Michael Shields",
-    "abstract": "Gaussian process solvers for linear partial differential equations (PDEs) return posteriors rather than point estimates, but they condition only on equality information: the PDE residual, boundary data, and measurements. Many solutions of interest also obey inequality constraints, including nonnegativity, monotonicity, and absence of arbitrage, which equality conditioning cannot enforce. We prove that conditioning a Gaussian process prior jointly on linear equality observations and a finite-dimensional inequality event is equivalent to conditioning sequentially in terms of Borel measures on the solution space. The physics-informed posterior is therefore a valid prior for the inequality update at virtual points. The combined law is non-Gaussian yet computable through truncated-Gaussian moments, and neither the PDE conditioning nor the inequality update requires modification. We evaluated the construction on a Poisson benchmark, option-price surfaces, and air-quality fields. Under incomplete boundary data, a monotonicity constraint lowered the error of a two-dimensional Poisson reconstruction by $63\\%$. On a real S&P 500 option chain thinned to $20$ retained quotes, no-arbitrage constraints reduced held-out extrapolation error by $22\\%$ and cut the calendar-arbitrage rate from $10\\%$ to $1\\%$. On four real air-quality snapshots, nonnegativity reduced a Gaussian moment-based sub-zero-tail proxy by $74\\%$ at the sparsest monitor count. Changes in mean accuracy and constraint diagnostics differed across data regimes. The probability of the noisy virtual constraint event under the equality posterior measures agreement with the specified bounds before the update. The construction turns admissibility from a post-processing step into conditioning information for probabilistic PDE solvers.",
+    "id": "2026-10-13-arxiv-beyond_the_verdict_agentic_code_judging_with_verifiable_feedback",
+    "arxiv_id": "2610.18760v1",
+    "date": "2026-10-13",
+    "title": "Beyond the Verdict: Agentic Code Judging with Verifiable Feedback",
+    "authors": "Zheye Deng, Sha Li, Changlong Yu, Xin Liu, Qin Lu, Priyanka Nigam",
+    "abstract": "Test-time scaling for large language models (LLMs) can involve generating multiple candidate solutions for selection or revising an earlier attempt. To guide selection and revision, we need a verifier that can estimate candidate correctness and provide evidence of failure. In competitive programming, however, official judging systems provide authoritative verdicts under finite submission budgets, without revealing failure explanations or failing inputs. To provide informative feedback without consuming official submissions, we formulate a task in which a model judges and diagnoses a candidate program using only the problem statement and source code, with generated counterexamples serving as checkable evidence. To evaluate this task, we build USACO-JUDGE from the USACO 2026 contests, using accepted and unaccepted programs written by human experts and multiple LLMs. We then train ARBITER, a 35B mixture-of-experts (MoE) agentic verifier, with reinforcement learning in a generic execution sandbox. Training raises counterexample success on incorrect programs from 40.61% to 62.67% and mean binary verdict accuracy on USACO-JUDGE from 71.41% to 87.41%, approaching frontier verification performance. Beyond verification, ARBITER outperforms baselines in both code selection and refinement. In an IOI 2026 case study, ARBITER-guided refinement raises GPT-OSS-120B's expected score above the gold-medal threshold under the official submission limit.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-10-13T17:22:58Z",
+    "updated": "2026-10-13T17:22:58Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18760v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18760v1"
+      }
+    ],
+    "score": 76,
+    "infographic": {
+      "key_insight": "The paper turns code judging from a binary verdict into an agentic verification task that also generates checkable counterexamples and failure diagnoses.",
+      "engineering_relevance": "This matters for test-time scaling in competitive programming and code agents because better verification improves both candidate selection and iterative refinement under strict submission budgets.",
+      "method": [
+        "Built USACO-JUDGE from USACO 2026 contest problems with accepted and unaccepted programs from human experts and multiple LLMs.",
+        "Trained ARBITER, a 35B MoE verifier, using reinforcement learning in a generic execution sandbox.",
+        "Used generated counterexamples as evidence to support verdicts and diagnosis."
+      ],
+      "evidence_signal": "On USACO-JUDGE, ARBITER improved mean binary verdict accuracy from 71.41% to 87.41% and raised counterexample success on incorrect programs from 40.61% to 62.67%.",
+      "watch_item": "The approach depends on sandboxed execution and generated counterexamples, so robustness may vary when programs are hard to trigger or when execution environments differ from official judges.",
+      "hashtags": [
+        "#CodeVerification",
+        "#LLMAgents",
+        "#CompetitiveProgramming",
+        "#ReinforcementLearning",
+        "#TestTimeScaling"
+      ],
+      "paper_id": "2026-10-13-arxiv-beyond_the_verdict_agentic_code_judging_with_verifiable_feedback",
+      "paper_title": "Beyond the Verdict: Agentic Code Judging with Verifiable Feedback",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-14T18:23:51",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-proas_a_progress_aware_advantage_shaping_framework_for_multi_turn_agentic_reinforcement_le",
+    "arxiv_id": "2610.18683v1",
+    "date": "2026-10-13",
+    "title": "ProAS: A Progress-Aware Advantage Shaping Framework for Multi-Turn Agentic Reinforcement Learning",
+    "authors": "Bowen Ding, Mingda Wan, Yuhan Chen, Jiyao Yuan, Qi Zhu, Futing Wang",
+    "abstract": "Reinforcement learning (RL) has emerged as the primary paradigm for optimizing Large Language Model (LLM) agents, yet efficient critic-free algorithms (e.g., GRPO) suffer from a fundamental uniform credit assignment dilemma that broadcasts trajectory-level advantages equally to all actions. Our analysis reveals that this uniformity inherently reinforces structurally invalid actions in preferred trajectories and ignores the downstream cascading influence of early pivotal deviations in unpreferred ones. To resolve this without introducing critic overhead, we propose Progress-Aware Advantage Shaping (ProAS), a plug-and-play framework that leverages a dynamically evolving Agentic Reference Graph (ARG) to achieve fine-grained credit assignment via Masking Unreasonable Incentives (MUI) and Asymmetric Penalty Redistribution (APR). Extensive experiments across Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct demonstrate that ProAS universally elevates mainstream group-based baselines to new state-of-the-art performance, achieving peak success rates of 91.9\\% and 94.3\\% on ALFWorld, alongside 66.7\\% and 70.8\\% on WebShop, respectively. Furthermore, it accelerates training convergence by up to $2.44\\times$ while maintaining strong robustness against imperfect or distilled ARGs. Codes: https://github.com/LINs-lab/ProAS.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-10-13T16:39:38Z",
+    "updated": "2026-10-13T16:39:38Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18683v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18683v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "ProAS fixes uniform trajectory-level credit assignment in critic-free LLM-agent RL by shaping advantages with a progress-aware reference graph so early, pivotal actions and invalid actions are treated differently.",
+      "engineering_relevance": "It offers a plug-and-play way to improve multi-turn agent training without adding critic overhead, making group-based RL more practical for scalable agentic systems.",
+      "method": [
+        "Build a dynamic Agentic Reference Graph (ARG) to track progress-aware structure across trajectories.",
+        "Apply Masking Unreasonable Incentives (MUI) to suppress rewards for structurally invalid actions in preferred paths.",
+        "Use Asymmetric Penalty Redistribution (APR) to spread blame more accurately for early mistakes in unpreferred trajectories."
+      ],
+      "evidence_signal": "Across Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct, ProAS improved group-based baselines to new SOTA, reaching 91.9%/94.3% success on ALFWorld and 66.7%/70.8% on WebShop, while speeding convergence by up to 2.44×.",
+      "watch_item": "Performance depends on the quality of the ARG, so imperfect or distilled graphs may reduce credit-assignment accuracy and should be validated carefully.",
+      "hashtags": [
+        "#LLMAgents",
+        "#ReinforcementLearning",
+        "#CreditAssignment",
+        "#AgenticAI",
+        "#MultiTurnRL"
+      ],
+      "paper_id": "2026-10-13-arxiv-proas_a_progress_aware_advantage_shaping_framework_for_multi_turn_agentic_reinforcement_le",
+      "paper_title": "ProAS: A Progress-Aware Advantage Shaping Framework for Multi-Turn Agentic Reinforcement Learning",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-14T18:23:54",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-model_based_online_decision_making_via_generative_trajectory_planning",
+    "arxiv_id": "2610.18677v1",
+    "date": "2026-10-13",
+    "title": "Model-Based Online Decision Making via Generative Trajectory Planning",
+    "authors": "Haldun Balim, Yilun Du, Na Li",
+    "abstract": "Online decision-making faces a tension between efficient inference and long-horizon reasoning. Value-based methods rely on short-horizon bootstrapping that limits the propagation of long-term information, while trajectory optimization methods plan explicitly but must solve a high-dimensional optimization problem at every decision step. We propose Generative Trajectory Planning (GTP), a model-based framework that addresses this tension by learning a generative model as a proposal distribution over action sequences. Instead of optimizing sequences from scratch, GTP samples candidate sequences from a diffusion prior and refines them using learned dynamics, reward, and value models, enabling efficient trajectory-level reasoning. Across continuous control and long-horizon manipulation tasks, GTP matches or exceeds state-of-the-art model-free, diffusion-policy, and model-based baselines, and remains stable in regimes where strong baselines degrade. Our results suggest that generative models are best understood not as policies, but as structured proposal distributions for planning, offering a new perspective on how to integrate generative modeling with model-based decision-making.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-10-13T16:35:13Z",
+    "updated": "2026-10-13T16:35:13Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.RO",
+      "eess.SY"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18677v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18677v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "Generative Trajectory Planning treats a diffusion model as a proposal distribution for action sequences, then refines sampled trajectories with learned dynamics, reward, and value models to enable efficient long-horizon planning.",
+      "engineering_relevance": "This gives practitioners a practical way to combine generative modeling with model-based control, improving trajectory-level decision making without solving a full optimization problem from scratch at every step.",
+      "method": [
+        "Learn a diffusion prior over action sequences as a generative sampler.",
+        "Refine sampled trajectories using learned dynamics, reward, and value estimates.",
+        "Use the resulting candidate plans for online decision making in continuous control and manipulation."
+      ],
+      "evidence_signal": "The abstract reports that GTP matches or exceeds strong model-free, diffusion-policy, and model-based baselines on continuous control and long-horizon manipulation tasks, with better stability in regimes where those baselines degrade.",
+      "watch_item": "Performance likely depends on the quality of the learned dynamics, reward, and value models, so model error or distribution shift could reduce plan quality.",
+      "hashtags": [
+        "#ModelBasedRL",
+        "#TrajectoryPlanning",
+        "#DiffusionModels",
+        "#DecisionMaking",
+        "#Robotics"
+      ],
+      "paper_id": "2026-10-13-arxiv-model_based_online_decision_making_via_generative_trajectory_planning",
+      "paper_title": "Model-Based Online Decision Making via Generative Trajectory Planning",
+      "paper_date": "2026-10-13",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-10-14T18:23:56",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-deterministic_prediction_as_global_velocity_flow_matching_for_probabilistic_time_series_fo",
+    "arxiv_id": "2610.18621v1",
+    "date": "2026-10-13",
+    "title": "Deterministic Prediction as Global Velocity: Flow Matching for Probabilistic Time-Series Forecast",
+    "authors": "Jiajing Hu, Xu Han, Li-Ping Liu",
+    "abstract": "Accurate uncertainty quantification is critical for many time series forecasting applications, and recent studies have increasingly adopted generative models to capture predictive uncertainty. Existing approaches often combine deterministic forecasting with generative modeling to improve predictive performance. However, their joint training is typically unstable because the deterministic model is embedded within the generative process, resulting in deep computational graphs and changing the probability transport path. In this work, we propose DV-Flow, a unified flow-matching formulation that incorporates the deterministic predictor as a parallel velocity component rather than as the endpoint of the transport path. This design enables stable end-to-end optimization while subsuming several existing formulations as special cases, allowing direct comparisons among them. Extensive experiments on six real-world datasets demonstrate that DV-Flow consistently improves probabilistic forecasting performance over strong baselines. Our code is available at https://github.com/tufts-ml/dv-flow-time-series.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-10-13T16:02:03Z",
+    "updated": "2026-10-13T16:02:03Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18621v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18621v1"
+      }
+    ],
+    "score": 75,
+    "infographic": {
+      "key_insight": "DV-Flow reframes deterministic forecasting as a parallel velocity in flow matching, making probabilistic time-series prediction more stable to train while preserving uncertainty modeling.",
+      "engineering_relevance": "This gives engineers a more reliable way to combine point forecasts and generative uncertainty estimates in operational forecasting systems.",
+      "method": [
+        "Use a unified flow-matching objective for probabilistic forecasting.",
+        "Inject the deterministic predictor as an additional velocity component, not as the transport endpoint.",
+        "Enable end-to-end optimization while subsuming several prior formulations as special cases."
+      ],
+      "evidence_signal": "The paper reports extensive experiments on six real-world datasets, where DV-Flow consistently outperforms strong baselines in probabilistic forecasting.",
+      "watch_item": "The approach still depends on careful implementation of the coupled flow-matching setup and may require tuning to avoid instability in large or complex time-series models.",
+      "hashtags": [
+        "#TimeSeriesForecasting",
+        "#FlowMatching",
+        "#ProbabilisticModeling",
+        "#UncertaintyQuantification",
+        "#MachineLearning"
+      ],
+      "paper_id": "2026-10-13-arxiv-deterministic_prediction_as_global_velocity_flow_matching_for_probabilistic_time_series_fo",
+      "paper_title": "Deterministic Prediction as Global Velocity: Flow Matching for Probabilistic Time-Series Forecast",
+      "paper_date": "2026-10-13",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-10-14T18:23:58",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-self_evolving_agent_harness",
+    "arxiv_id": "2610.18813v1",
+    "date": "2026-10-13",
+    "title": "Self-Evolving Agent Harness",
+    "authors": "Chuyang Wei, Haoxiang Guan, Minghang Zhu, Kexin Zhou, Jiyan He, Xiren Zhou",
+    "abstract": "Harness self-evolution revises an agent's software scaffolding, including prompts, memory, workflows, and executable components, while keeping model weights fixed. We formalize a feedback-driven process in which accepted revisions persist across runs. The framework separates update targets from proposal and admission mechanisms. It distinguishes changes to interpreted state from revisions to tools and code, repository-level control logic, and plugin composition. We characterize search through evolutionary optimization and examine its reliability through continual PAC-learning. Under explicit assumptions, the analysis yields an expected generalization bound, a retention bound conditional on historical regression budgets, and a high-probability admission rule using fresh, independent validation data. We examine how persistent harness revisions affect knowledge sharing and organizational workflows, with implications for scientific reliability, physical safety, and institutional accountability. Cases from prior work illustrate model--harness co-design, distributed execution, and plugin reuse. Reliable deployment requires continual validation as task distributions and evaluators change, with independent safeguards for learning, runtime privileges, and consequential actions. We provide a comprehensive 66-page discussion of related work, theory, algorithms, evaluation, applications, and the broader impact of Harness RSI, together with continuously updated code and supplementary materials, at https://github.com/zgcagi/Harness-RSI.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-13T17:48:49Z",
+    "updated": "2026-10-13T17:48:49Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18813v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18813v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "Self-evolving agent harnesses can improve an AI system by revising prompts, memory, workflows, and code while keeping model weights fixed, but those revisions must be admitted only through reliable validation.",
+      "engineering_relevance": "This matters for building maintainable agentic systems because it enables continual adaptation of the software scaffold without retraining the base model, while adding governance for safety and accountability.",
+      "method": [
+        "Formalizes a feedback-driven self-evolution loop for agent harnesses",
+        "Separates revision targets from proposal and admission mechanisms",
+        "Uses continual PAC-learning analysis to derive generalization, retention, and high-probability admission guarantees"
+      ],
+      "evidence_signal": "The paper is primarily theoretical and survey-based, with bounds and admission rules derived under explicit assumptions plus case examples from prior work, rather than a single empirical benchmark study.",
+      "watch_item": "Persistent harness changes can silently alter behavior over time, so deployment needs fresh independent validation and safeguards when task distributions, evaluators, or privileges change.",
+      "hashtags": [
+        "#AgenticAI",
+        "#SelfEvolvingSystems",
+        "#LLMEngineering",
+        "#AISafety",
+        "#ContinualLearning"
+      ],
+      "paper_id": "2026-10-13-arxiv-self_evolving_agent_harness",
+      "paper_title": "Self-Evolving Agent Harness",
+      "paper_date": "2026-10-13",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-14T18:24:00",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-unlocking_token_rewards_via_training_free_reward_attribution",
+    "arxiv_id": "2610.18704v1",
+    "date": "2026-10-13",
+    "title": "Unlocking Token Rewards via Training-Free Reward Attribution",
+    "authors": "Sitong Wu, Haoru Tan, Bin Xia, Xichen Zhang, Jingyao Li, Shaofeng Zhang",
+    "abstract": "In this paper, we propose an extremely efficient, training-free method to extract token-level reward signals directly from an existing deep reward model. Our core idea is to attribute the overall process reward to individual tokens by estimating each token's influence. This influence is defined as the change in the final macroscopic reward (e.g., the process reward) when a token is replaced with a semantically null token. Naively calculating this influence is computationally infeasible, requiring N forward passes through the PRM for an N-token sequence. We overcome this bottleneck by proposing a highly efficient gradient-based estimator. Specifically, we use a first-order Taylor approximation, which simplifies the influence calculation to the inner product of the difference between the token embedding and the null token embedding, and the gradient of the reward with respect to the token embedding. This requires only a single forward and backward pass. The resulting token-level rewards enable standard RL algorithms to perform precise credit assignment without requiring additional reward model training. Experiments on challenging reasoning benchmarks demonstrate that our method substantially improves policy optimization efficiency and enhances the generalization of LLM reasoning capabilities. Our P2T outperforms the outcome reward by +4.9% on MathVista for Qwen2.5-VL-7B-Instruct, and +11.5% on AIME24 for Qwen2.5-Math-7B. The code will be released via https://github.com/stonewst/P2T.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-13T16:53:27Z",
+    "updated": "2026-10-13T16:53:27Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18704v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18704v1"
+      }
+    ],
+    "score": 72,
+    "infographic": {
+      "key_insight": "Token-level rewards can be extracted from an existing process reward model without extra training by attributing the final reward to each token via a single gradient-based pass.",
+      "engineering_relevance": "This enables much finer credit assignment for RL training of language models, improving optimization efficiency while avoiding the cost of building a separate token reward model.",
+      "method": [
+        "Define each token’s influence as the change in final reward when it is replaced by a semantically null token.",
+        "Approximate this influence with a first-order Taylor expansion using the token-embedding difference and the reward gradient.",
+        "Compute token-level rewards with one forward and one backward pass instead of N forward passes."
+      ],
+      "evidence_signal": "The abstract reports strong benchmark gains, including +4.9% on MathVista for Qwen2.5-VL-7B-Instruct and +11.5% on AIME24 for Qwen2.5-Math-7B.",
+      "watch_item": "The approximation depends on the quality of the null-token substitution and the local linearity assumption, so attribution accuracy may degrade for highly nonlinear cases.",
+      "hashtags": [
+        "#LLMReasoning",
+        "#RewardModeling",
+        "#TokenAttribution",
+        "#ReinforcementLearning",
+        "#EfficientAI"
+      ],
+      "paper_id": "2026-10-13-arxiv-unlocking_token_rewards_via_training_free_reward_attribution",
+      "paper_title": "Unlocking Token Rewards via Training-Free Reward Attribution",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-14T18:24:02",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-airri_towards_a_human_readable_machine_resistant_reading_interface",
+    "arxiv_id": "2610.18724v1",
+    "date": "2026-10-13",
+    "title": "AIRRI: Towards a Human-Readable, Machine-Resistant Reading Interface",
+    "authors": "Emory Salaun, Syed Ayon, Kaleel Mahmood, Shaun Wallace",
+    "abstract": "The rapid advancement of image-to-text extraction systems and large language models (LLMs) poses new challenges for educational assessment by making assignment materials easy to transcribe and solve with minimal human effort. To address this problem, we present AIRRI (Artificial Intelligence Resilient Reading Interface), a framework for generating machine-resistant educational content, a dataset of higher-education assignments for evaluation, and an initial evaluation of the human readability of AIRRI machine-resistant text designs. AIRRI employs two categories of machine-resistance techniques. First, AIRRI applies image transformations including character spacing, word spacing, line spacing, character opacity variation, stripe overlays, and image noise. Second, AIRRI applies decision-based adversarial attacks: RayS, SurFree, and ADBA. We evaluate AIRRI against three image-to-text systems: Tesseract, EasyOCR, and the transformer-based GOT-OCR2 model. Our results show that AIRRI substantially degrades automated text extraction performance. AIRRI increased character error rates for EasyOCR (6.9% to 55.9%), Tesseract (2.3% to 100.0%), and GOT-OCR2 (30.7% to 48.1%). Word error rates increased for EasyOCR (24.9% to 96.7%) and Tesseract (10.7% to 100.0%). Among the evaluated decision-based attacks, ADBA consistently produced the largest degradation in image-to-text performance, while RayS and SurFree produced more moderate reductions. EasyOCR and Tesseract were generally more susceptible to both image-based and adversarial perturbations than the transformer-based GOT-OCR2 model. Our findings suggest that AIRRI can significantly reduce the reliability of image-to-text-to-LLM workflows, increasing the effort required for AI-assisted assignment completion.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-13T17:04:33Z",
+    "updated": "2026-10-13T17:04:33Z",
+    "primary_category": "cs.CV",
+    "categories": [
+      "cs.CV",
+      "cs.HC",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18724v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18724v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "AIRRI makes educational text much harder for OCR and downstream LLM workflows by combining visual perturbations and adversarial attacks to reduce machine readability.",
+      "engineering_relevance": "The framework offers a practical testbed for designing and benchmarking machine-resistant document interfaces that preserve human readability while disrupting automated extraction.",
+      "method": [
+        "Applies image-based perturbations: spacing changes, opacity variation, stripe overlays, and noise.",
+        "Uses decision-based adversarial attacks: RayS, SurFree, and ADBA.",
+        "Evaluates against Tesseract, EasyOCR, and GOT-OCR2 using higher-education assignment text."
+      ],
+      "evidence_signal": "The abstract reports large OCR degradation, including character error rate increases from 6.9% to 55.9% for EasyOCR and from 2.3% to 100.0% for Tesseract, with ADBA producing the strongest overall impact.",
+      "watch_item": "Machine-resistant designs may trade off accessibility, visual quality, and robustness across different OCR systems, so human readability and real-world usability need careful validation.",
+      "hashtags": [
+        "#OCR",
+        "#AdversarialML",
+        "#DocumentAI",
+        "#LLMSecurity",
+        "#EducationalTechnology"
+      ],
+      "paper_id": "2026-10-13-arxiv-airri_towards_a_human_readable_machine_resistant_reading_interface",
+      "paper_title": "AIRRI: Towards a Human-Readable, Machine-Resistant Reading Interface",
+      "paper_date": "2026-10-13",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-14T18:24:04",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-can_an_agent_learn_to_predict_its_own_failure_outcome_grounded_confidence_calibration_in_l",
+    "arxiv_id": "2610.18614v1",
+    "date": "2026-10-13",
+    "title": "Can an Agent Learn to Predict Its Own Failure? Outcome-Grounded Confidence Calibration in LLM Agents",
+    "authors": "Ashutosh Hathidara",
+    "abstract": "Controlling an acting LLM agent means deciding, at each step of a long-horizon task, whether to trust its next action, abstain, or hand off to a human. That decision needs a per-step confidence signal predicting whether the current rollout will eventually succeed. The agent's own self-reported verbalized confidence is the natural candidate, but existing reinforcement learning methods calibrate it against the correctness of a decision at the current step. We propose a method to calibrate it against the eventual outcome of a multi-step episode: under GRPO, the group of rollouts for a task supplies success labels, and a proper scoring rule scores each step's confidence against the realized outcome. In offline RL on recorded trajectories of a Qwen2.5-7B agent in ALFWorld, TextWorld, and WebShop environments, the AUROC of step confidence against episode outcome rises from near chance to 0.68-0.85, and the top-10% of steps the agent is most confident about succeed ~4.3x more often than average. In online RL on the live ALFWorld agent, four calibration rewards improve early-step AUROC, expected calibration error goes from 0.42 to below 0.12, and selective execution improves over both the untrained agent and a format-only RL control, without degrading task success. We also introduce an evaluation protocol that separates episode depth, task difficulty, and attempt-level foresight, which shows where the gain lies: the trained agent recognizes from its first step which tasks it will fail, while telling a succeeding attempt from a failing one at the same task is harder, with some early-window signal emerging on TextWorld.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-13T16:00:01Z",
+    "updated": "2026-10-13T16:00:01Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18614v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18614v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "The paper shows that an LLM agent can learn confidence signals calibrated to the eventual success of an entire multi-step episode, enabling better decide-to-act vs abstain behavior.",
+      "engineering_relevance": "This matters for deploying agents in real systems because step-level confidence can support selective execution, human handoff, and safer long-horizon automation without reducing task success.",
+      "method": [
+        "Use GRPO to train the agent’s verbalized confidence against the final episode outcome rather than the current-step correctness.",
+        "Apply a proper scoring rule to each rollout step using success labels from grouped trajectories.",
+        "Evaluate both offline on logged trajectories and online on a live ALFWorld agent, including selective execution metrics."
+      ],
+      "evidence_signal": "Across offline ALFWorld, TextWorld, and WebShop evaluations, step confidence AUROC rises from near chance to 0.68–0.85, and in online ALFWorld calibration rewards reduce ECE from 0.42 to below 0.12.",
+      "watch_item": "The strongest signal appears to be episode-level foresight rather than clean attempt-level discrimination, so real deployments should be cautious about over-trusting confidence on harder or early-step decisions.",
+      "hashtags": [
+        "#LLMAgents",
+        "#Calibration",
+        "#ReinforcementLearning",
+        "#HumanInTheLoop",
+        "#AutonomousSystems"
+      ],
+      "paper_id": "2026-10-13-arxiv-can_an_agent_learn_to_predict_its_own_failure_outcome_grounded_confidence_calibration_in_l",
+      "paper_title": "Can an Agent Learn to Predict Its Own Failure? Outcome-Grounded Confidence Calibration in LLM Agents",
+      "paper_date": "2026-10-13",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-14T18:24:07",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-does_self_distillation_improve_reasoning",
+    "arxiv_id": "2610.18613v1",
+    "date": "2026-10-13",
+    "title": "Does self-distillation improve reasoning?",
+    "authors": "Jason Ken Adhinarta, Raina Wu, Ashutosh Sharma, Avinash Balakrishnan, Rameswar Panda, Polina Golland",
+    "abstract": "Self-distillation is an emerging approach that trains a model to imitate its own predictions when conditioned on privileged information, such as correct answers or environmental feedback. Recent methods have reported better sample efficiency and generalization than reinforcement learning (RL), but it remains unclear whether these gains extend beyond in-distribution evaluations and whether they stem from privileged distillation. In this paper, we revisit two representative methods, Self-Distillation Policy Optimization (SDPO) and On-Policy Self-Distillation (OPSD), across code, science, tool use, and math reasoning tasks. We find that their reported gains do not consistently generalize to unseen problems and are largely explained by overfitting or transferring existing reasoning behavior, rather than effectively using privileged information. Moreover, self-distillation gradients show weak alignment with policy gradients that directly optimize expected reward, questioning whether they provide an effective direction for policy improvement. Our experiments across Qwen3 models (1.7B-14B) and OLMo-3-7B suggest that effectively leveraging privileged information to improve reasoning remains an open challenge. Our code is available at https://github.com/sleepypandu/does-sd-improve-reasoning",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-13T15:59:36Z",
+    "updated": "2026-10-13T15:59:36Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18613v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18613v1"
+      }
+    ],
+    "score": 70,
+    "infographic": {
+      "key_insight": "Self-distillation does not reliably improve reasoning; the paper finds that apparent gains often come from overfitting or reusing existing behavior rather than effectively leveraging privileged information.",
+      "engineering_relevance": "For practitioners building reasoning models, this suggests self-distillation should be treated as a risky optimization strategy that may not translate to robust out-of-distribution gains without stronger evaluation and reward-aligned training.",
+      "method": [
+        "Revisit two self-distillation methods: SDPO and OPSD.",
+        "Test across code, science, tool use, and math reasoning tasks.",
+        "Compare self-distillation gradients with policy gradients for reward optimization."
+      ],
+      "evidence_signal": "The authors evaluate Qwen3 models from 1.7B to 14B parameters and OLMo-3-7B, finding that reported improvements do not consistently generalize to unseen problems.",
+      "watch_item": "Self-distillation may look effective on in-distribution benchmarks while failing to provide a policy-improving gradient direction, so generalization and gradient alignment should be checked carefully.",
+      "hashtags": [
+        "#SelfDistillation",
+        "#ReasoningModels",
+        "#RL",
+        "#LLMTraining",
+        "#Generalization"
+      ],
+      "paper_id": "2026-10-13-arxiv-does_self_distillation_improve_reasoning",
+      "paper_title": "Does self-distillation improve reasoning?",
+      "paper_date": "2026-10-13",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-14T18:24:09",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-blade_auditing_information_use_for_failure_attribution_in_llm_multi_agent_systems",
+    "arxiv_id": "2610.18780v1",
+    "date": "2026-10-13",
+    "title": "BLADE: Auditing Information Use for Failure Attribution in LLM Multi-Agent Systems",
+    "authors": "Xiaoguang Guo, Yaohao Long, Chuxu Zhang",
+    "abstract": "Large language model multi-agent systems extend individual agents' capabilities through collaboration across specialized roles, tools, and workflows. Yet collaboration makes failures harder to diagnose: one agent may misinterpret a correct result while others carry the mistake forward. Failure attribution therefore seeks to identify the responsible agent and decisive error step. Recent methods trace dependencies, but knowing where information came from is not the same as knowing where it went wrong. We introduce BLADE (Blame Localization via Audited Dependency Evidence), a training-free framework that moves beyond tracing information to auditing its use. Using Jev for structured probabilistic judgments, BLADE uses dependency probabilities to select relevant source-decision handoffs for auditing. At these handoffs, it examines whether receiving decisions use their sources faithfully and within task requirements, distinguishing error introduction, propagation, and repair. These findings inform a global diagnosis that considers all execution steps. Without reference answers, BLADE achieves the best or tied-best step accuracy among eight strategies under a shared Jev decision interface on 1,228 failed runs across five Who&When and Who&When Pro subsets, outperforming All-at-once by 2.2-11.1 percentage points. Making responsibility evidence explicit offers a path toward more interpretable and reliable agentic systems.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-10-13T17:34:34Z",
+    "updated": "2026-10-13T17:34:34Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18780v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18780v1"
+      }
+    ],
+    "score": 69,
+    "infographic": {
+      "key_insight": "BLADE improves failure attribution in LLM multi-agent systems by auditing how information is used at key handoffs, not just tracing where it came from.",
+      "engineering_relevance": "This gives builders a training-free way to localize responsibility in agent pipelines, making debugging and reliability analysis more interpretable.",
+      "method": [
+        "Compute dependency probabilities to select source-to-decision handoffs for auditing.",
+        "Use Jev-based probabilistic judgments to check whether a receiving decision faithfully uses its source under task requirements.",
+        "Classify handoffs as error introduction, propagation, or repair, then aggregate these signals into a global diagnosis."
+      ],
+      "evidence_signal": "On 1,228 failed runs across five Who&When and Who&When Pro subsets, BLADE achieved the best or tied-best step accuracy among eight strategies and beat All-at-once by 2.2-11.1 points without reference answers.",
+      "watch_item": "Because it relies on probabilistic auditing of selected handoffs, performance may depend on dependency estimation quality and the reliability of the Jev judgment interface.",
+      "hashtags": [
+        "#LLMAgents",
+        "#FailureAttribution",
+        "#DebuggingAI",
+        "#MultiAgentSystems",
+        "#AIAlignment"
+      ],
+      "paper_id": "2026-10-13-arxiv-blade_auditing_information_use_for_failure_attribution_in_llm_multi_agent_systems",
+      "paper_title": "BLADE: Auditing Information Use for Failure Attribution in LLM Multi-Agent Systems",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-14T18:24:11",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-read_the_room_before_your_model_generates",
+    "arxiv_id": "2610.18820v1",
+    "date": "2026-10-13",
+    "title": "Read the Room Before Your Model Generates",
+    "authors": "Muyao Kong, Zhihao Lin",
+    "abstract": "Large language models (LLMs) generally rely on sampling temperature to regulate the amount of randomness in their outputs. Mainstream methods for selecting temperature typically involve fixed, heuristic global settings and context or token-level calibration, rather than a geometrically interpretable representation of the communicative scenario. In this work, we introduce a simple and interpretable temperature selection framework, the \\textbf{Scenario-Actor}, which adapts decoding to the inferred situational characteristics. Scenario-Actor extracts scenario-relevant structures from Transformer hidden states and determines the temperature from scenario embedding, a structured geometric representation of the communicative setting. Empirical results show that on Llama-3.1-8B-Instruct, Scenario-Actor achieves strong goal-completion performance in interactive social scenarios, significant gains on open-ended instruction following, and competitive performance on multi-turn conversation compared to multiple baselines.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-13T17:51:18Z",
+    "updated": "2026-10-13T17:51:18Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18820v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18820v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "Scenario-Actor adapts LLM sampling temperature from an interpretable geometric embedding of the communicative scenario, instead of using a fixed global heuristic.",
+      "engineering_relevance": "This offers a practical decoding control mechanism for deployment settings where output randomness should match the interaction context, improving task success without changing the base model.",
+      "method": [
+        "Extract scenario-relevant structure from Transformer hidden states.",
+        "Build a structured scenario embedding that geometrically represents the communicative setting.",
+        "Map the embedding to a decoding temperature for context-adaptive generation."
+      ],
+      "evidence_signal": "The abstract reports strong goal-completion in interactive social scenarios, significant gains on open-ended instruction following, and competitive multi-turn conversation results on Llama-3.1-8B-Instruct versus multiple baselines.",
+      "watch_item": "Performance depends on reliably inferring the scenario from hidden states, so misclassification or brittle scenario embeddings could lead to poorly tuned temperatures.",
+      "hashtags": [
+        "#LLMDecoding",
+        "#TemperatureSampling",
+        "#AdaptiveGeneration",
+        "#TransformerModels",
+        "#AIResearch"
+      ],
+      "paper_id": "2026-10-13-arxiv-read_the_room_before_your_model_generates",
+      "paper_title": "Read the Room Before Your Model Generates",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-14T18:24:13",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-bridgetwist_twisting_schr_dinger_bridges_for_training_free_conditional_sampling",
+    "arxiv_id": "2610.18658v1",
+    "date": "2026-10-13",
+    "title": "BridgeTwist: Twisting Schrödinger Bridges for Training-Free Conditional Sampling",
+    "authors": "Mengyu Li, Qianqian Qu, Jun S. Liu",
+    "abstract": "Generative models are often required to serve many downstream conditional tasks. In the training-free setting, a pretrained unconditional model is reused as a prior and combined with a task-specific likelihood to sample from the corresponding posterior. While such training-free samplers have been developed for diffusion and flow models, their counterpart for Schrödinger bridge (SB) models remains unexplored, despite the growing appeal of SBs as flexible stochastic transport models between general source and target distributions. We propose BridgeTwist, a training-free conditional sampler for pretrained SB generative models, formulated as a tempered twisted sequential Monte Carlo scheme. Its twist is a closed-form plug-in surrogate, obtained by combining the velocity and score fields exposed by SB pretraining into an endpoint predictor and evaluating the likelihood there. Since this surrogate is less reliable near the source, we temper the twist with a time-varying exponent, downweighting its influence at early steps. We further introduce a bridge-shaped inference-time diffusion schedule that concentrates the proposal noise in the interior of the path. Telescoping importance weights then cancel all intermediate twist factors, yielding an asymptotically exact sampler for the posterior. Empirically, BridgeTwist outperforms training-free baselines on class-conditional and text-prompted image generation, and is competitive with specialized inverse problem solvers on inpainting, deblurring, and super-resolution.",
     "category": "Scientific Machine Learning",
     "source": "arXiv",
-    "published": "2026-10-09T16:18:11Z",
-    "updated": "2026-10-09T16:18:11Z",
+    "published": "2026-10-13T16:20:49Z",
+    "updated": "2026-10-13T16:20:49Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18658v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18658v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "BridgeTwist turns a pretrained Schrödinger bridge into a training-free conditional sampler by twisting the bridge with a likelihood-based surrogate and time-varying tempering.",
+      "engineering_relevance": "This gives a reusable inference-time way to adapt one generative model to many downstream conditional tasks without retraining.",
+      "method": [
+        "Builds a plug-in twist from the SB velocity and score fields to predict endpoints and score the task likelihood there.",
+        "Uses a time-varying exponent to weaken the twist near the source where the surrogate is least reliable.",
+        "Adds a bridge-shaped diffusion schedule and importance weighting so intermediate twist factors telescope away."
+      ],
+      "evidence_signal": "The method is evaluated on class-conditional and text-prompted image generation, and on inverse problems including inpainting, deblurring, and super-resolution, where it outperforms training-free baselines and is competitive with specialized solvers.",
+      "watch_item": "Performance depends on the quality of the endpoint surrogate and the chosen tempering/schedule, especially early in the bridge where the twist is least accurate.",
+      "hashtags": [
+        "#SchrodingerBridge",
+        "#GenerativeAI",
+        "#DiffusionModels",
+        "#ConditionalSampling",
+        "#ScientificML"
+      ],
+      "paper_id": "2026-10-13-arxiv-bridgetwist_twisting_schr_dinger_bridges_for_training_free_conditional_sampling",
+      "paper_title": "BridgeTwist: Twisting Schrödinger Bridges for Training-Free Conditional Sampling",
+      "paper_date": "2026-10-13",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-14T18:24:15",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-multialloc_budget_aware_precision_allocation_for_kv_cache_quantization",
+    "arxiv_id": "2610.18642v1",
+    "date": "2026-10-13",
+    "title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+    "authors": "Yangchengyu Zhou, Zhiping Wu, Runchang Jiang, Dongdong Ren, Youfang Han, Wei Zhao",
+    "abstract": "The Key-Value (KV) cache constitutes a dominant source of memory consumption during large language model (LLM) inference, particularly in long-context and complex reasoning scenarios. Existing KV cache quantization methods have explored different compression granularities, including layer-wise precision adjustment and token-level information preservation. In practical deployment, however, the key challenge is not merely compression, but how to allocate limited quantization resources among heterogeneous precision preservation strategies under a fixed KV cache memory budget. We propose MultiAlloc, a profiling-guided precision allocation framework for KV cache quantization that adaptively distributes limited quantization resources between layer-wise precision enhancement and token-wise preservation. MultiAlloc employs lightweight offline profiling to characterize layer sensitivity and token importance, enabling adaptive precision allocation under a fixed memory constraint. Guided by the profiled memory--accuracy trade-off, it automatically derives an effective precision allocation strategy without online allocation search, and applies the resulting policy during inference. Extensive experiments on reasoning and long-context benchmarks demonstrate that MultiAlloc consistently improves over layer-wise, token-wise, and recent multi-granularity KV cache quantization methods under matched memory budgets across diverse models, including Mistral, Llama, DeepSeek-Qwen, and QwQ.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-13T16:10:45Z",
+    "updated": "2026-10-13T16:10:45Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18642v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18642v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "MultiAlloc allocates a fixed KV-cache memory budget across layer-wise precision and token-wise preservation to improve quantization quality without online search.",
+      "engineering_relevance": "It provides a practical, profiling-driven way to reduce LLM inference memory while preserving accuracy for long-context and reasoning workloads.",
+      "method": [
+        "Lightweight offline profiling measures layer sensitivity and token importance.",
+        "The profiler estimates the memory–accuracy trade-off under a fixed budget.",
+        "An allocation policy is derived once and applied during inference, avoiding online search."
+      ],
+      "evidence_signal": "The abstract reports consistent gains over layer-wise, token-wise, and recent multi-granularity KV-cache quantization methods on reasoning and long-context benchmarks across Mistral, Llama, DeepSeek-Qwen, and QwQ.",
+      "watch_item": "The approach depends on offline profiling being representative of the target model and workload, so mismatches in deployment data could reduce gains.",
+      "hashtags": [
+        "#KVCache",
+        "#Quantization",
+        "#LLMInference",
+        "#LongContext",
+        "#MemoryEfficiency"
+      ],
+      "paper_id": "2026-10-13-arxiv-multialloc_budget_aware_precision_allocation_for_kv_cache_quantization",
+      "paper_title": "MultiAlloc: Budget-Aware Precision Allocation for KV Cache Quantization",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-14T18:24:17",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-exact_topological_compliance_generating_persistence_equivalent_graphs",
+    "arxiv_id": "2610.18856v1",
+    "date": "2026-10-13",
+    "title": "Exact Topological Compliance: Generating Persistence-Equivalent Graphs",
+    "authors": "Mattie Ji, Indradyumna Roy, Vikas Garg",
+    "abstract": "Persistent homology summarizes the topological evolution of a graph as persistence diagrams (PDs). Generating graphs whose topology matches a target descriptor is increasingly important, yet existing topology-aware generative models rely on soft regularization, producing graphs whose PDs may only be approximately similar. We initiate a principled investigation of the generation problem: produce graphs that realize a target PD exactly. We propose two approaches guided by the implicit local and global constraints a target PD imposes. The local approach builds degree-based PD-equivalent graphs iteratively, and we prove that every output realizes the target PD and that every degree-based PD-equivalent graph is reachable. However, as shown thereafter, local generation necessarily trades off between sample diversity and reaching infeasible states. We therefore recast generation as a global constraint satisfaction problem with a complete encoding solvable by modern constraint programming solvers. This is applicable to any vertex-based permutation equivariant filtration scheme and is minimal under the degree filtration. Experiments on four standard graph generation benchmarks confirm that both methods realize the target PD exactly. Together, our methods provide a principled treatment of strict topology-compliant graph generation. Code is available at https://github.com/Aalto-QuML/ExactCompliance.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-13T17:59:19Z",
+    "updated": "2026-10-13T17:59:19Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "math.AT"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18856v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18856v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "The paper shows how to generate graphs whose persistent homology matches a target persistence diagram exactly, rather than only approximately.",
+      "engineering_relevance": "This enables topology-constrained graph generation for scientific and engineering workflows where strict structural guarantees matter.",
+      "method": [
+        "Local method: iteratively build degree-based PD-equivalent graphs using implicit topological constraints.",
+        "Global method: encode exact PD matching as a complete constraint-satisfaction problem solvable with modern CP solvers.",
+        "Supports any vertex-based permutation-equivariant filtration and is minimal under degree filtration."
+      ],
+      "evidence_signal": "Experiments on four standard graph generation benchmarks show both proposed methods realize the target persistence diagram exactly.",
+      "watch_item": "The local approach can trade off diversity and may get trapped in infeasible states, so solver-based scalability and practicality should be checked for larger graphs.",
+      "hashtags": [
+        "#TopologicalDataAnalysis",
+        "#PersistentHomology",
+        "#GraphGeneration",
+        "#ConstraintProgramming",
+        "#ScientificAI"
+      ],
+      "paper_id": "2026-10-13-arxiv-exact_topological_compliance_generating_persistence_equivalent_graphs",
+      "paper_title": "Exact Topological Compliance: Generating Persistence-Equivalent Graphs",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-14T18:24:19",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-chunkact_action_chunking_for_agentic_robotics",
+    "arxiv_id": "2610.18874v1",
+    "date": "2026-10-13",
+    "title": "ChunkAct: Action Chunking for Agentic Robotics",
+    "authors": "Bingxin Xu, Wenrui Bao, Xinxin Liu, Jiawei Zhou, Yuzhang Shang, Emilio Ferrara",
+    "abstract": "Agentic robotics places a large language model (LLM) agent in the robot control loop, where it composes perception, motion, and vision-language-action (VLA) tools under the guidance of a memory and thereby generalizes to new tasks without retraining. This generality comes at a steep price in efficiency. Every primitive requires a round of LLM reasoning over the full interaction history, so the cost of an episode grows with the number of primitives. We find this reasoning largely redundant: once a sub-goal is chosen, its primitives follow a routine already prescribed by memory. We present ChunkAct, which introduces action chunking to agentic robotics. Online, a single call launches a chunk of chained primitives, which executes autonomously and returns control only upon failure. Offline, ChunkAct compiles the memory into these chunks, so execution is memory-free at test time and the planner is reserved for decisions that require reasoning. LLM computation therefore scales with the number of decisions rather than the number of primitives. On LIBERO-Pro, ChunkAct improves task success by 5.0 points over the state of the art in agentic robotics while requiring 2.9x fewer LLM calls, 4.4x fewer input tokens, and 2.3x fewer output tokens.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-10-13T17:59:57Z",
+    "updated": "2026-10-13T17:59:57Z",
+    "primary_category": "cs.RO",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.18874v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.18874v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "ChunkAct reduces redundant LLM reasoning in agentic robotics by grouping routine primitives into autonomous action chunks, so the planner is invoked only when new decisions are needed.",
+      "engineering_relevance": "This shifts control from per-primitive planning to decision-level planning, cutting inference cost and latency while preserving generalization to unseen tasks.",
+      "method": [
+        "Compile robot memory into executable action chunks offline.",
+        "Launch a chunk with one LLM call; let primitives chain autonomously until failure.",
+        "Reserve LLM reasoning for sub-goal selection and exception handling."
+      ],
+      "evidence_signal": "On LIBERO-Pro, ChunkAct improves task success by 5.0 points over prior agentic robotics methods while using 2.9x fewer LLM calls, 4.4x fewer input tokens, and 2.3x fewer output tokens.",
+      "watch_item": "Performance may depend on how well memory can be compiled into reliable chunks; failures inside a chunk still require robust exception detection and recovery.",
+      "hashtags": [
+        "#AgenticRobotics",
+        "#ActionChunking",
+        "#LLMPlanning",
+        "#RobotLearning",
+        "#EfficientInference"
+      ],
+      "paper_id": "2026-10-13-arxiv-chunkact_action_chunking_for_agentic_robotics",
+      "paper_title": "ChunkAct: Action Chunking for Agentic Robotics",
+      "paper_date": "2026-10-13",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-10-14T18:24:21",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-13-arxiv-joint_neural_posterior_estimation_and_model_selection_for_chemical_reaction_networks",
+    "arxiv_id": "2610.18825v1",
+    "date": "2026-10-13",
+    "title": "Joint Neural Posterior Estimation and Model Selection for Chemical Reaction Networks",
+    "authors": "J. Arturo Esquivel, Jorge A. Campos-Gonzalez-Angulo, Sergio Pablo-García, Alán Aspuru-Guzik, Vianey Leos-Barajas",
+    "abstract": "Simulation-based Bayesian inference for Chemical Reaction Networks (CRNs) must simultaneously solve two computationally demanding problems: discriminating between overlapping reaction pathways and estimating reaction rate constants. Classical approaches, such as Sequential Monte Carlo ABC, rely on handcrafted summary statistics and scale poorly across large parameter spaces. To overcome this, we introduce a neural inference architecture. Our pipeline utilizes shared 1D-CNNs and a permutation-invariant Set Attention mechanism to learn low-dimensional summary statistics from variable-length, multi-experiment time-series data. These statistics simultaneously condition a model selection network to compute posterior model probabilities and model-specific conditional Invertible Neural Networks (cINNs) that estimate parameter posterior distributions. We demonstrate the practical utility of our approach on a real protodeboronation example, illustrating how it handles structural ambiguity and extracts kinetic parameters from competing catalyst deactivation pathways.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-13T17:52:39Z",
+    "updated": "2026-10-13T17:52:39Z",
     "primary_category": "stat.ML",
     "categories": [
       "stat.ML",
       "cs.LG",
-      "math.NA"
+      "physics.chem-ph"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13804v1"
+        "url": "https://arxiv.org/abs/2610.18825v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13804v1"
+        "url": "https://arxiv.org/pdf/2610.18825v1"
       }
     ],
-    "score": 51,
+    "score": 62,
     "infographic": {
-      "key_insight": "Inequality constraints can be incorporated directly into Gaussian process PDE solvers as a valid sequential conditioning step, turning admissibility requirements like positivity, monotonicity, and no-arbitrage into part of the probabilistic update.",
-      "engineering_relevance": "This provides a practical way to enforce physically or economically meaningful constraints in scientific computing without changing the underlying PDE solver pipeline.",
+      "key_insight": "The paper presents a unified neural inference pipeline that jointly chooses the most plausible chemical reaction network and estimates its kinetic parameters from time-series experiments.",
+      "engineering_relevance": "This enables faster, more scalable simulation-based inference for reaction engineering problems where multiple mechanisms fit the same data.",
       "method": [
-        "Condition a GP prior on PDE residuals, boundary data, and measurements to form a physics-informed posterior.",
-        "Treat finite-dimensional inequality constraints as a second conditioning step via truncated-Gaussian moments.",
-        "Use the equality-conditioned posterior as the prior for virtual inequality observations."
+        "Shared 1D-CNNs learn compact features from variable-length time-series experiments.",
+        "A permutation-invariant Set Attention module aggregates multi-experiment information into low-dimensional summaries.",
+        "These summaries feed a model-selection network plus model-specific conditional INNs for posterior parameter estimation."
       ],
-      "evidence_signal": "Across Poisson reconstruction, option pricing, and air-quality experiments, the constrained approach improved errors and constraint satisfaction, including a 63% error reduction on Poisson, 22% lower extrapolation error on thin S&P 500 option data, and a 74% reduction in sub-zero-tail proxy for air-quality fields.",
-      "watch_item": "The inequality update is computationally non-Gaussian and depends on virtual-point choices and truncated-moment calculations, which may affect scalability and numerical stability.",
+      "evidence_signal": "The abstract reports validation on a real protodeboronation case, showing the method can resolve competing catalyst deactivation pathways and recover kinetic parameters.",
+      "watch_item": "Performance may depend on the quality and diversity of simulated training data, and the added model-selection step can be sensitive when candidate mechanisms are highly similar.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#GaussianProcesses",
-        "#ProbabilisticNumerics",
-        "#PDEs",
-        "#ConstrainedInference"
+        "#BayesianInference",
+        "#ChemicalReactionNetworks",
+        "#NeuralPosteriorEstimation",
+        "#ModelSelection"
       ],
-      "paper_id": "2026-10-09-arxiv-constrained_probabilistic_numerics_gaussian_process_solvers_for_linear_pdes_under_linear_i",
-      "paper_title": "Constrained Probabilistic Numerics: Gaussian Process Solvers for Linear PDEs under Linear Inequality Constraints",
-      "paper_date": "2026-10-09",
+      "paper_id": "2026-10-13-arxiv-joint_neural_posterior_estimation_and_model_selection_for_chemical_reaction_networks",
+      "paper_title": "Joint Neural Posterior Estimation and Model Selection for Chemical Reaction Networks",
+      "paper_date": "2026-10-13",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-13T20:08:16",
+      "generated_at": "2026-10-14T18:24:23",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-09-arxiv-amortized_counterfactual_prediction_with_graph_neural_networks",
-    "arxiv_id": "2610.13724v1",
-    "date": "2026-10-09",
-    "title": "Amortized Counterfactual Prediction with Graph Neural Networks",
-    "authors": "Hendrik Stumpf, Francesco Quinzan",
-    "abstract": "Counterfactual inference asks how an observed outcome might have differed under different circumstances, such as whether a patient would have recovered had they received a different treatment. Such questions arise whenever decisions depend on the outcomes of alternatives that were not observed. Answering counterfactual queries generally requires knowledge of the underlying causal structure, which is often unavailable in practice. A common approach is therefore to first estimate the causal graph from observational data and then perform counterfactual inference. However, errors in the estimated causal graph can propagate to downstream counterfactual predictions. To address this challenge, we introduce the Counterfactual Graph Neural Process (CFGNP), an end-to-end approach that answers counterfactual queries directly from observational data without first estimating a causal graph. CFGNP uses Graph Neural Networks (GNNs) to exploit the dual-graph structure by restricting cross-world message passing to corresponding factual--counterfactual variables. Across synthetic and image-based benchmarks, CFGNP achieves stronger predictive performance than existing approaches, including on the German Loan benchmark, where it reduces MSE from $4.51 \\times 10^{-2}$ to $0.19 \\times 10^{-2}$. Furthermore, on synthetic causal graphs, a model trained only on 10-node graphs maintains strong predictive performance on graphs with up to 30 nodes, without retraining.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-10-09T15:22:18Z",
-    "updated": "2026-10-09T15:22:18Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13724v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13724v1"
-      }
-    ],
-    "score": 51,
-    "infographic": {
-      "key_insight": "CFGNP learns counterfactual predictions directly from observational data by using a graph neural network to pass messages only between corresponding factual and counterfactual variables, avoiding explicit causal graph estimation.",
-      "engineering_relevance": "This enables more robust counterfactual decision support in settings like healthcare and lending, where causal structure is uncertain and errors in graph estimation can degrade downstream predictions.",
-      "method": [
-        "End-to-end Counterfactual Graph Neural Process for counterfactual inference",
-        "Dual-graph GNN with restricted cross-world message passing between matched variables",
-        "Trained on observational data without separately learning a causal graph"
-      ],
-      "evidence_signal": "Across synthetic and image-based benchmarks, including German Loan, CFGNP outperformed prior methods and reduced MSE from 4.51×10^-2 to 0.19×10^-2; a model trained on 10-node graphs generalized to graphs with up to 30 nodes without retraining.",
-      "watch_item": "Performance may depend on the quality and coverage of observational training data, and generalization to larger or structurally different causal systems may still be limited in real-world deployments.",
-      "hashtags": [
-        "#CounterfactualInference",
-        "#GraphNeuralNetworks",
-        "#CausalLearning",
-        "#MachineLearning",
-        "#KnowledgeMining"
-      ],
-      "paper_id": "2026-10-09-arxiv-amortized_counterfactual_prediction_with_graph_neural_networks",
-      "paper_title": "Amortized Counterfactual Prediction with Graph Neural Networks",
-      "paper_date": "2026-10-09",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-13T20:08:19",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-x_avdd_cross_attentive_audio_visual_dataset_distillation",
-    "arxiv_id": "2610.13687v1",
-    "date": "2026-10-09",
-    "title": "X-AVDD: Cross-Attentive Audio-Visual Dataset Distillation",
-    "authors": "Saumyaranjan Mohanty, Aravind Reddy, Konda Reddy Mopuri",
-    "abstract": "Audio-visual dataset distillation aims to synthesize a small dataset from a large paired audio-visual dataset, while nearly preserving the training utility for neural networks. Existing approaches such as DM and AVDD face two critical limitations: 1) they are memory-intensive, making them difficult to scale to complex architectures and higher samples-per-class (SPC) settings, and 2) they often fail to preserve strong cross-modal semantic correspondence. To tackle these issues, we propose X-AVDD, a cross-attention-based distillation method that explicitly captures inter-modal relationships during synthesis. By decoupling cross-modal alignment from joint optimization, X-AVDD is substantially more memory-efficient, reducing end-to-end synthesis cost by $\\sim 8\\times$ GPU-hours, while producing highly aligned synthetic data. Empirically, X-AVDD significantly outperforms other audio-visual distillation methods. On VGGSound, an audio-visual dataset of short YouTube clips, X-AVDD improves top-1 test accuracy from $8.2\\%\\rightarrow24.0\\%$ at SPC=$10$ and $9.8\\%\\rightarrow26.5\\%$ at SPC=$20$. Furthermore, X-AVDD improves cross-architecture generalization (e.g., $25.5\\%\\rightarrow35.3\\%$ for a ViT target on AVE dataset at SPC $=50$) and successfully scales to complex architectures such as AudioCLIP, achieving $62.3\\%$ accuracy using only $5.65\\%$ of the full dataset, against the full dataset accuracy of $72.4\\%$ while completing in $9\\times$ lower training time compared to the full dataset.",
+    "id": "2026-10-13-arxiv-tiny_recursive_message_passing",
+    "arxiv_id": "2610.18649v1",
+    "date": "2026-10-13",
+    "title": "Tiny Recursive Message Passing",
+    "authors": "Tommaso Salvatori, Matteo Forasassi, Alexis Toumi, Giovanni de Felice",
+    "abstract": "Message passing neural networks have shown remarkable performance in algorithmic and constraint reasoning, due to their ability to encode the structure of the task directly in the architecture. Recent work has shown that better results can be achieved using recursive transformers trained with deep supervision and truncated recursions, which make extremely deep loops stable to train, and equipped with test-time procedures such as discrete deduction lattices. In this work, we apply the same procedures to message passing networks, and show that the two ingredients are complementary, and lead to parameter efficient models: we obtain about $99\\%$ test accuracy on Sudoku-Extreme with a model of $16$k parameters that trains in about $10$ minutes on an H100, or in $9$ hours on a CPU. We further show that the cost of truncating gradients grows with the number of rounds information needs to cross the graph, making the choice of wiring a trade-off between robustness to truncation and transfer across problem sizes. We conclude by showing that our models transfer zero-shot to larger instances than those seen during training, outperforming popular neural baselines on N-queens and Boolean satisfiability with a fraction of their parameters.",
     "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-10-09T14:51:26Z",
-    "updated": "2026-10-09T14:51:26Z",
-    "primary_category": "cs.CV",
+    "published": "2026-10-13T16:13:31Z",
+    "updated": "2026-10-13T16:13:31Z",
+    "primary_category": "cs.LG",
     "categories": [
-      "cs.CV",
       "cs.LG",
-      "cs.SD"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13687v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13687v1"
-      }
-    ],
-    "score": 51,
-    "infographic": {
-      "key_insight": "X-AVDD distills paired audio-visual data by using cross-attention to preserve inter-modal semantics, making synthetic datasets more aligned and much more memory-efficient than prior methods.",
-      "engineering_relevance": "This enables scalable audio-visual dataset distillation for larger models and higher samples-per-class settings, reducing synthesis cost while retaining strong downstream training utility.",
-      "method": [
-        "Use cross-attention to explicitly model audio-visual correspondence during synthesis.",
-        "Decouple cross-modal alignment from joint optimization to reduce memory usage.",
-        "Generate compact synthetic paired data that preserves cross-modal semantics for training."
-      ],
-      "evidence_signal": "On VGGSound, X-AVDD raises top-1 accuracy from 8.2% to 24.0% at SPC=10 and from 9.8% to 26.5% at SPC=20, and it also improves cross-architecture transfer and scales to AudioCLIP with much lower training time.",
-      "watch_item": "Performance depends on carefully maintaining cross-modal alignment during synthesis, so mismatched audio-visual pairing or unstable attention learning could reduce distillation quality.",
-      "hashtags": [
-        "#AudioVisualLearning",
-        "#DatasetDistillation",
-        "#CrossAttention",
-        "#EfficientAI",
-        "#MultimodalML"
-      ],
-      "paper_id": "2026-10-09-arxiv-x_avdd_cross_attentive_audio_visual_dataset_distillation",
-      "paper_title": "X-AVDD: Cross-Attentive Audio-Visual Dataset Distillation",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-13T20:08:21",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-x_agentred_red_teaming_personal_agents_in_evolving_multi_service_ecosystems",
-    "arxiv_id": "2610.13886v1",
-    "date": "2026-10-09",
-    "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
-    "authors": "Yeonsung Jung, Zhiyuan Wang, Zifan Wang, Vítor Albiero, Benjamin Newman, Edoardo Debenedetti",
-    "abstract": "Personal agents increasingly connect to services across the web and applications by using tools. As the effects of their actions accumulate and interact across services, unintended or harmful outcomes can arise when agents fulfill benign user requests. Proactively identifying these compositional failures requires systematically exploring diverse cross-service paths. Existing red-teaming methods often simply prompt LLMs to identify potentially harmful paths from task and environment descriptions or decompose harmful objectives specified by humans or LLMs into seemingly benign action combinations. However, generation is biased toward patterns learned during training, potentially favoring familiar tool combinations and leaving novel cross-service interactions underexplored. To address this, we propose X-AgentRed, a self-evolving red-teaming framework that discovers harmful tool call paths through a graph of tool dependencies and expands and refines them using execution feedback. By analyzing each tool's effects, potential harms, and preconditions for execution, the red-teaming agent constructs a directed graph that captures how one tool's effects can satisfy another's execution preconditions. Recipes sampled from this graph are instantiated as realistic scenarios in which agents can produce harmful outcomes. Execution feedback enables self-improvement by diversifying paths that produce harm through tool substitution and refining preconditions at blocked steps in unsuccessful paths to enable further execution. Across four frontier agentic models, X-AgentRed achieves $1.77\\times$ the harmful path rate of STAC and explores a more diverse set of tools, yielding $2.99\\times$ the tool coverage on average.",
-    "category": "AI Scientists and Research Agents",
-    "source": "arXiv",
-    "published": "2026-10-09T17:34:44Z",
-    "updated": "2026-10-09T17:34:44Z",
-    "primary_category": "cs.AI",
-    "categories": [
       "cs.AI"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13886v1"
+        "url": "https://arxiv.org/abs/2610.18649v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13886v1"
+        "url": "https://arxiv.org/pdf/2610.18649v1"
       }
     ],
-    "score": 49,
+    "score": 62,
     "infographic": {
-      "key_insight": "X-AgentRed finds harmful cross-service agent behaviors by building and evolving a tool-dependency graph instead of relying only on prompted attack generation.",
-      "engineering_relevance": "For personal agents that act across multiple apps and services, this offers a practical way to stress-test tool chains and uncover risky compositional failures before deployment.",
+      "key_insight": "Tiny recursive message passing combines recursive training tricks from transformers with message passing networks to achieve high-accuracy reasoning on algorithmic tasks with very few parameters.",
+      "engineering_relevance": "The approach suggests a practical path to compact, fast-to-train models for constraint solving and structured reasoning, especially when compute and parameter budget are limited.",
       "method": [
-        "Analyze each tool’s effects, harms, and execution preconditions.",
-        "Build a directed graph where one tool’s effects can satisfy another tool’s requirements.",
-        "Sample graph recipes into realistic scenarios, then use execution feedback to diversify tool substitutions and refine blocked preconditions."
+        "Apply deep supervision to train very deep recurrent/recursive message passing loops.",
+        "Use truncated backpropagation through time to stabilize optimization while keeping the model small.",
+        "Add test-time discrete deduction lattice procedures to improve reasoning performance."
       ],
-      "evidence_signal": "Across four frontier agentic models, the method reached 1.77× the harmful path rate of STAC and 2.99× average tool coverage.",
-      "watch_item": "Because it relies on modeled tool effects and preconditions, performance may depend on how accurately the ecosystem is described and may miss harms outside the constructed graph.",
+      "evidence_signal": "The abstract reports about 99% test accuracy on Sudoku-Extreme with a 16k-parameter model, plus zero-shot transfer to larger N-queens and SAT instances.",
+      "watch_item": "Truncating gradients can hurt more when information must travel across many graph rounds, so wiring and graph diameter must be chosen carefully.",
       "hashtags": [
-        "#AgentRedTeaming",
-        "#ToolUse",
-        "#LLMAgents",
-        "#AISafety",
-        "#MultiAgentSystems"
+        "#MessagePassingNNs",
+        "#RecursiveModels",
+        "#AlgorithmicReasoning",
+        "#SudokuSolving",
+        "#NeuralComputation"
       ],
-      "paper_id": "2026-10-09-arxiv-x_agentred_red_teaming_personal_agents_in_evolving_multi_service_ecosystems",
-      "paper_title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-13T20:08:23",
+      "paper_id": "2026-10-13-arxiv-tiny_recursive_message_passing",
+      "paper_title": "Tiny Recursive Message Passing",
+      "paper_date": "2026-10-13",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-14T18:24:25",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-09-arxiv-specialists_learn_faster_knowledge_organization_in_pre_training_shapes_knowledge_update_ef",
-    "arxiv_id": "2610.13835v1",
-    "date": "2026-10-09",
-    "title": "Specialists Learn Faster: Knowledge Organization in Pre-training Shapes Knowledge Update Efficiency",
-    "authors": "Sheng Zhao, Yuhao Zhu",
-    "abstract": "An ideal (language) model must continually update its knowledge. Existing work largely focuses on making these updates efficient after training. We investigate how the organization of time-varying knowledge during pre-training shapes the efficiency of subsequent updates. Models trained on chronologically ordered knowledge specialize in the most recently encountered knowledge; we call them specialists. In contrast, models trained on the same knowledge in randomly shuffled order perform well across all represented time periods; we call them generalists. Surprisingly, specialists require far fewer update steps than generalists to acquire new knowledge. To explain this advantage, we derive a law from first principles that relates update cost to the model's optimization dynamics and that closely predicts empirical results. Guided by these findings, we design a strategy for organizing pre-training data that preserves stable historical knowledge while enabling efficient updates to current knowledge. We also show that the benefits of temporal knowledge organization extend to real-world pre-trained models and existing knowledge update tools, and generalize to other knowledge orderings. Project page: https://horizon-lab.org/specialist/",
+    "id": "2026-10-13-arxiv-brain_age_gap_progression_in_individuals_at_risk_for_neurodegeneration",
+    "arxiv_id": "2610.18794v1",
+    "date": "2026-10-13",
+    "title": "Brain Age Gap Progression in Individuals at Risk for Neurodegeneration",
+    "authors": "Jason Scheffel, Saurabh Sihag",
+    "abstract": "Neuroimaging is a widely used modality for characterizing neurodegeneration in various health conditions. Brain age gap has emerged as a promising biomarker for monitoring brain health from neuroimaging data using machine learning algorithms. Recent studies have leveraged coVariance neural networks (VNN)-driven pipelines based on the advancements in graph signal processing for relatively transparent construction of brain age gap from neuroimaging data. In this paper, we focus on a longitudinal study of VNN-based brain age gap in conjunction with Alzheimer's Progression Score (APS) in individuals that are at a higher risk of neurodegeneration due to family history of Alzheimer's disease. APS is a multimodal marker of disease progression. The longitudinal analysis of APS and VNN-derived brain age gap metrics revealed that a higher risk of disease progression at baseline predicted a larger rate of increase in brain age gap in follow-up visits. Thus, our findings revealed potential stratification in the brain age gap modulated by clinical/biological risks of AD in the at-risk population.",
     "category": "Literature and Knowledge Mining",
     "source": "arXiv",
-    "published": "2026-10-09T16:42:33Z",
-    "updated": "2026-10-09T16:42:33Z",
-    "primary_category": "cs.LG",
+    "published": "2026-10-13T17:40:34Z",
+    "updated": "2026-10-13T17:40:34Z",
+    "primary_category": "q-bio.QM",
     "categories": [
-      "cs.LG"
+      "q-bio.QM"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13835v1"
+        "url": "https://arxiv.org/abs/2610.18794v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13835v1"
+        "url": "https://arxiv.org/pdf/2610.18794v1"
       }
     ],
-    "score": 49,
+    "score": 61,
     "infographic": {
-      "key_insight": "How knowledge is ordered during pre-training changes later update efficiency: models trained chronologically become \"specialists\" that adapt to new knowledge much faster than randomly shuffled \"generalists.\"",
-      "engineering_relevance": "For continually updated language models, pre-training data organization can reduce future update cost while helping preserve useful historical knowledge.",
+      "key_insight": "In people at elevated risk for neurodegeneration, a higher baseline Alzheimer's Progression Score predicted a faster increase in VNN-derived brain age gap over follow-up.",
+      "engineering_relevance": "This suggests longitudinal brain-age models can be used to stratify risk and monitor progression using neuroimaging plus clinical biomarkers.",
       "method": [
-        "Compare chronological vs randomly shuffled pre-training knowledge orderings.",
-        "Derive a first-principles law linking update cost to optimization dynamics.",
-        "Design a data-ordering strategy that improves stability of past knowledge and update efficiency for current knowledge."
+        "Used a coVariance neural network (VNN) pipeline to estimate brain age gap from neuroimaging data.",
+        "Combined brain age gap with Alzheimer's Progression Score (APS) in a longitudinal analysis.",
+        "Compared follow-up changes in brain age gap against baseline disease-risk/progression status."
       ],
-      "evidence_signal": "The abstract reports empirical comparisons on pre-trained models and existing knowledge-update tools, with the derived law closely predicting observed update costs across knowledge orderings.",
-      "watch_item": "The benefit depends on temporal structure in the training data, so gains may be weaker or require re-tuning when the data does not have a meaningful chronology.",
+      "evidence_signal": "The abstract reports a longitudinal study in a family-history-at-risk cohort, finding that higher baseline progression risk was associated with a larger subsequent increase in brain age gap.",
+      "watch_item": "The abstract does not report cohort size, external validation, or effect sizes, so generalizability and clinical readiness remain uncertain.",
       "hashtags": [
-        "#LLM",
-        "#ContinualLearning",
-        "#KnowledgeUpdate",
-        "#Pretraining",
+        "#BrainAge",
+        "#Neurodegeneration",
+        "#AlzheimersDisease",
+        "#Neuroimaging",
         "#MachineLearning"
       ],
-      "paper_id": "2026-10-09-arxiv-specialists_learn_faster_knowledge_organization_in_pre_training_shapes_knowledge_update_ef",
-      "paper_title": "Specialists Learn Faster: Knowledge Organization in Pre-training Shapes Knowledge Update Efficiency",
-      "paper_date": "2026-10-09",
+      "paper_id": "2026-10-13-arxiv-brain_age_gap_progression_in_individuals_at_risk_for_neurodegeneration",
+      "paper_title": "Brain Age Gap Progression in Individuals at Risk for Neurodegeneration",
+      "paper_date": "2026-10-13",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-13T20:08:26",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-qtestbench_a_test_framework_for_evaluating_llm_generated_quantum_code",
-    "arxiv_id": "2610.13811v1",
-    "date": "2026-10-09",
-    "title": "QTestBench: A Test Framework for Evaluating LLM-Generated Quantum Code",
-    "authors": "Meriem Terki, Nouhaila Innan, Minghao Shao, Muhammad Kashif, Alberto Marchisio, Muhammad Shafique",
-    "abstract": "Large language models (LLMs) have shown strong results in classical code generation and are increasingly used to write the unit tests that safeguard that code. Whether they can do the same for quantum software is less clear, because quantum programs are probabilistic, depend on numerical tolerances, and are judged by domain-specific checkers, so a well-formed test can still disagree with the benchmark's verdict. Existing quantum benchmarks measure whether a model produces a correct solution, but not whether its tests can distinguish correct implementations from faulty ones. We introduce QTestBench, a framework that evaluates LLM-generated quantum test suites against independent benchmark checkers, never treating the tests themselves as ground truth. For each task, QTestBench prompts models to produce syntactic, semantic, and behavioral tests, injects candidate solutions at runtime, and compares each test verdict with the checker's label under three validation cohorts, each answering a distinct diagnostic question. We benchmark five LLMs on eight PennyLane QHack challenges and ten Qiskit HumanEval tasks. Generated suites almost always execute, but discrimination lags behind: the best generator reaches a test quality of 0.71 on QHack and 0.34 on Qiskit HumanEval, so executability alone overstates test quality. Oracle-verified synthetic mutants stabilize bug-detection estimates when natural faulty solutions are scarce, as on three of ten Qiskit tasks that yield none. QTestBench offers a reproducible, cross-framework benchmark for the trustworthiness of LLM-generated quantum tests.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-09T16:23:46Z",
-    "updated": "2026-10-09T16:23:46Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.CL",
-      "quant-ph"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13811v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13811v1"
-      }
-    ],
-    "score": 49,
-    "infographic": {
-      "key_insight": "QTestBench shows that LLM-generated quantum tests often run successfully but still fail to reliably distinguish correct code from buggy code.",
-      "engineering_relevance": "For quantum software engineering, the framework provides a practical way to assess whether automated tests are trustworthy before using them in validation pipelines.",
-      "method": [
-        "Prompts LLMs to generate syntactic, semantic, and behavioral tests for quantum programming tasks.",
-        "Injects candidate solutions at runtime and compares each test verdict against independent benchmark checker labels.",
-        "Uses three validation cohorts and oracle-verified synthetic mutants to evaluate test quality and bug-detection ability."
-      ],
-      "evidence_signal": "The authors benchmarked five LLMs on eight PennyLane QHack challenges and ten Qiskit HumanEval tasks, with best test quality reaching 0.71 on QHack and 0.34 on Qiskit HumanEval.",
-      "watch_item": "High executability does not guarantee useful discrimination, so test suites should be validated against independent checkers rather than assumed correct.",
-      "hashtags": [
-        "#QuantumComputing",
-        "#LLM",
-        "#CodeGeneration",
-        "#SoftwareTesting",
-        "#Benchmarking"
-      ],
-      "paper_id": "2026-10-09-arxiv-qtestbench_a_test_framework_for_evaluating_llm_generated_quantum_code",
-      "paper_title": "QTestBench: A Test Framework for Evaluating LLM-Generated Quantum Code",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-13T20:08:28",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-transformer_based_in_context_score_operator_learning_for_diffusion_models",
-    "arxiv_id": "2610.13690v1",
-    "date": "2026-10-09",
-    "title": "Transformer-based In-Context Score Operator Learning for Diffusion Models",
-    "authors": "Wuzhe Xu, Zhaiming Shen, Yulong Lu, Wenjing Liao, Rongjie Lai",
-    "abstract": "Diffusion models typically learn the generative dynamics of a single target distribution or a family of distributions indexed by conditioning variables fixed during training. This limits their ability to adapt to a previously unseen distribution from only a small set of examples. We introduce an in-context solution operator learning framework for diffusion models, in which each target distribution is treated as a task drawn from a meta-distribution and is specified at inference time by an empirical context set. Our method learns an in-context score operator that maps the context samples, a noisy query point, and the diffusion time to the task-dependent score, enabling reverse-diffusion sampling on unseen tasks without retraining or parameter updates. A key observation is that the task-dependent score admits a Gaussian-kernel conditional-mean representation. Its empirical Nadaraya--Watson approximation can be represented exactly by a model in our constructed transformer class, providing a principled foundation for the proposed query-dependent attention architecture. The operator is trained through amortized denoising score matching across task distributions. We establish generalization-error bounds that quantify the effects of the context size, the numbers of training tasks and within-task samples, model complexity, and intrinsic and ambient dimensions. Numerically, we evaluate the method on a range of scientific and visual datasets, including Navier-Stokes, ERA5 climate data, QuickDraw sketches, and Food-101. The results show that the proposed method performs well on relatively simple task families, while its performance degrades as task complexity increases, thereby illustrating both the promise and the limitations of in-context learning for diffusion models.",
-    "category": "Modeling and Simulation",
-    "source": "arXiv",
-    "published": "2026-10-09T14:53:49Z",
-    "updated": "2026-10-09T14:53:49Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13690v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13690v1"
-      }
-    ],
-    "score": 49,
-    "infographic": {
-      "key_insight": "The paper turns diffusion models into in-context learners by conditioning the score function on a small set of task examples, allowing adaptation to unseen distributions without retraining.",
-      "engineering_relevance": "This enables flexible generative modeling for scientific and vision tasks where each new scenario can be specified by a few samples instead of a full retraining pipeline.",
-      "method": [
-        "Treat each target distribution as a task sampled from a meta-distribution and provide an empirical context set at inference.",
-        "Learn an in-context score operator that takes context samples, a noisy query point, and diffusion time to predict the task-dependent score.",
-        "Use a transformer-style query-dependent attention mechanism justified by a Gaussian-kernel conditional-mean / Nadaraya–Watson representation."
-      ],
-      "evidence_signal": "The method was evaluated on Navier-Stokes, ERA5 climate data, QuickDraw, and Food-101, showing strong results on simpler task families but weaker performance as task complexity increased.",
-      "watch_item": "Performance can degrade on more complex task families, so context size, task diversity, and model capacity must be chosen carefully for reliable deployment.",
-      "hashtags": [
-        "#DiffusionModels",
-        "#InContextLearning",
-        "#Transformers",
-        "#ScientificML",
-        "#GenerativeAI"
-      ],
-      "paper_id": "2026-10-09-arxiv-transformer_based_in_context_score_operator_learning_for_diffusion_models",
-      "paper_title": "Transformer-based In-Context Score Operator Learning for Diffusion Models",
-      "paper_date": "2026-10-09",
-      "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-13T20:08:30",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-rated_reliability_aware_ai_agent_tool_retrieval_via_execution_dynamics",
-    "arxiv_id": "2610.13889v1",
-    "date": "2026-10-09",
-    "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
-    "authors": "Weiliang Chen, Song Liao",
-    "abstract": "As AI agents increasingly rely on external tools, accurate retrieval is essential for reliable behavior. Existing methods optimize semantic relevance but largely ignore tool availability during execution. To address this gap, we propose RATED (Reliability-Aware Tool Retrieval via Execution Dynamics), a retrieval framework that combines robust semantic matching with dynamic reliability adaptation. RATED employs a frozen dual-encoder with contrastive fine-tuning for semantic matching, and a lightweight contextual bandit module that re-ranks candidates based on real-time execution feedback. This design enables rapid adaptation to runtime tool failures without expensive model retraining. We introduce EcoAgent, a benchmark of 5,172 real-world tools and over 210,000 query-tool pairs for offline retrieval and dynamic reliability evaluation. Experimental results demonstrate that RATED achieves a 52.2% relative MRR improvement over the ToolLLM API retriever on real-world queries, and reduces fault selection rate from 86.2% to 2.9% under severe API outage scenarios with a 30% failure rate, while incurring negligible latency overhead of less than 1 ms over encode-only inference. The code and dataset are available at https://github.com/Elliotes/EcoAgent.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-10-09T17:38:11Z",
-    "updated": "2026-10-09T17:38:11Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.IR"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13889v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13889v1"
-      }
-    ],
-    "score": 47,
-    "infographic": {
-      "key_insight": "RATED improves AI tool retrieval by combining semantic matching with real-time reliability feedback, so agents can avoid failing tools during execution.",
-      "engineering_relevance": "The method is practical for deployed AI agents because it adapts to API outages with minimal latency and without retraining the base retriever.",
-      "method": [
-        "Frozen dual-encoder for semantic tool-query matching",
-        "Contrastive fine-tuning to improve retrieval quality",
-        "Lightweight contextual bandit re-ranker uses execution feedback to down-rank unreliable tools"
-      ],
-      "evidence_signal": "Evaluated on EcoAgent with 5,172 real-world tools and 210,000+ query-tool pairs; results show a 52.2% relative MRR gain and fault selection rate dropping from 86.2% to 2.9% under 30% outage.",
-      "watch_item": "The dynamic bandit re-ranking depends on timely execution feedback, so performance may degrade if reliability signals are sparse, delayed, or noisy.",
-      "hashtags": [
-        "#AIAgents",
-        "#ToolRetrieval",
-        "#ReliabilityAwareAI",
-        "#ContextualBandit",
-        "#InformationRetrieval"
-      ],
-      "paper_id": "2026-10-09-arxiv-rated_reliability_aware_ai_agent_tool_retrieval_via_execution_dynamics",
-      "paper_title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
-      "paper_date": "2026-10-09",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-13T20:08:33",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-safedistl_decomposing_joint_constraints_for_safe_multi_agent_reinforcement_learning",
-    "arxiv_id": "2610.13737v1",
-    "date": "2026-10-09",
-    "title": "SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning",
-    "authors": "Hongrui Zheng, Aditya Singh, Rahul Mangharam",
-    "abstract": "Cooperative multi-agent tasks often impose constraints on a shared objective or collective safety. A team level violation cost function can measure this constraint outcome, but does not distinguish which agents' actions most strongly influence that violation. We present SafeDiSTL, a constrained multi-agent reinforcement learning framework that allows for credit assignment even with joint constraint measurements. We use Signal Temporal Logic (STL) robustness to measure episode-level violation through running-maximum cost increments. Smooth full-episode robustness and differentiable dynamics provide action sensitivities, which allocate each cost increment across agents at the same decision time. These sensitivities account for delayed effects when weighting agents' shares of each cost increment. We study the framework in cooperative payload transport, connected navigation, and networked traffic control tasks. SafeDiSTL achieves 1.6-5.1x the safe-success rate in transport, improves navigation safe-success by 11.1%, and delivers 50-68% more throughput in traffic when compared to constrained baselines. Results demonstrate a strong improvement of the learned policy in dealing with shared constraint while retaining the performance of unconstrained policies.",
-    "category": "Modeling and Simulation",
-    "source": "arXiv",
-    "published": "2026-10-09T15:32:06Z",
-    "updated": "2026-10-09T15:32:06Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13737v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13737v1"
-      }
-    ],
-    "score": 47,
-    "infographic": {
-      "key_insight": "SafeDiSTL turns a single team-level safety violation into per-agent credit assignments using STL robustness and action sensitivities, so constrained multi-agent RL can learn safer behavior without losing task performance.",
-      "engineering_relevance": "This is useful for safety-critical cooperative systems because it helps diagnose and steer which agents contribute most to joint constraint violations in transport, navigation, and traffic control.",
-      "method": [
-        "Use Signal Temporal Logic robustness to measure episode-level constraint violation via running-maximum cost increments.",
-        "Compute smooth full-episode robustness and differentiable action sensitivities to distribute each cost increment across agents at the same decision time.",
-        "Account for delayed effects when weighting each agent’s share of joint safety cost."
-      ],
-      "evidence_signal": "Across cooperative payload transport, connected navigation, and networked traffic control, SafeDiSTL improves safe-success rates by 1.6–5.1x, boosts navigation safe-success by 11.1%, and increases traffic throughput by 50–68% versus constrained baselines.",
-      "watch_item": "The approach depends on smooth differentiable dynamics and reliable STL-based robustness signals, so its effectiveness may be reduced in highly non-smooth or poorly modeled environments.",
-      "hashtags": [
-        "#MultiAgentRL",
-        "#SafeRL",
-        "#SignalTemporalLogic",
-        "#CreditAssignment",
-        "#AutonomousSystems"
-      ],
-      "paper_id": "2026-10-09-arxiv-safedistl_decomposing_joint_constraints_for_safe_multi_agent_reinforcement_learning",
-      "paper_title": "SafeDiSTL: Decomposing Joint Constraints for Safe Multi-Agent Reinforcement Learning",
-      "paper_date": "2026-10-09",
-      "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-13T20:08:36",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-09-arxiv-a_baseline_assessment_for_the_agentic_web_technology_stack",
-    "arxiv_id": "2610.13703v1",
-    "date": "2026-10-09",
-    "title": "A Baseline Assessment for the Agentic Web Technology Stack",
-    "authors": "Vagner Figueredo de Santana, Diogo Cortiz",
-    "abstract": "The fast pace in which protocols, frameworks, and technologies are being proposed for LLM-based agents results in a complex scenario for anyone aiming to create state-of-the-art AI solutions. Without an assessment on how different protocols, frameworks, and libraries work together to compose an Agentic Web solution, developers and organizations face different challenges (e.g., skilling, governance, infrastructure) even before becoming part of the Agentic Web ecosystem. In this context, we propose a system for performing Agentic Web evaluations called MASTIF (Multi-Agent System TestIng Framework) and present a baseline assessment of Agentic Web technologies, including 3 LLMs, 3 protocols, and 4 agent implementation frameworks, against 300 Mind2Web benchmark tasks. Results suggest that selecting a task-specific technology stack may result in gains of task completion rate, efficiency score, and social value stability scores; and reductions in verbosity and time to complete tasks. With the presented results, we expect to present a baseline in terms of metrics and results for this complex and fast evolving scenario for those aiming at designing, assessing, and developing multi-agent systems.",
-    "category": "AI Scientists and Research Agents",
-    "source": "arXiv",
-    "published": "2026-10-09T14:59:24Z",
-    "updated": "2026-10-09T14:59:24Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.ET",
-      "cs.SE"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.13703v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.13703v1"
-      }
-    ],
-    "score": 47,
-    "infographic": {
-      "key_insight": "A task-specific combination of LLMs, protocols, and agent frameworks can improve Agentic Web performance compared with a one-size-fits-all stack.",
-      "engineering_relevance": "The paper provides a baseline evaluation framework and results that can guide architecture choices for building, governing, and scaling multi-agent web systems.",
-      "method": [
-        "Built MASTIF (Multi-Agent System TestIng Framework) for evaluating Agentic Web systems.",
-        "Benchmarked 3 LLMs, 3 protocols, and 4 agent implementation frameworks.",
-        "Tested stack combinations on 300 Mind2Web tasks."
-      ],
-      "evidence_signal": "The abstract reports improved task completion, efficiency, and social value stability, along with reduced verbosity and time to complete tasks, across the evaluated technology stacks.",
-      "watch_item": "The results are baseline-specific and may not generalize across other tasks, environments, or rapidly changing agent technologies.",
-      "hashtags": [
-        "#AgenticWeb",
-        "#MultiAgentSystems",
-        "#LLMAgents",
-        "#Benchmarking",
-        "#AIEvaluation"
-      ],
-      "paper_id": "2026-10-09-arxiv-a_baseline_assessment_for_the_agentic_web_technology_stack",
-      "paper_title": "A Baseline Assessment for the Agentic Web Technology Stack",
-      "paper_date": "2026-10-09",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-13T20:08:38",
+      "generated_at": "2026-10-14T18:24:27",
       "generator": "openai"
     }
   }
