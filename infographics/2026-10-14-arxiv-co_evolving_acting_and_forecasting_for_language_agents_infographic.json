@@ -1,24 +1,24 @@
 {
-  "key_insight": "Co-Evolving Acting and Forecasting (CoPE) improves language-agent training by adding multi-step action prediction as supervision, so the same policy backbone learns to act and forecast from intermediate histories instead of only terminal rewards.",
-  "engineering_relevance": "This is useful for building more sample-efficient agentic RL systems that reduce costly long-horizon rollouts while keeping inference unchanged and lightweight.",
+  "key_insight": "Co-Evolving Acting and Forecasting (CoPE) adds multi-step action forecasting to agent RL so the policy learns from intermediate trajectories, not just a terminal reward.",
+  "engineering_relevance": "This can improve sample efficiency and training stability for language agents in long-horizon tasks without adding inference-time cost or extra models.",
   "method": [
-    "Train on successful on-policy trajectories using multi-step action targets derived from future action sequences.",
-    "Also supervise the policy by forecasting actions from preceding histories, creating a temporal ensemble of signals.",
-    "Use a single shared policy backbone, so acting and forecasting co-evolve without extra models or inference overhead."
+    "Train on successful on-policy trajectories and supervise the policy to predict the next action sequence from prior histories.",
+    "Combine action forecasting with standard acting so both objectives shape a shared backbone during training.",
+    "Use a single policy backbone only; inference remains one-step action selection with no overhead."
   ],
-  "evidence_signal": "The abstract reports evaluation on five benchmarks (ALFWorld, ScienceWorld, WebShop, τ²-bench, and AppWorld) with stronger aggregate performance than GRPO and other RL baselines, including up to 1.9× and 2.0× higher sample efficiency on ScienceWorld.",
-  "watch_item": "The approach depends on successful on-policy trajectories for constructing action targets, so performance may be sensitive to trajectory quality and rollout stability during training.",
+  "evidence_signal": "Evaluated on five benchmarks (ALFWorld, ScienceWorld, WebShop, τ²-bench, and AppWorld), CoPE outperforms GRPO and predictive-auxiliary RL baselines, with up to 1.9× higher sample efficiency than ECHO and 2.0× higher than GRPO on ScienceWorld.",
+  "watch_item": "The approach depends on successful on-policy trajectories and careful construction of multi-step action targets, which may be challenging in sparse-reward or noisy environments.",
   "hashtags": [
     "#LanguageAgents",
     "#ReinforcementLearning",
     "#SampleEfficiency",
     "#AgenticAI",
-    "#AIResearch"
+    "#ScientificAI"
   ],
   "paper_id": "2026-10-14-arxiv-co_evolving_acting_and_forecasting_for_language_agents",
   "paper_title": "Co-Evolving Acting and Forecasting for Language Agents",
   "paper_date": "2026-10-14",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-10-15T18:06:35",
+  "generated_at": "2026-10-16T17:58:58",
   "generator": "openai"
 }

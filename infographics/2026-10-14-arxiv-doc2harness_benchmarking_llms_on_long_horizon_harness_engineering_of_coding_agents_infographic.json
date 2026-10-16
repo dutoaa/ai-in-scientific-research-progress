@@ -1,24 +1,24 @@
 {
-  "key_insight": "Doc2Harness shows that long-horizon agent performance depends heavily on the harness design itself, and it benchmarks the ability of LLMs to build that harness from documentation.",
-  "engineering_relevance": "For practitioners building coding agents, the paper highlights harness engineering as a first-class systems problem that can materially affect real-world task success.",
+  "key_insight": "Doc2Harness shows that for long-horizon coding agents, the quality of the surrounding harness can be as important as the model itself, and harness engineering is still very hard even for frontier LLMs.",
+  "engineering_relevance": "This benchmark gives practitioners a deterministic way to test whether a model can build robust agent scaffolding that works across isolated containers and realistic multi-step tool workflows.",
   "method": [
-    "Stage 1: a build model uses an interface-only skeleton plus a development document to construct a complete candidate harness in an isolated container.",
-    "Stage 2: the frozen harness is tested in separate containers with a scripted mock model, simulating end-to-end long-horizon execution.",
-    "Scoring uses four observable channels: model requests, on-disk files, process exit code, and command output; positive controls prevent trivial passes."
+    "Stage 1: a build model receives an interface-only contract skeleton plus a consolidated development document and constructs a candidate harness in an isolated container.",
+    "Stage 2: the frozen harness is executed in separate containers per test case and driven end-to-end by a scripted mock model.",
+    "Scoring uses four observable channels: model requests, files on disk, process exit code, and command output, with positive controls to prevent vacuous passes."
   ],
-  "evidence_signal": "Across 19 frontier models, 3 independent builds each, and 328 test cases, the best model reached 53.05% pass rate while the weakest achieved 27.44%.",
-  "watch_item": "Because the benchmark depends on deterministic reconstruction from documentation, results may be sensitive to how cross-cutting functionality is modularized and described.",
+  "evidence_signal": "Across 19 frontier models, 3 independent builds each, and 328 test cases, the top model reached 53.05% pass rate while the weakest was 27.44%, indicating substantial remaining failure modes.",
+  "watch_item": "Because Stage 1 is build-time and Stage 2 is fully frozen, results may depend on how well the benchmark documents and isolates cross-cutting behavior that real harnesses often implement incrementally.",
   "hashtags": [
     "#LLMAgents",
     "#Benchmarking",
     "#HarnessEngineering",
     "#LongHorizonTasks",
-    "#AISystems"
+    "#CodeAgents"
   ],
   "paper_id": "2026-10-14-arxiv-doc2harness_benchmarking_llms_on_long_horizon_harness_engineering_of_coding_agents",
   "paper_title": "Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents",
   "paper_date": "2026-10-14",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-15T18:06:39",
+  "generated_at": "2026-10-16T17:59:03",
   "generator": "openai"
 }

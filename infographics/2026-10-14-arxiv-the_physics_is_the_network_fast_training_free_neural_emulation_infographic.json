@@ -1,24 +1,24 @@
 {
-  "key_insight": "Physics can be embedded directly as a neural network, yielding a training-free emulator that preserves the numerical scheme while matching solver accuracy.",
-  "engineering_relevance": "PolyNet offers a fast, hardware-friendly alternative for simulating PDEs with strong GPU throughput and scalable ensemble execution, without retraining for known dynamics.",
+  "key_insight": "PolyNets turn known physics into a training-free neural network: a continuous-time polynomial dynamics module plus a recurrent integrator that preserves the numerical scheme while running efficiently on hardware.",
+  "engineering_relevance": "This offers a practical way to emulate PDE solvers with GPU-friendly throughput and scalable ensembles without paying the cost of model training, while retaining solver-like accuracy.",
   "method": [
-    "Continuous-time neural representation of polynomial dynamics",
-    "Simple recurrent network for discrete-time integration",
-    "Coefficients are fixed from the governing physics, so no training is required"
+    "Encode governing equations as polynomial dynamics in a continuous-time neural representation",
+    "Use a simple recurrent network to implement discrete-time integration",
+    "Exploit known coefficients so the tensor graph can run training-free and parallelized"
   ],
-  "evidence_signal": "On the 1D KdV equation, the authors compare PolyNet against CPU/GPU finite-difference Runge-Kutta solvers and three trained neural baselines over grid resolutions, 10^6 time steps, and ensembles up to 10^4 trajectories, using analytic soliton solutions to measure amplitude and phase error.",
-  "watch_item": "The approach depends on having known governing coefficients and a suitable polynomial-form dynamics model, so applicability may be limited when physics is incomplete or strongly non-polynomial.",
+  "evidence_signal": "On the 1D KdV equation, PolyNet matched CPU/GPU finite-difference Runge-Kutta accuracy across grid resolutions, 10^6 time steps, up to 10^4 trajectories, and different initial amplitudes.",
+  "watch_item": "Performance depends on known governing coefficients and preserving the chosen numerical scheme, so applicability may be limited when the physics is incomplete or strongly uncertain.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#NeuralEmulation",
-    "#PhysicsInformed",
-    "#GPUComputing",
-    "#PDEs"
+    "#PDEs",
+    "#KortewegDeVries",
+    "#GPUComputing"
   ],
   "paper_id": "2026-10-14-arxiv-the_physics_is_the_network_fast_training_free_neural_emulation",
   "paper_title": "The Physics Is the Network: Fast, Training-Free Neural Emulation",
   "paper_date": "2026-10-14",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-10-15T18:06:20",
+  "generated_at": "2026-10-16T17:58:43",
   "generator": "openai"
 }

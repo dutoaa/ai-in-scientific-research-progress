@@ -1,24 +1,24 @@
 {
-  "key_insight": "HP-RLVR assigns token-level credit from a single completed rollout by comparing each token under its normal causal context versus a hindsight context that includes the realized future and verifier feedback.",
-  "engineering_relevance": "It removes the need for group sampling, reference solutions, or a learned critic, making RLVR training more sample-efficient and practical for long-horizon reasoning tasks.",
+  "key_insight": "HP-RLVR assigns token-level credit from a single rollout by comparing a model’s present-token view with a hindsight view of the realized future, avoiding group sampling while keeping reward signal even on failed attempts.",
+  "engineering_relevance": "For scalable RLVR training, this offers a lower-rollout, no-critic alternative that can improve throughput and preserve usable gradients when many sampled attempts would otherwise collapse to the same terminal reward.",
   "method": [
-    "Score each eligible token under two views: causal history and hindsight context.",
-    "Compute a normalized Jensen–Shannon divergence between the two scores to produce bounded token credit.",
-    "Use this hindsight-weighted signal to update the policy from one rollout per prompt."
+    "Single-rollout RLVR with token-level weighting from hindsight context",
+    "Compute a normalized Jensen–Shannon divergence between causal and hindsight token views",
+    "Use the divergence to weight reward relative to a historical baseline, with no reference solution or learned critic"
   ],
-  "evidence_signal": "On paired Qwen3-8B runs over a shared 100-step schedule, HP-RLVR trained 1.21×, 1.46×, and 2.30× faster than GRPO on mathematics, code generation, and ALFWorld using one-eighth the rollouts per prompt.",
-  "watch_item": "Because the method depends on hindsight-conditioned token scoring from the generating policy snapshot, careful implementation is needed to avoid unstable credit assignment or leakage from verifier feedback.",
+  "evidence_signal": "On paired Qwen3-8B runs over a shared 100-step schedule, HP-RLVR was 1.21×, 1.46×, and 2.30× faster than GRPO on math, code generation, and ALFWorld using one-eighth the rollouts per prompt, with comparable overall accuracy and zero gradient records absent in HP-RLVR.",
+  "watch_item": "The method depends on the generating policy snapshot and hindsight verifier feedback, so implementation quality and stability of the hindsight weighting may be sensitive to verifier design and task type.",
   "hashtags": [
     "#RLVR",
+    "#LLMTraining",
     "#TokenCredit",
     "#ReinforcementLearning",
-    "#LLMTraining",
-    "#SampleEfficiency"
+    "#HindsightLearning"
   ],
   "paper_id": "2026-10-14-arxiv-hindsight_privileged_rlvr_single_rollout_token_credit_without_group_sampling",
   "paper_title": "Hindsight-Privileged RLVR: Single-Rollout Token Credit Without Group Sampling",
   "paper_date": "2026-10-14",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-15T18:06:23",
+  "generated_at": "2026-10-16T17:58:46",
   "generator": "openai"
 }

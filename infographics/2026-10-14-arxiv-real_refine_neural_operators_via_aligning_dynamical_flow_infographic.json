@@ -1,13 +1,13 @@
 {
-  "key_insight": "ReAl is a model-agnostic plug-in that improves neural PDE surrogates by refining missing high-frequency details and aligning multi-step rollouts with long-term dynamics.",
-  "engineering_relevance": "It can upgrade existing physics surrogate models to produce sharper fine-scale predictions without retraining the base architecture from scratch.",
+  "key_insight": "ReAl is a model-agnostic plug-in that refines pretrained neural PDE surrogates by learning high-frequency residuals and aligning rollouts for long-horizon stability.",
+  "engineering_relevance": "It improves surrogate fidelity for simulations where fine-scale structures and stable autoregressive forecasts are critical, without requiring a new base PDE model.",
   "method": [
-    "Refinement: a conditional flow-matching model learns the residual distribution around the base surrogate prediction to recover fine-scale structures.",
-    "Alignment: multiple rollout trajectories from the same input are used to generate trajectory-level rewards that reduce long-horizon generative drift.",
-    "Designed as a plug-in, so it can augment diverse pretrained PDE surrogate architectures and tasks."
+    "Refinement: a conditional flow-matching model learns the residual distribution around the deterministic base prediction.",
+    "Alignment: multiple trajectories are sampled from the same input and used to reinforce the refiner with trajectory-level rewards.",
+    "Outcome: the plug-in reconstructs missing fine-scale details while reducing rollout drift in chaotic dynamics."
   ],
   "evidence_signal": "The abstract reports experiments across diverse surrogate architectures and PDE tasks, showing consistent gains in high-frequency fidelity, forecasting accuracy, and long-horizon stability.",
-  "watch_item": "Training and using trajectory-level rewards may add sampling and optimization cost, especially for chaotic systems where rollout variability is high.",
+  "watch_item": "Trajectory-level alignment may increase training and sampling cost, and performance could depend on the quality of the pretrained base surrogate and reward design.",
   "hashtags": [
     "#NeuralOperators",
     "#PDEs",
@@ -19,6 +19,6 @@
   "paper_title": "ReAl: Refine neural operators via aligning dynamical flow",
   "paper_date": "2026-10-14",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-10-15T18:06:45",
+  "generated_at": "2026-10-16T17:59:09",
   "generator": "openai"
 }

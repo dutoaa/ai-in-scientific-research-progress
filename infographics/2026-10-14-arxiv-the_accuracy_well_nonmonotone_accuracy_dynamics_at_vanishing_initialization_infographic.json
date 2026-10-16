@@ -1,24 +1,24 @@
 {
-  "key_insight": "Small initialization can create a nonmonotone \"accuracy well\": accuracy rises early, drops later due to a bottleneck, then recovers after further optimization.",
-  "engineering_relevance": "For training and deployment, monitoring accuracy over time can reveal failure modes that loss alone hides, especially in deep models initialized near zero.",
+  "key_insight": "Small random initialization can create a pronounced nonmonotone \"accuracy well,\" where accuracy improves early, drops sharply, and later recovers even as loss changes remain tiny.",
+  "engineering_relevance": "This warns that training loss alone may miss important classification dynamics, so monitoring accuracy over time is crucial when diagnosing convergence and early stopping.",
   "method": [
-    "Analyze training dynamics under vanishing initialization.",
-    "Study deep linear, ReLU, and convolutional models on synthetic and benchmark classification tasks.",
-    "Build a staged explanation: target-driven organization, degeneracy bottleneck, and later recruitment/recovery."
+    "Observed the phenomenon across deep linear, ReLU, and convolutional networks.",
+    "Analyzed training under different losses and optimizers on synthetic and benchmark classification tasks.",
+    "Developed a rigorous theory for shallow and deep linear networks, including extreme collapse-and-recovery behavior."
   ],
-  "evidence_signal": "The phenomenon is observed in training and test accuracy across deep linear networks, fully connected ReLU networks on MNIST, deep CNNs on CIFAR-10, and controlled synthetic tasks under different losses and optimizers.",
-  "watch_item": "Early accuracy gains can be misleading; continuing optimization may temporarily worsen classification even when loss changes are asymptotically tiny.",
+  "evidence_signal": "The abstract reports empirical results on MNIST, CIFAR-10, deep linear networks, and controlled synthetic tasks, plus theoretical proofs for linear models and a synthetic case reaching 100% accuracy, then 0, then 100% again.",
+  "watch_item": "The effect is tied to vanishing/small initialization and may be highly sensitive to training regime, so generalizing conclusions to standard initialization settings should be done cautiously.",
   "hashtags": [
     "#DeepLearning",
     "#OptimizationDynamics",
     "#ClassificationAccuracy",
-    "#VanishingInitialization",
-    "#ModelingAndSimulation"
+    "#NeuralNetworks",
+    "#MachineLearningTheory"
   ],
   "paper_id": "2026-10-14-arxiv-the_accuracy_well_nonmonotone_accuracy_dynamics_at_vanishing_initialization",
   "paper_title": "The Accuracy Well: Nonmonotone Accuracy Dynamics at Vanishing Initialization",
   "paper_date": "2026-10-14",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-10-15T18:06:37",
+  "generated_at": "2026-10-16T17:59:00",
   "generator": "openai"
 }

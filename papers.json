@@ -29,27 +29,27 @@
     ],
     "score": 91,
     "infographic": {
-      "key_insight": "In RL with verifiable rewards, first-moment momentum helps when the EMA coefficient is chosen large enough to stay in a safe no-overshoot regime, and this benefit can outweigh gradient-sampling noise.",
-      "engineering_relevance": "For LLM post-training, tuning momentum upward (rather than using a conventional small β1) can improve optimization stability and validation accuracy, especially at larger model scale.",
+      "key_insight": "In RL with verifiable rewards, momentum can help if the EMA coefficient is set large enough to stay in a safe, non-overshooting regime; otherwise sampling noise can hide its benefit.",
+      "engineering_relevance": "For LLM post-training, tuning momentum upward can yield measurable accuracy gains and should be treated as a practical hyperparameter rather than a default setting.",
       "method": [
-        "Analyze RLVR via a bandit formulation with bias-corrected EMA momentum.",
-        "Prove that with exact policy gradients, larger β accelerates optimization within the safe regime.",
-        "Show that with sampled gradients, fixed β can be dominated by sampling noise as η decreases, while increasing β preserves usable gain."
+        "Analyze RLVR as a bandit problem with bias-corrected EMA momentum.",
+        "Prove that larger \\u03b2 accelerates optimization when exact gradients are used and overshoot is avoided.",
+        "Show that under sampled gradients, shrinking learning rate alone can wash out the momentum gain, while jointly increasing \\u03b2 preserves it."
       ],
-      "evidence_signal": "Bandit simulations and RLVR experiments on Qwen3-4B-Base and Qwen2.5-32B show the predicted momentum effect, including nearly a 2-point mean validation accuracy gain on the larger model.",
-      "watch_item": "Momentum only helps when β and η are tuned to avoid overshoot; using a larger β without respecting the safe regime may hurt training.",
+      "evidence_signal": "Bandit simulations and RLVR experiments on Qwen3-4B-Base and Qwen2.5-32B validate the theory, with larger \\u03b2_1 improving mean validation accuracy by nearly 2 percentage points on the larger model.",
+      "watch_item": "The benefit depends on keeping \\u03b7/(1-\\u03b2) in a safe regime; too-small or poorly matched settings can obscure gains or cause overshoot.",
       "hashtags": [
         "#ReinforcementLearning",
         "#Momentum",
         "#LLMTraining",
-        "#Optimization",
-        "#ScientificMachineLearning"
+        "#ScientificMachineLearning",
+        "#Optimization"
       ],
       "paper_id": "2026-10-14-arxiv-when_does_momentum_help_in_reinforcement_learning_with_verifiable_rewards",
       "paper_title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
       "paper_date": "2026-10-14",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-15T18:06:09",
+      "generated_at": "2026-10-16T17:58:32",
       "generator": "openai"
     }
   },
@@ -81,27 +81,27 @@
     ],
     "score": 90,
     "infographic": {
-      "key_insight": "PhySGA improves 3D object composition by combining LLM-style planning with physics-grounded simulation feedback for interactive, physically plausible assembly.",
-      "engineering_relevance": "This framework is relevant for digital content creation and robot simulation because it can handle complex tasks like hanging, settling, and containment that require closed-loop physical reasoning.",
+      "key_insight": "PhySGA frames 3D composition as an interactive physics-space agent task, combining planning, simulation, and feedback to assemble objects more reliably than static-prior methods.",
+      "engineering_relevance": "This is directly relevant to digital content creation and robot simulation because it improves physically plausible assembly for rigid, articulated, and deformable objects.",
       "method": [
-        "Assembly Agent plans global steps and coarse geometric/kinematic adjustments.",
-        "Critic Agent diagnoses simulator state using contact dynamics for fine-grained correction.",
-        "Action Routers convert semantic plans into executable simulator primitives, and a Self-Evolving Skill Library reuses prior trial-and-error experience."
+        "Assembly Agent plans global steps and performs coarse geometric/kinematic adjustments.",
+        "Critic Agent diagnoses simulator states using contact dynamics and provides fine-grained closed-loop corrections.",
+        "Action Routers execute semantic plans as physical simulator primitives, while a Self-Evolving Skill Library reuses successful trial-and-error experience."
       ],
-      "evidence_signal": "In Isaac Sim experiments, the method is reported to outperform prior approaches on relation fidelity, physical plausibility, and visual quality.",
-      "watch_item": "Performance likely depends on simulator fidelity and the quality of closed-loop exploration, which may limit transfer to real-world or out-of-simulation settings.",
+      "evidence_signal": "The abstract reports extensive experiments in Isaac Sim showing improved relation fidelity, physical plausibility, and visual quality over existing methods.",
+      "watch_item": "Performance may depend on simulator fidelity and the quality of agent routing/skills, so transferring the approach to new scenes or simulators could require careful re-tuning.",
       "hashtags": [
         "#3DComposition",
         "#PhysicsSimulation",
         "#AgenticAI",
-        "#Robotics",
-        "#DigitalContentCreation"
+        "#IsaacSim",
+        "#ComputationalScience"
       ],
       "paper_id": "2026-10-14-arxiv-physga_a_physics_space_grounded_agentic_framework_for_generalizable_and_interactive_3d_com",
       "paper_title": "PhySGA: A Physics-Space Grounded Agentic Framework for Generalizable and Interactive 3D Composition",
       "paper_date": "2026-10-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-15T18:06:12",
+      "generated_at": "2026-10-16T17:58:35",
       "generator": "openai"
     }
   },
@@ -134,27 +134,27 @@
     ],
     "score": 84,
     "infographic": {
-      "key_insight": "Humanoid policy weights can be modeled directly in latent space with diffusion to generate new, deployable robot controllers while revealing a shared kinematic structure in early layers.",
-      "engineering_relevance": "This suggests a new route for robot policy synthesis, compression, and interpretability by learning the distribution of successful controller weights rather than only behaviors or trajectories.",
+      "key_insight": "A latent diffusion model can generate functional humanoid control policies directly in weight space, and the learned weights appear to encode a shared kinematic prior across training paradigms.",
+      "engineering_relevance": "This suggests a new route for synthesizing deployable robot controllers and for interpreting which structural features of policy weights are tied to humanoid embodiment.",
       "method": [
-        "Train a linear autoencoder to compress actor-network parameters into a compact latent representation.",
-        "Fit a Diffusion Transformer to model the latent distribution of successful humanoid policy weights.",
-        "Decode sampled latents back into full networks and inspect layer-wise weight structure for recurring priors."
+        "Train a linear autoencoder to compress actor-network parameters into a latent space.",
+        "Use a Diffusion Transformer to model and sample the latent weight distribution.",
+        "Decode sampled latents back into full control networks for deployment and analysis."
       ],
-      "evidence_signal": "The method is trained on reinforcement-learning-generated networks for the Unitree G1 robot and produces real-world deployable policies that perform walking, dancing, and spin kicks.",
-      "watch_item": "Generative weight-space models may sample plausible-looking controllers that still require careful safety validation and hardware testing before deployment.",
+      "evidence_signal": "The model was trained on RL-derived networks from the Unitree G1 and produced real-world policies capable of walking, dancing, and spin kicks, while analysis revealed a consistent first-layer structural pattern linked to kinematic priors under both RL and IL.",
+      "watch_item": "Generative weight-space models may produce deployable controllers only if the training set is sufficiently diverse and the decoded weights preserve safety and stability under real-world robot dynamics.",
       "hashtags": [
         "#RobotLearning",
         "#HumanoidControl",
         "#DiffusionModels",
-        "#NeuralWeights",
-        "#PolicyGeneration"
+        "#WeightSpace",
+        "#ReinforcementLearning"
       ],
       "paper_id": "2026-10-14-arxiv-modeling_and_understanding_neural_weights_of_humanoid_policies_with_diffusion",
       "paper_title": "Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion",
       "paper_date": "2026-10-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-15T18:06:14",
+      "generated_at": "2026-10-16T17:58:37",
       "generator": "openai"
     }
   },
@@ -185,27 +185,27 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "Simple propagation-based baselines can recover much of the performance of complex relational deep learning models when they exploit neighborhood-filtered features and historical labels.",
-      "engineering_relevance": "For practitioners, this suggests a cheaper, easier-to-debug alternative to heterogeneous GNNs/Transformers may be strong enough for many relational database prediction tasks.",
+      "key_insight": "Simple propagation-based baselines—filtered features plus an MLP, then label smoothing—recover much of the performance of more complex relational deep learning models.",
+      "engineering_relevance": "For relational databases modeled as temporal heterogeneous graphs, this suggests strong practical value in low-complexity pipelines before adopting heavier GNN or Transformer architectures.",
       "method": [
-        "Apply fixed low-pass feature propagation to relational entity graphs.",
-        "Train an MLP on the propagated features for target prediction.",
-        "Refine predictions with Correct-and-Smooth using a task-specific meta-graph over target entities."
+        "Apply fixed low-pass feature propagation on the relational entity graph to denoise and mix neighborhood information.",
+        "Train an MLP on the propagated features for the main prediction task.",
+        "Refine predictions with Correct-and-Smooth using a task-specific meta-graph that propagates historical labels among target entities."
       ],
-      "evidence_signal": "On RelBench classification and regression tasks, an MLP on neighborhood-filtered features outperformed target-only features on most tasks and recovered a substantial portion of heterogeneous GNN performance.",
-      "watch_item": "Correct-and-Smooth depends on a separately constructed meta-graph, since target-entity connections are not directly available in the relational entity graph.",
+      "evidence_signal": "On RelBench classification and regression tasks, neighborhood-filtered features usually beat target-entity-only features and capture a substantial share of heterogeneous GNN performance.",
+      "watch_item": "Correct-and-Smooth depends on a separately constructed meta-graph, so label propagation is not plug-and-play when target-entity connections are not explicitly given.",
       "hashtags": [
-        "#RelationalDL",
+        "#RelationalDeepLearning",
         "#GraphNeuralNetworks",
+        "#FeaturePropagation",
         "#LabelPropagation",
-        "#MLPBaseline",
         "#RelBench"
       ],
       "paper_id": "2026-10-14-arxiv-revisiting_simple_baselines_for_relational_deep_learning",
       "paper_title": "Revisiting Simple Baselines for Relational Deep Learning",
       "paper_date": "2026-10-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-15T18:06:16",
+      "generated_at": "2026-10-16T17:58:39",
       "generator": "openai"
     }
   },
@@ -237,27 +237,27 @@
     ],
     "score": 77,
     "infographic": {
-      "key_insight": "Automated discovery scales better when agent memory is periodically reset: forgetting breaks anchoring to past attempts and enables larger improvements from the same compute budget.",
-      "engineering_relevance": "For AI research systems and optimization pipelines, managing what agents remember can be as important as adding more agents, more iterations, or more communication.",
+      "key_insight": "Automated research agents scale better when they periodically forget past search history and restart from the best solution, rather than accumulating ever more context.",
+      "engineering_relevance": "For practical AI discovery systems, memory management is a scaling lever: resetting agent state can deliver more progress per compute than simply running longer or adding more parallel agents.",
       "method": [
-        "Run multiple LLM agents with iterative refinement and communication.",
+        "Run multiple LLM agents with scored verification and inter-agent communication.",
         "Periodically discard each agent’s session and candidate history.",
-        "Restart from the best candidate found so far to continue search without accumulated bias."
+        "Restart from the best candidate found so far to unblock further search."
       ],
-      "evidence_signal": "Evaluated on four tasks spanning heuristic programming, kernel optimization, and model training, with up to 15% better results than parallel agents and up to 39% better than a single agent.",
-      "watch_item": "Periodic reset may discard useful context, so the restart policy and best-candidate selection need careful tuning for each task.",
+      "evidence_signal": "Across four tasks in heuristic programming, kernel optimization, and model training, the forgetting strategy improved results by up to 15% over parallel agents and up to 39% over a single agent.",
+      "watch_item": "Aggressive state resets may drop useful context, so the restart frequency and what is preserved as the “best candidate” need careful tuning.",
       "hashtags": [
         "#LLMAgents",
         "#AutomatedDiscovery",
-        "#Optimization",
-        "#ScientificAI",
-        "#MemoryReset"
+        "#SearchOptimization",
+        "#MachineLearningSystems",
+        "#ScientificDiscovery"
       ],
       "paper_id": "2026-10-14-arxiv-scaling_discovery_requires_forgetting",
       "paper_title": "Scaling Discovery Requires Forgetting",
       "paper_date": "2026-10-14",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-10-15T18:06:18",
+      "generated_at": "2026-10-16T17:58:41",
       "generator": "openai"
     }
   },
@@ -291,27 +291,27 @@
     ],
     "score": 71,
     "infographic": {
-      "key_insight": "Physics can be embedded directly as a neural network, yielding a training-free emulator that preserves the numerical scheme while matching solver accuracy.",
-      "engineering_relevance": "PolyNet offers a fast, hardware-friendly alternative for simulating PDEs with strong GPU throughput and scalable ensemble execution, without retraining for known dynamics.",
+      "key_insight": "PolyNets turn known physics into a training-free neural network: a continuous-time polynomial dynamics module plus a recurrent integrator that preserves the numerical scheme while running efficiently on hardware.",
+      "engineering_relevance": "This offers a practical way to emulate PDE solvers with GPU-friendly throughput and scalable ensembles without paying the cost of model training, while retaining solver-like accuracy.",
       "method": [
-        "Continuous-time neural representation of polynomial dynamics",
-        "Simple recurrent network for discrete-time integration",
-        "Coefficients are fixed from the governing physics, so no training is required"
+        "Encode governing equations as polynomial dynamics in a continuous-time neural representation",
+        "Use a simple recurrent network to implement discrete-time integration",
+        "Exploit known coefficients so the tensor graph can run training-free and parallelized"
       ],
-      "evidence_signal": "On the 1D KdV equation, the authors compare PolyNet against CPU/GPU finite-difference Runge-Kutta solvers and three trained neural baselines over grid resolutions, 10^6 time steps, and ensembles up to 10^4 trajectories, using analytic soliton solutions to measure amplitude and phase error.",
-      "watch_item": "The approach depends on having known governing coefficients and a suitable polynomial-form dynamics model, so applicability may be limited when physics is incomplete or strongly non-polynomial.",
+      "evidence_signal": "On the 1D KdV equation, PolyNet matched CPU/GPU finite-difference Runge-Kutta accuracy across grid resolutions, 10^6 time steps, up to 10^4 trajectories, and different initial amplitudes.",
+      "watch_item": "Performance depends on known governing coefficients and preserving the chosen numerical scheme, so applicability may be limited when the physics is incomplete or strongly uncertain.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#NeuralEmulation",
-        "#PhysicsInformed",
-        "#GPUComputing",
-        "#PDEs"
+        "#PDEs",
+        "#KortewegDeVries",
+        "#GPUComputing"
       ],
       "paper_id": "2026-10-14-arxiv-the_physics_is_the_network_fast_training_free_neural_emulation",
       "paper_title": "The Physics Is the Network: Fast, Training-Free Neural Emulation",
       "paper_date": "2026-10-14",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-15T18:06:20",
+      "generated_at": "2026-10-16T17:58:43",
       "generator": "openai"
     }
   },
@@ -343,27 +343,27 @@
     ],
     "score": 71,
     "infographic": {
-      "key_insight": "HP-RLVR assigns token-level credit from a single completed rollout by comparing each token under its normal causal context versus a hindsight context that includes the realized future and verifier feedback.",
-      "engineering_relevance": "It removes the need for group sampling, reference solutions, or a learned critic, making RLVR training more sample-efficient and practical for long-horizon reasoning tasks.",
+      "key_insight": "HP-RLVR assigns token-level credit from a single rollout by comparing a model’s present-token view with a hindsight view of the realized future, avoiding group sampling while keeping reward signal even on failed attempts.",
+      "engineering_relevance": "For scalable RLVR training, this offers a lower-rollout, no-critic alternative that can improve throughput and preserve usable gradients when many sampled attempts would otherwise collapse to the same terminal reward.",
       "method": [
-        "Score each eligible token under two views: causal history and hindsight context.",
-        "Compute a normalized Jensen–Shannon divergence between the two scores to produce bounded token credit.",
-        "Use this hindsight-weighted signal to update the policy from one rollout per prompt."
+        "Single-rollout RLVR with token-level weighting from hindsight context",
+        "Compute a normalized Jensen–Shannon divergence between causal and hindsight token views",
+        "Use the divergence to weight reward relative to a historical baseline, with no reference solution or learned critic"
       ],
-      "evidence_signal": "On paired Qwen3-8B runs over a shared 100-step schedule, HP-RLVR trained 1.21×, 1.46×, and 2.30× faster than GRPO on mathematics, code generation, and ALFWorld using one-eighth the rollouts per prompt.",
-      "watch_item": "Because the method depends on hindsight-conditioned token scoring from the generating policy snapshot, careful implementation is needed to avoid unstable credit assignment or leakage from verifier feedback.",
+      "evidence_signal": "On paired Qwen3-8B runs over a shared 100-step schedule, HP-RLVR was 1.21×, 1.46×, and 2.30× faster than GRPO on math, code generation, and ALFWorld using one-eighth the rollouts per prompt, with comparable overall accuracy and zero gradient records absent in HP-RLVR.",
+      "watch_item": "The method depends on the generating policy snapshot and hindsight verifier feedback, so implementation quality and stability of the hindsight weighting may be sensitive to verifier design and task type.",
       "hashtags": [
         "#RLVR",
+        "#LLMTraining",
         "#TokenCredit",
         "#ReinforcementLearning",
-        "#LLMTraining",
-        "#SampleEfficiency"
+        "#HindsightLearning"
       ],
       "paper_id": "2026-10-14-arxiv-hindsight_privileged_rlvr_single_rollout_token_credit_without_group_sampling",
       "paper_title": "Hindsight-Privileged RLVR: Single-Rollout Token Credit Without Group Sampling",
       "paper_date": "2026-10-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-15T18:06:23",
+      "generated_at": "2026-10-16T17:58:46",
       "generator": "openai"
     }
   },
@@ -394,27 +394,27 @@
     ],
     "score": 71,
     "infographic": {
-      "key_insight": "GracefulRL trains language models to preserve their normal task-solving ability while learning to safely fall back when success is unlikely, instead of blindly guessing.",
-      "engineering_relevance": "This is relevant for high-stakes systems where a wrong model action can cause real damage, such as code generation, database operations, or automated decision pipelines.",
+      "key_insight": "GracefulRL trains language models to preserve normal task performance while learning to safely fall back when success looks unreliable, instead of encouraging risky guessing.",
+      "engineering_relevance": "This is relevant for safety-critical software and automation, where a model should avoid producing harmful outputs or actions when confidence is low.",
       "method": [
-        "Uses reinforcement learning to reward outcome-level graceful failure behavior without needing fallback annotations.",
-        "Reshapes the optimization landscape to avoid brittle policy-gradient dynamics from naive intermediate rewards.",
-        "Encourages selective fallback only when acting is judged unreliable, while preserving successful behavior when possible."
+        "Use outcome-level reinforcement learning reward signals rather than fallback annotations.",
+        "Reshape optimization to make graceful failure stable under policy gradients.",
+        "Learn an explicit safe fallback policy that activates when acting is likely to be unreliable."
       ],
-      "evidence_signal": "The abstract reports results across a range of tasks and model scales, showing that models can retain task performance while selectively falling back when success is out of reach.",
-      "watch_item": "The approach depends on careful reward shaping and may still be sensitive to optimization setup, especially if fallback behavior is over- or under-incentivized.",
+      "evidence_signal": "Across a range of tasks and model scales, the abstract reports models that keep most task-solving ability while selectively falling back when success is out of reach.",
+      "watch_item": "The abstract notes that naive policy-gradient training with intermediate fallback rewards is brittle, so careful optimization design is essential.",
       "hashtags": [
         "#ReinforcementLearning",
-        "#LLMs",
+        "#LLMSafety",
         "#GracefulFailure",
-        "#AIAlignment",
-        "#ModelRobustness"
+        "#ModelingAndSimulation",
+        "#AIAlignment"
       ],
       "paper_id": "2026-10-14-arxiv-training_language_models_to_fail_gracefully",
       "paper_title": "Training Language Models to Fail Gracefully",
       "paper_date": "2026-10-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-15T18:06:25",
+      "generated_at": "2026-10-16T17:58:48",
       "generator": "openai"
     }
   },
@@ -445,27 +445,27 @@
     ],
     "score": 69,
     "infographic": {
-      "key_insight": "Task-aware imputation can outperform standard reconstruction-focused methods when missing-data patterns differ between training and test time, because predictive utility and reconstruction quality are only weakly correlated.",
-      "engineering_relevance": "For deployed ML systems with incomplete tabular data, imputation should be chosen and validated against downstream prediction performance under realistic missingness shifts, not just reconstruction error.",
+      "key_insight": "Task-aware imputation—optimized for the downstream prediction task rather than reconstruction alone—can substantially improve robustness when missing-data patterns differ between training and test time.",
+      "engineering_relevance": "For deployed ML systems on tabular data, choosing imputation methods should be driven by predictive utility under expected missingness shifts, not by low reconstruction error.",
       "method": [
-        "Unified task-conditioned optimization framework for treating missing entries as variables",
-        "Amortized imputation for missing data at both training and test time",
-        "Latent optimization approach for settings where only training data are incomplete"
+        "Unified task-conditioned optimization treats missing entries as variables tied to the prediction objective.",
+        "Two instantiations: an amortized model for missing data at train and test time, and a latent optimization method for incomplete training data only.",
+        "Designed to handle train-test mismatches in missingness mechanisms or rates."
       ],
-      "evidence_signal": "The study evaluates 98 tabular datasets and tests robustness under train-test mismatch on 36 datasets, finding weak reconstruction-vs-prediction correlation (Spearman rho ≈ 0.16–0.32).",
-      "watch_item": "Task-aware methods add optimization and modeling complexity, so gains may depend on how well the assumed missingness mismatch matches deployment conditions.",
+      "evidence_signal": "Evaluated on 98 tabular datasets, with robustness under train-test mismatch tested on 36 datasets; reconstruction error showed weak correlation with predictive utility (Spearman rho ≈ 0.16–0.32), and task-aware methods achieved win rates up to 80% in hard mismatch settings.",
+      "watch_item": "Benefits may depend on the availability of task labels and on the specific mismatch regime, so deployment should validate performance under the target missingness pattern.",
       "hashtags": [
         "#MissingData",
         "#Imputation",
         "#RobustML",
         "#TabularData",
-        "#TaskAwareLearning"
+        "#TrainTestMismatch"
       ],
       "paper_id": "2026-10-14-arxiv-when_does_task_aware_imputation_matter_an_analysis_of_robustness_under_train_test_mismatch",
       "paper_title": "When Does Task-Aware Imputation Matter? An Analysis of Robustness Under Train-Test Mismatch",
       "paper_date": "2026-10-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-15T18:06:27",
+      "generated_at": "2026-10-16T17:58:50",
       "generator": "openai"
     }
   },
@@ -496,27 +496,27 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "LLM scientific claim verifiers often reach judgments from hidden interpretations, and making those interpretations explicit with Claim Cards exposes that many verdict changes come from wording choices rather than evidence.",
-      "engineering_relevance": "For AI research agents and benchmark design, the paper shows that recording the assumed interpretation alongside each verdict can improve traceability, debugging, and evaluation of claim verification systems.",
+      "key_insight": "LLM scientific claim verifiers can reach different verdicts depending on how they interpret an underspecified claim, so the interpretation should be recorded alongside the answer.",
+      "engineering_relevance": "For AI research agents and benchmark systems, exposing the agent’s claim interpretation improves traceability, makes disagreements diagnosable, and helps compare verdicts more fairly.",
       "method": [
-        "Defined Claim Cards with 9 pre-evidence fields; each field is marked as stated, inferred, or default.",
-        "Ran a GPT-5.4 agent 5 times on each of 60 expert-labeled materials-science and biomedical claims in three settings: with a card, without a card, and with a frozen card.",
-        "Perturbed one card field at a time to test how interpretation changes affect verdicts and tool use."
+        "Defined a 9-field “Claim Card” to capture a verifier’s interpretation before evidence gathering, with fields marked stated, inferred, or default.",
+        "Ran a GPT-5.4 agent 5 times on each of 60 expert-labeled materials-science and biomedical claims under three conditions: with a card, without a card, and with a frozen card.",
+        "Deliberately edited one card field (quantifier or support threshold) to test how interpretation changes affect verdicts and downstream tool use."
       ],
-      "evidence_signal": "Across 900 runs, over 40% of card fields were not stated, the card added about 10% to tokens and time, and deliberate edits changed verdicts on about one-third of claims versus about one-seventh expected by chance (p < 0.001).",
-      "watch_item": "The results come from a specific GPT-5.4 setup and a limited 60-claim benchmark, so broader generalization to other models, domains, and verifier pipelines still needs testing.",
+      "evidence_signal": "Across 900 runs, more than 40% of card fields were not stated; adding a card cost about 10% more tokens/time but did not measurably change agreement with expert labels, while targeted card edits changed verdicts on about one-third of claims (p < 0.001).",
+      "watch_item": "A recorded interpretation may still be incomplete or inconsistently constructed, so benchmarks need a standard way to publish and compare both the claim label and the underlying interpretation.",
       "hashtags": [
         "#LLMAgents",
         "#ScientificClaims",
-        "#ClaimVerification",
         "#Benchmarking",
-        "#Interpretability"
+        "#Interpretability",
+        "#AIforScience"
       ],
       "paper_id": "2026-10-14-arxiv-same_claim_different_interpretations_how_llm_agents_resolve_ambiguity_in_scientific_claims",
       "paper_title": "Same Claim, Different Interpretations: How LLM Agents Resolve Ambiguity in Scientific Claims",
       "paper_date": "2026-10-14",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-15T18:06:29",
+      "generated_at": "2026-10-16T17:58:52",
       "generator": "openai"
     }
   },
@@ -547,27 +547,27 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "Semantic relevance is not enough for zero-shot tool selection; tools must also pass functional and contextual validation to remain valid after transfer.",
-      "engineering_relevance": "For LLM agents in new domains, this framework improves tool ranking reliability by reducing failures caused by context mismatch or missing functional compatibility.",
+      "key_insight": "Zero-shot tool selection should validate not just semantic relevance, but whether a tool is functionally compatible and contextually applicable after transfer.",
+      "engineering_relevance": "For LLM agents in unseen domains, this reduces failed tool calls by ranking tools on likely real-world usability rather than name or description similarity alone.",
       "method": [
-        "Progressively validate candidate tools beyond relevance ranking.",
-        "Check endpoint-grounded functional compatibility.",
-        "Use task-conditioned contextual evidence to confirm applicability."
+        "Stage 1: rank candidate tools by semantic relevance to the task.",
+        "Stage 2: check endpoint-grounded functional compatibility to verify the tool can actually satisfy the requirement.",
+        "Stage 3: use task-conditioned contextual evidence to confirm the tool remains valid in the new execution context."
       ],
-      "evidence_signal": "The abstract reports consistent ranking improvements across cross-domain and cross-dataset transfer, with the largest gains under functional or contextual ambiguity.",
-      "watch_item": "The validation steps may add implementation complexity and require reliable endpoint and context signals, which could be noisy or unavailable in some settings.",
+      "evidence_signal": "The paper reports cross-domain and cross-dataset transfer evaluation, with consistent ranking improvements and especially larger gains under functional or contextual ambiguity.",
+      "watch_item": "Functional and contextual validation may require reliable tool metadata, endpoint evidence, and context signals, which can be incomplete or noisy in practice.",
       "hashtags": [
         "#LLMAgents",
         "#ToolSelection",
         "#ZeroShotLearning",
-        "#Validation",
+        "#ValidityChecking",
         "#AIResearch"
       ],
       "paper_id": "2026-10-14-arxiv-from_relevance_to_validity_zero_shot_tool_selection_via_functional_and_contextual_validati",
       "paper_title": "From Relevance to Validity: Zero-Shot Tool Selection via Functional and Contextual Validation",
       "paper_date": "2026-10-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-15T18:06:31",
+      "generated_at": "2026-10-16T17:58:54",
       "generator": "openai"
     }
   },
@@ -599,27 +599,27 @@
     ],
     "score": 65,
     "infographic": {
-      "key_insight": "SwarmRSI turns scientific agent swarms into a recursive self-improvement loop by using cross-agent feedback to mutate hypotheses and recombine useful program parts across experiments.",
-      "engineering_relevance": "The framework offers a practical way to scale scientific AI systems by preserving reusable components, improving search efficiency, and transferring learning across related research tasks.",
+      "key_insight": "SwarmRSI evolves a swarm of scientific agents by using experimental feedback to both refine flawed hypotheses and recombine useful partial results, enabling recursive self-improvement.",
+      "engineering_relevance": "The framework offers a practical loop for automating research workflows where multiple agent programs can share evidence, preserve useful components, and iteratively improve over time.",
       "method": [
-        "Feedback-Guided Swarm Mutation refines hypotheses and implementations using experimental feedback from other agents.",
-        "Complementary Swarm Recombination reuses retained hypotheses and partial program components that remain useful even when full runs score poorly.",
-        "Recursive Swarm Evolution combines both mechanisms in a feedback loop that continually updates the swarm from new evidence."
+        "Feedback-Guided Swarm Mutation: use other agents’ experimental feedback to revise hypotheses and implementations.",
+        "Complementary Swarm Recombination: merge retained hypotheses with useful program components across agents.",
+        "Recursive Swarm Evolution: close the loop by feeding new experimental evidence into the next research cycle."
       ],
-      "evidence_signal": "The paper reports state-of-the-art results on OpenProblems, NatureBench, and MLE-Bench Lite, and shows that accumulated research experience improves performance on held-out tasks.",
-      "watch_item": "A key implementation challenge is correctly separating whether a bad outcome should revise the hypothesis, the implementation, or both, especially when only partial program components are transferable.",
+      "evidence_signal": "The abstract reports state-of-the-art results on OpenProblems, NatureBench, and MLE-Bench Lite, plus improved performance on held-out tasks after accumulated research experience.",
+      "watch_item": "A key concern is that partial program reuse and hypothesis mutation may propagate misleading components if experimental feedback is noisy or poorly attributed.",
       "hashtags": [
-        "#ScientificAI",
         "#RecursiveSelfImprovement",
+        "#ScientificAgents",
         "#AgentSwarm",
-        "#AutoResearch",
-        "#MachineLearning"
+        "#AutomatedDiscovery",
+        "#ResearchAI"
       ],
       "paper_id": "2026-10-14-arxiv-swarmrsi_recursive_self_improvement_through_evolving_scientific_agent_swarm",
       "paper_title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
       "paper_date": "2026-10-14",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-10-15T18:06:33",
+      "generated_at": "2026-10-16T17:58:56",
       "generator": "openai"
     }
   },
@@ -651,27 +651,27 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Co-Evolving Acting and Forecasting (CoPE) improves language-agent training by adding multi-step action prediction as supervision, so the same policy backbone learns to act and forecast from intermediate histories instead of only terminal rewards.",
-      "engineering_relevance": "This is useful for building more sample-efficient agentic RL systems that reduce costly long-horizon rollouts while keeping inference unchanged and lightweight.",
+      "key_insight": "Co-Evolving Acting and Forecasting (CoPE) adds multi-step action forecasting to agent RL so the policy learns from intermediate trajectories, not just a terminal reward.",
+      "engineering_relevance": "This can improve sample efficiency and training stability for language agents in long-horizon tasks without adding inference-time cost or extra models.",
       "method": [
-        "Train on successful on-policy trajectories using multi-step action targets derived from future action sequences.",
-        "Also supervise the policy by forecasting actions from preceding histories, creating a temporal ensemble of signals.",
-        "Use a single shared policy backbone, so acting and forecasting co-evolve without extra models or inference overhead."
+        "Train on successful on-policy trajectories and supervise the policy to predict the next action sequence from prior histories.",
+        "Combine action forecasting with standard acting so both objectives shape a shared backbone during training.",
+        "Use a single policy backbone only; inference remains one-step action selection with no overhead."
       ],
-      "evidence_signal": "The abstract reports evaluation on five benchmarks (ALFWorld, ScienceWorld, WebShop, τ²-bench, and AppWorld) with stronger aggregate performance than GRPO and other RL baselines, including up to 1.9× and 2.0× higher sample efficiency on ScienceWorld.",
-      "watch_item": "The approach depends on successful on-policy trajectories for constructing action targets, so performance may be sensitive to trajectory quality and rollout stability during training.",
+      "evidence_signal": "Evaluated on five benchmarks (ALFWorld, ScienceWorld, WebShop, τ²-bench, and AppWorld), CoPE outperforms GRPO and predictive-auxiliary RL baselines, with up to 1.9× higher sample efficiency than ECHO and 2.0× higher than GRPO on ScienceWorld.",
+      "watch_item": "The approach depends on successful on-policy trajectories and careful construction of multi-step action targets, which may be challenging in sparse-reward or noisy environments.",
       "hashtags": [
         "#LanguageAgents",
         "#ReinforcementLearning",
         "#SampleEfficiency",
         "#AgenticAI",
-        "#AIResearch"
+        "#ScientificAI"
       ],
       "paper_id": "2026-10-14-arxiv-co_evolving_acting_and_forecasting_for_language_agents",
       "paper_title": "Co-Evolving Acting and Forecasting for Language Agents",
       "paper_date": "2026-10-14",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-15T18:06:35",
+      "generated_at": "2026-10-16T17:58:58",
       "generator": "openai"
     }
   },
@@ -702,27 +702,27 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Small initialization can create a nonmonotone \"accuracy well\": accuracy rises early, drops later due to a bottleneck, then recovers after further optimization.",
-      "engineering_relevance": "For training and deployment, monitoring accuracy over time can reveal failure modes that loss alone hides, especially in deep models initialized near zero.",
+      "key_insight": "Small random initialization can create a pronounced nonmonotone \"accuracy well,\" where accuracy improves early, drops sharply, and later recovers even as loss changes remain tiny.",
+      "engineering_relevance": "This warns that training loss alone may miss important classification dynamics, so monitoring accuracy over time is crucial when diagnosing convergence and early stopping.",
       "method": [
-        "Analyze training dynamics under vanishing initialization.",
-        "Study deep linear, ReLU, and convolutional models on synthetic and benchmark classification tasks.",
-        "Build a staged explanation: target-driven organization, degeneracy bottleneck, and later recruitment/recovery."
+        "Observed the phenomenon across deep linear, ReLU, and convolutional networks.",
+        "Analyzed training under different losses and optimizers on synthetic and benchmark classification tasks.",
+        "Developed a rigorous theory for shallow and deep linear networks, including extreme collapse-and-recovery behavior."
       ],
-      "evidence_signal": "The phenomenon is observed in training and test accuracy across deep linear networks, fully connected ReLU networks on MNIST, deep CNNs on CIFAR-10, and controlled synthetic tasks under different losses and optimizers.",
-      "watch_item": "Early accuracy gains can be misleading; continuing optimization may temporarily worsen classification even when loss changes are asymptotically tiny.",
+      "evidence_signal": "The abstract reports empirical results on MNIST, CIFAR-10, deep linear networks, and controlled synthetic tasks, plus theoretical proofs for linear models and a synthetic case reaching 100% accuracy, then 0, then 100% again.",
+      "watch_item": "The effect is tied to vanishing/small initialization and may be highly sensitive to training regime, so generalizing conclusions to standard initialization settings should be done cautiously.",
       "hashtags": [
         "#DeepLearning",
         "#OptimizationDynamics",
         "#ClassificationAccuracy",
-        "#VanishingInitialization",
-        "#ModelingAndSimulation"
+        "#NeuralNetworks",
+        "#MachineLearningTheory"
       ],
       "paper_id": "2026-10-14-arxiv-the_accuracy_well_nonmonotone_accuracy_dynamics_at_vanishing_initialization",
       "paper_title": "The Accuracy Well: Nonmonotone Accuracy Dynamics at Vanishing Initialization",
       "paper_date": "2026-10-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-15T18:06:37",
+      "generated_at": "2026-10-16T17:59:00",
       "generator": "openai"
     }
   },
@@ -754,27 +754,27 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Doc2Harness shows that long-horizon agent performance depends heavily on the harness design itself, and it benchmarks the ability of LLMs to build that harness from documentation.",
-      "engineering_relevance": "For practitioners building coding agents, the paper highlights harness engineering as a first-class systems problem that can materially affect real-world task success.",
+      "key_insight": "Doc2Harness shows that for long-horizon coding agents, the quality of the surrounding harness can be as important as the model itself, and harness engineering is still very hard even for frontier LLMs.",
+      "engineering_relevance": "This benchmark gives practitioners a deterministic way to test whether a model can build robust agent scaffolding that works across isolated containers and realistic multi-step tool workflows.",
       "method": [
-        "Stage 1: a build model uses an interface-only skeleton plus a development document to construct a complete candidate harness in an isolated container.",
-        "Stage 2: the frozen harness is tested in separate containers with a scripted mock model, simulating end-to-end long-horizon execution.",
-        "Scoring uses four observable channels: model requests, on-disk files, process exit code, and command output; positive controls prevent trivial passes."
+        "Stage 1: a build model receives an interface-only contract skeleton plus a consolidated development document and constructs a candidate harness in an isolated container.",
+        "Stage 2: the frozen harness is executed in separate containers per test case and driven end-to-end by a scripted mock model.",
+        "Scoring uses four observable channels: model requests, files on disk, process exit code, and command output, with positive controls to prevent vacuous passes."
       ],
-      "evidence_signal": "Across 19 frontier models, 3 independent builds each, and 328 test cases, the best model reached 53.05% pass rate while the weakest achieved 27.44%.",
-      "watch_item": "Because the benchmark depends on deterministic reconstruction from documentation, results may be sensitive to how cross-cutting functionality is modularized and described.",
+      "evidence_signal": "Across 19 frontier models, 3 independent builds each, and 328 test cases, the top model reached 53.05% pass rate while the weakest was 27.44%, indicating substantial remaining failure modes.",
+      "watch_item": "Because Stage 1 is build-time and Stage 2 is fully frozen, results may depend on how well the benchmark documents and isolates cross-cutting behavior that real harnesses often implement incrementally.",
       "hashtags": [
         "#LLMAgents",
         "#Benchmarking",
         "#HarnessEngineering",
         "#LongHorizonTasks",
-        "#AISystems"
+        "#CodeAgents"
       ],
       "paper_id": "2026-10-14-arxiv-doc2harness_benchmarking_llms_on_long_horizon_harness_engineering_of_coding_agents",
       "paper_title": "Doc2Harness: Benchmarking LLMs on Long-Horizon Harness Engineering of Coding Agents",
       "paper_date": "2026-10-14",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-15T18:06:39",
+      "generated_at": "2026-10-16T17:59:03",
       "generator": "openai"
     }
   },
@@ -806,27 +806,27 @@
     ],
     "score": 63,
     "infographic": {
-      "key_insight": "OrionMoE-Small is a compact tabular foundation model that uses dataset-aware sparse mixture-of-experts routing to improve in-context learning on heterogeneous tabular tasks without gradient-based adaptation.",
-      "engineering_relevance": "The model offers a scalable design pattern for tabular AI systems by allocating computation selectively across features and datasets, making it attractive for efficient deployment on diverse real-world tabular workloads.",
+      "key_insight": "OrionMoE-Small improves tabular in-context learning by using dataset-conditioned sparse mixture-of-experts routing on top of a dual-axis Transformer, enabling adaptive computation without task-specific fine-tuning.",
+      "engineering_relevance": "The model offers a compact, scalable alternative to dense tabular foundation models, especially for heterogeneous, small-context, and high-dimensional datasets.",
       "method": [
-        "Dual-axis Transformer architecture for tabular in-context learning",
-        "Sparse MoE activated along the feature axis with routing informed by feature and dataset context",
-        "Pretrained on synthetic classification tasks generated from a structured causal prior"
+        "Uses a dual-axis Transformer with distribution-aware feature representations.",
+        "Activates experts sparsely along the feature axis using routing informed by feature and dataset context.",
+        "Pretrains only on synthetic classification tasks from a structured causal prior, then predicts new tabular samples in-context."
       ],
-      "evidence_signal": "Across multiple tabular benchmarks, the model matches or exceeds much larger foundation models, with especially strong performance on small-context, high-dimensional, and class-imbalanced datasets.",
-      "watch_item": "Because pretraining relies entirely on synthetic classification tasks, transfer quality may depend on how well the synthetic causal prior matches the target data distribution.",
+      "evidence_signal": "The abstract reports competitive results across multiple tabular benchmarks, with particularly strong performance on small-context and high-dimensional datasets, plus improved behavior under class imbalance.",
+      "watch_item": "Because the model is pretrained entirely on synthetic tasks, real-world generalization may depend on how well the synthetic causal prior matches target tabular domains.",
       "hashtags": [
-        "#TabularAI",
         "#MixtureOfExperts",
-        "#FoundationModels",
+        "#TabularLearning",
         "#InContextLearning",
-        "#MachineLearning"
+        "#FoundationModels",
+        "#Transformer"
       ],
       "paper_id": "2026-10-14-arxiv-orionmoe_v1_0_a_mixture_of_experts_foundation_model_for_tabular_in_context_learning",
       "paper_title": "OrionMoE-v1.0: A Mixture-of-Experts Foundation Model for Tabular In-Context Learning",
       "paper_date": "2026-10-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-15T18:06:41",
+      "generated_at": "2026-10-16T17:59:05",
       "generator": "openai"
     }
   },
@@ -858,27 +858,27 @@
     ],
     "score": 63,
     "infographic": {
-      "key_insight": "A graph neural network can encode diverse acyclic AB block-copolymer architectures in a single shared representation and predict RPA instability limits across chain topologies.",
-      "engineering_relevance": "This offers a reusable ML surrogate for fast phase-behavior screening, helping guide polymer architecture design before costly field-theoretic or experimental exploration.",
+      "key_insight": "A graph neural network can encode diverse acyclic AB multiblock copolymer architectures in a single common representation and accurately predict RPA instability limits across topologies.",
+      "engineering_relevance": "This provides a reusable machine-learning tool for accelerating polymer phase-behavior design and exploring ordered-phase stability in complex block-copolymer architectures.",
       "method": [
-        "Represent each block-copolymer chain as a graph.",
-        "Train a GNN on RPA instability data to learn topology-dependent stability limits.",
-        "Transfer the learned representation to predict instability wavenumbers and larger block counts."
+        "Represent each polymer chain as a graph rather than a fixed-length sequence.",
+        "Train a GNN on architecture-dependent RPA instability data to learn topology-to-response relationships.",
+        "Test extrapolation to larger block counts and transfer the learned representation to instability-wavenumber prediction."
       ],
-      "evidence_signal": "The abstract reports that the model reconstructs stability-limit curves and retains predictive ability when extrapolated to architectures with more blocks, with successful transfer to a second task.",
-      "watch_item": "The approach is shown for acyclic AB multiblock architectures, so performance on cyclic, branched, or chemically more complex copolymers may require retraining or new graph features.",
+      "evidence_signal": "The abstract reports that the model reconstructs stability-limit curves, retains predictive capability when extrapolated to architectures with more blocks, and transfers to a related prediction task.",
+      "watch_item": "Performance may depend on how well the training set covers chain topologies, so extrapolation to very different architectures or chemistry conditions should be validated carefully.",
       "hashtags": [
         "#GraphNeuralNetworks",
         "#BlockCopolymers",
-        "#PolymerPhysics",
-        "#RandomPhaseApproximation",
-        "#ScientificMachineLearning"
+        "#PolymerModeling",
+        "#RPA",
+        "#MaterialsInformatics"
       ],
       "paper_id": "2026-10-14-arxiv-effective_graph_neural_representation_of_chain_architectures_of_block_copolymers_tested_by",
       "paper_title": "Effective Graph Neural Representation of Chain Architectures of Block Copolymers Tested by Predicting RPA Instability Limits",
       "paper_date": "2026-10-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-15T18:06:43",
+      "generated_at": "2026-10-16T17:59:07",
       "generator": "openai"
     }
   },
@@ -909,15 +909,15 @@
     ],
     "score": 63,
     "infographic": {
-      "key_insight": "ReAl is a model-agnostic plug-in that improves neural PDE surrogates by refining missing high-frequency details and aligning multi-step rollouts with long-term dynamics.",
-      "engineering_relevance": "It can upgrade existing physics surrogate models to produce sharper fine-scale predictions without retraining the base architecture from scratch.",
+      "key_insight": "ReAl is a model-agnostic plug-in that refines pretrained neural PDE surrogates by learning high-frequency residuals and aligning rollouts for long-horizon stability.",
+      "engineering_relevance": "It improves surrogate fidelity for simulations where fine-scale structures and stable autoregressive forecasts are critical, without requiring a new base PDE model.",
       "method": [
-        "Refinement: a conditional flow-matching model learns the residual distribution around the base surrogate prediction to recover fine-scale structures.",
-        "Alignment: multiple rollout trajectories from the same input are used to generate trajectory-level rewards that reduce long-horizon generative drift.",
-        "Designed as a plug-in, so it can augment diverse pretrained PDE surrogate architectures and tasks."
+        "Refinement: a conditional flow-matching model learns the residual distribution around the deterministic base prediction.",
+        "Alignment: multiple trajectories are sampled from the same input and used to reinforce the refiner with trajectory-level rewards.",
+        "Outcome: the plug-in reconstructs missing fine-scale details while reducing rollout drift in chaotic dynamics."
       ],
       "evidence_signal": "The abstract reports experiments across diverse surrogate architectures and PDE tasks, showing consistent gains in high-frequency fidelity, forecasting accuracy, and long-horizon stability.",
-      "watch_item": "Training and using trajectory-level rewards may add sampling and optimization cost, especially for chaotic systems where rollout variability is high.",
+      "watch_item": "Trajectory-level alignment may increase training and sampling cost, and performance could depend on the quality of the pretrained base surrogate and reward design.",
       "hashtags": [
         "#NeuralOperators",
         "#PDEs",
@@ -929,7 +929,7 @@
       "paper_title": "ReAl: Refine neural operators via aligning dynamical flow",
       "paper_date": "2026-10-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-15T18:06:45",
+      "generated_at": "2026-10-16T17:59:09",
       "generator": "openai"
     }
   },
@@ -961,27 +961,27 @@
     ],
     "score": 63,
     "infographic": {
-      "key_insight": "LSPO trains a model to learn from the quality of state transitions—not just final answers—by combining a lifted continuous state, energy-based ranking, and self-correction internalization.",
-      "engineering_relevance": "It offers a single-pass alternative to test-time reflection that can preserve accuracy while reducing latency and token usage, which is attractive for deploying reasoning systems efficiently.",
+      "key_insight": "LSPO learns from the quality of reasoning transitions themselves by lifting each answer into a continuous state and optimizing energy descent through self-correction steps, rather than only scoring final outputs.",
+      "engineering_relevance": "This enables single-pass generation to approach test-time reflection performance while cutting latency and token use, making it attractive for production LLM systems that need stronger reasoning efficiency.",
       "method": [
-        "Augment each answer with a learned continuous coordinate to form a lifted state.",
-        "Use an energy function and shaped reward to favor low-cost transitions toward better reasoning states.",
-        "Internalize selected low-energy answers into the direct generator via an auxiliary loss."
+        "Augment each textual answer with a learned continuous coordinate to form a lifted state.",
+        "Use an energy function plus shaped reward to favor low-energy transitions after accounting for edit and step costs.",
+        "Internalize selected low-energy answers into the base generator to reduce reliance on reflection at inference."
       ],
-      "evidence_signal": "On Qwen3.5-27B, LSPO reached 71.8% aggregate accuracy across math, science, code, and logic benchmarks, essentially matching test-time reflection at 71.9% while using 28% less latency and 25.8% fewer tokens.",
-      "watch_item": "The approach adds learned latent-state machinery and cost shaping, so performance may depend on careful tuning of transition, edit, and internalization weights.",
+      "evidence_signal": "On Qwen3.5-27B, LSPO achieved 71.8% aggregate accuracy across math, science, code, and logic benchmarks, nearly matching test-time reflection at 71.9% while using 28% lower latency and 25.8% fewer tokens.",
+      "watch_item": "The approach adds learned transition geometry and cost shaping, so performance may depend on stable energy calibration and careful tuning of edit-step costs across backbones and tasks.",
       "hashtags": [
-        "#AIAgent",
-        "#ReasoningModels",
-        "#RLHF",
-        "#EnergyBasedLearning",
-        "#LLMEfficiency"
+        "#LLMReasoning",
+        "#PreferenceOptimization",
+        "#SelfCorrection",
+        "#EnergyBasedModels",
+        "#EfficientInference"
       ],
       "paper_id": "2026-10-14-arxiv-lifted_state_policy_optimization_internalizing_self_correction_through_transition_geometry",
       "paper_title": "Lifted State Policy Optimization: Internalizing Self-Correction through Transition Geometry",
       "paper_date": "2026-10-14",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-15T18:06:47",
+      "generated_at": "2026-10-16T17:59:11",
       "generator": "openai"
     }
   },
@@ -1012,27 +1012,27 @@
     ],
     "score": 63,
     "infographic": {
-      "key_insight": "A simple reconstruction pretraining stage can make one-step generative model training much easier, effectively removing much of the difficulty in later distributional post-training.",
-      "engineering_relevance": "Priming Models offer a practical route to high-quality one-step generation with far lower training compute, improving the quality–cost tradeoff for image and world-model generation systems.",
+      "key_insight": "A simple reconstruction pretraining stage can make one-step generative models much easier to train, removing much of the difficulty of later distributional optimization.",
+      "engineering_relevance": "Priming Models offer a lower-compute path to high-quality one-step generation, improving the training-compute versus sample-quality tradeoff for image and world-model generation.",
       "method": [
-        "First train the model on a reconstruction task, such as fixed-noise pixel-space denoising.",
-        "Then post-train in feature space with a distributional objective.",
-        "Use this two-stage setup to simplify one-step generator learning without complex training machinery."
+        "Train first with a reconstruction objective, such as pixel-space denoising at a fixed noise level.",
+        "Then fine-tune in feature space with distributional post-training.",
+        "Use this two-stage setup to prime the model before one-step generation training."
       ],
-      "evidence_signal": "The paper reports strong results across class-conditional image generation, text-to-image generation, and world modeling, including ImageNet 256×256 FID 1.19 with about one-tenth the training compute of comparable prior one-step methods.",
-      "watch_item": "The approach still depends on a well-chosen reconstruction stage and a subsequent feature-space post-training design, so performance may be sensitive to implementation details and task/domain alignment.",
+      "evidence_signal": "Across class-conditional image generation, text-to-image generation, and world modeling, the method improves the training-compute/quality Pareto frontier and reaches FID 1.19 on ImageNet 256×256 with about one-tenth the training compute of comparable prior one-step methods.",
+      "watch_item": "Results may depend on careful design of the priming reconstruction task and on whether the downstream feature-space post-training transfers well across domains.",
       "hashtags": [
         "#GenerativeAI",
         "#DiffusionModels",
         "#OneStepGeneration",
-        "#ImageGeneration",
-        "#ModelingAndSimulation"
+        "#ModelingAndSimulation",
+        "#EfficientTraining"
       ],
       "paper_id": "2026-10-14-arxiv-are_we_overthinking_one_step_generation",
       "paper_title": "Are We Overthinking One-Step Generation?",
       "paper_date": "2026-10-14",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-15T18:06:49",
+      "generated_at": "2026-10-16T17:59:13",
       "generator": "openai"
     }
   }

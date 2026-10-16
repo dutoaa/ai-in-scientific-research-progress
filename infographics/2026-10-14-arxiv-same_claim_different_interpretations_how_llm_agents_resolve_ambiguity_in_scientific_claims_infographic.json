@@ -1,24 +1,24 @@
 {
-  "key_insight": "LLM scientific claim verifiers often reach judgments from hidden interpretations, and making those interpretations explicit with Claim Cards exposes that many verdict changes come from wording choices rather than evidence.",
-  "engineering_relevance": "For AI research agents and benchmark design, the paper shows that recording the assumed interpretation alongside each verdict can improve traceability, debugging, and evaluation of claim verification systems.",
+  "key_insight": "LLM scientific claim verifiers can reach different verdicts depending on how they interpret an underspecified claim, so the interpretation should be recorded alongside the answer.",
+  "engineering_relevance": "For AI research agents and benchmark systems, exposing the agent’s claim interpretation improves traceability, makes disagreements diagnosable, and helps compare verdicts more fairly.",
   "method": [
-    "Defined Claim Cards with 9 pre-evidence fields; each field is marked as stated, inferred, or default.",
-    "Ran a GPT-5.4 agent 5 times on each of 60 expert-labeled materials-science and biomedical claims in three settings: with a card, without a card, and with a frozen card.",
-    "Perturbed one card field at a time to test how interpretation changes affect verdicts and tool use."
+    "Defined a 9-field “Claim Card” to capture a verifier’s interpretation before evidence gathering, with fields marked stated, inferred, or default.",
+    "Ran a GPT-5.4 agent 5 times on each of 60 expert-labeled materials-science and biomedical claims under three conditions: with a card, without a card, and with a frozen card.",
+    "Deliberately edited one card field (quantifier or support threshold) to test how interpretation changes affect verdicts and downstream tool use."
   ],
-  "evidence_signal": "Across 900 runs, over 40% of card fields were not stated, the card added about 10% to tokens and time, and deliberate edits changed verdicts on about one-third of claims versus about one-seventh expected by chance (p < 0.001).",
-  "watch_item": "The results come from a specific GPT-5.4 setup and a limited 60-claim benchmark, so broader generalization to other models, domains, and verifier pipelines still needs testing.",
+  "evidence_signal": "Across 900 runs, more than 40% of card fields were not stated; adding a card cost about 10% more tokens/time but did not measurably change agreement with expert labels, while targeted card edits changed verdicts on about one-third of claims (p < 0.001).",
+  "watch_item": "A recorded interpretation may still be incomplete or inconsistently constructed, so benchmarks need a standard way to publish and compare both the claim label and the underlying interpretation.",
   "hashtags": [
     "#LLMAgents",
     "#ScientificClaims",
-    "#ClaimVerification",
     "#Benchmarking",
-    "#Interpretability"
+    "#Interpretability",
+    "#AIforScience"
   ],
   "paper_id": "2026-10-14-arxiv-same_claim_different_interpretations_how_llm_agents_resolve_ambiguity_in_scientific_claims",
   "paper_title": "Same Claim, Different Interpretations: How LLM Agents Resolve Ambiguity in Scientific Claims",
   "paper_date": "2026-10-14",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-10-15T18:06:29",
+  "generated_at": "2026-10-16T17:58:52",
   "generator": "openai"
 }
