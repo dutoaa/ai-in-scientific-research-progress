@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-10-17
+Generated: 2026-10-18
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering
@@ -91,15 +91,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.22293v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-towards_continual_learning_mitigating_forgetting_with_subspace_tuning_infographic.json
 
-## 12. Generalization Guarantees of Randomized Block Coordinate Descent for Nonconvex Learning
-
-- Date: 2026-10-15
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.22213v1
-- PDF: https://arxiv.org/pdf/2610.22213v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-generalization_guarantees_of_randomized_block_coordinate_descent_for_nonconvex_learning_infographic.json
-
-## 13. CAT-alyzing Honesty: Continuous Adversarial Training for Transferable LLM Honesty
+## 12. CAT-alyzing Honesty: Continuous Adversarial Training for Transferable LLM Honesty
 
 - Date: 2026-10-15
 - Category: Scientific Discovery
@@ -107,7 +99,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.22292v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-cat_alyzing_honesty_continuous_adversarial_training_for_transferable_llm_honesty_infographic.json
 
-## 14. Mosaic: Multi-Session Agentic Reinforcement Learning
+## 13. Mosaic: Multi-Session Agentic Reinforcement Learning
 
 - Date: 2026-10-15
 - Category: AI Scientists and Research Agents
@@ -115,7 +107,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.22174v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-mosaic_multi_session_agentic_reinforcement_learning_infographic.json
 
-## 15. The importance of tensor handling and implementation of physics-informed DeepONets
+## 14. The importance of tensor handling and implementation of physics-informed DeepONets
 
 - Date: 2026-10-15
 - Category: Scientific Machine Learning
@@ -123,23 +115,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.22157v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-the_importance_of_tensor_handling_and_implementation_of_physics_informed_deeponets_infographic.json
 
-## 16. Architecting for Hardware Diversity: Meta's End-to-End Co-Design for High-Performance AI Training on AMD GPUs
-
-- Date: 2026-10-15
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2610.22230v1
-- PDF: https://arxiv.org/pdf/2610.22230v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-architecting_for_hardware_diversity_meta_s_end_to_end_co_design_for_high_performance_ai_tr_infographic.json
-
-## 17. Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models
-
-- Date: 2026-10-15
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.22217v1
-- PDF: https://arxiv.org/pdf/2610.22217v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-skill_decoupled_on_policy_expert_distillation_for_unified_vision_language_models_infographic.json
-
-## 18. PathFM: Fast Generative Forecasting of Multivariate Trajectories
+## 15. PathFM: Fast Generative Forecasting of Multivariate Trajectories
 
 - Date: 2026-10-15
 - Category: AI scientific research
@@ -147,7 +123,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.22358v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-pathfm_fast_generative_forecasting_of_multivariate_trajectories_infographic.json
 
-## 19. Baselines and Score Centering in Policy Gradient Estimation
+## 16. Baselines and Score Centering in Policy Gradient Estimation
 
 - Date: 2026-10-15
 - Category: AI scientific research
@@ -155,10 +131,34 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.22263v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-baselines_and_score_centering_in_policy_gradient_estimation_infographic.json
 
-## 20. EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search
+## 17. Generalization Guarantees of Randomized Block Coordinate Descent for Nonconvex Learning
+
+- Date: 2026-10-15
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.22213v1
+- PDF: https://arxiv.org/pdf/2610.22213v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-generalization_guarantees_of_randomized_block_coordinate_descent_for_nonconvex_learning_infographic.json
+
+## 18. EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search
 
 - Date: 2026-10-15
 - Category: AI scientific research
 - arXiv: https://arxiv.org/abs/2610.22290v1
 - PDF: https://arxiv.org/pdf/2610.22290v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-elitereplay_preserving_diverse_solutions_in_rl_post_training_via_quality_diversity_search_infographic.json
+
+## 19. Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?
+
+- Date: 2026-10-15
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.22333v1
+- PDF: https://arxiv.org/pdf/2610.22333v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-evaluation_awareness_beyond_english_do_llms_act_differently_when_tested_in_indic_languages_infographic.json
+
+## 20. Learning Rational Strategies for Temporal Objectives in Multi-Agent Systems
+
+- Date: 2026-10-15
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2610.22287v1
+- PDF: https://arxiv.org/pdf/2610.22287v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-15-arxiv-learning_rational_strategies_for_temporal_objectives_in_multi_agent_systems_infographic.json

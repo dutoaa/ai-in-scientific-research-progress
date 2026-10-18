@@ -1,16 +1,16 @@
 {
-  "key_insight": "LangDiT shows that transformer architecture choices materially improve continuous diffusion language models, not just the diffusion objective or sampler.",
-  "engineering_relevance": "For CDLM deployment, the paper suggests architecture-level tuning can deliver better generation quality at the same training objective and inference pipeline.",
+  "key_insight": "Transformer architecture is a major driver of performance in continuous diffusion language models, and LangDiT improves generation quality by tailoring normalization, conditioning, routing, and self-conditioning to the CDLM setting.",
+  "engineering_relevance": "The work provides a plug-and-play backbone upgrade for continuous language generators that improves perplexity without changing the underlying representation, objective, or sampler.",
   "method": [
-    "Systematically compared transformer designs for CDLMs rather than reusing causal LLM or DiT backbones.",
-    "Added feature and query-key normalization, wider noise conditioning, likelihood-shortcut gradient routing/calibration, and confidence-gated self-conditioning.",
-    "Used LangDiT as a plug-and-play backbone across LangFlow and Plaid-style CDLM formulations."
+    "Combine feature normalization with query-key normalization for CDLM-specific stability.",
+    "Expand noise conditioning and add likelihood-shortcut gradient routing plus calibration.",
+    "Use confidence-gated training self-conditioning to improve denoising behavior."
   ],
-  "evidence_signal": "On OpenWebText unconditional 1024-token generation, LangDiT reached 21.72 GenPPL at 1024 NFEs and 44.72 at 128 NFEs with LangFlow, and 11.33/27.51 GenPPL in Plaid-style CDLMs.",
-  "watch_item": "Reported gains depend on specific CDLM formulations and NFE budgets, so the added architectural complexity may need careful re-tuning to reproduce in other setups.",
+  "evidence_signal": "Across matched evaluations on OpenWebText 1024-token unconditional generation, LangDiT reaches state-of-the-art GenPPL, including 21.72 at 1024 NFEs and 44.72 at 128 NFEs in LangFlow, and 11.33 at 1024 denoising NFEs and 27.51 at 128 NFEs in Plaid-style formulations.",
+  "watch_item": "The gains are demonstrated on continuous diffusion language model setups and may depend on careful integration with the chosen CDLM formulation and inference budget.",
   "hashtags": [
-    "#Transformers",
     "#DiffusionLM",
+    "#Transformers",
     "#LanguageGeneration",
     "#DeepLearning",
     "#AIResearch"
@@ -19,6 +19,6 @@
   "paper_title": "Designing Transformers for Continuous Diffusion Language Models",
   "paper_date": "2026-10-15",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-17T16:55:40",
+  "generated_at": "2026-10-18T17:09:56",
   "generator": "openai"
 }

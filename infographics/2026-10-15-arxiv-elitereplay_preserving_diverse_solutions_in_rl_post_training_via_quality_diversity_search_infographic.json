@@ -1,24 +1,24 @@
 {
-  "key_insight": "EliteReplay improves RL post-training for LLMs by combining GRPO with a quality-diverse replay archive, boosting accuracy while preserving multiple correct solution strategies.",
-  "engineering_relevance": "For verifiable tasks like text-to-SQL, it offers a practical way to make post-trained models both more accurate and less single-solution biased, which matters for robust deployment on ambiguous inputs.",
+  "key_insight": "EliteReplay improves RL post-training accuracy while preserving a model’s diversity of correct solutions by combining GRPO with an elite replay archive built from quality-diverse search.",
+  "engineering_relevance": "For LLM post-training on verifiable tasks, this suggests a practical way to boost performance without collapsing the model to a single narrow answer strategy.",
   "method": [
-    "Use the frozen base model to sample solutions before training.",
-    "Build an \"elite\" archive via quality-diversity search to retain distinct correct approaches.",
-    "Train with GRPO plus a replay loss on the archived solutions to preserve diversity while improving performance."
+    "Use the frozen base model to collect correct solutions that represent distinct approaches.",
+    "Build an elite archive via quality-diversity search to preserve diverse high-quality strategies.",
+    "Train with GRPO plus a replay loss on the archive to retain solution variety while improving accuracy."
   ],
-  "evidence_signal": "Across multiple text-to-SQL benchmarks, EliteReplay achieves the highest pass@128, up to 77% more distinct correct strategies than the strongest baselines, and nearly doubles coverage on ambiguous questions in AmbiQT.",
-  "watch_item": "The archive-building and replay components add extra offline search and memory overhead, so gains may depend on task verifiability and careful implementation.",
+  "evidence_signal": "On multiple text-to-SQL benchmarks, EliteReplay achieves the highest pass@128 in the abstract and up to 77% more distinct correct strategies than the strongest baselines, with better retention of base-model strategies.",
+  "watch_item": "The approach depends on having a good archive of diverse correct solutions, so performance may be sensitive to archive construction cost and coverage quality.",
   "hashtags": [
     "#ReinforcementLearning",
     "#LLMPostTraining",
     "#QualityDiversity",
     "#TextToSQL",
-    "#ModelDiversity"
+    "#AIResearch"
   ],
   "paper_id": "2026-10-15-arxiv-elitereplay_preserving_diverse_solutions_in_rl_post_training_via_quality_diversity_search",
   "paper_title": "EliteReplay: Preserving Diverse Solutions in RL Post-Training via Quality-Diversity Search",
   "paper_date": "2026-10-15",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-17T16:56:04",
+  "generated_at": "2026-10-18T17:10:10",
   "generator": "openai"
 }

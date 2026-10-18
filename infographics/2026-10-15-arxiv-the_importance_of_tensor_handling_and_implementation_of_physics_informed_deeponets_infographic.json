@@ -1,24 +1,24 @@
 {
-  "key_insight": "A mathematically equivalent re-implementation of PI-DeepONets removes redundant Branch-network evaluations, cutting tensor sizes and training cost without sacrificing accuracy.",
-  "engineering_relevance": "This makes physics-informed operator learning more practical for higher-dimensional PDEs, including cases that would otherwise exceed GPU memory.",
+  "key_insight": "A tensor-efficient PI-DeepONet implementation can be mathematically equivalent to the original while dramatically cutting training cost by avoiding redundant Branch-network evaluations.",
+  "engineering_relevance": "This makes physics-informed operator learning more practical for higher-dimensional PDEs, enabling faster training and previously infeasible 3D runs on limited GPU memory.",
   "method": [
-    "Restructure PI-DeepONet inputs so the Branch net is evaluated once per input function instead of repeatedly across collocation points.",
-    "Preserve the original physics-informed loss and operator form while reducing redundant tensor handling.",
-    "Analyze complexity and derive scaling laws for training time versus collocation points and input functions."
+    "Remove redundancy in Branch-network inputs across collocation points",
+    "Reduce tensor sizes and the number of Branch evaluations",
+    "Analyze computational complexity and derive scaling laws for collocation points and input functions"
   ],
-  "evidence_signal": "Across 1D, 2D, and 3D linear advection tests, the modified model matched predictive accuracy while reducing training time, reaching up to 3.75× speed-up in 2D and enabling a 3D run on an NVIDIA A100 that the original could not fit in memory.",
-  "watch_item": "The gain depends on implementation details and tensor layout, so performance improvements may vary with model size, dimensionality, and hardware memory limits.",
+  "evidence_signal": "Across 1D, 2D, and 3D linear advection tests, the modified model matched predictive accuracy while reducing training time, with up to 3.75× speed-up in 2D and enabling 3D training on an A100 GPU.",
+  "watch_item": "Speedups depend on careful tensor handling and implementation details, so memory layout or batching choices may erase gains if not engineered correctly.",
   "hashtags": [
-    "#PhysicsInformedLearning",
-    "#DeepONets",
-    "#ScientificMachineLearning",
+    "#PhysicsInformedML",
+    "#DeepONet",
+    "#ScientificComputing",
     "#PDEs",
-    "#GPUOptimization"
+    "#GPUAcceleration"
   ],
   "paper_id": "2026-10-15-arxiv-the_importance_of_tensor_handling_and_implementation_of_physics_informed_deeponets",
   "paper_title": "The importance of tensor handling and implementation of physics-informed DeepONets",
   "paper_date": "2026-10-15",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-10-17T16:55:53",
+  "generated_at": "2026-10-18T17:10:03",
   "generator": "openai"
 }

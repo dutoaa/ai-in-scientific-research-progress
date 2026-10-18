@@ -1,24 +1,24 @@
 {
-  "key_insight": "Mosaic extends agentic reinforcement learning to multi-session trajectories by explicitly modeling how each session contributes, rather than treating all sessions as equally responsible for the final outcome.",
-  "engineering_relevance": "This matters for real agent systems that use context compaction or subagent forking, because training can now better match inference-time behavior and reduce wasted session usage.",
+  "key_insight": "Mosaic extends agentic reinforcement learning to multi-session trajectories by assigning credit across sessions instead of treating an entire trajectory as one undifferentiated training unit.",
+  "engineering_relevance": "This matters for agentic systems that use context compaction or subagent forking, where training should match deployment behavior and optimize how sessions are allocated and reused.",
   "method": [
-    "Introduces a multi-session RL setting that supports any number of sessions per trajectory.",
-    "Uses session-usage signals at the trajectory level to improve advantage estimation.",
-    "Estimates each session’s marginal contribution and shapes session-level advantages accordingly, without a critic."
+    "Critic-free hierarchical optimization for multi-session RL",
+    "Trajectory-level advantage estimation with session-usage signals",
+    "Session-level advantage shaping via estimated marginal contribution"
   ],
-  "evidence_signal": "On BrowseComp with Qwen3.5-4B, Mosaic outperforms trajectory-level broadcasting in both context compaction and subagent forking while using fewer sessions on average.",
-  "watch_item": "The method relies on estimating marginal session contributions, which may be sensitive to noisy credit assignment and could be harder to stabilize in more complex tasks.",
+  "evidence_signal": "On BrowseComp with Qwen3.5-4B, Mosaic outperforms broadcast-style training in both context compaction and subagent forking, while using fewer sessions on average.",
+  "watch_item": "Estimated marginal contributions and session-usage signals may be sensitive to noisy credit assignment, so the method could require careful tuning and stable session-level measurement.",
   "hashtags": [
-    "#AgenticRL",
-    "#MultiSessionLearning",
-    "#CreditAssignment",
+    "#MultiSessionRL",
+    "#AgenticAI",
+    "#ReinforcementLearning",
     "#LLMAgents",
-    "#ReinforcementLearning"
+    "#CreditAssignment"
   ],
   "paper_id": "2026-10-15-arxiv-mosaic_multi_session_agentic_reinforcement_learning",
   "paper_title": "Mosaic: Multi-Session Agentic Reinforcement Learning",
   "paper_date": "2026-10-15",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-10-17T16:55:50",
+  "generated_at": "2026-10-18T17:10:01",
   "generator": "openai"
 }

@@ -1,15 +1,15 @@
 {
-  "key_insight": "OS-Helix trains a single computer-using agent to coordinate GUI actions and code execution end-to-end, rather than relying on prompt-level tool switching.",
-  "engineering_relevance": "This enables more capable desktop automation for real applications where agents must both interact with interfaces and manipulate files, scripts, and system state.",
+  "key_insight": "OS-Helix trains a single computer-using agent to choose between GUI actions and code execution in one learned action space, instead of relying on prompt-level tool routing.",
+  "engineering_relevance": "This makes desktop automation more robust for real-world workflows that mix visual interaction, files, scripts, and system state changes.",
   "method": [
-    "Built a hybrid action space that unifies GUI commands and code execution in one policy.",
-    "Created verifiable training data via application-artifact composition and decoupled instruction/evaluator generation.",
-    "Improved the agent with online RL using Step-balanced GSPO to stop long code traces from dominating optimization."
+    "Built hybrid supervision by pairing desktop apps with authentic file artifacts to create executable Ubuntu states.",
+    "Used a decoupled instruction/evaluator pipeline so tasks can be verified by final state, regardless of whether the solution uses GUI or code.",
+    "Cold-started with SFT on filtered hybrid data, then improved with online RL using Step-balanced GSPO to avoid long code traces dominating optimization."
   ],
-  "evidence_signal": "On OSWorld-Verified, OS-Helix-27B and 35B-A3B achieved 35.0% and 33.7% relative gains over hybrid baselines, and OS-Helix-27B-RL reached 66.44% success after a 42.9% improvement.",
-  "watch_item": "The approach depends on high-quality hybrid supervision and live-environment RL, so data construction and action-step balancing may be costly and sensitive to implementation details.",
+  "evidence_signal": "On OSWorld-Verified, OS-Helix-27B and OS-Helix-35B-A3B achieved relative gains of 35.0% and 33.7% over matched baselines, and OS-Helix-27B-RL reached 66.44% success after a 42.9% improvement.",
+  "watch_item": "The approach depends on high-quality executable desktop states and careful action-step balancing, so data construction and training stability may be challenging to reproduce at scale.",
   "hashtags": [
-    "#ComputerUsingAgents",
+    "#ComputerUseAgents",
     "#GUIAutomation",
     "#CodeExecution",
     "#ReinforcementLearning",
@@ -19,6 +19,6 @@
   "paper_title": "OS-Helix: Unifying GUI Interaction and Code Execution in Native Computer-Using Agents",
   "paper_date": "2026-10-15",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-17T16:55:37",
+  "generated_at": "2026-10-18T17:09:55",
   "generator": "openai"
 }

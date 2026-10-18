@@ -1,24 +1,24 @@
 {
-  "key_insight": "Subspace Tuning (SST) reduces catastrophic forgetting by restricting fine-tuning updates to the bottom singular subspace, preserving principal weight directions while maintaining strong task learning.",
-  "engineering_relevance": "SST offers a practical drop-in fine-tuning strategy for LLMs that improves retention, lowers KL drift, and better supports continual adaptation without major architectural changes.",
+  "key_insight": "Subspace Tuning (SST) reduces catastrophic forgetting by constraining fine-tuning updates to the bottom singular subspace, preserving principal directions while still learning new tasks.",
+  "engineering_relevance": "For LLM fine-tuning pipelines, SST offers a drop-in, optimizer-agnostic way to improve continual learning and retention without sacrificing target-task performance.",
   "method": [
-    "Project each weight update into the bottom singular subspace to block changes along dominant directions.",
-    "Combine with standard fine-tuning objectives such as SFT and self-distillation; optimizer-agnostic.",
-    "Use dense gradient estimation plus a refresh mechanism to keep the protected subspace current."
+    "Project each weight update into the bottom singular subspace to eliminate changes along principal directions.",
+    "Combine subspace protection with dense gradient estimation for effective learning under the constraint.",
+    "Use a simple refresh mechanism and compose SST with SFT or self-distillation."
   ],
-  "evidence_signal": "The abstract reports that protecting up to 99% of the weight subspace improves retention while preserving target-task performance, and reduces KL drift by about 2–4× versus baseline recipes.",
-  "watch_item": "Computing and refreshing singular subspaces may add implementation overhead and could be sensitive to how often the protected basis is updated.",
+  "evidence_signal": "The abstract reports that protecting up to 99% of the weight subspace improves retention while maintaining strong task performance, with 2–4× less KL drift than baseline recipes and near-elimination of forgetting in large models.",
+  "watch_item": "Computing and maintaining singular subspaces adds implementation overhead, so the method may be sensitive to how often subspaces are refreshed and how well it scales in practice.",
   "hashtags": [
     "#ContinualLearning",
     "#LLM",
-    "#CatastrophicForgetting",
     "#FineTuning",
+    "#CatastrophicForgetting",
     "#MachineLearning"
   ],
   "paper_id": "2026-10-15-arxiv-towards_continual_learning_mitigating_forgetting_with_subspace_tuning",
   "paper_title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
   "paper_date": "2026-10-15",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-17T16:55:43",
+  "generated_at": "2026-10-18T17:09:58",
   "generator": "openai"
 }

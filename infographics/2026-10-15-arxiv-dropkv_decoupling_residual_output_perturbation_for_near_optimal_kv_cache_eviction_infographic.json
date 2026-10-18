@@ -1,24 +1,24 @@
 {
-  "key_insight": "DropKV turns KV-cache eviction into a decoupled per-token scoring problem, enabling near-optimal cache removal with a provable approximation guarantee instead of an intractable joint optimization.",
-  "engineering_relevance": "It directly improves long-context LLM serving by reducing KV memory pressure and accelerating prefill without sacrificing cache-budget efficiency.",
+  "key_insight": "DropKV turns KV-cache eviction into a decoupled per-token scoring problem, making near-optimal cache reduction both theoretically tractable and practical for long-context LLMs.",
+  "engineering_relevance": "It offers a kernel-friendly eviction strategy that lowers memory pressure and speeds up prefill without requiring full attention-matrix materialization.",
   "method": [
-    "Decouple residual-output perturbation into independent token scores",
-    "Use a cone-condition analysis to prove a constant-factor approximation guarantee",
-    "Implement fused Triton kernels that avoid materializing the full attention matrix"
+    "Decouple residual-output perturbation into independent token scores instead of solving a combinatorial eviction problem.",
+    "Use a provable constant-factor approximation under an empirically verified cone condition.",
+    "Implement fused Triton kernels for efficient scoring and cache eviction."
   ],
-  "evidence_signal": "On RULER and LongBench, DropKV outperforms state-of-the-art eviction baselines at equal cache budgets and delivers up to 19.8x faster scoring kernels plus up to 9.9% matched-batch prefill speedup.",
-  "watch_item": "The approximation guarantee relies on a cone condition that is empirically verified, so performance may depend on how well that condition holds in other models or workloads.",
+  "evidence_signal": "On three long-context LLMs, DropKV showed a 19.8x scoring-kernel speedup and up to 9.9% end-to-end prefill speedup, and it outperformed state-of-the-art eviction baselines on RULER and LongBench.",
+  "watch_item": "The approximation guarantee depends on a cone condition that is empirically verified, so performance may vary if that assumption weakens in other models or workloads.",
   "hashtags": [
     "#KVCache",
-    "#LLMInference",
+    "#LLMOptimization",
     "#LongContext",
     "#TritonKernels",
-    "#AISystems"
+    "#InferenceSpeed"
   ],
   "paper_id": "2026-10-15-arxiv-dropkv_decoupling_residual_output_perturbation_for_near_optimal_kv_cache_eviction",
   "paper_title": "DropKV: Decoupling Residual-Output Perturbation for Near-Optimal KV-Cache Eviction",
   "paper_date": "2026-10-15",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-17T16:55:32",
+  "generated_at": "2026-10-18T17:09:51",
   "generator": "openai"
 }

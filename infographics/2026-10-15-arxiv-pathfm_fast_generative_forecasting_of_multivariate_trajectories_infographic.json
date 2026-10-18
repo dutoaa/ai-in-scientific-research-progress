@@ -1,24 +1,24 @@
 {
-  "key_insight": "PathFM forecasts full future trajectories, not just marginal quantiles, by using flow matching to generate diverse, dependence-aware paths efficiently.",
-  "engineering_relevance": "This enables practical forecasting for trajectory-dependent decisions such as demand planning, peak load management, and event timing while keeping inference fast enough for real deployment.",
+  "key_insight": "PathFM turns forecasting into full trajectory generation, using flow matching plus distillation to produce multiple plausible future paths quickly and with better path-level calibration.",
+  "engineering_relevance": "This is useful when downstream decisions depend on path shape and dependence structure, such as cumulative demand, peak load, event timing, and risk-sensitive planning.",
   "method": [
-    "Uses a flow-matching generative model to sample complete future multivariate paths.",
-    "Distills sampling to one or two steps and reuses history attention cache across draws for speed.",
-    "Adds direct calibration-loss optimization with the distilled sampler for better probabilistic forecast quality."
+    "Uses flow matching to generate complete future trajectories instead of only marginal quantiles.",
+    "Distills the sampler to one or two steps and reuses history attention cache across draws for fast multi-sample forecasting.",
+    "Adds a direct calibration-loss optimization path made practical by the fast distilled sampler."
   ],
-  "evidence_signal": "The paper reports competitive marginal accuracy on fev-bench and TIME, and higher aggregate path scores on the new fps-bench, which adds energy, variogram, and downstream metrics; chaotic-system experiments show improved long-run variability over baselines.",
-  "watch_item": "The speed and calibration benefits rely on distillation and cache sharing, so performance may depend on careful implementation and may be less robust if the model is heavily out of distribution.",
+  "evidence_signal": "The abstract reports competitive marginal accuracy on fev-bench and TIME, and higher aggregate path score on the new fps-bench than all evaluated external baselines, with chaotic-system tests showing stronger long-run variability retention.",
+  "watch_item": "The fast sampler and calibration benefits may depend on careful distillation and cache-sharing implementation, so stability and reproducibility should be checked on new datasets and longer horizons.",
   "hashtags": [
     "#TimeSeriesForecasting",
-    "#GenerativeAI",
+    "#GenerativeModels",
     "#FlowMatching",
-    "#MultivariateTrajectories",
-    "#ScientificML"
+    "#TrajectoryPrediction",
+    "#ScientificAI"
   ],
   "paper_id": "2026-10-15-arxiv-pathfm_fast_generative_forecasting_of_multivariate_trajectories",
   "paper_title": "PathFM: Fast Generative Forecasting of Multivariate Trajectories",
   "paper_date": "2026-10-15",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-17T16:55:59",
+  "generated_at": "2026-10-18T17:10:05",
   "generator": "openai"
 }
