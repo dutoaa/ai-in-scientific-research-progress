@@ -1,19 +1,19 @@
 {
-  "key_insight": "BMuon modifies Muon’s spectral geometry so Transformer MLP hidden channels compete for a shared budget, improving structured compressibility.",
-  "engineering_relevance": "BMuon targets training Transformers that better tolerate MLP channel pruning, with learned allocations that can guide channel removal.",
+  "key_insight": "Budget Muon (BMuon) modifies Muon’s spectral geometry so MLP hidden channels compete for a shared budget, making trained Transformers more robust to structured channel pruning.",
+  "engineering_relevance": "BMuon offers an interpretable global channel budget and learned pruning scores for reducing Transformer MLP width while preserving more performance than Muon in the reported evaluations.",
   "method": [
-    "Use a global channel-allocation budget to interpolate between Muon’s geometry and structured sparse geometries.",
-    "Derive an exact normalized steepest-descent oracle and a practical minorization-maximization allocation surrogate.",
-    "Prove that sufficiently scarce budgets make every minimum-cost representation width-minimal in linear factorization models."
+    "Formulate normalized steepest descent under norms interpolating between Muon’s geometry and structured sparse geometries.",
+    "Allocate a shared budget across hidden channels and approximate the exact allocation problem with a minorization–maximization surrogate.",
+    "Prove width-minimal minimum-cost representations for linear factorization models under sufficiently scarce BMuon budgets."
   ],
-  "evidence_signal": "The abstract reports improvements over Muon under gradual MLP pruning for ViT-S/16 on ImageNet-1K and post-training MLP pruning for a 1B-parameter LLaMA-style model on FineWeb; learned allocations also outperform weight magnitude as a pruning criterion.",
-  "watch_item": "The width-minimality guarantee applies to linear factorization models, while the abstract does not quantify Transformer gains or allocation-surrogate overhead.",
+  "evidence_signal": "The abstract reports improvements over Muon for gradual MLP pruning of ViT-S/16 on ImageNet-1K and post-training MLP pruning of a 1B-parameter LLaMA-style model trained on FineWeb; learned allocations also outperform weight-magnitude pruning scores in the vision evaluation.",
+  "watch_item": "The width-minimality guarantee concerns linear factorization models, while practical Transformer training uses an allocation surrogate whose overhead and approximation effects require evaluation.",
   "hashtags": [
     "#BMuon",
+    "#Optimization",
     "#StructuredPruning",
-    "#NeuralNetworkOptimization",
     "#ModelCompression",
-    "#ScientificMachineLearning"
+    "#EfficientAI"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "BMuon: Budgeting Muon's Spectral Geometry for Structured Compressibility",
   "paper_date": "2026-10-16",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-10-19T09:37:21",
+  "generated_at": "2026-10-19T19:43:28",
   "generator": "openai"
 }
