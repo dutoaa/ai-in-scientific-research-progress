@@ -1,24 +1,26 @@
 {
-  "key_insight": "EEG during silent reading contains both word-level identity in early LLM layers and passage-level context in deeper layers, showing that the best decoding target depends on what information you want to extract.",
-  "engineering_relevance": "For EEG-to-text or neural decoding systems, layer choice becomes a practical design parameter: early layers favor word identity, while deeper layers better capture discourse state and context.",
+  "key_insight": "Early Llama-3.1-8B layers best support word-level decoding from silent-reading EEG, while deeper layers increasingly capture passage-level context.",
+  "engineering_relevance": "Target-layer selection offers a design dial for emphasizing word identity versus passage context in EEG language decoders.",
   "method": [
-    "Trained one decoder per Llama-3.1-8B layer across the full model depth.",
-    "Compared decoders with and without a causal transformer over EEG-window sequences.",
-    "Used controls to separate true context tracking from word-decoding effects and session-specific artifacts."
+    "Train a separate EEG-to-embedding decoder for each of 33 LLM layers.",
+    "Compare decoders with and without a causal transformer over EEG-window sequences.",
+    "Test context tracking using target-plus-noise and within-/across-session run-permutation controls."
   ],
-  "evidence_signal": "Across 19-channel EEG from silent reading, word-level decodability peaked in early layers and declined with depth, while the context-tracking gain increased with depth and persisted even from a single 0.5-s EEG window.",
-  "watch_item": "Context tracking can be affected by decoder design and control assumptions, so gains should be interpreted carefully when transferring the method to new subjects, sessions, or language tasks.",
+  "evidence_signal": "Using 19-channel silent-reading EEG, even a decoder processing one 0.5-second window at a time tracked passage context; controls indicated that most tracking followed the text rather than target geometry or session signatures.",
+  "watch_item": "The abstract provides no sample size or numerical performance estimates, limiting assessment of robustness and practical decoding accuracy.",
   "hashtags": [
-    "#EEG",
-    "#LLM",
-    "#NeuralDecoding",
+    "#EEGDecoding",
+    "#LargeLanguageModels",
     "#SilentReading",
-    "#ComputationalNeuroscience"
+    "#NeuralEngineering",
+    "#ContextRepresentation"
   ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
   "paper_id": "2026-10-16-arxiv-deep_llm_layers_expose_passage_level_context_in_eeg_during_silent_reading",
   "paper_title": "Deep LLM layers expose passage-level context in EEG during silent reading",
   "paper_date": "2026-10-16",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-19T09:35:20",
+  "generated_at": "2026-10-19T09:37:38",
   "generator": "openai"
 }

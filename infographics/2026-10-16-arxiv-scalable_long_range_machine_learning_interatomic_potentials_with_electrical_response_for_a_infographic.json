@@ -1,24 +1,26 @@
 {
-  "key_insight": "The paper introduces a scalable machine-learning interatomic potential that separates long-range electrostatics from local learned responses, enabling accurate energies, forces, and electrical properties at million-atom scale.",
-  "engineering_relevance": "This makes device-relevant atomistic modeling under electric fields practical on distributed GPUs, bridging first-principles accuracy and large-scale simulation throughput.",
+  "key_insight": "DPA4C-LR combines long-range electrostatics and electrical-response prediction with spatially decomposable machine-learning interatomic potentials.",
+  "engineering_relevance": "The framework enables large-scale simulations of field-responsive materials, ion transport, and interfacial heat transfer toward device-relevant length scales.",
   "method": [
-    "Analytically split long-range electrostatic forces and Born effective charges into a global electrostatics solve plus local derivatives of learned latent charges.",
-    "Embed the formulation in an equivariant MLIP (DPA4C-LR) to preserve spatial decomposability for distributed evaluation.",
-    "Support energies, forces, stresses, and BECs across boundary conditions with scalable parallel computation."
+    "Separate electrostatic forces and Born effective charges into global electrostatics and strictly local derivatives of learned latent charges.",
+    "Preserve distributed evaluation of energies, forces, stresses, and electrical response across different boundary conditions.",
+    "Implement DPA4C-LR on the nvalchemi platform and train on energies and forces."
   ],
-  "evidence_signal": "The abstract reports scaling to 5.2 million atoms on four GPUs at about twice the cost of the short-range model, while reproducing BECs, field-dependent infrared spectra of water, relaxor polarization hysteresis, ionic conductivity, and Si/diamond interfacial thermal transport.",
-  "watch_item": "The approach still depends on the quality of the learned latent charges and the electrostatics formulation, so transferability and boundary-condition handling need careful validation for new chemistries and geometries.",
+  "evidence_signal": "The abstract reports scaling to 5.2 million atoms on four GPUs at approximately twice the short-range backbone cost, inferred Born effective charges, and demonstrations spanning water infrared spectra, relaxor hysteresis, ionic conductivity, and Si/diamond thermal transport.",
+  "watch_item": "The reported four-GPU scaling does not establish efficiency at larger GPU counts, where global electrostatics communication may become a bottleneck.",
   "hashtags": [
     "#MachineLearningPotentials",
+    "#LongRangeElectrostatics",
     "#AtomisticSimulation",
-    "#Electrostatics",
     "#MaterialsModeling",
-    "#HighPerformanceComputing"
+    "#GPUComputing"
   ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
   "paper_id": "2026-10-16-arxiv-scalable_long_range_machine_learning_interatomic_potentials_with_electrical_response_for_a",
   "paper_title": "Scalable long-range machine learning interatomic potentials with electrical response for atomistic material modeling",
   "paper_date": "2026-10-16",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-10-19T09:35:31",
+  "generated_at": "2026-10-19T09:37:53",
   "generator": "openai"
 }

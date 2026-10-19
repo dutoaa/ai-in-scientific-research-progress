@@ -1,24 +1,26 @@
 {
-  "key_insight": "TIDER improves long-horizon memory retrieval by first localizing the relevant time window, then using that temporal anchor to recover evidence that semantic search alone would miss.",
-  "engineering_relevance": "For agent systems with growing long-term memory, adding an explicit temporal retrieval stage can reduce false matches from semantically similar but time-misaligned events.",
+  "key_insight": "TIDER improves long-term agent memory retrieval by locating relevant time windows so temporally mismatched but semantically similar memories do not crowd out target evidence.",
+  "engineering_relevance": "Memory-augmented agents can combine temporal filtering with semantic retrieval to better distinguish recurring, similar events across long histories.",
   "method": [
-    "RL-trained temporal interval locator predicts where evidence occurs in time",
-    "Temporal windows form a dedicated retrieval channel that narrows candidate search",
-    "Temporal and semantic candidates are merged and reranked by proximity to the predicted window"
+    "Use an RL-trained 1.7B temporal interval locator to infer evidence windows.",
+    "Train discrete window selection with composite rewards derived from sparse answer supervision.",
+    "Merge temporal and semantic retrieval candidates, then rerank by proximity to the predicted windows."
   ],
-  "evidence_signal": "On long-horizon memory benchmarks, TIDER reaches 61.52% on LifeBench and 78.96% on LoCoMo, outperforming prior methods by +8.82% and +3.66%, respectively.",
-  "watch_item": "The approach depends on a learned window locator, so performance may be sensitive to noisy reward design, retrieval granularity, or memory timelines that are poorly structured.",
+  "evidence_signal": "The abstract reports state-of-the-art accuracy of 61.52% on LifeBench (+8.82%) and 78.96% on LoCoMo (+3.66%).",
+  "watch_item": "Incorrectly localized time windows could suppress relevant evidence; robustness to ambiguous temporal cues needs validation.",
   "hashtags": [
-    "#LongHorizonMemory",
-    "#AgenticRetrieval",
-    "#TemporalLocalization",
+    "#AgentMemory",
+    "#TemporalRetrieval",
     "#ReinforcementLearning",
-    "#LLMAgents"
+    "#LLMAgents",
+    "#InformationRetrieval"
   ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
   "paper_id": "2026-10-16-arxiv-rl_guided_temporal_localization_for_dual_channel_retrieval_in_long_horizon_agent_memory",
   "paper_title": "RL-Guided Temporal Localization for Dual-Channel Retrieval in Long-Horizon Agent Memory",
   "paper_date": "2026-10-16",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-19T09:35:22",
+  "generated_at": "2026-10-19T09:37:40",
   "generator": "openai"
 }

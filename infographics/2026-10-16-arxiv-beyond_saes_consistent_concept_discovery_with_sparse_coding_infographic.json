@@ -1,24 +1,26 @@
 {
-  "key_insight": "Replacing the SAE encoder with per-sample sparse coding makes learned concepts far more consistent across runs, improving reproducibility of dictionary discovery.",
-  "engineering_relevance": "This offers a more reliable way to analyze foundation model representations when stable, cross-seed interpretability matters for downstream scientific or engineering workflows.",
+  "key_insight": "ConSDL discovers more reproducible concepts by replacing a sparse autoencoder’s linear encoder with per-sample sparse coding.",
+  "engineering_relevance": "More consistent dictionaries and coefficients across training seeds can improve the reliability of foundation-model interpretability analyses.",
   "method": [
-    "Use sparse coding instead of a single linear encoder for each sample.",
-    "Learn a sparse dictionary while optimizing coefficients per instance, not via one forward pass.",
-    "Measure consistency of recovered dictionaries and coefficients across random seeds."
+    "Replace the standard linear encoder with per-sample sparse optimization.",
+    "Learn dictionaries using the optimized sparse coefficients.",
+    "Evaluate recovery on synthetic data and cross-seed consistency in vision and language settings."
   ],
-  "evidence_signal": "Across 16 synthetic settings and four vision/language benchmarks, ConSDL achieved near-perfect recovery and improved cross-seed dictionary consistency by 17.6% and coefficient consistency by 35.9% over the average of six SAE baselines.",
-  "watch_item": "Per-sample sparse optimization is more computationally demanding than standard encoder-based SAEs, so runtime and scalability should be checked in large-scale deployments.",
+  "evidence_signal": "ConSDL achieves near-perfect dictionary and coefficient recovery across 16 synthetic settings and improves their cross-seed consistency by 17.6% and 35.9%, respectively, over the average of six SAE baselines across four vision and language settings.",
+  "watch_item": "Per-sample optimization may increase computational cost relative to a single encoder pass; the abstract does not quantify this trade-off.",
   "hashtags": [
-    "#SparseAutoencoders",
     "#SparseCoding",
-    "#RepresentationLearning",
-    "#Interpretability",
+    "#DictionaryLearning",
+    "#MechanisticInterpretability",
+    "#ReproducibleAI",
     "#ScientificDiscovery"
   ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
   "paper_id": "2026-10-16-arxiv-beyond_saes_consistent_concept_discovery_with_sparse_coding",
   "paper_title": "Beyond SAEs: Consistent Concept Discovery with Sparse Coding",
   "paper_date": "2026-10-16",
   "paper_category": "Scientific Discovery",
-  "generated_at": "2026-10-19T09:35:25",
+  "generated_at": "2026-10-19T09:37:44",
   "generator": "openai"
 }
