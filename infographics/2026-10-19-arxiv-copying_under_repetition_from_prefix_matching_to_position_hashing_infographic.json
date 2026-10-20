@@ -1,0 +1,26 @@
+{
+  "key_insight": "Repeated text defeats content-based copying, but a compact two-layer transformer can copy and stop correctly by encoding positions as modular distances from delimiter anchors.",
+  "engineering_relevance": "Position-aware retrieval offers a route to more reliable exact copying and termination when repeated content makes local token matches ambiguous.",
+  "method": [
+    "Apply RoPE-style rotations to attention values and outputs using small prime periods.",
+    "Combine modular distances via the Chinese Remainder Theorem to retrieve the next token or end marker.",
+    "Prove a copying impossibility result under sequential finite-precision softmax accumulation for positional biases that eventually become constant."
+  ],
+  "evidence_signal": "In synthetic copying experiments, baselines failed on long repeated strings even within training lengths, while trained VO models generalized beyond training with near-perfect accuracy up to approximately 5005 tokens, the selected primes' period product.",
+  "watch_item": "The guarantee is bounded by a chosen design horizon, and synthetic copying results do not establish reliability in general-purpose LLM deployments.",
+  "hashtags": [
+    "#Transformers",
+    "#PositionalEncoding",
+    "#ExactCopying",
+    "#FinitePrecision",
+    "#LLMReliability"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-10-19-arxiv-copying_under_repetition_from_prefix_matching_to_position_hashing",
+  "paper_title": "Copying Under Repetition: From Prefix Matching to Position Hashing",
+  "paper_date": "2026-10-19",
+  "paper_category": "Literature and Knowledge Mining",
+  "generated_at": "2026-10-20T18:26:40",
+  "generator": "openai"
+}
