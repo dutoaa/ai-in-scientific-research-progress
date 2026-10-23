@@ -1,0 +1,26 @@
+{
+  "key_insight": "LLM inference speedups are not inherently portable: benefits depend jointly on the technique, runtime, hardware capabilities, and workload.",
+  "engineering_relevance": "For local Apple Silicon inference, benchmark optimizations under single-request decoding rather than assuming server-GPU gains will transfer.",
+  "method": [
+    "Evaluate KV-cache pruning, speculative decoding, ported GPU kernels, and post-training quantization.",
+    "Use a common single-request decode workload across four Apple machines.",
+    "Compare against an RTX 4090 where matched evaluations are possible."
+  ],
+  "evidence_signal": "KV-cache pruning reaches up to 1.75× end-to-end throughput on Apple and transferable kernel components reach up to 1.20× decode throughput, while all evaluated speculative decoding methods reduce throughput under the common benchmark.",
+  "watch_item": "Results are workload-dependent; public Metal lacks asynchronous copy, and batch-one decoding makes several serving-oriented mechanisms inapplicable.",
+  "hashtags": [
+    "#AppleSilicon",
+    "#LLMInference",
+    "#InferenceOptimization",
+    "#LocalAI",
+    "#PerformanceEngineering"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-10-22-arxiv-evaluating_the_applicability_of_llm_inference_optimizations_on_apple_silicon",
+  "paper_title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
+  "paper_date": "2026-10-22",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-10-23T18:11:26",
+  "generator": "openai"
+}
