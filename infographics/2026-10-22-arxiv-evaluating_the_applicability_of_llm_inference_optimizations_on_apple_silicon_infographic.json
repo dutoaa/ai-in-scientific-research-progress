@@ -1,19 +1,19 @@
 {
-  "key_insight": "LLM inference speedups are not inherently portable: benefits depend jointly on the technique, runtime, hardware capabilities, and workload.",
-  "engineering_relevance": "For local Apple Silicon inference, benchmark optimizations under single-request decoding rather than assuming server-GPU gains will transfer.",
+  "key_insight": "LLM inference speedups are not portable by default: benefits depend jointly on the optimization, runtime, hardware capabilities, and workload.",
+  "engineering_relevance": "For local inference on Apple Silicon, benchmark optimizations under single-request workloads rather than assuming NVIDIA server gains will transfer.",
   "method": [
     "Evaluate KV-cache pruning, speculative decoding, ported GPU kernels, and post-training quantization.",
     "Use a common single-request decode workload across four Apple machines.",
     "Compare against an RTX 4090 where matched evaluations are possible."
   ],
-  "evidence_signal": "KV-cache pruning reaches up to 1.75× end-to-end throughput on Apple and transferable kernel components reach up to 1.20× decode throughput, while all evaluated speculative decoding methods reduce throughput under the common benchmark.",
-  "watch_item": "Results are workload-dependent; public Metal lacks asynchronous copy, and batch-one decoding makes several serving-oriented mechanisms inapplicable.",
+  "evidence_signal": "KV-cache pruning achieves up to 1.75× end-to-end throughput on Apple and transferable kernel components up to 1.20× decode throughput, while all evaluated speculative decoding methods reduce throughput under the common Apple benchmark.",
+  "watch_item": "Public Metal lacks asynchronous copy, batch-one decoding limits serving-oriented optimizations, and quantization gains vary by machine.",
   "hashtags": [
-    "#AppleSilicon",
     "#LLMInference",
+    "#AppleSilicon",
     "#InferenceOptimization",
-    "#LocalAI",
-    "#PerformanceEngineering"
+    "#GPUKernels",
+    "#Quantization"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
   "paper_date": "2026-10-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-23T18:11:26",
+  "generated_at": "2026-10-24T17:16:29",
   "generator": "openai"
 }

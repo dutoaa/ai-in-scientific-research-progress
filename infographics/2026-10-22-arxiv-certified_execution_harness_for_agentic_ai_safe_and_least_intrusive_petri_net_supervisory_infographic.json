@@ -1,19 +1,19 @@
 {
-  "key_insight": "A Petri-net execution harness can block unsafe LLM tool actions, but allowing every safe action need not minimize costly replanning.",
-  "engineering_relevance": "Representing capabilities, approvals, and budgets as execution prerequisites makes tool authorization independent of an injected request’s wording.",
+  "key_insight": "A Petri-net execution harness can block unsafe tool calls regardless of injected wording, but allowing every safe action need not minimize costly replanning.",
+  "engineering_relevance": "Agent developers can enforce capabilities, approvals, and budgets between reasoning and tool execution while accounting for the inference cost of refused actions.",
   "method": [
-    "Model tool execution with Petri nets and treat tool outcomes as uncontrollable.",
-    "Enforce safety with a conventional maximally permissive supervisor.",
-    "Refine allowed actions using proposer-dependent value thresholds to reduce inference-call costs from retries."
+    "Model tool execution as Petri-net transitions enabled by capability, approval, and budget tokens.",
+    "Treat tool outcomes as uncontrollable and enforce safety with a conventional maximally permissive supervisor.",
+    "Refine that supervisor using value thresholds for a given proposer model to minimize intrusion in a replanning loop."
   ],
-  "evidence_signal": "Formal analysis shows the conventional supervisor can be arbitrarily more intrusive than a stricter safe one; synthesis for an autonomous release agent finds that safe deployment requires a refusable step after rollout begins.",
-  "watch_item": "Safety transfer to the running system depends on four assumptions, while least-intrusive refinement requires a proposer model.",
+  "evidence_signal": "The abstract reports theoretical guarantees and synthesis on an autonomous release agent, where safe deployment requires a step that can be refused after rollout starts.",
+  "watch_item": "Safety transfer to the running system depends on four assumptions, and the least-intrusive refinement depends on the proposer model.",
   "hashtags": [
     "#AgenticAI",
-    "#PromptInjection",
     "#PetriNets",
-    "#SupervisoryControl",
-    "#AISafety"
+    "#FormalMethods",
+    "#PromptInjection",
+    "#SupervisoryControl"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action",
   "paper_date": "2026-10-22",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-10-23T18:11:32",
+  "generated_at": "2026-10-24T17:16:36",
   "generator": "openai"
 }

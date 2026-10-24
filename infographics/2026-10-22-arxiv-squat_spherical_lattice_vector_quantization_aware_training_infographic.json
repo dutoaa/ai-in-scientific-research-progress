@@ -1,13 +1,13 @@
 {
-  "key_insight": "SQuAT improves low-bit LLM vector quantization-aware training by separating direction and magnitude gradients, implicitly enabling spherical optimization.",
-  "engineering_relevance": "Distributed exact nearest-neighbor assignment cuts VQ-QAT training time by 12.8×, making training at a 10B-token scale feasible.",
+  "key_insight": "SQuAT improves low-bit LLM vector quantization-aware training by separating direction and magnitude gradients, inducing tangent-space updates for weight directions.",
+  "engineering_relevance": "Distributed exact nearest-neighbor assignment reduces VQ-QAT training time by 12.8×, enabling training runs of up to 10 billion tokens.",
   "method": [
-    "Split weight vectors into normalized directions and gains.",
-    "Quantize directions with an E8-derived spherical codebook and gains with low-bit scalar quantizers.",
-    "Use separate straight-through estimators; distribute weight-block assignments and communicate only discrete indices."
+    "Decompose weight vectors into normalized directions and gains.",
+    "Quantize directions with an E8-derived spherical codebook and gains with low-bit scalar quantizers, using separate straight-through estimators.",
+    "Assign disjoint weight blocks across workers and communicate only discrete quantization indices."
   ],
-  "evidence_signal": "Across LLaMA-3.2-1B/3B, Qwen3-4B, and base Qwen3-1.7B, SQuAT consistently outperforms standard VQ-QAT STE with identical quantizers and initialization, reporting state-of-the-art VQ-QAT accuracy.",
-  "watch_item": "The abstract does not specify hardware or evaluation metrics, limiting assessment of the reported speedup and accuracy gains.",
+  "evidence_signal": "Across instruction-tuned LLaMA-3.2-1B/3B and Qwen3-4B, plus base Qwen3-1.7B, SQuAT outperforms standard VQ-QAT STE under identical quantizers and initialization.",
+  "watch_item": "The abstract does not specify inference latency, memory savings, or distributed hardware requirements, leaving deployment costs unclear.",
   "hashtags": [
     "#SQuAT",
     "#QuantizationAwareTraining",
@@ -21,6 +21,6 @@
   "paper_title": "SQuAT: Spherical Lattice Vector Quantization-Aware Training",
   "paper_date": "2026-10-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-23T18:11:15",
+  "generated_at": "2026-10-24T17:16:15",
   "generator": "openai"
 }

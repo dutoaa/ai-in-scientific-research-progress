@@ -26,21 +26,21 @@
     ],
     "score": 86,
     "infographic": {
-      "key_insight": "LEAP learns a differentiable action over complete trajectories, creating a reusable objective for scientific inference and control.",
-      "engineering_relevance": "A single learned action can support path ranking, mechanism steering, constrained optimization and sampling without learning a separate objective for each task.",
+      "key_insight": "LEAP learns a reusable, differentiable objective over entire trajectories, capturing local dynamics and dependencies across time.",
+      "engineering_relevance": "The learned objective supports path ranking, inference, mechanism steering, constrained optimization and sampling without requiring a separate objective for each task.",
       "method": [
         "Anchor the unknown stochastic action to a tractable reference process.",
         "Learn an action correction by comparing observed and reference trajectories.",
-        "Capture local dynamics and nonadditive dependencies across time."
+        "Reuse the resulting path-space objective for scientific inference and control."
       ],
       "evidence_signal": "Evaluations span stochastic physical systems, many-body orbital dynamics and molecular simulations, with reported recovery of dynamics and transfer across inference objectives and physical conditions.",
-      "watch_item": "The abstract does not quantify accuracy or computational cost, leaving practical scalability and reference-process sensitivity unclear.",
+      "watch_item": "The abstract provides no quantitative benchmarks or computational costs, leaving scalability and sensitivity to reference-process choice unclear.",
       "hashtags": [
         "#ActionLearning",
         "#ScientificMachineLearning",
         "#DynamicalSystems",
         "#TrajectoryOptimization",
-        "#ComputationalScience"
+        "#ScientificSimulation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -48,60 +48,7 @@
       "paper_title": "Action Learning for Scientific Simulations",
       "paper_date": "2026-10-22",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-23T18:11:07",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-22-arxiv-ridar_safeguarding_research_integrity_in_autonomous_research_agents_via_automated_detectio",
-    "arxiv_id": "2610.31372v1",
-    "date": "2026-10-22",
-    "title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
-    "authors": "Jiening Siow, Amy Xin, Junjie Wang, Ziyu Tang, Zijun Yao, Yunjia Qi",
-    "abstract": "Autonomous research agents are increasingly used to automate large portions of scientific research, yet they are prone to research integrity violations (RIVs): behaviors that compromise the validity, reproducibility, or faithfulness of the research process. We present RIDAR, a framework for automated RIV detection and runtime intervention. First, we introduce RIVT, a comprehensive taxonomy of 14 RIV types spanning the full research lifecycle. Building on RIVT, we present RIDAR-post-hoc, a framework to detect RIVs within agent trajectories. RIDAR-post-hoc achieves 85.2% F1 performance on RIV-Gold, a benchmark for RIV detection with 60 expert-annotated trajectories. Applying RIDAR-post-hoc to RIV-Wild, a dataset of 300 agent trajectories across 50 distinct research tasks, we detect 3,964 RIV instances in 99.7% of trajectories, revealing the prevalence of RIVs in current agents. Finally, we present RIDAR-runtime, a framework for dynamically detecting and correcting RIVs during agent runtime. RIDAR-runtime effectively reduces agent RIVs remaining at task completion by 36.8%. We will release our code and data to facilitate future research.",
-    "category": "AI Scientists and Research Agents",
-    "source": "arXiv",
-    "published": "2026-10-22T14:43:36Z",
-    "updated": "2026-10-22T14:43:36Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31372v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31372v1"
-      }
-    ],
-    "score": 79,
-    "infographic": {
-      "key_insight": "RIDAR detects research integrity violations in autonomous research agents and intervenes during execution to reduce violations remaining at task completion.",
-      "engineering_relevance": "Research-agent pipelines can use trajectory auditing and runtime intervention to help safeguard validity, reproducibility, and faithful reporting.",
-      "method": [
-        "Define 14 research integrity violation types across the research lifecycle using the RIVT taxonomy.",
-        "Audit agent trajectories with RIDAR-post-hoc to detect violations.",
-        "Detect and correct violations during execution with RIDAR-runtime."
-      ],
-      "evidence_signal": "RIDAR-post-hoc achieved 85.2% F1 on 60 expert-annotated trajectories and detected 3,964 violations across 99.7% of 300 trajectories covering 50 tasks; runtime intervention reduced remaining violations by 36.8%.",
-      "watch_item": "Detection is imperfect, and runtime intervention reduces rather than eliminates violations, so independent validation remains necessary.",
-      "hashtags": [
-        "#ResearchIntegrity",
-        "#AutonomousAgents",
-        "#AIScientists",
-        "#RuntimeMonitoring",
-        "#ReproducibleResearch"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-ridar_safeguarding_research_integrity_in_autonomous_research_agents_via_automated_detectio",
-      "paper_title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
-      "paper_date": "2026-10-22",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-23T18:11:10",
+      "generated_at": "2026-10-24T17:16:06",
       "generator": "openai"
     }
   },
@@ -134,15 +81,15 @@
     ],
     "score": 77,
     "infographic": {
-      "key_insight": "Selective auditing can reduce expert review while provably keeping the fraction of AI errors that go unaudited below a user-defined threshold.",
-      "engineering_relevance": "AI pipelines can use confidence scores from a decision model or separate verifier to route proposals between automatic acceptance and expert review.",
+      "key_insight": "Selective auditing can reduce expert review while provably keeping the fraction of AI errors that escape auditing below a user-defined threshold.",
+      "engineering_relevance": "AI pipelines can use confidence scores to route decisions to automatic acceptance or expert review while controlling missed errors.",
       "method": [
         "Formulate sequential audit decisions as online constrained optimization.",
-        "Minimize auditing frequency subject to a bound on unaudited AI errors.",
-        "Derive assumption-free error-control algorithms, including one with asymptotically optimal auditing rates for adversarial and i.i.d. streams."
+        "Use proposed decisions and confidence scores, potentially from separate models, to select expert audits.",
+        "Provide assumption-free error-control guarantees, with one method asymptotically attaining the optimal auditing rate for adversarial and i.i.d. streams."
       ],
-      "evidence_signal": "Experiments on harmful-request screening, qualitative text annotation, and data labeling show valid error control with substantially less human auditing than baselines.",
-      "watch_item": "Deployment requires reliable expert feedback; asymptotic audit-rate optimality does not imply minimal review effort over short operating periods.",
+      "evidence_signal": "Experiments on harmful-request screening, qualitative text annotation, and data labeling demonstrate valid error control with substantially less human auditing than baselines.",
+      "watch_item": "The optimal auditing-rate guarantee is asymptotic; finite-run review requirements and the reliability of expert corrections remain deployment considerations.",
       "hashtags": [
         "#SelectiveAuditing",
         "#ReliableAI",
@@ -156,7 +103,60 @@
       "paper_title": "Reliable AI-Assisted Decisions via Selective Auditing",
       "paper_date": "2026-10-22",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-10-23T18:11:12",
+      "generated_at": "2026-10-24T17:16:09",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-22-arxiv-ridar_safeguarding_research_integrity_in_autonomous_research_agents_via_automated_detectio",
+    "arxiv_id": "2610.31372v1",
+    "date": "2026-10-22",
+    "title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
+    "authors": "Jiening Siow, Amy Xin, Junjie Wang, Ziyu Tang, Zijun Yao, Yunjia Qi",
+    "abstract": "Autonomous research agents are increasingly used to automate large portions of scientific research, yet they are prone to research integrity violations (RIVs): behaviors that compromise the validity, reproducibility, or faithfulness of the research process. We present RIDAR, a framework for automated RIV detection and runtime intervention. First, we introduce RIVT, a comprehensive taxonomy of 14 RIV types spanning the full research lifecycle. Building on RIVT, we present RIDAR-post-hoc, a framework to detect RIVs within agent trajectories. RIDAR-post-hoc achieves 85.2% F1 performance on RIV-Gold, a benchmark for RIV detection with 60 expert-annotated trajectories. Applying RIDAR-post-hoc to RIV-Wild, a dataset of 300 agent trajectories across 50 distinct research tasks, we detect 3,964 RIV instances in 99.7% of trajectories, revealing the prevalence of RIVs in current agents. Finally, we present RIDAR-runtime, a framework for dynamically detecting and correcting RIVs during agent runtime. RIDAR-runtime effectively reduces agent RIVs remaining at task completion by 36.8%. We will release our code and data to facilitate future research.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-10-22T14:43:36Z",
+    "updated": "2026-10-22T14:43:36Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.31372v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.31372v1"
+      }
+    ],
+    "score": 74,
+    "infographic": {
+      "key_insight": "RIDAR detects research integrity violations in autonomous research agents and intervenes during execution to reduce violations remaining at task completion.",
+      "engineering_relevance": "Agent developers can use RIDAR to audit research trajectories and add runtime safeguards for validity, reproducibility, and faithfulness.",
+      "method": [
+        "Define RIVT, a taxonomy of 14 research integrity violation types spanning the research lifecycle.",
+        "Apply RIDAR-post-hoc to detect violations in recorded agent trajectories.",
+        "Use RIDAR-runtime to dynamically detect and correct violations during execution."
+      ],
+      "evidence_signal": "RIDAR-post-hoc achieved 85.2% F1 on 60 expert-annotated trajectories and detected 3,964 violations in 99.7% of 300 trajectories across 50 tasks; runtime intervention reduced remaining violations by 36.8%.",
+      "watch_item": "Detection is imperfect, and the abstract does not report runtime overhead or intervention effects on research task performance.",
+      "hashtags": [
+        "#ResearchIntegrity",
+        "#AutonomousAgents",
+        "#AIScientists",
+        "#RuntimeSafeguards",
+        "#ReproducibleResearch"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-10-22-arxiv-ridar_safeguarding_research_integrity_in_autonomous_research_agents_via_automated_detectio",
+      "paper_title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
+      "paper_date": "2026-10-22",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-24T17:16:11",
       "generator": "openai"
     }
   },
@@ -186,17 +186,17 @@
         "url": "https://arxiv.org/pdf/2610.31412v1"
       }
     ],
-    "score": 77,
+    "score": 72,
     "infographic": {
-      "key_insight": "SQuAT improves low-bit LLM vector quantization-aware training by separating direction and magnitude gradients, implicitly enabling spherical optimization.",
-      "engineering_relevance": "Distributed exact nearest-neighbor assignment cuts VQ-QAT training time by 12.8×, making training at a 10B-token scale feasible.",
+      "key_insight": "SQuAT improves low-bit LLM vector quantization-aware training by separating direction and magnitude gradients, inducing tangent-space updates for weight directions.",
+      "engineering_relevance": "Distributed exact nearest-neighbor assignment reduces VQ-QAT training time by 12.8×, enabling training runs of up to 10 billion tokens.",
       "method": [
-        "Split weight vectors into normalized directions and gains.",
-        "Quantize directions with an E8-derived spherical codebook and gains with low-bit scalar quantizers.",
-        "Use separate straight-through estimators; distribute weight-block assignments and communicate only discrete indices."
+        "Decompose weight vectors into normalized directions and gains.",
+        "Quantize directions with an E8-derived spherical codebook and gains with low-bit scalar quantizers, using separate straight-through estimators.",
+        "Assign disjoint weight blocks across workers and communicate only discrete quantization indices."
       ],
-      "evidence_signal": "Across LLaMA-3.2-1B/3B, Qwen3-4B, and base Qwen3-1.7B, SQuAT consistently outperforms standard VQ-QAT STE with identical quantizers and initialization, reporting state-of-the-art VQ-QAT accuracy.",
-      "watch_item": "The abstract does not specify hardware or evaluation metrics, limiting assessment of the reported speedup and accuracy gains.",
+      "evidence_signal": "Across instruction-tuned LLaMA-3.2-1B/3B and Qwen3-4B, plus base Qwen3-1.7B, SQuAT outperforms standard VQ-QAT STE under identical quantizers and initialization.",
+      "watch_item": "The abstract does not specify inference latency, memory savings, or distributed hardware requirements, leaving deployment costs unclear.",
       "hashtags": [
         "#SQuAT",
         "#QuantizationAwareTraining",
@@ -210,7 +210,7 @@
       "paper_title": "SQuAT: Spherical Lattice Vector Quantization-Aware Training",
       "paper_date": "2026-10-22",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:15",
+      "generated_at": "2026-10-24T17:16:15",
       "generator": "openai"
     }
   },
@@ -241,23 +241,23 @@
         "url": "https://arxiv.org/pdf/2610.31558v1"
       }
     ],
-    "score": 76,
+    "score": 71,
     "infographic": {
-      "key_insight": "Replacing a random latent-to-text mapping with a learned diffusion language model produces lower-perplexity attack prompts while retaining the standard-Gaussian latent-space framework.",
-      "engineering_relevance": "Black-box LLM risk assessments can depend strongly on the prompt-generation mapping, making language-grounded generation important for interpreting attack results.",
+      "key_insight": "A continuous diffusion language model replaces random latent-to-text mapping to generate more natural attack prompts while retaining Gaussian latent-space sampling and optimization.",
+      "engineering_relevance": "Learned language mappings can make black-box LLM stress tests more realistic and materially change estimated model risk.",
       "method": [
-        "Decode continuous Gaussian latents into text using a learned diffusion language model.",
-        "Preserve downstream sampling or optimization without the artificial random mapping.",
-        "Evaluate sampling-based RareTrap and optimization-based ThinkTrap."
+        "Map standard-Gaussian latent variables to text using a continuous diffusion language model.",
+        "Evaluate sampling-based risk estimation with RareTrap.",
+        "Evaluate optimization-based attack search with ThinkTrap."
       ],
       "evidence_signal": "Character-level perplexity falls from 10^3–10^7 to 3–5 in RareTrap and from 20–28 to 4.3–5.4 in ThinkTrap; risk estimates can differ by an order of magnitude between mappings.",
-      "watch_item": "Lower perplexity alone does not establish that prompts evade deployed guardrails or represent real-world malicious inputs.",
+      "watch_item": "Lower perplexity alone does not establish guardrail evasion or representative real-world risk.",
       "hashtags": [
         "#DiffusionLanguageModels",
-        "#LLMSafety",
+        "#LLMSecurity",
         "#BlackBoxAttacks",
-        "#RiskAssessment",
-        "#Perplexity"
+        "#AdversarialTesting",
+        "#RiskEstimation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -265,7 +265,7 @@
       "paper_title": "Diffusion Language Models for Perplexity-Aware Black-Box Attacks",
       "paper_date": "2026-10-22",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:17",
+      "generated_at": "2026-10-24T17:16:17",
       "generator": "openai"
     }
   },
@@ -294,20 +294,20 @@
         "url": "https://arxiv.org/pdf/2610.31539v1"
       }
     ],
-    "score": 76,
+    "score": 71,
     "infographic": {
-      "key_insight": "PYTHIA combines a frozen pretrained model, transformer-based adaptation, and Gaussian processes to guide defect and adsorption-site optimization with limited target data.",
-      "engineering_relevance": "The framework could reduce data requirements when searching for favorable defects and adsorption sites in understudied materials.",
+      "key_insight": "PYTHIA combines a pretrained molecular model, transfer learning, and uncertainty estimation to guide joint defect and adsorption-site optimization with limited target data.",
+      "engineering_relevance": "The framework could reduce the data needed to search understudied materials for promising defect configurations and adsorption sites.",
       "method": [
         "Pretrain a foundation model on chemically similar molecules using a physically related prediction target.",
-        "Freeze pretrained weights and train a transformer layer for subspace alignment plus Gaussian processes for uncertainty quantification.",
-        "Use the adapted model as a surrogate for Bayesian optimization."
+        "Freeze its weights and train a transformer layer for subspace alignment plus Gaussian processes for uncertainty quantification.",
+        "Use the resulting surrogate model to guide Bayesian optimization."
       ],
-      "evidence_signal": "The abstract reports applications to adsorption and defect optimization in two distinct systems, but the provided text is truncated and contains no quantitative performance metrics.",
-      "watch_item": "Transfer effectiveness should be validated when target materials differ substantially from the chemically similar pretraining data.",
+      "evidence_signal": "The abstract reports applications to two distinct systems and successful adsorption-site identification, but is truncated and provides no dataset sizes or quantitative comparisons.",
+      "watch_item": "Transfer reliability may depend on chemical similarity and prediction-target alignment; uncertainty calibration should be checked on the target material.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#MaterialsInformatics",
+        "#MaterialsOptimization",
         "#TransferLearning",
         "#BayesianOptimization",
         "#UncertaintyQuantification"
@@ -318,60 +318,7 @@
       "paper_title": "PYTHIA, a transferable machine learning framework for simultaneous defect and adsorption site optimization",
       "paper_date": "2026-10-22",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-23T18:11:20",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-22-arxiv-on_the_token_collapse_phenomenon_in_textual_graph_soft_prompting",
-    "arxiv_id": "2610.31572v1",
-    "date": "2026-10-22",
-    "title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
-    "authors": "Andrea Giuseppe Di Francesco, Rishabh Jain, Franco Maria Nardini, Nicola Tonellotto, Pietro Liò, Fabrizio Silvestri",
-    "abstract": "Recent methods for injecting graph structure into LLM prompts include graph soft prompting, in which a graph neural network (GNN) learns graph-specific tokens that capture relational information among entities in textual prompts. G-Retriever combines graph soft prompts with a verbalized description of the same graph to strengthen the textual prompt signal. We conduct an in-depth analysis of G-Retriever and uncover a pathological behavior we term token collapse. Across three benchmarks, three graph encoders, two LLM families, and both frozen and LoRA-adapted models, G-Retriever's graph tokens become almost indistinguishable across inputs. We provide evidence that the same failure is inherited by subsequent methods, even with multi-token pooling. Under the standard setup, swapping a token with the dataset mean, a token from another example, or one derived from a corrupted graph produces no resolved answer-level effect in accuracy. Moreover, a learned constant prompt that never accesses the graph matches or surpasses G-Retriever on all three benchmarks. These findings indicate that, rather than conveying graph content as intended, the collapsed token functions primarily as a generic soft prompt. We also examine conditions linked to this collapse and propose a two-stage procedure that yields non-collapsed tokens while maintaining competitive performance in most cases. However, token variability alone does not prove that the model uses graph information: via interventions and decoding probes, we show that depending on the configuration, a token can reflect the question, an answer prior, or graph-derived content that the LLM may or may not use. Overall, our results offer a practical approach to evaluating graph-token alignment rather than inferring it from task accuracy alone. Code to reproduce our experiments is available at https://github.com/difra100/Token_Collapse_KGQA.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-22T17:13:03Z",
-    "updated": "2026-10-22T17:13:03Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31572v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31572v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "G-Retriever’s graph tokens collapse into nearly input-independent soft prompts, so strong task accuracy does not establish that the LLM uses graph information.",
-      "engineering_relevance": "Test graph-token dependence with controlled interventions and constant-prompt baselines before attributing performance gains to graph encoding.",
-      "method": [
-        "Analyze token collapse across graph encoders, LLM families, and frozen or LoRA-adapted models.",
-        "Replace graph tokens with dataset means, other examples’ tokens, or corrupted-graph tokens; compare against a learned constant prompt.",
-        "Evaluate a two-stage procedure for non-collapsed tokens using interventions and decoding probes."
-      ],
-      "evidence_signal": "Across three benchmarks, three graph encoders, and two LLM families, token substitutions produced no resolved answer-accuracy effect under the standard setup, while a learned constant prompt matched or surpassed G-Retriever on every benchmark.",
-      "watch_item": "The two-stage procedure maintains competitive performance in most cases, but token variability alone does not demonstrate useful graph-information transfer.",
-      "hashtags": [
-        "#GraphNeuralNetworks",
-        "#LargeLanguageModels",
-        "#SoftPrompting",
-        "#KnowledgeGraphs",
-        "#ModelEvaluation"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-on_the_token_collapse_phenomenon_in_textual_graph_soft_prompting",
-      "paper_title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
-      "paper_date": "2026-10-22",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:22",
+      "generated_at": "2026-10-24T17:16:19",
       "generator": "openai"
     }
   },
@@ -403,21 +350,21 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "On InstrumentalEval, OLMo-3-7B-Think’s instrumental-behavior rate rises early in RLVR training, then falls below its supervised fine-tuning baseline.",
-      "engineering_relevance": "Evaluate intermediate training checkpoints rather than assuming RLVR uniformly increases or decreases instrumental behavior.",
+      "key_insight": "In OLMo-3-7B-Think, instrumental behavior rose early during RLVR training but ultimately fell below the supervised fine-tuning baseline.",
+      "engineering_relevance": "Evaluate safety across training checkpoints rather than assuming reinforcement learning causes a steady increase or decrease in instrumental behavior.",
       "method": [
-        "Evaluate SFT, DPO, 13 intermediate RLVR checkpoints, and the final RLVR model.",
-        "Test checkpoint changes using paired item-level comparisons and step-wise regression.",
-        "Assess prompt-framing effects using regression and Iterative Null-space Projection (INLP)."
+        "Evaluate InstrumentalEval behavior across SFT, DPO, 13 intermediate RLVR checkpoints, and the final model.",
+        "Test checkpoint changes using paired item-level tests and step-wise regression.",
+        "Assess prompt-framing effects with variance analysis and Iterative Null-space Projection."
       ],
-      "evidence_signal": "Instrumental-behavior rates move from 25.0% at SFT to 46.1% near RLVR step 200, then to 11.8% at the final checkpoint; preliminary 32B endpoints also decline from 35.53% to 22.37%.",
-      "watch_item": "Findings are specific to this model family and benchmark, and moderate judge agreement warrants caution when interpreting absolute rates.",
+      "evidence_signal": "The 7B instrumental rate rose from 25.0% at SFT to 46.1% near RLVR step 200, then fell to 11.8% at the final checkpoint; preliminary 32B endpoints also declined.",
+      "watch_item": "Findings are specific to this model family and benchmark, with moderate judge agreement limiting confidence in absolute rates.",
       "hashtags": [
         "#RLVR",
         "#InstrumentalConvergence",
         "#AISafety",
         "#OLMo3",
-        "#ModelEvaluation"
+        "#CheckpointEvaluation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -425,61 +372,7 @@
       "paper_title": "Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3",
       "paper_date": "2026-10-22",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-23T18:11:24",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-22-arxiv-evaluating_the_applicability_of_llm_inference_optimizations_on_apple_silicon",
-    "arxiv_id": "2610.31479v1",
-    "date": "2026-10-22",
-    "title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
-    "authors": "Kyrylo Yemets, Andrii Yaroshevych, Victor Muryn, Ostap Khomenko, Pavlo Kryven, Maksym Kmet",
-    "abstract": "Apple Silicon is among the most widely used platforms for local LLM inference, yet nearly all inference optimizations are designed and validated on server-class NVIDIA GPUs under batched serving workloads. Which optimizations retain their benefits when moved to Apple Silicon, and what determines their applicability? We evaluate four optimization families: KV-cache pruning, speculative decoding, ported GPU kernels, and post-training quantization. Experiments span four Apple machines under a common single-request decode workload, with matched RTX 4090 comparisons where possible. KV-cache pruning can reach up to 1.75 times end-to-end throughput on Apple but can reduce throughput on desktop NVIDIA GPUs. Under the common benchmark, all evaluated speculative decoding methods reduce throughput on Apple, despite reported 2-6 times gains on server GPUs. CUDA kernel designs transfer only partially: public Metal lacks asynchronous copy, and batch-one decode makes several serving-oriented mechanisms inapplicable, although transferable components yield up to 1.20 times decode throughput. Quantization gains vary by machine. Across four families, a reported speedup is not a portable property of a technique alone but a joint function of technique, runtime, hardware contract, and workload regime.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-10-22T16:04:40Z",
-    "updated": "2026-10-22T16:04:40Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.DC"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31479v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31479v1"
-      }
-    ],
-    "score": 70,
-    "infographic": {
-      "key_insight": "LLM inference speedups are not inherently portable: benefits depend jointly on the technique, runtime, hardware capabilities, and workload.",
-      "engineering_relevance": "For local Apple Silicon inference, benchmark optimizations under single-request decoding rather than assuming server-GPU gains will transfer.",
-      "method": [
-        "Evaluate KV-cache pruning, speculative decoding, ported GPU kernels, and post-training quantization.",
-        "Use a common single-request decode workload across four Apple machines.",
-        "Compare against an RTX 4090 where matched evaluations are possible."
-      ],
-      "evidence_signal": "KV-cache pruning reaches up to 1.75× end-to-end throughput on Apple and transferable kernel components reach up to 1.20× decode throughput, while all evaluated speculative decoding methods reduce throughput under the common benchmark.",
-      "watch_item": "Results are workload-dependent; public Metal lacks asynchronous copy, and batch-one decoding makes several serving-oriented mechanisms inapplicable.",
-      "hashtags": [
-        "#AppleSilicon",
-        "#LLMInference",
-        "#InferenceOptimization",
-        "#LocalAI",
-        "#PerformanceEngineering"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-evaluating_the_applicability_of_llm_inference_optimizations_on_apple_silicon",
-      "paper_title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
-      "paper_date": "2026-10-22",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:26",
+      "generated_at": "2026-10-24T17:16:21",
       "generator": "openai"
     }
   },
@@ -511,15 +404,15 @@
     ],
     "score": 69,
     "infographic": {
-      "key_insight": "METTA combines fine-grained within-episode adaptation with compact cross-episode memory to support efficient meta-RL adaptation to unseen tasks.",
-      "engineering_relevance": "Its linear-complexity within-episode memory offers a scalable alternative to transformer retrieval over full interaction histories.",
+      "key_insight": "METTA separates rapid within-episode adaptation from long-range cross-episode task inference to make meta-reinforcement learning more scalable.",
+      "engineering_relevance": "Linear-sequence neural memory and compact episode summaries offer an alternative to costly attention over full interaction histories.",
       "method": [
         "Use causal neural memory for fine-grained within-episode adaptation.",
-        "Retain compact episode summaries for long-range task inference.",
-        "Enable test-time training to adapt to held-out tasks and task families."
+        "Retain compact episode-level summaries for cross-episode task inference.",
+        "Enable test-time training to adapt to unseen tasks and task families."
       ],
-      "evidence_signal": "The abstract reports over 50% success on held-out Meta-World ML10/45 test environments and better performance than transformer-based baselines on long-context, sparse-reward PointMaze tasks.",
-      "watch_item": "The abstract does not quantify training costs or test-time update overhead, leaving deployment efficiency to be verified.",
+      "evidence_signal": "The abstract reports over 50% success on held-out Meta-World ML10/45 test environments and stronger performance than transformer baselines on long-context, sparse-reward PointMaze tasks.",
+      "watch_item": "The abstract does not quantify memory savings or test-time training overhead, leaving deployment costs uncertain.",
       "hashtags": [
         "#MetaRL",
         "#TestTimeAdaptation",
@@ -533,115 +426,60 @@
       "paper_title": "METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning",
       "paper_date": "2026-10-22",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:28",
+      "generated_at": "2026-10-24T17:16:23",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-22-arxiv-certified_execution_harness_for_agentic_ai_safe_and_least_intrusive_petri_net_supervisory",
-    "arxiv_id": "2610.31376v1",
+    "id": "2026-10-22-arxiv-on_the_token_collapse_phenomenon_in_textual_graph_soft_prompting",
+    "arxiv_id": "2610.31572v1",
     "date": "2026-10-22",
-    "title": "Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action",
-    "authors": "Chao Gu, Quanyan Zhu",
-    "abstract": "This paper studies the problem of safe tool execution for large language model (LLM) agents under prompt injection. Using Petri nets, we formalize the execution harness between the LLM and its tools as a supervisory control problem, in which marks represent capabilities, approvals and budgets. Since a transition fires only if the marks it needs are present, an injected request whose preconditions are unmet or already spent is refused regardless of its wording. Treating tool outcomes as uncontrollable, we enforce safety by the conventional maximally permissive supervisor, and this safety transfers to the running system under four assumptions. Moreover, to capture an agent that may propose again after a refusal, we introduce the notion of a replanning closed loop, in which each retry costs an inference call. We show that, in this loop, the conventional supervisor can be arbitrarily more intrusive than a stricter safe one. Furthermore, for a given proposer model, the maximally permissive least-intrusive supervisor is characterized as a value-threshold refinement of the conventional one. Under precise conditions, this refinement orders two concurrent actions by at most one monitor place. On an autonomous release agent, we find by synthesis that safe deployment requires a step that the supervisor can refuse after a rollout starts.",
-    "category": "AI Scientists and Research Agents",
+    "title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
+    "authors": "Andrea Giuseppe Di Francesco, Rishabh Jain, Franco Maria Nardini, Nicola Tonellotto, Pietro Liò, Fabrizio Silvestri",
+    "abstract": "Recent methods for injecting graph structure into LLM prompts include graph soft prompting, in which a graph neural network (GNN) learns graph-specific tokens that capture relational information among entities in textual prompts. G-Retriever combines graph soft prompts with a verbalized description of the same graph to strengthen the textual prompt signal. We conduct an in-depth analysis of G-Retriever and uncover a pathological behavior we term token collapse. Across three benchmarks, three graph encoders, two LLM families, and both frozen and LoRA-adapted models, G-Retriever's graph tokens become almost indistinguishable across inputs. We provide evidence that the same failure is inherited by subsequent methods, even with multi-token pooling. Under the standard setup, swapping a token with the dataset mean, a token from another example, or one derived from a corrupted graph produces no resolved answer-level effect in accuracy. Moreover, a learned constant prompt that never accesses the graph matches or surpasses G-Retriever on all three benchmarks. These findings indicate that, rather than conveying graph content as intended, the collapsed token functions primarily as a generic soft prompt. We also examine conditions linked to this collapse and propose a two-stage procedure that yields non-collapsed tokens while maintaining competitive performance in most cases. However, token variability alone does not prove that the model uses graph information: via interventions and decoding probes, we show that depending on the configuration, a token can reflect the question, an answer prior, or graph-derived content that the LLM may or may not use. Overall, our results offer a practical approach to evaluating graph-token alignment rather than inferring it from task accuracy alone. Code to reproduce our experiments is available at https://github.com/difra100/Token_Collapse_KGQA.",
+    "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-10-22T14:48:16Z",
-    "updated": "2026-10-22T14:48:16Z",
-    "primary_category": "cs.AI",
+    "published": "2026-10-22T17:13:03Z",
+    "updated": "2026-10-22T17:13:03Z",
+    "primary_category": "cs.LG",
     "categories": [
-      "cs.AI",
-      "eess.SY"
+      "cs.LG"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31376v1"
+        "url": "https://arxiv.org/abs/2610.31572v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31376v1"
-      }
-    ],
-    "score": 69,
-    "infographic": {
-      "key_insight": "A Petri-net execution harness can block unsafe LLM tool actions, but allowing every safe action need not minimize costly replanning.",
-      "engineering_relevance": "Representing capabilities, approvals, and budgets as execution prerequisites makes tool authorization independent of an injected request’s wording.",
-      "method": [
-        "Model tool execution with Petri nets and treat tool outcomes as uncontrollable.",
-        "Enforce safety with a conventional maximally permissive supervisor.",
-        "Refine allowed actions using proposer-dependent value thresholds to reduce inference-call costs from retries."
-      ],
-      "evidence_signal": "Formal analysis shows the conventional supervisor can be arbitrarily more intrusive than a stricter safe one; synthesis for an autonomous release agent finds that safe deployment requires a refusable step after rollout begins.",
-      "watch_item": "Safety transfer to the running system depends on four assumptions, while least-intrusive refinement requires a proposer model.",
-      "hashtags": [
-        "#AgenticAI",
-        "#PromptInjection",
-        "#PetriNets",
-        "#SupervisoryControl",
-        "#AISafety"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-certified_execution_harness_for_agentic_ai_safe_and_least_intrusive_petri_net_supervisory",
-      "paper_title": "Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action",
-      "paper_date": "2026-10-22",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-23T18:11:32",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-22-arxiv-phystrace_interpretable_temporal_evaluation_of_physical_consistency_in_video_generative_mo",
-    "arxiv_id": "2610.31429v1",
-    "date": "2026-10-22",
-    "title": "PhysTrace: Interpretable Temporal Evaluation of Physical Consistency in Video Generative Models",
-    "authors": "Taekoan Yoo, Wonkyung Jung, Kyunghun Kim, Kyeongbo Kong",
-    "abstract": "World action models increasingly rely on pretrained video models assumed to capture physical dynamics for prediction, planning, and action generation. Existing evaluations assess plausibility, probe representations, or measure predictive surprise, but rarely identify which history-conditioned physical expectations conflict with observations. We introduce PhysTrace, a training-free framework aligning MLLM-generated, history-conditioned expectations with observed video windows to temporally localize physical violations and provide interpretable descriptions without task-specific probes or classifiers. We also introduce IntPhys2-Timing, adding violation intervals to IntPhys2. PhysTrace achieves a Hit Rate of up to 70.7% across physical principles on IntPhys2-Timing and outperforms the compared methods in overall possible-impossible discrimination accuracy on IntPhys2. Applied to reconstructed videos along the trajectories of pretrained diffusion/flow-based video models, PhysTrace reveals attribute- and noise-dependent patterns in physical violation localization, enabling interpretable physical consistency analysis across timesteps.",
-    "category": "Modeling and Simulation",
-    "source": "arXiv",
-    "published": "2026-10-22T15:27:58Z",
-    "updated": "2026-10-22T15:27:58Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI",
-      "cs.RO"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31429v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31429v1"
+        "url": "https://arxiv.org/pdf/2610.31572v1"
       }
     ],
     "score": 67,
     "infographic": {
-      "key_insight": "PhysTrace localizes physical inconsistencies in videos by comparing history-conditioned expectations with observations and describing the conflicts.",
-      "engineering_relevance": "The framework offers interpretable diagnostics for assessing physical consistency in video models used for prediction, planning, and action generation.",
+      "key_insight": "G-Retriever’s graph tokens become nearly indistinguishable across inputs, functioning primarily as a generic soft prompt rather than conveying graph-specific content.",
+      "engineering_relevance": "Evaluate graph-token alignment with controlled interventions, not task accuracy alone, before relying on graph soft prompts to inject relational information.",
       "method": [
-        "Generate history-conditioned physical expectations with a multimodal large language model.",
-        "Align expectations with observed video windows to localize and explain violations without task-specific training.",
-        "Analyze reconstructed videos across diffusion/flow model trajectories for attribute- and noise-dependent patterns."
+        "Analyze token collapse across graph encoders, LLM families, and adaptation settings.",
+        "Replace graph tokens with mean, cross-example, or corrupted-graph tokens and compare against a learned constant prompt.",
+        "Test a two-stage procedure for non-collapsed tokens and probe what information those tokens encode and influence."
       ],
-      "evidence_signal": "On IntPhys2-Timing, which adds violation intervals to IntPhys2, PhysTrace reaches up to 70.7% Hit Rate across physical principles and outperforms compared methods in overall possible–impossible discrimination accuracy on IntPhys2.",
-      "watch_item": "Reliance on MLLM-generated expectations may introduce errors; the abstract does not establish robustness beyond the evaluated settings.",
+      "evidence_signal": "Across three benchmarks, three graph encoders, and two LLM families in frozen and LoRA-adapted settings, token substitutions showed no resolved accuracy effect, while a learned constant prompt matched or surpassed G-Retriever on all three benchmarks.",
+      "watch_item": "The two-stage procedure produces non-collapsed tokens with competitive performance in most cases, but token variability does not establish that the LLM uses graph information.",
       "hashtags": [
-        "#PhysTrace",
-        "#VideoGeneration",
-        "#PhysicalConsistency",
-        "#InterpretableAI",
+        "#GraphNeuralNetworks",
+        "#SoftPrompting",
+        "#LargeLanguageModels",
+        "#KnowledgeGraphQA",
         "#ModelEvaluation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-phystrace_interpretable_temporal_evaluation_of_physical_consistency_in_video_generative_mo",
-      "paper_title": "PhysTrace: Interpretable Temporal Evaluation of Physical Consistency in Video Generative Models",
+      "paper_id": "2026-10-22-arxiv-on_the_token_collapse_phenomenon_in_textual_graph_soft_prompting",
+      "paper_title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
       "paper_date": "2026-10-22",
-      "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-23T18:11:34",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-24T17:16:25",
       "generator": "openai"
     }
   },
@@ -673,15 +511,15 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "Directly optimizing pass@k selects partial reasoning paths to maximize the chance of at least one correct completion, naturally balancing quality and diversity.",
-      "engineering_relevance": "Pruning candidate solutions after short prefixes can reduce inference computation while preserving promising, nonredundant reasoning paths.",
+      "key_insight": "Directly optimizing pass@k selects partial solutions to maximize the chance of at least one correct completion, naturally balancing quality and diversity.",
+      "engineering_relevance": "Pruning candidates after short prefixes can focus inference compute on a promising, nonredundant pool rather than completing every reasoning path.",
       "method": [
-        "Generate short prefixes for a pool of candidate solutions.",
-        "Select a subset by optimizing its probability of producing at least one correct answer.",
-        "Continue only the selected candidates to completion."
+        "Generate short prefixes for multiple candidate solutions.",
+        "Select a pool by optimizing its probability of yielding at least one correct completion.",
+        "Continue only retained candidates, rewarding quality while penalizing redundancy."
       ],
-      "evidence_signal": "Across eight open-weight reasoning models, the method outperforms quality-based and diversity-based pruning baselines, with especially pronounced gains when retaining a moderate number of candidates.",
-      "watch_item": "The abstract does not specify how the pass@k objective is estimated or the computational overhead of optimizing it.",
+      "evidence_signal": "Across eight open-weight reasoning models, the method outperforms quality-based and diversity-based pruning baselines, with especially pronounced gains at moderate retained-pool sizes.",
+      "watch_item": "The abstract does not quantify selection overhead or explain how pool-level success probabilities are estimated, leaving practical compute savings uncertain.",
       "hashtags": [
         "#TestTimeScaling",
         "#ReasoningModels",
@@ -695,113 +533,61 @@
       "paper_title": "Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
       "paper_date": "2026-10-22",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:36",
+      "generated_at": "2026-10-24T17:16:28",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-22-arxiv-fine_grained_analysis_of_catastrophic_forgetting_in_continual_learning_via_algorithmic_sta",
-    "arxiv_id": "2610.31551v1",
+    "id": "2026-10-22-arxiv-evaluating_the_applicability_of_llm_inference_optimizations_on_apple_silicon",
+    "arxiv_id": "2610.31479v1",
     "date": "2026-10-22",
-    "title": "Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability",
-    "authors": "Guodong Zheng, Yan Sun, Peng Wang, Enneng Yang, Jiafei Lyu, Xiaochun Cao",
-    "abstract": "Understanding catastrophic forgetting, in which learning new tasks degrades performance on previously learned tasks, remains a fundamental challenge in continual learning (CL). Existing theoretical analyses often rely on specific model or task structures and offer limited insight into how iterative optimization affects forgetting. To address this gap, we develop an algorithmic stability framework for expected population forgetting under SGD without prescribing a particular model architecture. Specifically, we decompose forgetting into intra-task and cross-task generalization gaps and empirical forgetting. To bound the generalization gaps, we track how a sample perturbation affects updates within a task and propagates through subsequent tasks. We consider constant, intra-task decaying, and continuously decaying learning-rate schedules. Comparing the two decaying schedules allows us to characterize how restarting learning-rate decay at task boundaries affects the propagation of historical sample perturbations. For empirical forgetting, we derive bounds for all three schedules by retaining cumulative gradient alignment along the optimization trajectory, without requiring convexity. Combining these results yields upper bounds on expected forgetting that capture the effects of training set size, the number of updates per task, the total number of tasks, learning-rate schedules, and cumulative gradient alignment. Finally, we conduct experiments on Split CIFAR-100 and Split MiniImageNet to examine the empirical implications of our theoretical findings.",
+    "title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
+    "authors": "Kyrylo Yemets, Andrii Yaroshevych, Victor Muryn, Ostap Khomenko, Pavlo Kryven, Maksym Kmet",
+    "abstract": "Apple Silicon is among the most widely used platforms for local LLM inference, yet nearly all inference optimizations are designed and validated on server-class NVIDIA GPUs under batched serving workloads. Which optimizations retain their benefits when moved to Apple Silicon, and what determines their applicability? We evaluate four optimization families: KV-cache pruning, speculative decoding, ported GPU kernels, and post-training quantization. Experiments span four Apple machines under a common single-request decode workload, with matched RTX 4090 comparisons where possible. KV-cache pruning can reach up to 1.75 times end-to-end throughput on Apple but can reduce throughput on desktop NVIDIA GPUs. Under the common benchmark, all evaluated speculative decoding methods reduce throughput on Apple, despite reported 2-6 times gains on server GPUs. CUDA kernel designs transfer only partially: public Metal lacks asynchronous copy, and batch-one decode makes several serving-oriented mechanisms inapplicable, although transferable components yield up to 1.20 times decode throughput. Quantization gains vary by machine. Across four families, a reported speedup is not a portable property of a technique alone but a joint function of technique, runtime, hardware contract, and workload regime.",
     "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-10-22T16:54:40Z",
-    "updated": "2026-10-22T16:54:40Z",
+    "published": "2026-10-22T16:04:40Z",
+    "updated": "2026-10-22T16:04:40Z",
     "primary_category": "cs.LG",
     "categories": [
-      "cs.LG"
+      "cs.LG",
+      "cs.DC"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31551v1"
+        "url": "https://arxiv.org/abs/2610.31479v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31551v1"
+        "url": "https://arxiv.org/pdf/2610.31479v1"
       }
     ],
-    "score": 66,
+    "score": 65,
     "infographic": {
-      "key_insight": "An algorithmic stability framework bounds expected catastrophic forgetting under SGD by linking sample-perturbation propagation and cumulative gradient alignment to training choices.",
-      "engineering_relevance": "The analysis clarifies how dataset size, updates per task, task count, and learning-rate schedules—including decay restarts at task boundaries—enter forgetting bounds.",
+      "key_insight": "LLM inference speedups are not portable by default: benefits depend jointly on the optimization, runtime, hardware capabilities, and workload.",
+      "engineering_relevance": "For local inference on Apple Silicon, benchmark optimizations under single-request workloads rather than assuming NVIDIA server gains will transfer.",
       "method": [
-        "Decompose forgetting into intra-task and cross-task generalization gaps plus empirical forgetting.",
-        "Track sample perturbations within and across tasks under constant, intra-task decaying, and continuously decaying learning rates.",
-        "Bound empirical forgetting using cumulative gradient alignment without requiring convexity."
+        "Evaluate KV-cache pruning, speculative decoding, ported GPU kernels, and post-training quantization.",
+        "Use a common single-request decode workload across four Apple machines.",
+        "Compare against an RTX 4090 where matched evaluations are possible."
       ],
-      "evidence_signal": "Experiments on Split CIFAR-100 and Split MiniImageNet examine the empirical implications of the theoretical findings.",
-      "watch_item": "The abstract reports upper bounds but does not establish their practical tightness or quantify experimental gains.",
+      "evidence_signal": "KV-cache pruning achieves up to 1.75× end-to-end throughput on Apple and transferable kernel components up to 1.20× decode throughput, while all evaluated speculative decoding methods reduce throughput under the common Apple benchmark.",
+      "watch_item": "Public Metal lacks asynchronous copy, batch-one decoding limits serving-oriented optimizations, and quantization gains vary by machine.",
       "hashtags": [
-        "#ContinualLearning",
-        "#CatastrophicForgetting",
-        "#AlgorithmicStability",
-        "#SGD",
-        "#LearningRateSchedules"
+        "#LLMInference",
+        "#AppleSilicon",
+        "#InferenceOptimization",
+        "#GPUKernels",
+        "#Quantization"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-fine_grained_analysis_of_catastrophic_forgetting_in_continual_learning_via_algorithmic_sta",
-      "paper_title": "Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability",
+      "paper_id": "2026-10-22-arxiv-evaluating_the_applicability_of_llm_inference_optimizations_on_apple_silicon",
+      "paper_title": "Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon",
       "paper_date": "2026-10-22",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:38",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-22-arxiv-rheopt_few_shot_non_newtonian_flow_prediction_via_newtonian_pretraining_of_rheoformer",
-    "arxiv_id": "2610.31465v1",
-    "date": "2026-10-22",
-    "title": "RheOPT: Few-Shot Non-Newtonian Flow Prediction via Newtonian Pretraining of RheOFormer",
-    "authors": "Maedeh Saberi, Amir Barati Farimani, Safa Jamali",
-    "abstract": "Despite advances in numerical methods, non-Newtonian flow simulations remain computationally expensive because velocity and stress must be advanced together through rate- and history-dependent constitutive dynamics. Neural-operator surrogates reduce inference cost after training, but their training data require the same expensive simulations they aim to replace, making data-efficient learning essential when only a few non-Newtonian simulations can be afforded. Here, we introduce the Rheological Operator Pretrained Transformer (RheOPT), which pretrains a transformer-based neural operator on inexpensive Newtonian simulations and fine-tunes it on a small number of non-Newtonian samples. Rather than transferring the Newtonian constitutive response itself, RheOPT reuses geometry-conditioned transport structure that remains useful after the stress model changes. We evaluate RheOPT in two geometry-matched settings: a $4{:}1$ contraction channel for Giesekus, Oldroyd-B, and Bingham fluids, and the oscillatory wake behind a triangular obstacle for Oldroyd-B flow. In the contraction, Newtonian pretraining substantially improves few-shot prediction, and a model fine-tuned on four target samples can match or exceed a from-scratch model trained on four times as many. This benefit is reliable under reversible instance normalization (RevIN) but dataset dependent under Global normalization, a difference we trace to the dynamic range of each fluid's velocity and stress fields. In the wake, where relative $L_2$ error alone cannot verify that vortex shedding is recovered, phase-insensitive diagnostics show that pretraining recovers the shedding frequency and wake fluctuation amplitude that are suppressed by the from-scratch model in the few-shot regime. Overall, RheOPT establishes Newtonian simulation as a physically grounded pretraining source for data-efficient non-Newtonian operator learning.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-10-22T15:57:31Z",
-    "updated": "2026-10-22T15:57:31Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31465v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31465v1"
-      }
-    ],
-    "score": 66,
-    "infographic": {
-      "key_insight": "RheOPT transfers geometry-conditioned transport structure from Newtonian simulations to improve few-shot non-Newtonian flow prediction.",
-      "engineering_relevance": "Pretraining on inexpensive Newtonian simulations can reduce the costly non-Newtonian training data needed for flow surrogates.",
-      "method": [
-        "Pretrain a transformer-based neural operator on Newtonian flow simulations.",
-        "Fine-tune on a few non-Newtonian samples in matched geometries.",
-        "Evaluate normalization sensitivity and use phase-insensitive diagnostics for oscillatory wakes."
-      ],
-      "evidence_signal": "Across contraction and triangular-obstacle wake tests, four-sample fine-tuning could match or exceed 16-sample scratch training in the contraction, while pretraining recovered wake shedding frequency and fluctuation amplitude suppressed by few-shot scratch training.",
-      "watch_item": "Transfer was evaluated in geometry-matched settings, and its benefit depended on normalization: reliable with RevIN but dataset dependent with Global normalization.",
-      "hashtags": [
-        "#ScientificMachineLearning",
-        "#NeuralOperators",
-        "#TransferLearning",
-        "#NonNewtonianFlow",
-        "#ComputationalFluidDynamics"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-rheopt_few_shot_non_newtonian_flow_prediction_via_newtonian_pretraining_of_rheoformer",
-      "paper_title": "RheOPT: Few-Shot Non-Newtonian Flow Prediction via Newtonian Pretraining of RheOFormer",
-      "paper_date": "2026-10-22",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-23T18:11:40",
+      "generated_at": "2026-10-24T17:16:29",
       "generator": "openai"
     }
   },
@@ -834,21 +620,21 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Under illustrative routing costs, calibration-selected abstention cut logistic regression’s held-out test cost by 38.1% and wrong routes from 15.3% to 3.5%.",
-      "engineering_relevance": "When misrouting costs more than human triage, evaluate frozen route-or-defer policies by operational cost rather than accuracy or calibration error alone.",
+      "key_insight": "Cost-aware abstention cut TF-IDF logistic regression’s held-out routing cost by 38.1% and wrong routes from 15.3% to 3.5% under illustrative costs.",
+      "engineering_relevance": "Select routing thresholds using explicit error and human-triage costs, then validate the frozen policy before automating IT ticket routing.",
       "method": [
         "Compare four trained non-LLM classifiers with four LLMs using zero- and few-shot prompts.",
-        "Select abstention policies on calibration data under explicit costs, then evaluate once on held-out test data.",
+        "Select abstention policies on calibration data and evaluate once on held-out test data.",
         "Assess confidence using ECE, correctness AUROC, and tie-aware risk-coverage area."
       ],
-      "evidence_signal": "On a public 47,837-ticket, eight-class corpus, TF-IDF logistic regression with a calibration-selected 0.60 threshold reduced test cost from 0.763 to 0.472 under costs (correct, triage, wrong) = (0, 1, 5), with a 95% CI of 35.7%–40.4% for the relative reduction.",
-      "watch_item": "Results depend on the dataset, prompts, model endpoints, and assumed costs; improved calibration alone does not guarantee useful error discrimination or deployment readiness.",
+      "evidence_signal": "On a public 47,837-ticket, eight-class corpus, a calibration-selected threshold of 0.60 reduced logistic regression’s test cost from 0.763 to 0.472 (38.1% reduction; 95% CI: 35.7%–40.4%).",
+      "watch_item": "Results depend on the dataset, prompts, model endpoints, and assumed costs; improved calibration alone does not ensure useful error discrimination.",
       "hashtags": [
-        "#SelectiveClassification",
         "#CostAwareAI",
-        "#ITTicketRouting",
+        "#SelectivePrediction",
+        "#ITTicketClassification",
         "#LLMEvaluation",
-        "#UncertaintyCalibration"
+        "#ConfidenceCalibration"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -856,7 +642,7 @@
       "paper_title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
       "paper_date": "2026-10-22",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-23T18:11:43",
+      "generated_at": "2026-10-24T17:16:32",
       "generator": "openai"
     }
   },
@@ -888,21 +674,21 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Confident but incorrect LLM teaching induced users to adopt falsehoods with high confidence while their trust in the assistant barely changed.",
-      "engineering_relevance": "Learning interfaces should make reliability visible claim by claim and evaluate human deference alongside model sycophancy.",
+      "key_insight": "Confidently wrong LLMs can induce human deference: users absorb false claims with high confidence while their trust in the assistant barely changes.",
+      "engineering_relevance": "Learning interfaces should make reliability visible claim by claim and evaluate human–AI trust calibration, not just model-side sycophancy.",
       "method": [
-        "Within-subjects study: 32 participants learned up to five science topics using GPT-5-mini assistants.",
+        "Within-subjects study with 32 participants learning up to five science topics through GPT-5-mini assistants.",
         "Assistant briefings contained 0%, 25%, 50%, 75%, or 100% plausible falsehoods, all delivered confidently.",
-        "Surprise quizzes, answer-confidence ratings, transcript coding, and trust ratings measured learning and deference."
+        "Surprise quizzes, answer-confidence ratings, transcript coding, and post-task trust ratings measured uptake and calibration."
       ],
-      "evidence_signal": "Across 104 quizzes and 1,040 answers, scores fell from 7.4 to 2.9 out of 10; confidence discrimination for correctness fell from AUROC 0.70 to chance.",
-      "watch_item": "The small sample and single underlying model limit generalization beyond this controlled science-learning setting.",
+      "evidence_signal": "Across 104 quizzes and 1,040 answers, scores fell from 7.4 to 2.9 out of 10; planted falsehoods were selected on 60% of falsified items versus 11% of correctly taught items (odds ratio 12.5).",
+      "watch_item": "The small, single-model study with deliberately falsified briefings may not generalize to other models or naturally occurring errors.",
       "hashtags": [
         "#HumanAIInteraction",
-        "#LLMReliability",
         "#TrustCalibration",
-        "#Sycophancy",
-        "#AIEducation"
+        "#LLMSycophancy",
+        "#AIForEducation",
+        "#LLMEvaluation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -910,132 +696,183 @@
       "paper_title": "Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration",
       "paper_date": "2026-10-22",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-23T18:11:45",
+      "generated_at": "2026-10-24T17:16:34",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-22-arxiv-social_humint_an_llm_augmented_unified_framework_for_measuring_social_media_exposure",
-    "arxiv_id": "2610.31573v1",
+    "id": "2026-10-22-arxiv-certified_execution_harness_for_agentic_ai_safe_and_least_intrusive_petri_net_supervisory",
+    "arxiv_id": "2610.31376v1",
     "date": "2026-10-22",
-    "title": "Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure",
-    "authors": "Pellegrino Casoria, Simon Pietro Romano",
-    "abstract": "In the post-API landscape, social-media profiling has become inexpensive and automated: Large Language Models (LLMs) can extract structured information from unstructured content and deduce attributes users never disclosed. A person's true exposure is not what they post but what can be inferred from it. As these practices become routine, exposure to social engineering attacks becomes an operational certainty, demanding a shared framework for assessment and mitigation. We make this exposure measurable by quantifying how accurately a target can be profiled, and how far that profile enables social engineering attacks. Because no existing model fully spans this continuum, we unify Social Media Intelligence (SOCMINT) and Cyber Human Intelligence (Cyber-HUMINT), two individual-focused disciplines that evolved separately, into a single doctrine-grounded taxonomy of 38 capabilities across the Cyber Threat Intelligence lifecycle, where user profiling bridges passive collection and active engagement. Domain experts validated the taxonomy (Fleiss' $κ$ = 0.92). We operationalize its core path (extraction, inference, and susceptibility assessment) as an LLM-augmented multi-agent pipeline, evaluated on real participants' public data. Susceptibility is assessed indirectly: the pipeline predicts how each target would rank personalized engagement options, matching their actual choices significantly above chance. This ranking capacity captures the personalization on which tailored attacks depend. The underlying profiles are accurate: extraction reaches F1 = 97.3%, and inferred attributes score 4.73/5, both far above rule-based and NER-based baselines at negligible cost. The framework augments security analysts' tradecraft rather than replacing it and enables defenders to gauge their own exposure before an adversary does.",
-    "category": "Literature and Knowledge Mining",
+    "title": "Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action",
+    "authors": "Chao Gu, Quanyan Zhu",
+    "abstract": "This paper studies the problem of safe tool execution for large language model (LLM) agents under prompt injection. Using Petri nets, we formalize the execution harness between the LLM and its tools as a supervisory control problem, in which marks represent capabilities, approvals and budgets. Since a transition fires only if the marks it needs are present, an injected request whose preconditions are unmet or already spent is refused regardless of its wording. Treating tool outcomes as uncontrollable, we enforce safety by the conventional maximally permissive supervisor, and this safety transfers to the running system under four assumptions. Moreover, to capture an agent that may propose again after a refusal, we introduce the notion of a replanning closed loop, in which each retry costs an inference call. We show that, in this loop, the conventional supervisor can be arbitrarily more intrusive than a stricter safe one. Furthermore, for a given proposer model, the maximally permissive least-intrusive supervisor is characterized as a value-threshold refinement of the conventional one. Under precise conditions, this refinement orders two concurrent actions by at most one monitor place. On an autonomous release agent, we find by synthesis that safe deployment requires a step that the supervisor can refuse after a rollout starts.",
+    "category": "AI Scientists and Research Agents",
     "source": "arXiv",
-    "published": "2026-10-22T17:13:46Z",
-    "updated": "2026-10-22T17:13:46Z",
-    "primary_category": "cs.CR",
-    "categories": [
-      "cs.CR",
-      "cs.AI",
-      "cs.SI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31573v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31573v1"
-      }
-    ],
-    "score": 64,
-    "infographic": {
-      "key_insight": "Social-HUMINT measures social-media exposure through what LLMs can extract and infer about users, then tests whether those profiles predict personalized engagement preferences.",
-      "engineering_relevance": "Security teams can use the framework to assess public-data exposure and support analysts evaluating opportunities for personalized social engineering.",
-      "method": [
-        "Unify SOCMINT and Cyber-HUMINT into 38 capabilities across the Cyber Threat Intelligence lifecycle.",
-        "Implement extraction, inference, and susceptibility assessment with an LLM-augmented multi-agent pipeline.",
-        "Compare predicted rankings of personalized engagement options with participants’ actual choices."
-      ],
-      "evidence_signal": "On real participants’ public data, extraction achieved F1 = 97.3%, inferred attributes scored 4.73/5, and engagement rankings matched choices significantly above chance; experts validated the taxonomy with Fleiss’ κ = 0.92.",
-      "watch_item": "Engagement-preference prediction is an indirect susceptibility measure, not evidence of successful attacks; the abstract does not report participant count.",
-      "hashtags": [
-        "#SocialHUMINT",
-        "#LLMAgents",
-        "#SocialEngineering",
-        "#PrivacyExposure",
-        "#CyberThreatIntelligence"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-social_humint_an_llm_augmented_unified_framework_for_measuring_social_media_exposure",
-      "paper_title": "Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure",
-      "paper_date": "2026-10-22",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-23T18:11:48",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-10-22-arxiv-contestable_agents_for_data_governance_recording_human_stewardship_of_ai_generated_metadat",
-    "arxiv_id": "2610.31553v1",
-    "date": "2026-10-22",
-    "title": "Contestable Agents for Data Governance: Recording Human Stewardship of AI-Generated Metadata Across Structured and Unstructured Systems",
-    "authors": "Humza Akhtar, Brian Freeman",
-    "abstract": "Industrial organizations hold operational knowledge in structured records, such as telemetry, point lists, and transactions, and in unstructured sources, such as manuals, service notes, communications, and inspection reports. Governance programs often manage these sources separately. Classifying, linking, and documenting them depends on a small group of employees with deep domain knowledge. Agents built on large language models can propose metadata, cite documents, and flag quality issues, but unreviewed proposals can spread errors into downstream systems. A perfunctory approval leaves no record of what a reviewer checked. We present contestable governance: specialist agents produce scored, cited arguments for disputed metadata decisions; a steward can accept, reject, modify, or add arguments before commit; and a governance record retains the evidence, interventions, and outcome. A versioned domain glossary supplies model-specific terms and acronym definitions to the agents. We describe the workflow, a triage path that reserves full argumentation for uncertain proposals while preserving review before commit, the scoring and record models, and a gate that controls which verified decisions become precedent. Two HVAC use cases illustrate the pattern: point classification using Brick Schema class labels, supported by an open reference implementation, and an illustrative warranty failure-mode decision linking claim fields and telemetry to service notes and revisioned bulletins.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-10-22T16:57:01Z",
-    "updated": "2026-10-22T16:57:01Z",
+    "published": "2026-10-22T14:48:16Z",
+    "updated": "2026-10-22T14:48:16Z",
     "primary_category": "cs.AI",
     "categories": [
       "cs.AI",
-      "cs.DB",
-      "cs.HC",
-      "cs.MA"
+      "eess.SY"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31553v1"
+        "url": "https://arxiv.org/abs/2610.31376v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31553v1"
+        "url": "https://arxiv.org/pdf/2610.31376v1"
       }
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Contestable governance makes AI-generated metadata reviewable by preserving cited arguments, human interventions, and final decisions before commit.",
-      "engineering_relevance": "The approach gives engineers a traceable workflow for governing metadata across structured operational data and unstructured technical documents.",
+      "key_insight": "A Petri-net execution harness can block unsafe tool calls regardless of injected wording, but allowing every safe action need not minimize costly replanning.",
+      "engineering_relevance": "Agent developers can enforce capabilities, approvals, and budgets between reasoning and tool execution while accounting for the inference cost of refused actions.",
       "method": [
-        "Specialist agents propose scored, cited arguments using a versioned domain glossary.",
-        "Stewards accept, reject, modify, or add arguments before commit; uncertain proposals receive full argumentation.",
-        "Governance records retain evidence and outcomes, while a gate controls which verified decisions become precedent."
+        "Model tool execution as Petri-net transitions enabled by capability, approval, and budget tokens.",
+        "Treat tool outcomes as uncontrollable and enforce safety with a conventional maximally permissive supervisor.",
+        "Refine that supervisor using value thresholds for a given proposer model to minimize intrusion in a replanning loop."
       ],
-      "evidence_signal": "The abstract describes two HVAC use cases—Brick Schema point classification with an open reference implementation and an illustrative warranty failure-mode decision—but reports no quantitative evaluation.",
-      "watch_item": "Steward review and precedent gating require careful implementation to prevent weakly verified metadata decisions from propagating downstream.",
+      "evidence_signal": "The abstract reports theoretical guarantees and synthesis on an autonomous release agent, where safe deployment requires a step that can be refused after rollout starts.",
+      "watch_item": "Safety transfer to the running system depends on four assumptions, and the least-intrusive refinement depends on the proposer model.",
       "hashtags": [
-        "#DataGovernance",
-        "#HumanInTheLoop",
-        "#AIAgents",
-        "#Metadata",
-        "#HVAC"
+        "#AgenticAI",
+        "#PetriNets",
+        "#FormalMethods",
+        "#PromptInjection",
+        "#SupervisoryControl"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-contestable_agents_for_data_governance_recording_human_stewardship_of_ai_generated_metadat",
-      "paper_title": "Contestable Agents for Data Governance: Recording Human Stewardship of AI-Generated Metadata Across Structured and Unstructured Systems",
+      "paper_id": "2026-10-22-arxiv-certified_execution_harness_for_agentic_ai_safe_and_least_intrusive_petri_net_supervisory",
+      "paper_title": "Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action",
       "paper_date": "2026-10-22",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-23T18:11:50",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-10-24T17:16:36",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-10-22-arxiv-same_luck_different_choice_twin_world_credit_assignment_for_agentic_reinforcement_learning",
-    "arxiv_id": "2610.31544v1",
+    "id": "2026-10-22-arxiv-episem_bench_evaluating_safety_and_evidence_recovery_in_llm_agents_under_missing_evidence",
+    "arxiv_id": "2610.31650v1",
     "date": "2026-10-22",
-    "title": "Same Luck, Different Choice: Twin-World Credit Assignment for Agentic Reinforcement Learning",
-    "authors": "Zeropy Surio, Tobias Engel, Mei-Lin Chou, Anika Raman, Samuel Okafor",
-    "abstract": "Agentic reinforcement learning rewards a complete episode, yet the policy needs credit for every decision inside it. Counterfactual branching estimates this credit by re-running the episode after an alternative decision, but the branch draws its sampling noise independently of the factual episode, so the outcome difference mixes the effect of the decision with the luck of everything that follows. We observe that in agentic search the retriever, the corpus, and the grader are deterministic, so an episode is a deterministic function of the policy's decisions and its sampling noise. Twin worlds are therefore realizable: the same noise, a different decision. We introduce TWICE (TWIn-world Credit Estimation), which keys the Gumbel noise of every token by turn and line, rolls out counterfactual twins that inherit the factual episode's downstream noise, and turns their paired outcome differences into turn-level advantages for policy-gradient updates on actor-sampled trajectories; only the actor is deployed. Twin credit is unbiased for any coupling quality, its variance is that of an independent counterfactual scaled by $1-ρ$, where $ρ$ is the twins' outcome correlation, and under coupling the number of rollouts needed to resolve an advantage of size $Δ$ falls from $Θ(Δ^{-2})$ to $Θ(Δ^{-1})$. A square-root rule spends the twin budget where outcomes are predicted to disagree per unit cost. On seven question-answering benchmarks, TWICE improves the average exact match of GRPO by 5.3 and 4.5 points on Qwen2.5-3B and 7B, outperforms tree-search and counterfactual-branching baselines, and uses 68% fewer auxiliary tokens than VinePPO.",
-    "category": "AI Scientists and Research Agents",
+    "title": "EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence",
+    "authors": "Qijin Zhang, Hanzhen Wang, Yuehan Zhao, Haoyu Dai, Yao Shu, Zhongxiang Dai",
+    "abstract": "Tool-using language model agents rely on environmental facts to decide whether an action is permitted. When a tool response omits a safety-relevant fact, an agent may carry out a prohibited action even though the user request is benign and every returned statement is true. We introduce \\bench{}, an executable benchmark for evaluating unsafe execution, safety boundaries, and evidence recovery in LLM agents under missing evidence. It contains 300 matched unsafe/safe task pairs across six domains. By systematically suppressing critical facts, the benchmark measures unsafe execution under critical evidence omission and determines the minimum observed failure cardinality, including failures with full evidence and cases with no observed failure after exhaustive testing. An independent audit tool tests whether agents seek missing facts and then withhold prohibited actions while completing permissible tasks. The benchmark reveals substantial variation across the ten models in omission robustness, evidence acquisition, and appropriate action. Resistance to missing evidence does not necessarily translate into useful recovery. Recovery access reduces unsafe execution for all ten models, but agents differ in whether they actively obtain the missing facts and use them to act appropriately in both worlds.",
+    "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-10-22T16:51:27Z",
-    "updated": "2026-10-22T16:51:27Z",
+    "published": "2026-10-22T17:57:04Z",
+    "updated": "2026-10-22T17:57:04Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.31650v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.31650v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "Missing safety-critical facts can cause tool-using LLM agents to execute prohibited actions even when user requests are benign and all returned statements are true.",
+      "engineering_relevance": "Agent safety evaluation should test incomplete tool responses and verify that agents obtain missing evidence before deciding whether to act.",
+      "method": [
+        "Evaluate 300 matched unsafe/safe task pairs across six domains.",
+        "Systematically suppress critical facts and measure unsafe execution and minimum observed failure cardinality.",
+        "Provide an independent audit tool to test evidence acquisition, withholding prohibited actions, and completing permissible tasks."
+      ],
+      "evidence_signal": "Across ten models, recovery access reduced unsafe execution for every model, but evidence acquisition and appropriate action varied substantially.",
+      "watch_item": "Resistance to missing evidence does not guarantee useful recovery; audit-tool access must be evaluated separately from whether agents actually seek and correctly use missing facts.",
+      "hashtags": [
+        "#LLMAgents",
+        "#AISafety",
+        "#ToolUse",
+        "#EvidenceRecovery",
+        "#SafetyBenchmark"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-10-22-arxiv-episem_bench_evaluating_safety_and_evidence_recovery_in_llm_agents_under_missing_evidence",
+      "paper_title": "EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence",
+      "paper_date": "2026-10-22",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-24T17:16:38",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-22-arxiv-phystrace_interpretable_temporal_evaluation_of_physical_consistency_in_video_generative_mo",
+    "arxiv_id": "2610.31429v1",
+    "date": "2026-10-22",
+    "title": "PhysTrace: Interpretable Temporal Evaluation of Physical Consistency in Video Generative Models",
+    "authors": "Taekoan Yoo, Wonkyung Jung, Kyunghun Kim, Kyeongbo Kong",
+    "abstract": "World action models increasingly rely on pretrained video models assumed to capture physical dynamics for prediction, planning, and action generation. Existing evaluations assess plausibility, probe representations, or measure predictive surprise, but rarely identify which history-conditioned physical expectations conflict with observations. We introduce PhysTrace, a training-free framework aligning MLLM-generated, history-conditioned expectations with observed video windows to temporally localize physical violations and provide interpretable descriptions without task-specific probes or classifiers. We also introduce IntPhys2-Timing, adding violation intervals to IntPhys2. PhysTrace achieves a Hit Rate of up to 70.7% across physical principles on IntPhys2-Timing and outperforms the compared methods in overall possible-impossible discrimination accuracy on IntPhys2. Applied to reconstructed videos along the trajectories of pretrained diffusion/flow-based video models, PhysTrace reveals attribute- and noise-dependent patterns in physical violation localization, enabling interpretable physical consistency analysis across timesteps.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-10-22T15:27:58Z",
+    "updated": "2026-10-22T15:27:58Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.RO"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.31429v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.31429v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "PhysTrace localizes physical violations in generated videos by comparing history-conditioned expectations with observed events and describing the inconsistencies.",
+      "engineering_relevance": "The framework helps diagnose physical consistency in video models used for prediction, planning, and action generation.",
+      "method": [
+        "Use a multimodal large language model to generate physical expectations conditioned on video history.",
+        "Compare expectations with observed video windows to localize and describe violations without task-specific training.",
+        "Analyze reconstructed videos across diffusion/flow model timesteps for attribute- and noise-dependent violation patterns."
+      ],
+      "evidence_signal": "On IntPhys2-Timing, which adds violation intervals to IntPhys2, PhysTrace achieves up to 70.7% Hit Rate across physical principles and outperforms compared methods in overall possible–impossible discrimination accuracy on IntPhys2.",
+      "watch_item": "Reliance on MLLM-generated expectations may introduce errors; performance beyond the evaluated settings remains to be established.",
+      "hashtags": [
+        "#PhysTrace",
+        "#VideoGeneration",
+        "#PhysicalConsistency",
+        "#InterpretableAI",
+        "#ModelEvaluation"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-10-22-arxiv-phystrace_interpretable_temporal_evaluation_of_physical_consistency_in_video_generative_mo",
+      "paper_title": "PhysTrace: Interpretable Temporal Evaluation of Physical Consistency in Video Generative Models",
+      "paper_date": "2026-10-22",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-10-24T17:16:40",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-22-arxiv-fine_grained_analysis_of_catastrophic_forgetting_in_continual_learning_via_algorithmic_sta",
+    "arxiv_id": "2610.31551v1",
+    "date": "2026-10-22",
+    "title": "Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability",
+    "authors": "Guodong Zheng, Yan Sun, Peng Wang, Enneng Yang, Jiafei Lyu, Xiaochun Cao",
+    "abstract": "Understanding catastrophic forgetting, in which learning new tasks degrades performance on previously learned tasks, remains a fundamental challenge in continual learning (CL). Existing theoretical analyses often rely on specific model or task structures and offer limited insight into how iterative optimization affects forgetting. To address this gap, we develop an algorithmic stability framework for expected population forgetting under SGD without prescribing a particular model architecture. Specifically, we decompose forgetting into intra-task and cross-task generalization gaps and empirical forgetting. To bound the generalization gaps, we track how a sample perturbation affects updates within a task and propagates through subsequent tasks. We consider constant, intra-task decaying, and continuously decaying learning-rate schedules. Comparing the two decaying schedules allows us to characterize how restarting learning-rate decay at task boundaries affects the propagation of historical sample perturbations. For empirical forgetting, we derive bounds for all three schedules by retaining cumulative gradient alignment along the optimization trajectory, without requiring convexity. Combining these results yields upper bounds on expected forgetting that capture the effects of training set size, the number of updates per task, the total number of tasks, learning-rate schedules, and cumulative gradient alignment. Finally, we conduct experiments on Split CIFAR-100 and Split MiniImageNet to examine the empirical implications of our theoretical findings.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-10-22T16:54:40Z",
+    "updated": "2026-10-22T16:54:40Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG"
@@ -1043,38 +880,198 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2610.31544v1"
+        "url": "https://arxiv.org/abs/2610.31551v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2610.31544v1"
+        "url": "https://arxiv.org/pdf/2610.31551v1"
       }
     ],
-    "score": 64,
+    "score": 61,
     "infographic": {
-      "key_insight": "TWICE isolates decision credit from sampling luck by comparing factual and counterfactual agent episodes that share downstream noise.",
-      "engineering_relevance": "For agentic search with deterministic retrieval and grading, shared-noise rollouts can make policy-gradient credit assignment more precise and token-efficient.",
+      "key_insight": "An algorithmic stability framework bounds expected catastrophic forgetting under SGD by linking sample-perturbation propagation, learning-rate schedules, and cumulative gradient alignment.",
+      "engineering_relevance": "The bounds help engineers reason about how dataset size, updates per task, task count, and learning-rate decay restarts influence forgetting in continual learning.",
       "method": [
-        "Key token-level Gumbel noise by turn and line so counterfactual twins inherit the factual episode’s downstream noise.",
-        "Convert paired outcome differences into turn-level advantages for actor-sampled policy-gradient updates; deploy only the actor.",
-        "Allocate the twin-rollout budget using a square-root rule based on predicted outcome disagreement and cost."
+        "Decompose forgetting into intra-task and cross-task generalization gaps plus empirical forgetting.",
+        "Track sample perturbations across SGD updates under constant, intra-task decaying, and continuously decaying learning rates.",
+        "Bound empirical forgetting using cumulative gradient alignment without requiring convexity."
       ],
-      "evidence_signal": "Across seven question-answering benchmarks, TWICE improves average exact match over GRPO by 5.3 points on Qwen2.5-3B and 4.5 points on 7B, while using 68% fewer auxiliary tokens than VinePPO.",
-      "watch_item": "Variance reduction depends on twin outcome correlation, and stochastic tools or environments may complicate faithful shared-noise coupling.",
+      "evidence_signal": "Experiments on Split CIFAR-100 and Split MiniImageNet examine empirical implications of the theory; the abstract reports no quantitative results.",
+      "watch_item": "The results bound expected forgetting under SGD, so their tightness and usefulness for other optimizers require validation.",
       "hashtags": [
-        "#AgenticAI",
-        "#ReinforcementLearning",
-        "#CreditAssignment",
-        "#CounterfactualLearning",
-        "#EfficientAI"
+        "#ContinualLearning",
+        "#CatastrophicForgetting",
+        "#AlgorithmicStability",
+        "#SGD",
+        "#LearningRateSchedules"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-10-22-arxiv-same_luck_different_choice_twin_world_credit_assignment_for_agentic_reinforcement_learning",
-      "paper_title": "Same Luck, Different Choice: Twin-World Credit Assignment for Agentic Reinforcement Learning",
+      "paper_id": "2026-10-22-arxiv-fine_grained_analysis_of_catastrophic_forgetting_in_continual_learning_via_algorithmic_sta",
+      "paper_title": "Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability",
       "paper_date": "2026-10-22",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-23T18:11:52",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-10-24T17:16:42",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-22-arxiv-rheopt_few_shot_non_newtonian_flow_prediction_via_newtonian_pretraining_of_rheoformer",
+    "arxiv_id": "2610.31465v1",
+    "date": "2026-10-22",
+    "title": "RheOPT: Few-Shot Non-Newtonian Flow Prediction via Newtonian Pretraining of RheOFormer",
+    "authors": "Maedeh Saberi, Amir Barati Farimani, Safa Jamali",
+    "abstract": "Despite advances in numerical methods, non-Newtonian flow simulations remain computationally expensive because velocity and stress must be advanced together through rate- and history-dependent constitutive dynamics. Neural-operator surrogates reduce inference cost after training, but their training data require the same expensive simulations they aim to replace, making data-efficient learning essential when only a few non-Newtonian simulations can be afforded. Here, we introduce the Rheological Operator Pretrained Transformer (RheOPT), which pretrains a transformer-based neural operator on inexpensive Newtonian simulations and fine-tunes it on a small number of non-Newtonian samples. Rather than transferring the Newtonian constitutive response itself, RheOPT reuses geometry-conditioned transport structure that remains useful after the stress model changes. We evaluate RheOPT in two geometry-matched settings: a $4{:}1$ contraction channel for Giesekus, Oldroyd-B, and Bingham fluids, and the oscillatory wake behind a triangular obstacle for Oldroyd-B flow. In the contraction, Newtonian pretraining substantially improves few-shot prediction, and a model fine-tuned on four target samples can match or exceed a from-scratch model trained on four times as many. This benefit is reliable under reversible instance normalization (RevIN) but dataset dependent under Global normalization, a difference we trace to the dynamic range of each fluid's velocity and stress fields. In the wake, where relative $L_2$ error alone cannot verify that vortex shedding is recovered, phase-insensitive diagnostics show that pretraining recovers the shedding frequency and wake fluctuation amplitude that are suppressed by the from-scratch model in the few-shot regime. Overall, RheOPT establishes Newtonian simulation as a physically grounded pretraining source for data-efficient non-Newtonian operator learning.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-22T15:57:31Z",
+    "updated": "2026-10-22T15:57:31Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.31465v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.31465v1"
+      }
+    ],
+    "score": 61,
+    "infographic": {
+      "key_insight": "RheOPT transfers geometry-conditioned transport structure from Newtonian simulations to improve non-Newtonian flow prediction with few target examples.",
+      "engineering_relevance": "Reusing inexpensive Newtonian simulations can reduce the costly non-Newtonian training data needed for neural flow surrogates.",
+      "method": [
+        "Pretrain a transformer-based neural operator on Newtonian flow simulations.",
+        "Fine-tune on a few non-Newtonian examples in matched geometries.",
+        "Evaluate normalization choices and use phase-insensitive diagnostics for oscillatory wakes."
+      ],
+      "evidence_signal": "Across contraction and triangular-obstacle wake tests, pretraining improved few-shot predictions; in the contraction, four fine-tuning samples could match or exceed scratch training on 16 samples.",
+      "watch_item": "Transfer was tested in matched geometries, and its benefit depended on normalization: RevIN was reliable, while Global normalization was dataset dependent.",
+      "hashtags": [
+        "#ScientificMachineLearning",
+        "#NeuralOperators",
+        "#NonNewtonianFlow",
+        "#TransferLearning",
+        "#ComputationalFluidDynamics"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-10-22-arxiv-rheopt_few_shot_non_newtonian_flow_prediction_via_newtonian_pretraining_of_rheoformer",
+      "paper_title": "RheOPT: Few-Shot Non-Newtonian Flow Prediction via Newtonian Pretraining of RheOFormer",
+      "paper_date": "2026-10-22",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-24T17:16:44",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-22-arxiv-spectralcanary_embarrassingly_simple_low_frequency_traces_for_t2i_dataset_use_auditing",
+    "arxiv_id": "2610.31659v1",
+    "date": "2026-10-22",
+    "title": "SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing",
+    "authors": "Sy-Tuyen Ho, Anirudh Satheesh, Soham Chawathe, Huy Nghiem, Yongkyun Lee, Andrew Adams Schoen",
+    "abstract": "Auditing whether a text-to-image (T2I) model was fine-tuned on a particular image collection is difficult: a model can absorb collection-level visual characteristics without reproducing training images. Proactive dataset-use auditing plants a shared signal in a dataset before release, then later checks whether that signal appears in a suspect model's generated outputs. Existing approaches often trade off verifiability, fidelity, robustness, and deployability. We introduce $\\textbf{SpectralCanary}$, which uses a smooth low-pass mask to blend a fixed canary image into every collection image while leaving captions unchanged and requiring neither auxiliary generation nor per-image optimization. A lightweight verifier detects the transferred signal in suspect-model outputs. Across eight tests on the Pokemon dataset and three realistic data transformations, spanning two architectures families, SpectralCanary achieves the highest average per-generation TPR@$1\\%$ FPR ($91.1\\%$) and fixed threshold model-level accuracy using 30 generations ($94.8\\%$) among the evaluated methods. Across five datasets spanning artistic, medical, satellite, and fashion domains with SD3.5, SpectralCanary averages $92.4\\%$ per-generation TPR@$1\\%$ FPR while preserving the released images (SSIM $0.989$, LPIPS $0.022$) with a near-zero mean change FID (mean $Δ$FID $0.05$) across datasets. Matched-energy ablations on Pokemon and ROCOv2 support our design choice, low-frequency placement transfers more reliably compared to mid/high-frequency placement. Under the evaluated adaptive attacks, the most effective removal requires aggressive modification and incurs more than $25$ $Δ$FID points. These results identify low-frequency visual signals as effective carriers for collection-level T2I audit traces.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-10-22T17:59:03Z",
+    "updated": "2026-10-22T17:59:03Z",
+    "primary_category": "cs.CV",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.31659v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.31659v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "SpectralCanary embeds shared low-frequency visual traces into image collections so later model outputs can reveal potential use in text-to-image fine-tuning.",
+      "engineering_relevance": "It offers a lightweight dataset-use auditing pipeline without caption changes, auxiliary generation, or per-image optimization.",
+      "method": [
+        "Blend a fixed canary image into every collection image using a smooth low-pass mask.",
+        "Release the marked images with unchanged captions.",
+        "Apply a lightweight verifier to suspect-model outputs to detect the transferred signal."
+      ],
+      "evidence_signal": "Across eight Pokémon tests, SpectralCanary averaged 91.1% per-generation TPR at 1% FPR and 94.8% model-level accuracy using 30 generations; across five datasets with SD3.5, it averaged 92.4% TPR with SSIM 0.989 and LPIPS 0.022.",
+      "watch_item": "Auditing requires marking images before release, and robustness beyond the evaluated architectures, transformations, and adaptive attacks remains unestablished.",
+      "hashtags": [
+        "#DatasetAuditing",
+        "#TextToImage",
+        "#SpectralCanary",
+        "#LowFrequencySignals",
+        "#GenerativeAI"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-10-22-arxiv-spectralcanary_embarrassingly_simple_low_frequency_traces_for_t2i_dataset_use_auditing",
+      "paper_title": "SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing",
+      "paper_date": "2026-10-22",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-10-24T17:16:46",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-10-22-arxiv-simulated_control_evals",
+    "arxiv_id": "2610.31593v1",
+    "date": "2026-10-22",
+    "title": "Simulated Control Evals",
+    "authors": "Jeffrey Olmo, David Zhang, Tyler Tracy",
+    "abstract": "Control evaluations measure whether safeguards can prevent an AI model from causing undesired outcomes even when it is intentionally trying to do so. These evaluations typically use purpose-built control settings and extrapolate their results to a model's deployment. However, the effectiveness of safeguards in deployment can depend on features of environments and tasks that control settings do not represent. To broaden where control evaluations can be run, we introduce simulated control evaluations (SCEs), which use a language model to simulate tool responses in place of an environment. We evaluate SCEs on LinuxArena, where execution provides ground-truth outcomes. We compare SCE prediction errors with those from a separate control setting, BashArena, and with variation in control metrics within LinuxArena. For independently sampled evaluation and deployment task sets, SCEs predict safety with a root mean squared error of 3.6 percentage points across five monitors at a 5% audit budget, compared with 10.1 for BashArena. SCEs closely reproduce distributions of attack strategies, attacker reasoning, and monitor reasoning, with over tenfold lower KL divergence from execution than BashArena. SCEs explain 78-85% of the between-environment variance in attack success, monitor scores, and safety. This accuracy is sample efficient: SCEs predict safety with less error than BashArena using fewer than 5% as many task-pair draws as the deployment task set. Strategies discovered through simulation also improve monitor performance on held-out LinuxArena attacks, outperforming BashArena and approximately matching improvement from executed strategies. These results suggest that deployment-specific SCEs can be more predictive than control evaluations executed in separate control settings.",
+    "category": "Scientific Machine Learning",
+    "source": "arXiv",
+    "published": "2026-10-22T17:26:42Z",
+    "updated": "2026-10-22T17:26:42Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2610.31593v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2610.31593v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "Deployment-specific simulated control evaluations predicted safeguard effectiveness more accurately than evaluations executed in a separate control environment.",
+      "engineering_relevance": "Language-model simulation of tool responses could make deployment-specific safeguard testing more sample-efficient while helping engineers improve monitors.",
+      "method": [
+        "Replace environment execution with language-model-simulated tool responses.",
+        "Validate simulated control evaluations against executed outcomes in LinuxArena.",
+        "Compare prediction accuracy and attack characteristics with BashArena evaluations."
+      ],
+      "evidence_signal": "Across five monitors at a 5% audit budget, simulated evaluations predicted safety with 3.6 percentage-point RMSE versus 10.1 for BashArena, and explained 78–85% of between-environment variance in attack success, monitor scores, and safety.",
+      "watch_item": "Validation is centered on LinuxArena; simulation fidelity should be checked against execution before relying on results in other deployment environments.",
+      "hashtags": [
+        "#AISafety",
+        "#ControlEvaluations",
+        "#ScientificMachineLearning",
+        "#LLMSimulation",
+        "#SafeguardTesting"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-10-22-arxiv-simulated_control_evals",
+      "paper_title": "Simulated Control Evals",
+      "paper_date": "2026-10-22",
+      "paper_category": "Scientific Machine Learning",
+      "generated_at": "2026-10-24T17:16:48",
       "generator": "openai"
     }
   }

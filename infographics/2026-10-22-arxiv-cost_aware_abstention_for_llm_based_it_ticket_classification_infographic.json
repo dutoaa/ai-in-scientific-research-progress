@@ -1,19 +1,19 @@
 {
-  "key_insight": "Under illustrative routing costs, calibration-selected abstention cut logistic regression’s held-out test cost by 38.1% and wrong routes from 15.3% to 3.5%.",
-  "engineering_relevance": "When misrouting costs more than human triage, evaluate frozen route-or-defer policies by operational cost rather than accuracy or calibration error alone.",
+  "key_insight": "Cost-aware abstention cut TF-IDF logistic regression’s held-out routing cost by 38.1% and wrong routes from 15.3% to 3.5% under illustrative costs.",
+  "engineering_relevance": "Select routing thresholds using explicit error and human-triage costs, then validate the frozen policy before automating IT ticket routing.",
   "method": [
     "Compare four trained non-LLM classifiers with four LLMs using zero- and few-shot prompts.",
-    "Select abstention policies on calibration data under explicit costs, then evaluate once on held-out test data.",
+    "Select abstention policies on calibration data and evaluate once on held-out test data.",
     "Assess confidence using ECE, correctness AUROC, and tie-aware risk-coverage area."
   ],
-  "evidence_signal": "On a public 47,837-ticket, eight-class corpus, TF-IDF logistic regression with a calibration-selected 0.60 threshold reduced test cost from 0.763 to 0.472 under costs (correct, triage, wrong) = (0, 1, 5), with a 95% CI of 35.7%–40.4% for the relative reduction.",
-  "watch_item": "Results depend on the dataset, prompts, model endpoints, and assumed costs; improved calibration alone does not guarantee useful error discrimination or deployment readiness.",
+  "evidence_signal": "On a public 47,837-ticket, eight-class corpus, a calibration-selected threshold of 0.60 reduced logistic regression’s test cost from 0.763 to 0.472 (38.1% reduction; 95% CI: 35.7%–40.4%).",
+  "watch_item": "Results depend on the dataset, prompts, model endpoints, and assumed costs; improved calibration alone does not ensure useful error discrimination.",
   "hashtags": [
-    "#SelectiveClassification",
     "#CostAwareAI",
-    "#ITTicketRouting",
+    "#SelectivePrediction",
+    "#ITTicketClassification",
     "#LLMEvaluation",
-    "#UncertaintyCalibration"
+    "#ConfidenceCalibration"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Cost-Aware Abstention for LLM-Based IT Ticket Classification",
   "paper_date": "2026-10-22",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-23T18:11:43",
+  "generated_at": "2026-10-24T17:16:32",
   "generator": "openai"
 }
