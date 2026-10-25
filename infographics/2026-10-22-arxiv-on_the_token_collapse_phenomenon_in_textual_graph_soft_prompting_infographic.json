@@ -1,18 +1,18 @@
 {
-  "key_insight": "G-Retriever’s graph tokens become nearly indistinguishable across inputs, functioning primarily as a generic soft prompt rather than conveying graph-specific content.",
-  "engineering_relevance": "Evaluate graph-token alignment with controlled interventions, not task accuracy alone, before relying on graph soft prompts to inject relational information.",
+  "key_insight": "G-Retriever’s graph tokens become nearly indistinguishable across inputs, functioning primarily as a generic soft prompt rather than conveying graph-specific information.",
+  "engineering_relevance": "Evaluate graph-token use with controlled interventions rather than task accuracy alone, since a learned constant prompt can match or outperform graph-conditioned prompting.",
   "method": [
     "Analyze token collapse across graph encoders, LLM families, and adaptation settings.",
-    "Replace graph tokens with mean, cross-example, or corrupted-graph tokens and compare against a learned constant prompt.",
-    "Test a two-stage procedure for non-collapsed tokens and probe what information those tokens encode and influence."
+    "Replace graph tokens with dataset means, other examples’ tokens, or corrupted-graph tokens.",
+    "Test a two-stage procedure for producing non-collapsed tokens and probe what information they encode."
   ],
-  "evidence_signal": "Across three benchmarks, three graph encoders, and two LLM families in frozen and LoRA-adapted settings, token substitutions showed no resolved accuracy effect, while a learned constant prompt matched or surpassed G-Retriever on all three benchmarks.",
-  "watch_item": "The two-stage procedure produces non-collapsed tokens with competitive performance in most cases, but token variability does not establish that the LLM uses graph information.",
+  "evidence_signal": "Across three benchmarks, three graph encoders, two LLM families, and frozen and LoRA-adapted models, token substitutions produced no resolved answer-accuracy effect under the standard setup.",
+  "watch_item": "Non-collapsed tokens do not establish graph use: they may encode question information or answer priors, and the LLM may ignore graph-derived content.",
   "hashtags": [
     "#GraphNeuralNetworks",
-    "#SoftPrompting",
     "#LargeLanguageModels",
-    "#KnowledgeGraphQA",
+    "#SoftPrompting",
+    "#TokenCollapse",
     "#ModelEvaluation"
   ],
   "model": "gpt-6.1-sol",
@@ -21,6 +21,6 @@
   "paper_title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
   "paper_date": "2026-10-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-24T17:16:25",
+  "generated_at": "2026-10-25T17:30:50",
   "generator": "openai"
 }

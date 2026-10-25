@@ -1,13 +1,13 @@
 {
-  "key_insight": "Directly optimizing pass@k selects partial solutions to maximize the chance of at least one correct completion, naturally balancing quality and diversity.",
-  "engineering_relevance": "Pruning candidates after short prefixes can focus inference compute on a promising, nonredundant pool rather than completing every reasoning path.",
+  "key_insight": "Directly optimizing pass@k balances candidate quality and diversity by selecting partial solutions to maximize the probability that at least one finishes correctly.",
+  "engineering_relevance": "Pruning reasoning candidates after short prefixes can reduce inference computation while retaining a promising pool for continued generation.",
   "method": [
     "Generate short prefixes for multiple candidate solutions.",
-    "Select a pool by optimizing its probability of yielding at least one correct completion.",
-    "Continue only retained candidates, rewarding quality while penalizing redundancy."
+    "Select a survivor pool by optimizing its probability of producing at least one correct completion.",
+    "Continue selected candidates, balancing quality and redundancy within one objective."
   ],
-  "evidence_signal": "Across eight open-weight reasoning models, the method outperforms quality-based and diversity-based pruning baselines, with especially pronounced gains at moderate retained-pool sizes.",
-  "watch_item": "The abstract does not quantify selection overhead or explain how pool-level success probabilities are estimated, leaving practical compute savings uncertain.",
+  "evidence_signal": "Across eight open-weight reasoning models, the method outperforms quality-based and diversity-based pruning baselines, with especially pronounced gains when retaining a moderate number of candidates.",
+  "watch_item": "The abstract does not specify how pool-level success probabilities are estimated or quantify pruning overhead, leaving deployment cost-effectiveness uncertain.",
   "hashtags": [
     "#TestTimeScaling",
     "#ReasoningModels",
@@ -21,6 +21,6 @@
   "paper_title": "Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
   "paper_date": "2026-10-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-24T17:16:28",
+  "generated_at": "2026-10-25T17:30:52",
   "generator": "openai"
 }

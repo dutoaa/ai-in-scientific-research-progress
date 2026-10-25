@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-10-24
+Generated: 2026-10-25
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Action Learning for Scientific Simulations
@@ -99,15 +99,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.31657v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-cost_aware_abstention_for_llm_based_it_ticket_classification_infographic.json
 
-## 13. Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31579v1
-- PDF: https://arxiv.org/pdf/2610.31579v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-who_is_sycophantic_to_whom_confident_llms_human_deference_and_the_collapse_of_trust_calibr_infographic.json
-
-## 14. Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action
+## 13. Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action
 
 - Date: 2026-10-22
 - Category: AI Scientists and Research Agents
@@ -115,7 +107,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.31376v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-certified_execution_harness_for_agentic_ai_safe_and_least_intrusive_petri_net_supervisory_infographic.json
 
-## 15. EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence
+## 14. EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence
 
 - Date: 2026-10-22
 - Category: AI scientific research
@@ -123,7 +115,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.31650v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-episem_bench_evaluating_safety_and_evidence_recovery_in_llm_agents_under_missing_evidence_infographic.json
 
-## 16. PhysTrace: Interpretable Temporal Evaluation of Physical Consistency in Video Generative Models
+## 15. PhysTrace: Interpretable Temporal Evaluation of Physical Consistency in Video Generative Models
 
 - Date: 2026-10-22
 - Category: Modeling and Simulation
@@ -131,7 +123,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.31429v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-phystrace_interpretable_temporal_evaluation_of_physical_consistency_in_video_generative_mo_infographic.json
 
-## 17. Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability
+## 16. Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability
 
 - Date: 2026-10-22
 - Category: AI scientific research
@@ -139,7 +131,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.31551v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-fine_grained_analysis_of_catastrophic_forgetting_in_continual_learning_via_algorithmic_sta_infographic.json
 
-## 18. RheOPT: Few-Shot Non-Newtonian Flow Prediction via Newtonian Pretraining of RheOFormer
+## 17. RheOPT: Few-Shot Non-Newtonian Flow Prediction via Newtonian Pretraining of RheOFormer
 
 - Date: 2026-10-22
 - Category: Scientific Machine Learning
@@ -147,7 +139,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.31465v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-rheopt_few_shot_non_newtonian_flow_prediction_via_newtonian_pretraining_of_rheoformer_infographic.json
 
-## 19. SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing
+## 18. SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing
 
 - Date: 2026-10-22
 - Category: Literature and Knowledge Mining
@@ -155,10 +147,18 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2610.31659v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-spectralcanary_embarrassingly_simple_low_frequency_traces_for_t2i_dataset_use_auditing_infographic.json
 
-## 20. Simulated Control Evals
+## 19. Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration
 
 - Date: 2026-10-22
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.31593v1
-- PDF: https://arxiv.org/pdf/2610.31593v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-simulated_control_evals_infographic.json
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.31579v1
+- PDF: https://arxiv.org/pdf/2610.31579v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-who_is_sycophantic_to_whom_confident_llms_human_deference_and_the_collapse_of_trust_calibr_infographic.json
+
+## 20. Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure
+
+- Date: 2026-10-22
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.31573v1
+- PDF: https://arxiv.org/pdf/2610.31573v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-social_humint_an_llm_augmented_unified_framework_for_measuring_social_media_exposure_infographic.json

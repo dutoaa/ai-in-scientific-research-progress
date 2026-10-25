@@ -1,19 +1,19 @@
 {
-  "key_insight": "Missing safety-critical facts can cause tool-using LLM agents to execute prohibited actions even when user requests are benign and all returned statements are true.",
-  "engineering_relevance": "Agent safety evaluation should test incomplete tool responses and verify that agents obtain missing evidence before deciding whether to act.",
+  "key_insight": "LLM agents can execute prohibited actions when tool responses omit safety-critical facts, even if the user request is benign and every returned statement is true.",
+  "engineering_relevance": "Safety-sensitive agent workflows should support explicit evidence recovery and verify that recovered facts guide both safe refusal and permissible task completion.",
   "method": [
     "Evaluate 300 matched unsafe/safe task pairs across six domains.",
-    "Systematically suppress critical facts and measure unsafe execution and minimum observed failure cardinality.",
-    "Provide an independent audit tool to test evidence acquisition, withholding prohibited actions, and completing permissible tasks."
+    "Systematically suppress critical facts to measure unsafe execution and the minimum observed omission count triggering failure.",
+    "Use an independent audit tool to test evidence acquisition and appropriate action."
   ],
   "evidence_signal": "Across ten models, recovery access reduced unsafe execution for every model, but evidence acquisition and appropriate action varied substantially.",
-  "watch_item": "Resistance to missing evidence does not guarantee useful recovery; audit-tool access must be evaluated separately from whether agents actually seek and correctly use missing facts.",
+  "watch_item": "Robustness to missing evidence does not guarantee useful recovery; evaluate both prohibited-action avoidance and permissible-task completion.",
   "hashtags": [
-    "#LLMAgents",
     "#AISafety",
-    "#ToolUse",
-    "#EvidenceRecovery",
-    "#SafetyBenchmark"
+    "#LLMAgents",
+    "#MissingEvidence",
+    "#AgentEvaluation",
+    "#ToolUse"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence",
   "paper_date": "2026-10-22",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-24T17:16:38",
+  "generated_at": "2026-10-25T17:31:02",
   "generator": "openai"
 }

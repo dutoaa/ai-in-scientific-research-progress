@@ -1,19 +1,19 @@
 {
-  "key_insight": "SpectralCanary embeds shared low-frequency visual traces into image collections so later model outputs can reveal potential use in text-to-image fine-tuning.",
-  "engineering_relevance": "It offers a lightweight dataset-use auditing pipeline without caption changes, auxiliary generation, or per-image optimization.",
+  "key_insight": "SpectralCanary embeds a shared low-frequency visual trace into an image collection so its use in text-to-image fine-tuning can later be audited through generated outputs.",
+  "engineering_relevance": "The approach enables lightweight dataset-use auditing without changing captions, generating auxiliary images, or optimizing each image individually.",
   "method": [
-    "Blend a fixed canary image into every collection image using a smooth low-pass mask.",
-    "Release the marked images with unchanged captions.",
-    "Apply a lightweight verifier to suspect-model outputs to detect the transferred signal."
+    "Blend a fixed canary image into collection images using a smooth low-pass mask.",
+    "Release the modified images with unchanged captions.",
+    "Use a lightweight verifier to detect the transferred trace in suspect-model generations."
   ],
-  "evidence_signal": "Across eight Pokémon tests, SpectralCanary averaged 91.1% per-generation TPR at 1% FPR and 94.8% model-level accuracy using 30 generations; across five datasets with SD3.5, it averaged 92.4% TPR with SSIM 0.989 and LPIPS 0.022.",
-  "watch_item": "Auditing requires marking images before release, and robustness beyond the evaluated architectures, transformations, and adaptive attacks remains unestablished.",
+  "evidence_signal": "Across five datasets with SD3.5, the method averaged 92.4% per-generation TPR at 1% FPR, with released-image SSIM of 0.989, LPIPS of 0.022, and mean ΔFID of 0.05.",
+  "watch_item": "Auditing requires marking the collection before release; robustness beyond the evaluated architectures, transformations, and adaptive attacks remains unestablished.",
   "hashtags": [
     "#DatasetAuditing",
     "#TextToImage",
-    "#SpectralCanary",
-    "#LowFrequencySignals",
-    "#GenerativeAI"
+    "#GenerativeAI",
+    "#DataProvenance",
+    "#SpectralCanary"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing",
   "paper_date": "2026-10-22",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-24T17:16:46",
+  "generated_at": "2026-10-25T17:31:12",
   "generator": "openai"
 }
