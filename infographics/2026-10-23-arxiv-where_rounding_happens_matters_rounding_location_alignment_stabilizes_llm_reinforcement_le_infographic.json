@@ -1,0 +1,26 @@
+{
+  "key_insight": "Aligning selected training-side rounding locations with inference stabilizes BF16 LLM reinforcement learning without matching the entire execution stack.",
+  "engineering_relevance": "Targeted precision handling can prevent training collapse while leaving the inference engine, matrix-multiplication and attention kernels, and learning objective unchanged.",
+  "method": [
+    "Align rounding locations in RoPE, SwiGLU, and residual RMSNorm.",
+    "Retain selected intermediates in FP32 until their BF16 outputs.",
+    "Evaluate full three-region alignment and RoPE-path alignment alone."
+  ],
+  "evidence_signal": "Across four Qwen-family models, three-region alignment prevented the collapse seen with default BF16; RoPE-path alignment alone also sufficed in the studied runs.",
+  "watch_item": "RoPE-only sufficiency is established only for the studied runs, and numerical discrepancies remain after alignment.",
+  "hashtags": [
+    "#LLM",
+    "#ReinforcementLearning",
+    "#MixedPrecision",
+    "#NumericalStability",
+    "#MLSystems"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-10-23-arxiv-where_rounding_happens_matters_rounding_location_alignment_stabilizes_llm_reinforcement_le",
+  "paper_title": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
+  "paper_date": "2026-10-23",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-10-26T19:47:55",
+  "generator": "openai"
+}

@@ -1,0 +1,26 @@
+{
+  "key_insight": "Recent rollouts for the same prompt provide reusable n-gram drafts that accelerate RL post-training without an auxiliary model while preserving the rollout distribution through target-model verification.",
+  "engineering_relevance": "NgramRL targets the autoregressive rollout bottleneck, which can exceed 70% of training time, without requiring drafter training or persistent GPU-resident drafter state.",
+  "method": [
+    "Build per-prompt n-gram draft caches from bounded recent rollout histories.",
+    "Verify drafts with the target model to preserve the rollout distribution.",
+    "Adaptively prefetch likely verification outcomes under a candidate budget, falling back to sequential lookup for uncovered outcomes."
+  ],
+  "evidence_signal": "Across two model families and three workloads, warm-cache NgramRL commits 3.60–7.77 tokens per target forward; on Spider, prefetching delivers 1.38× measured rollout throughput over synchronous NgramRL.",
+  "watch_item": "Reported token-efficiency gains are from the warm-cache regime; cold starts or limited repetition across rollouts may reduce benefits.",
+  "hashtags": [
+    "#NgramRL",
+    "#ReinforcementLearning",
+    "#SpeculativeDecoding",
+    "#LLMPostTraining",
+    "#EfficientAI"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-10-23-arxiv-ngramrl_accelerating_rl_post_training_for_structured_generation_via_rollout_aware_n_gram_s",
+  "paper_title": "NgramRL: Accelerating RL Post-Training for Structured Generation via Rollout-Aware N-gram Speculative Decoding",
+  "paper_date": "2026-10-23",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-10-26T19:48:07",
+  "generator": "openai"
+}

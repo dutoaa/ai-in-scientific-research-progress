@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-10-25
+Generated: 2026-10-26
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Action Learning for Scientific Simulations
+## 1. A Tutorial on Physics Constrained Machine Learning for Hybrid Modeling, Optimization, and Control
 
-- Date: 2026-10-22
+- Date: 2026-10-23
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.31585v1
-- PDF: https://arxiv.org/pdf/2610.31585v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-action_learning_for_scientific_simulations_infographic.json
+- arXiv: https://arxiv.org/abs/2610.32914v1
+- PDF: https://arxiv.org/pdf/2610.32914v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-a_tutorial_on_physics_constrained_machine_learning_for_hybrid_modeling_optimization_and_co_infographic.json
 
-## 2. Reliable AI-Assisted Decisions via Selective Auditing
+## 2. ZENO: Nonlinear filtering with Zakai Equation Neural Operators
 
-- Date: 2026-10-22
+- Date: 2026-10-23
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2610.32926v1
+- PDF: https://arxiv.org/pdf/2610.32926v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-zeno_nonlinear_filtering_with_zakai_equation_neural_operators_infographic.json
+
+## 3. Iterative Behavioral Identification for Covert Misappropriation Attacks
+
+- Date: 2026-10-23
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2610.32662v1
+- PDF: https://arxiv.org/pdf/2610.32662v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-iterative_behavioral_identification_for_covert_misappropriation_attacks_infographic.json
+
+## 4. Semantic Representation for Agentic Self-Play in Automated Laboratories
+
+- Date: 2026-10-23
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2610.32755v1
+- PDF: https://arxiv.org/pdf/2610.32755v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-semantic_representation_for_agentic_self_play_in_automated_laboratories_infographic.json
+
+## 5. Green Code or Costly Code? Evaluating the Energy Costs of Iterative LLM-Based Code Optimizations
+
+- Date: 2026-10-23
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.32891v1
+- PDF: https://arxiv.org/pdf/2610.32891v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-green_code_or_costly_code_evaluating_the_energy_costs_of_iterative_llm_based_code_optimiza_infographic.json
+
+## 6. Do "True" and "False" Add Up to One? Complement Consistency in LLM-Agent Opinion Simulations
+
+- Date: 2026-10-23
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2610.32874v1
+- PDF: https://arxiv.org/pdf/2610.32874v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-do_true_and_false_add_up_to_one_complement_consistency_in_llm_agent_opinion_simulations_infographic.json
+
+## 7. SceneBloom: Agentic Indoor Environment Generation with Realistic and Diverse Layouts for Embodied Learning
+
+- Date: 2026-10-23
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2610.32978v1
+- PDF: https://arxiv.org/pdf/2610.32978v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-scenebloom_agentic_indoor_environment_generation_with_realistic_and_diverse_layouts_for_em_infographic.json
+
+## 8. On the Identifiability of Hybrid Deep Generative Models: Meta-Learning as a Solution
+
+- Date: 2026-10-23
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.32748v1
+- PDF: https://arxiv.org/pdf/2610.32748v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-on_the_identifiability_of_hybrid_deep_generative_models_meta_learning_as_a_solution_infographic.json
+
+## 9. Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning
+
+- Date: 2026-10-23
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.32951v1
+- PDF: https://arxiv.org/pdf/2610.32951v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-where_rounding_happens_matters_rounding_location_alignment_stabilizes_llm_reinforcement_le_infographic.json
+
+## 10. Yalda-Embedding: Open Development of a Competitive Persian Retrieval Model
+
+- Date: 2026-10-23
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.32933v1
+- PDF: https://arxiv.org/pdf/2610.32933v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-yalda_embedding_open_development_of_a_competitive_persian_retrieval_model_infographic.json
+
+## 11. Sensitivity-Guided Parameter Estimation of Bubbly Liquid via a Nonlinear Wave Equation and Physics-InformedNeuralNetworks
+
+- Date: 2026-10-23
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2610.32668v1
+- PDF: https://arxiv.org/pdf/2610.32668v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-sensitivity_guided_parameter_estimation_of_bubbly_liquid_via_a_nonlinear_wave_equation_and_infographic.json
+
+## 12. Measure Before You Train: Typed Decision Models vs. a Classical Baseline vs. a Generative LLM for Routing a Personal Multilingual Inbox
+
+- Date: 2026-10-23
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.32955v1
+- PDF: https://arxiv.org/pdf/2610.32955v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-measure_before_you_train_typed_decision_models_vs_a_classical_baseline_vs_a_generative_llm_infographic.json
+
+## 13. Reinforcement Learning with Multi-Step Transition Predictions: A Bellman Theory
+
+- Date: 2026-10-23
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.32887v1
+- PDF: https://arxiv.org/pdf/2610.32887v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-reinforcement_learning_with_multi_step_transition_predictions_a_bellman_theory_infographic.json
+
+## 14. NgramRL: Accelerating RL Post-Training for Structured Generation via Rollout-Aware N-gram Speculative Decoding
+
+- Date: 2026-10-23
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.32881v1
+- PDF: https://arxiv.org/pdf/2610.32881v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-ngramrl_accelerating_rl_post_training_for_structured_generation_via_rollout_aware_n_gram_s_infographic.json
+
+## 15. Singular Geometry of Low-Rank Adaptation
+
+- Date: 2026-10-23
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2610.32854v1
+- PDF: https://arxiv.org/pdf/2610.32854v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-singular_geometry_of_low_rank_adaptation_infographic.json
+
+## 16. Physics Informed Neural Network for Multi-dimensional Turbulent Self-gravitating Flows
+
+- Date: 2026-10-23
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2610.32840v1
+- PDF: https://arxiv.org/pdf/2610.32840v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-physics_informed_neural_network_for_multi_dimensional_turbulent_self_gravitating_flows_infographic.json
+
+## 17. CARES: Coverage-Aware Replay Exemplar Selection for Continual Learning
+
+- Date: 2026-10-23
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.32799v1
+- PDF: https://arxiv.org/pdf/2610.32799v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-cares_coverage_aware_replay_exemplar_selection_for_continual_learning_infographic.json
+
+## 18. ActionRAG: Evidence-Refining Graph Diffusion for Long-Term Memory in LLM Agents
+
+- Date: 2026-10-23
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2610.32752v1
+- PDF: https://arxiv.org/pdf/2610.32752v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-actionrag_evidence_refining_graph_diffusion_for_long_term_memory_in_llm_agents_infographic.json
+
+## 19. Probing the limits of forward screening and inverse design of crystal materials
+
+- Date: 2026-10-23
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2610.31662v1
-- PDF: https://arxiv.org/pdf/2610.31662v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-reliable_ai_assisted_decisions_via_selective_auditing_infographic.json
+- arXiv: https://arxiv.org/abs/2610.32678v1
+- PDF: https://arxiv.org/pdf/2610.32678v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-probing_the_limits_of_forward_screening_and_inverse_design_of_crystal_materials_infographic.json
 
-## 3. RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention
+## 20. Do Language Models Trust Their Own Justifications? A Study on Functional Consistency
 
-- Date: 2026-10-22
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2610.31372v1
-- PDF: https://arxiv.org/pdf/2610.31372v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-ridar_safeguarding_research_integrity_in_autonomous_research_agents_via_automated_detectio_infographic.json
-
-## 4. SQuAT: Spherical Lattice Vector Quantization-Aware Training
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31412v1
-- PDF: https://arxiv.org/pdf/2610.31412v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-squat_spherical_lattice_vector_quantization_aware_training_infographic.json
-
-## 5. Diffusion Language Models for Perplexity-Aware Black-Box Attacks
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31558v1
-- PDF: https://arxiv.org/pdf/2610.31558v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-diffusion_language_models_for_perplexity_aware_black_box_attacks_infographic.json
-
-## 6. PYTHIA, a transferable machine learning framework for simultaneous defect and adsorption site optimization
-
-- Date: 2026-10-22
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.31539v1
-- PDF: https://arxiv.org/pdf/2610.31539v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-pythia_a_transferable_machine_learning_framework_for_simultaneous_defect_and_adsorption_si_infographic.json
-
-## 7. Questioning Instrumental Convergence in RLVR: Checkpoint Evidence from OLMo-3
-
-- Date: 2026-10-22
+- Date: 2026-10-23
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.31624v1
-- PDF: https://arxiv.org/pdf/2610.31624v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-questioning_instrumental_convergence_in_rlvr_checkpoint_evidence_from_olmo_3_infographic.json
-
-## 8. METTA: Memory-Enhanced Test-Time Adaptation for Meta-Reinforcement Learning
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31656v1
-- PDF: https://arxiv.org/pdf/2610.31656v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-metta_memory_enhanced_test_time_adaptation_for_meta_reinforcement_learning_infographic.json
-
-## 9. On the Token Collapse Phenomenon in Textual Graph Soft Prompting
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31572v1
-- PDF: https://arxiv.org/pdf/2610.31572v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-on_the_token_collapse_phenomenon_in_textual_graph_soft_prompting_infographic.json
-
-## 10. Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31667v1
-- PDF: https://arxiv.org/pdf/2610.31667v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-direct_pass_k_optimization_for_thought_pruning_balancing_quality_and_diversity_in_test_tim_infographic.json
-
-## 11. Evaluating the Applicability of LLM Inference Optimizations on Apple Silicon
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31479v1
-- PDF: https://arxiv.org/pdf/2610.31479v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-evaluating_the_applicability_of_llm_inference_optimizations_on_apple_silicon_infographic.json
-
-## 12. Cost-Aware Abstention for LLM-Based IT Ticket Classification
-
-- Date: 2026-10-22
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.31657v1
-- PDF: https://arxiv.org/pdf/2610.31657v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-cost_aware_abstention_for_llm_based_it_ticket_classification_infographic.json
-
-## 13. Certified Execution Harness for Agentic AI: Safe and Least-Intrusive Petri-Net Supervisory Control Between Reasoning and Action
-
-- Date: 2026-10-22
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2610.31376v1
-- PDF: https://arxiv.org/pdf/2610.31376v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-certified_execution_harness_for_agentic_ai_safe_and_least_intrusive_petri_net_supervisory_infographic.json
-
-## 14. EpiSEM-Bench: Evaluating Safety and Evidence Recovery in LLM Agents under Missing Evidence
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31650v1
-- PDF: https://arxiv.org/pdf/2610.31650v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-episem_bench_evaluating_safety_and_evidence_recovery_in_llm_agents_under_missing_evidence_infographic.json
-
-## 15. PhysTrace: Interpretable Temporal Evaluation of Physical Consistency in Video Generative Models
-
-- Date: 2026-10-22
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.31429v1
-- PDF: https://arxiv.org/pdf/2610.31429v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-phystrace_interpretable_temporal_evaluation_of_physical_consistency_in_video_generative_mo_infographic.json
-
-## 16. Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31551v1
-- PDF: https://arxiv.org/pdf/2610.31551v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-fine_grained_analysis_of_catastrophic_forgetting_in_continual_learning_via_algorithmic_sta_infographic.json
-
-## 17. RheOPT: Few-Shot Non-Newtonian Flow Prediction via Newtonian Pretraining of RheOFormer
-
-- Date: 2026-10-22
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.31465v1
-- PDF: https://arxiv.org/pdf/2610.31465v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-rheopt_few_shot_non_newtonian_flow_prediction_via_newtonian_pretraining_of_rheoformer_infographic.json
-
-## 18. SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing
-
-- Date: 2026-10-22
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.31659v1
-- PDF: https://arxiv.org/pdf/2610.31659v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-spectralcanary_embarrassingly_simple_low_frequency_traces_for_t2i_dataset_use_auditing_infographic.json
-
-## 19. Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration
-
-- Date: 2026-10-22
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.31579v1
-- PDF: https://arxiv.org/pdf/2610.31579v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-who_is_sycophantic_to_whom_confident_llms_human_deference_and_the_collapse_of_trust_calibr_infographic.json
-
-## 20. Social-HUMINT: An LLM-Augmented Unified Framework for Measuring Social Media Exposure
-
-- Date: 2026-10-22
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.31573v1
-- PDF: https://arxiv.org/pdf/2610.31573v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-22-arxiv-social_humint_an_llm_augmented_unified_framework_for_measuring_social_media_exposure_infographic.json
+- arXiv: https://arxiv.org/abs/2610.32665v1
+- PDF: https://arxiv.org/pdf/2610.32665v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-23-arxiv-do_language_models_trust_their_own_justifications_a_study_on_functional_consistency_infographic.json
