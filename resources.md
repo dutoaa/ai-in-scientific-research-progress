@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-10-28
+Generated: 2026-10-29
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Autonomous fixed-wing interception using reinforcement learning

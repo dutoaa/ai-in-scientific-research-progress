@@ -1,19 +1,19 @@
 {
   "key_insight": "An input skip can lower VAE reconstruction error without changing the generated distribution, so better reconstruction does not necessarily mean better generation.",
-  "engineering_relevance": "Evaluate generative quality separately from reconstruction error when choosing skip connections or calibrating observation noise.",
+  "engineering_relevance": "Evaluate generative quality separately from reconstruction MSE, especially when changing skip strength or observation variance.",
   "method": [
-    "Show an exact Gaussian VAE reparameterization for constant skip α: scale decoder output by 1−α and noise variance by (1−α)².",
-    "Compare reconstruction MSE, energy score, and importance-sampled negative log-density estimates in a known-density Gaussian experiment.",
-    "Evaluate neural models on seven annual DART records and compare energy scores against PPCA."
+    "Derive a Gaussian VAE reparameterization for constant input skip α, with b = 1 − α.",
+    "Scale decoder output by b and noise variance by b², preserving the joint distribution while scaling reconstruction MSE by b².",
+    "Evaluate separately trained models using energy score and, on known-density Gaussian data, importance-sampled negative log density."
   ],
-  "evidence_signal": "The Gaussian experiment reduced MSE while worsening generative metrics; DART skip effects varied by record, and PPCA achieved lower mean energy scores than every neural DART fit.",
-  "watch_item": "The equivalence applies to matched reparameterizations; separately trained models can learn different generators because optimization depends on parameter coordinates.",
+  "evidence_signal": "Gaussian experiments showed lower MSE alongside worse generative scores; seven annual DART records showed mixed skip benefits, while PPCA achieved lower mean energy scores than every neural DART fit.",
+  "watch_item": "The exact equivalence applies to the specified Gaussian reparameterization; separate training can change generators, and reconstruction-based variance estimation can worsen energy score.",
   "hashtags": [
     "#VariationalAutoencoders",
     "#GenerativeModeling",
-    "#ReconstructionError",
-    "#ProbabilisticEvaluation",
-    "#ScientificMachineLearning"
+    "#ModelEvaluation",
+    "#ProbabilisticLearning",
+    "#ComputationalScience"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "An Input Skip Can Reparameterize a VAE Without Improving the Generator",
   "paper_date": "2026-10-27",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-28T19:24:04",
+  "generated_at": "2026-10-29T19:28:11",
   "generator": "openai"
 }

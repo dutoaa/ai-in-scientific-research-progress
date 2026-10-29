@@ -1,13 +1,13 @@
 {
-  "key_insight": "Benign-looking fine-tuning data can erode LLM safety, and gradient alignment can help identify and filter examples linked to unsafe behavior.",
-  "engineering_relevance": "SimpleLoRIF makes gradient-based safety filtering practical for million-example post-training datasets while largely preserving model capabilities.",
+  "key_insight": "Benign-looking instruction data can erode LLM safety, and gradient alignment can help identify which training examples contribute to unsafe behavior.",
+  "engineering_relevance": "SimpleLoRIF makes gradient-based safety filtering practical for million-example post-training datasets while largely preserving model capability.",
   "method": [
-    "Compute low-rank gradient embeddings with backpropagation restricted to the final four transformer blocks.",
-    "Rank training examples by gradient alignment with unsafe responses.",
-    "Create SafeTulu by removing the 20% most aligned examples from Tulu 3."
+    "Simplify low-rank gradient attribution and restrict backpropagation to the final four transformer blocks.",
+    "Rank fine-tuning examples by gradient alignment with unsafe responses.",
+    "Create SafeTulu by removing the 20% of Tulu 3 examples most aligned with unsafe responses."
   ],
-  "evidence_signal": "The abstract reports emergent-misalignment attribution AUC up to 0.865 and GCG attack success rate reductions up to 22% across Qwen, Llama, and Olmo, outperforming judge-based and prior gradient-based filtering.",
-  "watch_item": "Filtering depends on the unsafe-response signals used for alignment; improvements on GCG attacks do not establish protection against all unsafe behaviors.",
+  "evidence_signal": "The abstract reports emergent-misalignment detection AUC up to 0.865 and GCG attack success rate reductions up to 22% across Qwen, Llama, and Olmo, outperforming LLM-as-a-judge and prior gradient-based filtering.",
+  "watch_item": "Reported gains do not establish universal safety; filtering effectiveness may depend on the unsafe-response probes, model, and evaluation attacks.",
   "hashtags": [
     "#LLMSafety",
     "#TrainingData",
@@ -21,6 +21,6 @@
   "paper_title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
   "paper_date": "2026-10-27",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-28T19:24:06",
+  "generated_at": "2026-10-29T19:28:14",
   "generator": "openai"
 }

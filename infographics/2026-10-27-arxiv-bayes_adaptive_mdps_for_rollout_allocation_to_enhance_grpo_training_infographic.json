@@ -1,19 +1,19 @@
 {
-  "key_insight": "AdaRoll-GRPO improves LLM post-training by adapting rollout allocation to question difficulty while keeping the total rollout budget fixed.",
-  "engineering_relevance": "An offline-computed allocation policy can improve sampling efficiency without adding online policy-optimization overhead during GRPO training.",
+  "key_insight": "AdaRoll-GRPO adaptively allocates rollouts across training questions to improve GRPO performance under the same total rollout budget.",
+  "engineering_relevance": "Difficulty-aware rollout allocation can make LLM post-training more effective without adding online allocation-policy optimization.",
   "method": [
-    "Formulate difficulty-aware rollout allocation as a sequential decision-making problem.",
+    "Formulate rollout allocation as sequential decision-making under a fixed total budget.",
     "Use a Bayes-adaptive MDP to compute an adaptive allocation policy offline.",
-    "Apply the policy during GRPO training under the same total rollout budget as standard GRPO."
+    "Apply the learned policy during GRPO training instead of allocating uniformly."
   ],
-  "evidence_signal": "The abstract reports consistent improvements over GRPO across multiple reasoning datasets and LLM architectures, but provides no numerical effect sizes.",
-  "watch_item": "Offline policy-computation costs and robustness to shifts in question difficulty are not quantified in the abstract.",
+  "evidence_signal": "The abstract reports consistent improvements over GRPO across multiple reasoning datasets and LLM architectures at a fixed rollout budget, but provides no numerical results.",
+  "watch_item": "Offline policy computation adds setup work, and transfer to new models or question distributions should be validated.",
   "hashtags": [
     "#AdaRollGRPO",
     "#LLMPostTraining",
     "#BayesAdaptiveMDP",
-    "#RolloutAllocation",
-    "#ReinforcementLearning"
+    "#ReinforcementLearning",
+    "#RolloutAllocation"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Bayes-Adaptive MDPs for Rollout Allocation to Enhance GRPO Training",
   "paper_date": "2026-10-27",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-28T19:24:10",
+  "generated_at": "2026-10-29T19:28:18",
   "generator": "openai"
 }

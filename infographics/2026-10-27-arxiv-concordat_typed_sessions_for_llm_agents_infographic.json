@@ -1,13 +1,13 @@
 {
-  "key_insight": "Concordat enforces agent action rules at runtime through typed, finite-state protocols rather than relying on prompt compliance.",
-  "engineering_relevance": "Engineers can enforce confirmation gates, human-only decisions, and resource budgets before consequential tool calls take effect.",
+  "key_insight": "Concordat makes action rules runtime-enforced finite-state protocols rather than relying on an LLM agent to obey prompt instructions.",
+  "engineering_relevance": "Its Python interface helps protect consequential workflows by blocking illegal tool calls before side effects and reserving human decisions for humans.",
   "method": [
-    "Expose only tools legal in the current protocol state and reject illegal calls before side effects.",
-    "Reserve designated decisions for humans and split token and tool-call budgets linearly across handoffs.",
-    "Check protocols at definition time and reject subclasses that could bypass inherited protocols."
+    "Expose only tools permitted in the current protocol state and reject out-of-protocol calls.",
+    "Check protocols at definition time and reject subclasses that could bypass inherited constraints.",
+    "Charge and split token and tool-call budgets linearly across agent handoffs."
   ],
-  "evidence_signal": "On tau-bench airline tasks with simulated pressure to skip confirmation, the standard agent violated confirmation rules in 13/50 GPT-4.1 tasks and 29/128 Claude Haiku 5.5 task-runs; Concordat had none, with no significant task-success difference.",
-  "watch_item": "Evidence is limited to the reported airline evaluation; deployment still requires correctly specified protocols and coverage of consequential tool paths.",
+  "evidence_signal": "On tau-bench’s 50 airline tasks with simulated customer pressure, Concordat had zero confirmation violations versus 13/50 GPT-4.1 tasks and 29/128 Claude Haiku 5.5 task-runs for the standard agent, with no significant task-success difference.",
+  "watch_item": "Evidence is limited to the reported airline benchmark; deployment still requires correctly specified protocols covering consequential actions.",
   "hashtags": [
     "#LLMAgents",
     "#AgentSafety",
@@ -21,6 +21,6 @@
   "paper_title": "Concordat: Typed Sessions for LLM Agents",
   "paper_date": "2026-10-27",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-28T19:24:08",
+  "generated_at": "2026-10-29T19:28:16",
   "generator": "openai"
 }
