@@ -24,23 +24,23 @@
         "url": "https://arxiv.org/pdf/2610.40449v1"
       }
     ],
-    "score": 75,
+    "score": 70,
     "infographic": {
-      "key_insight": "This review connects reinforcement learning with PDE-constrained optimization to organize approaches for feedback control of complex distributed systems.",
-      "engineering_relevance": "RL offers a route to real-time PDE control, but practical deployment depends on sample efficiency, scalability, and generalization across operating conditions.",
+      "key_insight": "This review connects reinforcement learning with PDE-constrained optimization to assess feedback control of complex dynamical systems.",
+      "engineering_relevance": "RL offers a route to adaptive, real-time control of distributed systems, but training efficiency and scalability remain key engineering challenges.",
       "method": [
-        "Unify perspectives from RL and PDE-constrained optimization.",
-        "Survey model-free, model-based, and multi-agent control approaches.",
-        "Illustrate performance and pitfalls through chaotic-system stabilization and flow control."
+        "Unifies perspectives from RL and PDE-constrained optimization.",
+        "Surveys model-free, model-based, and multi-agent RL approaches.",
+        "Examines sample efficiency, parameter generalization, and high-dimensional scalability."
       ],
-      "evidence_signal": "The abstract describes two demonstrative control examples and discusses benchmarking, but reports no quantitative results.",
-      "watch_item": "Reliability under parametric variations remains a concern before deploying learned controllers in practice.",
+      "evidence_signal": "Two demonstrations—chaotic-system stabilization and flow control—illustrate performance and pitfalls; the abstract reports no quantitative results.",
+      "watch_item": "Reliable deployment requires validation across operating conditions, since generalization and data-efficient training remain open challenges.",
       "hashtags": [
         "#ReinforcementLearning",
         "#PDEControl",
         "#ScientificComputing",
         "#FlowControl",
-        "#ControlEngineering"
+        "#ComputationalEngineering"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -48,7 +48,7 @@
       "paper_title": "Reinforcement learning for control of partial differential equations",
       "paper_date": "2026-10-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-30T19:03:36",
+      "generated_at": "2026-10-31T18:22:08",
       "generator": "openai"
     }
   },
@@ -78,23 +78,23 @@
         "url": "https://arxiv.org/pdf/2610.40447v1"
       }
     ],
-    "score": 74,
+    "score": 69,
     "infographic": {
-      "key_insight": "Lineage context helps generative models recover developmental dynamics that gene expression alone does not resolve.",
-      "engineering_relevance": "The approach illustrates how relational context can improve dynamical modeling and support counterfactual simulation in structured biological systems.",
+      "key_insight": "Lineage inpainting uses the states of related cells to learn developmental dynamics that gene expression alone does not resolve.",
+      "engineering_relevance": "Combining tree-structured context with generative modeling offers a framework for simulating multicellular development and proposing perturbation-response hypotheses.",
       "method": [
-        "Represent cell states and their lineage relationships.",
-        "Combine tree-structured transformers with stochastic interpolants for lineage inpainting.",
-        "Simulate counterfactual perturbations using a model trained on unperturbed development."
+        "Represent lineage context, including sister and cousin cells, with tree-structured transformers.",
+        "Use stochastic interpolants to generatively model cell-state dynamics across lineage trees.",
+        "Simulate counterfactual perturbations using a model fit on unperturbed development."
       ],
-      "evidence_signal": "On a lineage-traced transcriptional atlas of mouse embryogenesis, the model recovered multiple transcriptional convergence events and generated perturbation hypotheses consistent with many observed phenotypes, including a single-cell measurement of the Tbx5 knockout response.",
-      "watch_item": "Counterfactual predictions remain hypotheses: agreement with selected phenotypes does not establish accuracy across unseen perturbations.",
+      "evidence_signal": "On a lineage-traced transcriptional atlas of mouse embryogenesis, the model recovered transcriptional convergence events and produced perturbation predictions consistent with many observed phenotypes, including a single-cell Tbx5 knockout measurement.",
+      "watch_item": "Counterfactual agreement is not universal; predictions from unperturbed training data require experimental validation.",
       "hashtags": [
-        "#GenerativeAI",
-        "#DevelopmentalBiology",
+        "#GenerativeModeling",
         "#LineageTracing",
-        "#DynamicalSystems",
-        "#CounterfactualModeling"
+        "#DevelopmentalDynamics",
+        "#TreeTransformers",
+        "#ComputationalBiology"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -102,7 +102,7 @@
       "paper_title": "Learning developmental dynamics from lineage context",
       "paper_date": "2026-10-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-30T19:03:39",
+      "generated_at": "2026-10-31T18:22:11",
       "generator": "openai"
     }
   },
@@ -133,23 +133,23 @@
         "url": "https://arxiv.org/pdf/2610.40613v1"
       }
     ],
-    "score": 72,
+    "score": 67,
     "infographic": {
-      "key_insight": "TextSeal2 strengthens distortion-free LLM watermarking while preserving output diversity, the target output distribution, and speculative decoding acceptance rates.",
-      "engineering_relevance": "It enables watermarking compatible with speculative decoding, with no measurable inference latency added in the reported evaluation and no post-logits optimization.",
+      "key_insight": "TextSeal2 strengthens distortion-free LLM watermark detection while preserving output diversity, speculative-decoding acceptance rates, and the target output distribution.",
+      "engineering_relevance": "It supports watermarking in accelerated LLM generation without post-logits optimization or measurable added inference latency in the reported evaluation.",
       "method": [
-        "Merge multiple watermark keys into one virtual key rather than randomly selecting among keys.",
-        "Couple the virtual key to fresh noise using AutoMark’s Gaussian copula.",
-        "Verify speculative drafts with an additional exponential race over leftover draft races, exploiting memorylessness."
+        "Merge multiple watermark keys into one virtual key rather than selecting a key by coin flip.",
+        "Couple the virtual key to fresh noise through AutoMark’s Gaussian copula.",
+        "Verify speculative drafts with an additional exponential race on leftover draft races, exploiting memorylessness to preserve exact target sampling."
       ],
-      "evidence_signal": "Across three LLMs at a false-positive rate of 0.001, TextSeal2 improves detection over TextSeal by 8–22 percentage points for 100-token answers at equal diversity; under speculative decoding, gains for 200-token answers are 18 points over TextSeal and 22 over textGrain at the same acceptance rate.",
-      "watch_item": "The abstract does not establish robustness to paraphrasing or other adversarial edits, so deployment should validate these separately.",
+      "evidence_signal": "Across three LLMs at a false-positive rate of 10^-3, TextSeal2 improves detection over TextSeal by 8–22 percentage points for 100-token answers at equal diversity; under speculative decoding, it beats TextSeal and textGrain by 18 and 22 points, respectively, for 200-token answers at the same acceptance rate.",
+      "watch_item": "The abstract does not establish robustness to paraphrasing or other adversarial edits, so deployment should test these conditions separately.",
       "hashtags": [
         "#LLMWatermarking",
         "#SpeculativeDecoding",
         "#GenerativeAI",
-        "#ContentProvenance",
-        "#EfficientInference"
+        "#AIProvenance",
+        "#StatisticalDetection"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -157,7 +157,7 @@
       "paper_title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races",
       "paper_date": "2026-10-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-30T19:03:42",
+      "generated_at": "2026-10-31T18:22:13",
       "generator": "openai"
     }
   },
@@ -187,23 +187,23 @@
         "url": "https://arxiv.org/pdf/2610.40476v1"
       }
     ],
-    "score": 72,
+    "score": 67,
     "infographic": {
-      "key_insight": "Multi-turn reinforcement learning in simulated psychiatric intake improved clinical interviewing, diagnostic reasoning, and communication, with gains transferring to psychiatrist-enacted encounters.",
-      "engineering_relevance": "Simulation offers a controlled testbed for training and stress-testing conversational agents before clinician-supervised use.",
+      "key_insight": "Multi-turn reinforcement learning in simulated psychiatric intake improved a language model’s clinical interviewing performance and reduced acute-risk under-triage.",
+      "engineering_relevance": "Validated simulation environments can support training and adversarial stress-testing of clinical conversational agents before supervised deployment.",
       "method": [
-        "Train a language model with multi-turn reinforcement learning in simulated psychiatric intake.",
-        "Compare against its identically prompted base model in a randomized, double-blind crossover study.",
+        "Train a language model with multi-turn reinforcement learning in psychiatric intake simulations.",
+        "Compare it with an identically prompted base model in a randomized, double-blind crossover study.",
         "Stress-test safety using 256 adversarial presentations derived from Delphi-consensus taxonomies."
       ],
-      "evidence_signal": "Across 60 matched scenario pairs (120 psychiatrist-enacted encounters), the trained agent outperformed the base model in 76.7% of pairs (p < 0.0001); adversarial testing found acute-risk under-triage fell from 30.5% to 12.9%.",
-      "watch_item": "Evaluation used simulated and psychiatrist-enacted encounters rather than real patient care; residual safety failures require safeguards and clinician oversight.",
+      "evidence_signal": "Across 60 matched scenario pairs (120 psychiatrist-enacted encounters), the trained agent outperformed the base model in 76.7% of pairs; adversarial testing found acute-risk under-triage fell from 30.5% to 12.9%.",
+      "watch_item": "Evaluation used simulated and psychiatrist-enacted patients, not real clinical care; residual safety gaps require safeguards and clinician oversight.",
       "hashtags": [
         "#ReinforcementLearning",
-        "#ScientificMachineLearning",
-        "#MentalHealthAI",
+        "#ClinicalAI",
+        "#PsychiatricIntake",
         "#SimulationTraining",
-        "#ClinicalAISafety"
+        "#AISafety"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -211,7 +211,7 @@
       "paper_title": "Training language models in simulation for psychiatric intake",
       "paper_date": "2026-10-29",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-30T19:03:44",
+      "generated_at": "2026-10-31T18:22:15",
       "generator": "openai"
     }
   },
@@ -241,17 +241,17 @@
         "url": "https://arxiv.org/pdf/2610.40379v1"
       }
     ],
-    "score": 72,
+    "score": 67,
     "infographic": {
-      "key_insight": "CEDAR, an evidence-citing and self-auditing LLM pipeline, outperformed trained machine-learning models in predicting pediatric diabetes outcomes, with the largest gains on sparsely screened outcomes.",
-      "engineering_relevance": "The results support testing evidence-linked, self-auditing LLM pipelines for clinical prediction from heterogeneous records in small-cohort settings.",
+      "key_insight": "CEDAR, an evidence-citing and self-auditing LLM pipeline, outperformed trained machine learning for pediatric diabetes outcome prediction, with the largest gains on sparsely screened outcomes.",
+      "engineering_relevance": "Evidence-linked predictions and automated self-auditing offer a design pattern for traceable clinical AI using multimodal medical records.",
       "method": [
-        "Combine structured records with note-derived social determinants and, for type 1 diabetes, continuous glucose monitoring data.",
-        "Use 18 months of follow-up to predict outcomes at 24 months: seven in type 2 diabetes and four in type 1 diabetes.",
-        "Generate evidence-citing predictions with self-auditing and assess clinician agreement using the cited evidence and reasoning."
+        "Combined structured records with note-derived social determinants and, for type 1 diabetes, continuous glucose monitoring data.",
+        "Used 18 months of follow-up to predict outcomes at 24 months.",
+        "Cited chart evidence and self-audited predictions for clinician review."
       ],
-      "evidence_signal": "Across 2,489 youth with type 2 diabetes and 4,018 with type 1 diabetes, pooled AUROC was 0.815 versus 0.656–0.700 and 0.756 versus 0.603–0.631, respectively; only 4 of 70,246 cited values mismatched the chart.",
-      "watch_item": "External validation and prospective clinical evaluation are needed; citation accuracy and clinician agreement do not establish deployment safety.",
+      "evidence_signal": "Across 2,489 youth with type 2 and 4,018 with type 1 diabetes, pooled AUROC was 0.815 and 0.756 versus ML baselines of 0.656–0.700 and 0.603–0.631, respectively; only 4 of 70,246 cited values mismatched the chart.",
+      "watch_item": "The abstract does not establish external or prospective validation, so clinical deployment requires testing generalizability and real-world safety.",
       "hashtags": [
         "#AgenticAI",
         "#ClinicalPrediction",
@@ -265,7 +265,7 @@
       "paper_title": "Agentic LLM reasoning in pediatric diabetes outcome prediction from multimodal medical records",
       "paper_date": "2026-10-29",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-30T19:03:46",
+      "generated_at": "2026-10-31T18:22:18",
       "generator": "openai"
     }
   },
@@ -296,20 +296,20 @@
         "url": "https://arxiv.org/pdf/2610.40589v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
-      "key_insight": "Collaborating AI agents autonomously derived and experimentally tested quantum-spin predictions while rejecting an initially inconclusive result.",
-      "engineering_relevance": "Mutual review, independent checks and drift-aware acceptance criteria offer a blueprint for more reliable autonomous laboratories.",
+      "key_insight": "Collaborating AI agents autonomously derived and experimentally tested a quantum-spin calibration result, rejecting initially favorable evidence when signal drift undermined it.",
+      "engineering_relevance": "Agent-to-agent review and explicit acceptance criteria offer a practical architecture for autonomous labs that can detect unreliable measurements and revise experiments.",
       "method": [
-        "Agents proposed, reviewed and rejected research questions.",
-        "They derived minimum calibration requirements for a defined family of microwave pulse sequences and checked them computationally.",
-        "They designed discriminating experiments on quantum-spin ensembles in diamond and revised the protocol after detecting drift."
+        "Generate and critique research questions, with authority to stop or redirect investigations.",
+        "Derive minimum calibration requirements for a defined family of microwave pulse sequences and check them computationally.",
+        "Design discriminating experiments on quantum-spin ensembles in diamond and monitor reference measurements."
       ],
-      "evidence_signal": "Repeated reference measurements exposed drift in the initial experiment; a revised experiment met unchanged acceptance criteria and supported the theoretical predictions.",
-      "watch_item": "Demonstration on a defined quantum-spin task does not establish reliability across other experimental platforms or research domains.",
+      "evidence_signal": "Repeated reference measurements exposed drift in the initial experiment; a revised protocol met unchanged acceptance criteria and supported the theoretical predictions.",
+      "watch_item": "The demonstration concerns a defined quantum-spin setting; reliability and generalization across other experimental domains remain to be established.",
       "hashtags": [
         "#AutonomousLabs",
-        "#MultiAgentAI",
+        "#AIAgents",
         "#QuantumSensing",
         "#ExperimentalValidation",
         "#ScientificAutomation"
@@ -320,7 +320,7 @@
       "paper_title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
       "paper_date": "2026-10-29",
       "paper_category": "Autonomous Labs",
-      "generated_at": "2026-10-30T19:03:48",
+      "generated_at": "2026-10-31T18:22:20",
       "generator": "openai"
     }
   },
@@ -350,20 +350,20 @@
         "url": "https://arxiv.org/pdf/2610.40418v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
-      "key_insight": "IMPACT combines inverter-level cloud dynamics with plant history, solar geometry, and weather to improve 10–110-minute-ahead probabilistic photovoltaic power forecasts.",
-      "engineering_relevance": "More accurate, calibrated short-term solar forecasts could support grid balancing and operational planning under changing cloud conditions.",
+      "key_insight": "IMPACT combines inverter-level cloud dynamics with solar geometry and weather inputs to improve 10–110-minute-ahead probabilistic photovoltaic power forecasts.",
+      "engineering_relevance": "More accurate, calibrated short-term solar forecasts could support grid balancing, storage scheduling, and photovoltaic plant operations.",
       "method": [
-        "Encode four input branches, including inverter dynamics via graph attention with learned adjacency, and fuse them through gated cross-attention.",
-        "Augment solar geometry with horizon-weighted cloud heterogeneity and inverter ramp-down signals.",
-        "Learn horizon-conditioned corrections to smart persistence, then calibrate quantiles online using kernel-weighted adaptive conformal calibration."
+        "Fuse four branches for plant history, inverter dynamics, future solar geometry, and current weather using gated cross-attention.",
+        "Encode inverter dynamics with learned-adjacency graph attention and add horizon-weighted cloud heterogeneity and ramp-down signals.",
+        "Learn horizon-conditioned corrections to smart persistence, then calibrate quantile forecasts online with kernel-weighted adaptive conformal calibration."
       ],
-      "evidence_signal": "The abstract reports an FSS of 0.2950, outperforming all 14 baselines by at least 0.099, with positive contributions from every branch and FSS values of 0.198 under overcast and 0.255 under variable skies.",
-      "watch_item": "The abstract does not specify dataset size or cross-site validation, leaving generalization to other photovoltaic plants uncertain.",
+      "evidence_signal": "The abstract reports outperforming all 14 baselines with FSS 0.2950, a 0.099 advantage over the runner-up; ablations support every branch, with FSS 0.198 under overcast skies and 0.255 under variable skies.",
+      "watch_item": "The abstract does not specify dataset scale or cross-site validation, leaving generalization to other photovoltaic plants uncertain.",
       "hashtags": [
-        "#SolarForecasting",
         "#ScientificMachineLearning",
+        "#SolarForecasting",
         "#MultimodalLearning",
         "#GraphAttention",
         "#UncertaintyQuantification"
@@ -374,7 +374,7 @@
       "paper_title": "IMPACT: Inverter-Informed Multimodal Learning for Photovoltaic Generation Forecasting",
       "paper_date": "2026-10-29",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-30T19:03:51",
+      "generated_at": "2026-10-31T18:22:22",
       "generator": "openai"
     }
   },
@@ -404,22 +404,22 @@
         "url": "https://arxiv.org/pdf/2610.40345v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
       "key_insight": "A unified Hessian-guided objective jointly optimizes quantization ranges, linear transformations, and weight rounding to account for their impact on model outputs.",
-      "engineering_relevance": "The framework targets accurate low-bit deployment of large language models with reduced memory and computational costs.",
+      "engineering_relevance": "The framework targets accurate low-bit deployment of large language models while reducing memory footprint and computational cost.",
       "method": [
-        "Approximate output changes induced by joint weight and activation quantization using Hessian guidance.",
+        "Approximate output changes caused by joint weight and activation quantization using Hessian guidance.",
         "Use a tractable Fisher approximation to capture output sensitivity.",
-        "Optimize ranges, transformations, and weight rounding under one shared objective."
+        "Jointly optimize ranges, transformations, and weight rounding under a common objective."
       ],
-      "evidence_signal": "The abstract reports consistent improvements over state-of-the-art transformation and rounding methods in channel-wise and block-wise quantization, but provides no numerical results.",
-      "watch_item": "The abstract does not quantify optimization overhead or how closely the Fisher approximation tracks downstream task performance.",
+      "evidence_signal": "The abstract reports consistent gains over state-of-the-art transformation and rounding methods in channel-wise and block-wise quantization, but provides no numerical results.",
+      "watch_item": "The abstract does not quantify optimization overhead or how well the Fisher approximation holds across models and precision settings.",
       "hashtags": [
         "#PostTrainingQuantization",
         "#LowBitInference",
-        "#LargeLanguageModels",
-        "#HessianGuidedOptimization",
+        "#HessianGuided",
+        "#LLMDeployment",
         "#EfficientAI"
       ],
       "model": "gpt-6.1-sol",
@@ -428,7 +428,7 @@
       "paper_title": "A Unified Hessian-Guided Framework for Post-Training Quantization",
       "paper_date": "2026-10-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-30T19:03:53",
+      "generated_at": "2026-10-31T18:22:24",
       "generator": "openai"
     }
   },
@@ -458,23 +458,23 @@
         "url": "https://arxiv.org/pdf/2610.40563v1"
       }
     ],
-    "score": 68,
+    "score": 63,
     "infographic": {
-      "key_insight": "LLM-simulated counselling clients showed both similarities and differences to human role-players in communication patterns, suggesting potential for training support rather than demonstrated equivalence.",
-      "engineering_relevance": "LLM-based client simulations could expand counselling practice opportunities, but should be evaluated for realistic dialogue and their effects on trainee behaviour.",
+      "key_insight": "LLM-simulated clients showed both similarities and differences to human role-players in counselling communication patterns, suggesting potential for training rather than equivalence.",
+      "engineering_relevance": "Sentence-level communication analysis offers a way to assess and refine LLM-based virtual clients for counselling practice.",
       "method": [
-        "Recorded novice counsellors role-playing with human peers as clients.",
-        "Conducted human–AI role-plays using Mixtral 8x7B with 4-bit quantization.",
-        "Analysed sentence-level counselling patterns to compare dialogue dynamics and counsellor behaviour."
+        "Record novice counsellors role-playing with human peers acting as clients.",
+        "Conduct role-plays with clients simulated by Mixtral 8x7B using 4-bit quantization.",
+        "Compare sentence-level counselling patterns and counsellor behaviour across scenarios."
       ],
-      "evidence_signal": "Sentence-level analysis found similarities and differences across human-client and LLM-client sessions; the abstract reports no sample sizes or quantitative effect estimates.",
-      "watch_item": "The abstract does not establish whether practising with simulated clients improves counselling skills or transfers to real-client interactions.",
+      "evidence_signal": "Recorded human-client and LLM-client interactions were evaluated using a sentence-level counselling communication pattern system; the abstract reports no sample sizes or quantitative effect estimates.",
+      "watch_item": "Communication-pattern similarities alone do not establish authentic client behaviour or improved counselling competencies.",
       "hashtags": [
         "#LLMSimulation",
         "#CounsellingTraining",
+        "#VirtualClients",
         "#HumanAIInteraction",
-        "#RolePlay",
-        "#DialogueAnalysis"
+        "#ModelEvaluation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -482,7 +482,7 @@
       "paper_title": "Comparing Human Role-Players and LLM-Simulated Clients in Online Counselling Training: An Analysis of Counselling Patterns",
       "paper_date": "2026-10-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-30T19:03:55",
+      "generated_at": "2026-10-31T18:22:26",
       "generator": "openai"
     }
   },
@@ -512,17 +512,17 @@
         "url": "https://arxiv.org/pdf/2610.40421v1"
       }
     ],
-    "score": 68,
+    "score": 63,
     "infographic": {
       "key_insight": "UFLD combines reinforcement learning with conformal prediction to classify wafer defects while stopping inspection once sufficient information is acquired.",
-      "engineering_relevance": "Adaptive acquisition could enable higher-throughput wafer inspection without full-surface scans or an additional learned confidence-estimation network.",
+      "engineering_relevance": "Adaptive measurement acquisition could improve wafer-inspection throughput without an additional learned confidence-estimation network.",
       "method": [
-        "Use reinforcement learning to adaptively select measurements.",
-        "Apply conformal prediction to quantify prediction uncertainty after each step.",
-        "Stop acquisition when sufficient information is available."
+        "Use reinforcement learning to adaptively acquire measurements.",
+        "Apply conformal prediction to assess prediction uncertainty after each step.",
+        "Stop acquisition when sufficient information is available for classification."
       ],
-      "evidence_signal": "On MixedWM38, the authors report about 40% lower acquisition time and 98.4% inspection accuracy, with comparisons against existing adaptive acquisition procedures and standard CNNs.",
-      "watch_item": "Performance and uncertainty calibration under real production distribution shifts remain unestablished by the abstract.",
+      "evidence_signal": "On MixedWM38, the authors report about 40% lower acquisition time and 98.4% inspection accuracy, with comparisons against adaptive acquisition procedures and standard CNNs.",
+      "watch_item": "Performance and uncertainty reliability under manufacturing distribution shifts require validation beyond the reported dataset.",
       "hashtags": [
         "#WaferInspection",
         "#ReinforcementLearning",
@@ -536,7 +536,7 @@
       "paper_title": "Uncertainty-aware Feedback Loop Diagnosis: integrating reinforcement learning and conformal prediction for reliable wafer defect classification",
       "paper_date": "2026-10-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-30T19:03:57",
+      "generated_at": "2026-10-31T18:22:28",
       "generator": "openai"
     }
   },
@@ -565,23 +565,23 @@
         "url": "https://arxiv.org/pdf/2610.40488v1"
       }
     ],
-    "score": 66,
+    "score": 61,
     "infographic": {
       "key_insight": "Research agents propose worthwhile experiments, but evidence that their rankings improve which experiment to run remains limited.",
-      "engineering_relevance": "Use research agents to generate candidate experiments, but validate their prioritization before allocating compute or adopting costlier agent teams.",
+      "engineering_relevance": "Use research agents to generate candidate experiments, but validate their prioritization before relying on it to allocate compute or research effort.",
       "method": [
         "Six frontier models, working alone or in teams, proposed, ranked and forecast minimum viable experiments for seven recent NLP papers.",
-        "A separate executor attempted every proposed experiment, including those ranked last.",
-        "Three model auditors assessed outcomes; rankings and forecasts were compared with simple baselines."
+        "A separate executor attempted all 415 experiments, including those ranked last.",
+        "Three model auditors assessed results; rankings and forecasts were compared with simple baselines."
       ],
-      "evidence_signal": "Of 415 experiments, 194 were judged sound, valuable and new, and 73 also beyond the seed paper and non-obvious; top-ranked choices beat random selection but were not shown to beat choosing the first-written experiment.",
-      "watch_item": "Quality judgments relied on model auditors, and teams cost more without a clear overall improvement in proposal quality.",
+      "evidence_signal": "Of 415 experiments, 194 were judged sound, valuable and new, and 73 also beyond the seed paper and non-obvious; top choices beat random selection but did not demonstrably beat choosing the first-written experiment.",
+      "watch_item": "Teams cost more without clear overall proposal-quality gains, and forecasts were not measurably better than those from fresh instances of the same models.",
       "hashtags": [
-        "#ResearchAgents",
-        "#AIScientists",
+        "#AIResearchAgents",
+        "#AutomatedScience",
         "#ExperimentDesign",
-        "#ScientificJudgment",
-        "#AIEvaluation"
+        "#ResearchEvaluation",
+        "#ComputationalScience"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -589,7 +589,7 @@
       "paper_title": "rTaste: Do Research Agents Have Taste? Evaluating Early Stage Research Judgment",
       "paper_date": "2026-10-29",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-30T19:03:59",
+      "generated_at": "2026-10-31T18:22:30",
       "generator": "openai"
     }
   },
@@ -621,22 +621,22 @@
         "url": "https://arxiv.org/pdf/2610.40551v1"
       }
     ],
-    "score": 65,
+    "score": 60,
     "infographic": {
-      "key_insight": "An AI-assisted pipeline evaluates research-level mathematical proofs across multiple formats, reducing false-positive judgments compared with one-shot LLM evaluation.",
-      "engineering_relevance": "The approach offers a methodology for scaling semantic and logical verification of mathematical reasoning and supporting computational artifacts.",
+      "key_insight": "An AI-assisted evaluation pipeline improves assessment of research-level mathematical proofs across natural language, CAS code, and Lean formalizations.",
+      "engineering_relevance": "Multi-format proof evaluation offers a methodology for scaling mathematical validation in AI-for-science workflows.",
       "method": [
-        "Analyze Ramanujan Challenge submissions involving research-level number theory.",
-        "Assess natural language proofs, computer algebra code, and Lean formalizations for semantic and logical correctness.",
-        "Compare pipeline judgments with conventional one-shot LLM evaluation."
+        "Analyze Ramanujan Challenge submissions on research-level number theory problems.",
+        "Compare outcomes across AI models, computer algebra systems, and formal tools.",
+        "Assess semantic and logical correctness across proof formats using an AI-assisted pipeline."
       ],
-      "evidence_signal": "The pipeline reduced false-positive verdicts on natural language proofs from 23% to 6% and increased supporting-code judgment accuracy from 46% to 58%.",
-      "watch_item": "Residual evaluation errors remain, and generalization beyond the Challenge’s number-theory submissions is not established in the abstract.",
+      "evidence_signal": "Compared with one-shot LLM judgment, the pipeline reduced natural-language proof false positives from 23% to 6% and increased supporting-code judgment accuracy from 46% to 58%.",
+      "watch_item": "Residual evaluation errors remain, and the abstract does not establish generalization beyond the Challenge submissions.",
       "hashtags": [
         "#AIForScience",
         "#MathematicalReasoning",
         "#ProofEvaluation",
-        "#FormalVerification",
+        "#FormalMethods",
         "#ResearchBenchmarks"
       ],
       "model": "gpt-6.1-sol",
@@ -645,7 +645,7 @@
       "paper_title": "Ramanujan Challenge Results: AI-Assisted Evaluation Pipeline for Multi-Format Proofs",
       "paper_date": "2026-10-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-30T19:04:01",
+      "generated_at": "2026-10-31T18:22:32",
       "generator": "openai"
     }
   },
@@ -677,17 +677,17 @@
         "url": "https://arxiv.org/pdf/2610.40426v1"
       }
     ],
-    "score": 65,
+    "score": 60,
     "infographic": {
-      "key_insight": "A physics-constrained, data-driven reduced-order modeling approach enables efficient flapping-wing shape optimization, improving time-averaged thrust by 37% and propulsive efficiency by 40%.",
-      "engineering_relevance": "The approach could reduce computational and memory costs for aerodynamic design involving unsteady, nonlinear flows.",
+      "key_insight": "A physics-constrained reduced-order modeling framework enables efficient flapping-wing shape optimization, improving time-averaged thrust by 37% and propulsive efficiency by 40%.",
+      "engineering_relevance": "The approach could reduce the computational burden of optimizing unsteady aerodynamic designs with complex wing–flow interactions.",
       "method": [
         "Build physics-constrained, data-driven reduced-order models for PDE-constrained optimization.",
-        "Project optimization into system dynamics optimization in Hilbert space to improve stability.",
-        "Optimize flapping-wing geometry using the reduced-order formulation."
+        "Reformulate optimization in Hilbert-space system dynamics to improve stability and reduce memory and computational costs.",
+        "Use the reduced-order framework to optimize flapping-wing shapes."
       ],
-      "evidence_signal": "The abstract reports 37% thrust and 40% efficiency improvements for a 2D flapping-wing section at Re = 2,400, plus a 3D test demonstrating potential applicability.",
-      "watch_item": "The abstract does not quantify computational savings or 3D performance gains, leaving scalability and broader applicability to be established.",
+      "evidence_signal": "The abstract reports 37% higher time-averaged thrust and 40% higher propulsive efficiency for a 2D flapping wing at Re = 2,400, plus a 3D wing test demonstrating potential applicability.",
+      "watch_item": "The abstract does not quantify 3D performance gains or computational savings, leaving scalability to complex aerospace designs uncertain.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#ReducedOrderModeling",
@@ -701,7 +701,7 @@
       "paper_title": "Aerodynamic Shape Optimization of unsteady flapping wings",
       "paper_date": "2026-10-29",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-10-30T19:04:03",
+      "generated_at": "2026-10-31T18:22:34",
       "generator": "openai"
     }
   },
@@ -732,23 +732,23 @@
         "url": "https://arxiv.org/pdf/2610.40578v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "VeriCUA verifies computer-agent task completion by actively gathering missing evidence rather than judging only fixed observations or accessible application state.",
-      "engineering_relevance": "A shared verification procedure spans desktop, mobile, and web environments, potentially reducing platform-specific verifier engineering.",
+      "key_insight": "VeriCUA verifies computer-agent task completion by actively gathering evidence rather than judging only fixed observations or accessible application state.",
+      "engineering_relevance": "A shared verification procedure across desktop, mobile, and web environments could reduce platform-specific engineering for data curation, evaluation, and reinforcement learning.",
       "method": [
         "Inspect available context and construct a task-completion rubric.",
         "Select GUI or code checks to investigate unresolved requirements.",
         "Combine findings under explicit evidence rules in online and offline settings."
       ],
-      "evidence_signal": "Experiments report better agreement with reference labels than compared baselines, with the largest offline gains on hard cases and stronger rejection of false completion claims online.",
-      "watch_item": "Deployment should assess exploration cost and evidence-access constraints; the abstract does not quantify these trade-offs.",
+      "evidence_signal": "Experiments report improved agreement with reference labels over compared baselines, with the largest offline gains on hard cases and stronger rejection of false completion claims online.",
+      "watch_item": "Active exploration requires suitable GUI or code access; its added execution cost and latency are not quantified in the abstract.",
       "hashtags": [
         "#VeriCUA",
         "#ComputerUsingAgents",
         "#AgentVerification",
         "#AgenticExploration",
-        "#AIEvaluation"
+        "#AIResearch"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -756,7 +756,7 @@
       "paper_title": "VeriCUA: Verification as Agentic Exploration for Computer-Using Agents",
       "paper_date": "2026-10-29",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-30T19:04:05",
+      "generated_at": "2026-10-31T18:22:36",
       "generator": "openai"
     }
   },
@@ -785,23 +785,23 @@
         "url": "https://arxiv.org/pdf/2610.40544v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "Naive Bayes and linear SVM accurately distinguished scam from legitimate Ghanaian mobile-money SMS in a small, structured corpus.",
-      "engineering_relevance": "Classical text classifiers offer a promising lightweight approach to carrier- or handset-level fraud filtering in low-resource settings.",
+      "key_insight": "Classical machine-learning models distinguished Ghanaian mobile money scam SMS from legitimate messages, with Naive Bayes and linear SVM achieving perfect held-out scores on a small corpus.",
+      "engineering_relevance": "Lightweight text classifiers offer a potential route to carrier- or handset-level scam filtering in low-resource settings.",
       "method": [
         "Normalise currency amounts, phone numbers, and USSD codes.",
         "Encode SMS text using TF-IDF unigrams and bigrams.",
         "Compare Multinomial Naive Bayes, linear SVM, and Random Forest."
       ],
-      "evidence_signal": "On 220 labelled messages across 18 subcategories, five-fold cross-validation accuracy averaged 96.6% for Naive Bayes, 94.9% for SVM, and 92.0% for Random Forest; Naive Bayes and SVM achieved 1.00 accuracy, F1, and AUC on the 20% held-out test set.",
-      "watch_item": "Perfect held-out scores on a small, template-based corpus may not generalise to naturalistic, multilingual messages or evolving scams.",
+      "evidence_signal": "On 220 labelled messages across 18 subcategories, five-fold cross-validation yielded mean accuracies of 96.6%, 94.9%, and 92.0% for Naive Bayes, SVM, and Random Forest, respectively; Naive Bayes and SVM achieved 1.00 accuracy, F1, and AUC on a 20% held-out test set.",
+      "watch_item": "Perfect held-out results on a small, template-based corpus may not generalise to naturalistic, multilingual messages or evolving scams.",
       "hashtags": [
         "#MobileMoney",
-        "#SMSFraudDetection",
+        "#ScamDetection",
         "#MachineLearning",
-        "#Ghana",
-        "#LowResourceAI"
+        "#NLP",
+        "#Ghana"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -809,7 +809,7 @@
       "paper_title": "Machine Learning-Based Detection of Mobile Money Scan Messages in Ghana: A Comparative Evaluation of Naive Bayes, Support Vector Machine, and Randon Forest Classifiers",
       "paper_date": "2026-10-29",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-10-30T19:04:08",
+      "generated_at": "2026-10-31T18:22:38",
       "generator": "openai"
     }
   },
@@ -840,17 +840,17 @@
         "url": "https://arxiv.org/pdf/2610.40541v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "Inherent decoding randomness limits how accurately LLM output length can be predicted from prefill hidden states, with tested predictors approaching this limit.",
-      "engineering_relevance": "Inference schedulers should account for irreducible length uncertainty rather than expect predictor upgrades alone to eliminate scheduling error.",
+      "key_insight": "Inherent randomness in autoregressive decoding sets a fundamental error floor for length prediction from prefill hidden states, with tested predictors performing close to that limit.",
+      "engineering_relevance": "LLM inference schedulers should account for irreducible length uncertainty rather than expect predictor architecture improvements alone to deliver precise forecasts.",
       "method": [
-        "Model autoregressive decoding as a stopped stochastic process with a gradually increasing stopping probability.",
-        "Derive per-prompt approximate normality, prediction-error bounds, and the affine standard-deviation law σ = αμ + b.",
-        "Compare MLP, EGTP, FiLM, soft-label, and Mixture-of-Experts predictors under fixed evaluation conditions."
+        "Model decoding as a stopped stochastic process with a gradually increasing stopping probability.",
+        "Derive per-prompt approximate normality, an explicit approximation error, and the affine variability law σ = αμ + b.",
+        "Compare MLP, EGTP, FiLM, soft-label, and Mixture-of-Experts predictors under fixed conditions."
       ],
-      "evidence_signal": "The normal approximation reproduces per-prompt MAE and central distribution mass within a few percent, while diverse predictors achieve similar performance near the derived bound.",
-      "watch_item": "Benchmark comparisons must fix the target model, dataset, and sampling parameters; report relative as well as absolute errors to avoid conflating predictor quality with task difficulty.",
+      "evidence_signal": "The abstract reports that the normal approximation reproduces per-prompt MAE and central distribution mass within a few percent, while varied predictors converge to similar near-bound performance under fixed model, data, and sampling conditions.",
+      "watch_item": "The normal approximation retains mild tail deviations; benchmark comparisons should fix model, data, and sampling parameters and report relative alongside absolute errors.",
       "hashtags": [
         "#LLMInference",
         "#LengthPrediction",
@@ -864,7 +864,7 @@
       "paper_title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
       "paper_date": "2026-10-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-30T19:04:10",
+      "generated_at": "2026-10-31T18:22:40",
       "generator": "openai"
     }
   },
@@ -893,23 +893,23 @@
         "url": "https://arxiv.org/pdf/2610.40485v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "Power-law measurement spectra preserve a spurious-minimum-free landscape in low-rank matrix sensing, yet division-normalised optimizers can stall when weak-direction curvature falls below their effective denominator floor.",
-      "engineering_relevance": "Optimizer denominator precision, not just problem conditioning, can limit convergence, with the predicted failure boundary depending on matrix size V and rank D.",
+      "key_insight": "Power-law measurement spectra preserve a benign optimization landscape but can create an optimizer-dependent precision wall when weak-direction curvature falls below the effective denominator floor.",
+      "engineering_relevance": "Optimizer denominator precision can limit recoverability in low-rank matrix sensing even without spurious local minima, making numerical floors a practical design constraint.",
       "method": [
-        "Replace isotropic Gaussian measurement designs with covariance Σ = diag(j^−s).",
-        "Derive leading-order smallest non-gauge expected Hessian curvature scaling as V^−(s+1)D^−s.",
-        "Predict the critical exponent from the optimizer’s effective denominator floor and a calibrated detection lag."
+        "Analyze rank-D Burer–Monteiro matrix sensing with covariance Σ = diag(j^−s).",
+        "Derive leading-order non-gauge curvature scaling as V^−(s+1)D^−s and an optimizer-specific critical exponent.",
+        "Calibrate Adam’s detection lag on four configurations, then freeze it for held-out evaluation."
       ],
-      "evidence_signal": "After calibrating Adam’s detection lag on four configurations and freezing it, the formula predicted onset within 0.45 in exponent s across all 16 held-out V × D grid cells and distinguished fixed-VD pairs.",
-      "watch_item": "The approximation fails at D = 2 and saturates below ε₀ = 10^−8 at a dynamical floor, limiting extrapolation to very low rank or smaller denominator settings.",
+      "evidence_signal": "The calibrated formula predicts Adam’s onset within 0.45 in the critical exponent across all 16 held-out V × D configurations and distinguishes pairs with equal VD.",
+      "watch_item": "The approximation fails at D = 2 and saturates at a dynamical floor below ε₀ = 10^−8, limiting extrapolation to small rank or smaller denominator floors.",
       "hashtags": [
-        "#MatrixSensing",
+        "#LowRankMatrixSensing",
         "#NumericalPrecision",
         "#Optimization",
         "#AdamOptimizer",
-        "#LowRankLearning"
+        "#ScientificMachineLearning"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -917,7 +917,7 @@
       "paper_title": "The Precision Wall: An Optimizer-Dependent Boundary for Optimization under Power-Law Measurement Spectra",
       "paper_date": "2026-10-29",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-10-30T19:04:13",
+      "generated_at": "2026-10-31T18:22:42",
       "generator": "openai"
     }
   },
@@ -947,21 +947,21 @@
         "url": "https://arxiv.org/pdf/2610.40443v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "OMatG-FC generates new inorganic crystals by learning atomic species and cell volume within fixed structural frameworks, achieving a reported state-of-the-art stable, unique, and novel (S.U.N.) rate below the convex hull.",
-      "engineering_relevance": "Conditioning on existing atomic arrangements reduces generation dimensionality and offers a route to materials discovery without learning atomic packings from scratch.",
+      "key_insight": "OMatG-FC generates inorganic crystals by learning atomic species and cell volume within fixed structural frameworks, achieving a reported state-of-the-art stable, unique, and novel (S.U.N.) rate below the convex hull.",
+      "engineering_relevance": "Conditioning on known crystal frameworks reduces generation dimensionality and offers a targeted route to materials discovery without learning atomic packings from scratch.",
       "method": [
-        "Fix fractional atomic coordinates and unit-volume lattice vectors to define each framework.",
-        "Use discrete flow matching for atomic species and stochastic interpolants for cell-volume scaling.",
-        "Analyze duplicate frameworks in MP-20 and provide a framework-split dataset."
+        "Fix fractional atomic coordinates and unit-volume lattice vectors.",
+        "Learn atomic species using discrete flow matching and cell-volume scaling using stochastic interpolants.",
+        "Generate candidate materials that can include unseen, stable prototypes derived from known frameworks."
       ],
-      "evidence_signal": "Evaluation uses LeMat-GenBench with three machine-learning interatomic potentials; the abstract reports state-of-the-art S.U.N. performance but gives no numerical rates.",
-      "watch_item": "Fixed frameworks restrict exploration of new atomic packings, and predicted stability still requires validation beyond machine-learning interatomic potentials.",
+      "evidence_signal": "The authors analyze duplicate frameworks in MP-20, provide a framework-based split, and report LeMat-GenBench evaluation using three ML interatomic potentials.",
+      "watch_item": "Fixed-framework conditioning restricts exploration of new atomic packings, and ML-predicted stability does not establish experimental synthesizability.",
       "hashtags": [
         "#MaterialsDiscovery",
         "#GenerativeAI",
-        "#CrystalGeneration",
+        "#CrystalStructures",
         "#FlowMatching",
         "#ComputationalMaterials"
       ],
@@ -971,7 +971,7 @@
       "paper_title": "Framework-Conditional Open Materials Generation",
       "paper_date": "2026-10-29",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-10-30T19:04:15",
+      "generated_at": "2026-10-31T18:22:45",
       "generator": "openai"
     }
   },
@@ -1000,23 +1000,23 @@
         "url": "https://arxiv.org/pdf/2610.40383v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "Generalized Feynman-Kac correctors enable sampling from arbitrary target functions of multiple pretrained diffusion models, correcting errors from naive score combinations.",
-      "engineering_relevance": "The framework supports model composition and reward-based steering during generation without retraining or fine-tuning.",
+      "key_insight": "Generalized Feynman-Kac correctors enable sampling from arbitrary target functions of multiple pretrained diffusion models, correcting errors from naive score combinations without retraining.",
+      "engineering_relevance": "The framework lets practitioners compose existing diffusion models and steer generation toward downstream rewards without fine-tuning.",
       "method": [
-        "Derive a Feynman-Kac PDE and closed-form potential for geometric interpolation from an initial function to the target.",
+        "Derive a Feynman-Kac PDE and closed-form potential for geometric interpolation from an initial function to the desired target.",
         "Generalize the log-probability ODE to track each model’s density along trajectories driven by a different velocity field.",
-        "Apply generation-time corrections entirely in the log domain, optionally incorporating downstream rewards."
+        "Apply corrections during generation entirely in the log domain, with reward-based steering incorporated into the target."
       ],
-      "evidence_signal": "Tests on analytic Gaussian models closely matched ground-truth targets, while MNIST experiments demonstrated non-trivial model combinations and effective steering.",
-      "watch_item": "Evidence is limited to Gaussian and MNIST settings; computational cost and scalability to larger diffusion models remain unclear from the abstract.",
+      "evidence_signal": "Tests on analytic Gaussian models closely match ground-truth targets, while MNIST experiments demonstrate non-trivial model combinations and effective steering.",
+      "watch_item": "Validation in the abstract is limited to Gaussian models and MNIST; scalability and density-tracking overhead for larger diffusion models remain unestablished.",
       "hashtags": [
         "#DiffusionModels",
         "#FeynmanKac",
+        "#GenerativeAI",
         "#ModelComposition",
-        "#RewardSteering",
-        "#GenerativeAI"
+        "#RewardSteering"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -1024,7 +1024,7 @@
       "paper_title": "Composing and Steering Diffusion Models with Generalized Feynman-Kac Correctors",
       "paper_date": "2026-10-29",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-10-30T19:04:16",
+      "generated_at": "2026-10-31T18:22:47",
       "generator": "openai"
     }
   },
@@ -1054,23 +1054,23 @@
         "url": "https://arxiv.org/pdf/2610.40370v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "EpiCoach turns wearable-based coaching into auditable N-of-1 science by requiring predictions before sessions and updating beliefs only from logged statistical evidence.",
-      "engineering_relevance": "The system offers a blueprint for personalized research agents that combine mechanistic models, evidence tracking, constrained experiment design and safety oversight.",
+      "key_insight": "EpiCoach turns wearable-based coaching into auditable N-of-1 science by requiring predictions before sessions and updating beliefs only through logged statistical evidence.",
+      "engineering_relevance": "The system offers a template for personalized health agents that combine mechanistic models, constrained experiment planning, and traceable belief updates.",
       "method": [
-        "Infer a digital twin from heart rate, GPS and altitude, modeling heart-rate lag, fitness–fatigue dynamics and descending skill.",
-        "Maintain an evidence-gated hypothesis registry with prospective probabilistic predictions and traceable belief updates.",
-        "Design weekly training experiments to maximize information gain around two instrument rides, subject to load and safety constraints."
+        "Infer a digital twin from heart rate, GPS, and altitude, modeling cardiac response, fitness–fatigue dynamics, and descending skill.",
+        "Maintain an evidence-gated hypothesis registry with prospective probabilistic predictions.",
+        "Plan weekly training around two instrument rides to maximize information gain under load and safety constraints."
       ],
-      "evidence_signal": "Evaluation used 18 months of one athlete’s data: replay beat standard forecasters on heart rate but not segment time, while the first three live weeks sealed 20 predictions, scored 14 and recorded two safety vetoes.",
-      "watch_item": "Evidence is limited to one athlete and a short prospective phase; the agentic loop matched rather than improved upon a static model in replay.",
+      "evidence_signal": "Across 18 months of one athlete’s data, replay tests favored the twin for heart rate but not segment time, while the live phase sealed 20 predictions and scored 14 in its first three weeks.",
+      "watch_item": "Generalizability remains untested beyond one athlete, and the agentic loop matched rather than outperformed a static model in replay.",
       "hashtags": [
         "#AIScientists",
         "#BayesianExperimentalDesign",
         "#DigitalTwins",
-        "#WearableComputing",
-        "#NOf1Science"
+        "#WearableHealth",
+        "#Nof1Science"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -1078,7 +1078,7 @@
       "paper_title": "The Athlete as a Scientist of One: Agentic Bayesian Experimental Design for Individualized Physiology from Consumer Wearables",
       "paper_date": "2026-10-29",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-10-30T19:04:19",
+      "generated_at": "2026-10-31T18:22:49",
       "generator": "openai"
     }
   }

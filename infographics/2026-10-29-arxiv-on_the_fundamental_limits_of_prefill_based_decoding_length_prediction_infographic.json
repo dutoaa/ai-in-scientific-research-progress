@@ -1,13 +1,13 @@
 {
-  "key_insight": "Inherent decoding randomness limits how accurately LLM output length can be predicted from prefill hidden states, with tested predictors approaching this limit.",
-  "engineering_relevance": "Inference schedulers should account for irreducible length uncertainty rather than expect predictor upgrades alone to eliminate scheduling error.",
+  "key_insight": "Inherent randomness in autoregressive decoding sets a fundamental error floor for length prediction from prefill hidden states, with tested predictors performing close to that limit.",
+  "engineering_relevance": "LLM inference schedulers should account for irreducible length uncertainty rather than expect predictor architecture improvements alone to deliver precise forecasts.",
   "method": [
-    "Model autoregressive decoding as a stopped stochastic process with a gradually increasing stopping probability.",
-    "Derive per-prompt approximate normality, prediction-error bounds, and the affine standard-deviation law σ = αμ + b.",
-    "Compare MLP, EGTP, FiLM, soft-label, and Mixture-of-Experts predictors under fixed evaluation conditions."
+    "Model decoding as a stopped stochastic process with a gradually increasing stopping probability.",
+    "Derive per-prompt approximate normality, an explicit approximation error, and the affine variability law σ = αμ + b.",
+    "Compare MLP, EGTP, FiLM, soft-label, and Mixture-of-Experts predictors under fixed conditions."
   ],
-  "evidence_signal": "The normal approximation reproduces per-prompt MAE and central distribution mass within a few percent, while diverse predictors achieve similar performance near the derived bound.",
-  "watch_item": "Benchmark comparisons must fix the target model, dataset, and sampling parameters; report relative as well as absolute errors to avoid conflating predictor quality with task difficulty.",
+  "evidence_signal": "The abstract reports that the normal approximation reproduces per-prompt MAE and central distribution mass within a few percent, while varied predictors converge to similar near-bound performance under fixed model, data, and sampling conditions.",
+  "watch_item": "The normal approximation retains mild tail deviations; benchmark comparisons should fix model, data, and sampling parameters and report relative alongside absolute errors.",
   "hashtags": [
     "#LLMInference",
     "#LengthPrediction",
@@ -21,6 +21,6 @@
   "paper_title": "On the Fundamental Limits of Prefill-Based Decoding Length Prediction",
   "paper_date": "2026-10-29",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-30T19:04:10",
+  "generated_at": "2026-10-31T18:22:40",
   "generator": "openai"
 }

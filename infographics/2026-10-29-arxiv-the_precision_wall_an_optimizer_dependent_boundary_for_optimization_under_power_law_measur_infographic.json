@@ -1,19 +1,19 @@
 {
-  "key_insight": "Power-law measurement spectra preserve a spurious-minimum-free landscape in low-rank matrix sensing, yet division-normalised optimizers can stall when weak-direction curvature falls below their effective denominator floor.",
-  "engineering_relevance": "Optimizer denominator precision, not just problem conditioning, can limit convergence, with the predicted failure boundary depending on matrix size V and rank D.",
+  "key_insight": "Power-law measurement spectra preserve a benign optimization landscape but can create an optimizer-dependent precision wall when weak-direction curvature falls below the effective denominator floor.",
+  "engineering_relevance": "Optimizer denominator precision can limit recoverability in low-rank matrix sensing even without spurious local minima, making numerical floors a practical design constraint.",
   "method": [
-    "Replace isotropic Gaussian measurement designs with covariance Σ = diag(j^−s).",
-    "Derive leading-order smallest non-gauge expected Hessian curvature scaling as V^−(s+1)D^−s.",
-    "Predict the critical exponent from the optimizer’s effective denominator floor and a calibrated detection lag."
+    "Analyze rank-D Burer–Monteiro matrix sensing with covariance Σ = diag(j^−s).",
+    "Derive leading-order non-gauge curvature scaling as V^−(s+1)D^−s and an optimizer-specific critical exponent.",
+    "Calibrate Adam’s detection lag on four configurations, then freeze it for held-out evaluation."
   ],
-  "evidence_signal": "After calibrating Adam’s detection lag on four configurations and freezing it, the formula predicted onset within 0.45 in exponent s across all 16 held-out V × D grid cells and distinguished fixed-VD pairs.",
-  "watch_item": "The approximation fails at D = 2 and saturates below ε₀ = 10^−8 at a dynamical floor, limiting extrapolation to very low rank or smaller denominator settings.",
+  "evidence_signal": "The calibrated formula predicts Adam’s onset within 0.45 in the critical exponent across all 16 held-out V × D configurations and distinguishes pairs with equal VD.",
+  "watch_item": "The approximation fails at D = 2 and saturates at a dynamical floor below ε₀ = 10^−8, limiting extrapolation to small rank or smaller denominator floors.",
   "hashtags": [
-    "#MatrixSensing",
+    "#LowRankMatrixSensing",
     "#NumericalPrecision",
     "#Optimization",
     "#AdamOptimizer",
-    "#LowRankLearning"
+    "#ScientificMachineLearning"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "The Precision Wall: An Optimizer-Dependent Boundary for Optimization under Power-Law Measurement Spectra",
   "paper_date": "2026-10-29",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-10-30T19:04:13",
+  "generated_at": "2026-10-31T18:22:42",
   "generator": "openai"
 }

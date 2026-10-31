@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-10-30
+Generated: 2026-10-31
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Reinforcement learning for control of partial differential equations
