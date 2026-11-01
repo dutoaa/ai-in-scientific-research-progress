@@ -1,19 +1,19 @@
 {
-  "key_insight": "TextSeal2 strengthens distortion-free LLM watermark detection while preserving output diversity, speculative-decoding acceptance rates, and the target output distribution.",
-  "engineering_relevance": "It supports watermarking in accelerated LLM generation without post-logits optimization or measurable added inference latency in the reported evaluation.",
+  "key_insight": "TextSeal2 strengthens distortion-free LLM watermark detection while preserving output diversity and surviving speculative decoding without changing acceptance rates.",
+  "engineering_relevance": "It supports watermarking in accelerated LLM serving with no measurable inference latency and no post-logits optimization.",
   "method": [
-    "Merge multiple watermark keys into one virtual key rather than selecting a key by coin flip.",
-    "Couple the virtual key to fresh noise through AutoMark’s Gaussian copula.",
-    "Verify speculative drafts with an additional exponential race on leftover draft races, exploiting memorylessness to preserve exact target sampling."
+    "Merge multiple watermark keys into one virtual key instead of selecting a key by coin flip.",
+    "Couple the virtual key to fresh noise using AutoMark’s Gaussian copula.",
+    "Verify speculative drafts with an additional exponential race on leftover draft races, using memorylessness to preserve the target distribution."
   ],
-  "evidence_signal": "Across three LLMs at a false-positive rate of 10^-3, TextSeal2 improves detection over TextSeal by 8–22 percentage points for 100-token answers at equal diversity; under speculative decoding, it beats TextSeal and textGrain by 18 and 22 points, respectively, for 200-token answers at the same acceptance rate.",
-  "watch_item": "The abstract does not establish robustness to paraphrasing or other adversarial edits, so deployment should test these conditions separately.",
+  "evidence_signal": "Across three LLMs, detection improved by 8–22 percentage points over TextSeal for 100-token answers at matched diversity and a 0.001 false-positive rate; under speculative decoding, gains were 18 points over TextSeal and 22 over textGrain for 200-token answers at matched acceptance rates.",
+  "watch_item": "The abstract does not establish robustness to paraphrasing or other watermark-removal attacks.",
   "hashtags": [
     "#LLMWatermarking",
     "#SpeculativeDecoding",
     "#GenerativeAI",
-    "#AIProvenance",
-    "#StatisticalDetection"
+    "#ContentProvenance",
+    "#EfficientInference"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "TextSeal2: Distortion-Free LLM Watermarking with Copula Mixing and Memoryless Races",
   "paper_date": "2026-10-29",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-10-31T18:22:13",
+  "generated_at": "2026-11-01T18:47:46",
   "generator": "openai"
 }
