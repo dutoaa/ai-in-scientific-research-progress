@@ -1,0 +1,26 @@
+{
+  "key_insight": "ACCT lets different-sized LLMs within the same model family reuse context computation by converting a source model’s KV cache into sparse KV states for a target model.",
+  "engineering_relevance": "Heterogeneous LLM deployments could reduce repeated context-processing costs when switching models without requiring the target to prefill the original context.",
+  "method": [
+    "Cartographer selects query-relevant context tokens for each target layer and KV head.",
+    "Allocator distributes a shared KV token budget across target layers and heads.",
+    "Compiler transforms selected source KV entries into target-compatible sparse KV states."
+  ],
+  "evidence_signal": "Across five general-capability benchmarks and six context-dependent tasks, ACCT matched or exceeded target-model performance with 75% smaller KV caches; at approximately 19K context tokens, KV conversion was 6.5–21.2× faster than target context prefill.",
+  "watch_item": "Results cover different-sized models within the same family; compatibility across model families and end-to-end deployment gains remain unestablished by the abstract.",
+  "hashtags": [
+    "#LLMInference",
+    "#KVCache",
+    "#ContextTransfer",
+    "#EfficientAI",
+    "#HeterogeneousComputing"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-10-30-arxiv-acct_asymmetric_cross_llm_context_transfer",
+  "paper_title": "ACCT: Asymmetric Cross-LLM Context Transfer",
+  "paper_date": "2026-10-30",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-11-02T22:39:26",
+  "generator": "openai"
+}
