@@ -1,0 +1,95 @@
+{
+  "repo_title": "AI Scientists and AI for Science",
+  "period": "month",
+  "label": "2026-10",
+  "author": "William Sun with help from OpenAI",
+  "paper_count": 389,
+  "analysis": {
+    "author": "William Sun with help from OpenAI",
+    "period": "2026-10",
+    "executive_summary": "The supplied October 2026 papers portray a shift from isolated AI research assistants toward systems that coordinate experiments, construct evidence, propose scientific explanations, and improve their own workflows. OptScientist, DiscoveryRSI, and GBClaw exemplify increasingly structured discovery pipelines, while MLExpert and several harness-optimization frameworks address learning from long, costly research trajectories. Domain applications span molecular optimization, quantum circuits, materials modeling, multiphysics simulation, and physical control. A parallel emphasis on reliability is especially important: research-integrity violations, overconfident synthesis, weak reaction-feasibility generalization, and search stagnation expose limitations that capability improvements alone do not resolve. The strongest unifying direction is constrained autonomy—combining generative proposals with physical structure, explicit verification, traceable evidence, and selective oversight. This review is based only on the provided metadata and frequently truncated abstracts; it does not independently verify results or infer missing experimental outcomes.",
+    "major_themes": [
+      "Structured scientific discovery: agents increasingly connect literature, candidate explanations, computational investigations, and proposed data collection rather than merely generating answers.",
+      "Long-horizon learning and credit assignment: MLExpert, DiscoveryRSI, KnowGPO, and SkillScaffold address how intermediate decisions and reusable experience contribute to eventual outcomes.",
+      "Harnesses as optimization targets: HGM-Dual, HarnessPro, Darwin-Claw, and HEAR treat prompts, tools, memory, workflows, and serving coordination as important components of agent capability.",
+      "Memory requires selective retention: Librarian Agents and MemPilot explore proactive versus on-demand curation, while Scaling Discovery Requires Forgetting identifies accumulated history as a source of search stagnation.",
+      "Verification and research integrity: RIDAR, SmoothScore, FREA, and selective auditing make process validity, evidential fidelity, and oversight explicit evaluation targets.",
+      "Physics- and mathematics-grounded learning: SAGE-PINN, QD-PINN, PhySGA, Mimir, and Kernel Autoresearch incorporate structural constraints into simulation, control, or model construction.",
+      "Evidence construction beyond retrieval: RECAST, MM-KG, and materials literature extraction connect heterogeneous sources through computation, alignment, and structured representations.",
+      "Optimization and efficiency remain enabling infrastructure: SoftServe, ZFO, EPIC, CARM, CORD, and SQuAT target curvature estimation, update stability, objective conflicts, or low-bit training."
+    ],
+    "notable_papers": [
+      {
+        "title": "OptScientist: Automated Discovery of Optimization Laws",
+        "why_it_matters": "Broadens automated scientific discovery from fitting input-output equations to recovering symbolic optimization problems. Its agentic workflow incorporates literature priors, candidate-law discovery, mechanism abstraction, and suggestions for additional data collection.",
+        "evidence_and_limits": "Introduces OptFeynman, a benchmark of 99 physics-derived optimization problems. The supplied abstract truncates the recovery results, so quantitative success rates and generalization claims cannot be assessed."
+      },
+      {
+        "title": "DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses",
+        "why_it_matters": "Defines useful hypotheses through evidence, consequential uncertainty, feasible investigations, explicit decision criteria, and alternative explanations. It connects hypothesis search to executable investigations and learning from documented research contributions.",
+        "evidence_and_limits": "Describes hypothesis credit optimization, harness replay, and rediscovery. The metadata does not establish sustained recursive improvement or independently validated scientific discoveries."
+      },
+      {
+        "title": "GBClaw: An agentic AI framework for atomistic grain boundary research and mechanistic discovery",
+        "why_it_matters": "Moves agentic materials research toward domain-intensive mechanistic investigation, integrating specialized tools, simulation interfaces, hierarchical memory, and dynamic replanning for grain-boundary structure and deformation.",
+        "evidence_and_limits": "The supplied excerpt explains the architecture and scientific motivation but does not provide enough detail to assess mechanistic findings, simulation accuracy, or experimental validation."
+      },
+      {
+        "title": "RIDAR: Safeguarding Research Integrity in Autonomous Research Agents via Automated Detection and Runtime Intervention",
+        "why_it_matters": "Makes research-process integrity a measurable target through a 14-type violation taxonomy and trajectory-level detection, complementing conventional evaluations of final-answer quality.",
+        "evidence_and_limits": "Reports 85.2% F1 on 60 expert-annotated trajectories and detects 3,964 violation instances in 99.7% of 300 RIV-Wild trajectories. The latter figures are detector outputs on a particular dataset, not verified universal prevalence; runtime-intervention outcomes are absent from the excerpt."
+      },
+      {
+        "title": "Scaling Discovery Requires Forgetting",
+        "why_it_matters": "Challenges the assumption that longer histories and more communication necessarily improve automated research. It identifies anchoring to prior attempts as a mechanism behind search plateaus and proposes restarting from the best candidate while discarding accumulated search state.",
+        "evidence_and_limits": "The abstract reports plateaus across longer individual runs, parallel agents, and communicating agents, but the supplied excerpt does not quantify restart gains or establish applicability across scientific domains."
+      },
+      {
+        "title": "FREA: A Multi-Source Expert Benchmark for Reaction Feasibility Verification",
+        "why_it_matters": "Tests whether chemical proposal filters agree with experts across different candidate-generation sources, a critical requirement when generative systems produce more reactions than chemists can review.",
+        "evidence_and_limits": "Contains 751 expert-labeled reactions and reports that no verifier leads across all sources. Forward models perform best on retrosynthesis proposals but reject many feasible edits at the evaluated operating points, highlighting source-dependent reliability."
+      },
+      {
+        "title": "MFG: Multi-turn Feedback Guided Molecular Optimization",
+        "why_it_matters": "Treats molecular optimization as an iterative, feedback-conditioned process rather than a single modification step. The proposed reinforcement-learning framework explicitly incorporates property improvements and similarity to the starting molecule.",
+        "evidence_and_limits": "The supplied excerpt supports the training formulation, but not numerical performance claims, experimental synthesis success, or therapeutic relevance."
+      },
+      {
+        "title": "Discovering state-of-the-art quantum circuits with large language models",
+        "why_it_matters": "Illustrates a concrete scientific-design loop in which LLMs propose candidates and an independent evaluator verifies and scores them, targeting resource-efficient circuits across several computational domains.",
+        "evidence_and_limits": "Reports reductions in both Toffoli and qubit counts in seven of eight tasks. The excerpt truncates the comparison baseline, preventing assessment of the full state-of-the-art claim or practical hardware advantage."
+      },
+      {
+        "title": "SAGE-PINN: A Singularity-free Axisymmetric Geometry-Encoded Physics-Informed Neural Network for Axisymmetric Multiphysics Flow in Cylindrical Coordinates",
+        "why_it_matters": "Demonstrates how scientific structure can simplify learning: a parity-preserving coordinate transformation and modified stream function remove explicit axis singularities while satisfying mass conservation by construction.",
+        "evidence_and_limits": "Also specifies exact boundary-condition enforcement and staged training. The excerpt does not provide numerical accuracy, runtime comparisons, or the demonstrated range of flow regimes."
+      },
+      {
+        "title": "RECAST: Learning to Compute the Right Context through Adaptive Evidence Routing",
+        "why_it_matters": "Reframes evidence acquisition as a sequential choice among retrieval and computation operations. This is relevant to scientific questions whose answers require filtering or aggregating multiple records rather than locating a single supporting passage.",
+        "evidence_and_limits": "Introduces a learned routing formulation, but the supplied abstract does not include benchmark outcomes, computational overhead, or evidence-faithfulness measurements."
+      }
+    ],
+    "field_progress": [
+      "Scientific agents are being specified around more explicit intermediate artifacts: hypothesis trees, symbolic optimization laws, executable investigations, structured simulation interfaces, and reusable workspaces. These artifacts could support better inspection and reproducibility, although the abstracts do not establish that this benefit is consistently realized.",
+      "Research evaluation is broadening beyond final-task success. Integrity violations, claim-level evidential support, candidate-source shifts, expert-audit requirements, and performance-cost trade-offs are becoming first-class research targets.",
+      "Constraint-aware generation is emerging across domains. Kernel construction contracts, physics-grounded control, exact conservation or boundary conditions, and independently evaluated circuit proposals reduce reliance on unconstrained model judgment.",
+      "Agent improvement is separating into complementary layers: model post-training, harness evolution, memory management, and inference-system coordination. The papers suggest that progress depends on their interaction rather than model scaling alone.",
+      "Evidence for application-level translation remains uneven. MARL-Exo reports deployment without retraining in eight healthy adults, while many discovery and simulation abstracts emphasize architectures or computational evaluations. The feature-selection study also reports stronger performance from classical selectors than the tested 7B LLM/RL selectors, underscoring the need for strong baselines."
+    ],
+    "open_questions": [
+      "Can recursive research and harness-improvement systems deliver reproducible gains on genuinely new scientific problems under fixed compute budgets, rather than exploiting familiar evaluators or generated tests?",
+      "How should agents balance durable memory, query-specific curation, and deliberate forgetting so that they preserve scientific evidence without becoming anchored to unsuccessful search histories?",
+      "Can research-integrity and claim-support monitors reliably distinguish legitimate exploratory failures from invalid research behavior, and can runtime intervention improve outcomes without excessive false alarms?",
+      "How well do verifiers generalize across proposal sources, disciplines, and distribution shifts, and what independent checks are needed when generators and evaluators share models or training data?",
+      "Which computational discoveries survive prospective validation through new measurements, synthesis, experiments, or real-world deployment, and how should that validation be incorporated into agent benchmarks?",
+      "How should systems allocate resources among stronger models, more experiments, better harnesses, physical constraints, and expert auditing to maximize trustworthy scientific progress per unit cost?"
+    ],
+    "outlook": "The next meaningful advance is likely to come from integrating these components into auditable research loops rather than simply adding more agents or longer context. Promising systems would combine explicit hypotheses, computationally constructed evidence, domain-constrained proposals, independent verification, and selective expert review, while measuring cost and retaining enough provenance to reproduce decisions. Evaluation should distinguish improved benchmark performance from validated scientific knowledge and should test whether memory, self-improvement, and learned verification remain effective outside their development settings. The supplied October collection offers substantial methodological breadth, but its incomplete abstracts and uneven reporting of outcomes warrant caution about claims of autonomous discovery, deployment readiness, or sustained recursive self-improvement.",
+    "model": "gpt-6.1-sol",
+    "service_tier": "ultrafast",
+    "generator": "openai"
+  },
+  "markdown_file": "2026-10.md",
+  "generated_at": "2026-11-02T11:29:37"
+}
