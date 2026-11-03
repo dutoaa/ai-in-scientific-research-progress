@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-02
+Generated: 2026-11-03
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Structure-Aware Skill Retrieval and Arbitration for Optimization Modeling
+## 1. Variational Functional Neural Networks (vfNN)
 
-- Date: 2026-10-30
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.41909v1
-- PDF: https://arxiv.org/pdf/2610.41909v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-structure_aware_skill_retrieval_and_arbitration_for_optimization_modeling_infographic.json
-
-## 2. TradeWar: A Benchmark for Execution-Grounded Trade Negotiation with Adaptive LLM Agents
-
-- Date: 2026-10-30
+- Date: 2026-11-02
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.42004v1
-- PDF: https://arxiv.org/pdf/2610.42004v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-tradewar_a_benchmark_for_execution_grounded_trade_negotiation_with_adaptive_llm_agents_infographic.json
+- arXiv: https://arxiv.org/abs/2611.03542v1
+- PDF: https://arxiv.org/pdf/2611.03542v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-variational_functional_neural_networks_vfnn_infographic.json
 
-## 3. Generative Design and Graph Neural Network Screening of Novel Bimetallic Alloy Catalysts for the Hydrogen Evolution Reaction
+## 2. Identifying the Shear Piezoelectric Coefficient using Physics-Informed Neural Networks under Exact Boundary and Initial Constraints
 
-- Date: 2026-10-30
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2610.41932v1
-- PDF: https://arxiv.org/pdf/2610.41932v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-generative_design_and_graph_neural_network_screening_of_novel_bimetallic_alloy_catalysts_f_infographic.json
+- Date: 2026-11-02
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.03485v1
+- PDF: https://arxiv.org/pdf/2611.03485v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-identifying_the_shear_piezoelectric_coefficient_using_physics_informed_neural_networks_und_infographic.json
 
-## 4. Statistical Foundations of Reinforcement Learning: A Non-Asymptotic Perspective
+## 3. Bridging Neural Tangent Kernel Analysis and Reinforcement Learning for Deep Function Approximation
 
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.41903v1
-- PDF: https://arxiv.org/pdf/2610.41903v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-statistical_foundations_of_reinforcement_learning_a_non_asymptotic_perspective_infographic.json
-
-## 5. Trainable Vector Quantization for Large Language Models
-
-- Date: 2026-10-30
+- Date: 2026-11-02
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.41822v1
-- PDF: https://arxiv.org/pdf/2610.41822v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-trainable_vector_quantization_for_large_language_models_infographic.json
+- arXiv: https://arxiv.org/abs/2611.03435v1
+- PDF: https://arxiv.org/pdf/2611.03435v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-bridging_neural_tangent_kernel_analysis_and_reinforcement_learning_for_deep_function_appro_infographic.json
 
-## 6. Quantum 3xplorer: AI-Native Engine for Next-Generation Quantum Materials Modeling
+## 4. Efficient Closure Learning in Dynamical Systems: A Comparison of Data-Assimilated and Embedded Approaches
 
-- Date: 2026-10-30
+- Date: 2026-11-02
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.42108v1
-- PDF: https://arxiv.org/pdf/2610.42108v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-quantum_3xplorer_ai_native_engine_for_next_generation_quantum_materials_modeling_infographic.json
+- arXiv: https://arxiv.org/abs/2611.03612v1
+- PDF: https://arxiv.org/pdf/2611.03612v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-efficient_closure_learning_in_dynamical_systems_a_comparison_of_data_assimilated_and_embed_infographic.json
 
-## 7. Optimizing Stochastic Policy Geometry for Few-Step Flow Reinforcement Learning
+## 5. Can We Stop the Backtest Yet? Anytime-Valid Promotion Tests for Adaptive Financial Research Agents
 
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.41949v1
-- PDF: https://arxiv.org/pdf/2610.41949v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-optimizing_stochastic_policy_geometry_for_few_step_flow_reinforcement_learning_infographic.json
-
-## 8. Automated Keyword Generation Using LLMs in a High-Volume Data Virtualization Service
-
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.41893v1
-- PDF: https://arxiv.org/pdf/2610.41893v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-automated_keyword_generation_using_llms_in_a_high_volume_data_virtualization_service_infographic.json
-
-## 9. AI evaluators favor job applications written by certain AI models, independent of candidate quality
-
-- Date: 2026-10-30
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2610.41866v1
-- PDF: https://arxiv.org/pdf/2610.41866v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-ai_evaluators_favor_job_applications_written_by_certain_ai_models_independent_of_candidate_infographic.json
-
-## 10. Towards Understanding the Impact of Plasticity Loss on Reinforcement Learning in Stochastic Environments
-
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.42100v1
-- PDF: https://arxiv.org/pdf/2610.42100v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-towards_understanding_the_impact_of_plasticity_loss_on_reinforcement_learning_in_stochasti_infographic.json
-
-## 11. RoboArchitect: Automating the Design of Robotic Agents with Persistent Memory
-
-- Date: 2026-10-30
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2610.42141v1
-- PDF: https://arxiv.org/pdf/2610.42141v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-roboarchitect_automating_the_design_of_robotic_agents_with_persistent_memory_infographic.json
-
-## 12. Chronos-2: A foundation model for multivariate time series forecasting
-
-- Date: 2026-10-30
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.41956v1
-- PDF: https://arxiv.org/pdf/2610.41956v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-chronos_2_a_foundation_model_for_multivariate_time_series_forecasting_infographic.json
-
-## 13. Regret-Optimal Wasserstein-Robust Linear Regression
-
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.42109v1
-- PDF: https://arxiv.org/pdf/2610.42109v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-regret_optimal_wasserstein_robust_linear_regression_infographic.json
-
-## 14. Instance-dependent sequential limits as an exact information ledger
-
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.42133v1
-- PDF: https://arxiv.org/pdf/2610.42133v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-instance_dependent_sequential_limits_as_an_exact_information_ledger_infographic.json
-
-## 15. Fast Privacy Loss Accounting for Random Allocation via Multiscale FFT
-
-- Date: 2026-10-30
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2610.42117v1
-- PDF: https://arxiv.org/pdf/2610.42117v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-fast_privacy_loss_accounting_for_random_allocation_via_multiscale_fft_infographic.json
-
-## 16. ACCT: Asymmetric Cross-LLM Context Transfer
-
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.42116v1
-- PDF: https://arxiv.org/pdf/2610.42116v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-acct_asymmetric_cross_llm_context_transfer_infographic.json
-
-## 17. Subquadratic Attention with a Hierarchical Tree-Structured Indexer
-
-- Date: 2026-10-30
+- Date: 2026-11-02
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2610.42112v1
-- PDF: https://arxiv.org/pdf/2610.42112v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-subquadratic_attention_with_a_hierarchical_tree_structured_indexer_infographic.json
+- arXiv: https://arxiv.org/abs/2611.03384v1
+- PDF: https://arxiv.org/pdf/2611.03384v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-can_we_stop_the_backtest_yet_anytime_valid_promotion_tests_for_adaptive_financial_research_infographic.json
 
-## 18. Hyperbolic Inverse Reinforcement Learning
+## 6. Ask, Don't Equip: Question-Driven Coding Agents for Deep Kernel Optimization
 
-- Date: 2026-10-30
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2610.42104v1
-- PDF: https://arxiv.org/pdf/2610.42104v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-hyperbolic_inverse_reinforcement_learning_infographic.json
-
-## 19. Cost-Aware Stopping for Freeze-Thaw Bayesian Optimization: When Does One-Step Lookahead Suffice?
-
-- Date: 2026-10-30
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2610.42085v1
-- PDF: https://arxiv.org/pdf/2610.42085v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-cost_aware_stopping_for_freeze_thaw_bayesian_optimization_when_does_one_step_lookahead_suf_infographic.json
-
-## 20. Same Question, Different Answers: Auditing Persona-Dependent Variation in Six LLMs on Smoking-Cessation Advice
-
-- Date: 2026-10-30
+- Date: 2026-11-02
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2610.42039v1
-- PDF: https://arxiv.org/pdf/2610.42039v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-10-30-arxiv-same_question_different_answers_auditing_persona_dependent_variation_in_six_llms_on_smokin_infographic.json
+- arXiv: https://arxiv.org/abs/2611.03517v1
+- PDF: https://arxiv.org/pdf/2611.03517v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-ask_don_t_equip_question_driven_coding_agents_for_deep_kernel_optimization_infographic.json
+
+## 7. BISECT: Bilevel Spectral Decomposition for Low-Rank Continual Learning
+
+- Date: 2026-11-02
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.03574v1
+- PDF: https://arxiv.org/pdf/2611.03574v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-bisect_bilevel_spectral_decomposition_for_low_rank_continual_learning_infographic.json
+
+## 8. RASP: Read-All, Sparse-Plasticity Continual Learning in a Stationary-Size LoRA
+
+- Date: 2026-11-02
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.03513v1
+- PDF: https://arxiv.org/pdf/2611.03513v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-rasp_read_all_sparse_plasticity_continual_learning_in_a_stationary_size_lora_infographic.json
+
+## 9. A Physics Informed Neural Network Approach to Decipher Environmental Confinement of Molecular Clouds in the Third Galactic Quadrant
+
+- Date: 2026-11-02
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2611.03450v1
+- PDF: https://arxiv.org/pdf/2611.03450v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-a_physics_informed_neural_network_approach_to_decipher_environmental_confinement_of_molecu_infographic.json
+
+## 10. Optimize the Harness, Not the Model: Fitting a Minimal Agent to a Self-Hostable LLM for Investigative Analysis
+
+- Date: 2026-11-02
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.03434v1
+- PDF: https://arxiv.org/pdf/2611.03434v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-optimize_the_harness_not_the_model_fitting_a_minimal_agent_to_a_self_hostable_llm_for_inve_infographic.json
+
+## 11. Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR
+
+- Date: 2026-11-02
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.03627v1
+- PDF: https://arxiv.org/pdf/2611.03627v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-not_all_reasoning_generalizes_a_case_study_on_learning_generalizable_reasoning_strategies_infographic.json
+
+## 12. Playing Dumb: How a Chess Transformer Simulates Users Across Skill Levels
+
+- Date: 2026-11-02
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.03439v1
+- PDF: https://arxiv.org/pdf/2611.03439v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-playing_dumb_how_a_chess_transformer_simulates_users_across_skill_levels_infographic.json
+
+## 13. Certifying Graph Neural Networks Against Label and Structure Poisoning
+
+- Date: 2026-11-02
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.03350v1
+- PDF: https://arxiv.org/pdf/2611.03350v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-certifying_graph_neural_networks_against_label_and_structure_poisoning_infographic.json
+
+## 14. Structured Visual Landscape: Generating Preferred Representations in Biological and Artificial Neural Networks
+
+- Date: 2026-11-02
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.03597v1
+- PDF: https://arxiv.org/pdf/2611.03597v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-structured_visual_landscape_generating_preferred_representations_in_biological_and_artific_infographic.json
+
+## 15. Nonparametric Intensity Estimation for Covariate-Driven Poisson Processes Using Deep Learning
+
+- Date: 2026-11-02
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.03552v1
+- PDF: https://arxiv.org/pdf/2611.03552v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-nonparametric_intensity_estimation_for_covariate_driven_poisson_processes_using_deep_learn_infographic.json
+
+## 16. Fracture-Bench: A Controlled Benchmark Suite for Machine Learning Surrogates in Phase-Field Fracture Mechanics
+
+- Date: 2026-11-02
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.03473v1
+- PDF: https://arxiv.org/pdf/2611.03473v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-fracture_bench_a_controlled_benchmark_suite_for_machine_learning_surrogates_in_phase_field_infographic.json
+
+## 17. Tilted Convexity and an Exact Offline-Online Separation
+
+- Date: 2026-11-02
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.03472v1
+- PDF: https://arxiv.org/pdf/2611.03472v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-tilted_convexity_and_an_exact_offline_online_separation_infographic.json
+
+## 18. IdeaTaste: Do LLMs Share the Research Taste of Human Researchers?
+
+- Date: 2026-11-02
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.03424v1
+- PDF: https://arxiv.org/pdf/2611.03424v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-ideataste_do_llms_share_the_research_taste_of_human_researchers_infographic.json
+
+## 19. Can LLM Agents Improve Imperfect Earth System Model Parameterizations?
+
+- Date: 2026-11-02
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.03543v1
+- PDF: https://arxiv.org/pdf/2611.03543v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-can_llm_agents_improve_imperfect_earth_system_model_parameterizations_infographic.json
+
+## 20. From Natural Language to Exact Cover: A Neuro-Symbolic Approach to Zebra Puzzles
+
+- Date: 2026-11-02
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.03641v1
+- PDF: https://arxiv.org/pdf/2611.03641v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-02-arxiv-from_natural_language_to_exact_cover_a_neuro_symbolic_approach_to_zebra_puzzles_infographic.json
