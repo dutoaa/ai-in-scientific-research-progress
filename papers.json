@@ -1,15 +1,15 @@
 [
   {
-    "id": "2026-11-03-arxiv-agentam_an_ai_agent_for_spatter_and_defect_aware_process_optimization_in_laser_powder_bed",
-    "arxiv_id": "2611.05171v1",
-    "date": "2026-11-03",
-    "title": "AgentAM: An AI Agent for Spatter- and Defect-Aware Process Optimization in Laser Powder Bed Fusion",
-    "authors": "Olabode T. Ajenifujah, Amir Barati Farimani",
-    "abstract": "Predictive models for laser powder bed fusion (LPBF) are rarely used on the shop floor because querying them requires programming and model-specific knowledge. We present AgentAM, a large language model (LLM) agent that gives process engineers natural-language access to CFD-trained surrogates of spatter and melt pool geometry for SS316L through the Model Context Protocol (MCP). Polynomial surrogates trained on 279 single-track simulations predict melt pool dimensions ($R^2 \\geq 0.95$) and spatter volume ($R^2 = 0.83$ on test data) at any power-velocity point in the trained range, and geometric criteria assign each point a geometry-derived defect regime (keyhole, lack of fusion, balling or stable) that matches the regime obtained from the simulated geometry in 93.4% of tracks under cross-validation. The agent selects and parameterizes tools for prediction, process-window scans and constrained optimization. Minimum-spatter optima often sat within 10 $μ$m of the lack-of-fusion boundary; a margin-aware optimizer moved them away from all thresholds and raised the estimated probability of remaining classified Good from 0.94 to 1.00 under an assumed 2% process drift, and from 0.72 to 0.91 when jointly sampled cross-validated geometry residuals were added. About 40-50 well-spread simulations sufficed to reproduce the defect map. To evaluate the agent layer, we introduce a 145-prompt benchmark scored against direct tool calls, plus eight prompts (40 runs) on margin-aware requests. Over the 725 runs of the main benchmark the agent passed the intended inputs in 98.5% of parsing prompts, reported the scored spatter values and defect classes faithfully and met every stated constraint in the 65 feasible optimization runs, within a median 1.0% of the brute-force optimum.",
-    "category": "Scientific Machine Learning",
+    "id": "2026-11-04-arxiv-serverbench_how_can_your_coding_agents_design_specialized_llm_serving_systems",
+    "arxiv_id": "2611.06841v1",
+    "date": "2026-11-04",
+    "title": "ServerBench: How can your coding agents design specialized LLM serving systems?",
+    "authors": "Xinrui Zhong, Zhiming Wang, Yongqi Liu, Zhaohui Wang, Shanglin Yang, Zikun Li",
+    "abstract": "Large language model (LLM) coding agents develop software through experimentation, offering an opportunity to design the serving systems supporting their own operation. Effective serving requires coordinating implementation and operating decisions under session dependencies, latency constraints, and correctness requirements. We introduce ServerBench, a benchmark for agentic design of complete, specialized LLM serving systems. Agents experiment against a common objective, dollars per dollar: latency-qualified token value per dollar of GPU cost. Stateful replay preserves session dependencies, and independent verification checks the submitted system. Across 11 coding-agent models and three deployments, Claude Sonnet 5.5 achieves 2.97 dollars per dollar on Gemma E4B, $4.87\\times$ the vLLM reference; 22 of 33 runs yield verified systems, and 13 exceed the strongest baseline. Our analysis identifies three findings: high-value designs coordinate capacity improvements with load selection; agents interpret performance feedback through workload-relevant experiments; and reliable delivery requires verification of the execution paths introduced by optimization. Overall, ServerBench supports systematic study of how agents translate service objectives and feedback into effective, verified serving systems for given task specifications.",
+    "category": "AI Scientists and Research Agents",
     "source": "arXiv",
-    "published": "2026-11-03T16:38:46Z",
-    "updated": "2026-11-03T16:38:46Z",
+    "published": "2026-11-04T17:59:07Z",
+    "updated": "2026-11-04T17:59:07Z",
     "primary_category": "cs.AI",
     "categories": [
       "cs.AI"
@@ -17,645 +17,215 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05171v1"
+        "url": "https://arxiv.org/abs/2611.06841v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05171v1"
+        "url": "https://arxiv.org/pdf/2611.06841v1"
       }
     ],
-    "score": 92,
+    "score": 83,
     "infographic": {
-      "key_insight": "AgentAM gives engineers natural-language access to LPBF surrogate models, enabling low-spatter process optimization with explicit margins from geometry-derived defect boundaries.",
-      "engineering_relevance": "For SS316L, the system could reduce programming barriers to process-window exploration while helping engineers avoid fragile settings near defect thresholds.",
+      "key_insight": "ServerBench tests whether coding agents can build specialized LLM serving systems that maximize latency-qualified token value per dollar of GPU cost.",
+      "engineering_relevance": "Effective serving designs coordinate capacity improvements with load selection while preserving session dependencies, latency targets, and correctness.",
       "method": [
-        "Connect an LLM agent to CFD-trained polynomial surrogates through the Model Context Protocol.",
-        "Predict melt pool geometry and spatter, then classify geometry-derived defect regimes.",
-        "Scan power–velocity windows and optimize spatter subject to constraints and defect-boundary margins."
+        "Let agents implement and experimentally optimize complete serving systems against a shared dollars-per-dollar objective.",
+        "Use stateful workload replay to preserve session dependencies.",
+        "Independently verify submitted systems and compare them with serving baselines."
       ],
-      "evidence_signal": "Trained on 279 single-track simulations, the surrogates achieved melt pool R² ≥ 0.95 and test spatter R² = 0.83; across 725 agent benchmark runs, all 65 feasible optimization runs met stated constraints, with a median 1.0% gap to the brute-force optimum.",
-      "watch_item": "Results are simulation-based and limited to the trained SS316L range; robustness estimates depend on assumed process drift and sampled model residuals, not shop-floor validation.",
+      "evidence_signal": "Across 11 coding-agent models and three deployments, 22 of 33 runs produced verified systems and 13 beat the strongest baseline; Claude Sonnet 5.5 reached 2.97 dollars per dollar on Gemma E4B, 4.87× the vLLM reference.",
+      "watch_item": "Optimization can introduce execution paths that require explicit verification, and 11 of 33 runs did not yield verified systems.",
       "hashtags": [
-        "#ScientificMachineLearning",
-        "#AdditiveManufacturing",
-        "#LPBF",
-        "#AIAgents",
-        "#ProcessOptimization"
+        "#ServerBench",
+        "#LLMServing",
+        "#CodingAgents",
+        "#SystemsOptimization",
+        "#AIBenchmarking"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-agentam_an_ai_agent_for_spatter_and_defect_aware_process_optimization_in_laser_powder_bed",
-      "paper_title": "AgentAM: An AI Agent for Spatter- and Defect-Aware Process Optimization in Laser Powder Bed Fusion",
-      "paper_date": "2026-11-03",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-04T20:43:50",
+      "paper_id": "2026-11-04-arxiv-serverbench_how_can_your_coding_agents_design_specialized_llm_serving_systems",
+      "paper_title": "ServerBench: How can your coding agents design specialized LLM serving systems?",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-11-05T20:57:44",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-macrocanonical_generator_networks_data_efficient_neural_surrogates_for_amortized_physics_s",
-    "arxiv_id": "2611.05157v1",
-    "date": "2026-11-03",
-    "title": "Macrocanonical Generator Networks: Data-Efficient Neural Surrogates for Amortized Physics Simulation",
-    "authors": "Niall Jeffrey, Benjamin D. Wandelt",
-    "abstract": "Many scientific simulations are computationally expensive, limiting their use in simulation-based inference, uncertainty quantification, and decision making. We introduce macrocanonical generator networks, a framework for learning fast, data-efficient neural surrogates for amortized simulation of stationary physical processes by matching multiscale statistics of a target process. Inspired by microcanonical maximum-entropy synthesis, which matches feature statistics per sample by inner-loop optimization, our approach instead trains a neural generator to satisfy the same constraints in expectation, preserving physically realistic sample-to-sample fluctuations. We prove that gradient-descent training induces preconditioned gradient-descent dynamics in sample space that inherit the symmetry-preservation properties of the microcanonical gradient descent of Bruna and Mallat, amortizing its per-sample inner-loop optimization into a single training run after which every sample is generated in one forward pass. We further show that residual generator parameterizations initialized near the identity, trained with a small learning rate, preserve entropy locally during early optimization and mitigate mode collapse. Experiments on cosmology and fluid simulations show that macrocanonical generators recover realistic samples from extremely small training sets, in some cases a single training example, while generating new realizations more than $10^6$ times faster per sample than the reference simulator and more than $10^3$ times faster than microcanonical gradient descent. The trained generators can be reused for downstream pretraining, including simulation-based inference, providing a data-efficient route to multi-fidelity scientific machine learning workflows.",
+    "id": "2026-11-04-arxiv-energy_guided_transport_for_projection_free_physics_informed_flow_matching",
+    "arxiv_id": "2611.06711v1",
+    "date": "2026-11-04",
+    "title": "Energy-Guided Transport for Projection-Free Physics-Informed Flow Matching",
+    "authors": "Giuliano Galadini, Aurelio Uncini, Danilo Comminiello",
+    "abstract": "Deep generative models, particularly Flow Matching frameworks, have emerged as powerful tools for synthesizing complex physical systems. However, standard architectures remain purely statistically driven and agnostic to the underlying governing equations, often violating fundamental physical constraints during inference. Existing zero-shot approaches designed to enforce these constraints typically rely on rigid algebraic projections. While effective for sparse boundary conditions, applying such discrete geometric corrections to dense, full-domain PDEs may disrupt the probability path, \\rev{potentially deviating from the learned manifold and introducing substantial computational overhead}. To address these challenges, we introduce Energy-Guided Transport, a novel training-free framework that formulates non-linear physical constraints as a smooth potential energy landscape. Rather than interrupting the ODE integration, our method applies a continuous dissipative force directly to the intermediate generative states, steering them toward the physical manifold. By evaluating this force implicitly via reverse-mode automatic differentiation, our framework preserves the natural dynamics of the flow while maintaining an efficient $\\mathcal{O}(N)$ algorithmic complexity. We extensively evaluate our framework across various 1D and 2D physical systems, including the chaotic Navier-Stokes equations. Our method achieves stable generation without structural divergence, significantly improves the stability-accuracy trade-off compared to state-of-the-art methods, and substantially accelerates inference with respect to exact projection strategies. Code available at: https://github.com/ispamm/Projection-free-energy-guided-flow-matching.",
     "category": "Scientific Machine Learning",
     "source": "arXiv",
-    "published": "2026-11-03T16:30:49Z",
-    "updated": "2026-11-03T16:30:49Z",
+    "published": "2026-11-04T16:09:05Z",
+    "updated": "2026-11-04T16:09:05Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG",
-      "astro-ph.CO",
-      "stat.ML"
+      "physics.comp-ph"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05157v1"
+        "url": "https://arxiv.org/abs/2611.06711v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05157v1"
+        "url": "https://arxiv.org/pdf/2611.06711v1"
       }
     ],
-    "score": 88,
+    "score": 78,
     "infographic": {
-      "key_insight": "Macrocanonical generator networks learn fast physics surrogates by matching multiscale statistics in expectation, allowing realistic variation across generated samples.",
-      "engineering_relevance": "Once trained, these generators replace costly per-sample simulation or optimization with a single forward pass for uncertainty quantification and simulation-based inference workflows.",
+      "key_insight": "Energy-Guided Transport steers flow-matching samples toward physical constraints using continuous energy-based forces instead of discrete projections.",
+      "engineering_relevance": "The training-free approach can improve physical consistency and inference efficiency when generating PDE-governed systems without retraining the generative model.",
       "method": [
-        "Train a neural generator to match target multiscale statistics in expectation rather than for each sample.",
-        "Amortize symmetry-preserving sample-space optimization into one generator training run.",
-        "Use near-identity residual generators and small learning rates to locally preserve entropy early in training and mitigate mode collapse."
+        "Express nonlinear physical constraints as a smooth potential energy.",
+        "Apply a continuous dissipative force to intermediate states during ODE integration.",
+        "Compute the force implicitly with reverse-mode automatic differentiation, with claimed O(N) algorithmic complexity."
       ],
-      "evidence_signal": "Cosmology and fluid experiments report realistic samples from very small training sets, sometimes one example, with per-sample generation over 10^6 times faster than reference simulators and over 10^3 times faster than microcanonical gradient descent.",
-      "watch_item": "Matching selected statistics does not by itself establish accuracy for every downstream observable; validate task-specific behavior before replacing a simulator.",
+      "evidence_signal": "Across 1D and 2D physical systems, including chaotic Navier–Stokes equations, the abstract reports stable generation, improved stability–accuracy trade-offs, and faster inference than exact projection strategies.",
+      "watch_item": "Continuous energy guidance does not by itself guarantee exact constraint satisfaction; residual violations and sensitivity to guidance strength should be checked.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#PhysicsSimulation",
-        "#GenerativeModels",
-        "#SimulationBasedInference",
-        "#DataEfficientAI"
+        "#FlowMatching",
+        "#PhysicsInformedAI",
+        "#GenerativeModeling",
+        "#ComputationalPhysics"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-macrocanonical_generator_networks_data_efficient_neural_surrogates_for_amortized_physics_s",
-      "paper_title": "Macrocanonical Generator Networks: Data-Efficient Neural Surrogates for Amortized Physics Simulation",
-      "paper_date": "2026-11-03",
+      "paper_id": "2026-11-04-arxiv-energy_guided_transport_for_projection_free_physics_informed_flow_matching",
+      "paper_title": "Energy-Guided Transport for Projection-Free Physics-Informed Flow Matching",
+      "paper_date": "2026-11-04",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-04T20:43:52",
+      "generated_at": "2026-11-05T20:57:46",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-multi_objective_generative_optimization_via_expected_hypervolume_fine_tuning",
-    "arxiv_id": "2611.05207v1",
-    "date": "2026-11-03",
-    "title": "Multi-Objective Generative Optimization via Expected Hypervolume Fine-Tuning",
-    "authors": "Juan Guevara, Riccardo De Santi, Andreas Krause, Raul Astudillo",
-    "abstract": "Scientific discovery requires plausible designs spanning useful trade-offs among competing properties: a molecule with strong binding affinity, for example, may be difficult to synthesize. Pretrained generative models, e.g., flow and diffusion generators, provide a foundation for proposing such designs, but steering them toward high-quality, complementary trade-offs remains challenging. Inference-time search incurs high per-sample costs, while fine-tuning typically relies on fixed per-candidate rewards that do not capture how designs complement one another. We introduce Hypervolume Fine-Tuning (HVFT), which adapts a single pretrained generator to maximize the expected hypervolume of its samples while controlling departure from the pretrained distribution. Expected hypervolume jointly rewards candidate quality and collective trade-off coverage. Nonetheless, we show that it cannot be expressed as the expectation of a fixed per-candidate reward and therefore cannot be optimized directly with standard techniques. A key observation of this work is that its first variation corresponds to the expected marginal hypervolume contribution of a candidate, which yields a tractable adaptive reward via an unbiased estimator based on model samples. HVFT uses this reward to decompose the objective into a sequence of KL-proximal scalar-reward subproblems. We establish concavity, relative smoothness, and convergence guarantees for the resulting distributional procedure. Across therapeutic-peptide and molecular design tasks spanning discrete diffusion and continuous flow-matching models, HVFT achieves state-of-the-art expected hypervolume and trade-off coverage.",
-    "category": "Scientific Discovery",
+    "id": "2026-11-04-arxiv-pinr_esi_physics_informed_self_supervised_implicit_neural_representation_framework_for_eeg",
+    "arxiv_id": "2611.06700v1",
+    "date": "2026-11-04",
+    "title": "PINR-ESI: Physics-Informed Self-Supervised Implicit Neural Representation Framework for EEG Extended-Source Imaging",
+    "authors": "Zhiyong Zhou, Sheng Liao, Youshen Xiao, Xiaolin Li, Yakang Dai",
+    "abstract": "EEG extended-source imaging aims to localize active cortical regions and characterize their spatial extent, yet supervised inverse networks typically depend on synthetic EEG-source pairs and may be sensitive to synthetic-to-real mismatch. We propose a physics-informed self-supervised implicit neural representation (INR) framework for spatial source reconstruction without paired source labels or simulation-based supervised pretraining. The lead field matrix encodes the source-to-sensor volume-conduction model and constrains the INR through agreement between predicted and measured EEG. Cortical current density is modeled as a continuous coordinate-conditioned field. A classical inverse estimate provides warm initialization and spatial constraints on source activity, while patch-integrated projection maps the field to discrete source coefficients for forward modeling. Simulations with varying noise levels, source counts, and source extents showed the clearest advantage in identifying active cortical regions, particularly for multiple and larger sources. Quantitative and qualitative evaluations using real EEG recordings from epilepsy patients and intracranial stimulation experiments further supported the feasibility of the framework for source imaging. These findings suggest the potential of physics-informed self-supervised INR for extended-source imaging.",
+    "category": "Scientific Machine Learning",
     "source": "arXiv",
-    "published": "2026-11-03T16:55:58Z",
-    "updated": "2026-11-03T16:55:58Z",
+    "published": "2026-11-04T16:02:28Z",
+    "updated": "2026-11-04T16:02:28Z",
     "primary_category": "cs.LG",
     "categories": [
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05207v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05207v1"
-      }
-    ],
-    "score": 86,
-    "infographic": {
-      "key_insight": "Hypervolume Fine-Tuning (HVFT) steers a pretrained generator toward sets of designs that jointly improve quality and cover complementary trade-offs among competing objectives.",
-      "engineering_relevance": "HVFT offers a way to adapt generative design pipelines for multi-objective discovery without relying on fixed per-candidate rewards or costly inference-time search.",
-      "method": [
-        "Maximize expected sample-set hypervolume while controlling departure from the pretrained distribution.",
-        "Estimate adaptive rewards from each candidate’s expected marginal hypervolume contribution using model samples.",
-        "Optimize successive KL-proximal scalar-reward subproblems, with distributional convergence guarantees."
-      ],
-      "evidence_signal": "The abstract reports state-of-the-art expected hypervolume and trade-off coverage on therapeutic-peptide and molecular design tasks using discrete diffusion and continuous flow-matching models.",
-      "watch_item": "Practical training cost and stability require scrutiny because adaptive rewards depend on model sampling and marginal hypervolume estimation.",
-      "hashtags": [
-        "#MultiObjectiveOptimization",
-        "#GenerativeAI",
-        "#ScientificDiscovery",
-        "#MolecularDesign",
-        "#HypervolumeFineTuning"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-multi_objective_generative_optimization_via_expected_hypervolume_fine_tuning",
-      "paper_title": "Multi-Objective Generative Optimization via Expected Hypervolume Fine-Tuning",
-      "paper_date": "2026-11-03",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-11-04T20:43:55",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-catalyzing_interactive_html_generation_capabilities_via_high_fidelity_reinforcement_learni",
-    "arxiv_id": "2611.05151v1",
-    "date": "2026-11-03",
-    "title": "Catalyzing Interactive HTML Generation Capabilities via High-Fidelity Reinforcement Learning",
-    "authors": "Xujia Wang, Yixuan Liu, Shaohan Huang, Furu Wei, Lei Hou, Bin Xu",
-    "abstract": "Generating HTML from natural-language specifications is an important application of code large language models (LLMs). Despite producing renderable pages, current models often fail to ensure functionality and visual quality during actual interaction. Existing methods typically target task-specific webpage supervision, leaving demanding interactive artifact optimization underexplored. Using mini-games as a challenging testbed, we expose limitations in interaction experience, reward signal, and credit assignment fidelity that are obscured by shallow webpage interactions. We introduce WebCatalyst, a browser-interaction reinforcement learning framework with three complementary components: a game-level GUI assessor for sustained interaction and evaluation, Visual Anchor for mitigating VLM reward hacking, and Action-Trace Credit for grounding token-level credit assignment in runtime execution traces. Trained on fewer than 1K requests, predominantly for games, WebCatalyst raises the Cookie-Bench Mini Games score from 68.8 to 75.3 and also the WebGen-Bench accuracy from 48.8 to 56.9 on Qwen3.6-35B-A3B, outperforming Claude Opus 4.7 in average rank across evaluated metrics. Further analysis shows that Visual Anchor prevents aesthetic degradation, while runtime-grounded credit assignment accelerates functional improvement. Together, our results show that improving feedback fidelity is the key to substantially advancing interactive HTML generation.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-11-03T16:27:07Z",
-    "updated": "2026-11-03T16:27:07Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05151v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05151v1"
-      }
-    ],
-    "score": 84,
-    "infographic": {
-      "key_insight": "WebCatalyst improves interactive HTML generation by making reinforcement-learning feedback more faithful to sustained browser interaction, visual quality, and runtime behavior.",
-      "engineering_relevance": "The framework offers a way to optimize generated web artifacts for actual usability and appearance rather than renderability alone.",
-      "method": [
-        "Use a game-level GUI assessor for sustained browser interaction and evaluation.",
-        "Apply Visual Anchor to mitigate vision-language-model reward hacking and aesthetic degradation.",
-        "Use Action-Trace Credit to ground token-level credit assignment in runtime execution traces."
-      ],
-      "evidence_signal": "Training Qwen3.6-35B-A3B on fewer than 1,000 mostly game requests raised Cookie-Bench Mini Games scores from 68.8 to 75.3 and WebGen-Bench accuracy from 48.8 to 56.9.",
-      "watch_item": "The game-heavy training and evaluation focus leaves generalization to broader, production-grade web interactions uncertain.",
-      "hashtags": [
-        "#HTMLGeneration",
-        "#ReinforcementLearning",
-        "#CodeLLMs",
-        "#BrowserInteraction",
-        "#RewardDesign"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-catalyzing_interactive_html_generation_capabilities_via_high_fidelity_reinforcement_learni",
-      "paper_title": "Catalyzing Interactive HTML Generation Capabilities via High-Fidelity Reinforcement Learning",
-      "paper_date": "2026-11-03",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-04T20:43:58",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-adversarial_speculative_reasoning_improves_long_horizon_agents",
-    "arxiv_id": "2611.05345v1",
-    "date": "2026-11-03",
-    "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
-    "authors": "Hongyin Luo, Wei Fang, Lijie Yang, Owen Stepan, Daniel Suit, Jeff Krapf",
-    "abstract": "Speculative decoding has been treated purely as a systems optimization that speeds up large language model decoding without changing the model behavior. Under this view, the growing effort to train better draft models has been focused solely on acceptance rate. We argue that this view does not hold true for long-horizon agent reasoning. Measuring frontier open-weight models on complex agentic tasks with different speculative decoding approaches, we found that numerical noise grows within verification windows, and the draft acceptance results of the thinking process can change the output distribution of the model after 30 steps, thus noticeably influencing the reasoning accuracy of long-horizon agents in random directions. In this work, we improve the reasoning capability of target models by controlling such noise. While we cannot change the overall token distribution verified by the target model, we can encode critical reasoning with highest precision by training the draft model to be rejected. We identify these points in agent traces and train the draft model to favor adversarial preference. At inference the trained draft and the target part ways precisely at these decision points, verification restarts, so that critical thinking tokens are sampled from the target model and encoded under its least noisy conditions. This approach makes critical reasoning better indexed and more durable over a long horizon. On complex agentic coding benchmarks, our approach raises end-to-end success rate with no change to the target model or its output distribution. Our results recast the speculative decoding mechanism from a pure accelerator into an active allocator for context precision that improves the accuracy of long-horizon agents by training 0.06% to 0.28% of hosted parameters.",
-    "category": "AI Scientists and Research Agents",
-    "source": "arXiv",
-    "published": "2026-11-03T18:45:23Z",
-    "updated": "2026-11-03T18:45:23Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05345v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05345v1"
-      }
-    ],
-    "score": 78,
-    "infographic": {
-      "key_insight": "Training a speculative draft model to trigger rejection at critical reasoning points can improve long-horizon agent accuracy by restarting target-model verification under lower-noise conditions.",
-      "engineering_relevance": "Speculative decoding may serve as a precision-allocation mechanism for coding agents, not just a speed optimization, without modifying the target model.",
-      "method": [
-        "Identify critical decision points in agent reasoning traces.",
-        "Train the draft model to favor alternatives that the target model rejects at those points.",
-        "Restart verification so critical tokens receive lower-noise target-model processing."
-      ],
-      "evidence_signal": "The abstract reports higher end-to-end success on complex agentic coding benchmarks using frontier open-weight models while training 0.06%–0.28% of hosted parameters, but provides no numerical success gains.",
-      "watch_item": "Deliberately increasing rejection could reduce decoding efficiency; the abstract does not quantify the latency trade-off.",
-      "hashtags": [
-        "#SpeculativeDecoding",
-        "#LongHorizonAgents",
-        "#AgenticCoding",
-        "#LLMInference",
-        "#AIReasoning"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-adversarial_speculative_reasoning_improves_long_horizon_agents",
-      "paper_title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
-      "paper_date": "2026-11-03",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-04T20:44:00",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-jhima_webrl_a_joint_hierarchical_multi_agent_reinforcement_learning_framework_for_long_hor",
-    "arxiv_id": "2611.05263v1",
-    "date": "2026-11-03",
-    "title": "JHiMA-WebRL: A Joint Hierarchical Multi-Agent Reinforcement Learning Framework for Long-Horizon Web Tasks",
-    "authors": "Shanka Subhra Mondal, Jiayun Wang",
-    "abstract": "Multimodal web agents have shown promising capabilities for interacting with websites through graphical user interfaces (GUIs), yet realistic web tasks often require long-horizon, multi-step planning that remains challenging for monolithic policies. Such agents must jointly infer high-level plans, navigate through intermediate states, track progress over extended interaction histories, and execute visually grounded actions. Although prior work has explored modular multi-agent systems with a separate planner, the planner is typically not updated jointly with the actor. We investigate whether explicitly separating and jointly training planning and execution provides a stronger inductive bias for long-horizon web navigation. We introduce JHiMA-WebRL, a joint hierarchical multi-agent reinforcement learning framework for web agents that couples a task decomposer with an actor. To train the decomposer, we use a strong teacher model to construct structured subtask supervision from multimodal GUI trajectories, and use these annotations to fine-tune both the decomposer and the subtask-conditioned actor. We then extend Group Relative Policy Optimization (GRPO) to jointly optimize the decomposer and actor in the interactive WebArena environment through hierarchical rollout grouping and role-specific advantages. On WebArena-Lite-v2, JHiMA-WebRL-14B, consisting of a 7B actor and a 7B decomposer, achieves an average success rate of 37.2%, compared with 24% for a ScaleCUA-32B agent that we fine-tune with RL on the same training tasks and evaluate under the same protocol. Ablations show that jointly updating the decomposer during RL outperforms updating the actor alone. These results suggest that jointly learned role factorization with smaller models can be a competitive alternative to scaling monolithic agents for long-horizon web tasks.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-11-03T17:49:14Z",
-    "updated": "2026-11-03T17:49:14Z",
-    "primary_category": "cs.AI",
-    "categories": [
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05263v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05263v1"
-      }
-    ],
-    "score": 78,
-    "infographic": {
-      "key_insight": "Jointly training separate planning and execution agents improves long-horizon web task success over a larger monolithic agent in the reported evaluation.",
-      "engineering_relevance": "Role-specialized smaller models offer a promising alternative to scaling a single model for complex GUI automation.",
-      "method": [
-        "Separate task decomposition from subtask-conditioned action execution.",
-        "Fine-tune both agents using teacher-generated subtask annotations from multimodal GUI trajectories.",
-        "Jointly optimize both agents with hierarchical rollout grouping and role-specific GRPO advantages."
-      ],
-      "evidence_signal": "On WebArena-Lite-v2, the 7B decomposer plus 7B actor achieved 37.2% average success versus 24% for an RL-fine-tuned ScaleCUA-32B under the same protocol; ablations favored joint updates over actor-only updates.",
-      "watch_item": "Generalization beyond WebArena-Lite-v2 and the inference cost of coordinating two agents remain unestablished in the abstract.",
-      "hashtags": [
-        "#WebAgents",
-        "#HierarchicalRL",
-        "#MultiAgentSystems",
-        "#GUIAutomation",
-        "#ReinforcementLearning"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-jhima_webrl_a_joint_hierarchical_multi_agent_reinforcement_learning_framework_for_long_hor",
-      "paper_title": "JHiMA-WebRL: A Joint Hierarchical Multi-Agent Reinforcement Learning Framework for Long-Horizon Web Tasks",
-      "paper_date": "2026-11-03",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-04T20:44:02",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-learning_curves_in_natural_and_artificial_systems",
-    "arxiv_id": "2611.05224v1",
-    "date": "2026-11-03",
-    "title": "Learning curves in natural and artificial systems",
-    "authors": "Dmitry A. Novikov",
-    "abstract": "A general mathematical model of experience formation is considered, in which the learning level is defined as the probability that the next value of the uncertainty factor has already been mastered and not forgotten. Within this model the shape of the learning curve is derived, and it turns out to be determined primarily by the distribution of situation occurrence: a uniform distribution yields an exponential curve, whereas a power-law distribution yields a power-law curve whose exponent equals the ratio of the distribution exponent to that same exponent increased by one. Both mechanisms generating power-law curves, established earlier in the analysis of debugging, assembly and repair activities, are shown to have been independently rediscovered in deep learning theory as the \"frequency\" and \"spectral\" mechanisms of scaling laws for artificial neural networks, while the exponential curves of machine learning (contraction operators, strongly convex optimization, stationary reinforcement) are generated by the same constancy of the contraction coefficient that was revealed half a century earlier in models of radioactive decay, the first-order lag element, and others. A solution is given for the problem of choosing a training distribution that differs from the deployment distribution. A methodological consequence is discussed: three distinct mechanisms generate curves indistinguishable in shape, so an observed learning curve does not allow one to judge the \"internal\" structure of the learning system.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-11-03T17:10:57Z",
-    "updated": "2026-11-03T17:10:57Z",
-    "primary_category": "eess.SY",
-    "categories": [
-      "eess.SY",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05224v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05224v1"
-      }
-    ],
-    "score": 78,
-    "infographic": {
-      "key_insight": "Learning-curve shape depends primarily on how situations occur: uniform occurrence yields exponential learning, while power-law occurrence yields power-law learning.",
-      "engineering_relevance": "The framework connects learning laws across natural and artificial systems and addresses choosing a training distribution that differs from deployment.",
-      "method": [
-        "Define learning level as the probability that the next situation has been mastered and not forgotten.",
-        "Derive learning curves from situation-occurrence distributions.",
-        "Relate power-law and exponential mechanisms to neural scaling laws and constant-contraction processes."
-      ],
-      "evidence_signal": "The abstract reports mathematical derivations and cross-domain theoretical connections, but no empirical datasets, benchmarks, or quantitative validation.",
-      "watch_item": "Different mechanisms can produce indistinguishable learning curves, so curve shape alone cannot identify a system’s internal learning structure.",
-      "hashtags": [
-        "#LearningCurves",
-        "#ScalingLaws",
-        "#LearningTheory",
-        "#TrainingDistribution",
-        "#ComputationalScience"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-learning_curves_in_natural_and_artificial_systems",
-      "paper_title": "Learning curves in natural and artificial systems",
-      "paper_date": "2026-11-03",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-11-04T20:44:05",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-a_bayesian_optimized_biquad_filter_burg_model_for_real_time_eeg_phase_estimation",
-    "arxiv_id": "2611.05374v1",
-    "date": "2026-11-03",
-    "title": "A Bayesian Optimized Biquad Filter-Burg Model for Real-Time EEG Phase Estimation",
-    "authors": "Ivan Martinez-Kay, Tatiana Kardashina, ShiNung Ching, Eric C. Leuthardt, Benjamin T. Acland",
-    "abstract": "Real-time phase estimation on stimulus-aligned transient EEG is critical for closed-loop neuromodulation systems targeting the theta-band, yet most real-time phase estimation methods have been developed and validated on resting-state, high-fidelity signals in the alpha band. Recent work has pursued deep learning architectures, while individualized classical bandpass filter tuning remains underexplored. This study characterizes the spectral and temporal properties of non-anticipative bandpass filtering and demonstrates the performance gains achieved through individualized tuning. We present a Bayesian-Optimized Biquad Filter-Burg (BOB) model evaluated on EEG recorded during peripheral vibrotactile stimulation of the left median nerve (theta, N=20 healthy subjects) and on resting-state recordings from the Max Planck Institute's LEMON dataset (alpha, N=20 healthy subjects). BOB was benchmarked against the Deep Dual-Branch Complex Neural Network (DBCNN), EEG Phase Prediction Network (EPN), Phastimate, and Phase Estimation with Autoregressive Padding (PEAP) under matched testing conditions: channel selection, individualized optimization, evaluation time points, and an offline reference phase obtained through zero-phase filtering and the Hilbert transform. Under these testing conditions, BOB achieved matched or better performance than these models at a fraction of the calibration time.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-11-03T18:59:45Z",
-    "updated": "2026-11-03T18:59:45Z",
-    "primary_category": "q-bio.QM",
-    "categories": [
-      "q-bio.QM",
-      "eess.SP",
+      "cs.LG",
       "q-bio.NC"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05374v1"
+        "url": "https://arxiv.org/abs/2611.06700v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05374v1"
+        "url": "https://arxiv.org/pdf/2611.06700v1"
       }
     ],
-    "score": 77,
+    "score": 73,
     "infographic": {
-      "key_insight": "Individualized Bayesian tuning of a classical Biquad Filter-Burg model matched or outperformed neural and classical EEG phase estimators with substantially less calibration time.",
-      "engineering_relevance": "BOB offers a calibration-efficient approach to real-time EEG phase estimation for closed-loop neuromodulation, including stimulus-aligned theta activity.",
+      "key_insight": "PINR-ESI reconstructs extended cortical activity from EEG using a physics-informed implicit neural representation without paired source labels or simulation-based supervised pretraining.",
+      "engineering_relevance": "Embedding the EEG forward model into reconstruction reduces reliance on synthetic training pairs while representing cortical current density as a continuous spatial field.",
       "method": [
-        "Characterize spectral and temporal properties of non-anticipative bandpass filtering.",
-        "Use Bayesian optimization to individualize the Biquad Filter-Burg phase estimator.",
-        "Benchmark against DBCNN, EPN, Phastimate, and PEAP under matched testing conditions."
+        "Model cortical current density with a coordinate-conditioned neural field.",
+        "Use a classical inverse estimate for warm initialization and spatial constraints.",
+        "Project patch-integrated source coefficients through the lead field and enforce agreement with measured EEG."
       ],
-      "evidence_signal": "Evaluation used stimulation-evoked theta EEG from 20 healthy subjects and resting-state alpha EEG from 20 LEMON participants, with matched channel selection, individualized optimization, evaluation times, and an offline zero-phase-filter/Hilbert reference.",
-      "watch_item": "Results in healthy-subject recordings do not establish performance in clinical populations or deployed closed-loop systems.",
-      "hashtags": [
-        "#EEG",
-        "#PhaseEstimation",
-        "#BayesianOptimization",
-        "#SignalProcessing",
-        "#ClosedLoopNeuromodulation"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-a_bayesian_optimized_biquad_filter_burg_model_for_real_time_eeg_phase_estimation",
-      "paper_title": "A Bayesian Optimized Biquad Filter-Burg Model for Real-Time EEG Phase Estimation",
-      "paper_date": "2026-11-03",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-11-04T20:44:07",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-aligning_language_models_with_general_preferences_an_empirical_study_of_direct_nash_optimi",
-    "arxiv_id": "2611.05373v1",
-    "date": "2026-11-03",
-    "title": "Aligning Language Models with General Preferences: An Empirical Study of Direct Nash Optimization",
-    "authors": "Austin Tsai, Saurav Nanda, Ganapathy Parthasarathy, Bhuvnesh Kumar, Parivesh Choudhary",
-    "abstract": "Direct Nash Optimization (DNO) aligns a language model to a general preference function by approximating the Nash equilibrium of a two-player preference game. Its practical variant, DNO-Prct, iterates on-policy sampling, LLM-based rating of the samples together with a teacher's gold response, large-margin preference-pair selection and a DPO-style contrastive update. We re-implement DNO-Prct independently and study it on two open-weight instruct models, Llama 3.1 8B Instruct and Mistral 7B Instruct v0.1, with GPT-4o or a larger open-weight model of the same family as the annotator. On AlpacaEval 2.0 with GPT-4o as judge, three iterations raise the length-controlled (LC) win rate against GPT-4o from 31.7% to 45.3% for Llama and from 6.8% to 18.4% for Mistral, and the tuned 8B model scores above Llama 3.1 70B Instruct on every reported win rate. With same-family open-weight annotators, the runs retain 62% (Llama) and 82% (Mistral) of the LC gain achieved with GPT-4o as annotator, so the rating step does not require a proprietary model. In a separate ablation configuration, variants that remove the gold responses, remove the data look-back, or accept only teacher-preferred pairs score 6 to 10 LC points below the full procedure, whereas varying the number of on-policy samples per prompt (1 to 7) moves the LC win rate by at most 2.1 points, and a margin sweep (1 to 5) run in its own pipeline by at most 2.4 points. We also report the cost of the pipeline and where the practical algorithm departs from the theory it approximates. All results are single runs, and GPT-4o is both the teacher and the evaluation judge; we discuss what this implies for the reported gains.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-11-03T18:59:15Z",
-    "updated": "2026-11-03T18:59:15Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CL"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05373v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05373v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "Three iterations of practical Direct Nash Optimization improved length-controlled win rates against GPT-4o from 31.7% to 45.3% for Llama 3.1 8B and from 6.8% to 18.4% for Mistral 7B.",
-      "engineering_relevance": "Same-family open-weight annotators retained 62% of Llama’s and 82% of Mistral’s gains achieved with GPT-4o annotation, offering a nonproprietary option for the rating step.",
-      "method": [
-        "Sample responses on-policy and rate them alongside a teacher’s gold response.",
-        "Select large-margin preference pairs and apply a DPO-style contrastive update.",
-        "Repeat training to approximate a two-player preference-game Nash equilibrium."
-      ],
-      "evidence_signal": "On AlpacaEval 2.0 with GPT-4o judging, the tuned Llama 3.1 8B exceeded Llama 3.1 70B Instruct on every reported win-rate metric.",
-      "watch_item": "All results are single runs, and using GPT-4o as both teacher and evaluation judge may favor alignment to that model’s preferences.",
-      "hashtags": [
-        "#DirectNashOptimization",
-        "#LLMAlignment",
-        "#PreferenceLearning",
-        "#OpenWeightModels",
-        "#AlpacaEval"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-aligning_language_models_with_general_preferences_an_empirical_study_of_direct_nash_optimi",
-      "paper_title": "Aligning Language Models with General Preferences: An Empirical Study of Direct Nash Optimization",
-      "paper_date": "2026-11-03",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-11-04T20:44:09",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-de_rham_cohomological_architectures_for_pinns_and_pdes_with_topological_holes",
-    "arxiv_id": "2611.05276v1",
-    "date": "2026-11-03",
-    "title": "De Rham cohomological architectures for PINNs and PDEs with topological holes",
-    "authors": "Andrew Gracyk",
-    "abstract": "We attempt to alleviate failure modes of classical physics-informed neural networks (PINNs) in scenarios of topological pathologies corresponding to punctures, holes, poles, and voids by introducing de Rham cohomological augmentations, or Hodge-de Rham PINNs. Vanilla PINNs often encounter pitfalls in hole-based settings due to discontinuous interfaces, nonzero closed path integration, path dependence, correspondence to exact forms via the exterior derivative, etc., therefore we absolve traditional failures via parameterizing a 1-form by the Hodge-Morrey-Friedrichs (HMF) decomposition for manifolds with boundary, drawing a connection to de Rham cohomology such as through the HMF isomorphism theorem. 1-forms can act as representations of scalar-valued PDE solutions through integral operator mappings. We propose performing a PINN-based loss on the parameterized 1-form through an associated PDE, which subsequently solves the potential-based PINN problem and moreover remedies the failures of vanilla PINNs via the Sobolev-regular operator under a Fréchet differentiation interconnection. The operator relationship often has a nontrivial closed-form and often requires integration or a case-by-case analysis, which we address thoroughly in our experiments. When an integrability condition is not met on our losses, we can equip exhaustion functions to train the networks. We demonstrate our methods on the Aharonov-Bohm effect, which, to our understanding, is largely nonexistent in PINN literature. We develop theoretical guarantees of our methods and demonstrate our pathological safeguards on a broad selection of topologically-adverse problems, including scenarios of inexact forms, and those of nontrivial harmonics and coexact terms.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-11-03T17:57:15Z",
-    "updated": "2026-11-03T17:57:15Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "math.NA"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05276v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05276v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "Hodge–de Rham PINNs augment neural PDE solvers with topology-aware 1-forms to address failures caused by holes, punctures, and nontrivial circulation.",
-      "engineering_relevance": "The approach could improve physics-informed modeling on multiply connected domains where a globally defined scalar potential cannot capture essential solution structure.",
-      "method": [
-        "Parameterize a 1-form using the Hodge–Morrey–Friedrichs decomposition for manifolds with boundary.",
-        "Train with an associated PDE loss and connect the learned form to scalar solutions through integral operators.",
-        "Use exhaustion functions when the loss integrability condition is not satisfied."
-      ],
-      "evidence_signal": "The abstract reports theoretical guarantees and experiments on topologically adverse problems, including the Aharonov–Bohm effect, but provides no quantitative performance metrics.",
-      "watch_item": "The operator linking 1-forms to scalar solutions may require integration or problem-specific derivation, complicating implementation.",
+      "evidence_signal": "Simulations varying noise, source count, and extent showed the clearest gains in active-region identification, especially for multiple and larger sources; patient EEG and intracranial stimulation evaluations further supported feasibility.",
+      "watch_item": "Dependence on the lead field and classical inverse initialization warrants testing sensitivity to forward-model errors and initialization bias.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#PhysicsInformedNeuralNetworks",
-        "#DeRhamCohomology",
-        "#PDESolvers",
-        "#Topology"
+        "#PhysicsInformedAI",
+        "#ImplicitNeuralRepresentations",
+        "#EEGSourceImaging",
+        "#SelfSupervisedLearning"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-de_rham_cohomological_architectures_for_pinns_and_pdes_with_topological_holes",
-      "paper_title": "De Rham cohomological architectures for PINNs and PDEs with topological holes",
-      "paper_date": "2026-11-03",
+      "paper_id": "2026-11-04-arxiv-pinr_esi_physics_informed_self_supervised_implicit_neural_representation_framework_for_eeg",
+      "paper_title": "PINR-ESI: Physics-Informed Self-Supervised Implicit Neural Representation Framework for EEG Extended-Source Imaging",
+      "paper_date": "2026-11-04",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-04T20:44:11",
+      "generated_at": "2026-11-05T20:57:50",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-igc_antibody_optimization_via_reinforcement_learning_over_a_learned_somatic_hypermutation",
-    "arxiv_id": "2611.05270v1",
-    "date": "2026-11-03",
-    "title": "iGC: Antibody Optimization via Reinforcement Learning over a Learned Somatic Hypermutation Prior",
-    "authors": "Thao Nguyen, Robert G. Alberstein, Ewa Nowara, Homa MohammadiPeyhani, Holly R. Steach, Sarah A. Robinson",
-    "abstract": "Antibody affinity maturation is a natural optimization process in which B cells acquire mutations through somatic hypermutation (SHM), undergo selection for improved antigen binding, and iteratively evolve toward higher affinity. Computationally modeling this process requires capturing both biologically plausible mutations and antigen-specific selection. However, existing mutation models do not directly optimize binding, while affinity optimization often neglects realistic mutation trajectories. We introduce iGC (in silico Germinal Centers), a two-stage reinforcement learning (RL) framework for antigen-specific antibody optimization. Stage 1 learns an SHM mutation prior from parent-child pairs in B-cell lineage trees and adapts it to a target affinity-maturation dataset. Stage 2 initializes an RL policy from this prior and optimizes antigen binding with Kullback-Leibler (KL) regularization toward the frozen prior. To prevent reward exploitation, including repetitive high-reward substitutions and structurally tolerated framework mutations, we introduce a Reward-Tax Meta-Gradient objective. RewardNet smooths the affinity landscape, while TaxNet penalizes reward overexploitation, jointly defining a learned meta-reward for policy optimization. We evaluate iGC on mutation prediction, SHM consistency, affinity optimization, and mutation diversity. The mutation prior more than doubles the strongest baseline in mutation-site prediction. Following RL optimization, iGC maintains SHM sequence structure. It also achieves a strong exploration-exploitation balance, yielding competitive reward-diversity products across candidate-selection cutoffs. These results demonstrate that iGC integrates biologically plausible mutation generation with antigen-specific affinity selection, providing an in silico framework for iterative antibody affinity maturation.",
-    "category": "Modeling and Simulation",
+    "id": "2026-11-04-arxiv-a_framework_for_context_enrichment_and_selective_robustness_in_llm_social_agents",
+    "arxiv_id": "2611.06914v1",
+    "date": "2026-11-04",
+    "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
+    "authors": "Mattia Greiche, Reihaneh Rabbany, Maximilian Puelma Touzel",
+    "abstract": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt variations, creating a validation problem for social simulation. One plausible hypothesis is that this brittleness reflects a lack of grounding and can be reduced by enriching the context provided to the agents. Whether richer context improves robustness remains unclear, in part because context richness and robustness are rarely defined in ways that support controlled comparisons. We address the first need with controlled context enrichment, a set of prompt substitution rules that systematically enriches distinct types of context: neutral padding, generic social background, descriptive decision grounding, and normative decision grounding. We address the second by introducing selective robustness as a validation criterion: insensitivity to meaning-preserving prompt variation combined with a directional response to decision-relevant changes in the social world. We demonstrate the framework in a Prisoner's Dilemma-like game, showing how it can be used to identify which forms of context enrichment produce more desirable and robust agent behavior. We find that these forms of enrichment produce distinct behavioral patterns that vary between the two models tested.",
+    "category": "Scientific Discovery",
     "source": "arXiv",
-    "published": "2026-11-03T17:55:25Z",
-    "updated": "2026-11-03T17:55:25Z",
-    "primary_category": "cs.LG",
+    "published": "2026-11-04T18:58:23Z",
+    "updated": "2026-11-04T18:58:23Z",
+    "primary_category": "cs.MA",
     "categories": [
-      "cs.LG",
-      "q-bio.BM"
+      "cs.MA",
+      "cs.CL",
+      "cs.LG"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05270v1"
+        "url": "https://arxiv.org/abs/2611.06914v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05270v1"
+        "url": "https://arxiv.org/pdf/2611.06914v1"
       }
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "iGC combines a learned somatic hypermutation prior with reinforcement learning to optimize antibody binding while preserving biologically plausible mutation patterns.",
-      "engineering_relevance": "The framework offers a strategy for antibody candidate generation that balances predicted binding improvement, mutation realism, and sequence diversity.",
+      "key_insight": "Richer context does not produce uniform behavioral effects in LLM social agents; effects depend on the type of enrichment and the model.",
+      "engineering_relevance": "Validate social-simulation agents for both stability under meaning-preserving prompt changes and appropriate responses to decision-relevant changes.",
       "method": [
-        "Learn a mutation prior from parent–child B-cell lineage pairs, then adapt it to a target affinity-maturation dataset.",
-        "Initialize an RL policy from the prior and optimize antigen binding with KL regularization toward the frozen prior.",
-        "Use RewardNet and TaxNet in a meta-gradient objective to smooth affinity rewards and penalize reward exploitation."
+        "Apply controlled prompt substitutions for neutral padding, generic social background, descriptive decision grounding, and normative decision grounding.",
+        "Define selective robustness as invariance to meaning-preserving variations paired with directional sensitivity to relevant social changes.",
+        "Compare agent behavior in a Prisoner’s Dilemma-like game."
       ],
-      "evidence_signal": "The abstract reports more than twice the strongest baseline's mutation-site prediction performance, retained SHM sequence structure after RL, and competitive reward–diversity products across candidate-selection cutoffs.",
-      "watch_item": "The abstract does not report experimental binding validation, so predicted affinity gains require laboratory confirmation.",
+      "evidence_signal": "Evaluation across two models found distinct, model-dependent behavioral patterns across the context-enrichment types.",
+      "watch_item": "Evidence from two models and one game setting does not establish that context enrichment reliably improves robustness across social simulations.",
       "hashtags": [
-        "#AntibodyEngineering",
-        "#ReinforcementLearning",
-        "#SomaticHypermutation",
-        "#ProteinDesign",
-        "#ComputationalBiology"
+        "#LLMAgents",
+        "#SocialSimulation",
+        "#SelectiveRobustness",
+        "#PromptSensitivity",
+        "#AIValidation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-igc_antibody_optimization_via_reinforcement_learning_over_a_learned_somatic_hypermutation",
-      "paper_title": "iGC: Antibody Optimization via Reinforcement Learning over a Learned Somatic Hypermutation Prior",
-      "paper_date": "2026-11-03",
-      "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-11-04T20:44:14",
+      "paper_id": "2026-11-04-arxiv-a_framework_for_context_enrichment_and_selective_robustness_in_llm_social_agents",
+      "paper_title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
+      "paper_date": "2026-11-04",
+      "paper_category": "Scientific Discovery",
+      "generated_at": "2026-11-05T20:57:52",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-operaitor_an_agentic_framework_for_fault_tolerant_operation_of_chemical_processes",
-    "arxiv_id": "2611.05179v1",
-    "date": "2026-11-03",
-    "title": "OperAItor: An Agentic Framework for Fault-Tolerant Operation of Chemical Processes",
-    "authors": "Javal Vyas, Mehmet Mercang{ö}z",
-    "abstract": "OperAItor, an open-source framework for developing and evaluating large language model agents for supervisory fault management in chemical processes. The framework is demonstrated on a dynamic reactor-distillation process representing isopropanol dehydrogenation, with physically based thermodynamics and modified reaction kinetics to permit liquid-phase operation. The process is represented by a 113-variable differential-algebraic model and operates at a nominal feed rate of 100kmol/h, producing approximately 4t/h of acetone. The simulated plant includes 8 PI control loops, 22 process alarms, 5 duty-standby pump trains, and 11 independent safety instrumented functions. The agent architecture integrates multivariate statistical process monitoring, fault diagnosis, knowledge-graph retrieval, action planning, and supervisory action generation. Five action-validation configurations are investigated, comprising operation without validation, an LLM-based judge, digital-twin simulation, and deterministic admissibility checks with and without consequence projection. The framework is evaluated using four LLMs across 20 scenarios involving single and multiple simultaneous faults. Without agent intervention, 18 scenarios result in plant stops, corresponding to an economic loss of $399,000 relative to fault-free operation under the assumed benchmark economics. For GPT-5 nano, Qwen3 8B, and Mistral 7B, validated agent configurations reduce the number of stops to 5-8 and recover $265,000 of the loss. The study provides a reproducible benchmark for comparing agent architectures, language models, and action-validation methods for supervisory fault management in chemical processes.",
-    "category": "Literature and Knowledge Mining",
+    "id": "2026-11-04-arxiv-beaker_an_expert_curated_benchmark_for_embodied_brains_in_self_driving_chemical_laboratori",
+    "arxiv_id": "2611.06911v1",
+    "date": "2026-11-04",
+    "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
+    "authors": "Fei Lin, Tengchao Zhang, Ziyang Gong, Xiaotong Yu, Bohan Zhang, Yifan Zhou",
+    "abstract": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Language Models (MLLMs) are increasingly considered as embodied brains for such systems, existing laboratory benchmarks mainly focus on safety, anomaly detection, or general scientific understanding, leaving their execution-oriented embodied capabilities underexplored. To fill this gap, we introduce BEAKER, a Benchmark for evaluating Embodied Actionability, Knowledge, Experimentation, and Reasoning in SDCLs. BEAKER contains 1,000 expert-curated question-answer samples across 11 image and video task types, covering key judgments required for chemical laboratory execution, including affordance grounding, trajectory planning, equipment, state, and safety recognition, apparatus setup, operation and step reasoning, and temporal procedure reasoning. All questions and annotations are manually created and reviewed by chemistry and embodied Artificial Intelligence (AI) experts, without AI-assisted generation or annotation. We evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs in an offline, single-turn setting. Results show that current models can follow coarse experimental procedures in videos, but still struggle to ground actions into operable regions and feasible trajectories, to recognize fine-grained laboratory apparatus, states, and safety norms, and to order steps in mid-length procedures. BEAKER thus reveals a clear gap between coarse procedural understanding and the precise, action-grounded perception required for laboratory execution, providing a diagnostic benchmark for future MLLMs in SDCLs.",
+    "category": "Autonomous Labs",
     "source": "arXiv",
-    "published": "2026-11-03T16:40:46Z",
-    "updated": "2026-11-03T16:40:46Z",
-    "primary_category": "eess.SY",
-    "categories": [
-      "eess.SY",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05179v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05179v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "OperAItor combines LLM agents with process monitoring and action validation to reduce simulated chemical-plant shutdowns during faults.",
-      "engineering_relevance": "The open-source framework offers a reproducible benchmark for supervisory fault management above conventional process controls and safety systems.",
-      "method": [
-        "Integrate statistical monitoring, fault diagnosis, knowledge-graph retrieval, and action planning.",
-        "Compare five action-validation configurations, including no validation, an LLM judge, digital-twin simulation, and deterministic checks.",
-        "Test four LLMs on a 113-variable reactor–distillation model across 20 fault scenarios."
-      ],
-      "evidence_signal": "Without intervention, 18 of 20 scenarios stopped the simulated plant; validated configurations using GPT-5 nano, Qwen3 8B, and Mistral 7B reduced stops to 5–8 and recovered $265,000 under benchmark economics.",
-      "watch_item": "Results are simulation-based; deployment requires validation against real plant dynamics, safety constraints, and operating economics.",
-      "hashtags": [
-        "#AgenticAI",
-        "#ProcessControl",
-        "#FaultManagement",
-        "#ChemicalEngineering",
-        "#DigitalTwins"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-operaitor_an_agentic_framework_for_fault_tolerant_operation_of_chemical_processes",
-      "paper_title": "OperAItor: An Agentic Framework for Fault-Tolerant Operation of Chemical Processes",
-      "paper_date": "2026-11-03",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-04T20:44:19",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-meta_2_precomputing_reusable_knowledge_for_online_harness_evolution_in_long_horizon_agents",
-    "arxiv_id": "2611.05139v1",
-    "date": "2026-11-03",
-    "title": "Meta$^2$: Precomputing Reusable Knowledge for Online Harness Evolution in Long-Horizon Agents",
-    "authors": "Lingzhi Yuan, Yiguang Cai, Weize Liu, Siqi Yang, Feijiang Han, Yongkyun Lee",
-    "abstract": "Harness optimization improves long-horizon agents by refining the prompts, tools, memory, and hooks around a frozen model. Offline methods can learn from completed trajectories, but deploy one shared harness that may overfit training tasks and cannot react to evidence revealed during a new run. Online evolution can adapt before, during, or after one run through an evolver, but may have to reason about every intervention from scratch or rely on verifier feedback that is usually unavailable at test time. We introduce Meta$^2$, which moves offline optimization one level up: rather than optimizing a shared harness, it learns reusable knowledge for harness evolution and applies it within each task online. Offline, Meta$^2$ learns a textual Meta-Skill $M$ by contrasting training rollouts of the same task agent under three configurations: without an evolver, with an evolver guided by the current version of $M$, and with an evolver given privileged verifier information available only in training. Contrasts in trajectories and outcomes are aggregated across tasks to refine $M$ into reusable guidance on when and how to evolve, when to leave the harness unchanged, and which interventions to avoid. Online, an evolver combines the frozen $M$ with emerging trajectory evidence to decide whether to KEEP the harness unchanged or EVOLVE it through a task-local edit. Each edit applies to the rest of the same run without resetting its environment or progress. Thus, evolution guidance transfers across tasks while harness edits remain task-local, and held-out verifier feedback is never available to the evolver. On two long-horizon benchmarks, Terminal-Bench 2.1 and DeepSWE 1.1, Meta$^2$ achieves the highest performance among evaluated methods with GPT-5.6-Terra, reaching 81.00% and 44.44%, respectively. Ablations support the value of contrastive evolution guidance and keeping online harness edits task-local.",
-    "category": "Literature and Knowledge Mining",
-    "source": "arXiv",
-    "published": "2026-11-03T16:19:21Z",
-    "updated": "2026-11-03T16:19:21Z",
+    "published": "2026-11-04T18:57:17Z",
+    "updated": "2026-11-04T18:57:17Z",
     "primary_category": "cs.AI",
     "categories": [
       "cs.AI"
@@ -663,162 +233,52 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05139v1"
+        "url": "https://arxiv.org/abs/2611.06911v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05139v1"
-      }
-    ],
-    "score": 72,
-    "infographic": {
-      "key_insight": "Meta² learns reusable guidance offline so an online evolver can adapt a frozen-model agent’s harness to each task without test-time verifier feedback.",
-      "engineering_relevance": "Long-horizon agents can adjust prompts, tools, memory, and hooks during execution while preserving environment state and task progress.",
-      "method": [
-        "Contrast training rollouts with no evolver, a Meta-Skill-guided evolver, and an evolver given training-only privileged verifier information.",
-        "Aggregate trajectory and outcome differences into a textual Meta-Skill describing when to intervene, when to keep the harness unchanged, and which edits to avoid.",
-        "Freeze the Meta-Skill online; use emerging evidence to choose KEEP or EVOLVE, with edits confined to the current run."
-      ],
-      "evidence_signal": "With GPT-5.6-Terra, Meta² achieved the highest performance among evaluated methods on Terminal-Bench 2.1 (81.00%) and DeepSWE 1.1 (44.44%); ablations supported contrastive guidance and task-local edits.",
-      "watch_item": "Results cover two benchmarks with one reported model, leaving broader transfer and online intervention overhead uncertain.",
-      "hashtags": [
-        "#AIAgents",
-        "#HarnessOptimization",
-        "#LongHorizonReasoning",
-        "#MetaLearning",
-        "#AdaptiveSystems"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-meta_2_precomputing_reusable_knowledge_for_online_harness_evolution_in_long_horizon_agents",
-      "paper_title": "Meta$^2$: Precomputing Reusable Knowledge for Online Harness Evolution in Long-Horizon Agents",
-      "paper_date": "2026-11-03",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-04T20:44:22",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-agnostic_learning_by_imitating",
-    "arxiv_id": "2611.05346v1",
-    "date": "2026-11-03",
-    "title": "Agnostic Learning by Imitating",
-    "authors": "Sílvia Casacuberta, Parikshit Gopalan, Varun Kanade, Omer Reingold, Konstantinos Stavropoulos, Pranay Tankala",
-    "abstract": "Given a class of machine learning models and sample access to a data distribution with binary labels, which computational task is harder: training a discriminative model that distinguishes positive and negative labels as well as the best member of the class, or training a generative model whose outputs are indistinguishable from real data by all members of the class? We prove that these two fundamental tasks in computational learning theory are not just closely related, but actually equivalent to each other in complexity. One direction of this equivalence was previously known. Indeed, the powerful regularity lemma in complexity theory gives an efficient oracle reduction from the indistinguishability task (a.k.a. multiaccuracy) to the distinguishing task (a.k.a. agnostic learning) in the style of boosting algorithms. Our main contribution is an efficient oracle reduction in the other direction. Taking this idea further, we show that a multiaccuracy oracle is a remarkably powerful primitive, achieving not just agnostic learning but also a wide range of seemingly more demanding learning objectives via similarly efficient and direct constructions. Our results crucially use the power of making adaptive queries to the oracle, and stand in stark contrast to prior work, which showed that post-processing a single multiaccurate predictor is insufficient for even weak forms of learning. On a technical level, we draw a connection between our (offline) problem and a version of no-regret learning in the online setting, which allows us to use follow-the-leader type algorithms to modify the label distribution and aggregate the predictions of the multiaccuracy oracle.",
-    "category": "AI scientific research",
-    "source": "arXiv",
-    "published": "2026-11-03T18:45:38Z",
-    "updated": "2026-11-03T18:45:38Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.CC",
-      "cs.DS"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05346v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05346v1"
+        "url": "https://arxiv.org/pdf/2611.06911v1"
       }
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "Agnostic learning and generating outputs indistinguishable from real data by a model class are computationally equivalent via efficient oracle reductions.",
-      "engineering_relevance": "The result identifies multiaccuracy as a reusable theoretical primitive for agnostic learning and broader learning objectives.",
+      "key_insight": "BEAKER reveals a gap between MLLMs’ coarse understanding of laboratory procedures and the precise, action-grounded perception needed to execute them.",
+      "engineering_relevance": "Autonomous chemistry systems need targeted validation of operable regions, feasible trajectories, apparatus states, and safety constraints before relying on MLLMs for execution.",
       "method": [
-        "Prove the previously missing reduction from agnostic learning to a multiaccuracy oracle.",
-        "Make adaptive oracle queries while modifying the label distribution and aggregating predictions.",
-        "Use a connection to online no-regret learning and follow-the-leader algorithms."
+        "Benchmark embodied laboratory capabilities across 11 image and video task types.",
+        "Use questions and annotations manually created and reviewed by chemistry and embodied AI experts, without AI assistance.",
+        "Evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs."
       ],
-      "evidence_signal": "The abstract reports theoretical proofs of efficient reductions, not empirical datasets or benchmark results.",
-      "watch_item": "The constructions require adaptive oracle access; post-processing a single multiaccurate predictor is insufficient even for weak forms of learning.",
+      "evidence_signal": "Across 1,000 expert-curated question-answer samples, offline single-turn evaluation finds stronger coarse video-procedure understanding but persistent difficulties with action grounding, fine-grained recognition, and mid-length step ordering.",
+      "watch_item": "Offline, single-turn benchmark performance does not establish safe or reliable closed-loop execution in physical laboratories.",
       "hashtags": [
-        "#LearningTheory",
-        "#AgnosticLearning",
-        "#Multiaccuracy",
-        "#OracleReductions",
-        "#NoRegretLearning"
+        "#AutonomousLabs",
+        "#EmbodiedAI",
+        "#MultimodalAI",
+        "#ChemicalAutomation",
+        "#AIBenchmarks"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-agnostic_learning_by_imitating",
-      "paper_title": "Agnostic Learning by Imitating",
-      "paper_date": "2026-11-03",
-      "paper_category": "AI scientific research",
-      "generated_at": "2026-11-04T20:44:24",
+      "paper_id": "2026-11-04-arxiv-beaker_an_expert_curated_benchmark_for_embodied_brains_in_self_driving_chemical_laboratori",
+      "paper_title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
+      "paper_date": "2026-11-04",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-11-05T20:57:55",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-molecular_prior_networks",
-    "arxiv_id": "2611.05103v1",
-    "date": "2026-11-03",
-    "title": "Molecular Prior Networks",
-    "authors": "Pawel Gomoluch, Anthony Bradley",
-    "abstract": "Predicting affinity between small molecules and their protein targets remains one of the central problems in drug discovery. Due to the substantial cost of wet-lab experiments, machine learning models of drug-target affinity are usually trained on relatively small datasets, ranging from tens to hundreds of molecules. Given the inherent difficulty of generalization between different targets and chemical series, existing datasets of protein-ligand affinities are typically not used for new projects. At the same time, tabular foundation models, including Prior-data Fitted Networks, have recently shown how transformers can be used to solve machine learning problems in a single forward pass of the network, after being trained over a large corpus of, typically, synthetic datasets. Inspired by that line of work, we propose a novel affinity modelling approach, in which the labels of the query molecules are predicted from the labelled support molecules in a single forward pass of a transformer model. The model is trained on thousands of existing affinity datasets, enabling it to capture the general patterns of molecular activity across different targets, chemical series and dataset sizes. For the smallest support sets, our model matches the state of the art on the regression variant of the FS-Mol benchmark, while being faster than existing methods, thanks to the lack of task-specific training. A comparison against a reduced variant of our architecture, which amounts to kernel regression in a meta-learned feature space, shows that the predictive performance of the transformer model is only partially explained by simple molecular similarity.",
-    "category": "Scientific Discovery",
-    "source": "arXiv",
-    "published": "2026-11-03T15:56:48Z",
-    "updated": "2026-11-03T15:56:48Z",
-    "primary_category": "cs.LG",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "cs.CE"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05103v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05103v1"
-      }
-    ],
-    "score": 70,
-    "infographic": {
-      "key_insight": "Molecular Prior Networks predict drug–target affinity from labelled support molecules in a single transformer forward pass, without task-specific training.",
-      "engineering_relevance": "The approach can accelerate low-data affinity modelling for drug discovery by reusing patterns learned across existing affinity datasets.",
-      "method": [
-        "Train a transformer on thousands of existing molecular affinity datasets.",
-        "Condition query predictions on labelled support molecules.",
-        "Compare against kernel regression in a meta-learned feature space to probe the role of molecular similarity."
-      ],
-      "evidence_signal": "On the regression variant of FS-Mol, the model matches state-of-the-art performance for the smallest support sets while running faster than existing methods.",
-      "watch_item": "The reported state-of-the-art match is limited to the smallest support sets; broader performance across dataset sizes and novel targets requires verification.",
-      "hashtags": [
-        "#MolecularPriorNetworks",
-        "#DrugDiscovery",
-        "#FewShotLearning",
-        "#Transformers",
-        "#AffinityPrediction"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-molecular_prior_networks",
-      "paper_title": "Molecular Prior Networks",
-      "paper_date": "2026-11-03",
-      "paper_category": "Scientific Discovery",
-      "generated_at": "2026-11-04T20:44:26",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-beyond_foundation_models_pfn_priors_improve_tabular_hyperparameter_optimization",
-    "arxiv_id": "2611.05141v1",
-    "date": "2026-11-03",
-    "title": "Beyond Foundation Models: PFN Priors Improve Tabular Hyperparameter Optimization",
-    "authors": "Artem Chistyakov, Renat Sergazinov, Artem Babenko",
-    "abstract": "Synthetic priors have so far served one purpose: pretraining tabular foundation models. We ask whether the same priors can improve conventional tabular models, which are trained from scratch on each dataset. We propose PriorTune, a method that meta-tunes hyperparameter configurations on synthetic tasks alone. Offline, for a given model, we fit a pool of configurations on datasets sampled from a published PFN prior and greedily select the subset with the highest winrate over the random baseline. Online, a new dataset fits only the selected configurations, so the gain comes at no extra cost. Empirically, we observe that scaling both the number of configurations and synthetic datasets has an equal scaling effect on the performance of the final subset of configurations, which we also explain theoretically. On the full BeyondArena benchmark, LightGBM with TabPrep features with our configurations ranks above TabPFN-3 and RealMLP, while being much more efficient at inference. Overall, our results establish existing PFN priors as a scalable source of meta-training data for hyperparameter selection for non-foundational tabular models.",
+    "id": "2026-11-04-arxiv-securegard_dynamic_ontology_guided_governance_for_secure_tool_using_llm_agents",
+    "arxiv_id": "2611.06682v1",
+    "date": "2026-11-04",
+    "title": "SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents",
+    "authors": "Guoqin Xiong, Shengtao Wen, Xiang Chen, Xinyi Zeng, Zhaoxin Fan, Wei Ye",
+    "abstract": "Tool-using large language model (LLM) agents translate model outputs into consequential actions, turning indirect prompt injection into an execution-security problem. Existing defenses constrain tool calls, trajectories, or information flows, but often leave action semantics, state dependencies, and evidence relations implicit, limiting generalization across heterogeneous tools and complicating safe updates. We present \\ours{}, a dynamic ontology-guided governance framework. \\ours{} grounds heterogeneous calls in a shared semantic representation and combines an executable ontology with episode-level task state to derive deterministic ready, waiting, and forbidden decisions. A waiting decision identifies an unmet but recoverable obligation, enabling bounded replanning without expanding the agent's authorization boundary. \\ours{} evolves its ontology offline from verified training executions. An offline LLM proposes instance-independent action--state axioms, which are accepted only if they address ontology errors exposed by training failures, preserve logical consistency and protected entailments, and pass held-out validation before the ontology is frozen. We evaluate \\ours{} on AgentDojo, ASB, and AgentDyn under benign and indirect prompt-injection settings. \\ours{} achieves a 0\\% attack success rate (ASR) across all three benchmarks while improving task utility under attack compared with existing baselines. These results show that explicit semantic governance can strengthen execution security without indiscriminate blocking.",
     "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-11-03T16:20:15Z",
-    "updated": "2026-11-03T16:20:15Z",
+    "published": "2026-11-04T15:51:30Z",
+    "updated": "2026-11-04T15:51:30Z",
     "primary_category": "cs.LG",
     "categories": [
       "cs.LG"
@@ -826,214 +286,161 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05141v1"
+        "url": "https://arxiv.org/abs/2611.06682v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05141v1"
+        "url": "https://arxiv.org/pdf/2611.06682v1"
       }
     ],
-    "score": 69,
+    "score": 70,
     "infographic": {
-      "key_insight": "PriorTune uses synthetic PFN-prior tasks to select hyperparameter configurations that improve conventional tabular models without increasing online search cost.",
-      "engineering_relevance": "Teams can move hyperparameter selection offline, then evaluate a preselected configuration set on new datasets for efficient tabular modeling.",
+      "key_insight": "SecureGARD governs tool-using LLM agents with explicit action semantics and task state, blocking unsafe execution while allowing bounded replanning for unmet obligations.",
+      "engineering_relevance": "A shared semantic layer can enforce authorization across heterogeneous tools without indiscriminately blocking legitimate tasks.",
       "method": [
-        "Train a pool of model configurations on synthetic datasets sampled from a published PFN prior.",
-        "Greedily select configurations to maximize win rate against a random baseline.",
-        "On each new dataset, fit only the selected configurations."
+        "Map tool calls into a shared semantic representation governed by an executable ontology.",
+        "Combine ontology rules with episode-level task state to classify actions as ready, waiting, or forbidden.",
+        "Refine ontology axioms offline using verified training executions, consistency checks, protected entailments, and held-out validation, then freeze the ontology."
       ],
-      "evidence_signal": "On the full BeyondArena benchmark, LightGBM with TabPrep features and PriorTune configurations ranks above TabPFN-3 and RealMLP while offering much more efficient inference.",
-      "watch_item": "Offline meta-tuning requires substantial configuration evaluations, and transfer to new domains may depend on how well the synthetic prior represents them.",
+      "evidence_signal": "The abstract reports 0% attack success rate on AgentDojo, ASB, and AgentDyn, with improved task utility under attack compared with existing baselines.",
+      "watch_item": "Deployment depends on accurate tool semantics and state tracking; the reported benchmark results do not establish robustness to unseen tools or attacks.",
       "hashtags": [
-        "#PriorTune",
-        "#HyperparameterOptimization",
-        "#TabularLearning",
-        "#SyntheticData",
-        "#EfficientAI"
+        "#LLMSecurity",
+        "#ToolUsingAgents",
+        "#PromptInjection",
+        "#OntologyEngineering",
+        "#AgentGovernance"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-beyond_foundation_models_pfn_priors_improve_tabular_hyperparameter_optimization",
-      "paper_title": "Beyond Foundation Models: PFN Priors Improve Tabular Hyperparameter Optimization",
-      "paper_date": "2026-11-03",
+      "paper_id": "2026-11-04-arxiv-securegard_dynamic_ontology_guided_governance_for_secure_tool_using_llm_agents",
+      "paper_title": "SecureGARD: Dynamic Ontology-Guided Governance for Secure Tool-Using LLM Agents",
+      "paper_date": "2026-11-04",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-04T20:44:27",
+      "generated_at": "2026-11-05T20:57:57",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-towards_an_optimal_control_foundation_of_early_exits_turnpikes_and_resnets",
-    "arxiv_id": "2611.05120v1",
-    "date": "2026-11-03",
-    "title": "Towards an Optimal Control Foundation of Early Exits - Turnpikes and ResNets",
-    "authors": "Jens Püttschneider, Simon Heilig, Asja Fischer, Timm Faulwasser",
-    "abstract": "The feed-forward propagation through neural networks is crucial for training and inference. To trade off efficiency and accuracy, it has been proposed to consider intermediate outputs of hidden states as data-dependent regularization during training and, ultimately, as early-exits during inference. In this work, we analyze the joint optimization of loss functions computed for the output layer and intermediate layers using optimal control theory. We prove that ResNets trained in this joint fashion exhibit the so-called turnpike phenomenon, this implies that the number of layers required to reach a prescribed loss level is bounded from above independently of the overall network depth. This induces a similarity property across the internal representations of early-exiting networks of varying depths. We connect the turnpike to the overthinking phenomenon, and provide theoretical insights into the success of early-exit criteria derived from softmax probabilities, specifically entropy and max-probability. In a range of experiments, we demonstrate the existence and effect of turnpikes and the resulting similarity in the early-exit performance for ResNets of varying depths.",
+    "id": "2026-11-04-arxiv-where_it_breaks_diagnosing_perception_memory_and_decision_failures_of_a_vision_language_ag",
+    "arxiv_id": "2611.06704v1",
+    "date": "2026-11-04",
+    "title": "Where It Breaks: Diagnosing Perception, Memory, and Decision Failures of a Vision-Language Agent in Pac-Man",
+    "authors": "Xinglu Wang, Edward Wang, Yong Zhang, Zhenan Fan",
+    "abstract": "Training an agent to play Pac-Man with only up, down, left and right actions raises a basic question: when performance is poor, what should be improved? Difficulty can arise from reading the screen or from choosing actions over a long sequence. We examine these problems in a Qwen3.5-9B-based agent through separate perception checks and primitive-policy reinforcement-learning studies. In the policy study, which uses textual boards to remove image transcription from the decision interface, completion on eight held-out mazes increased from 0% before this optimization to 80.2% at a selected checkpoint, with three extra lives. The perception checks show that accurate static screenshot reading can coexist with errors during interaction. A separate policy comparison also shows that further optimization can accompany worse action choices. Together, these findings motivate concrete checks for post-training: evaluate perception in use, distinguish training success from full-game validation, and examine decisions and later performance rather than relying on one selected score. The study provides empirical lessons for improving future agent training and evaluation.",
     "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-11-03T16:08:15Z",
-    "updated": "2026-11-03T16:08:15Z",
+    "published": "2026-11-04T16:04:57Z",
+    "updated": "2026-11-04T16:04:57Z",
     "primary_category": "cs.LG",
     "categories": [
-      "cs.LG",
-      "eess.SY"
+      "cs.LG"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05120v1"
+        "url": "https://arxiv.org/abs/2611.06704v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05120v1"
+        "url": "https://arxiv.org/pdf/2611.06704v1"
       }
     ],
     "score": 69,
     "infographic": {
-      "key_insight": "For jointly supervised ResNets, the authors prove a turnpike property: the number of layers needed to reach a prescribed loss level is bounded independently of total network depth.",
-      "engineering_relevance": "The theory helps explain why early exits can reduce inference computation and why networks of different depths can show similar early-exit performance.",
+      "key_insight": "Pac-Man agent failures require separate checks of perception and decision-making: accurate static screenshot reading does not guarantee reliable interaction, and further policy optimization can worsen action choices.",
+      "engineering_relevance": "Evaluate perception during use, validate full-game performance separately from training success, and inspect decisions across checkpoints before deploying an agent.",
       "method": [
-        "Model ResNet propagation and joint intermediate/output loss optimization using optimal control theory.",
-        "Prove a turnpike property and derive similarity implications for internal representations across network depths.",
-        "Connect turnpikes to overthinking and analyze entropy- and maximum-probability-based exit criteria."
+        "Studied a Qwen3.5-9B-based agent using only up, down, left, and right actions.",
+        "Ran separate perception checks and primitive-policy reinforcement-learning studies.",
+        "Used textual boards in the policy study to remove image transcription from the decision interface."
       ],
-      "evidence_signal": "Experiments demonstrate turnpike behavior and similar early-exit performance across ResNets of varying depths; the abstract provides no datasets or quantitative results.",
-      "watch_item": "The abstract does not specify the theorem’s assumptions, so its depth-independent guarantee should not be assumed to cover arbitrary architectures or training setups.",
+      "evidence_signal": "On eight held-out mazes with three extra lives, completion rose from 0% before policy optimization to 80.2% at a selected checkpoint.",
+      "watch_item": "The selected-checkpoint result on textual boards should not be treated as evidence of equally reliable end-to-end visual gameplay.",
       "hashtags": [
-        "#EarlyExit",
-        "#ResNets",
-        "#OptimalControl",
-        "#EfficientInference",
-        "#TurnpikeTheory"
+        "#VisionLanguageModels",
+        "#ReinforcementLearning",
+        "#AgentEvaluation",
+        "#FailureAnalysis",
+        "#PacMan"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-towards_an_optimal_control_foundation_of_early_exits_turnpikes_and_resnets",
-      "paper_title": "Towards an Optimal Control Foundation of Early Exits - Turnpikes and ResNets",
-      "paper_date": "2026-11-03",
+      "paper_id": "2026-11-04-arxiv-where_it_breaks_diagnosing_perception_memory_and_decision_failures_of_a_vision_language_ag",
+      "paper_title": "Where It Breaks: Diagnosing Perception, Memory, and Decision Failures of a Vision-Language Agent in Pac-Man",
+      "paper_date": "2026-11-04",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-04T20:44:30",
+      "generated_at": "2026-11-05T20:58:00",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-shrinkage_prior_for_implicit_generative_models",
-    "arxiv_id": "2611.05241v1",
-    "date": "2026-11-03",
-    "title": "Shrinkage prior for implicit generative models",
-    "authors": "Shreya Sinha-Roy, Christian P. Robert, Ritabrata Dutta",
-    "abstract": "Implicit generative models based on deep neural networks have revolutionized many scientific fields, from weather research to language generation. They successfully model complex random objects arising in real-world problems. In this work, we propose a sample-efficient training mechanism for these models. Our approach leverages regularized inference with shrinkage priors and generalized Bayes. In the large $p$ (parameter dimension) and small $n$ (sample size) setting, sparsity-inducing priors have been successfully used for linear regression when $p \\gg n$. However, their application to implicit generative models remains challenging due to the intractability of the likelihood function. To address this, we adapt a scoring rule posterior based on a strictly proper scoring rule, following the generalized Bayes framework. We then propose a block SGMCMC within Gibbs sampling mechanism. This enables efficient exploration of high-dimensional parameter spaces by identifying a sparse representation of neural implicit generative models. We demonstrate the performance of our proposed method through experiments on $p \\gg n$ linear regression and an application of neural generative models.",
-    "category": "Literature and Knowledge Mining",
+    "id": "2026-11-04-arxiv-interactive_world_simulation_with_cosmos_for_physical_ai",
+    "arxiv_id": "2611.06627v1",
+    "date": "2026-11-04",
+    "title": "Interactive World Simulation with Cosmos for Physical AI",
+    "authors": "NVIDIA, :, Anis Ahmad, Jon Allen, Malik Aqeel Anwar, Jesse Archer",
+    "abstract": "We present a shared framework that adapts Cosmos world foundation models for real-time interactive world simulation in Physical AI. By streaming visual observations in response to actions and scene controls, the framework enables users and embodied agents to interact with evolving virtual environments. It supports both predicting the visual consequences of actions and generating observations from physical state maintained by an external simulator. We demonstrate this approach across camera navigation and robot manipulation, controllable video transfer, and multi-view autonomous vehicle (AV) simulation. These examples provide a shared foundation for developing interactive virtual environments for Physical AI training and evaluation. Our code and model checkpoints are available at https://github.com/nvidia/cosmos and https://huggingface.co/collections/nvidia/cosmos3-examples. The project website is available at https://research.nvidia.com/labs/cosmos-lab/cosmos-simulation.",
+    "category": "Autonomous Labs",
     "source": "arXiv",
-    "published": "2026-11-03T17:24:13Z",
-    "updated": "2026-11-03T17:24:13Z",
-    "primary_category": "cs.LG",
+    "published": "2026-11-04T15:11:04Z",
+    "updated": "2026-11-04T15:11:04Z",
+    "primary_category": "cs.AI",
     "categories": [
+      "cs.AI",
+      "cs.CV",
       "cs.LG",
-      "stat.CO"
+      "cs.RO"
     ],
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05241v1"
+        "url": "https://arxiv.org/abs/2611.06627v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05241v1"
+        "url": "https://arxiv.org/pdf/2611.06627v1"
       }
     ],
-    "score": 67,
+    "score": 68,
     "infographic": {
-      "key_insight": "Shrinkage priors combined with generalized Bayes offer a sample-efficient way to train neural implicit generative models by promoting sparse parameter representations.",
-      "engineering_relevance": "The approach targets data-limited settings where neural model parameter counts greatly exceed available training samples.",
+      "key_insight": "A shared framework adapts Cosmos world foundation models to stream visual observations in response to actions and scene controls for interactive Physical AI simulation.",
+      "engineering_relevance": "The framework supports virtual environments for embodied-agent training and evaluation through action-conditioned prediction or visualization of externally simulated physical states.",
       "method": [
-        "Replace the intractable likelihood with a posterior based on a strictly proper scoring rule.",
-        "Apply sparsity-inducing shrinkage priors to regularize model parameters.",
-        "Use block stochastic-gradient MCMC within Gibbs sampling to explore the high-dimensional posterior."
+        "Adapt Cosmos world foundation models for real-time interactive simulation.",
+        "Stream visual observations conditioned on actions and scene controls.",
+        "Support action-driven visual prediction and observation generation from external simulator states."
       ],
-      "evidence_signal": "The abstract reports experiments on linear regression with far more parameters than samples and an application to neural generative models, but provides no quantitative results.",
-      "watch_item": "High-dimensional posterior sampling requires careful convergence checks; the abstract does not establish computational cost or scalability.",
+      "evidence_signal": "The abstract reports demonstrations in camera navigation, robot manipulation, controllable video transfer, and multi-view autonomous vehicle simulation, but provides no quantitative evaluation results.",
+      "watch_item": "Real-time latency and physical fidelity should be validated before relying on generated observations for training or evaluation.",
       "hashtags": [
-        "#ImplicitGenerativeModels",
-        "#ShrinkagePriors",
-        "#GeneralizedBayes",
-        "#SGMCMC",
-        "#SampleEfficiency"
+        "#PhysicalAI",
+        "#WorldModels",
+        "#InteractiveSimulation",
+        "#Robotics",
+        "#AutonomousVehicles"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-shrinkage_prior_for_implicit_generative_models",
-      "paper_title": "Shrinkage prior for implicit generative models",
-      "paper_date": "2026-11-03",
-      "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-04T20:44:31",
+      "paper_id": "2026-11-04-arxiv-interactive_world_simulation_with_cosmos_for_physical_ai",
+      "paper_title": "Interactive World Simulation with Cosmos for Physical AI",
+      "paper_date": "2026-11-04",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-11-05T20:58:03",
       "generator": "openai"
     }
   },
   {
-    "id": "2026-11-03-arxiv-pyrua_datafarm_llm_agent_as_a_cost_efficient_teleoperator_for_real_ready_robot_data",
-    "arxiv_id": "2611.05320v1",
-    "date": "2026-11-03",
-    "title": "PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data",
-    "authors": "Kewei Zhang, Juncheng Ma, Guodong Lv, Duomin Wang, Feixiang Ruan, Ruiyang Si",
-    "abstract": "Teleoperation remains the default way to collect robot demonstrations, but every episode costs robot and operator time, and every new task starts from scratch. We ask whether a coding agent can take over the teleoperator's job. In our DataFarm, the agent receives a data request and one calibration episode of the robot in the target scene and rebuilds the task in simulation: it writes the scene, an expert controller, and a success judge. The simulator supplies exact actions, and a video model conditioned on real images renders each rollout as photographic video, generating all camera views together consistently. The output is real-ready data: synchronized camera views labelled with the robot's actions, on which a policy can be trained directly and deployed on the real robot. Independent judges certify the expert and every rendered episode before admission. On five real-robot tasks, policies trained only on farm data match policies trained on as many teleoperated episodes (93 vs. 84 successes in 100 trials), and under an unseen tablecloth and coloured light they keep 87 successes where the teleoperation-trained policies fall to 46. Adapting a task is fully automatic and costs \\$21 of API usage on average, paid once per task, plus \\$5 for a render contract; every further episode costs \\$0.80 on average for simulation, rendering, and review, with no robot or operator. One hour of three-view data for a task costs \\$107 on average, these costs included, slightly below a quote of \\$117 for teleoperation in China and below \\$290 in labour alone in North America.",
-    "category": "Scientific Machine Learning",
+    "id": "2026-11-04-arxiv-on_turn_level_best_of_n_sampling_for_scaling_llm_agents",
+    "arxiv_id": "2611.06868v1",
+    "date": "2026-11-04",
+    "title": "On Turn-Level Best-of-N Sampling for Scaling LLM Agents",
+    "authors": "Jalaj Bhandari, Dhawal Gupta, Hongli Zhan, Zhenting Wang, Varad Pimpalkhute, Zhengzhong Liu",
+    "abstract": "In this work, we evaluate a simple inference-time scaling approach based on \\textit{turn-level best-of-N sampling} (\\method) for large language model (LLM) agents on complex, long-horizon tasks. We instantiate this using a \\textit{generator-selector} framework with two LLMs; at each turn, a \\emph{generator} model generates $N$ candidate actions and a \\emph{selector} model selects one of them, which is then executed in the environment. This paper is closely related to the work of \\cite{zainullina2025guided} who used critic models for guided search at inference time. Different from their work, we evaluate if off-the-shelf, open-weight LLMs can be effective at comparing different candidate actions directly. Experiments on long-horizon terminal tasks show that \\method can lead to significant performance improvements, both in terms of accuracy (5--10\\%) and consistency across repeated attempts. Analysis of agent trajectories reveal a shift in agent behaviour towards desirable patterns such as reduction in number of attempts to solve the task, improved task instruction following, debugging and testing.",
+    "category": "AI scientific research",
     "source": "arXiv",
-    "published": "2026-11-03T18:25:14Z",
-    "updated": "2026-11-03T18:25:14Z",
-    "primary_category": "cs.RO",
-    "categories": [
-      "cs.RO",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05320v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05320v1"
-      }
-    ],
-    "score": 66,
-    "infographic": {
-      "key_insight": "An LLM coding agent can turn one real calibration episode into action-labelled, multiview robot training data that supports direct deployment on real hardware.",
-      "engineering_relevance": "The approach reduces repeated robot and operator use, with reported costs of $107 per hour of three-view data versus quoted teleoperation costs of $117 in China and $290 in North American labour alone.",
-      "method": [
-        "Given a data request and calibration episode, the agent builds a simulated scene, expert controller, and success judge.",
-        "Simulation supplies exact actions; a real-image-conditioned video model renders synchronized, consistent camera views.",
-        "Independent judges check the expert and each rendered episode before admitting data for policy training."
-      ],
-      "evidence_signal": "Across five real-robot tasks, farm-trained policies achieved 93/100 successes versus 84/100 for teleoperation-trained policies; under an unseen tablecloth and coloured light, they achieved 87 versus 46.",
-      "watch_item": "Evidence covers only five tasks; broader deployment requires validating rendering fidelity and automated judges on new scenes and robot behaviours.",
-      "hashtags": [
-        "#RobotLearning",
-        "#SyntheticData",
-        "#LLMAgents",
-        "#SimToReal",
-        "#Robotics"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-pyrua_datafarm_llm_agent_as_a_cost_efficient_teleoperator_for_real_ready_robot_data",
-      "paper_title": "PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data",
-      "paper_date": "2026-11-03",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-04T20:44:33",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-03-arxiv-creating_power_flexibility_in_datacenters_via_query_routing",
-    "arxiv_id": "2611.05148v1",
-    "date": "2026-11-03",
-    "title": "Creating Power Flexibility in Datacenters via Query Routing",
-    "authors": "Shivam Patel, Bingqing Chen, Jared Fernandez, Guannan Qu, Gauri Joshi",
-    "abstract": "The growing energy requirements of large language model inference highlight the need for datacenters to support safe grid operation by providing power demand flexibility, while maintaining service for interactive workloads. This work investigates query routing as a mechanism to enable such capability by dynamically allocating queries across different language model instances without deferring requests. We develop a general analytical framework that connects query arrival rates and sequence length distributions to token iteration time, request residence time, serving capacity, and power consumption of model instances. Leveraging this framework, we characterize the feasible query routing allocations and the corresponding power demand flexibilities, enabling the selection of routing strategies to achieve desired power consumption behavior. We validate our framework across four GPU platforms on language models ranging from 1B to 70B parameters, obtaining 2.8% mean absolute percentage error in estimating achievable power flexibility. We evaluate our approach on a real trace-driven simulation of a 10,000 H100 GPUs datacenter, exhibiting flexibility up to 16% of total power consumption, with 90% of the desired power reduction achieved within approximately 10 seconds. These results establish query routing as an effective mechanism for datacenter power demand flexibility and demonstrate the broader applicability of our proposed framework to datacenter level planning and orchestration.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-11-03T16:22:48Z",
-    "updated": "2026-11-03T16:22:48Z",
+    "published": "2026-11-04T18:23:14Z",
+    "updated": "2026-11-04T18:23:14Z",
     "primary_category": "cs.AI",
     "categories": [
       "cs.AI"
@@ -1041,38 +448,633 @@
     "links": [
       {
         "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.05148v1"
+        "url": "https://arxiv.org/abs/2611.06868v1"
       },
       {
         "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.05148v1"
+        "url": "https://arxiv.org/pdf/2611.06868v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "Turn-level best-of-N sampling improves LLM agent accuracy and consistency by selecting among multiple candidate actions before each execution.",
+      "engineering_relevance": "A generator-selector setup offers a practical inference-time scaling approach for agents tackling complex, long-horizon terminal tasks.",
+      "method": [
+        "Generate N candidate actions at each turn.",
+        "Use a second, off-the-shelf open-weight LLM to compare candidates and select one.",
+        "Execute the selected action and repeat."
+      ],
+      "evidence_signal": "Experiments on long-horizon terminal tasks report 5–10% accuracy improvements and greater consistency across repeated attempts, with trajectory analysis indicating better instruction following, debugging, and testing.",
+      "watch_item": "Generating and comparing multiple actions per turn adds inference cost; the abstract does not quantify latency or cost-effectiveness.",
+      "hashtags": [
+        "#LLMAgents",
+        "#InferenceTimeScaling",
+        "#BestOfN",
+        "#OpenWeightLLMs",
+        "#AgentEvaluation"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-on_turn_level_best_of_n_sampling_for_scaling_llm_agents",
+      "paper_title": "On Turn-Level Best-of-N Sampling for Scaling LLM Agents",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-05T20:58:05",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-alignment_myopia_in_generative_ai",
+    "arxiv_id": "2611.06830v1",
+    "date": "2026-11-04",
+    "title": "Alignment Myopia in Generative AI",
+    "authors": "Remi Denton, Aida Davani, Cynthia L Bennett, Michael Madaio, Roma Patel, Himabindu Lakkaraju",
+    "abstract": "Current generative AI alignment relies on a myopic paradigm that prioritizes immediate conversational satisfaction. By relying on short-horizon feedback, this approach ignores the profound, longitudinal externalities of persistent human-AI interaction, which can lead to adverse outcomes such as cognitive atrophy, social erosion, and diminished human agency. To address this, we propose a paradigm shift toward long-horizon alignment that accounts for how AI reshapes human experience over time. To this end, we map the tensions between near-term utility and long-term costs of AI use across four facets of human well-being to reveal outcomes that current reward models fail to capture. Ultimately, we advocate for moving beyond simple preference optimization toward alignment strategies that actively foster long-term human well-being by navigating these complex temporal scales.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-11-04T17:44:07Z",
+    "updated": "2026-11-04T17:44:07Z",
+    "primary_category": "stat.ML",
+    "categories": [
+      "stat.ML",
+      "cs.CY",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06830v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06830v1"
+      }
+    ],
+    "score": 67,
+    "infographic": {
+      "key_insight": "Optimizing generative AI for immediate conversational satisfaction can overlook cumulative harms to cognition, social connection, and human agency.",
+      "engineering_relevance": "Alignment pipelines should account for long-term human well-being rather than treating short-horizon user preferences as a sufficient success metric.",
+      "method": [
+        "Map tensions between near-term utility and long-term costs across four facets of human well-being.",
+        "Identify longitudinal outcomes that current reward models fail to capture.",
+        "Propose a shift from simple preference optimization toward long-horizon alignment."
+      ],
+      "evidence_signal": "The abstract describes a conceptual framework and research agenda, without reporting datasets, experiments, or quantitative evaluation.",
+      "watch_item": "Translating long-term well-being into measurable alignment objectives remains an implementation challenge not resolved in the abstract.",
+      "hashtags": [
+        "#AIAlignment",
+        "#GenerativeAI",
+        "#HumanWellbeing",
+        "#LongHorizonAlignment",
+        "#ResponsibleAI"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-alignment_myopia_in_generative_ai",
+      "paper_title": "Alignment Myopia in Generative AI",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-05T20:58:07",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-adaptive_multi_mode_budget_aware_routing_of_optimizers_by_online_landscape_probes",
+    "arxiv_id": "2611.06879v1",
+    "date": "2026-11-04",
+    "title": "Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes",
+    "authors": "Benjamin Jacob Bodner",
+    "abstract": "The best classical optimizer for a continuous black-box problem depends on its budget and landscape. Existing routers decide from the dimension and budget, past improvement or features fitted to one benchmark, and few test an optimizer's implicit assumptions online. AMM (Adaptive Multi Mode) routes a known budget among quasi-Newton, trust-region, coordinate, multistart and evolution-strategy optimization engines with online probes of curvature, plateaus, separability, kinks, basins and fractal structure. Each probe has a default, a dimension-by-budget validity range and a cost charged to the budget. In its pre-registered development loop on bbob, 32 of 36 predictions held over the last 16 confirmations. AMM was then tested once on held-out bbob instances 101-110 (D=2-40, 10*D-1000*D) against up to seven competitors. It has the highest target share in 382 of 600 function-dimension-budget cells (236 outright, 146 tied) and, by a descriptive posterior rule, is credibly behind in 35, mostly at 10*D and 30*D. At every budget it also leads the controls built from its own engines (the best engine alone, the best engine per dimension and budget, and a greedy schedule), narrowly at 10*D and 30*D, and nevergrad's NgIohTuned. In pre-registered runs its lead over IPOP-CMA-ES holds under affine and box transformations, on box-constrained bbob and, pooled, on rotated f2-f4, but rotating the separable f3 and f4 removes most of the lead there. On held-out MA-BBOB its final share at 2000*D is level with IPOP-CMA-ES's and its anytime area lower. We published AMM as an open-source Python package (pip install amm-optimizer; https://github.com/BjBodner/amm-optimizer).",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-11-04T18:35:35Z",
+    "updated": "2026-11-04T18:35:35Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.NE",
+      "math.OC"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06879v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06879v1"
       }
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "Dynamically routing queries across language model instances can adjust datacenter power demand without deferring requests.",
-      "engineering_relevance": "Query routing offers a software-level mechanism for grid-responsive power management while maintaining service for interactive workloads.",
+      "key_insight": "AMM uses online landscape probes to route a fixed evaluation budget among classical optimizers, achieving the highest target share in 382 of 600 held-out BBOB evaluation cells, including ties.",
+      "engineering_relevance": "For continuous black-box optimization, AMM offers an open-source Python router that adapts optimizer choice to landscape structure and remaining budget.",
       "method": [
-        "Model how query arrival rates and sequence lengths affect token iteration time, request residence time, serving capacity, and power.",
-        "Characterize feasible routing allocations and their achievable power flexibility.",
-        "Select routing strategies to achieve desired power consumption behavior."
+        "Probe curvature, plateaus, separability, kinks, basins and fractal structure online.",
+        "Route evaluations among quasi-Newton, trust-region, coordinate, multistart and evolution-strategy engines.",
+        "Charge probe costs to the budget and apply dimension-by-budget validity ranges and defaults."
       ],
-      "evidence_signal": "Validation across four GPU platforms and 1B–70B models yielded 2.8% mean absolute percentage error in estimated flexibility; a trace-driven simulation of 10,000 H100 GPUs showed up to 16% power flexibility, achieving 90% of the desired reduction in approximately 10 seconds.",
-      "watch_item": "Datacenter-scale results are simulation-based; production deployment should verify response times and interactive service performance under changing workloads.",
+      "evidence_signal": "A one-time held-out BBOB test covered instances 101–110, dimensions 2–40 and budgets of 10D–1000D against up to seven competitors; AMM led outright in 236 cells and tied for the lead in 146.",
+      "watch_item": "Gains were benchmark-dependent: rotating separable functions f3–f4 removed most of the lead, while held-out MA-BBOB showed parity with IPOP-CMA-ES at the final budget and lower anytime performance.",
       "hashtags": [
-        "#DatacenterPower",
-        "#LLMInference",
-        "#QueryRouting",
-        "#GridFlexibility",
-        "#SustainableAI"
+        "#BlackBoxOptimization",
+        "#AlgorithmSelection",
+        "#BudgetAwareOptimization",
+        "#LandscapeAnalysis",
+        "#ComputationalScience"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
-      "paper_id": "2026-11-03-arxiv-creating_power_flexibility_in_datacenters_via_query_routing",
-      "paper_title": "Creating Power Flexibility in Datacenters via Query Routing",
-      "paper_date": "2026-11-03",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-04T20:44:36",
+      "paper_id": "2026-11-04-arxiv-adaptive_multi_mode_budget_aware_routing_of_optimizers_by_online_landscape_probes",
+      "paper_title": "Adaptive Multi Mode: Budget-Aware Routing of Optimizers By Online Landscape Probes",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-05T20:58:11",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-thermally_conditioned_time_series_forecasting_of_grain_growth_in_polycrystalline_materials",
+    "arxiv_id": "2611.06843v1",
+    "date": "2026-11-04",
+    "title": "Thermally Conditioned Time-Series Forecasting of Grain Growth in Polycrystalline Materials",
+    "authors": "Eliane Younes, Elie Hachem, Marc Bernacki",
+    "abstract": "Grain growth during heat treatment strongly affects the microstructure of polycrystalline materials and, consequently, their mechanical properties. Although numerical methods such as front-tracking or front-capturing simulations can accurately describe grain growth, their high computational cost limits their use for long or non-isothermal thermal cycles. In previous work, grain growth was successfully predicted under isothermal conditions by treating grain size distributions as time series and forecasting their evolution using recurrent neural networks, allowing complete grain growth trajectories to be generated in seconds rather than through costly PDE-based simulations. In the present work, this forecasting framework is reformulated to handle non-isothermal conditions by explicitly incorporating thermal information into the model architecture. Grain size distributions are encoded using a convolutional neural network, thermal descriptors are embedded through a dedicated multilayer perceptron, and temporal evolution is predicted using a recurrent network. Instantaneous temperature and thermal rate are provided at each time step, allowing the model to adapt its predictions to changing thermal conditions. The framework is trained and evaluated on datasets generated from validated front-tracking simulations across a wide range of non-isothermal thermal paths. The results show that the thermally conditioned model accurately reproduces grain growth dynamics under complex thermal histories, achieving, in k-fold cross-validation over all simulations, mean relative errors of 2.99% (one-hour cycles) and 4.51% (four-hour cycles) with coefficients of determination exceeding 0.99, and mean relative errors between 1.91% and 14.66% on ten simulations following four unseen thermal histories of increasing complexity.",
+    "category": "Modeling and Simulation",
+    "source": "arXiv",
+    "published": "2026-11-04T17:59:26Z",
+    "updated": "2026-11-04T17:59:26Z",
+    "primary_category": "cond-mat.mtrl-sci",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06843v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06843v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "Conditioning recurrent forecasts on temperature and thermal rate enables accurate prediction of grain growth during non-isothermal heat treatment.",
+      "engineering_relevance": "The approach offers a computationally efficient alternative to repeated grain-growth simulations for exploring heat-treatment schedules.",
+      "method": [
+        "Encode grain size distributions with a convolutional neural network.",
+        "Embed instantaneous temperature and thermal rate with a dedicated multilayer perceptron.",
+        "Forecast microstructural evolution with a thermally conditioned recurrent network."
+      ],
+      "evidence_signal": "On front-tracking simulation data, k-fold cross-validation yielded mean relative errors of 2.99% for one-hour cycles and 4.51% for four-hour cycles, with R² above 0.99; errors ranged from 1.91% to 14.66% across ten simulations with four unseen thermal histories.",
+      "watch_item": "Validation is simulation-based, and the higher errors on some unseen thermal histories warrant caution when extrapolating to new heat-treatment conditions.",
+      "hashtags": [
+        "#GrainGrowth",
+        "#MicrostructureModeling",
+        "#ScientificMachineLearning",
+        "#TimeSeriesForecasting",
+        "#HeatTreatment"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-thermally_conditioned_time_series_forecasting_of_grain_growth_in_polycrystalline_materials",
+      "paper_title": "Thermally Conditioned Time-Series Forecasting of Grain Growth in Polycrystalline Materials",
+      "paper_date": "2026-11-04",
+      "paper_category": "Modeling and Simulation",
+      "generated_at": "2026-11-05T20:58:13",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-from_reconstruction_to_imputation_test_time_optimization_for_missing_time_series_channels",
+    "arxiv_id": "2611.06612v1",
+    "date": "2026-11-04",
+    "title": "From Reconstruction to Imputation: Test-Time Optimization for Missing Time-Series Channels",
+    "authors": "Björn Ludwig, Alexander Windmann, René Heesch, Oliver Niggemann",
+    "abstract": "Complete sensor-channel failures create a difficult form of time-series missingness: local interpolation is unavailable, and deploying a separately trained imputer for every failure pattern may be impractical. We ask whether a sequence reconstructor trained without artificial mask augmentation and then frozen can be converted into an imputer at inference time. Our method treats the missing entries of each test window as optimization variables, clamps all observations, and backpropagates through the frozen model to minimize reconstruction error only on observed coordinates. The resulting observed-self-consistency objective requires neither artificial mask augmentation nor full-channel dropout during reconstructor training. We characterize when this refinement is informative through the cross-Jacobian from missing inputs to observed residuals, and use an optional temporal-smoothness prior when that coupling is weak. Across five real-world datasets with exactly one channel synthetically masked per test window and four reconstruction architectures, no-prior test-time refinement reduces MAE relative to one-pass reconstruction in 19 of 20 dataset-backbone combinations. Compared with mask-aware imputers trained under either standard structured masks or matched full-channel dropout, the best refined reconstructor achieves the lowest MAE on two datasets and trails the strongest baseline on three. These gains require substantially more inference time and are sensitive to cross-channel coupling. Our results establish test-time self-consistency as a conditional inference-time adapter for frozen reconstruction models that complements mask-aware imputation without retraining the reconstructor.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-11-04T14:59:22Z",
+    "updated": "2026-11-04T14:59:22Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06612v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06612v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "A frozen time-series reconstructor can impute a missing sensor channel by optimizing missing inputs at test time to improve reconstruction consistency on observed channels.",
+      "engineering_relevance": "This offers a way to adapt existing reconstruction models to sensor-channel failures without retraining, at the cost of substantially slower inference.",
+      "method": [
+        "Train a sequence reconstructor without artificial mask augmentation, then freeze its weights.",
+        "Optimize missing entries through the frozen model while clamping observations and minimizing observed-coordinate reconstruction error.",
+        "Assess missing-to-observed coupling via the cross-Jacobian; optionally add a temporal-smoothness prior when coupling is weak."
+      ],
+      "evidence_signal": "Across five real-world datasets and four architectures with one synthetically missing channel per test window, no-prior refinement reduced MAE versus one-pass reconstruction in 19 of 20 combinations; the best refined reconstructor beat mask-aware baselines on two datasets but trailed on three.",
+      "watch_item": "Benefits depend on cross-channel coupling, and evaluation with exactly one missing channel does not establish performance under simultaneous channel failures.",
+      "hashtags": [
+        "#TimeSeries",
+        "#MissingData",
+        "#TestTimeOptimization",
+        "#SensorFailures",
+        "#ScientificMachineLearning"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-from_reconstruction_to_imputation_test_time_optimization_for_missing_time_series_channels",
+      "paper_title": "From Reconstruction to Imputation: Test-Time Optimization for Missing Time-Series Channels",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-05T20:58:16",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-the_behavioral_rate_of_fine_tuning_compression_as_a_measure_of_useful_information",
+    "arxiv_id": "2611.06598v1",
+    "date": "2026-11-04",
+    "title": "The Behavioral Rate of Fine-Tuning: Compression as a Measure of Useful Information",
+    "authors": "Joey David, Paul Caillon, Alexandre Allauzen",
+    "abstract": "Low-Rank Adaptation (LoRA) adapts a frozen language model through a compact learned update, making it a natural setting for asking how much information fine-tuning needs to write. Yet adapter rank, parameter count, or numerical reconstruction error do not directly tell us how many bits are required to preserve the acquired behavior. We therefore define an operational behavioral rate $R^\\star$ as the smallest serialized size of a compressed adapter that, once reloaded into the frozen base model, retains a fixed fraction of its held-out fine-tuning gain. Across LoRA fine-tuning experiments, this rate increases with distinct training content at fixed optimization budgets, but is not determined by intuitive metrics like source description length, fine-tuning gain, or weight-space reconstruction error. Most importantly, the same datasets exhibit substantially different, and even reordered, rates across frozen base models, showing that fine-tuning compressibility is a property of the dataset--receiver pair rather than of the dataset alone. However, we show that correction spectra measured on the data are able to rank these rates within a receiver. Finally, we study a striking noise-reducing effect of compression: adapters trained on deliberately corrupted datasets fall far below the frozen model, yet after compression score above it (23.7% to 82.9% on GSM8K, against 77.6% for frozen Qwen2.5-7B), consistently across tested families and sizes. The damage is unevenly concentrated in the adapter's leading singular directions, which compression appears to filter. Away from its training task, the compressed corrupted adapter also generalizes better than a clean fine-tune: on harder math it retains 97% of base accuracy, versus 44% for the clean adapter.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-11-04T14:52:11Z",
+    "updated": "2026-11-04T14:52:11Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06598v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06598v1"
+      }
+    ],
+    "score": 66,
+    "infographic": {
+      "key_insight": "The bits needed to preserve fine-tuned behavior depend on the dataset–base-model pair, not simply adapter rank, parameter count, or reconstruction error.",
+      "engineering_relevance": "Evaluate compressed LoRA adapters after reloading them into the target frozen model, since smaller adapters can preserve useful behavior and sometimes reduce corruption-induced damage.",
+      "method": [
+        "Define behavioral rate R* as the smallest serialized adapter size retaining a fixed fraction of held-out fine-tuning gain.",
+        "Compare compression rates across training content and frozen base models at fixed optimization budgets.",
+        "Analyze data-measured correction spectra and test compression on deliberately corrupted fine-tunes."
+      ],
+      "evidence_signal": "On GSM8K with Qwen2.5-7B, compression raised a corrupted adapter’s accuracy from 23.7% to 82.9%, versus 77.6% for the frozen base; on harder math, the compressed corrupted adapter retained 97% of base accuracy versus 44% for a clean fine-tune.",
+      "watch_item": "Behavioral rate is receiver- and evaluation-dependent, so compression settings and corruption-recovery gains require validation for each target model and task.",
+      "hashtags": [
+        "#LoRA",
+        "#ModelCompression",
+        "#FineTuning",
+        "#LLMEvaluation",
+        "#InformationTheory"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-the_behavioral_rate_of_fine_tuning_compression_as_a_measure_of_useful_information",
+      "paper_title": "The Behavioral Rate of Fine-Tuning: Compression as a Measure of Useful Information",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-05T20:58:18",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-fedfiot_fisher_weighted_optimal_transport_for_model_merging_in_one_shot_and_few_round_fede",
+    "arxiv_id": "2611.06783v1",
+    "date": "2026-11-04",
+    "title": "FedFiOT: Fisher-Weighted Optimal Transport for Model Merging in One-Shot and Few-Round Federated Learning",
+    "authors": "Quan Minh Nguyen, Hoang M. Ngo, Bhakti Chowkwale, Yasaman Keshtkarjahromi, My T. Thai",
+    "abstract": "One-shot and few-round federated learning (FL) reduce communication burden by constructing a global model within one or a few communication rounds, but often achieve lower performance than conventional multi-round FL. Without frequent synchronization, client models may drift apart, causing neurons that learn similar features to occupy different positions across clients. At the same time, local data heterogeneity can cause corresponding parameters to differ in their importance to each client's predictions. Together, these challenges cause direct averaging to combine mismatched neurons and assign equal weight to parameters despite differences in their importance. We propose FedFiOT, a Fisher-weighted optimal transport framework for one-shot and few-round FL that leverages Fisher information to quantify parameter importance and guide neuron alignment and model aggregation. FedFiOT jointly optimizes neuron correspondences and global model parameters through alternating minimization of a shared Fisher-weighted objective. Theoretically, we show that FedFiOT's optimization procedure monotonically decreases the layer-wise merging objective and establish a stationarity bound that quantifies the effects of client heterogeneity and nonuniform Fisher weighting.Experiments across multiple datasets demonstrate consistent improvements over competing baselines in both one-shot and few-round federated learning settings.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-11-04T16:56:10Z",
+    "updated": "2026-11-04T16:56:10Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06783v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06783v1"
+      }
+    ],
+    "score": 65,
+    "infographic": {
+      "key_insight": "FedFiOT uses Fisher information and optimal transport to align neurons and weight parameter aggregation when merging federated models with limited communication.",
+      "engineering_relevance": "The approach targets model merging in one-shot and few-round federated learning, where client drift and data heterogeneity can undermine direct averaging.",
+      "method": [
+        "Use Fisher information to estimate parameter importance.",
+        "Alternate between optimizing neuron correspondences and global parameters under a shared Fisher-weighted objective.",
+        "Prove monotonic decrease of the layer-wise merging objective and derive a stationarity bound."
+      ],
+      "evidence_signal": "The abstract reports consistent improvements over competing baselines across multiple datasets in both one-shot and few-round settings, but provides no numerical results.",
+      "watch_item": "Fisher estimation and optimal-transport alignment may add computation and memory overhead; these costs are not quantified in the abstract.",
+      "hashtags": [
+        "#FederatedLearning",
+        "#ModelMerging",
+        "#OptimalTransport",
+        "#FisherInformation",
+        "#CommunicationEfficientAI"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-fedfiot_fisher_weighted_optimal_transport_for_model_merging_in_one_shot_and_few_round_fede",
+      "paper_title": "FedFiOT: Fisher-Weighted Optimal Transport for Model Merging in One-Shot and Few-Round Federated Learning",
+      "paper_date": "2026-11-04",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-11-05T20:58:20",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-reinforcement_learning_enables_scaling_generalist_robot_policy_improvement",
+    "arxiv_id": "2611.06905v1",
+    "date": "2026-11-04",
+    "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
+    "authors": "Michal Korniak, Marco Bagatella, Ralf Römer, Michal Nauman, Yarden As, Pranav Vignesh",
+    "abstract": "The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. Iterated self-improvement via reinforcement learning (RL) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. In this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. To answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. We show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. We characterize when this generalization occurs and show that both the training task distribution and the use of value-based RL are critical. To the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.",
+    "category": "Literature and Knowledge Mining",
+    "source": "arXiv",
+    "published": "2026-11-04T18:52:28Z",
+    "updated": "2026-11-04T18:52:28Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.RO"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06905v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06905v1"
+      }
+    ],
+    "score": 64,
+    "infographic": {
+      "key_insight": "Online reinforcement learning can improve generalist robot policies across diverse tasks and, with the right recipe, improve tasks absent from online training.",
+      "engineering_relevance": "Multi-task adaptation offers a path to improving deployed robot foundation models without restricting optimization to a single task.",
+      "method": [
+        "Develop structured evaluations of multi-task online improvement.",
+        "Compare value estimation, policy extraction, and resource allocation choices.",
+        "Examine how training-task distributions and value-based RL affect generalization."
+      ],
+      "evidence_signal": "The abstract reports gains across diverse training tasks and tasks not used during online training, but provides no numerical results or evaluation scale.",
+      "watch_item": "Generalization depends on the training-task distribution and RL recipe; improvement on unseen tasks should not be assumed.",
+      "hashtags": [
+        "#RobotLearning",
+        "#ReinforcementLearning",
+        "#GeneralistPolicies",
+        "#RobotFoundationModels",
+        "#MultiTaskLearning"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-reinforcement_learning_enables_scaling_generalist_robot_policy_improvement",
+      "paper_title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
+      "paper_date": "2026-11-04",
+      "paper_category": "Literature and Knowledge Mining",
+      "generated_at": "2026-11-05T20:58:22",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-compressionbench_how_can_your_coding_agents_compress_llms",
+    "arxiv_id": "2611.06858v1",
+    "date": "2026-11-04",
+    "title": "CompressionBench: How can your coding agents compress LLMs?",
+    "authors": "Xinrui Zhong, Zhifeng Li, Zhiming Wang, Yongqi Liu, Shanglin Yang, Yang Zhou",
+    "abstract": "Recursive self-improvement requires AI systems to improve the models and infrastructure used by subsequent systems. LLM compression offers a concrete efficiency objective: retain a pretrained model's behavior within a smaller model storage budget. We study whether coding agents can carry out this step autonomously. We formulate compression as a terminal task in which an agent receives a source checkpoint, storage limit, inference environment, and time budget, then constructs compressed weights and executable inference code. The agent controls its algorithm and experiments; perplexity feedback guides search, and independent verification checks the final model. Across six agents and six model--size settings, 29 of 36 submissions pass verification. Selecting the lowest-perplexity agent design per task yields an average 3.4% perplexity increase over BF16 and 77.33% downstream accuracy, compared with 79.56% for BF16. Recorded experiments reveal how agents achieve these outcomes and where improvement breaks down. Agents lower PPL in 21 of 24 revisions at nearly fixed storage; complete-model feedback reverses 17 of 79 prior local rankings; and generation and inference tests expose failures that likelihood alone misses. The results identify representation design, experimental judgment, and capability validation as central to agent-driven model compression, a measurable component of efficiency-oriented self-improvement.",
+    "category": "Autonomous Labs",
+    "source": "arXiv",
+    "published": "2026-11-04T18:14:50Z",
+    "updated": "2026-11-04T18:14:50Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06858v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06858v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "Coding agents can autonomously compress LLMs, with the best design per task averaging a 3.4% perplexity increase over BF16.",
+      "engineering_relevance": "Agent-driven compression can reduce model storage while preserving much of baseline performance, but requires independent inference and capability checks.",
+      "method": [
+        "Give agents a source checkpoint, storage limit, inference environment, and time budget.",
+        "Let agents design compressed weights and inference code using perplexity-guided experiments.",
+        "Independently verify final models and evaluate downstream accuracy."
+      ],
+      "evidence_signal": "Across six agents and six model–size settings, 29 of 36 submissions passed verification; the best-perplexity designs achieved 77.33% downstream accuracy versus 79.56% for BF16.",
+      "watch_item": "Local perplexity gains may not transfer to complete models, and likelihood alone can miss generation and inference failures.",
+      "hashtags": [
+        "#LLMCompression",
+        "#CodingAgents",
+        "#AutonomousLabs",
+        "#EfficientAI",
+        "#ModelEvaluation"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-compressionbench_how_can_your_coding_agents_compress_llms",
+      "paper_title": "CompressionBench: How can your coding agents compress LLMs?",
+      "paper_date": "2026-11-04",
+      "paper_category": "Autonomous Labs",
+      "generated_at": "2026-11-05T20:58:25",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-task_efficient_agent_evaluation_using_cached_traces",
+    "arxiv_id": "2611.06803v1",
+    "date": "2026-11-04",
+    "title": "Task-Efficient Agent Evaluation Using Cached Traces",
+    "authors": "Ben Johnson, Hayden Helm",
+    "abstract": "Efficient benchmarking estimates a system's full benchmark performance from a small number of task executions. Standard approaches rely solely on the binary correctness of executions from a collection of already-evaluated reference systems. An agentic system, however, produces a rich trace for each execution that can reveal substantially more about its capabilities. Leveraging this information requires useful trace representations. We propose representing a trace by extracting a structured summary of it with an LLM and embedding the summary with a standard text encoder. These representations preserve correctness- and task-related signal while minimizing the presence of system identity-, model family- and harness-related signals that dominate raw trace embeddings. Given this representation for each task execution from all reference systems, we construct low-dimensional representations of the systems and predict a new system's score from its position among the reference systems. On SWE-bench Verified and Terminal-Bench 2.0, augmenting an item-response model with this geometry-based prediction reduces mean absolute error from 0.13 to 0.08 (Wilcoxon $p < 10^{-4}$) and from 0.14 to 0.12 (Wilcoxon $p < 10^{-3}$), respectively, when provided a single random executed task. Further, given access to the full set of reference systems, our approach dominates baselines for any given number of executed tasks on both benchmarks.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-11-04T17:20:09Z",
+    "updated": "2026-11-04T17:20:09Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06803v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06803v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "Structured summaries of cached agent traces enable more accurate benchmark score estimates from very few task executions than correctness-only approaches.",
+      "engineering_relevance": "Teams can reduce agent evaluation costs by reusing reference-system traces to estimate full benchmark performance from limited new executions.",
+      "method": [
+        "Use an LLM to extract structured trace summaries, then embed them with a text encoder.",
+        "Build low-dimensional system representations that retain task and correctness signals while reducing identity-related signals.",
+        "Augment an item-response model with geometry-based score predictions relative to reference systems."
+      ],
+      "evidence_signal": "With one randomly executed task, mean absolute error fell from 0.13 to 0.08 on SWE-bench Verified and from 0.14 to 0.12 on Terminal-Bench 2.0, with Wilcoxon p < 10^-4 and p < 10^-3, respectively.",
+      "watch_item": "Deployment requires cached reference traces and an LLM summarization pipeline; generalization beyond the two evaluated benchmarks remains unestablished.",
+      "hashtags": [
+        "#AgentEvaluation",
+        "#EfficientBenchmarking",
+        "#TraceEmbeddings",
+        "#SWEBench",
+        "#TerminalBench"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-task_efficient_agent_evaluation_using_cached_traces",
+      "paper_title": "Task-Efficient Agent Evaluation Using Cached Traces",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-11-05T20:58:27",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-message_passing_graph_persistence",
+    "arxiv_id": "2611.06801v1",
+    "date": "2026-11-04",
+    "title": "Message-passing graph persistence",
+    "authors": "Jorge Luiz Franco, Arthur Queiroz Moura, Moacir Ponti, Amauri Souza",
+    "abstract": "Message-passing graph neural networks (GNNs) are limited in expressive power by the one-dimensional Weisfeiler-Leman test. Persistent homology (PH) provides topological descriptors that can complement GNN representations, but existing approaches typically compute persistence separately from the representation learning process. In this paper, we introduce Message-Passing Graph Persistence (MGP), a family of topological descriptors that incorporates message passing into graph filtrations. At each filtration step, node embeddings are updated using the current subgraph and associated with persistence events. These embeddings also determine the representatives of connected components during persistence computation. We prove that MGP is invariant under graph isomorphism and that it is strictly more expressive than the PH-based descriptors it extends. We evaluate MGP on an expressivity benchmark and on several graph classification and regression datasets. Experiments show that MGP outperforms other PH-based descriptors on most of these datasets.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-11-04T17:18:34Z",
+    "updated": "2026-11-04T17:18:34Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06801v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06801v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "Message-Passing Graph Persistence (MGP) integrates message passing into persistent homology to create graph descriptors that are provably more expressive than the PH-based descriptors it extends.",
+      "engineering_relevance": "MGP offers a way to combine learned node representations with topological structure for graph classification and regression.",
+      "method": [
+        "Update node embeddings using the current subgraph at each filtration step.",
+        "Associate updated embeddings with persistence events.",
+        "Use embeddings to select connected-component representatives while preserving graph-isomorphism invariance."
+      ],
+      "evidence_signal": "Evaluation on an expressivity benchmark and several graph classification and regression datasets shows MGP outperforming other PH-based descriptors on most datasets.",
+      "watch_item": "Updating embeddings at every filtration step may add computational overhead; the abstract does not quantify runtime or scalability.",
+      "hashtags": [
+        "#GraphNeuralNetworks",
+        "#PersistentHomology",
+        "#TopologicalDataAnalysis",
+        "#GraphLearning",
+        "#MessagePassing"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-message_passing_graph_persistence",
+      "paper_title": "Message-passing graph persistence",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-05T20:58:29",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-04-arxiv-dull_dirty_dangerous_working_conditions_and_the_limits_of_occupational_ai_exposure",
+    "arxiv_id": "2611.06888v1",
+    "date": "2026-11-04",
+    "title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+    "authors": "Siyi Yu",
+    "abstract": "Automation is often justified as relief from dull, dirty, and dangerous work. I examine how these conditions relate to occupational AI exposure using 21 O*NET items across 754 US occupations. Higher exposure is associated with lower condition scores under a large language model (LLM) measure and AI Occupational Exposure (AIOE), with equal occupation weights and employment weights. Adjustment for physical demands, required education, training and experience, and wages reduces the composite association. The adjusted confidence intervals include zero for LLM exposure and remain below zero for AIOE. Separating repetition from restricted discretion also changes what the combined Dull score conveys. These comparisons show how item groupings and occupational characteristics shape the interpretation of exposure estimates. Occupational profiles offer a starting point for selecting contrasting research settings. Establishing desired automation or realized relief requires evidence about workers' preferences and specific interventions.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-11-04T18:41:40Z",
+    "updated": "2026-11-04T18:41:40Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "econ.GN"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.06888v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.06888v1"
+      }
+    ],
+    "score": 60,
+    "infographic": {
+      "key_insight": "Occupations with higher AI exposure tend to have less dull, dirty, and dangerous work, but accounting for occupational characteristics weakens this association.",
+      "engineering_relevance": "Use occupational AI exposure to identify contrasting research settings, not as proof that an AI intervention will relieve undesirable work.",
+      "method": [
+        "Assess working conditions using 21 O*NET items across 754 US occupations.",
+        "Compare LLM exposure and AI Occupational Exposure (AIOE) using equal occupation and employment weights.",
+        "Adjust for physical demands, education, training, experience, and wages; separate repetition from restricted discretion."
+      ],
+      "evidence_signal": "Adjusted confidence intervals for the composite association include zero for LLM exposure but remain below zero for AIOE.",
+      "watch_item": "Exposure estimates do not establish workers’ desire for automation or realized relief; both require worker-preference and intervention evidence.",
+      "hashtags": [
+        "#AIExposure",
+        "#FutureOfWork",
+        "#OccupationalResearch",
+        "#HumanCenteredAI",
+        "#Automation"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-04-arxiv-dull_dirty_dangerous_working_conditions_and_the_limits_of_occupational_ai_exposure",
+      "paper_title": "Dull, Dirty, Dangerous? Working Conditions and the Limits of Occupational AI Exposure",
+      "paper_date": "2026-11-04",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-05T20:58:31",
       "generator": "openai"
     }
   }

@@ -1,0 +1,26 @@
+{
+  "key_insight": "The bits needed to preserve fine-tuned behavior depend on the dataset–base-model pair, not simply adapter rank, parameter count, or reconstruction error.",
+  "engineering_relevance": "Evaluate compressed LoRA adapters after reloading them into the target frozen model, since smaller adapters can preserve useful behavior and sometimes reduce corruption-induced damage.",
+  "method": [
+    "Define behavioral rate R* as the smallest serialized adapter size retaining a fixed fraction of held-out fine-tuning gain.",
+    "Compare compression rates across training content and frozen base models at fixed optimization budgets.",
+    "Analyze data-measured correction spectra and test compression on deliberately corrupted fine-tunes."
+  ],
+  "evidence_signal": "On GSM8K with Qwen2.5-7B, compression raised a corrupted adapter’s accuracy from 23.7% to 82.9%, versus 77.6% for the frozen base; on harder math, the compressed corrupted adapter retained 97% of base accuracy versus 44% for a clean fine-tune.",
+  "watch_item": "Behavioral rate is receiver- and evaluation-dependent, so compression settings and corruption-recovery gains require validation for each target model and task.",
+  "hashtags": [
+    "#LoRA",
+    "#ModelCompression",
+    "#FineTuning",
+    "#LLMEvaluation",
+    "#InformationTheory"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-11-04-arxiv-the_behavioral_rate_of_fine_tuning_compression_as_a_measure_of_useful_information",
+  "paper_title": "The Behavioral Rate of Fine-Tuning: Compression as a Measure of Useful Information",
+  "paper_date": "2026-11-04",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-11-05T20:58:18",
+  "generator": "openai"
+}
