@@ -1,19 +1,19 @@
 {
-  "key_insight": "Phase-aggregated cost estimation helps massively parallel safe reinforcement learning reconcile short training rollouts with full-episode safety constraints.",
-  "engineering_relevance": "The approach enables faster wall-clock training while retaining episode-level safety accounting in on-policy reinforcement learning.",
+  "key_insight": "Phase-aware cost estimation helps massively parallel safe reinforcement learning preserve episode-level safety constraints despite short rollouts.",
+  "engineering_relevance": "The approach enables faster wall-clock training while accounting for the mismatch between short rollout batches and full-episode safety costs.",
   "method": [
-    "Model staggered environment resets as a phase mixture of short trajectory segments.",
-    "Aggregate costs across phases to estimate full-episode costs.",
-    "Tighten constraints to account for finite-sample uncertainty and distribution mismatch."
+    "Model staggered environment resets as a phase-mixture distribution over short trajectory segments.",
+    "Aggregate costs across phases to estimate episode-level cost returns.",
+    "Tighten constraints to account for finite-sample uncertainty and distribution mismatch during on-policy optimization."
   ],
-  "evidence_signal": "Experiments using an MJX-based Safety Gym implementation report performance comparable to non-massively parallel implementations with substantially reduced wall-clock training time.",
-  "watch_item": "Uneven phase coverage can bias cost estimates, so deployment requires careful uncertainty and distribution-mismatch handling.",
+  "evidence_signal": "Experiments using an MJX-based Safety Gym implementation report performance comparable to non-massively parallel implementations with substantially shorter wall-clock training time.",
+  "watch_item": "Phase coverage and distribution mismatch require careful handling; the abstract does not quantify speedups or safety-constraint violations.",
   "hashtags": [
     "#SafeRL",
     "#MassiveParallelism",
     "#ConstrainedMDP",
-    "#SafetyGym",
-    "#OnPolicyLearning"
+    "#OnPolicyLearning",
+    "#SafetyGym"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Accelerating Safe Reinforcement Learning with Massive Parallelism",
   "paper_date": "2026-11-05",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-11-06T20:18:18",
+  "generated_at": "2026-11-07T18:32:16",
   "generator": "openai"
 }
