@@ -1,19 +1,19 @@
 {
-  "key_insight": "OPD generally trails GRPO in accuracy per training FLOP with an external teacher, but efficiently consolidates domain-specific GRPO experts into one student.",
-  "engineering_relevance": "Training domain specialists with GRPO and then consolidating them via multi-teacher OPD can reduce compute for a multi-domain model versus joint GRPO training.",
+  "key_insight": "OPD generally trails GRPO in accuracy per training FLOP with external teachers, but efficiently consolidates domain-specific GRPO experts into one student.",
+  "engineering_relevance": "Training domain specialists with GRPO and consolidating them via multi-teacher OPD can reduce total compute versus joint GRPO while preserving specialist-level accuracy.",
   "method": [
     "Compare reverse-KL OPD and GRPO using held-out accuracy versus training FLOPs.",
-    "Vary task difficulty, model size, domain, optimization settings, and teacher source.",
-    "Distill per-domain GRPO checkpoints into a single student using multi-teacher OPD."
+    "Vary task difficulty, model sizes, domain, optimization, and teacher source.",
+    "Distill domain-specific GRPO checkpoints into a single student using multi-teacher OPD."
   ],
-  "evidence_signal": "Self-checkpoint OPD recovered math accuracy with 50× fewer distillation FLOPs, while specialist training plus distillation matched joint GRPO on a two-domain mix with 42.0% fewer total FLOPs.",
-  "watch_item": "The 50× result excludes teacher training; single-domain distillation adds compute, and external-teacher OPD often inflates response length.",
+  "evidence_signal": "OPD recovered a GRPO checkpoint’s math accuracy with 50× fewer distillation FLOPs; multi-teacher distillation cost 5.2% and 8.0% of specialist training FLOPs for two and four domains, respectively, and the two-domain pipeline used 42.0% fewer total FLOPs than joint GRPO.",
+  "watch_item": "The 50× result excludes teacher training: single-domain distillation adds compute to an already usable checkpoint, and external-teacher OPD often inflates response length.",
   "hashtags": [
     "#OnPolicyDistillation",
     "#GRPO",
     "#ComputeEfficiency",
     "#MultiTeacherDistillation",
-    "#LLMTraining"
+    "#ReinforcementLearning"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO",
   "paper_date": "2026-11-05",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-07T18:31:56",
+  "generated_at": "2026-11-08T18:43:01",
   "generator": "openai"
 }

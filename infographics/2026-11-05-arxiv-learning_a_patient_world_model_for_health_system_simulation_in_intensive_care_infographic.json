@@ -1,19 +1,19 @@
 {
-  "key_insight": "A learned patient world model can support multiple ICU policy simulations without rebuilding clinical states and transitions for each question.",
-  "engineering_relevance": "Engineers can reuse a frozen patient-dynamics model while reconfiguring ICU resources, queues, and scenario-specific mappings to evaluate operational policies.",
+  "key_insight": "A learned patient world model can support multiple ICU simulations by changing scenario mappings rather than rebuilding clinical state models.",
+  "engineering_relevance": "The approach connects history-aware patient predictions to shared calendars, resources, and queues for evaluating ICU capacity and care-dispatch policies.",
   "method": [
     "Train a neural patient world model on longitudinal MIMIC-IV EHRs.",
-    "Freeze the model and connect time-queryable predictions to shared ICU calendars, resources, and queues.",
-    "Simulate bed capacity, care dispatch, and post-ICU transfer capacity using scenario-specific mappings."
+    "Freeze the model and map time-queryable predictions to admissions, care tasks, and discharge proposals.",
+    "Simulate ICU bed capacity, care dispatch, and post-ICU transfer capacity scenarios."
   ],
-  "evidence_signal": "The model matched Markov and semi-Markov comparators on aggregate occupancy and directional policy responses, reproduced policy gains from observed-trajectory replay, and captured a history-dependent 24-hour recovery contrast of −6.4 versus −6.7 observed percentage points.",
-  "watch_item": "Performance beyond the studied ICU data and scenarios remains unestablished; deployment would require local validation of patient dynamics and scenario mappings.",
+  "evidence_signal": "The model matched Markov and semi-Markov comparators on aggregate occupancy and directional policy responses, while capturing a history-dependent 24-hour recovery difference of −6.4 percentage points versus −6.7 observed.",
+  "watch_item": "Validation beyond MIMIC-IV and careful calibration of scenario-specific mappings remain important before operational deployment.",
   "hashtags": [
-    "#PatientWorldModel",
+    "#PatientWorldModels",
     "#HealthSystemSimulation",
-    "#ICUOperations",
+    "#IntensiveCare",
     "#ClinicalAI",
-    "#ResourcePlanning"
+    "#ComputationalEngineering"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Learning a patient world model for health system simulation in intensive care",
   "paper_date": "2026-11-05",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-11-07T18:32:21",
+  "generated_at": "2026-11-08T18:43:30",
   "generator": "openai"
 }

@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-07
+Generated: 2026-11-08
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization
