@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-08
+Generated: 2026-11-09
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization
+## 1. Fixed-point acceleration on Neural Wasserstein manifolds
 
-- Date: 2026-11-05
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.08483v1
-- PDF: https://arxiv.org/pdf/2611.08483v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-swarmevolve_latent_agent_swarms_for_evolutionary_discovery_and_optimization_infographic.json
-
-## 2. Module-Aware Optimization for Graph Neural Networks
-
-- Date: 2026-11-05
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.08379v1
-- PDF: https://arxiv.org/pdf/2611.08379v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-module_aware_optimization_for_graph_neural_networks_infographic.json
-
-## 3. Unpacking the Compute Efficiency of Strong-to-Weak OPD against GRPO
-
-- Date: 2026-11-05
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.08453v1
-- PDF: https://arxiv.org/pdf/2611.08453v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-unpacking_the_compute_efficiency_of_strong_to_weak_opd_against_grpo_infographic.json
-
-## 4. Adversarial Training with Large Step Sizes: Implicit Bias, Optimization, and Sharpness
-
-- Date: 2026-11-05
+- Date: 2026-11-06
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2611.08457v1
-- PDF: https://arxiv.org/pdf/2611.08457v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-adversarial_training_with_large_step_sizes_implicit_bias_optimization_and_sharpness_infographic.json
+- arXiv: https://arxiv.org/abs/2611.09723v1
+- PDF: https://arxiv.org/pdf/2611.09723v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-fixed_point_acceleration_on_neural_wasserstein_manifolds_infographic.json
 
-## 5. User Embeddings are Superpositions of Interpretable Behavioral Modes
+## 2. Inverse design of superconductors and semiconductors with differentiable foundation models
 
-- Date: 2026-11-05
+- Date: 2026-11-06
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2611.09572v1
+- PDF: https://arxiv.org/pdf/2611.09572v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-inverse_design_of_superconductors_and_semiconductors_with_differentiable_foundation_models_infographic.json
+
+## 3. Discovering formally verified quantum programs with AI
+
+- Date: 2026-11-06
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.08487v1
-- PDF: https://arxiv.org/pdf/2611.08487v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-user_embeddings_are_superpositions_of_interpretable_behavioral_modes_infographic.json
+- arXiv: https://arxiv.org/abs/2611.09822v1
+- PDF: https://arxiv.org/pdf/2611.09822v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-discovering_formally_verified_quantum_programs_with_ai_infographic.json
 
-## 6. RM-VLM: From Natural-Language Task Descriptions to Vision-Grounded Reward Machines
+## 4. MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory
 
-- Date: 2026-11-05
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2611.08308v1
-- PDF: https://arxiv.org/pdf/2611.08308v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-rm_vlm_from_natural_language_task_descriptions_to_vision_grounded_reward_machines_infographic.json
-
-## 7. Data-driven discovery of intrinsic Lie point symmetries of differential equation systems
-
-- Date: 2026-11-05
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.08421v1
-- PDF: https://arxiv.org/pdf/2611.08421v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-data_driven_discovery_of_intrinsic_lie_point_symmetries_of_differential_equation_systems_infographic.json
-
-## 8. Conformal Prediction for Time-Dependent PDEs
-
-- Date: 2026-11-05
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.08409v1
-- PDF: https://arxiv.org/pdf/2611.08409v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-conformal_prediction_for_time_dependent_pdes_infographic.json
-
-## 9. How Far Can Untrained Neural Networks Go in Anomaly Detection? From Tables to Pixels
-
-- Date: 2026-11-05
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.08136v1
-- PDF: https://arxiv.org/pdf/2611.08136v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-how_far_can_untrained_neural_networks_go_in_anomaly_detection_from_tables_to_pixels_infographic.json
-
-## 10. The Power of Meta Access in the Software of the Future --- Demonstrated on LLM Chat UIs and Chat AI
-
-- Date: 2026-11-05
+- Date: 2026-11-06
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.08428v1
-- PDF: https://arxiv.org/pdf/2611.08428v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-the_power_of_meta_access_in_the_software_of_the_future_demonstrated_on_llm_chat_uis_and_ch_infographic.json
+- arXiv: https://arxiv.org/abs/2611.09721v1
+- PDF: https://arxiv.org/pdf/2611.09721v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-memorydojo_benchmarking_poisoning_through_llm_agent_memory_infographic.json
 
-## 11. A Generative Foundation Model for Multimodal Tokamak Tasks
+## 5. On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning
 
-- Date: 2026-11-05
+- Date: 2026-11-06
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.08153v1
-- PDF: https://arxiv.org/pdf/2611.08153v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-a_generative_foundation_model_for_multimodal_tokamak_tasks_infographic.json
+- arXiv: https://arxiv.org/abs/2611.09872v1
+- PDF: https://arxiv.org/pdf/2611.09872v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-on_the_reliability_of_majority_vote_pseudo_labels_in_test_time_reinforcement_learning_infographic.json
 
-## 12. ReproBridge: Building Reproducibility into ML Research Artifacts
+## 6. A Tight Hierarchy for Chain of Thought
 
-- Date: 2026-11-05
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.08452v1
-- PDF: https://arxiv.org/pdf/2611.08452v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-reprobridge_building_reproducibility_into_ml_research_artifacts_infographic.json
+- Date: 2026-11-06
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.09759v1
+- PDF: https://arxiv.org/pdf/2611.09759v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-a_tight_hierarchy_for_chain_of_thought_infographic.json
 
-## 13. Accelerating Safe Reinforcement Learning with Massive Parallelism
+## 7. TensorMutation: Learning Weight-Space Mutations of Deep Learning Models on Neural Graphs
 
-- Date: 2026-11-05
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.08273v1
-- PDF: https://arxiv.org/pdf/2611.08273v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-accelerating_safe_reinforcement_learning_with_massive_parallelism_infographic.json
-
-## 14. XStack: A Benchmark for ML Repo Migration
-
-- Date: 2026-11-05
+- Date: 2026-11-06
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.08472v1
-- PDF: https://arxiv.org/pdf/2611.08472v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-xstack_a_benchmark_for_ml_repo_migration_infographic.json
+- arXiv: https://arxiv.org/abs/2611.09650v1
+- PDF: https://arxiv.org/pdf/2611.09650v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-tensormutation_learning_weight_space_mutations_of_deep_learning_models_on_neural_graphs_infographic.json
 
-## 15. Learning a patient world model for health system simulation in intensive care
+## 8. BiLoGo: Reducing the smoothing of localised responses in Transformer-based neural operators for sheet forming
 
-- Date: 2026-11-05
+- Date: 2026-11-06
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.09621v1
+- PDF: https://arxiv.org/pdf/2611.09621v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-bilogo_reducing_the_smoothing_of_localised_responses_in_transformer_based_neural_operators_infographic.json
+
+## 9. Solver-Free Decision-Focused Learning via Neural Optimization Layers for Edge Selection
+
+- Date: 2026-11-06
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.09560v1
+- PDF: https://arxiv.org/pdf/2611.09560v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-solver_free_decision_focused_learning_via_neural_optimization_layers_for_edge_selection_infographic.json
+
+## 10. Scaling Graph Similarity Learning with Graph Neural Networks
+
+- Date: 2026-11-06
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.09805v1
+- PDF: https://arxiv.org/pdf/2611.09805v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-scaling_graph_similarity_learning_with_graph_neural_networks_infographic.json
+
+## 11. Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters
+
+- Date: 2026-11-06
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.09634v1
+- PDF: https://arxiv.org/pdf/2611.09634v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-steerable_multi_objective_group_relative_preference_optimization_with_jointly_trained_low_infographic.json
+
+## 12. CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse
+
+- Date: 2026-11-06
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.09891v1
+- PDF: https://arxiv.org/pdf/2611.09891v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-cpu_arc_agentic_reasoning_caching_for_on_cpu_reasoning_reuse_infographic.json
+
+## 13. Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL
+
+- Date: 2026-11-06
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.09828v1
+- PDF: https://arxiv.org/pdf/2611.09828v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-designing_effective_monitor_based_interventions_for_mitigating_reward_hacking_during_rl_infographic.json
+
+## 14. Attend at the Right Resolution: Head-Adaptive Sparse Attention via Query-Key Interaction Structure
+
+- Date: 2026-11-06
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.09700v1
+- PDF: https://arxiv.org/pdf/2611.09700v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-attend_at_the_right_resolution_head_adaptive_sparse_attention_via_query_key_interaction_st_infographic.json
+
+## 15. A Generalized Bayesian Approach to Clustering with Dimension Reduction
+
+- Date: 2026-11-06
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.09698v1
+- PDF: https://arxiv.org/pdf/2611.09698v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-a_generalized_bayesian_approach_to_clustering_with_dimension_reduction_infographic.json
+
+## 16. Autonomous Particle Image Velocimetry Using Zero-Shot Sim-to-Real Reinforcement Learning
+
+- Date: 2026-11-06
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2611.08392v1
-- PDF: https://arxiv.org/pdf/2611.08392v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-learning_a_patient_world_model_for_health_system_simulation_in_intensive_care_infographic.json
+- arXiv: https://arxiv.org/abs/2611.09679v1
+- PDF: https://arxiv.org/pdf/2611.09679v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-autonomous_particle_image_velocimetry_using_zero_shot_sim_to_real_reinforcement_learning_infographic.json
 
-## 16. Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information
+## 17. Diffusion-free Score Matching for Exact Conditional Sampling
 
-- Date: 2026-11-05
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.08469v1
-- PDF: https://arxiv.org/pdf/2611.08469v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-same_behavior_different_mechanism_what_finite_experiments_can_certify_about_integrated_inf_infographic.json
-
-## 17. Deep-learning surrogate model for rapid quantum-noise computation in dual-pump fiber-optic phase-sensitive amplifiers
-
-- Date: 2026-11-05
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.08437v1
-- PDF: https://arxiv.org/pdf/2611.08437v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-deep_learning_surrogate_model_for_rapid_quantum_noise_computation_in_dual_pump_fiber_optic_infographic.json
-
-## 18. Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement
-
-- Date: 2026-11-05
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.08318v1
-- PDF: https://arxiv.org/pdf/2611.08318v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-learning_the_task_or_learning_the_verifier_rethinking_criteria_exposure_in_embodied_self_i_infographic.json
-
-## 19. Dynamic Optimistic Constrained OCO with Memory via Delay Equivalence
-
-- Date: 2026-11-05
+- Date: 2026-11-06
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.08302v1
-- PDF: https://arxiv.org/pdf/2611.08302v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-dynamic_optimistic_constrained_oco_with_memory_via_delay_equivalence_infographic.json
+- arXiv: https://arxiv.org/abs/2611.09758v1
+- PDF: https://arxiv.org/pdf/2611.09758v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-diffusion_free_score_matching_for_exact_conditional_sampling_infographic.json
 
-## 20. Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks
+## 18. FlowMoP: Stochastic Multi-Person Motion Prediction
 
-- Date: 2026-11-05
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.08417v1
-- PDF: https://arxiv.org/pdf/2611.08417v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-05-arxiv-benchmarks_as_software_terminal_bench_and_the_case_for_continuous_benchmarks_infographic.json
+- Date: 2026-11-06
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2611.09882v1
+- PDF: https://arxiv.org/pdf/2611.09882v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-flowmop_stochastic_multi_person_motion_prediction_infographic.json
+
+## 19. One Run Is Not Enough: A Monte Carlo Protocol for Evaluating LLM Reliability on Data Science Tasks
+
+- Date: 2026-11-06
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.09729v1
+- PDF: https://arxiv.org/pdf/2611.09729v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-one_run_is_not_enough_a_monte_carlo_protocol_for_evaluating_llm_reliability_on_data_scienc_infographic.json
+
+## 20. Encoding Memory in World Models with Test-Time Model-Based Reinforcement Learning
+
+- Date: 2026-11-06
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.09625v1
+- PDF: https://arxiv.org/pdf/2611.09625v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-encoding_memory_in_world_models_with_test_time_model_based_reinforcement_learning_infographic.json
