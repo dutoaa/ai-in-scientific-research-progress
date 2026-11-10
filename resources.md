@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-09
+Generated: 2026-11-10
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. Fixed-point acceleration on Neural Wasserstein manifolds
+## 1. Sage-Taiyi: A Metacognitive Architecture for Scientific Discovery
 
-- Date: 2026-11-06
+- Date: 2026-11-09
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.12762v1
+- PDF: https://arxiv.org/pdf/2611.12762v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-sage_taiyi_a_metacognitive_architecture_for_scientific_discovery_infographic.json
+
+## 2. Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning
+
+- Date: 2026-11-09
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2611.09723v1
-- PDF: https://arxiv.org/pdf/2611.09723v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-fixed_point_acceleration_on_neural_wasserstein_manifolds_infographic.json
+- arXiv: https://arxiv.org/abs/2611.12865v1
+- PDF: https://arxiv.org/pdf/2611.12865v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-shortcuts_and_boundaries_verifiable_rl_misalignment_and_contextual_safety_learning_infographic.json
 
-## 2. Inverse design of superconductors and semiconductors with differentiable foundation models
+## 3. Safe Reinforcement Learning for Multi-Turn Clinical Agents: When Dense Rewards Beat Outcome Rewards
 
-- Date: 2026-11-06
+- Date: 2026-11-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.12728v1
+- PDF: https://arxiv.org/pdf/2611.12728v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-safe_reinforcement_learning_for_multi_turn_clinical_agents_when_dense_rewards_beat_outcome_infographic.json
+
+## 4. Kolmogorov-Chapman Maps: Trajectory-Free Learning for Simulating Molecular Dynamics
+
+- Date: 2026-11-09
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2611.12880v1
+- PDF: https://arxiv.org/pdf/2611.12880v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-kolmogorov_chapman_maps_trajectory_free_learning_for_simulating_molecular_dynamics_infographic.json
+
+## 5. CoilStellaration: A Dataset and Benchmark for Engineering-Aware Stellarator Coilset Generation
+
+- Date: 2026-11-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.12689v1
+- PDF: https://arxiv.org/pdf/2611.12689v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-coilstellaration_a_dataset_and_benchmark_for_engineering_aware_stellarator_coilset_generat_infographic.json
+
+## 6. Agentic-OPD: Recovering Forgotten Agent Capabilities via On-Policy Distillation for Agentic Tasks
+
+- Date: 2026-11-09
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.12799v1
+- PDF: https://arxiv.org/pdf/2611.12799v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-agentic_opd_recovering_forgotten_agent_capabilities_via_on_policy_distillation_for_agentic_infographic.json
+
+## 7. Smartphone-Enabled Depth-Aware Transillumination Imaging for Detection of Chicken Breast Fillet Myopathies in Chicken Fillets
+
+- Date: 2026-11-09
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.12796v1
+- PDF: https://arxiv.org/pdf/2611.12796v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-smartphone_enabled_depth_aware_transillumination_imaging_for_detection_of_chicken_breast_f_infographic.json
+
+## 8. VLA Adaptation with Real and Simulated Data: A Case Study on Robotic Chess
+
+- Date: 2026-11-09
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2611.12676v1
+- PDF: https://arxiv.org/pdf/2611.12676v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-vla_adaptation_with_real_and_simulated_data_a_case_study_on_robotic_chess_infographic.json
+
+## 9. TRACE: Adaptive Trust-Region Bayesian Optimization for Open-Ended Molecular Design
+
+- Date: 2026-11-09
 - Category: Biomedical and Physical Sciences
-- arXiv: https://arxiv.org/abs/2611.09572v1
-- PDF: https://arxiv.org/pdf/2611.09572v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-inverse_design_of_superconductors_and_semiconductors_with_differentiable_foundation_models_infographic.json
+- arXiv: https://arxiv.org/abs/2611.12591v1
+- PDF: https://arxiv.org/pdf/2611.12591v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-trace_adaptive_trust_region_bayesian_optimization_for_open_ended_molecular_design_infographic.json
 
-## 3. Discovering formally verified quantum programs with AI
+## 10. PORT: Preference Optimization via Robust Token-Level Reweighting
 
-- Date: 2026-11-06
+- Date: 2026-11-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.12763v1
+- PDF: https://arxiv.org/pdf/2611.12763v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-port_preference_optimization_via_robust_token_level_reweighting_infographic.json
+
+## 11. Vendi Anomaly Scores for Efficient and Accurate Anomaly Detection
+
+- Date: 2026-11-09
 - Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.09822v1
-- PDF: https://arxiv.org/pdf/2611.09822v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-discovering_formally_verified_quantum_programs_with_ai_infographic.json
+- arXiv: https://arxiv.org/abs/2611.12871v1
+- PDF: https://arxiv.org/pdf/2611.12871v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-vendi_anomaly_scores_for_efficient_and_accurate_anomaly_detection_infographic.json
 
-## 4. MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory
+## 12. What kills $v$-prediction? A Patch-wise PCA Perspective on Pixel-Space Flow Matching
 
-- Date: 2026-11-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.09721v1
-- PDF: https://arxiv.org/pdf/2611.09721v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-memorydojo_benchmarking_poisoning_through_llm_agent_memory_infographic.json
-
-## 5. On the Reliability of Majority-Vote Pseudo-Labels in Test-Time Reinforcement Learning
-
-- Date: 2026-11-06
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.09872v1
-- PDF: https://arxiv.org/pdf/2611.09872v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-on_the_reliability_of_majority_vote_pseudo_labels_in_test_time_reinforcement_learning_infographic.json
-
-## 6. A Tight Hierarchy for Chain of Thought
-
-- Date: 2026-11-06
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.09759v1
-- PDF: https://arxiv.org/pdf/2611.09759v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-a_tight_hierarchy_for_chain_of_thought_infographic.json
-
-## 7. TensorMutation: Learning Weight-Space Mutations of Deep Learning Models on Neural Graphs
-
-- Date: 2026-11-06
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.09650v1
-- PDF: https://arxiv.org/pdf/2611.09650v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-tensormutation_learning_weight_space_mutations_of_deep_learning_models_on_neural_graphs_infographic.json
-
-## 8. BiLoGo: Reducing the smoothing of localised responses in Transformer-based neural operators for sheet forming
-
-- Date: 2026-11-06
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.09621v1
-- PDF: https://arxiv.org/pdf/2611.09621v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-bilogo_reducing_the_smoothing_of_localised_responses_in_transformer_based_neural_operators_infographic.json
-
-## 9. Solver-Free Decision-Focused Learning via Neural Optimization Layers for Edge Selection
-
-- Date: 2026-11-06
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.09560v1
-- PDF: https://arxiv.org/pdf/2611.09560v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-solver_free_decision_focused_learning_via_neural_optimization_layers_for_edge_selection_infographic.json
-
-## 10. Scaling Graph Similarity Learning with Graph Neural Networks
-
-- Date: 2026-11-06
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.09805v1
-- PDF: https://arxiv.org/pdf/2611.09805v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-scaling_graph_similarity_learning_with_graph_neural_networks_infographic.json
-
-## 11. Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters
-
-- Date: 2026-11-06
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.09634v1
-- PDF: https://arxiv.org/pdf/2611.09634v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-steerable_multi_objective_group_relative_preference_optimization_with_jointly_trained_low_infographic.json
-
-## 12. CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse
-
-- Date: 2026-11-06
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.09891v1
-- PDF: https://arxiv.org/pdf/2611.09891v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-cpu_arc_agentic_reasoning_caching_for_on_cpu_reasoning_reuse_infographic.json
-
-## 13. Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL
-
-- Date: 2026-11-06
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.09828v1
-- PDF: https://arxiv.org/pdf/2611.09828v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-designing_effective_monitor_based_interventions_for_mitigating_reward_hacking_during_rl_infographic.json
-
-## 14. Attend at the Right Resolution: Head-Adaptive Sparse Attention via Query-Key Interaction Structure
-
-- Date: 2026-11-06
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.09700v1
-- PDF: https://arxiv.org/pdf/2611.09700v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-attend_at_the_right_resolution_head_adaptive_sparse_attention_via_query_key_interaction_st_infographic.json
-
-## 15. A Generalized Bayesian Approach to Clustering with Dimension Reduction
-
-- Date: 2026-11-06
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.09698v1
-- PDF: https://arxiv.org/pdf/2611.09698v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-a_generalized_bayesian_approach_to_clustering_with_dimension_reduction_infographic.json
-
-## 16. Autonomous Particle Image Velocimetry Using Zero-Shot Sim-to-Real Reinforcement Learning
-
-- Date: 2026-11-06
+- Date: 2026-11-09
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2611.09679v1
-- PDF: https://arxiv.org/pdf/2611.09679v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-autonomous_particle_image_velocimetry_using_zero_shot_sim_to_real_reinforcement_learning_infographic.json
+- arXiv: https://arxiv.org/abs/2611.12852v1
+- PDF: https://arxiv.org/pdf/2611.12852v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-what_kills_v_prediction_a_patch_wise_pca_perspective_on_pixel_space_flow_matching_infographic.json
 
-## 17. Diffusion-free Score Matching for Exact Conditional Sampling
+## 13. Mitigating Agentic Deception via Evaluation-Side Partially Observable Games
 
-- Date: 2026-11-06
+- Date: 2026-11-09
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.12835v1
+- PDF: https://arxiv.org/pdf/2611.12835v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-mitigating_agentic_deception_via_evaluation_side_partially_observable_games_infographic.json
+
+## 14. Automated Knowledge Acquisition Pipeline for Disassembly Instructions: A Comparison of NLP and Generative AI Frameworks
+
+- Date: 2026-11-09
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.09758v1
-- PDF: https://arxiv.org/pdf/2611.09758v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-diffusion_free_score_matching_for_exact_conditional_sampling_infographic.json
+- arXiv: https://arxiv.org/abs/2611.12816v1
+- PDF: https://arxiv.org/pdf/2611.12816v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-automated_knowledge_acquisition_pipeline_for_disassembly_instructions_a_comparison_of_nlp_infographic.json
 
-## 18. FlowMoP: Stochastic Multi-Person Motion Prediction
+## 15. LogCDM: Interpretable Log Anomaly Detection via Behavioral Graph Drift and Adaptive Signal Fusion
 
-- Date: 2026-11-06
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2611.09882v1
-- PDF: https://arxiv.org/pdf/2611.09882v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-flowmop_stochastic_multi_person_motion_prediction_infographic.json
-
-## 19. One Run Is Not Enough: A Monte Carlo Protocol for Evaluating LLM Reliability on Data Science Tasks
-
-- Date: 2026-11-06
+- Date: 2026-11-09
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.09729v1
-- PDF: https://arxiv.org/pdf/2611.09729v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-one_run_is_not_enough_a_monte_carlo_protocol_for_evaluating_llm_reliability_on_data_scienc_infographic.json
+- arXiv: https://arxiv.org/abs/2611.12775v1
+- PDF: https://arxiv.org/pdf/2611.12775v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-logcdm_interpretable_log_anomaly_detection_via_behavioral_graph_drift_and_adaptive_signal_infographic.json
 
-## 20. Encoding Memory in World Models with Test-Time Model-Based Reinforcement Learning
+## 16. Beyond Sunny Skies: Using Large Language Models to Predict Urban Traffic in Adverse Weather
 
-- Date: 2026-11-06
+- Date: 2026-11-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.12635v1
+- PDF: https://arxiv.org/pdf/2611.12635v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-beyond_sunny_skies_using_large_language_models_to_predict_urban_traffic_in_adverse_weather_infographic.json
+
+## 17. SciMARS: Multi-Agent Recursive Self-Improvement for Closed-Loop Scientific Discovery
+
+- Date: 2026-11-09
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2611.12552v1
+- PDF: https://arxiv.org/pdf/2611.12552v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-scimars_multi_agent_recursive_self_improvement_for_closed_loop_scientific_discovery_infographic.json
+
+## 18. Learning Rate Decay Can Exponentially Accelerate SGD for Global Optimization of Nonconvex Functions
+
+- Date: 2026-11-09
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.12769v1
+- PDF: https://arxiv.org/pdf/2611.12769v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-learning_rate_decay_can_exponentially_accelerate_sgd_for_global_optimization_of_nonconvex_infographic.json
+
+## 19. Learning inexact alternating minimization for convex problems with quadratic coupling
+
+- Date: 2026-11-09
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.09625v1
-- PDF: https://arxiv.org/pdf/2611.09625v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-06-arxiv-encoding_memory_in_world_models_with_test_time_model_based_reinforcement_learning_infographic.json
+- arXiv: https://arxiv.org/abs/2611.12544v1
+- PDF: https://arxiv.org/pdf/2611.12544v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-learning_inexact_alternating_minimization_for_convex_problems_with_quadratic_coupling_infographic.json
+
+## 20. Adaptive Quantization Preserves Fast Rates for TD Learning over Rate-Limited Channels
+
+- Date: 2026-11-09
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.12878v1
+- PDF: https://arxiv.org/pdf/2611.12878v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-09-arxiv-adaptive_quantization_preserves_fast_rates_for_td_learning_over_rate_limited_channels_infographic.json
