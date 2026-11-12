@@ -1,18 +1,18 @@
 {
-  "key_insight": "Scaling U-Net width and depth enables accurate prediction of full 36-component strain localization tensor fields in 3D concrete microstructures, while conventional channel doubling is suboptimal.",
-  "engineering_relevance": "The surrogate could accelerate repeated mechanical-field evaluations in computational homogenization and multiscale simulations.",
+  "key_insight": "A 3D U-Net predicts full 36-component strain localization tensor fields by scaling network width and depth, while conventional channel-doubling is suboptimal for this task.",
+  "engineering_relevance": "The surrogate could accelerate repeated mechanical-field calculations in concrete homogenization and coupled multiscale simulations.",
   "method": [
-    "Train a U-Net on voxelized concrete mesostructures using localization tensors from an FFT-based linear elastic solver.",
-    "Optimize architecture and scaling for resolutions up to 256³, balancing accuracy and inference speed.",
-    "Use Maximum Mean Discrepancy on internal feature maps to flag out-of-distribution microstructures."
+    "Train on voxelized concrete mesostructures up to 256³ using localization tensors from an FFT-based linear elastic solver.",
+    "Optimize U-Net architecture to derive scaling rules and accuracy–speed trade-offs.",
+    "Use Maximum Mean Discrepancy on internal feature maps to flag out-of-distribution microstructures without reference solves."
   ],
-  "evidence_signal": "The final network reports 1.118% Mean Absolute Error on both validation and held-out test sets, with approximately 8.7× faster inference than the FFT solver on an Nvidia H100 GPU.",
-  "watch_item": "Generalization depends on training morphology diversity; transfer to unfamiliar microstructures requires caution and out-of-distribution screening.",
+  "evidence_signal": "The final model reports 1.118% mean absolute error on both validation and held-out test sets, approximately 8.7× inference speedup over the FFT solver on an Nvidia H100 GPU, and transfer across aggregate volume fractions.",
+  "watch_item": "Generalization depends on morphological diversity in training; out-of-distribution detection is a warning mechanism, not an accuracy guarantee.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#ComputationalMechanics",
     "#MultiscaleModeling",
-    "#UNet",
+    "#NeuralSurrogates",
     "#HeterogeneousMaterials"
   ],
   "model": "gpt-6.1-sol",
@@ -21,6 +21,6 @@
   "paper_title": "Neural network scaling and generalization for 3D strain fields in heterogeneous materials",
   "paper_date": "2026-11-10",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-11-11T21:07:47",
+  "generated_at": "2026-11-12T21:22:00",
   "generator": "openai"
 }

@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-11
+Generated: 2026-11-12
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Neural network scaling and generalization for 3D strain fields in heterogeneous materials

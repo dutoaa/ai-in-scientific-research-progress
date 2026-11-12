@@ -1,13 +1,13 @@
 {
-  "key_insight": "A recurrent forecaster’s initial state can serve as a conditioning interface, yielding small accuracy gains without changing backbone weights.",
-  "engineering_relevance": "Initial-state conditioning offers a lightweight way to adapt recurrent time-series foundation models and inject metadata such as series descriptions.",
+  "key_insight": "A recurrent forecaster’s usually unused initial state can serve as a conditioning interface, modestly improving forecasts without changing backbone weights.",
+  "engineering_relevance": "Small state-writing heads offer a lightweight way to inject spectral context or series-associated text into recurrent time-series foundation models.",
   "method": [
-    "Freeze the xLSTM-based TiRex backbone and train a small head to write context into its initial recurrent state.",
+    "Freeze the xLSTM-based TiRex backbone and train a small head to initialize its recurrent state.",
     "Condition the state on spectral summaries or embeddings of text attached to each series.",
-    "Compare against static learned states, parameter-matched LoRA, and full fine-tuning."
+    "Compare against static states, parameter-matched LoRA adapters, and full fine-tuning."
   ],
-  "evidence_signal": "Spectral conditioning lowered mean GiftEval MASE by 0.175% with every seed improving; on six MoTime datasets, text conditioning added reductions of 0.15–0.41% of baseline MASE on four datasets.",
-  "watch_item": "Results are preliminary and TiRex-specific, with small gains that concentrate in mLSTM blocks and are strongest at short context.",
+  "evidence_signal": "Spectral conditioning reduced mean GiftEval MASE by 0.175% across all tested seeds; on six MoTime datasets, text conditioning added reductions of 0.15–0.41% of baseline MASE on four datasets.",
+  "watch_item": "Results are preliminary and TiRex-specific, with small gains concentrated in mLSTM blocks and strongest at short context.",
   "hashtags": [
     "#TimeSeriesForecasting",
     "#FoundationModels",
@@ -21,6 +21,6 @@
   "paper_title": "The Unused Input: The Initial State as a Conditioning Interface for Recurrent TSFMs",
   "paper_date": "2026-11-10",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-11T21:08:29",
+  "generated_at": "2026-11-12T21:22:41",
   "generator": "openai"
 }

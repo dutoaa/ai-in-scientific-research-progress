@@ -1,19 +1,19 @@
 {
   "key_insight": "Tree-Ising repairs reasoning loops through sparse BF16 weight edits, outperforming an LLM-agent repair without gradients or LLM tokens.",
-  "engineering_relevance": "Discrete weight optimization could make targeted model repairs cheaper and more bit-efficient, using four forward-pass requests and about $0.90 in GPU time for the annealing recipe.",
+  "engineering_relevance": "Discrete weight optimization offers a low-cost repair workflow using four forward-pass requests and about $0.90 in GPU time for the annealing recipe.",
   "method": [
-    "Use forward statistics to weaken looping behavior, strengthen concluding behavior, and preserve outputs on productive tokens.",
+    "Use forward statistics to weaken looping, strengthen concluding, and preserve productive-token outputs.",
     "Restrict edits to admissible sign flips and exponent shifts while preserving shared group exponents and mantissas.",
-    "Decompose the objective into independent per-row QUBO problems, solved on GPU by simulated annealing or simulated bifurcation."
+    "Decompose the objective exactly into per-row QUBO problems solved with GPU simulated annealing or simulated bifurcation."
   ],
-  "evidence_signal": "On Qwen3.5-0.8B, Tree-Ising scores 54.6–55.1% on MATH-500 versus 51.7% for the agent edit; on Qwen3.5-2B, it raises greedy GSM8K accuracy from 21.6% to 69.4%.",
-  "watch_item": "Evidence focuses on math benchmarks and two model sizes; broader capability preservation remains unestablished, and quantum execution covers only an eight-variable proof of concept.",
+  "evidence_signal": "On Qwen3.5-0.8B, Tree-Ising achieves 54.6–55.1% MATH-500 accuracy versus 51.7% for the agent edit; improvements on MATH-500 and GSM8K remain significant after multiple-comparison correction.",
+  "watch_item": "Evidence is limited to the reported Qwen models and math benchmarks; the eight-variable QAOA demonstration does not establish practical quantum advantage.",
   "hashtags": [
-    "#ModelRepair",
+    "#LanguageModelRepair",
     "#DiscreteOptimization",
     "#QUBO",
-    "#EfficientAI",
-    "#ScientificComputing"
+    "#IsingModels",
+    "#EfficientAI"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
   "paper_date": "2026-11-10",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-11-11T21:07:51",
+  "generated_at": "2026-11-12T21:22:05",
   "generator": "openai"
 }

@@ -1,13 +1,13 @@
 {
-  "key_insight": "VATC combines declared agent traffic, router-side verification, and rate-limited priority service to reduce agent queuing delay while protecting human traffic from spoofed floods.",
-  "engineering_relevance": "Network engineers could use VATC to manage agent-heavy congestion, but its value depends on classifier robustness and queue-rate tuning.",
+  "key_insight": "VATC combines declared agent traffic, router-side verification, and rate-limited priority scheduling to reduce agent queuing delay while protecting human traffic from spoofed floods.",
+  "engineering_relevance": "Network engineers could use VATC to prioritize latency-sensitive AI agents, but benefits depend on classifier reliability and careful queue configuration.",
   "method": [
-    "Mark agent flows with a reserved DSCP value.",
+    "Mark agent traffic with a reserved DSCP value.",
     "Demote flows that contradict their agent declaration to below best-effort service.",
     "Serve accepted agent traffic through a rate-limited priority queue."
   ],
-  "evidence_signal": "Across two simulators and a Linux kernel, VATC cut mean agent queuing delay 98% versus DiffServ in a simulated burst with immediate verification, raised human delay 12%, and kept human latency 11× lower under a kernel-tested spoofed flood.",
-  "watch_item": "Verification remains fragile: the classifier missed six agent-mimicking spoofers, and emulated network delay erased a timing feature’s ability to distinguish agent from human flows.",
+  "evidence_signal": "Across two simulators and Linux-kernel tests, VATC cut mean agent queuing delay 98% versus DiffServ in a constructed burst assuming immediate verification, increased human delay 12%, and kept human latency 11 times below DiffServ under a spoofed flood.",
+  "watch_item": "Results used synthetic or sandbox-scale traffic; the live classifier missed six agent-pattern spoofers, and emulated network delay erased one timing feature’s ability to distinguish agents from humans.",
   "hashtags": [
     "#AgenticAI",
     "#NetworkQoS",
@@ -21,6 +21,6 @@
   "paper_title": "Verifiable Agentic Traffic Class: A Policed Quality-of-Service Mechanism for Agentic AI Traffic, Evaluated from Simulation to Real-Kernel Adversarial Testing",
   "paper_date": "2026-11-10",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-11-11T21:08:05",
+  "generated_at": "2026-11-12T21:22:19",
   "generator": "openai"
 }

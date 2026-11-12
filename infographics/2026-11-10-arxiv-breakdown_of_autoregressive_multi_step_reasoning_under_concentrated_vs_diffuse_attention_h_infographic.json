@@ -1,15 +1,15 @@
 {
-  "key_insight": "Concentrated attention-head dropout disrupts autoregressive reasoning more than diffuse dropout with the same masking budget.",
-  "engineering_relevance": "Transformer fault-tolerance testing should assess clustered disruptions, not just average dropout rates.",
+  "key_insight": "Concentrated attention-head dropout disrupts autoregressive reasoning more than diffuse dropout with the same cumulative masking budget.",
+  "engineering_relevance": "Fault-tolerance testing for transformer inference should assess disruption concentration, not just overall dropout rates.",
   "method": [
-    "Evaluate 250 paired GSM8K derivations per model on Qwen3-8B and LLaMA-3.1-8B-Instruct.",
-    "Compare clustered attention-head masking with budget-matched diffuse dropout and stratified temporal redistribution.",
-    "Explore single-step dropout density versus multi-token continuity in a separate N=100 factorial analysis."
+    "Evaluated 250 paired GSM8K derivations in Qwen3-8B and LLaMA-3.1-8B-Instruct.",
+    "Compared clustered attention-head masking with budget-matched diffuse dropout and stratified temporal redistribution.",
+    "Explored single-step density versus multi-token continuity in a separate 100-example factorial evaluation."
   ],
-  "evidence_signal": "At onset parameter B=0.10 (~5.7% scheduled vulnerable head-token volume), burst versus diffuse accuracy fell from 91.2% to 78.8% in Qwen (−12.4 pp; p=5.5×10⁻⁶) and from 84.0% to 76.8% in LLaMA (−7.2 pp; p=0.0198).",
-  "watch_item": "Evidence is limited to two 8B models on GSM8K; the exploratory multi-token continuity effect was inconclusive.",
+  "evidence_signal": "At onset parameter B=0.10, scheduling approximately 5.7% of vulnerable head-token volume, burst versus diffuse dropout reduced accuracy from 91.2% to 78.8% in Qwen (−12.4 pp; p=5.5×10⁻⁶) and from 84.0% to 76.8% in LLaMA (−7.2 pp; p=0.0198).",
+  "watch_item": "Evidence is limited to two 8B models on GSM8K; the exploratory continuity effect was inconclusive, and some LLaMA losses involved missing final-answer formatting.",
   "hashtags": [
-    "#LLMReliability",
+    "#LLMRobustness",
     "#AttentionHeads",
     "#AutoregressiveReasoning",
     "#FaultTolerance",
@@ -21,6 +21,6 @@
   "paper_title": "Breakdown of Autoregressive Multi-Step Reasoning Under Concentrated vs. Diffuse Attention Head Dropout",
   "paper_date": "2026-11-10",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-11T21:08:10",
+  "generated_at": "2026-11-12T21:22:24",
   "generator": "openai"
 }
