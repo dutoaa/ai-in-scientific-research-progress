@@ -24,17 +24,17 @@
         "url": "https://arxiv.org/pdf/2611.17241v1"
       }
     ],
-    "score": 78,
+    "score": 73,
     "infographic": {
-      "key_insight": "Adaptive LLM routing can match or outperform the best single model for automated heuristic discovery without always relying on the largest, costliest model.",
-      "engineering_relevance": "Ballad offers a way to reduce API spending while maintaining or improving heuristic quality in combinatorial optimization workflows.",
+      "key_insight": "Adaptive LLM routing can match or outperform any single model in automated heuristic discovery; larger, costlier models are not consistently better.",
+      "engineering_relevance": "Ballad offers a way to improve heuristic search while reducing API spending by selecting models according to their evolving contribution.",
       "method": [
-        "Use online bandit routing to select an LLM at each search step, favoring rare, high-scoring heuristics over stable averages.",
+        "Use an online bandit policy that favors rare, high-scoring heuristics over stable average performance.",
         "Propagate credit through a DAG representing the heuristic population’s genealogy.",
-        "Discount stale observations to track each model’s changing utility."
+        "Discount stale observations to track each model’s current utility."
       ],
-      "evidence_signal": "Across five NP-hard optimization problems and four LLMs, Ballad matched the best individual model in hindsight, sometimes surpassed every individual model, and reduced API cost by up to 65.6% versus always using the strongest model.",
-      "watch_item": "Results cover five problems and four models; performance and savings may differ with other model pools, pricing, or search budgets.",
+      "evidence_signal": "Across five NP-hard combinatorial optimization problems and four LLMs, Ballad matched the best individual model in hindsight, sometimes surpassed all individual models, and reduced API cost by up to 65.6% versus always using the strongest model.",
+      "watch_item": "Results cover only five problems and four models; effectiveness and savings may change with the model pool, pricing, and search setting.",
       "hashtags": [
         "#AutomatedHeuristicDiscovery",
         "#LLMRouting",
@@ -48,7 +48,7 @@
       "paper_title": "Ballad: Bandit-Based LLM Routing for Automated Heuristic Discovery",
       "paper_date": "2026-11-12",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-11-13T20:48:04",
+      "generated_at": "2026-11-14T18:58:41",
       "generator": "openai"
     }
   },
@@ -79,17 +79,17 @@
         "url": "https://arxiv.org/pdf/2611.17042v1"
       }
     ],
-    "score": 78,
+    "score": 73,
     "infographic": {
-      "key_insight": "Accelerating verifiable AI requires matching hardware and proof-system optimizations to workload-specific bottlenecks, rather than optimizing cryptographic kernels in isolation.",
-      "engineering_relevance": "Engineers must assess memory capacity, instruction issue and synchronization alongside execution time and bandwidth when selecting hardware for zero-knowledge proving.",
+      "key_insight": "Verifiable AI acceleration must target workload-specific proof costs, which shift with the proof system and input length rather than following a single universal bottleneck.",
+      "engineering_relevance": "Hardware selection should account for memory capacity, instruction issue and synchronization limits—not just bandwidth or isolated cryptographic speedups.",
       "method": [
-        "Link AI workloads, proof systems, cryptographic kernels and hardware through a four-layer framework.",
-        "Review the literature and measure six provers and seven kernels.",
-        "Analyze bottlenecks to guide hardware selection and proof-system optimization."
+        "Link AI workloads, proof systems, cryptographic kernels and hardware in a four-layer framework.",
+        "Review prior research and measure six provers and seven kernels.",
+        "Assess GPUs, reconfigurable logic, custom chips and existing AI accelerators against observed bottlenecks."
       ],
-      "evidence_signal": "Measurements show shifting costs across proof systems and input lengths; a 13-billion-parameter fine-tuning configuration exceeds 40 GB GPU capacity but completes on an 80 GB device.",
-      "watch_item": "Kernel-level speedups may not translate into end-to-end gains when memory capacity or other proof-generation stages dominate.",
+      "evidence_signal": "Across input lengths of 64–2048, fixed-weight commitment-opening costs stayed nearly constant while intermediate-value work grew; a 13B-parameter fine-tuning configuration exceeded 40 GB GPU capacity but completed on an 80 GB device.",
+      "watch_item": "Kernel-level speedups alone do not establish end-to-end gains; validate the complete proof workload and its memory requirements.",
       "hashtags": [
         "#VerifiableAI",
         "#ZeroKnowledgeProofs",
@@ -103,7 +103,7 @@
       "paper_title": "Infrastructure for Verifiable AI: Where Proof Costs Go and How Hardware Can Help",
       "paper_date": "2026-11-12",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-13T20:48:06",
+      "generated_at": "2026-11-14T18:58:43",
       "generator": "openai"
     }
   },
@@ -132,23 +132,23 @@
         "url": "https://arxiv.org/pdf/2611.17031v1"
       }
     ],
-    "score": 78,
+    "score": 73,
     "infographic": {
-      "key_insight": "A frozen vision foundation model can outperform specialized EEG foundation models when EEG signals are rendered as task-optimized images.",
-      "engineering_relevance": "SeeEEG offers a parameter-efficient way to reuse pretrained vision encoders for EEG tasks by learning the signal display rather than updating the backbone.",
+      "key_insight": "A frozen vision foundation model can outperform specialized frozen EEG foundation models when EEG signals are rendered as task-optimized images.",
+      "engineering_relevance": "SeeEEG enables reuse of pretrained vision backbones for EEG analysis while training at most 1,113 display parameters per view, plus a task readout.",
       "method": [
         "Render each EEG channel in a dedicated patch row as a fixed-gain waveform or frequency-scaled scalogram.",
-        "Optimize montage, filtering, and contrast through the frozen backbone using at most 1,113 trainable parameters per view.",
-        "Evaluate frozen encoders with identical readout heads and transfer learned displays to V-JEPA 2.1 without further display optimization."
+        "Optimize montage, filtering, and contrast through a frozen vision backbone using task loss.",
+        "Evaluate frozen encoders with identical readout heads."
       ],
-      "evidence_signal": "Across eight datasets, DINOv3-based SeeEEG beat seven EEG foundation models in balanced accuracy on every dataset; replacing DINOv3 with a random ViT-B reduced scores by 15.2 points on average.",
-      "watch_item": "The results establish frozen-encoder performance, not superiority over fine-tuned EEG models, and display optimization still requires task supervision.",
+      "evidence_signal": "Across eight datasets and seven EEG foundation-model baselines, SeeEEG with DINOv3 ViT-B led balanced accuracy on every dataset; random initialization reduced scores by 15.2 points on average.",
+      "watch_item": "The results establish frozen-encoder performance, not superiority over fully fine-tuned EEG models; display optimization still requires task supervision.",
       "hashtags": [
         "#EEG",
         "#FoundationModels",
         "#VisionTransformers",
         "#TransferLearning",
-        "#ComputationalNeuroscience"
+        "#Neuroengineering"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -156,7 +156,7 @@
       "paper_title": "Your Vision Foundation Model Is Secretly an EEG Foundation Model",
       "paper_date": "2026-11-12",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-13T20:48:09",
+      "generated_at": "2026-11-14T18:58:46",
       "generator": "openai"
     }
   },
@@ -185,17 +185,17 @@
         "url": "https://arxiv.org/pdf/2611.16992v1"
       }
     ],
-    "score": 77,
+    "score": 72,
     "infographic": {
-      "key_insight": "Bidding determines both advertising outcomes and access to price information, making media trading a joint control-and-learning problem under censored auction prices.",
-      "engineering_relevance": "The framework supports bidding-system design that balances campaign performance, transaction margins, finite budgets, and price exploration.",
+      "key_insight": "Real-time bidding couples budget-aware control with learning because bids determine both auction outcomes and which market-clearing prices are observed.",
+      "engineering_relevance": "The framework supports advertising bid policies that balance campaign performance, transaction margins, budget use and information gathering.",
       "method": [
-        "Model bidding as continuous-time stochastic control with latent market prices.",
-        "Estimate prices using parallel exploratory subcampaigns with randomized, upper-bounded bids.",
-        "Compute policies via forward-equation calibration, HJB policy iteration and a physics-informed neural network, or observable-information entropy-regularized actor-critic learning."
+        "Model bidding as continuous-time stochastic control with a latent price process.",
+        "Estimate prices through parallel exploratory subcampaigns using bounded randomized bids.",
+        "Develop model-based calibration with HJB policy iteration and a physics-informed neural network, alongside observable-information, entropy-regularized actor-critic learning."
       ],
-      "evidence_signal": "Synthetic experiments illustrate estimation and computation; under a stylized cross-sectional sampling model, the price estimator is consistent with mean-square error of order N⁻¹.",
-      "watch_item": "Full-information benchmarks and estimated-price policies do not resolve the genuinely partially observed problem, and real-world validation is not reported in the abstract.",
+      "evidence_signal": "Synthetic experiments illustrate the estimator and computational methods; under a stylized sampling model, the estimator is consistent with mean-square error of order 1/N.",
+      "watch_item": "The estimation guarantee relies on stylized sampling assumptions, and estimated-price policies remain distinct from solving the genuinely partially observed control problem.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#ReinforcementLearning",
@@ -209,7 +209,7 @@
       "paper_title": "Media Trading with Censored Auction Prices: A Stochastic Control and Reinforcement Learning Approach",
       "paper_date": "2026-11-12",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-13T20:48:11",
+      "generated_at": "2026-11-14T18:58:48",
       "generator": "openai"
     }
   },
@@ -238,17 +238,17 @@
         "url": "https://arxiv.org/pdf/2611.16986v1"
       }
     ],
-    "score": 77,
+    "score": 72,
     "infographic": {
-      "key_insight": "Primer is an open-source, LLM-agnostic framework that helps instructors create adaptive educational simulations grounded in their teaching goals and knowledge of students.",
-      "engineering_relevance": "Its multi-agent architecture supports educator-guided simulation authoring and model choice, including local and open-source models for varied governance requirements.",
+      "key_insight": "Primer uses multi-agent AI to help instructors turn their materials, goals, and student knowledge into adaptive educational simulations.",
+      "engineering_relevance": "Its open-source, LLM-agnostic design supports customizable simulation workflows and model choices suited to local governance requirements.",
       "method": [
-        "Instructors provide subject knowledge, lesson goals, materials, and student context.",
+        "Instructors supply subject expertise, lesson goals, and knowledge of students.",
         "A multi-agent system carries instructional intent through simulation creation and delivery.",
         "Generative AI produces responsive variations of student practice."
       ],
-      "evidence_signal": "The abstract describes the framework and release of prompts and a GitHub repository, but reports no quantitative evaluation or learning-outcome data.",
-      "watch_item": "Faithfulness to instructional intent and educational effectiveness require validation before classroom deployment.",
+      "evidence_signal": "The abstract describes the framework and release of prompts and code but reports no quantitative evaluation or learning-outcome data.",
+      "watch_item": "Whether simulations reliably preserve instructor intent and improve learning remains to be validated.",
       "hashtags": [
         "#EducationalAI",
         "#MultiAgentSystems",
@@ -262,7 +262,7 @@
       "paper_title": "Primer: An AI Framework for Instructor-Centered Educational Simulation Creation",
       "paper_date": "2026-11-12",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-13T20:48:14",
+      "generated_at": "2026-11-14T18:58:50",
       "generator": "openai"
     }
   },
@@ -292,17 +292,17 @@
         "url": "https://arxiv.org/pdf/2611.17287v1"
       }
     ],
-    "score": 76,
+    "score": 71,
     "infographic": {
-      "key_insight": "When partial checks reliably identify failures but cannot confirm correctness, suppressing verified negatives avoids directly rewarding false positives.",
-      "engineering_relevance": "NOPO offers a policy-training approach for settings where unit tests, constraint checks, or LLM verifiers can reject failures but cannot certify successful solutions.",
+      "key_insight": "When checks can reliably expose failures but cannot prove correctness, learning only from verified negatives avoids rewarding false positives.",
+      "engineering_relevance": "NOPO offers a training approach for code, logic, and math systems where partial checks are available but reliable correctness rewards are not.",
       "method": [
         "Treat non-falsified responses as unlabeled rather than correct.",
-        "Apply a reference-relative loss to suppress trusted verified negatives.",
-        "Scale each update by the group’s proportion of non-falsified responses."
+        "Suppress trusted verified negatives using a reference-relative loss.",
+        "Scale each group’s update by its proportion of non-falsified responses."
       ],
-      "evidence_signal": "The abstract reports improved pass@k over baselines on code, logic, and math benchmarks, with gains persisting under inference-time scaling and cross-benchmark transfer.",
-      "watch_item": "NOPO assumes verified negatives are reliable; erroneous failure labels could suppress valid solutions.",
+      "evidence_signal": "The abstract reports improved pass@k over baselines across code, logic, and math benchmarks using unit-test, constraint-check, and LLM self-verifiers, with gains persisting under inference-time scaling and cross-benchmark transfer.",
+      "watch_item": "NOPO depends on trustworthy negative judgments; erroneous failure labels could suppress correct solutions.",
       "hashtags": [
         "#ReinforcementLearning",
         "#VerifiableRewards",
@@ -316,7 +316,7 @@
       "paper_title": "Negative-Only Policy Optimization for One-Sided Verifiable Rewards",
       "paper_date": "2026-11-12",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-13T20:48:16",
+      "generated_at": "2026-11-14T18:58:53",
       "generator": "openai"
     }
   },
@@ -345,23 +345,23 @@
         "url": "https://arxiv.org/pdf/2611.17007v1"
       }
     ],
-    "score": 76,
+    "score": 71,
     "infographic": {
-      "key_insight": "Skill Adapter personalizes reusable agent skills and dynamically routes them as tasks, inputs, and environments change.",
-      "engineering_relevance": "It offers a way to adapt shared agent procedures to user-specific tools and requirements while managing growing skill libraries.",
+      "key_insight": "Skill Adapter personalizes reusable agent skills and routes them online as tasks, inputs, and environments change.",
+      "engineering_relevance": "The approach can help tool-using LLM agents adapt shared procedures to user requirements while managing growing skill libraries.",
       "method": [
-        "Distill user requirements and execution feedback into Adapters linked to general-purpose skills.",
-        "Route applicable skills and Adapters into an online task library, preloading candidates and rechecking them when inputs become available.",
+        "Store local adjustments from user requirements and execution feedback as Adapters linked to general-purpose skills.",
+        "Route skills and Adapters into a task-level library, preload candidates, and recheck applicability when inputs become available.",
         "Use reinforcement learning to optimize modification and routing decisions."
       ],
-      "evidence_signal": "On ALFWorld, WebShop, and SkillsBench, Skill Adapter improves task success by an average of 11.43 percentage points over SkillRL, reduces mean execution time on all three, and retains its performance advantage with 1,000 skills.",
-      "watch_item": "The abstract does not quantify training costs or adapter-maintenance overhead, which matter for deployment.",
+      "evidence_signal": "Across ALFWorld, WebShop, and SkillsBench, Skill Adapter improves task success by an average of 11.43 percentage points over SkillRL, reduces mean execution time on all three benchmarks, and retains an advantage with 1,000 skills.",
+      "watch_item": "The abstract does not quantify Adapter maintenance overhead or establish generalization beyond the evaluated benchmarks.",
       "hashtags": [
         "#LLMAgents",
-        "#SkillAdapter",
-        "#Personalization",
-        "#DynamicRouting",
-        "#ReinforcementLearning"
+        "#SkillAdaptation",
+        "#OnlineRouting",
+        "#ReinforcementLearning",
+        "#ToolUse"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -369,7 +369,7 @@
       "paper_title": "Skill Adapter: Personalized Modification and Online Routing of General-Purpose Skills",
       "paper_date": "2026-11-12",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-13T20:48:18",
+      "generated_at": "2026-11-14T18:58:55",
       "generator": "openai"
     }
   },
@@ -399,17 +399,17 @@
         "url": "https://arxiv.org/pdf/2611.17246v1"
       }
     ],
-    "score": 72,
+    "score": 67,
     "infographic": {
-      "key_insight": "A frozen, general-purpose LLM can propose promising quantum-circuit parameters when Hamiltonians have identifiable structure, but performs worse than Adam on general random Hamiltonians.",
-      "engineering_relevance": "LLM-generated circuit parameters enable independently verifiable energy calculations, making them more trustworthy engineering outputs than direct energy predictions.",
+      "key_insight": "A frozen, general-purpose LLM can generate promising quantum circuit parameters for structured Hamiltonians, but performs worse than Adam optimization on general random Hamiltonians.",
+      "engineering_relevance": "LLM-generated circuit parameters enable independently verifiable energy evaluations, offering a safer interface than trusting direct LLM energy predictions.",
       "method": [
         "Generate complete circuit parameter vectors from symbolic circuit and Hamiltonian descriptions.",
-        "Optionally provide iterative energy feedback and compare performance with Adam optimization.",
-        "Evaluate random Hamiltonians, structured parent Hamiltonians, molecular systems, and blind circuit interpretation."
+        "Optionally refine parameters using iterative energy feedback and compare against Adam optimization.",
+        "Test blind circuit interpretation through algorithm identification and measurement-outcome prediction."
       ],
-      "evidence_signal": "Evaluations found larger energy errors than Adam for general Hamiltonians, limited gains from feedback, and promising low-energy configurations for structured Hamiltonians.",
-      "watch_item": "Direct LLM energy predictions can violate spectral lower bounds, so independently evaluate generated circuit parameters rather than trusting predicted energies.",
+      "evidence_signal": "Evaluation spans general random Hamiltonians, structured parent Hamiltonians, and molecular systems; feedback generally yields limited improvement, while direct energy predictions can violate spectral lower bounds.",
+      "watch_item": "Performance depends on problem structure; generated parameters require independent energy evaluation and should not be assumed to replace conventional optimization.",
       "hashtags": [
         "#QuantumComputing",
         "#LargeLanguageModels",
@@ -423,7 +423,7 @@
       "paper_title": "Programming Quantum Circuit Parameters with Large Language Models",
       "paper_date": "2026-11-12",
       "paper_category": "Biomedical and Physical Sciences",
-      "generated_at": "2026-11-13T20:48:20",
+      "generated_at": "2026-11-14T18:58:58",
       "generator": "openai"
     }
   },
@@ -453,23 +453,23 @@
         "url": "https://arxiv.org/pdf/2611.17235v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
-      "key_insight": "Al-Ghasali models closed Islamic jurisprudential chapters as deterministic finite-state automata, using constrained LLMs only to verbalize computed rulings.",
-      "engineering_relevance": "The framework offers a design for rule-governed AI systems that separate deterministic decisions from probabilistic language generation.",
+      "key_insight": "Al-Ghasali models closed Islamic jurisprudential chapters as deterministic finite-state automata, using constrained LLM generation to verbalize rather than decide rulings.",
+      "engineering_relevance": "The framework separates deterministic decision logic from probabilistic language generation, targeting constant-time verdict lookup after offline compilation.",
       "method": [
-        "Compile finite propositional Horn rules into deterministic automata for O(1) verdict extraction.",
-        "Compose sub-chapter automata and encode ordering requirements in explicit states.",
-        "Constrain LLM output with execution-derived grammars, a bounded neutral lexicon, and valence locking."
+        "Compile finite propositional Horn-rule theories into deterministic automata.",
+        "Encode temporal requirements as explicit states and compose subchapter automata.",
+        "Constrain LLM output with execution-derived right-linear grammars, a bounded neutral lexicon, and valence locking."
       ],
-      "evidence_signal": "The abstract reports formal proofs of complexity preservation and conditional hallucination prevention, but provides no datasets, benchmarks, or empirical evaluation results.",
-      "watch_item": "Guarantees depend on correct and complete rule formalization and faithfully implemented decoding constraints; offline compilation costs and state-space growth require scrutiny.",
+      "evidence_signal": "The abstract reports formal proofs of computational and output-safety properties, but no empirical datasets, benchmarks, or user evaluations.",
+      "watch_item": "The claimed guarantees depend on correct rule formalization and constraint enforcement; compilation cost and state-space growth remain practical concerns.",
       "hashtags": [
-        "#NeuroSymbolicAI",
         "#FiniteStateAutomata",
         "#ConstrainedDecoding",
-        "#FormalMethods",
-        "#ComputationalFiqh"
+        "#NeuroSymbolicAI",
+        "#ComputationalFiqh",
+        "#FormalMethods"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -477,7 +477,7 @@
       "paper_title": "Al-Ghasali: A Computational Framework for Simulating Islamic Jurisprudential Rulings via Finite State Automata and Large Language Models",
       "paper_date": "2026-11-12",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-13T20:48:22",
+      "generated_at": "2026-11-14T18:59:00",
       "generator": "openai"
     }
   },
@@ -507,17 +507,17 @@
         "url": "https://arxiv.org/pdf/2611.17059v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
-      "key_insight": "Capacity-aware online conformal risk control (CA-OCRC) accounts for delayed and missing feedback while targeting long-term risk guarantees under limited tracking capacity.",
-      "engineering_relevance": "CA-OCRC supports uncertainty-aware prediction systems where feedback arrives late and only a limited number of pending predictions can be tracked.",
+      "key_insight": "Capacity-aware online conformal risk control (CA-OCRC) accounts for delayed and lost feedback while targeting long-term risk guarantees under limited tracking capacity.",
+      "engineering_relevance": "CA-OCRC supports reliable prediction sets in systems where feedback arrives late and only a limited number of predictions can be tracked.",
       "method": [
-        "Sample proxy delays to decide whether and how long to track each prediction.",
-        "Use inverse probability weighting to compensate for feedback lost through delays or capacity limits.",
-        "Optimize the proxy delay distribution using risk bounds for arbitrary and stochastic delays."
+        "Sample a proxy delay to decide whether and how long to track each prediction.",
+        "Update prediction sets using inverse probability weighting to compensate for missing feedback.",
+        "Optimize the proxy-delay distribution using risk bounds that balance feedback collection against capacity saturation."
       ],
-      "evidence_signal": "The abstract reports evaluations in medical imaging, natural language processing, computer vision, and wireless communications, showing effectiveness against existing OCRC methods without specifying numerical gains.",
-      "watch_item": "Tracking-policy design must balance feedback collection against capacity saturation; matching unlimited-feedback long-term risk depends on sufficient capacity under the derived scaling laws.",
+      "evidence_signal": "Experiments span medical imaging, natural language processing, computer vision, and wireless communications, with comparisons against existing OCRC methods.",
+      "watch_item": "Matching unlimited-feedback long-term risk requires sufficient tracking capacity; deployment must balance feedback retention against saturation.",
       "hashtags": [
         "#ConformalPrediction",
         "#RiskControl",
@@ -531,7 +531,7 @@
       "paper_title": "Capacity-Constrained Delayed Feedback for Online Conformal Risk Control",
       "paper_date": "2026-11-12",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-13T20:48:24",
+      "generated_at": "2026-11-14T18:59:02",
       "generator": "openai"
     }
   },
@@ -560,23 +560,23 @@
         "url": "https://arxiv.org/pdf/2611.17134v1"
       }
     ],
-    "score": 69,
+    "score": 64,
     "infographic": {
-      "key_insight": "Support-constrained offline reinforcement learning improves estimated pediatric ECMO decision quality while staying closer to clinician behavior than standard Fitted Q-Iteration.",
-      "engineering_relevance": "Empirical support constraints and clinician fallback offer a practical design pattern for limiting out-of-distribution actions in data-scarce clinical decision systems.",
+      "key_insight": "Support-constrained offline reinforcement learning improves estimated pediatric ECMO policy value while staying closer to clinician behavior than unconstrained FQI.",
+      "engineering_relevance": "Restricting policy optimization to data-supported actions and falling back to clinicians offers a practical safeguard for learning from limited, high-stakes clinical data.",
       "method": [
-        "Use Support-Constrained Fitted Q-Iteration (FQI-SC) to restrict optimization to empirically supported state-action pairs.",
+        "Use Support-Constrained Fitted Q-Iteration (FQI-SC) to optimize only over empirically supported state-action pairs.",
         "Default to the clinician baseline in low-data regions.",
-        "Evaluate estimated value with Fitted Q-Evaluation (FQE), clinician-action disagreement, and a unified Balance Score."
+        "Assess policies using Fitted Q-Evaluation, clinician-action disagreement, and a unified Balance Score."
       ],
-      "evidence_signal": "On 78 pediatric trajectories spanning over 6,000 clinical hours, FQI-SC improved Balance Score by 38% and reduced clinician-action disagreement by 71% versus FQI, while gaining 1.28 FQE units over imitation learning.",
-      "watch_item": "Offline estimates and clinician agreement do not establish clinical safety or neurological benefit; prospective validation is needed before deployment.",
+      "evidence_signal": "Across 78 pediatric trajectories covering over 6,000 hours, FQI-SC improved Balance Score by 38% and reduced clinician-action disagreement by 71% versus FQI, while exceeding imitation learning by 1.28 estimated FQE value units.",
+      "watch_item": "Offline value estimates and clinician agreement do not establish clinical safety or reduced neurological injury; prospective validation is needed.",
       "hashtags": [
         "#OfflineRL",
         "#PediatricECMO",
         "#ClinicalAI",
         "#PolicyImprovement",
-        "#SupportConstraints"
+        "#SafeAI"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -584,7 +584,7 @@
       "paper_title": "Support-Constrained Offline Policy Improvement for Pediatric ECMO from Limited Clinical Data",
       "paper_date": "2026-11-12",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-13T20:48:26",
+      "generated_at": "2026-11-14T18:59:04",
       "generator": "openai"
     }
   },
@@ -614,23 +614,23 @@
         "url": "https://arxiv.org/pdf/2611.16995v1"
       }
     ],
-    "score": 69,
+    "score": 64,
     "infographic": {
-      "key_insight": "Entire sig-jump-diffusions make expected signatures computable through linear ODEs, enabling a tractable foundation for score-based generative modeling.",
-      "engineering_relevance": "The framework offers a deterministic route to training jump-diffusion generators for time series and finite-dimensional data.",
+      "key_insight": "Entire sig-jump-diffusions make expected signatures computable through linear ODEs, enabling score-based generative modeling for time series and finite-dimensional data.",
+      "engineering_relevance": "The framework offers a deterministic route to learning generalized scores for jump-diffusion generators using linear ODE solvers and optimization.",
       "method": [
-        "Define jump-diffusions whose characteristics are linear combinations of their own signature components.",
-        "Compute expected signatures via linear ODEs and learn generalized scores through deterministic optimization.",
-        "Embed polynomial jump-diffusions in finite-dimensional ODE systems and use inverse signature matching for finite-dimensional data."
+        "Define jump-diffusions whose characteristics depend linearly on potentially infinitely many signature components.",
+        "Compute expected signatures via linear ODEs; polynomial jump-diffusions admit finite-dimensional systems.",
+        "Learn generalized scores through deterministic optimization or inverse signature matching."
       ],
-      "evidence_signal": "The abstract reports analytical results, including finite-dimensional closure for polynomial jump-diffusions, but no datasets, benchmarks, or empirical performance metrics.",
-      "watch_item": "General models involve potentially infinite signature expansions, making practical truncation and computational scaling important implementation concerns.",
+      "evidence_signal": "The abstract reports theoretical computability and embedding results, but no datasets, empirical benchmarks, or quantitative generation metrics.",
+      "watch_item": "Outside the polynomial setting, implementing the extended-tensor-algebra ODEs may require truncation, with accuracy and computational cost needing assessment.",
       "hashtags": [
         "#ScoreBasedGenerativeModeling",
         "#JumpDiffusions",
         "#PathSignatures",
         "#TimeSeries",
-        "#ComputationalMathematics"
+        "#ScientificMachineLearning"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -638,7 +638,61 @@
       "paper_title": "Entire sig-jump-diffusions, their expected signature and applications to score-based generative modeling",
       "paper_date": "2026-11-12",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-11-13T20:48:29",
+      "generated_at": "2026-11-14T18:59:06",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-12-arxiv-agentssl_can_mle_agents_leverage_unlabeled_data",
+    "arxiv_id": "2611.17323v1",
+    "date": "2026-11-12",
+    "title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+    "authors": "Ethan Lin, Akanksha Sarkar, Ziang Liu, Kristin Branson, Jennifer J. Sun",
+    "abstract": "Applying machine learning systems to new domains introduces bottlenecks in both labeled data acquisition and manual pipeline engineering. While recent MLE agents show promise in automating pipeline design, they have been studied almost exclusively in fully supervised settings, leaving them untested in realistic regimes where labeled data is scarce but unlabeled data is abundant. In this work, we introduce Agentic Semi-Supervised Learning (AgentSSL), framing SSL as a program search problem and studying how agents navigate this space under limited supervision. We find that even under weak feedback and matched compute, agents can synthesize code that combines and adapts established SSL techniques, exceeding the strongest human-engineered baselines in 8 of 12 settings by up to +21.8%. However, our results identify program selection as a critical bottleneck in AgentSSL, where performance drops by as much as 47% when selecting based on the agent's feedback metric. To systematically study this bottleneck, we introduce ProgramSelectBench, a large-scale benchmark with a combined total of 16,977 agent-generated and human-engineered SSL programs, and evaluate both unsupervised and active program selection methods. We further evaluate AgentSSL on real-world ecology detection tasks, highlighting the opportunities and challenges of transferring agent-discovered strategies beyond controlled benchmarks.",
+    "category": "AI Scientists and Research Agents",
+    "source": "arXiv",
+    "published": "2026-11-12T18:59:06Z",
+    "updated": "2026-11-12T18:59:06Z",
+    "primary_category": "cs.AI",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.17323v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.17323v1"
+      }
+    ],
+    "score": 63,
+    "infographic": {
+      "key_insight": "AgentSSL shows that MLE agents can adapt semi-supervised learning techniques to exploit unlabeled data, but selecting the best generated program remains a major bottleneck.",
+      "engineering_relevance": "Agent-designed SSL pipelines could reduce manual engineering and labeling demands in data-scarce domains, provided program selection is reliable.",
+      "method": [
+        "Frame semi-supervised learning as a program search problem under limited supervision.",
+        "Evaluate agent-generated SSL pipelines under weak feedback and matched compute.",
+        "Benchmark unsupervised and active program selection with ProgramSelectBench."
+      ],
+      "evidence_signal": "Agents exceeded the strongest human-engineered baselines in 8 of 12 settings by up to +21.8%; ProgramSelectBench contains 16,977 agent-generated and human-engineered SSL programs.",
+      "watch_item": "Selection using the agent's feedback metric caused performance drops of up to 47%, and transfer to real-world ecology detection remains challenging.",
+      "hashtags": [
+        "#AgentSSL",
+        "#SemiSupervisedLearning",
+        "#MLEAgents",
+        "#ProgramSelection",
+        "#AIForScience"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-12-arxiv-agentssl_can_mle_agents_leverage_unlabeled_data",
+      "paper_title": "AgentSSL: Can MLE Agents Leverage Unlabeled Data?",
+      "paper_date": "2026-11-12",
+      "paper_category": "AI Scientists and Research Agents",
+      "generated_at": "2026-11-14T18:59:08",
       "generator": "openai"
     }
   },
@@ -668,23 +722,23 @@
         "url": "https://arxiv.org/pdf/2611.17167v1"
       }
     ],
-    "score": 68,
+    "score": 63,
     "infographic": {
       "key_insight": "A decision model that acts poorly can still teach effectively by judging actions after their consequences are visible.",
-      "engineering_relevance": "Use retrospective action-level feedback to improve agent policies rather than selecting teachers solely by their own task success.",
+      "engineering_relevance": "Retrospective action-level feedback can improve reinforcement learning for long-horizon agents without requiring the teacher to be a strong actor.",
       "method": [
-        "Compare three decision models and three general LLMs as actors and judges on ALFWorld.",
-        "Judge complete trajectories by asking whether each action helped, rather than whether the task will succeed.",
-        "Use JEV as a reinforcement-learning teacher on ALFWorld and WebShop."
+        "Compare three decision models and three general LLMs as actors and trajectory-aware judges on ALFWorld.",
+        "Evaluate whether asking if each action helped distinguishes useful from useless actions.",
+        "Use JEV as a teacher for a Qwen2.5-1.5B policy on ALFWorld and WebShop."
       ],
-      "evidence_signal": "JEV teaching improved Qwen2.5-1.5B success over GRPO from 72.8% to 82.9% on ALFWorld and from 56.8% to 71.4% on WebShop.",
-      "watch_item": "Teacher results cover one teacher and two benchmarks; retrospective judging also requires completed trajectories.",
+      "evidence_signal": "JEV teaching improved success over GRPO from 72.8% to 82.9% on ALFWorld and from 56.8% to 71.4% on WebShop.",
+      "watch_item": "Judging relies on completed trajectories, and teacher gains are demonstrated for one teacher–policy pairing on two benchmarks.",
       "hashtags": [
         "#AIAgents",
         "#ReinforcementLearning",
         "#DecisionModels",
         "#LongHorizonPlanning",
-        "#AgentEvaluation"
+        "#ActionEvaluation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -692,7 +746,7 @@
       "paper_title": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
       "paper_date": "2026-11-12",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-13T20:48:32",
+      "generated_at": "2026-11-14T18:59:10",
       "generator": "openai"
     }
   },
@@ -722,23 +776,23 @@
         "url": "https://arxiv.org/pdf/2611.17114v1"
       }
     ],
-    "score": 68,
+    "score": 63,
     "infographic": {
-      "key_insight": "Reliable, cooperative and accountable AI collectives require well-designed institutions, not just well-aligned individual agents.",
-      "engineering_relevance": "Multi-agent systems should make governance, contribution rules, criticism and human oversight explicit, programmable and observable.",
+      "key_insight": "Reliable, cooperative and accountable AI collectives require well-designed institutions, not just capable individual agents.",
+      "engineering_relevance": "Multi-agent systems should explicitly encode contribution rules, accountable authority, criticism, human direction and institutional adaptation.",
       "method": [
-        "Develop seven design principles drawing on political economy, social epistemology and organizational theory.",
-        "Propose experiments comparing matched AI-agent populations under alternative institutional arrangements.",
-        "Illustrate programmable institutions through MoltJournal, an API-first journal for autonomous research agents."
+        "Develop seven institutional design principles using political economy, social epistemology and organizational theory.",
+        "Propose comparing matched AI-agent populations under alternative institutional arrangements.",
+        "Illustrate programmable, observable institutions through MoltJournal, an API-first journal for autonomous research agents."
       ],
-      "evidence_signal": "The abstract presents a conceptual framework, an experimental research agenda and an institutional illustration, but reports no quantitative evaluation results.",
-      "watch_item": "Whether these principles improve collective reliability and accountability remains to be established through controlled evaluations.",
+      "evidence_signal": "The abstract presents a conceptual framework, a proposed experimental programme and an illustrative platform, but reports no quantitative evaluation.",
+      "watch_item": "Whether these principles improve collective reliability and accountability remains to be tested empirically.",
       "hashtags": [
-        "#MultiAgentAI",
-        "#InstitutionalDesign",
+        "#MultiAgentSystems",
+        "#AIInstitutions",
         "#AIGovernance",
-        "#MachineScience",
-        "#AutonomousResearch"
+        "#AutonomousResearch",
+        "#InstitutionalDesign"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -746,7 +800,60 @@
       "paper_title": "Designing Institutions for Autonomous AI",
       "paper_date": "2026-11-12",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-13T20:48:34",
+      "generated_at": "2026-11-14T18:59:12",
+      "generator": "openai"
+    }
+  },
+  {
+    "id": "2026-11-12-arxiv-internalizing_investment_mandates_a_neurosymbolic_rl_approach_to_portfolio_allocation",
+    "arxiv_id": "2611.17329v1",
+    "date": "2026-11-12",
+    "title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+    "authors": "Zeynep Yıldız, Satchit Chatterji, Ercan Atam, Erman Acar",
+    "abstract": "Institutional portfolios operate under investment policy statements that specify asset allocation constraints, often conditioned on market regime information. Deep reinforcement learning has been shown to optimize financial performance but typically does not enforce rule compliance, making it unsuitable for real-world deployment. Existing neurosymbolic methods such as Probabilistic Logic Policy Gradient (PLPG) offer constraint-satisfying reinforcement learning (RL) via differentiable symbolic supervision but assume a finite, discrete action space. We present a PLPG-inspired continuous allocation method that estimates the probability that the policy's own executed action satisfies the investment mandate, using reparameterized Monte Carlo sampling, and adds it to the training objective. No post-hoc enforcement mechanism intercepts actions at inference time and compliance is learned by the agent. Audited directly on deterministic mean actions with no correction, the policy reduces violations of a six-rule regime-conditional mandate from 96-98% for unconstrained RL and 33.4% for a reward-penalty baseline to 4.8%, showing that a continuous-action neurosymbolic policy can substantially internalize a symbolic mandate.",
+    "category": "AI scientific research",
+    "source": "arXiv",
+    "published": "2026-11-12T18:59:37Z",
+    "updated": "2026-11-12T18:59:37Z",
+    "primary_category": "cs.LG",
+    "categories": [
+      "cs.LG"
+    ],
+    "links": [
+      {
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2611.17329v1"
+      },
+      {
+        "title": "PDF",
+        "url": "https://arxiv.org/pdf/2611.17329v1"
+      }
+    ],
+    "score": 62,
+    "infographic": {
+      "key_insight": "A continuous-action neurosymbolic RL policy learns investment-mandate compliance, reducing violations to 4.8% without post-hoc action correction.",
+      "engineering_relevance": "The approach offers a way to incorporate regime-dependent allocation rules into portfolio-policy training without requiring an inference-time enforcement layer.",
+      "method": [
+        "Represent a six-rule, regime-conditional investment mandate as symbolic supervision.",
+        "Use reparameterized Monte Carlo sampling to estimate the probability that the policy's own executed action satisfies the mandate.",
+        "Add this compliance signal to the continuous-action RL training objective."
+      ],
+      "evidence_signal": "Direct audits of uncorrected deterministic mean actions report 4.8% violations, versus 96–98% for unconstrained RL and 33.4% for a reward-penalty baseline.",
+      "watch_item": "Compliance is learned rather than guaranteed: residual violations remain, and the abstract does not establish robustness under market distribution shifts.",
+      "hashtags": [
+        "#NeurosymbolicAI",
+        "#ReinforcementLearning",
+        "#PortfolioOptimization",
+        "#ConstraintLearning",
+        "#ComputationalFinance"
+      ],
+      "model": "gpt-6.1-sol",
+      "service_tier": "ultrafast",
+      "paper_id": "2026-11-12-arxiv-internalizing_investment_mandates_a_neurosymbolic_rl_approach_to_portfolio_allocation",
+      "paper_title": "Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation",
+      "paper_date": "2026-11-12",
+      "paper_category": "AI scientific research",
+      "generated_at": "2026-11-14T18:59:14",
       "generator": "openai"
     }
   },
@@ -775,17 +882,17 @@
         "url": "https://arxiv.org/pdf/2611.17289v1"
       }
     ],
-    "score": 66,
+    "score": 61,
     "infographic": {
-      "key_insight": "A well-balanced WE-PINN formulation exactly preserves lake-at-rest equilibria at the discrete-residual level over smooth and discontinuous bathymetry.",
-      "engineering_relevance": "The method supports mesh-free shallow-water modeling over uneven beds while preventing numerical imbalance from generating spurious flow at rest.",
+      "key_insight": "A well-balanced WE-PINN formulation makes lake-at-rest equilibria exact global minimisers of the training objective, even over discontinuous bathymetry.",
+      "engineering_relevance": "The method supports mesh-free shallow-water modelling that preserves still-water balance while handling flow transitions across bed steps.",
       "method": [
         "Enforce weak space–time conservation on randomly placed, potentially overlapping control volumes without differentiating the network.",
-        "Integrate the geometric source by parts and correct local bed slopes so quadrature reproduces exact bed increments.",
-        "Use independent networks across bed discontinuities, coupled by conservation of discharge and total head."
+        "Integrate the geometric source by parts and correct local bed slopes to reproduce exact bed increments.",
+        "Use independent networks across bathymetric discontinuities, coupled by conservation of discharge and total head."
       ],
-      "evidence_signal": "Four lake-at-rest configurations achieved residuals at round-off, while seven bottom-step Riemann tests yielded relative L1 free-surface errors of 6.9×10⁻⁴–3.5×10⁻³ and recovered critical states without prescribing them.",
-      "watch_item": "Exact equilibrium preservation by the residual does not guarantee rapid training convergence; network recovery to round-off required an extended training budget.",
+      "evidence_signal": "The discrete residual reached round-off on four lake-at-rest configurations; seven bed-step Riemann tests achieved relative L1 free-surface errors of 6.9×10⁻⁴–3.5×10⁻³.",
+      "watch_item": "Training to round-off required an extended budget, and bed discontinuities require separate networks with interface coupling.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#PhysicsInformedNeuralNetworks",
@@ -799,7 +906,7 @@
       "paper_title": "Well-Balanced WE-PINNs for the Shallow Water Equations over Smooth and Discontinuous Bathymetries",
       "paper_date": "2026-11-12",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-13T20:48:37",
+      "generated_at": "2026-11-14T18:59:16",
       "generator": "openai"
     }
   },
@@ -830,17 +937,17 @@
         "url": "https://arxiv.org/pdf/2611.17214v1"
       }
     ],
-    "score": 66,
+    "score": 61,
     "infographic": {
-      "key_insight": "Voluntarily delaying feedback enables optimal √S and √K regret dependencies in tabular and linear adversarial MDPs, respectively, without an extra regret cost from the introduced delays.",
-      "engineering_relevance": "The approach offers computationally efficient policy learning with unknown transitions and bandit feedback, without requiring a simulator or exploratory assumptions.",
+      "key_insight": "Voluntarily introducing feedback delays enables high-probability regret bounds with optimal √S and √K dependencies in tabular and linear adversarial MDPs, respectively.",
+      "engineering_relevance": "The approach advances computationally efficient policy learning with unknown transitions and bandit feedback, without requiring a simulator or exploratory assumptions.",
       "method": [
         "Estimate a policy’s Q-function using future episodes while continuing policy updates.",
-        "Use Geometric Resampling with Rejection to account for policy changes during the delay.",
-        "Threshold visitation probabilities to avoid long delays for rarely visited state-action pairs."
+        "Use Geometric Resampling with Rejection (GRR) to account for policy changes during the delay.",
+        "Threshold visitation probabilities to avoid long delays for rarely visited state–action pairs."
       ],
-      "evidence_signal": "The abstract reports high-probability theoretical regret bounds of Õ(poly(H)√(SAK)) for tabular AMDPs and Õ(poly(d,H)√K) for linear AMDPs, plus extensions to externally delayed feedback; no empirical evaluation is described.",
-      "watch_item": "Optimal state or episode dependencies do not establish practical efficiency: polynomial horizon and feature-dimension factors may still be substantial.",
+      "evidence_signal": "The abstract reports theoretical high-probability regret guarantees of Õ(poly(H)√(SAK)) for tabular AMDPs and Õ(poly(d,H)√K) for linear AMDPs; no empirical evaluation is described.",
+      "watch_item": "Optimality applies to the highlighted state-count and episode-count dependencies; polynomial dependence on horizon and feature dimension may still affect practicality.",
       "hashtags": [
         "#ReinforcementLearning",
         "#AdversarialMDPs",
@@ -854,7 +961,7 @@
       "paper_title": "Introducing Feedback Delays to Non-Delayed Adversarial MDPs: Optimal $\\sqrt S$ and $\\sqrt K$ Dependencies in Tabular and Linear AMDPs",
       "paper_date": "2026-11-12",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-13T20:48:39",
+      "generated_at": "2026-11-14T18:59:18",
       "generator": "openai"
     }
   },
@@ -885,23 +992,23 @@
         "url": "https://arxiv.org/pdf/2611.17196v1"
       }
     ],
-    "score": 66,
+    "score": 61,
     "infographic": {
-      "key_insight": "Physically informed basin selection improves discrete origami design by steering optimization toward geometrically compatible, mechanically stiff solutions that survive discretization.",
-      "engineering_relevance": "A simple initialization bias improves final discrete-design success without additional compute or changes to the optimization procedure.",
+      "key_insight": "Physically informed initialization helps origami optimization avoid basins that perform well continuously but fail after conversion to discrete hinge choices.",
+      "engineering_relevance": "A stiff, flat hinge initialization bias improves discrete design success without additional compute or changes to the optimization process.",
       "method": [
-        "Use automatic differentiation in bilevel optimization to choose among four hinge types at each fold of a fixed-geometry sheet.",
-        "Bias initialization toward the stiff, flat hinge option to favor more discretization-robust basins.",
-        "Alternatively, penalize frustration and floppiness directly in the outer loss."
+        "Use automatic differentiation in bilevel optimization to assign one of four hinge types to each fold on fixed-geometry sheets.",
+        "Bias initialization uniformly toward the stiff, flat hinge option before optimizing the continuous relaxation.",
+        "Alternatively, penalize geometric frustration and mechanical floppiness in the outer loss."
       ],
-      "evidence_signal": "Relaxed optimization succeeds in 97% of runs, but discrete success is 49% at baseline, rising to 69% with the initialization prior and 78% with physical penalties.",
-      "watch_item": "The abstract evaluates a specific origami design setting; transfer to other discrete mechanical systems remains unestablished.",
+      "evidence_signal": "Relaxed optimization solved 97% of runs, but discrete success was 49%; initialization bias raised it to 69%, while frustration and floppiness penalties raised it to 78%.",
+      "watch_item": "The abstract demonstrates gains on a specific origami design problem; transfer to other geometries or discrete mechanical systems remains unestablished.",
       "hashtags": [
         "#DifferentiableDesign",
         "#DiscreteOptimization",
         "#OrigamiEngineering",
-        "#MechanicalDesign",
-        "#ScientificMachineLearning"
+        "#InverseDesign",
+        "#ComputationalMechanics"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -909,7 +1016,7 @@
       "paper_title": "Physically Interpretable Basin Selection in Discrete-Variable Origami Design",
       "paper_date": "2026-11-12",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-13T20:48:42",
+      "generated_at": "2026-11-14T18:59:20",
       "generator": "openai"
     }
   },
@@ -941,23 +1048,23 @@
         "url": "https://arxiv.org/pdf/2611.17141v1"
       }
     ],
-    "score": 66,
+    "score": 61,
     "infographic": {
-      "key_insight": "ISLA builds physical symmetries and measure-weighted boundary integration into a transformer to make PDE predictions robust to coordinate changes, units, and boundary resampling.",
-      "engineering_relevance": "For steady, boundary-driven PDE surrogates, this design reduces sensitivity to object pose and mesh choice while allowing interior query points to be evaluated independently.",
+      "key_insight": "ISLA builds physical invariances into a transformer using coordinate-free features and measure-weighted boundary attention for steady, boundary-driven PDEs.",
+      "engineering_relevance": "The design targets reliable flow surrogates across object poses, unit choices, and boundary meshes, avoiding sensitivity to how the same physical problem is represented.",
       "method": [
         "Use distances and relative angles to learned slice anchors; no learned operation receives coordinates directly.",
-        "Normalize lengths by a boundary-derived scale and weight boundary sums by quadrature.",
-        "Predict at independent interior queries using a tree-accelerated learned boundary kernel."
+        "Weight boundary sums by quadrature and normalize lengths using a boundary-derived unit.",
+        "Predict interior fields with independent queries through a tree-accelerated learned boundary kernel."
       ],
-      "evidence_signal": "On 2,816 AeroZoo flows, mean reference-scaled velocity and pressure errors are at least 3.1× and 3.3× lower than every baseline's, respectively; on AirfRANS, ISLA ranks behind GLOBE.",
-      "watch_item": "The stated rigid-motion, reflection, unit, and mesh-refinement guarantees require every boundary cell to be a token and an exact boundary read; accelerated approximations merit validation.",
+      "evidence_signal": "On AeroZoo’s 2,816 flows, mean reference-scaled velocity and pressure errors are at least 3.1× and 3.3× lower than any baseline’s; on AirfRANS, ISLA ranks behind GLOBE but achieves at least 1.6× lower errors than Transolver and GeoTransolver.",
+      "watch_item": "Exact equivariance and mesh-refinement consistency are stated for the every-boundary-cell-token, exact-boundary-read configuration; approximations require validation.",
       "hashtags": [
         "#ScientificMachineLearning",
-        "#PDESurrogates",
-        "#InvariantTransformers",
-        "#ComputationalFluidDynamics",
-        "#MeshConsistency"
+        "#PhysicsAI",
+        "#Transformers",
+        "#CFD",
+        "#GeometricDeepLearning"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -965,117 +1072,7 @@
       "paper_title": "ISLA: A Coordinate-Free, Measure-Weighted Transformer for Boundary-Driven PDEs",
       "paper_date": "2026-11-12",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-13T20:48:44",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-12-arxiv-prevalence_bounds_for_edited_watermarked_text_power_envelopes_and_calibration_sensitivity",
-    "arxiv_id": "2611.17035v1",
-    "date": "2026-11-12",
-    "title": "Prevalence Bounds for Edited Watermarked Text: Power Envelopes and Calibration Sensitivity",
-    "authors": "Kuancheng Ye",
-    "abstract": "Watermark detectors decide whether one document came from a watermarked language model. Auditors often need a different number: the share of a corpus that did. We study this share for Gumbel-max and green-list (KGW) watermarks when every document may have been edited by an unknown amount. Without restrictions on the edits, the upper end of the identified set is 1. Combining a known least-favourable next-token distribution with a sequential coupling, we derive a power envelope indexed by three budgets: a retention floor, an entropy budget, and a budget for in-place substitutions, which for Gumbel-max make edited positions look less watermarked than human text. The envelope gives an identified set that is sharp for the alternatives it dominates, finite-sample bounds on the realized share of a fixed corpus with either the exact null or a null calibrated on an independent human sample, and confidence sequences for streams. In Gumbel-max simulations where the envelope binds, the bounds cover, and the threshold that maximizes the gap between envelope and null is generally as tight as twelve thresholds. On text from OPT-1.3B and Qwen3-1.7B, 12,000 fresh human documents scored under three keys show no robust departure from the exact null, and all bounds covered in resampling trials from finite pools of documents with random edits, substitutions and paraphrases; at a share of 0.2 the exact-null bound is about [0.14,0.38]. These results are fragile in two ways we make precise. LLM-paraphrased KGW pools fall below the envelope, yet at 2000 documents the bounds still covered in these trials. A simulated null error of 0.01, comparable to the largest deviation we observed at our thresholds, is likewise harmless at 2000 documents but breaks exact-null coverage at 100,000; a null calibrated on an independent human sample keeps coverage there, but needs a large reference sample to stay narrow.",
-    "category": "Scientific Machine Learning",
-    "source": "arXiv",
-    "published": "2026-11-12T16:21:31Z",
-    "updated": "2026-11-12T16:21:31Z",
-    "primary_category": "stat.ML",
-    "categories": [
-      "stat.ML",
-      "cs.CL",
-      "cs.CR",
-      "cs.LG"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.17035v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.17035v1"
-      }
-    ],
-    "score": 66,
-    "infographic": {
-      "key_insight": "Watermark scores can bound the share of edited AI-generated text in a corpus, but without restrictions on edits, the upper bound remains 100%.",
-      "engineering_relevance": "Corpus auditors can quantify prevalence uncertainty rather than count detector positives, provided editing assumptions and human-score calibration are credible.",
-      "method": [
-        "Derive power envelopes for Gumbel-max and KGW watermarks using retention, entropy and substitution budgets.",
-        "Convert envelopes into identified sets and finite-sample prevalence bounds with exact or independently calibrated nulls.",
-        "Extend inference to confidence sequences for streaming corpora."
-      ],
-      "evidence_signal": "Evaluations included simulations, OPT-1.3B and Qwen3-1.7B text, and 12,000 fresh human documents scored under three keys; finite-pool resampling bounds covered, with an exact-null interval of about [0.14, 0.38] at a true share of 0.20.",
-      "watch_item": "Paraphrasing can violate the envelope, and a simulated null error of 0.01 broke exact-null coverage at 100,000 documents; independent calibration preserved coverage but needed substantial reference data for narrow bounds.",
-      "hashtags": [
-        "#AIWatermarking",
-        "#PrevalenceEstimation",
-        "#StatisticalInference",
-        "#Calibration",
-        "#ScientificMachineLearning"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-12-arxiv-prevalence_bounds_for_edited_watermarked_text_power_envelopes_and_calibration_sensitivity",
-      "paper_title": "Prevalence Bounds for Edited Watermarked Text: Power Envelopes and Calibration Sensitivity",
-      "paper_date": "2026-11-12",
-      "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-13T20:48:47",
-      "generator": "openai"
-    }
-  },
-  {
-    "id": "2026-11-12-arxiv-ai_for_biologists_the_knowledge_boundaries_of_foundation_models_in_the_age_of_agentic_syst",
-    "arxiv_id": "2611.17015v1",
-    "date": "2026-11-12",
-    "title": "AI for Biologists: The Knowledge Boundaries of Foundation Models in the Age of Agentic Systems",
-    "authors": "Tian Cai, Andrew Kleist, Jaimin Patel, Duccio Malinverni, Alexander K. Taylor, Malvika Sharan",
-    "abstract": "Artificial intelligence (AI) is changing how biological research is done. Biological foundation models trained on millions of nucleotides, protein, and single-cell measurements predict protein structures, mutation effects, and cellular responses to genetic perturbations. Agentic systems, AI assistants built on large language models, can run multistep analyses from plain-language requests and increasingly call foundation models as tools. Yet it is often unclear when these models' outputs can be trusted. We frame this as a model's knowledge boundary: the range of inputs, tasks, and conditions over which its outputs are reliable. This review explains how foundation models are built and proposes that five design elements (data, architecture, training scheme, evaluation scheme, and post-analysis) define this boundary. We examine evidence on where current models succeed or fail and present standardized descriptions of model limits so that researchers, and the agents acting for them, can use these tools reliably.",
-    "category": "AI Scientists and Research Agents",
-    "source": "arXiv",
-    "published": "2026-11-12T16:08:33Z",
-    "updated": "2026-11-12T16:08:33Z",
-    "primary_category": "q-bio.BM",
-    "categories": [
-      "q-bio.BM",
-      "cs.AI"
-    ],
-    "links": [
-      {
-        "title": "arXiv",
-        "url": "https://arxiv.org/abs/2611.17015v1"
-      },
-      {
-        "title": "PDF",
-        "url": "https://arxiv.org/pdf/2611.17015v1"
-      }
-    ],
-    "score": 66,
-    "infographic": {
-      "key_insight": "Reliable use of biological foundation models requires understanding their knowledge boundaries: the inputs, tasks, and conditions under which their outputs can be trusted.",
-      "engineering_relevance": "Agentic research systems need explicit model-limit descriptions to guide tool selection and avoid using biological predictions beyond validated conditions.",
-      "method": [
-        "Frame model reliability through knowledge boundaries.",
-        "Examine five defining elements: data, architecture, training scheme, evaluation scheme, and post-analysis.",
-        "Review successes and failures and propose standardized descriptions of model limits."
-      ],
-      "evidence_signal": "The review examines models trained on millions of nucleotides, protein measurements, and single-cell measurements, but the abstract reports no quantitative evaluation results.",
-      "watch_item": "An agent’s ability to call a foundation model does not establish that its outputs are reliable for the requested biological task.",
-      "hashtags": [
-        "#BiologicalAI",
-        "#FoundationModels",
-        "#AgenticAI",
-        "#ModelEvaluation",
-        "#ReliableAI"
-      ],
-      "model": "gpt-6.1-sol",
-      "service_tier": "ultrafast",
-      "paper_id": "2026-11-12-arxiv-ai_for_biologists_the_knowledge_boundaries_of_foundation_models_in_the_age_of_agentic_syst",
-      "paper_title": "AI for Biologists: The Knowledge Boundaries of Foundation Models in the Age of Agentic Systems",
-      "paper_date": "2026-11-12",
-      "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-13T20:48:49",
+      "generated_at": "2026-11-14T18:59:23",
       "generator": "openai"
     }
   }

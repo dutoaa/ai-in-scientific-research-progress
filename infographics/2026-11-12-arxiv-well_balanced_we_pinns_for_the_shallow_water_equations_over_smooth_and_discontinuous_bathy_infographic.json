@@ -1,13 +1,13 @@
 {
-  "key_insight": "A well-balanced WE-PINN formulation exactly preserves lake-at-rest equilibria at the discrete-residual level over smooth and discontinuous bathymetry.",
-  "engineering_relevance": "The method supports mesh-free shallow-water modeling over uneven beds while preventing numerical imbalance from generating spurious flow at rest.",
+  "key_insight": "A well-balanced WE-PINN formulation makes lake-at-rest equilibria exact global minimisers of the training objective, even over discontinuous bathymetry.",
+  "engineering_relevance": "The method supports mesh-free shallow-water modelling that preserves still-water balance while handling flow transitions across bed steps.",
   "method": [
     "Enforce weak space–time conservation on randomly placed, potentially overlapping control volumes without differentiating the network.",
-    "Integrate the geometric source by parts and correct local bed slopes so quadrature reproduces exact bed increments.",
-    "Use independent networks across bed discontinuities, coupled by conservation of discharge and total head."
+    "Integrate the geometric source by parts and correct local bed slopes to reproduce exact bed increments.",
+    "Use independent networks across bathymetric discontinuities, coupled by conservation of discharge and total head."
   ],
-  "evidence_signal": "Four lake-at-rest configurations achieved residuals at round-off, while seven bottom-step Riemann tests yielded relative L1 free-surface errors of 6.9×10⁻⁴–3.5×10⁻³ and recovered critical states without prescribing them.",
-  "watch_item": "Exact equilibrium preservation by the residual does not guarantee rapid training convergence; network recovery to round-off required an extended training budget.",
+  "evidence_signal": "The discrete residual reached round-off on four lake-at-rest configurations; seven bed-step Riemann tests achieved relative L1 free-surface errors of 6.9×10⁻⁴–3.5×10⁻³.",
+  "watch_item": "Training to round-off required an extended budget, and bed discontinuities require separate networks with interface coupling.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#PhysicsInformedNeuralNetworks",
@@ -21,6 +21,6 @@
   "paper_title": "Well-Balanced WE-PINNs for the Shallow Water Equations over Smooth and Discontinuous Bathymetries",
   "paper_date": "2026-11-12",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-11-13T20:48:37",
+  "generated_at": "2026-11-14T18:59:16",
   "generator": "openai"
 }
