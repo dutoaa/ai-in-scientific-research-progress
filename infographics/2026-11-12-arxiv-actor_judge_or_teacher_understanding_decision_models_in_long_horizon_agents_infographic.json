@@ -1,19 +1,19 @@
 {
   "key_insight": "A decision model that acts poorly can still teach effectively by judging actions after their consequences are visible.",
-  "engineering_relevance": "Retrospective action-level feedback can improve reinforcement learning for long-horizon agents without requiring the teacher to be a strong actor.",
+  "engineering_relevance": "Use decision models as retrospective action evaluators to train agent policies, rather than selecting them solely by their own task success.",
   "method": [
-    "Compare three decision models and three general LLMs as actors and trajectory-aware judges on ALFWorld.",
-    "Evaluate whether asking if each action helped distinguishes useful from useless actions.",
+    "Compare three decision models and three general LLMs as actors and judges on ALFWorld.",
+    "Evaluate actions using full trajectories and ask whether each action helped, rather than whether the task will succeed.",
     "Use JEV as a teacher for a Qwen2.5-1.5B policy on ALFWorld and WebShop."
   ],
   "evidence_signal": "JEV teaching improved success over GRPO from 72.8% to 82.9% on ALFWorld and from 56.8% to 71.4% on WebShop.",
-  "watch_item": "Judging relies on completed trajectories, and teacher gains are demonstrated for one teacher–policy pairing on two benchmarks.",
+  "watch_item": "Teaching results cover one teacher and two benchmarks; full-trajectory judgments require completed episodes and do not establish real-time decision quality.",
   "hashtags": [
     "#AIAgents",
     "#ReinforcementLearning",
     "#DecisionModels",
-    "#LongHorizonPlanning",
-    "#ActionEvaluation"
+    "#AgentEvaluation",
+    "#LongHorizonPlanning"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents",
   "paper_date": "2026-11-12",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-14T18:59:10",
+  "generated_at": "2026-11-15T19:38:31",
   "generator": "openai"
 }

@@ -1,19 +1,19 @@
 {
-  "key_insight": "Watermark scores can bound the share of edited AI-generated text in a corpus, but without restrictions on edits, the upper bound remains 100%.",
-  "engineering_relevance": "Corpus auditors can quantify prevalence uncertainty rather than count detector positives, provided editing assumptions and human-score calibration are credible.",
+  "key_insight": "Estimating the watermarked share of an edited corpus requires explicit editing constraints; without them, the share’s upper bound is 100%.",
+  "engineering_relevance": "Corpus auditors can use finite-sample bounds and streaming confidence sequences, but must account for editing assumptions and detector-null calibration.",
   "method": [
     "Derive power envelopes for Gumbel-max and KGW watermarks using retention, entropy and substitution budgets.",
-    "Convert envelopes into identified sets and finite-sample prevalence bounds with exact or independently calibrated nulls.",
-    "Extend inference to confidence sequences for streaming corpora."
+    "Convert envelopes into prevalence bounds using an exact null or an independent human calibration sample.",
+    "Extend inference to confidence sequences for document streams."
   ],
-  "evidence_signal": "Evaluations included simulations, OPT-1.3B and Qwen3-1.7B text, and 12,000 fresh human documents scored under three keys; finite-pool resampling bounds covered, with an exact-null interval of about [0.14, 0.38] at a true share of 0.20.",
-  "watch_item": "Paraphrasing can violate the envelope, and a simulated null error of 0.01 broke exact-null coverage at 100,000 documents; independent calibration preserved coverage but needed substantial reference data for narrow bounds.",
+  "evidence_signal": "Tests on OPT-1.3B and Qwen3-1.7B text included 12,000 fresh human documents scored under three keys; all reported finite-pool resampling bounds covered, with an exact-null interval around [0.14, 0.38] at a true share of 0.20.",
+  "watch_item": "Paraphrasing can violate the envelope, and a simulated null error of 0.01 broke exact-null coverage at 100,000 documents; independent calibration preserved coverage but required a large reference sample for narrow bounds.",
   "hashtags": [
-    "#AIWatermarking",
+    "#TextWatermarking",
     "#PrevalenceEstimation",
     "#StatisticalInference",
-    "#Calibration",
-    "#ScientificMachineLearning"
+    "#LLMAuditing",
+    "#Calibration"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Prevalence Bounds for Edited Watermarked Text: Power Envelopes and Calibration Sensitivity",
   "paper_date": "2026-11-12",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-11-13T20:48:47",
+  "generated_at": "2026-11-15T19:38:45",
   "generator": "openai"
 }

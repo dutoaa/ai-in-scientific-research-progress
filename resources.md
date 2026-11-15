@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-14
+Generated: 2026-11-15
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Ballad: Bandit-Based LLM Routing for Automated Heuristic Discovery
@@ -99,15 +99,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2611.16995v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-entire_sig_jump_diffusions_their_expected_signature_and_applications_to_score_based_genera_infographic.json
 
-## 13. AgentSSL: Can MLE Agents Leverage Unlabeled Data?
-
-- Date: 2026-11-12
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.17323v1
-- PDF: https://arxiv.org/pdf/2611.17323v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-agentssl_can_mle_agents_leverage_unlabeled_data_infographic.json
-
-## 14. Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents
+## 13. Actor, Judge, or Teacher? Understanding Decision Models in Long-Horizon Agents
 
 - Date: 2026-11-12
 - Category: AI scientific research
@@ -115,7 +107,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2611.17167v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-actor_judge_or_teacher_understanding_decision_models_in_long_horizon_agents_infographic.json
 
-## 15. Designing Institutions for Autonomous AI
+## 14. Designing Institutions for Autonomous AI
 
 - Date: 2026-11-12
 - Category: AI Scientists and Research Agents
@@ -123,15 +115,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2611.17114v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-designing_institutions_for_autonomous_ai_infographic.json
 
-## 16. Internalizing Investment Mandates: A Neurosymbolic RL Approach to Portfolio Allocation
-
-- Date: 2026-11-12
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.17329v1
-- PDF: https://arxiv.org/pdf/2611.17329v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-internalizing_investment_mandates_a_neurosymbolic_rl_approach_to_portfolio_allocation_infographic.json
-
-## 17. Well-Balanced WE-PINNs for the Shallow Water Equations over Smooth and Discontinuous Bathymetries
+## 15. Well-Balanced WE-PINNs for the Shallow Water Equations over Smooth and Discontinuous Bathymetries
 
 - Date: 2026-11-12
 - Category: Scientific Machine Learning
@@ -139,7 +123,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2611.17289v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-well_balanced_we_pinns_for_the_shallow_water_equations_over_smooth_and_discontinuous_bathy_infographic.json
 
-## 18. Introducing Feedback Delays to Non-Delayed Adversarial MDPs: Optimal $\sqrt S$ and $\sqrt K$ Dependencies in Tabular and Linear AMDPs
+## 16. Introducing Feedback Delays to Non-Delayed Adversarial MDPs: Optimal $\sqrt S$ and $\sqrt K$ Dependencies in Tabular and Linear AMDPs
 
 - Date: 2026-11-12
 - Category: AI scientific research
@@ -147,7 +131,7 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2611.17214v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-introducing_feedback_delays_to_non_delayed_adversarial_mdps_optimal_sqrt_s_and_sqrt_k_depe_infographic.json
 
-## 19. Physically Interpretable Basin Selection in Discrete-Variable Origami Design
+## 17. Physically Interpretable Basin Selection in Discrete-Variable Origami Design
 
 - Date: 2026-11-12
 - Category: AI scientific research
@@ -155,10 +139,26 @@ Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 - PDF: https://arxiv.org/pdf/2611.17196v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-physically_interpretable_basin_selection_in_discrete_variable_origami_design_infographic.json
 
-## 20. ISLA: A Coordinate-Free, Measure-Weighted Transformer for Boundary-Driven PDEs
+## 18. ISLA: A Coordinate-Free, Measure-Weighted Transformer for Boundary-Driven PDEs
 
 - Date: 2026-11-12
 - Category: Scientific Machine Learning
 - arXiv: https://arxiv.org/abs/2611.17141v1
 - PDF: https://arxiv.org/pdf/2611.17141v1
 - Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-isla_a_coordinate_free_measure_weighted_transformer_for_boundary_driven_pdes_infographic.json
+
+## 19. Prevalence Bounds for Edited Watermarked Text: Power Envelopes and Calibration Sensitivity
+
+- Date: 2026-11-12
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.17035v1
+- PDF: https://arxiv.org/pdf/2611.17035v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-prevalence_bounds_for_edited_watermarked_text_power_envelopes_and_calibration_sensitivity_infographic.json
+
+## 20. AI for Biologists: The Knowledge Boundaries of Foundation Models in the Age of Agentic Systems
+
+- Date: 2026-11-12
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.17015v1
+- PDF: https://arxiv.org/pdf/2611.17015v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-12-arxiv-ai_for_biologists_the_knowledge_boundaries_of_foundation_models_in_the_age_of_agentic_syst_infographic.json

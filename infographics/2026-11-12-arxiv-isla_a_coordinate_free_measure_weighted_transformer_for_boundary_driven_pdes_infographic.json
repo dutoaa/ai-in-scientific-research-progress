@@ -1,18 +1,18 @@
 {
-  "key_insight": "ISLA builds physical invariances into a transformer using coordinate-free features and measure-weighted boundary attention for steady, boundary-driven PDEs.",
-  "engineering_relevance": "The design targets reliable flow surrogates across object poses, unit choices, and boundary meshes, avoiding sensitivity to how the same physical problem is represented.",
+  "key_insight": "ISLA builds coordinate-free, measure-weighted attention for boundary-driven PDEs to preserve physical symmetries and improve robustness to boundary resampling.",
+  "engineering_relevance": "It supports CFD surrogates that remain consistent across changes in pose, declared units, and boundary discretization, with predictions independent of other queried points.",
   "method": [
-    "Use distances and relative angles to learned slice anchors; no learned operation receives coordinates directly.",
-    "Weight boundary sums by quadrature and normalize lengths using a boundary-derived unit.",
-    "Predict interior fields with independent queries through a tree-accelerated learned boundary kernel."
+    "Use distances and relative angles to learned slice anchors instead of feeding coordinates to learned operations.",
+    "Weight boundary sums by quadrature and normalize lengths using a boundary-derived scale.",
+    "Predict interior fields through a tree-accelerated learned boundary kernel with independent queries."
   ],
-  "evidence_signal": "On AeroZoo’s 2,816 flows, mean reference-scaled velocity and pressure errors are at least 3.1× and 3.3× lower than any baseline’s; on AirfRANS, ISLA ranks behind GLOBE but achieves at least 1.6× lower errors than Transolver and GeoTransolver.",
-  "watch_item": "Exact equivariance and mesh-refinement consistency are stated for the every-boundary-cell-token, exact-boundary-read configuration; approximations require validation.",
+  "evidence_signal": "On AeroZoo’s 2,816 flows, mean reference-scaled velocity and pressure errors were at least 3.1× and 3.3× lower than any baseline’s; on AirfRANS, ISLA ranked second to GLOBE.",
+  "watch_item": "The stated rigid-motion, reflection, unit, and mesh-consistency guarantees require every boundary cell to be a token and an exact boundary read; computational trade-offs need assessment.",
   "hashtags": [
     "#ScientificMachineLearning",
-    "#PhysicsAI",
-    "#Transformers",
     "#CFD",
+    "#Transformers",
+    "#PhysicsInformedAI",
     "#GeometricDeepLearning"
   ],
   "model": "gpt-6.1-sol",
@@ -21,6 +21,6 @@
   "paper_title": "ISLA: A Coordinate-Free, Measure-Weighted Transformer for Boundary-Driven PDEs",
   "paper_date": "2026-11-12",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-11-14T18:59:23",
+  "generated_at": "2026-11-15T19:38:43",
   "generator": "openai"
 }
