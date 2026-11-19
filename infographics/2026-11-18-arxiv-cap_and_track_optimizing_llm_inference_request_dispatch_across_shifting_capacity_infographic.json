@@ -1,0 +1,26 @@
+{
+  "key_insight": "Cap-and-Track adapts LLM inference dispatch to shifting capacity using admission refusals, without predicting output length or retuning a fleet-wide rate.",
+  "engineering_relevance": "Separating durable waiting queues from inference execution can reduce GPU requirements while adapting to changing workloads and backend capacity.",
+  "method": [
+    "Cap refuses requests at the saturated resource before long execution-side waits form.",
+    "Track probes upward and backs off using capacity refusals alone.",
+    "Durable priority queues hold excess and refused requests for later dispatch."
+  ],
+  "evidence_signal": "A concurrent production A/B served a classifier on 43% fewer H100s than the queued, fixed-rate precursor; steady-capacity real-engine replay achieved goodput within 1% of an above-capacity fixed rate with about one-quarter of its refusal share.",
+  "watch_item": "Lower-priority work waited longer during backfill peaks, so fleet sizing must account for acceptable queueing delays.",
+  "hashtags": [
+    "#LLMInference",
+    "#AdaptiveDispatch",
+    "#AdmissionControl",
+    "#GPUEfficiency",
+    "#MLSystems"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-11-18-arxiv-cap_and_track_optimizing_llm_inference_request_dispatch_across_shifting_capacity",
+  "paper_title": "Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity",
+  "paper_date": "2026-11-18",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-11-19T22:07:32",
+  "generator": "openai"
+}

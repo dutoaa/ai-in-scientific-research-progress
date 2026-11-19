@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-18
+Generated: 2026-11-19
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. OpenPINN/PINO: An Extensible Open-Source Framework for Agent-Assisted Physics-Informed Neural Networks and Neural Operators
+## 1. Auditing black-box clinical prediction models with a large language model through queries alone: a blinded test with planted flaws
 
-- Date: 2026-11-17
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.23135v1
-- PDF: https://arxiv.org/pdf/2611.23135v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-openpinn_pino_an_extensible_open_source_framework_for_agent_assisted_physics_informed_neur_infographic.json
-
-## 2. A Neural Envelope Method for Rapid Gradient-based Optimum Takeoff Trajectory Design
-
-- Date: 2026-11-17
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.23130v1
-- PDF: https://arxiv.org/pdf/2611.23130v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-a_neural_envelope_method_for_rapid_gradient_based_optimum_takeoff_trajectory_design_infographic.json
-
-## 3. Do LLM Agents Still Need to Be Told How to Self-Improve?
-
-- Date: 2026-11-17
-- Category: Autonomous Labs
-- arXiv: https://arxiv.org/abs/2611.23219v1
-- PDF: https://arxiv.org/pdf/2611.23219v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-do_llm_agents_still_need_to_be_told_how_to_self_improve_infographic.json
-
-## 4. Natural Language Programming: Rethinking Language, Memory, and Cognition in the Era of Generative AI
-
-- Date: 2026-11-17
+- Date: 2026-11-18
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.23106v1
-- PDF: https://arxiv.org/pdf/2611.23106v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-natural_language_programming_rethinking_language_memory_and_cognition_in_the_era_of_genera_infographic.json
+- arXiv: https://arxiv.org/abs/2611.24877v1
+- PDF: https://arxiv.org/pdf/2611.24877v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-auditing_black_box_clinical_prediction_models_with_a_large_language_model_through_queries_infographic.json
 
-## 5. High-Dimensional Black-Box Optimization via Guidance Sampling of Diffusion Models
+## 2. Atomic MathReasoner: Instance-Level Composition of Atomic Reasoning Skills for Mathematical LLMs
 
-- Date: 2026-11-17
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.22965v1
-- PDF: https://arxiv.org/pdf/2611.22965v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-high_dimensional_black_box_optimization_via_guidance_sampling_of_diffusion_models_infographic.json
+- Date: 2026-11-18
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.24846v1
+- PDF: https://arxiv.org/pdf/2611.24846v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-atomic_mathreasoner_instance_level_composition_of_atomic_reasoning_skills_for_mathematical_infographic.json
 
-## 6. Deep Reinforcement Learning for Heat Pump and Underfloor Heating Control: An End-to-End Case Study
+## 3. Self-Rewarded Reinforcement Learning for Better-Structured Medical Explanations in Small Language Models
 
-- Date: 2026-11-17
+- Date: 2026-11-18
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.24650v1
+- PDF: https://arxiv.org/pdf/2611.24650v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-self_rewarded_reinforcement_learning_for_better_structured_medical_explanations_in_small_l_infographic.json
+
+## 4. Thermodynamics of gas giants accreting via shocks: the role of molecular hydrogen dissociation
+
+- Date: 2026-11-18
 - Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.23063v1
-- PDF: https://arxiv.org/pdf/2611.23063v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-deep_reinforcement_learning_for_heat_pump_and_underfloor_heating_control_an_end_to_end_cas_infographic.json
+- arXiv: https://arxiv.org/abs/2611.24615v1
+- PDF: https://arxiv.org/pdf/2611.24615v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-thermodynamics_of_gas_giants_accreting_via_shocks_the_role_of_molecular_hydrogen_dissociat_infographic.json
 
-## 7. Residual-Guided Lightweight Reinforcement Learning for Risk-Aware Trajectory Selection with a Frozen World Model
+## 5. Depth Before Breadth: Reverse-to-Forward Curriculum with Advantage Decomposition for LLM Agent
 
-- Date: 2026-11-17
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.22998v1
-- PDF: https://arxiv.org/pdf/2611.22998v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-residual_guided_lightweight_reinforcement_learning_for_risk_aware_trajectory_selection_wit_infographic.json
-
-## 8. Pareto-Informed Smart "Predict, then Optimize" for Multi-Objective Combinatorial Problems
-
-- Date: 2026-11-17
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.23076v1
-- PDF: https://arxiv.org/pdf/2611.23076v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-pareto_informed_smart_predict_then_optimize_for_multi_objective_combinatorial_problems_infographic.json
-
-## 9. ForecastGym: A Live, Controlled, and Replayable Benchmark for Forecasting Agents
-
-- Date: 2026-11-17
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.23045v1
-- PDF: https://arxiv.org/pdf/2611.23045v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-forecastgym_a_live_controlled_and_replayable_benchmark_for_forecasting_agents_infographic.json
-
-## 10. ResoLUT: Distilling Residual Networks into Lookup-Table Networks
-
-- Date: 2026-11-17
-- Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.22955v1
-- PDF: https://arxiv.org/pdf/2611.22955v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-resolut_distilling_residual_networks_into_lookup_table_networks_infographic.json
-
-## 11. Where Should Physics Enter? Information, Identifiability and Calibration in Probabilistic Sea Surface Temperature Forecasting
-
-- Date: 2026-11-17
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.23129v1
-- PDF: https://arxiv.org/pdf/2611.23129v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-where_should_physics_enter_information_identifiability_and_calibration_in_probabilistic_se_infographic.json
-
-## 12. BugGen 2.0: Rethinking the Roles of LLMs for Scalable RTL Bug Synthesis
-
-- Date: 2026-11-17
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.23091v1
-- PDF: https://arxiv.org/pdf/2611.23091v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-buggen_2_0_rethinking_the_roles_of_llms_for_scalable_rtl_bug_synthesis_infographic.json
-
-## 13. Colombo: A Frontier-to-Frontier Autoresearch System for Oracle-Based Optimization
-
-- Date: 2026-11-17
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.23080v1
-- PDF: https://arxiv.org/pdf/2611.23080v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-colombo_a_frontier_to_frontier_autoresearch_system_for_oracle_based_optimization_infographic.json
-
-## 14. How Web Research Agents Interpret User Priorities
-
-- Date: 2026-11-17
+- Date: 2026-11-18
 - Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.22989v1
-- PDF: https://arxiv.org/pdf/2611.22989v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-how_web_research_agents_interpret_user_priorities_infographic.json
+- arXiv: https://arxiv.org/abs/2611.24697v1
+- PDF: https://arxiv.org/pdf/2611.24697v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-depth_before_breadth_reverse_to_forward_curriculum_with_advantage_decomposition_for_llm_ag_infographic.json
 
-## 15. Projected Penalty-Gradient Tracking for Communication-Efficient Byzantine-Resilient Federated Learning
+## 6. Local AI Agents in Power Electronics Simulation: Deployment, Measurements and Costs
 
-- Date: 2026-11-17
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.22929v1
-- PDF: https://arxiv.org/pdf/2611.22929v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-projected_penalty_gradient_tracking_for_communication_efficient_byzantine_resilient_federa_infographic.json
+- Date: 2026-11-18
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.24880v1
+- PDF: https://arxiv.org/pdf/2611.24880v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-local_ai_agents_in_power_electronics_simulation_deployment_measurements_and_costs_infographic.json
 
-## 16. Distortion-Free Semantic Watermarks for Black-Box Generative Models
+## 7. Soft Mixture of Quantum Experts for Hybrid Quantum-Classical Learning
 
-- Date: 2026-11-17
+- Date: 2026-11-18
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.23208v1
-- PDF: https://arxiv.org/pdf/2611.23208v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-distortion_free_semantic_watermarks_for_black_box_generative_models_infographic.json
+- arXiv: https://arxiv.org/abs/2611.24798v1
+- PDF: https://arxiv.org/pdf/2611.24798v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-soft_mixture_of_quantum_experts_for_hybrid_quantum_classical_learning_infographic.json
 
-## 17. Learned versus Kinematic Trajectory Prediction under Reduced Observation Frequency
+## 8. A Foundation Model to Measure and Predict Human Behaviour
 
-- Date: 2026-11-17
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.23198v1
-- PDF: https://arxiv.org/pdf/2611.23198v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-learned_versus_kinematic_trajectory_prediction_under_reduced_observation_frequency_infographic.json
+- Date: 2026-11-18
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.24830v1
+- PDF: https://arxiv.org/pdf/2611.24830v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-a_foundation_model_to_measure_and_predict_human_behaviour_infographic.json
 
-## 18. Get Hint-Augmented GRPO Done Right Through Activation Steering
+## 9. Synthesizing hyperspectral Data using generative Models to train spectral Unmixing Methods for low-cost Crop Residue Cover Mapping
 
-- Date: 2026-11-17
+- Date: 2026-11-18
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.23124v1
-- PDF: https://arxiv.org/pdf/2611.23124v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-get_hint_augmented_grpo_done_right_through_activation_steering_infographic.json
+- arXiv: https://arxiv.org/abs/2611.24827v1
+- PDF: https://arxiv.org/pdf/2611.24827v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-synthesizing_hyperspectral_data_using_generative_models_to_train_spectral_unmixing_methods_infographic.json
 
-## 19. What's in a Tree ? Hierarchical $n$-gram models as controlled approximators of language
+## 10. GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits
 
-- Date: 2026-11-17
+- Date: 2026-11-18
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.24619v1
+- PDF: https://arxiv.org/pdf/2611.24619v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-gatewatch_low_overhead_llm_monitoring_with_boolean_circuits_infographic.json
+
+## 11. Surrogate Modeling and Reduced-Order Methods in Gravitational-Wave Physics and Numerical Relativity: From Spectral Representations to Adaptive Compression
+
+- Date: 2026-11-18
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.24727v1
+- PDF: https://arxiv.org/pdf/2611.24727v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-surrogate_modeling_and_reduced_order_methods_in_gravitational_wave_physics_and_numerical_r_infographic.json
+
+## 12. Piccolo: Co-Evolving Decision Models and Data through Recursive Self-Improvement
+
+- Date: 2026-11-18
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.24651v1
+- PDF: https://arxiv.org/pdf/2611.24651v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-piccolo_co_evolving_decision_models_and_data_through_recursive_self_improvement_infographic.json
+
+## 13. Ground, Iterate, Trace: Decomposing AI Research Ideation
+
+- Date: 2026-11-18
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.24887v1
+- PDF: https://arxiv.org/pdf/2611.24887v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-ground_iterate_trace_decomposing_ai_research_ideation_infographic.json
+
+## 14. LLM-Guided Cyber-Physical Attack Path Identification in Smart Grids
+
+- Date: 2026-11-18
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2611.24765v1
+- PDF: https://arxiv.org/pdf/2611.24765v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-llm_guided_cyber_physical_attack_path_identification_in_smart_grids_infographic.json
+
+## 15. Meta-LSQ: A Closed-Form Sobolev Inner Solver for Few-Shot Meta-Learning
+
+- Date: 2026-11-18
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.24718v1
+- PDF: https://arxiv.org/pdf/2611.24718v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-meta_lsq_a_closed_form_sobolev_inner_solver_for_few_shot_meta_learning_infographic.json
+
+## 16. Openhagen Worlds: Calibrated Environments for Measuring and Training Scientific Discovery Agents
+
+- Date: 2026-11-18
+- Category: Biomedical and Physical Sciences
+- arXiv: https://arxiv.org/abs/2611.24711v1
+- PDF: https://arxiv.org/pdf/2611.24711v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-openhagen_worlds_calibrated_environments_for_measuring_and_training_scientific_discovery_a_infographic.json
+
+## 17. Decomposing SGD Dynamics in Neural Networks: Teacher-Induced Spikes and Variance Inflation
+
+- Date: 2026-11-18
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.24908v1
+- PDF: https://arxiv.org/pdf/2611.24908v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-decomposing_sgd_dynamics_in_neural_networks_teacher_induced_spikes_and_variance_inflation_infographic.json
+
+## 18. Cap-and-Track: Optimizing LLM Inference Request Dispatch Across Shifting Capacity
+
+- Date: 2026-11-18
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.23093v1
-- PDF: https://arxiv.org/pdf/2611.23093v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-what_s_in_a_tree_hierarchical_n_gram_models_as_controlled_approximators_of_language_infographic.json
+- arXiv: https://arxiv.org/abs/2611.24891v1
+- PDF: https://arxiv.org/pdf/2611.24891v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-cap_and_track_optimizing_llm_inference_request_dispatch_across_shifting_capacity_infographic.json
 
-## 20. The Resolution Hypothesis: Agent Evolution's Key Is Identifying Improvements
+## 19. Choosing the Right Representations: Task-Aware Fusion for Multimodal Materials Language Models
 
-- Date: 2026-11-17
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.23068v1
-- PDF: https://arxiv.org/pdf/2611.23068v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-17-arxiv-the_resolution_hypothesis_agent_evolution_s_key_is_identifying_improvements_infographic.json
+- Date: 2026-11-18
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.24641v1
+- PDF: https://arxiv.org/pdf/2611.24641v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-choosing_the_right_representations_task_aware_fusion_for_multimodal_materials_language_mod_infographic.json
+
+## 20. A Generative Model for Higher-Order Network Dynamics
+
+- Date: 2026-11-18
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2611.24638v1
+- PDF: https://arxiv.org/pdf/2611.24638v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-18-arxiv-a_generative_model_for_higher_order_network_dynamics_infographic.json
