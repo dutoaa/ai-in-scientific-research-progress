@@ -1,0 +1,26 @@
+{
+  "key_insight": "ProtoDiffusion generates editable, multi-layer images using one shared spatial prototype and one vector per layer, reducing latent token count from NHW to HW+N before backbone-specific packing.",
+  "engineering_relevance": "This compact representation supports image- and text-conditioned design generation without requiring layer counts or layouts as inputs, while allowing optional bounding-box guidance.",
+  "method": [
+    "ProtoVAE encodes designs into a shared spatial prototype and per-layer candidate vectors.",
+    "A shared decoder reconstructs each RGBA layer conditioned on its candidate vector.",
+    "Latent diffusion jointly denoises the prototype and fixed candidate slots, leaving unused slots empty."
+  ],
+  "evidence_signal": "The abstract reports 40.43 dB layer-crop reconstruction PSNR, LayerD image-to-design RGB L1 of 0.040 with boxes, and text-to-design FID of 66.41 versus 86.84 for FLUX.2 [klein], with 19.1× faster generation than a same-backbone generation-then-decomposition cascade.",
+  "watch_item": "The fixed candidate-slot set imposes a layer-capacity ceiling, and the reported token reduction alone does not establish memory or runtime savings across backbones.",
+  "hashtags": [
+    "#ProtoDiffusion",
+    "#LatentDiffusion",
+    "#LayeredImageGeneration",
+    "#GenerativeDesign",
+    "#ComputerVision"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-11-19-arxiv-protodiffusion_token_per_layer_generative_modeling_of_multi_layer_images",
+  "paper_title": "ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images",
+  "paper_date": "2026-11-19",
+  "paper_category": "Modeling and Simulation",
+  "generated_at": "2026-11-20T21:44:25",
+  "generator": "openai"
+}
