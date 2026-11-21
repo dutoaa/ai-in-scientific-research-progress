@@ -1,13 +1,13 @@
 {
   "key_insight": "Transition eigenvectors provide reusable reward features whose successor features are obtained by closed-form scaling, enabling rapid adaptation to changing goals.",
-  "engineering_relevance": "For fixed environment dynamics, task adaptation reduces to linear reward regression without a successor-feature network or replay buffer.",
+  "engineering_relevance": "This spectral basis eliminates the need for a successor-feature network or replay buffer and reduces task adaptation to linear reward regression.",
   "method": [
-    "Build base features from eigenvectors of the transition matrix under a fixed reference policy.",
-    "Scale each feature by θᵢ = 1/(1 − γλᵢ) to obtain its successor feature.",
+    "Compute eigenvectors of the transition matrix under a fixed reference policy.",
+    "Scale each eigenfeature by θᵢ = 1/(1 − γλᵢ) to obtain its successor feature.",
     "Fit task-specific reward weights and act greedily on the reference policy’s action values."
   ],
-  "evidence_signal": "In a two-goal gridworld with a uniform-random reference policy, the agents maintained near-maximal return across goal changes, while SimpleSF and DQN lost most of their return at each change.",
-  "watch_item": "Evidence is limited to a gridworld, and computing transition eigenvectors may be challenging in large or unknown environments.",
+  "evidence_signal": "In a two-goal gridworld with a uniform-random-walk reference policy, the agents maintained near-maximal return across goal changes, while SimpleSF and DQN lost most of their return at each change.",
+  "watch_item": "Evidence is limited to a gridworld; scaling transition-eigenvector computation and relying on one-step improvement over a fixed reference policy require further validation.",
   "hashtags": [
     "#ContinualRL",
     "#SuccessorFeatures",
@@ -21,6 +21,6 @@
   "paper_title": "Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning",
   "paper_date": "2026-11-19",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-11-20T21:44:33",
+  "generated_at": "2026-11-21T20:25:14",
   "generator": "openai"
 }

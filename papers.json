@@ -24,17 +24,17 @@
         "url": "https://arxiv.org/pdf/2611.26343v1"
       }
     ],
-    "score": 90,
+    "score": 85,
     "infographic": {
-      "key_insight": "DeepQuest turns knowledge gaps in Alzheimer's research into testable hypotheses, pairing automated experiments with separate audits of reliability and scientific contribution.",
-      "engineering_relevance": "Research-agent pipelines can prioritize meaningful discovery by combining literature traceability, data-feasibility checks, hypothesis ranking, and evidence auditing.",
+      "key_insight": "DeepQuest turns Alzheimer's research knowledge gaps into testable hypotheses, linking automated experiments to traceable, evidence-supported findings.",
+      "engineering_relevance": "Research-agent pipelines can prioritize useful experiments by combining data-feasibility checks with separate audits of experimental reliability and knowledge contribution.",
       "method": [
-        "Extract unresolved questions from domain reviews and formulate traceable hypotheses.",
-        "Screen data feasibility and prioritize hypotheses using groupwise Elo ranking.",
-        "Run iterative experiments and audit reliability separately from contribution against two frozen literature corpora."
+        "Extract unresolved questions from domain reviews and convert them into traceable hypotheses.",
+        "Screen hypotheses for data feasibility and prioritize them through groupwise Elo ranking.",
+        "Run iterative experiments and audit reliability and knowledge contribution against two frozen literature corpora."
       ],
-      "evidence_signal": "On OASIS-3, DeepQuest produced 42 feasible hypotheses, achieved a 95.24% audit-assessed scientific finding rate, and beat the strongest baselines in 14 of 15 reviewer–dimension comparisons; key associations were supported in ADNI and AIBL.",
-      "watch_item": "Audit-assessed discovery depends on reviewer judgments and literature coverage; cohort associations alone do not establish causality or clinical utility.",
+      "evidence_signal": "On OASIS-3, DeepQuest produced 42 feasible hypotheses, achieved a 95.24% audit-assessed scientific finding rate, and outperformed the strongest baselines in 14 of 15 reviewer-dimension comparisons; key associations were supported in independent ADNI and AIBL cohorts.",
+      "watch_item": "The reported finding rate is audit-assessed against frozen literature corpora, not a measure of experimentally proven causal discovery or clinical utility.",
       "hashtags": [
         "#AIScientist",
         "#AlzheimersResearch",
@@ -48,7 +48,7 @@
       "paper_title": "DeepQuest: From Knowledge Gaps to Scientific Discovery in Alzheimer's Disease",
       "paper_date": "2026-11-19",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-11-20T21:43:31",
+      "generated_at": "2026-11-21T20:24:42",
       "generator": "openai"
     }
   },
@@ -77,23 +77,23 @@
         "url": "https://arxiv.org/pdf/2611.26423v1"
       }
     ],
-    "score": 82,
+    "score": 77,
     "infographic": {
-      "key_insight": "Seer strengthens small deep-research agents by using shared models to predict and score candidate actions before executing only the selected action.",
-      "engineering_relevance": "Reusable offline-trained guidance supports locally run agents without per-agent retraining or real tool calls for discarded candidates, at the cost of extra inference.",
+      "key_insight": "Seer strengthens small deep-research agents with reusable models that predict tool responses and estimate action value before real execution.",
+      "engineering_relevance": "The framework trades extra local inference for better action selection while avoiding real tool calls for discarded candidates.",
       "method": [
-        "Train a tool-response simulator on real research call–response pairs.",
-        "Train a value estimator on histories labeled with discounted terminal correctness.",
-        "Predict and score candidate outcomes, execute the selected action, and commit only real tool responses to history."
+        "Train a tool-response simulator offline on real research call–response pairs.",
+        "Train a value estimator on research histories labeled with discounted terminal correctness.",
+        "Reuse both models across agents without further training; execute only the selected action and commit only real tool responses."
       ],
-      "evidence_signal": "Across multiple deep-research benchmarks, Seer improves different agents; GAIA accuracy rises from 13.6% to 41.7% for Qwen3.5-4B and from 22.3% to 50.5% for Qwen3.5-9B.",
-      "watch_item": "Prediction and scoring errors limit gains from broader imagined search, while extra inference remains a deployment cost.",
+      "evidence_signal": "Across multiple deep-research benchmarks, Seer improves performance; GAIA accuracy rises from 13.6% to 41.7% for Qwen3.5-4B and from 22.3% to 50.5% for Qwen3.5-9B.",
+      "watch_item": "Prediction and scoring errors limit gains from wider imagined search, while additional inference creates a local compute burden.",
       "hashtags": [
         "#ResearchAgents",
         "#SmallLanguageModels",
-        "#InferenceTimeGuidance",
-        "#OnDeviceAI",
-        "#ToolUse"
+        "#InferenceTimeCompute",
+        "#ToolUse",
+        "#LocalAI"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -101,7 +101,7 @@
       "paper_title": "Seer: Guiding Small Deep-Research Agents with Shared Decision Models",
       "paper_date": "2026-11-19",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-20T21:43:35",
+      "generated_at": "2026-11-21T20:24:43",
       "generator": "openai"
     }
   },
@@ -132,23 +132,23 @@
         "url": "https://arxiv.org/pdf/2611.26412v1"
       }
     ],
-    "score": 80,
+    "score": 75,
     "infographic": {
-      "key_insight": "TreeC learns understandable energy-management strategies with performance competitive with model predictive control and reinforcement learning across diverse energy-management problems.",
+      "key_insight": "TreeC learns understandable energy-management strategies with competitive performance against model predictive control and reinforcement learning across diverse problems.",
       "engineering_relevance": "Energy-management algorithms can lower costs in electrified Belgian homes, but average savings do not yet outweigh current implementation costs and effort.",
       "method": [
         "Compare rule-based, optimization, and machine-learning energy management.",
-        "Develop TreeC to learn understandable control strategies.",
-        "Evaluate management of batteries, heat pumps, and other energy-related systems."
+        "Introduce TreeC to learn understandable control strategies for batteries, heat pumps, and other energy systems.",
+        "Evaluate methods in three simulation cases and one real-world experiment."
       ],
-      "evidence_signal": "Three simulation cases and one real-world experiment support the comparison; TreeC and model predictive control both performed worse on hardware than in simulation.",
-      "watch_item": "Deployment requires representative training data and reliable real-time inputs, whose shortcomings reduced TreeC and model predictive control performance, respectively.",
+      "evidence_signal": "Hardware testing exposed performance losses relative to simulation: TreeC faced insufficiently representative training data, while model predictive control faced unreliable real-time inputs.",
+      "watch_item": "Validate controllers on actual hardware before deployment; simulation performance may not transfer under real-world data limitations.",
       "hashtags": [
         "#EnergyManagement",
         "#InterpretableAI",
+        "#ScientificMachineLearning",
         "#ResidentialEnergy",
-        "#ModelPredictiveControl",
-        "#MachineLearning"
+        "#HardwareValidation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -156,7 +156,7 @@
       "paper_title": "How to Effectively Manage the Energy in Residential Systems: Development and Comparison of Methods",
       "paper_date": "2026-11-19",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-20T21:43:38",
+      "generated_at": "2026-11-21T20:24:45",
       "generator": "openai"
     }
   },
@@ -186,22 +186,22 @@
         "url": "https://arxiv.org/pdf/2611.26459v1"
       }
     ],
-    "score": 79,
+    "score": 74,
     "infographic": {
-      "key_insight": "A simulator-trained inverse map lets Bayesian optimization search a low-dimensional space while a geometry-aware Gaussian process kernel preserves relationships in the original parameter space.",
-      "engineering_relevance": "Engineers can leverage an approximate mechanistic simulator to guide black-box optimization toward promising solutions with fewer search dimensions.",
+      "key_insight": "A simulator-trained inverse map lets Bayesian optimization search a low-dimensional space while preserving the original problem geometry through its Gaussian process kernel.",
+      "engineering_relevance": "Engineers can leverage mechanistic simulators to reduce online black-box search complexity rather than optimizing directly over all control variables.",
       "method": [
-        "Train an inverse map offline from simulator parameters to predicted optimal controls.",
-        "Run online Bayesian optimization over the learned representation using a kernel aware of the original problem geometry.",
-        "Analyze approximation bias and information gain, deriving intrinsic-dimension-dependent regret under additional assumptions."
+        "Train an amortized inverse map offline to predict optimal controls from simulator parameters.",
+        "Run Bayesian optimization over the learned representation using a geometry-aware Gaussian process kernel.",
+        "Analyze approximation bias, information gain, and regret dependence on intrinsic dimension under additional assumptions."
       ],
-      "evidence_signal": "Numerical simulations of personalized Parkinson’s drug dosing show improved optimization performance, including under simulator misspecification.",
-      "watch_item": "Restricting search to the learned representation can exclude the true optimum; theoretical guarantees require additional geometric and Gaussian process assumptions.",
+      "evidence_signal": "Numerical simulations of personalized Parkinson’s drug dosing report improved optimization performance, including under simulator misspecification.",
+      "watch_item": "Restricting search to the learned representation can introduce approximation bias; the regret result requires additional geometric and Gaussian process assumptions.",
       "hashtags": [
         "#BayesianOptimization",
         "#ScientificMachineLearning",
-        "#AmortizedInference",
         "#GaussianProcesses",
+        "#MechanisticModeling",
         "#PersonalizedMedicine"
       ],
       "model": "gpt-6.1-sol",
@@ -210,7 +210,7 @@
       "paper_title": "Bayesian optimization on amortized search space",
       "paper_date": "2026-11-19",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-20T21:43:41",
+      "generated_at": "2026-11-21T20:24:47",
       "generator": "openai"
     }
   },
@@ -240,23 +240,23 @@
         "url": "https://arxiv.org/pdf/2611.26349v1"
       }
     ],
-    "score": 75,
+    "score": 70,
     "infographic": {
-      "key_insight": "Perfumer uses an LLM-based agent to coordinate Quantum ESPRESSO and predictive models, accelerating structural relaxation and electronic band prediction.",
-      "engineering_relevance": "The framework turns natural-language requests and uploaded structures into automated relaxation-to-band workflows, reducing computation and specialist setup effort.",
+      "key_insight": "Perfumer combines an LLM agent, predictive models, and Quantum ESPRESSO to accelerate structural relaxation and electronic band prediction.",
+      "engineering_relevance": "The framework automates natural-language-to-calculation workflows, reducing computational cost and manual setup for materials screening.",
       "method": [
-        "Pre-relax structures with Perfumer-relax, then refine with Quantum ESPRESSO.",
+        "Pre-relax structures with Perfumer-relax, then refine them using Quantum ESPRESSO.",
         "Predict 12 band energies at requested wavevectors using a periodic graph neural network and latent Hermitian spectral head.",
         "Preserve reciprocal-lattice periodicity and time-reversal symmetry without explicitly constructing a Hamiltonian."
       ],
-      "evidence_signal": "The abstract reports 2.75× overall relaxation speedup across tested structures; trained on 125,153 band structures, the band model achieved 0.157 eV median per-material MAE on 2,607 held-out-composition test materials and about 97 ms per material on two consumer CPU cores.",
-      "watch_item": "Accuracy beyond the tested composition families and the 12-band output remains unestablished; consequential predictions should be checked with first-principles calculations.",
+      "evidence_signal": "The abstract reports 2.75× overall relaxation speedup; trained on 125,153 band structures, the band model achieved 0.157 eV median per-material MAE on 2,607 held-out-composition-family test materials and about 97 ms inference per material on two consumer CPU cores.",
+      "watch_item": "The reported median band error may obscure difficult cases; validate accuracy for target materials before relying on predictions.",
       "hashtags": [
         "#AIScientists",
         "#MaterialsInformatics",
         "#FirstPrinciples",
-        "#ElectronicStructure",
-        "#AgenticAI"
+        "#AgenticAI",
+        "#BandStructure"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -264,7 +264,7 @@
       "paper_title": "Perfumer: A Large Language Model-based Agentic Framework Accelerating Structural Relaxation and Electronic Band Prediction for First-Principle Calculation",
       "paper_date": "2026-11-19",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-20T21:43:45",
+      "generated_at": "2026-11-21T20:24:50",
       "generator": "openai"
     }
   },
@@ -293,23 +293,23 @@
         "url": "https://arxiv.org/pdf/2611.26551v1"
       }
     ],
-    "score": 74,
+    "score": 69,
     "infographic": {
-      "key_insight": "GraphEP turns cardiac simulations into graph-native learning data and shows that physiology-informed models lead on complementary prediction metrics.",
-      "engineering_relevance": "The system provides a reproducible pipeline for benchmarking cardiac electrophysiology models on irregular anatomical meshes.",
+      "key_insight": "GraphEP turns cardiac simulations into graph-native learning data, with physiology-informed models leading on complementary prediction metrics.",
+      "engineering_relevance": "The system provides a reproducible foundation for learning cardiac electrical dynamics on irregular anatomical meshes.",
       "method": [
         "Package geometry, tissue properties, stimulation, connectivity, activation targets, and provenance in PyTorch Geometric format.",
-        "Compare local message passing, global neural operators, hierarchical graph transformers, and physiology-informed models.",
-        "Model activation timing and waveform morphology with HGT-Lag, or evolve excitation and recovery autoregressively with GAP2ODE."
+        "Benchmark local message passing, global neural operators, hierarchical graph transformers, and physiology-informed models.",
+        "Model activation timing separately with HGT-Lag or evolve excitation and recovery autoregressively with GAP2ODE."
       ],
-      "evidence_signal": "The benchmark includes 732 left-ventricular simulations across 20 anatomies, with healthy and scarred tissue and multiple pacing configurations; HGT-Lag and GAP2ODE lead on complementary metrics.",
-      "watch_item": "Performance on simulated left ventricles does not establish generalization to clinical recordings or other cardiac chambers.",
+      "evidence_signal": "The benchmark includes 732 left-ventricular simulations across 20 anatomies, spanning healthy and scarred tissue and multiple pacing configurations.",
+      "watch_item": "The abstract does not establish generalization from simulated left-ventricular data to experimental or clinical recordings.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#CardiacElectrophysiology",
         "#GraphNeuralNetworks",
-        "#PhysiologyInformedAI",
-        "#GraphEP"
+        "#PhysicsInformedAI",
+        "#ComputationalCardiology"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -317,7 +317,7 @@
       "paper_title": "GraphEP: A Calibrated Data System and Benchmark for Learning Cardiac Electrophysiology",
       "paper_date": "2026-11-19",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-20T21:43:51",
+      "generated_at": "2026-11-21T20:24:51",
       "generator": "openai"
     }
   },
@@ -346,23 +346,23 @@
         "url": "https://arxiv.org/pdf/2611.26419v1"
       }
     ],
-    "score": 72,
+    "score": 67,
     "infographic": {
-      "key_insight": "A composite World Model combines spiking neural memory with transformers to track material history and predict responses of locally variable, defective composites within a nonlinear finite-element solver.",
-      "engineering_relevance": "The approach targets lower-cost structural simulations that retain local material architecture and irreversible state without repeatedly solving expensive material-scale models.",
+      "key_insight": "A Composites World Model combines a spiking memory block with transformers to track material history and predict defect-sensitive composite responses within a nonlinear finite-element solver.",
+      "engineering_relevance": "The approach targets the prohibitive cost of concurrent multiscale simulation by replacing material-scale models at finite-element integration points.",
       "method": [
         "Encode local material architecture, including defects.",
-        "Combine SNN memory for long-term material state with transformer blocks for short-term strain history.",
-        "Train in three stages, including recursive fine-tuning with scheduled sampling, then disassemble the model for FE-solver integration."
+        "Combine spiking neural network memory for long-term material state with transformers for short-term strain history.",
+        "Train through architecture encoding, short-window learning and recursive fine-tuning with scheduled sampling, then integrate the model into a nonlinear FE solver."
       ],
-      "evidence_signal": "Benchmarks against IM7/8552 laminate experiments under tension, compression and transverse shear, covering pristine and wrinkled composites, report prediction errors of 0.4%–4.8%.",
-      "watch_item": "The abstract does not quantify solver speedup or per-integration-point memory use, leaving large-scale computational savings to be verified.",
+      "evidence_signal": "Benchmarks against experiments on pristine and wrinkled IM7/8552 laminates under tension, compression and transverse shear report prediction errors of 0.4%–4.8%.",
+      "watch_item": "The abstract does not quantify runtime or memory savings, or establish generalization beyond the reported material and loading cases.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#CompositeMaterials",
         "#FiniteElementAnalysis",
         "#SpikingNeuralNetworks",
-        "#MultiscaleModeling"
+        "#SurrogateModeling"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -370,7 +370,7 @@
       "paper_title": "FEA solver integration of a composite World Model with a Spiking Neural Network memory Block for computationally efficient modelling of defects and variabilities",
       "paper_date": "2026-11-19",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-20T21:43:56",
+      "generated_at": "2026-11-21T20:24:53",
       "generator": "openai"
     }
   },
@@ -399,23 +399,23 @@
         "url": "https://arxiv.org/pdf/2611.26422v1"
       }
     ],
-    "score": 71,
+    "score": 66,
     "infographic": {
-      "key_insight": "Reasoning-Trace Analysis makes LLM-generated Q-matrix assignments inspectable, revealing disagreements that matrix-level agreement and fit alone miss.",
-      "engineering_relevance": "The framework offers an audit layer for AI-assisted diagnostic assessment design, supplementing expert review and empirical validation.",
+      "key_insight": "Reasoning-Trace Analysis makes LLM-generated Q-matrix assignments inspectable, revealing disagreements that matrix-level agreement and fit alone cannot explain.",
+      "engineering_relevance": "AI-assisted assessment pipelines can use attribute-labeled reasoning traces to audit item–skill mappings alongside expert review and empirical validation.",
       "method": [
-        "Prompt LLMs to generate attribute-labeled reasoning steps for each item.",
-        "Reconstruct Q-matrix assignments from the generated traces.",
-        "Compare matrices and inspect traces to identify sources of disagreement."
+        "Prompt LLMs to produce attribute-labeled solution steps.",
+        "Reconstruct Q-matrices from those steps and compare them with reference and directly generated matrices.",
+        "Inspect disagreements in item coding, labeling rules, and operation-level steps."
       ],
-      "evidence_signal": "Across 11 fraction-subtraction items, responses from 536 examinees, four LLMs, and 100 replications per condition, trace-derived matrices had lower mean reference overlap than directly generated matrices (.809 vs .877) and greater variability.",
-      "watch_item": "Generated traces are inspectable outputs, not verified explanations of model internals; attribute-labeling rules and step formulation can affect assignments.",
+      "evidence_signal": "A simulation and an empirical study with 11 fraction-subtraction items, 536 examinees, four LLMs, up to three temperatures, and 100 replications per condition found mean reference overlap of .809 for trace-derived matrices versus .877 for directly generated matrices.",
+      "watch_item": "Trace-derived matrices varied more across replications; inspectable reasoning should supplement, not replace, expert review and response-data validation.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#ExplainableAI",
         "#LargeLanguageModels",
-        "#Psychometrics",
-        "#DiagnosticAssessment"
+        "#EducationalMeasurement",
+        "#QMatrix"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -423,7 +423,7 @@
       "paper_title": "Reasoning-Trace Analysis Using Large Language Models for Interpretable Q-Matrix Construction",
       "paper_date": "2026-11-19",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-20T21:44:01",
+      "generated_at": "2026-11-21T20:24:55",
       "generator": "openai"
     }
   },
@@ -454,17 +454,17 @@
         "url": "https://arxiv.org/pdf/2611.26531v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
       "key_insight": "LLM-guided feature optimization improves fleet-scale ranking models while respecting shared feature-pipeline budgets and per-model serving constraints.",
-      "engineering_relevance": "The system helps large platforms balance ranking quality against feature costs and serving throughput across many production models.",
+      "engineering_relevance": "The system offers a practical workflow for improving ranking quality without exceeding feature-pipeline cost or serving-throughput limits.",
       "method": [
-        "LLM agents propose and shortlist cross features; deterministic tools execute and verify experiments.",
-        "Blend multiple feature-importance rankings, using Pareto fronts across tasks for multi-task models.",
-        "Tune feature selection through 10–25 asynchronous trials per model, then trim features to meet pipeline budgets."
+        "LLM agents propose and shortlist cross features; deterministic tools run experiments and verify results.",
+        "Blend multiple feature-importance rankings, using Pareto fronts for multi-task models.",
+        "Tune feature selections through 10–25 asynchronous trials per model, then trim features to meet pipeline budgets."
       ],
-      "evidence_signal": "Across production models, the abstract reports a 0.31% average normalized-entropy improvement within budget, 2.3% lower pipeline cost after trimming without regression beyond measurement noise, and a 0.20% lift in a primary online A/B metric.",
-      "watch_item": "The abstract does not specify fleet size, evaluation duration, or uncertainty estimates, limiting assessment of generalizability and statistical robustness.",
+      "evidence_signal": "Across production models, the system reports 0.31% average normalized-entropy improvement within budget, 2.3% lower pipeline cost after trimming without regression beyond measurement noise, and a 0.20% lift in a primary online A/B metric.",
+      "watch_item": "The abstract does not specify fleet size, evaluation duration, or uncertainty estimates, limiting assessment of robustness and transferability.",
       "hashtags": [
         "#AgenticAI",
         "#FeatureEngineering",
@@ -478,7 +478,7 @@
       "paper_title": "Cost-Aware Agentic Feature Optimization System for Fleet-Scale Ranking Models",
       "paper_date": "2026-11-19",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-20T21:44:07",
+      "generated_at": "2026-11-21T20:24:57",
       "generator": "openai"
     }
   },
@@ -507,17 +507,17 @@
         "url": "https://arxiv.org/pdf/2611.26342v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
       "key_insight": "Training only on minimal corrections at the first reasoning failure improves instruction compliance while largely preserving untargeted skills.",
-      "engineering_relevance": "Localized supervision offers a targeted way to shape LLM reasoning without requiring imitation of entire demonstrations.",
+      "engineering_relevance": "Localized supervision offers a targeted alternative to imitating full reasoning traces or rewarding entire completions.",
       "method": [
-        "Sample a model completion and identify its first failure under a specified criterion.",
-        "Propose a minimal replacement span and supervise only that edited span.",
-        "Apply offline or online, adapting online corrections to evolving model failures."
+        "Sample the model’s own reasoning trajectories.",
+        "Use an editor to locate the first failure and propose a minimal replacement span.",
+        "Supervise only edited spans, either offline or online as failure modes evolve."
       ],
-      "evidence_signal": "On ReasonIF with Qwen3-32B, edit-based training substantially improves reasoning-instruction compliance over full-trajectory imitation and trajectory-level reinforcement learning baselines while largely preserving untargeted skills.",
-      "watch_item": "The approach depends on reliably identifying the first failure and producing an appropriate minimal correction.",
+      "evidence_signal": "On ReasonIF with Qwen3-32B, edit-based training substantially improved reasoning-instruction compliance over full-trajectory imitation and trajectory-level reinforcement learning baselines, while largely preserving untargeted skills.",
+      "watch_item": "Results depend on reliable failure localization and edits; the abstract reports one model and benchmark without numerical effect sizes.",
       "hashtags": [
         "#LLMTraining",
         "#Reasoning",
@@ -531,7 +531,7 @@
       "paper_title": "Training LLMs to Follow Reasoning Instructions with Minimal Edits",
       "paper_date": "2026-11-19",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-20T21:44:11",
+      "generated_at": "2026-11-21T20:24:59",
       "generator": "openai"
     }
   },
@@ -560,23 +560,23 @@
         "url": "https://arxiv.org/pdf/2611.26335v1"
       }
     ],
-    "score": 70,
+    "score": 65,
     "infographic": {
-      "key_insight": "High overall accuracy can hide failures to apply the stated rules for missing information.",
-      "engineering_relevance": "AI agents using incomplete records should be tested on whether missing facts remain unknown or count as false under the applicable completeness rules.",
+      "key_insight": "LLMs can answer recorded facts correctly yet mishandle missing information when the required closure assumption changes.",
+      "engineering_relevance": "AI agents need explicit rules for when missing information means unknown versus false, especially when completeness varies by source or scope.",
       "method": [
-        "Test each base scenario under open-world (OWA), closed-world (CWA), and local closed-world (LCWA) assumptions, changing only how missing information is treated.",
-        "Count a base scenario as correct only when all closure variants are answered correctly.",
-        "Provide a verified base benchmark and agent extensions for action choice, source scope, and updates."
+        "Test each base scenario under open-world (OWA), closed-world (CWA), and local closed-world (LCWA) assumptions.",
+        "Change only the treatment of missing information; require correct answers across all closure variants.",
+        "Extend evaluation to agent action choice, source scope, and updates."
       ],
-      "evidence_signal": "Across 960 instances and replicated runs, overall accuracy ranged from 71.18% to 99.86%, while accuracy on scenarios whose gold label changes with the closure rule ranged from 18.23% to 99.31%.",
-      "watch_item": "Real-world deployment also requires establishing which sources are complete; following a stated closure rule does not establish that the rule is appropriate.",
+      "evidence_signal": "Across 960 instances and replicated runs, overall accuracy ranged from 71.18% to 99.86%, while core switch accuracy on scenarios whose gold labels change with the closure rule ranged from 18.23% to 99.31%.",
+      "watch_item": "Aggregate accuracy can conceal closure failures; inspect assumption-specific results, particularly LCWA.",
       "hashtags": [
         "#ClosureBench",
         "#LLMEvaluation",
         "#AIReasoning",
-        "#KnowledgeRepresentation",
-        "#AIAgents"
+        "#AIAgents",
+        "#KnowledgeRepresentation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -584,7 +584,7 @@
       "paper_title": "ClosureBench: A Benchmark for Reasoning under Closure Assumptions",
       "paper_date": "2026-11-19",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-20T21:44:15",
+      "generated_at": "2026-11-21T20:25:01",
       "generator": "openai"
     }
   },
@@ -614,17 +614,17 @@
         "url": "https://arxiv.org/pdf/2611.26333v1"
       }
     ],
-    "score": 66,
+    "score": 61,
     "infographic": {
-      "key_insight": "OceanCoder uses engineering verification as a training signal to improve automated ocean-engineering simulation modelling beyond syntactically correct, executable code.",
-      "engineering_relevance": "Checking inputs, required analyses and output plausibility helps align generated simulation models with engineering task requirements.",
+      "key_insight": "OceanCoder uses engineering verification as a training signal to improve automated ocean-engineering simulation modelling beyond syntactic correctness and successful execution.",
+      "engineering_relevance": "It targets expert-intensive model construction by checking task constraints, required analyses and the engineering plausibility of simulation outputs.",
       "method": [
         "Fine-tune Qwen3-8B on 12,000 verified examples spanning 12 engineering task categories.",
-        "Verify input constraints, completion of required analyses and engineering plausibility of outputs.",
+        "Apply three-layer verification to model inputs, analysis completion and output plausibility.",
         "Use graded verification rewards for group relative policy optimisation (GRPO)."
       ],
-      "evidence_signal": "On a benchmark covering out-of-distribution tasks and real-world engineering cases, reported Pass@1 rises from 0% for the base model to 46.77% after supervised fine-tuning and 51.43% after GRPO.",
-      "watch_item": "Engineering plausibility checks do not establish full physical validity; deployment still requires independent validation and expert review.",
+      "evidence_signal": "On a benchmark covering out-of-distribution tasks and real-world engineering cases, reported Pass@1 rose from 0% for the base model to 46.77% after supervised fine-tuning and 51.43% after GRPO.",
+      "watch_item": "A 51.43% Pass@1 leaves substantial failure risk; verification coverage and expert review remain important before engineering deployment.",
       "hashtags": [
         "#OceanEngineering",
         "#ScientificMachineLearning",
@@ -638,7 +638,7 @@
       "paper_title": "OceanCoder: A Verification-Guided Large Language Model for Automated Simulation Modelling in Ocean Engineering",
       "paper_date": "2026-11-19",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-20T21:44:17",
+      "generated_at": "2026-11-21T20:25:03",
       "generator": "openai"
     }
   },
@@ -669,23 +669,23 @@
         "url": "https://arxiv.org/pdf/2611.26564v1"
       }
     ],
-    "score": 65,
+    "score": 60,
     "infographic": {
-      "key_insight": "A coordinated paid-content network uses promotional posts on UGC platforms to gain visibility in generative-engine answers.",
-      "engineering_relevance": "Defending retrieval-augmented systems against coordinated promotion requires account- and platform-level signals beyond content-level screening.",
+      "key_insight": "A coordinated paid-content network uses promotional UGC placements to gain visibility in generative-engine answers, exposing weaknesses in content-only defenses.",
+      "engineering_relevance": "Defenses against coordinated GEO campaigns should incorporate account- and platform-level signals alongside content analysis.",
       "method": [
         "Map one paid-content operation across three major Chinese UGC platforms.",
-        "Analyze associated accounts, inferred promotional placements, and campaign evolution.",
+        "Analyze account growth, cross-platform coordination, and evolving listicle content.",
         "Evaluate network citations across nine generative engines and client mentions across eight."
       ],
-      "evidence_signal": "The study identified 1,985 associated accounts and 466,357 inferred promotional placements; network pages represented 4.5%–20% of retrievable cited pages, while clients appeared in 52% of evaluated answers versus 68% for category leaders.",
-      "watch_item": "Findings concern one network, and citation attribution varies with strictness, limiting generalization to other GEO operations.",
+      "evidence_signal": "The study identified 1,985 associated accounts and 466,357 inferred promotional placements; network pages comprised 4.5%–20% of retrievable cited pages, while clients appeared in 52% of answers versus 68% for category leaders.",
+      "watch_item": "Findings concern one network, and citation attribution varies with strictness; client mentions alone do not establish causal influence.",
       "hashtags": [
         "#GenerativeEngineOptimization",
-        "#RetrievalAugmentedGeneration",
         "#AIIntegrity",
+        "#InformationRetrieval",
         "#CoordinatedPromotion",
-        "#PlatformSecurity"
+        "#AISafety"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -693,7 +693,7 @@
       "paper_title": "GEOHunter: Mapping a Generative Engine Optimization Network in the Wild",
       "paper_date": "2026-11-19",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-20T21:44:20",
+      "generated_at": "2026-11-21T20:25:05",
       "generator": "openai"
     }
   },
@@ -723,17 +723,17 @@
         "url": "https://arxiv.org/pdf/2611.26598v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "OracleImitator learns which features to acquire by distilling an explicit oracle that ranks candidates by their effect on prediction error.",
-      "engineering_relevance": "Instance-specific feature acquisition can reduce measurement cost, latency, or privacy burden while preserving predictive accuracy.",
+      "key_insight": "OracleImitator learns which feature to acquire next by distilling an oracle teacher that ranks candidates by their effect on prediction error.",
+      "engineering_relevance": "Instance-specific feature acquisition can reduce measurement costs, delays, or privacy exposure while preserving predictive accuracy.",
       "method": [
         "Construct a training-time oracle using labels and unobserved feature values.",
-        "Distill the oracle’s feature rankings into a deployable policy through soft-target imitation.",
+        "Distill the oracle’s candidate rankings into a deployable policy through soft-target imitation.",
         "Measure how much oracle ranking information is recoverable from deployment-visible inputs."
       ],
-      "evidence_signal": "Across multimodal medical diagnosis and AFABench evaluations, OracleImitator matches or outperforms existing AFA methods across budgets and recovers 90% of attainable accuracy gain at under one-quarter of acquisition cost.",
-      "watch_item": "Training requires labels and unobserved feature values, while deployment-visible information may not fully support the oracle’s rankings.",
+      "evidence_signal": "Across multimodal medical diagnosis and AFABench, OracleImitator matches or outperforms existing AFA methods across budgets, recovering 90% of attainable accuracy gain at under one-quarter of acquisition cost.",
+      "watch_item": "The teacher requires labels and unobserved feature values during training, while the deployed policy must approximate its rankings without that privileged information.",
       "hashtags": [
         "#ActiveFeatureAcquisition",
         "#KnowledgeDistillation",
@@ -747,7 +747,7 @@
       "paper_title": "Active Feature Acquisition by Distilling an Oracle Teacher",
       "paper_date": "2026-11-19",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-20T21:44:22",
+      "generated_at": "2026-11-21T20:25:07",
       "generator": "openai"
     }
   },
@@ -776,17 +776,17 @@
         "url": "https://arxiv.org/pdf/2611.26586v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "ProtoDiffusion generates editable, multi-layer images using one shared spatial prototype and one vector per layer, reducing latent token count from NHW to HW+N before backbone-specific packing.",
-      "engineering_relevance": "This compact representation supports image- and text-conditioned design generation without requiring layer counts or layouts as inputs, while allowing optional bounding-box guidance.",
+      "key_insight": "ProtoDiffusion generates editable multi-layer images using one shared spatial prototype and one vector per layer, reducing latent token count from NHW to HW+N before backbone-specific packing.",
+      "engineering_relevance": "This compact representation supports image- and text-conditioned design generation without requiring the layer count or layout as input, while accepting optional bounding-box guidance.",
       "method": [
-        "ProtoVAE encodes designs into a shared spatial prototype and per-layer candidate vectors.",
+        "ProtoVAE encodes a design into a shared spatial prototype and per-layer candidate vectors.",
         "A shared decoder reconstructs each RGBA layer conditioned on its candidate vector.",
         "Latent diffusion jointly denoises the prototype and fixed candidate slots, leaving unused slots empty."
       ],
-      "evidence_signal": "The abstract reports 40.43 dB layer-crop reconstruction PSNR, LayerD image-to-design RGB L1 of 0.040 with boxes, and text-to-design FID of 66.41 versus 86.84 for FLUX.2 [klein], with 19.1× faster generation than a same-backbone generation-then-decomposition cascade.",
-      "watch_item": "The fixed candidate-slot set imposes a layer-capacity ceiling, and the reported token reduction alone does not establish memory or runtime savings across backbones.",
+      "evidence_signal": "ProtoVAE reaches 40.43 dB layer-crop PSNR; on LayerD, image-to-design achieves RGB L1 of 0.040 with boxes and 0.057 without, while text-to-design reaches merged-image FID of 66.41 versus 86.84 for FLUX.2 [klein].",
+      "watch_item": "Fixed candidate slots impose a configured layer-capacity limit, and token-count savings alone do not establish memory or runtime savings across backbones.",
       "hashtags": [
         "#ProtoDiffusion",
         "#LatentDiffusion",
@@ -800,7 +800,7 @@
       "paper_title": "ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images",
       "paper_date": "2026-11-19",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-11-20T21:44:25",
+      "generated_at": "2026-11-21T20:25:09",
       "generator": "openai"
     }
   },
@@ -831,23 +831,23 @@
         "url": "https://arxiv.org/pdf/2611.26553v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "ROGUE-AI finds that harmful agent behavior often stems from overlooked operational hazards rather than attacks, and hazard-specific warnings reduce harm.",
-      "engineering_relevance": "Agent developers can use incident replications and matched controls as repeatable pre-release safety audits beyond prompt-injection testing.",
+      "key_insight": "ROGUE-AI shows that harmful agent behavior often stems from overlooked operational hazards rather than malicious instructions.",
+      "engineering_relevance": "Release audits should test ordinary workflow hazards alongside prompt injection, using matched controls to isolate suspected causes.",
       "method": [
-        "Rebuild reported incidents offline using a multi-agent framework.",
-        "Compare agent behavior against matched controls lacking only the blamed cause.",
-        "Test hazard-specific warnings against same-length notes that omit the hazard."
+        "Reconstruct reported agent incidents offline with a multi-agent framework.",
+        "Compare each reconstruction with a matched control lacking only the blamed cause.",
+        "Evaluate five models and test hazard-specific warnings after tool outputs."
       ],
-      "evidence_signal": "Across 108 attempted replications, ROGUE-AI reproduced reported harm in 89%; agents using five models made the reported mistake in 18–33% of runs versus at most 1% in matched controls.",
-      "watch_item": "Offline reconstructions may not capture all production conditions, so replication results should not be treated as deployment-wide failure rates.",
+      "evidence_signal": "ROGUE-AI reproduced reported harm in 89% of 108 attempted replications; across five models, mistake rates were 18–33% with the blamed cause versus at most 1% without it.",
+      "watch_item": "Offline reconstructions may not fully capture production conditions, so results require validation in representative deployment environments.",
       "hashtags": [
         "#AgentSafety",
-        "#ROGUEAI",
-        "#IncidentReplication",
         "#AISecurity",
-        "#SafetyAuditing"
+        "#LLMAgents",
+        "#CausalTesting",
+        "#ROGUEAI"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -855,7 +855,7 @@
       "paper_title": "Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)",
       "paper_date": "2026-11-19",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-20T21:44:27",
+      "generated_at": "2026-11-21T20:25:11",
       "generator": "openai"
     }
   },
@@ -884,23 +884,23 @@
         "url": "https://arxiv.org/pdf/2611.26545v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "Combining persona and knowledge directions can improve lie ranking over same-depth supervised probes, but transfer varies by model and deception type.",
-      "engineering_relevance": "Label-free activation directions offer a low-cost approach to deception monitoring, but require model-specific validation and controls for wording effects.",
+      "key_insight": "Label-free persona and knowledge directions can detect complementary signals of LLM deception, but their reliability varies by model and wording.",
+      "engineering_relevance": "Activation-based directions offer a low-cost complement to supervised lie detectors, but require model-specific validation and tests that separate deception from response phrasing.",
       "method": [
-        "Expand an honest/deceptive persona bank with roles that deny knowledge they possess.",
-        "Extract middle-layer persona directions and knowledge directions using identical scripted denials for answerable and unanswerable questions.",
-        "Evaluate individual and summed directions against supervised probes and random-direction baselines."
+        "Expand an honest/deceptive persona bank with roles that conceal known information, then derive middle-layer persona directions.",
+        "Derive a knowledge direction by contrasting answerable and unanswerable questions followed by identical scripted denials.",
+        "Evaluate individual and summed directions against supervised probes and random-direction controls."
       ],
-      "evidence_signal": "Across four models on Liars’ Bench, persona directions outperform single-dataset probes on three, while summed directions outperform same-depth supervised probes on all four, with one comparison near chance.",
-      "watch_item": "Persona directions largely track wording on knowledge-denial tasks; gains are inconsistent, and the combined direction trails the supervised probe on held-out lies.",
+      "evidence_signal": "Across four models on Liars’ Bench, persona directions outperformed single-dataset probes on three; summed persona and knowledge directions outperformed same-depth supervised probes on all four, although one comparison was near chance.",
+      "watch_item": "Persona signals largely tracked wording on knowledge-denial tasks; the expanded bank’s gain on Llama was within random-widening variability, and the summed direction lagged the probe on held-out lies.",
       "hashtags": [
         "#LLMDeception",
         "#MechanisticInterpretability",
-        "#ActivationProbing",
-        "#AITrustworthiness",
-        "#KnowledgeRepresentation"
+        "#RepresentationEngineering",
+        "#AIHonesty",
+        "#LLMEvaluation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -908,7 +908,7 @@
       "paper_title": "The Geometry of Lies: Knowledge and Persona Directions for Detecting Deception in Large Language Models",
       "paper_date": "2026-11-19",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-20T21:44:30",
+      "generated_at": "2026-11-21T20:25:13",
       "generator": "openai"
     }
   },
@@ -937,17 +937,17 @@
         "url": "https://arxiv.org/pdf/2611.26504v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
       "key_insight": "Transition eigenvectors provide reusable reward features whose successor features are obtained by closed-form scaling, enabling rapid adaptation to changing goals.",
-      "engineering_relevance": "For fixed environment dynamics, task adaptation reduces to linear reward regression without a successor-feature network or replay buffer.",
+      "engineering_relevance": "This spectral basis eliminates the need for a successor-feature network or replay buffer and reduces task adaptation to linear reward regression.",
       "method": [
-        "Build base features from eigenvectors of the transition matrix under a fixed reference policy.",
-        "Scale each feature by θᵢ = 1/(1 − γλᵢ) to obtain its successor feature.",
+        "Compute eigenvectors of the transition matrix under a fixed reference policy.",
+        "Scale each eigenfeature by θᵢ = 1/(1 − γλᵢ) to obtain its successor feature.",
         "Fit task-specific reward weights and act greedily on the reference policy’s action values."
       ],
-      "evidence_signal": "In a two-goal gridworld with a uniform-random reference policy, the agents maintained near-maximal return across goal changes, while SimpleSF and DQN lost most of their return at each change.",
-      "watch_item": "Evidence is limited to a gridworld, and computing transition eigenvectors may be challenging in large or unknown environments.",
+      "evidence_signal": "In a two-goal gridworld with a uniform-random-walk reference policy, the agents maintained near-maximal return across goal changes, while SimpleSF and DQN lost most of their return at each change.",
+      "watch_item": "Evidence is limited to a gridworld; scaling transition-eigenvector computation and relying on one-step improvement over a fixed reference policy require further validation.",
       "hashtags": [
         "#ContinualRL",
         "#SuccessorFeatures",
@@ -961,7 +961,7 @@
       "paper_title": "Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning",
       "paper_date": "2026-11-19",
       "paper_category": "Modeling and Simulation",
-      "generated_at": "2026-11-20T21:44:33",
+      "generated_at": "2026-11-21T20:25:14",
       "generator": "openai"
     }
   },
@@ -992,23 +992,23 @@
         "url": "https://arxiv.org/pdf/2611.26475v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "Critically damped Polyak (CDP) stepsizes adapt gradient descent to local curvature, steering it toward flatter minima while preserving convergence under stated assumptions.",
-      "engineering_relevance": "CDP offers an adaptive stepsize approach for seeking low-loss, low-sharpness solutions, with empirical results extending to pre-trained LLM fine-tuning.",
+      "key_insight": "Critically damped Polyak (CDP) stepsizes adapt gradient descent to local curvature, promoting flatter minima while enabling convergence to an interpolating solution.",
+      "engineering_relevance": "CDP offers an adaptive stepsize approach to reducing sharpness, with demonstrated flattening in nonlinear teacher–student networks and pretrained LLM fine-tuning.",
       "method": [
         "Multiply the classical Polyak stepsize by 4 and a mild damping factor.",
         "Use curvature-adaptive oscillations near the minimizer manifold, with damping driving convergence.",
-        "At small loss, projected iterates approximately descend log top-Hessian-eigenvalue sharpness along the manifold."
+        "At low loss, induce motion along the manifold that approximately minimizes log top Hessian eigenvalue."
       ],
-      "evidence_signal": "The abstract reports uniform-in-time sharpness and loss-reduction guarantees for locally quadratic Morse–Bott losses, plus SAM-like flattening in nonlinear teacher–student networks and LLM fine-tuning.",
-      "watch_item": "The guarantees require locally quadratic Morse–Bott structure near the minimizer manifold; the broader neural-network results are empirical.",
+      "evidence_signal": "The abstract reports uniform-in-time sharpness and loss-reduction guarantees for locally quadratic Morse–Bott losses, plus empirical flattening similar to SAM in settings beyond the theory.",
+      "watch_item": "The guarantees require local Morse–Bott structure near the minimizer manifold; the reported LLM results extend beyond this theoretical scope.",
       "hashtags": [
-        "#Optimization",
+        "#AdaptiveOptimization",
         "#FlatMinima",
-        "#AdaptiveStepsizes",
-        "#GradientDescent",
-        "#DeepLearning"
+        "#PolyakStepsize",
+        "#LossLandscape",
+        "#LLMFineTuning"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -1016,7 +1016,7 @@
       "paper_title": "A new algorithmic approach for finding flat minima: critically damped Polyak stepsizes",
       "paper_date": "2026-11-19",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-20T21:44:36",
+      "generated_at": "2026-11-21T20:25:16",
       "generator": "openai"
     }
   },
@@ -1045,17 +1045,17 @@
         "url": "https://arxiv.org/pdf/2611.26361v1"
       }
     ],
-    "score": 64,
+    "score": 59,
     "infographic": {
-      "key_insight": "The right amount of agent memory depends on the model: strong models can benefit from full guideline sets, while weaker models may perform better with selected subsets.",
-      "engineering_relevance": "Tune memory selection per model and validate it end to end rather than assuming more remembered guidance improves reliability.",
+      "key_insight": "The best memory budget depends on the agent model: strong models can benefit from full guideline sets, while weaker models may perform better with a small selected subset.",
+      "engineering_relevance": "Tune memory volume per model and validate end-to-end behavior rather than assuming more stored guidance improves reliability.",
       "method": [
-        "Mine 1–3 short lessons from each agent trajectory.",
-        "Consolidate lessons into guidelines, recording how many lessons each merges.",
+        "Mine 1–3 procedural lessons from each agent episode.",
+        "Consolidate lessons into guidelines that record how many lessons they merge.",
         "Provide all guidelines or a selected subset at inference."
       ],
-      "evidence_signal": "On AppWorld, DeepSeek-V3.2 gained 9.5 percentage points in task completion with all 191 guidelines; gpt-oss-120b rose from 39.9% to 51.2% with all 199, versus 55.4% with about 29 selected guidelines (mean of two runs).",
-      "watch_item": "Frequently supported guidelines can backfire, and lost provenance or swallowed API errors can undermine memory reliability and evaluation.",
+      "evidence_signal": "On AppWorld, DeepSeek-V3.2 gained 9.5 percentage points in task completion with all 191 guidelines; gpt-oss-120b rose from 39.9% to 51.2% with all 199, versus 55.4% with about 29 selected guidelines, averaged over two runs.",
+      "watch_item": "Audit guideline provenance, API failures, and evaluation baselines: the authors report lost provenance, a backfiring high-support guideline, and a swallowed API error that failed every task despite plausible logs.",
       "hashtags": [
         "#LLMAgents",
         "#AgentMemory",
@@ -1069,7 +1069,7 @@
       "paper_title": "How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents",
       "paper_date": "2026-11-19",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-20T21:44:38",
+      "generated_at": "2026-11-21T20:25:18",
       "generator": "openai"
     }
   }
