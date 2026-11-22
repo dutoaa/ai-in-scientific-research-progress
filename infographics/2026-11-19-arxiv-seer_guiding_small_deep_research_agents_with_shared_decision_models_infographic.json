@@ -1,19 +1,19 @@
 {
-  "key_insight": "Seer strengthens small deep-research agents with reusable models that predict tool responses and estimate action value before real execution.",
-  "engineering_relevance": "The framework trades extra local inference for better action selection while avoiding real tool calls for discarded candidates.",
+  "key_insight": "Seer improves small deep-research agents by using shared learned models to predict and score candidate actions before executing only the selected action.",
+  "engineering_relevance": "Reusable inference-time guidance can strengthen locally run agents without agent-specific retraining or tool calls for discarded candidates, at the cost of extra local inference.",
   "method": [
     "Train a tool-response simulator offline on real research call–response pairs.",
     "Train a value estimator on research histories labeled with discounted terminal correctness.",
-    "Reuse both models across agents without further training; execute only the selected action and commit only real tool responses."
+    "Predict and score candidate outcomes; commit only the selected action and its real tool response to history."
   ],
-  "evidence_signal": "Across multiple deep-research benchmarks, Seer improves performance; GAIA accuracy rises from 13.6% to 41.7% for Qwen3.5-4B and from 22.3% to 50.5% for Qwen3.5-9B.",
-  "watch_item": "Prediction and scoring errors limit gains from wider imagined search, while additional inference creates a local compute burden.",
+  "evidence_signal": "Across multiple deep-research benchmarks, Seer improves different language models; GAIA accuracy rises from 13.6% to 41.7% for Qwen3.5-4B and from 22.3% to 50.5% for Qwen3.5-9B.",
+  "watch_item": "Simulation and scoring errors limit gains from wider candidate search, while added inference creates a compute trade-off on constrained devices.",
   "hashtags": [
     "#ResearchAgents",
     "#SmallLanguageModels",
     "#InferenceTimeCompute",
     "#ToolUse",
-    "#LocalAI"
+    "#OnDeviceAI"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Seer: Guiding Small Deep-Research Agents with Shared Decision Models",
   "paper_date": "2026-11-19",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-11-21T20:24:43",
+  "generated_at": "2026-11-22T20:37:11",
   "generator": "openai"
 }

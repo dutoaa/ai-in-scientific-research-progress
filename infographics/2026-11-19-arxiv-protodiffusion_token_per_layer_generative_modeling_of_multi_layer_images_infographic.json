@@ -1,13 +1,13 @@
 {
-  "key_insight": "ProtoDiffusion generates editable multi-layer images using one shared spatial prototype and one vector per layer, reducing latent token count from NHW to HW+N before backbone-specific packing.",
-  "engineering_relevance": "This compact representation supports image- and text-conditioned design generation without requiring the layer count or layout as input, while accepting optional bounding-box guidance.",
+  "key_insight": "ProtoDiffusion generates editable multi-layer designs using one shared spatial prototype and one vector per layer, reducing latent token count from NHW to HW+N before backbone-specific packing.",
+  "engineering_relevance": "The compact representation supports image- and text-conditioned design generation without requiring a layer count or layout as input, while allowing optional bounding-box guidance.",
   "method": [
     "ProtoVAE encodes a design into a shared spatial prototype and per-layer candidate vectors.",
-    "A shared decoder reconstructs each RGBA layer conditioned on its candidate vector.",
-    "Latent diffusion jointly denoises the prototype and fixed candidate slots, leaving unused slots empty."
+    "Each candidate conditions a shared decoder to reconstruct its RGBA layer.",
+    "Diffusion jointly denoises the prototype and fixed candidate slots, leaving unused slots empty."
   ],
-  "evidence_signal": "ProtoVAE reaches 40.43 dB layer-crop PSNR; on LayerD, image-to-design achieves RGB L1 of 0.040 with boxes and 0.057 without, while text-to-design reaches merged-image FID of 66.41 versus 86.84 for FLUX.2 [klein].",
-  "watch_item": "Fixed candidate slots impose a configured layer-capacity limit, and token-count savings alone do not establish memory or runtime savings across backbones.",
+  "evidence_signal": "Reported results include 40.43 dB layer-crop reconstruction PSNR, LayerD image-to-design RGB L1 of 0.040 with boxes, and text-to-design FID of 66.41 versus 86.84 for FLUX.2 [klein].",
+  "watch_item": "Fixed candidate slots impose a layer-capacity limit, and fewer latent tokens do not by themselves establish end-to-end memory or runtime savings across backbones.",
   "hashtags": [
     "#ProtoDiffusion",
     "#LatentDiffusion",
@@ -21,6 +21,6 @@
   "paper_title": "ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images",
   "paper_date": "2026-11-19",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-11-21T20:25:09",
+  "generated_at": "2026-11-22T20:37:40",
   "generator": "openai"
 }

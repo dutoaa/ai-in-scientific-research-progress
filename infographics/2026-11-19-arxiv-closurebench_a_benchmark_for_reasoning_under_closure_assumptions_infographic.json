@@ -1,13 +1,13 @@
 {
-  "key_insight": "LLMs can answer recorded facts correctly yet mishandle missing information when the required closure assumption changes.",
-  "engineering_relevance": "AI agents need explicit rules for when missing information means unknown versus false, especially when completeness varies by source or scope.",
+  "key_insight": "LLMs can answer many questions correctly while still mishandling missing information under different closure assumptions.",
+  "engineering_relevance": "AI agents should be tested on whether they apply source-specific rules for missing information, not just reason correctly over recorded facts.",
   "method": [
-    "Test each base scenario under open-world (OWA), closed-world (CWA), and local closed-world (LCWA) assumptions.",
-    "Change only the treatment of missing information; require correct answers across all closure variants.",
+    "Test each base scenario under open-world, closed-world, and local closed-world assumptions, changing only how missing information is treated.",
+    "Count a base scenario as correct only when all closure variants are answered correctly.",
     "Extend evaluation to agent action choice, source scope, and updates."
   ],
-  "evidence_signal": "Across 960 instances and replicated runs, overall accuracy ranged from 71.18% to 99.86%, while core switch accuracy on scenarios whose gold labels change with the closure rule ranged from 18.23% to 99.31%.",
-  "watch_item": "Aggregate accuracy can conceal closure failures; inspect assumption-specific results, particularly LCWA.",
+  "evidence_signal": "Across 960 instances and replicated runs, overall accuracy ranged from 71.18% to 99.86%, while core switch accuracy on scenarios whose gold labels change with the closure assumption ranged from 18.23% to 99.31%.",
+  "watch_item": "Local closed-world assumptions require careful scope handling: some agents answered unknown even when the prompt required treating missing information as false.",
   "hashtags": [
     "#ClosureBench",
     "#LLMEvaluation",
@@ -21,6 +21,6 @@
   "paper_title": "ClosureBench: A Benchmark for Reasoning under Closure Assumptions",
   "paper_date": "2026-11-19",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-21T20:25:01",
+  "generated_at": "2026-11-22T20:37:31",
   "generator": "openai"
 }

@@ -1,13 +1,13 @@
 {
-  "key_insight": "The best memory budget depends on the agent model: strong models can benefit from full guideline sets, while weaker models may perform better with a small selected subset.",
-  "engineering_relevance": "Tune memory volume per model and validate end-to-end behavior rather than assuming more stored guidance improves reliability.",
+  "key_insight": "Memory volume should be tuned to the model: stronger agents can benefit from all guidelines, while weaker agents may perform better with a small selected subset.",
+  "engineering_relevance": "Deploy agent memory with model-specific selection and evaluation rather than assuming more remembered guidance always improves performance.",
   "method": [
-    "Mine 1–3 procedural lessons from each agent episode.",
-    "Consolidate lessons into guidelines that record how many lessons they merge.",
+    "Mine 1–3 short lessons per episode from the agent’s own trajectories.",
+    "Consolidate lessons into guidelines, recording how many lessons each guideline merges.",
     "Provide all guidelines or a selected subset at inference."
   ],
-  "evidence_signal": "On AppWorld, DeepSeek-V3.2 gained 9.5 percentage points in task completion with all 191 guidelines; gpt-oss-120b rose from 39.9% to 51.2% with all 199, versus 55.4% with about 29 selected guidelines, averaged over two runs.",
-  "watch_item": "Audit guideline provenance, API failures, and evaluation baselines: the authors report lost provenance, a backfiring high-support guideline, and a swallowed API error that failed every task despite plausible logs.",
+  "evidence_signal": "On AppWorld, DeepSeek-V3.2 gained 9.5 percentage points in task completion with all 191 guidelines; gpt-oss-120b rose from 39.9% to 51.2% with all 199 guidelines and to 55.4% with about 29 selected guidelines, averaged over two runs.",
+  "watch_item": "Audit guideline quality, provenance, API failures, and baseline comparability: frequent guidance can backfire, and plausible logs can conceal complete task failure.",
   "hashtags": [
     "#LLMAgents",
     "#AgentMemory",
@@ -21,6 +21,6 @@
   "paper_title": "How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents",
   "paper_date": "2026-11-19",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-21T20:25:18",
+  "generated_at": "2026-11-22T20:37:49",
   "generator": "openai"
 }

@@ -1,13 +1,13 @@
 {
-  "key_insight": "Transition eigenvectors provide reusable reward features whose successor features are obtained by closed-form scaling, enabling rapid adaptation to changing goals.",
-  "engineering_relevance": "This spectral basis eliminates the need for a successor-feature network or replay buffer and reduces task adaptation to linear reward regression.",
+  "key_insight": "Transition-matrix eigenvectors provide a reusable feature basis whose successor features are obtained by closed-form scaling, separating environmental dynamics from task-specific rewards.",
+  "engineering_relevance": "For changing reward tasks in a fixed environment, adaptation becomes linear reward regression without a successor-feature network or replay buffer.",
   "method": [
-    "Compute eigenvectors of the transition matrix under a fixed reference policy.",
-    "Scale each eigenfeature by θᵢ = 1/(1 − γλᵢ) to obtain its successor feature.",
-    "Fit task-specific reward weights and act greedily on the reference policy’s action values."
+    "Construct base features from eigenvectors of a fixed reference policy’s transition matrix.",
+    "Scale each feature by θ_i = 1/(1 − γλ_i) to obtain its successor feature.",
+    "Fit reward weights for each task and act greedily on the reference policy’s action values."
   ],
   "evidence_signal": "In a two-goal gridworld with a uniform-random-walk reference policy, the agents maintained near-maximal return across goal changes, while SimpleSF and DQN lost most of their return at each change.",
-  "watch_item": "Evidence is limited to a gridworld; scaling transition-eigenvector computation and relying on one-step improvement over a fixed reference policy require further validation.",
+  "watch_item": "The reported evaluation is limited to a gridworld; scalability of transition-matrix eigendecomposition and performance under changing dynamics remain unestablished.",
   "hashtags": [
     "#ContinualRL",
     "#SuccessorFeatures",
@@ -21,6 +21,6 @@
   "paper_title": "Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning",
   "paper_date": "2026-11-19",
   "paper_category": "Modeling and Simulation",
-  "generated_at": "2026-11-21T20:25:14",
+  "generated_at": "2026-11-22T20:37:46",
   "generator": "openai"
 }

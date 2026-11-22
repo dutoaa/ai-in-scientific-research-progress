@@ -1,19 +1,19 @@
 {
   "key_insight": "Training only on minimal corrections at the first reasoning failure improves instruction compliance while largely preserving untargeted skills.",
-  "engineering_relevance": "Localized supervision offers a targeted alternative to imitating full reasoning traces or rewarding entire completions.",
+  "engineering_relevance": "Localized supervision offers a way to shape LLM reasoning behavior without forcing imitation of entire demonstrations.",
   "method": [
-    "Sample the model’s own reasoning trajectories.",
-    "Use an editor to locate the first failure and propose a minimal replacement span.",
-    "Supervise only edited spans, either offline or online as failure modes evolve."
+    "Sample a model completion and identify its first failure under a specified criterion.",
+    "Propose a minimal replacement span and supervise only the edited text.",
+    "Apply corrections offline or online to track evolving failure modes."
   ],
-  "evidence_signal": "On ReasonIF with Qwen3-32B, edit-based training substantially improved reasoning-instruction compliance over full-trajectory imitation and trajectory-level reinforcement learning baselines, while largely preserving untargeted skills.",
-  "watch_item": "Results depend on reliable failure localization and edits; the abstract reports one model and benchmark without numerical effect sizes.",
+  "evidence_signal": "On ReasonIF with Qwen3-32B, edit-based training substantially improved reasoning-instruction compliance versus full-trajectory imitation and trajectory-level reinforcement learning, while largely preserving untargeted skills.",
+  "watch_item": "Effectiveness depends on the editor accurately locating the first failure and producing a valid minimal correction.",
   "hashtags": [
-    "#LLMTraining",
+    "#LargeLanguageModels",
     "#Reasoning",
     "#InstructionFollowing",
-    "#LocalizedSupervision",
-    "#AIResearch"
+    "#EditBasedTraining",
+    "#LocalizedSupervision"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Training LLMs to Follow Reasoning Instructions with Minimal Edits",
   "paper_date": "2026-11-19",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-21T20:24:59",
+  "generated_at": "2026-11-22T20:37:29",
   "generator": "openai"
 }
