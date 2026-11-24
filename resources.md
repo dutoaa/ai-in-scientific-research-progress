@@ -1,164 +1,164 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-22
+Generated: 2026-11-24
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
-## 1. DeepQuest: From Knowledge Gaps to Scientific Discovery in Alzheimer's Disease
+## 1. QuASAR: Toward an LLM-Assisted Framework for Screening, Prototyping, and Assessing Quantum-Advantage Opportunities in Scientific Computing
 
-- Date: 2026-11-19
-- Category: Scientific Discovery
-- arXiv: https://arxiv.org/abs/2611.26343v1
-- PDF: https://arxiv.org/pdf/2611.26343v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-deepquest_from_knowledge_gaps_to_scientific_discovery_in_alzheimer_s_disease_infographic.json
-
-## 2. Seer: Guiding Small Deep-Research Agents with Shared Decision Models
-
-- Date: 2026-11-19
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.26423v1
-- PDF: https://arxiv.org/pdf/2611.26423v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-seer_guiding_small_deep_research_agents_with_shared_decision_models_infographic.json
-
-## 3. How to Effectively Manage the Energy in Residential Systems: Development and Comparison of Methods
-
-- Date: 2026-11-19
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.26412v1
-- PDF: https://arxiv.org/pdf/2611.26412v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-how_to_effectively_manage_the_energy_in_residential_systems_development_and_comparison_of_infographic.json
-
-## 4. Bayesian optimization on amortized search space
-
-- Date: 2026-11-19
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.26459v1
-- PDF: https://arxiv.org/pdf/2611.26459v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-bayesian_optimization_on_amortized_search_space_infographic.json
-
-## 5. Perfumer: A Large Language Model-based Agentic Framework Accelerating Structural Relaxation and Electronic Band Prediction for First-Principle Calculation
-
-- Date: 2026-11-19
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.26349v1
-- PDF: https://arxiv.org/pdf/2611.26349v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-perfumer_a_large_language_model_based_agentic_framework_accelerating_structural_relaxation_infographic.json
-
-## 6. GraphEP: A Calibrated Data System and Benchmark for Learning Cardiac Electrophysiology
-
-- Date: 2026-11-19
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.26551v1
-- PDF: https://arxiv.org/pdf/2611.26551v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-graphep_a_calibrated_data_system_and_benchmark_for_learning_cardiac_electrophysiology_infographic.json
-
-## 7. FEA solver integration of a composite World Model with a Spiking Neural Network memory Block for computationally efficient modelling of defects and variabilities
-
-- Date: 2026-11-19
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.26419v1
-- PDF: https://arxiv.org/pdf/2611.26419v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-fea_solver_integration_of_a_composite_world_model_with_a_spiking_neural_network_memory_blo_infographic.json
-
-## 8. Reasoning-Trace Analysis Using Large Language Models for Interpretable Q-Matrix Construction
-
-- Date: 2026-11-19
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.26422v1
-- PDF: https://arxiv.org/pdf/2611.26422v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-reasoning_trace_analysis_using_large_language_models_for_interpretable_q_matrix_constructi_infographic.json
-
-## 9. Cost-Aware Agentic Feature Optimization System for Fleet-Scale Ranking Models
-
-- Date: 2026-11-19
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.26531v1
-- PDF: https://arxiv.org/pdf/2611.26531v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-cost_aware_agentic_feature_optimization_system_for_fleet_scale_ranking_models_infographic.json
-
-## 10. Training LLMs to Follow Reasoning Instructions with Minimal Edits
-
-- Date: 2026-11-19
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.26342v1
-- PDF: https://arxiv.org/pdf/2611.26342v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-training_llms_to_follow_reasoning_instructions_with_minimal_edits_infographic.json
-
-## 11. ClosureBench: A Benchmark for Reasoning under Closure Assumptions
-
-- Date: 2026-11-19
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.26335v1
-- PDF: https://arxiv.org/pdf/2611.26335v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-closurebench_a_benchmark_for_reasoning_under_closure_assumptions_infographic.json
-
-## 12. OceanCoder: A Verification-Guided Large Language Model for Automated Simulation Modelling in Ocean Engineering
-
-- Date: 2026-11-19
-- Category: Scientific Machine Learning
-- arXiv: https://arxiv.org/abs/2611.26333v1
-- PDF: https://arxiv.org/pdf/2611.26333v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-oceancoder_a_verification_guided_large_language_model_for_automated_simulation_modelling_i_infographic.json
-
-## 13. GEOHunter: Mapping a Generative Engine Optimization Network in the Wild
-
-- Date: 2026-11-19
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.26564v1
-- PDF: https://arxiv.org/pdf/2611.26564v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-geohunter_mapping_a_generative_engine_optimization_network_in_the_wild_infographic.json
-
-## 14. Active Feature Acquisition by Distilling an Oracle Teacher
-
-- Date: 2026-11-19
-- Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.26598v1
-- PDF: https://arxiv.org/pdf/2611.26598v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-active_feature_acquisition_by_distilling_an_oracle_teacher_infographic.json
-
-## 15. ProtoDiffusion: Token-per-Layer Generative Modeling of Multi-Layer Images
-
-- Date: 2026-11-19
-- Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2611.26586v1
-- PDF: https://arxiv.org/pdf/2611.26586v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-protodiffusion_token_per_layer_generative_modeling_of_multi_layer_images_infographic.json
-
-## 16. Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI)
-
-- Date: 2026-11-19
-- Category: AI Scientists and Research Agents
-- arXiv: https://arxiv.org/abs/2611.26553v1
-- PDF: https://arxiv.org/pdf/2611.26553v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-replication_of_agentic_security_events_audit_and_investigation_rogue_ai_infographic.json
-
-## 17. The Geometry of Lies: Knowledge and Persona Directions for Detecting Deception in Large Language Models
-
-- Date: 2026-11-19
+- Date: 2026-11-20
 - Category: Literature and Knowledge Mining
-- arXiv: https://arxiv.org/abs/2611.26545v1
-- PDF: https://arxiv.org/pdf/2611.26545v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-the_geometry_of_lies_knowledge_and_persona_directions_for_detecting_deception_in_large_lan_infographic.json
+- arXiv: https://arxiv.org/abs/2611.27778v1
+- PDF: https://arxiv.org/pdf/2611.27778v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-quasar_toward_an_llm_assisted_framework_for_screening_prototyping_and_assessing_quantum_ad_infographic.json
 
-## 18. Grid Cells as Spectral Successor Features: A Reusable Basis for Continual Reinforcement Learning
+## 2. Spatiotemporal Graph Neural Networks for Fault Detection and Structural Learning in Chemical Processes: Use Case on the Tennessee Eastman Process
 
-- Date: 2026-11-19
+- Date: 2026-11-20
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.27698v1
+- PDF: https://arxiv.org/pdf/2611.27698v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-spatiotemporal_graph_neural_networks_for_fault_detection_and_structural_learning_in_chemic_infographic.json
+
+## 3. The Dual-Tier Sentiment Framework: Scalable Multimodal UX Attribution in Web Search
+
+- Date: 2026-11-20
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.27899v1
+- PDF: https://arxiv.org/pdf/2611.27899v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-the_dual_tier_sentiment_framework_scalable_multimodal_ux_attribution_in_web_search_infographic.json
+
+## 4. Synthetic Surrogate Functional Regression (SSFR): A Robust Framework for Estimating Spatially Varying Covariate Effects in Surrogate-Augmented Neuroimaging
+
+- Date: 2026-11-20
+- Category: Scientific Machine Learning
+- arXiv: https://arxiv.org/abs/2611.27791v1
+- PDF: https://arxiv.org/pdf/2611.27791v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-synthetic_surrogate_functional_regression_ssfr_a_robust_framework_for_estimating_spatially_infographic.json
+
+## 5. Ranking-Preserving Coreset Selection for Efficient Evolutionary Hyperparameter Optimization
+
+- Date: 2026-11-20
+- Category: AI scientific research
+- arXiv: https://arxiv.org/abs/2611.27959v1
+- PDF: https://arxiv.org/pdf/2611.27959v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-ranking_preserving_coreset_selection_for_efficient_evolutionary_hyperparameter_optimizatio_infographic.json
+
+## 6. Autonomous quantum machine learning via Riemannian gradient-based optimization
+
+- Date: 2026-11-20
+- Category: Autonomous Labs
+- arXiv: https://arxiv.org/abs/2611.27815v1
+- PDF: https://arxiv.org/pdf/2611.27815v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-autonomous_quantum_machine_learning_via_riemannian_gradient_based_optimization_infographic.json
+
+## 7. Do Alice and Bob Dream of the Oracle? Wishful Cryptanalysis
+
+- Date: 2026-11-20
+- Category: Scientific Discovery
+- arXiv: https://arxiv.org/abs/2611.27729v1
+- PDF: https://arxiv.org/pdf/2611.27729v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-do_alice_and_bob_dream_of_the_oracle_wishful_cryptanalysis_infographic.json
+
+## 8. Solving the pre-image problem in kernel PCA: The reproducing property is all you need
+
+- Date: 2026-11-20
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.27718v1
+- PDF: https://arxiv.org/pdf/2611.27718v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-solving_the_pre_image_problem_in_kernel_pca_the_reproducing_property_is_all_you_need_infographic.json
+
+## 9. Closed-loop policy optimisation for cylinder wake control via differentiable simulation
+
+- Date: 2026-11-20
 - Category: Modeling and Simulation
-- arXiv: https://arxiv.org/abs/2611.26504v1
-- PDF: https://arxiv.org/pdf/2611.26504v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-grid_cells_as_spectral_successor_features_a_reusable_basis_for_continual_reinforcement_lea_infographic.json
+- arXiv: https://arxiv.org/abs/2611.27670v1
+- PDF: https://arxiv.org/pdf/2611.27670v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-closed_loop_policy_optimisation_for_cylinder_wake_control_via_differentiable_simulation_infographic.json
 
-## 19. A new algorithmic approach for finding flat minima: critically damped Polyak stepsizes
+## 10. Model Carving: Training Transformers That Optimize Their Own Topology
 
-- Date: 2026-11-19
+- Date: 2026-11-20
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.26475v1
-- PDF: https://arxiv.org/pdf/2611.26475v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-a_new_algorithmic_approach_for_finding_flat_minima_critically_damped_polyak_stepsizes_infographic.json
+- arXiv: https://arxiv.org/abs/2611.27962v1
+- PDF: https://arxiv.org/pdf/2611.27962v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-model_carving_training_transformers_that_optimize_their_own_topology_infographic.json
 
-## 20. How Much Should an Agent Remember? Deployment Lessons from Self-Distilled Memory for LLM Agents
+## 11. SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement
 
-- Date: 2026-11-19
+- Date: 2026-11-20
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.27919v1
+- PDF: https://arxiv.org/pdf/2611.27919v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-suaf_spectral_universal_advantage_features_for_zero_shot_policy_improvement_infographic.json
+
+## 12. LesionAgent: Training-Free Agentic Tumor Tracking and Response Assessment in Longitudinal CT
+
+- Date: 2026-11-20
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.27876v1
+- PDF: https://arxiv.org/pdf/2611.27876v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-lesionagent_training_free_agentic_tumor_tracking_and_response_assessment_in_longitudinal_c_infographic.json
+
+## 13. Beyond Self-Critique: Epistemic Convergence Control for Multi-Agent Research Verification
+
+- Date: 2026-11-20
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.27839v1
+- PDF: https://arxiv.org/pdf/2611.27839v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-beyond_self_critique_epistemic_convergence_control_for_multi_agent_research_verification_infographic.json
+
+## 14. Auditable Financial Knowledge Graphs: Schema-Driven Construction and Intrinsic Quality Evaluation
+
+- Date: 2026-11-20
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.27835v1
+- PDF: https://arxiv.org/pdf/2611.27835v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-auditable_financial_knowledge_graphs_schema_driven_construction_and_intrinsic_quality_eval_infographic.json
+
+## 15. DistDNA: Language Model Fingerprinting under Stochastic Decoding
+
+- Date: 2026-11-20
 - Category: AI scientific research
-- arXiv: https://arxiv.org/abs/2611.26361v1
-- PDF: https://arxiv.org/pdf/2611.26361v1
-- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-19-arxiv-how_much_should_an_agent_remember_deployment_lessons_from_self_distilled_memory_for_llm_ag_infographic.json
+- arXiv: https://arxiv.org/abs/2611.27831v1
+- PDF: https://arxiv.org/pdf/2611.27831v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-distdna_language_model_fingerprinting_under_stochastic_decoding_infographic.json
+
+## 16. Decision Models for Multilingual Emotion Classification: A Comparative Study Against LLMs and Encoders
+
+- Date: 2026-11-20
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.27721v1
+- PDF: https://arxiv.org/pdf/2611.27721v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-decision_models_for_multilingual_emotion_classification_a_comparative_study_against_llms_a_infographic.json
+
+## 17. MetaRigor: From Agentic Automation to Verifiable End-to-End Meta-Analysis Through Scientific Decision Boundaries
+
+- Date: 2026-11-20
+- Category: AI Scientists and Research Agents
+- arXiv: https://arxiv.org/abs/2611.27713v1
+- PDF: https://arxiv.org/pdf/2611.27713v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-metarigor_from_agentic_automation_to_verifiable_end_to_end_meta_analysis_through_scientifi_infographic.json
+
+## 18. Learning in Symbiosis: Heterogeneous Federated Learning with ANNs and SNNs
+
+- Date: 2026-11-20
+- Category: Literature and Knowledge Mining
+- arXiv: https://arxiv.org/abs/2611.27686v1
+- PDF: https://arxiv.org/pdf/2611.27686v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-learning_in_symbiosis_heterogeneous_federated_learning_with_anns_and_snns_infographic.json
+
+## 19. Late-Time Dynamics of Flow Matching: Distance Geometry and Learning
+
+- Date: 2026-11-20
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2611.27653v1
+- PDF: https://arxiv.org/pdf/2611.27653v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-late_time_dynamics_of_flow_matching_distance_geometry_and_learning_infographic.json
+
+## 20. BioEmu2: Scalable Emulation of Biomolecular Dynamics
+
+- Date: 2026-11-20
+- Category: Modeling and Simulation
+- arXiv: https://arxiv.org/abs/2611.27924v1
+- PDF: https://arxiv.org/pdf/2611.27924v1
+- Infographic JSON: https://dutoaa.github.io/ai-in-scientific-research-progress/infographics/2026-11-20-arxiv-bioemu2_scalable_emulation_of_biomolecular_dynamics_infographic.json
