@@ -1,0 +1,26 @@
+{
+  "key_insight": "TipSweep transfers learning rates across trainable transformer block counts using precision-dependent scaling: approximately k⁻¹ with FP32 master weights and k⁻¹ᐟ² with direct BF16 updates.",
+  "engineering_relevance": "Tuning only a small subset of blocks can reduce the memory and compute required to select learning rates for full-model post-training.",
+  "method": [
+    "Search for the best learning rate while training only the last k₀ blocks, typically k₀ = 1.",
+    "Predict the learning rate for k trainable blocks by multiplying the tuned rate by (k/k₀)⁻¹ for FP32 master weights or (k/k₀)⁻¹ᐟ² for direct BF16 updates.",
+    "Explain the precision-dependent rules with an analytical model accounting for update rounding."
+  ],
+  "evidence_signal": "Experiments span 1–7B-parameter models; 6.7B-model prototypes fit search on a 16 GiB consumer GPU or evaluate five candidate rates using about half the GPU hours of one full-depth run.",
+  "watch_item": "The scaling rules are approximate and depend on update precision; verify whether training uses FP32 master weights or direct BF16 updates before applying them.",
+  "hashtags": [
+    "#TipSweep",
+    "#LLMPostTraining",
+    "#LearningRateTransfer",
+    "#MixedPrecision",
+    "#EfficientAI"
+  ],
+  "model": "gpt-6.1-sol",
+  "service_tier": "ultrafast",
+  "paper_id": "2026-11-23-arxiv-precision_aware_learning_rate_transfer_across_block_count_in_llm_post_training",
+  "paper_title": "Precision-Aware Learning Rate Transfer Across Block Count in LLM Post-Training",
+  "paper_date": "2026-11-23",
+  "paper_category": "AI scientific research",
+  "generated_at": "2026-11-24T23:25:35",
+  "generator": "openai"
+}
