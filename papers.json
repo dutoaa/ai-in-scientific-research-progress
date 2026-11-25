@@ -27,21 +27,21 @@
     ],
     "score": 90,
     "infographic": {
-      "key_insight": "TipSweep transfers learning rates across trainable transformer block counts using precision-dependent scaling: approximately k⁻¹ with FP32 master weights and k⁻¹ᐟ² with direct BF16 updates.",
-      "engineering_relevance": "Tuning only a small subset of blocks can reduce the memory and compute required to select learning rates for full-model post-training.",
+      "key_insight": "TipSweep transfers the optimal learning rate across trainable block counts, with approximate scaling of k⁻¹ for FP32 master weights and k⁻¹ᐟ² for direct BF16 updates.",
+      "engineering_relevance": "Searching learning rates on only the last transformer block can reduce post-training tuning costs before scaling to more blocks or the full model.",
       "method": [
-        "Search for the best learning rate while training only the last k₀ blocks, typically k₀ = 1.",
-        "Predict the learning rate for k trainable blocks by multiplying the tuned rate by (k/k₀)⁻¹ for FP32 master weights or (k/k₀)⁻¹ᐟ² for direct BF16 updates.",
-        "Explain the precision-dependent rules with an analytical model accounting for update rounding."
+        "Search candidate learning rates while training only the last k₀ blocks, typically k₀ = 1.",
+        "Transfer the selected rate to k trainable blocks using precision-dependent scaling rules.",
+        "Explain the scaling with an analytical model that accounts for update rounding."
       ],
-      "evidence_signal": "Experiments span 1–7B-parameter models; 6.7B-model prototypes fit search on a 16 GiB consumer GPU or evaluate five candidate rates using about half the GPU hours of one full-depth run.",
-      "watch_item": "The scaling rules are approximate and depend on update precision; verify whether training uses FP32 master weights or direct BF16 updates before applying them.",
+      "evidence_signal": "Experiments span 1–7B-parameter models; for a 6.7B model, separate prototypes fit search within 16 GiB GPU memory and evaluate five candidates using about half the GPU-hours of one full-depth run.",
+      "watch_item": "The scaling rules are approximate and depend on whether updates use FP32 master weights or directly modify BF16 weights.",
       "hashtags": [
-        "#TipSweep",
         "#LLMPostTraining",
         "#LearningRateTransfer",
         "#MixedPrecision",
-        "#EfficientAI"
+        "#EfficientAI",
+        "#TipSweep"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -49,7 +49,7 @@
       "paper_title": "Precision-Aware Learning Rate Transfer Across Block Count in LLM Post-Training",
       "paper_date": "2026-11-23",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-24T23:25:35",
+      "generated_at": "2026-11-25T23:03:58",
       "generator": "openai"
     }
   },
@@ -80,15 +80,15 @@
     ],
     "score": 89,
     "infographic": {
-      "key_insight": "A three-agent AI framework links high-level network intents to adaptive optimization and fast runtime control.",
-      "engineering_relevance": "The approach could help autonomous mobile networks adapt control policies to changing service requirements and network conditions.",
+      "key_insight": "A three-agent framework connects high-level network intents to runtime control by jointly adapting intent specifications and controller policies.",
+      "engineering_relevance": "The approach could help autonomous mobile networks translate service requirements into adaptive radio resource management actions.",
       "method": [
         "A language-model interpreter translates and refines intents into machine-readable optimization templates.",
         "A Bayesian optimizer adapts controller policies to intent specifications.",
-        "A multi-objective reinforcement-learning controller makes fast network decisions."
+        "A multi-objective reinforcement learning controller makes fast runtime decisions."
       ],
-      "evidence_signal": "A radio resource management case study for differentiated connectivity demonstrates adaptability, but the abstract reports no quantitative performance metrics.",
-      "watch_item": "Deployment would require validating intent translations and ensuring policy adaptation preserves network safety and service constraints.",
+      "evidence_signal": "A radio resource management case study for differentiated connectivity demonstrates adaptation to service requirements and changing network conditions, although the abstract reports no quantitative metrics.",
+      "watch_item": "Deployment requires validating intent translation and policy adaptation against network safety constraints and runtime latency budgets.",
       "hashtags": [
         "#AgenticAI",
         "#AutonomousNetworks",
@@ -102,7 +102,7 @@
       "paper_title": "Agentic AI for Intent Management and Control in Autonomous Communication Networks",
       "paper_date": "2026-11-23",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-24T23:25:37",
+      "generated_at": "2026-11-25T23:04:00",
       "generator": "openai"
     }
   },
@@ -133,21 +133,21 @@
     ],
     "score": 80,
     "infographic": {
-      "key_insight": "LLM-discovered heuristics directly construct promising vehicle-routing subproblems, matching neural selection policies in-distribution and outperforming them on large-scale out-of-distribution instances.",
-      "engineering_relevance": "Interpretable, generalizable subproblem construction could help logistics optimization systems tackle large capacitated vehicle routing problems.",
+      "key_insight": "LLM-discovered heuristics directly construct promising vehicle-routing subproblems, matching neural policies in-distribution and outperforming them on large-scale out-of-distribution instances.",
+      "engineering_relevance": "This approach offers logistics optimization teams interpretable subproblem-selection rules that may generalize beyond the routing instances used during development.",
       "method": [
-        "Use an LLM to autonomously refine subproblem-construction heuristics.",
-        "Apply the discovered heuristics to identify promising portions of a large routing problem.",
-        "Optimize those subproblems with solvers."
+        "Use an LLM to automatically design and refine subproblem-selection heuristics.",
+        "Apply the generated heuristics to directly construct subproblems within large-scale capacitated vehicle routing problems.",
+        "Optimize the selected subproblems using solvers."
       ],
-      "evidence_signal": "The abstract reports comparable in-distribution performance and better out-of-distribution performance than neural network-based policies, but gives no numerical results or benchmark sizes.",
-      "watch_item": "Deployment requires validating runtime costs and solution quality on operational routing constraints beyond the evaluated CVRP instances.",
+      "evidence_signal": "The abstract reports comparable in-distribution performance and better out-of-distribution performance than neural network-based policies, but provides no numerical results or benchmark sizes.",
+      "watch_item": "Validate heuristic robustness and end-to-end computational cost on operational routing data before deployment.",
       "hashtags": [
         "#VehicleRouting",
         "#LLMHeuristics",
         "#CombinatorialOptimization",
-        "#AutonomousLabs",
-        "#LogisticsAI"
+        "#AutomatedAlgorithmDesign",
+        "#AutonomousLabs"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -155,7 +155,7 @@
       "paper_title": "Revisiting Learning to Delegate: LLM Discovered Heuristics for Large-Scale Vehicle Routing",
       "paper_date": "2026-11-23",
       "paper_category": "Autonomous Labs",
-      "generated_at": "2026-11-24T23:25:39",
+      "generated_at": "2026-11-25T23:04:03",
       "generator": "openai"
     }
   },
@@ -187,20 +187,20 @@
     ],
     "score": 78,
     "infographic": {
-      "key_insight": "Randomized orthogonal mixing and progressive residual-sign coding enable training-free Transformer weight compression with fidelity improving as residual stages are added.",
-      "engineering_relevance": "The approach offers flexible storage–fidelity trade-offs without learned codebooks, empirical CDFs, or trellis optimization.",
+      "key_insight": "Randomized orthogonal mixing and progressive residual-sign coding enable training-free Transformer weight compression with fidelity that improves as residual stages are added.",
+      "engineering_relevance": "The method offers flexible storage–fidelity trade-offs without learned codebooks, empirical CDFs, or trellis optimization.",
       "method": [
-        "Orthogonally mix residuals to promote Gaussian-like distributions for sign coding.",
-        "Independently normalize and analytically calibrate reconstruction at each residual stage.",
-        "Progressively encode residual errors to refine reconstructed weights."
+        "Apply randomized orthogonal mixing to promote Gaussian-like residual distributions.",
+        "Independently normalize residuals and analytically calibrate sign-based reconstruction at each stage.",
+        "Progressively encode residual errors to recover quantization fidelity."
       ],
-      "evidence_signal": "Across attention and MLP projections, five-stage joint quantization achieved perplexities of 32.16 on GPT-2 Large and 12.73 on Llama-3-8B, versus full-precision baselines of 29.89 and 11.07.",
-      "watch_item": "Predictive fidelity remains below full precision, and deployment should account for residual-stage storage overhead and runtime trade-offs.",
+      "evidence_signal": "Across attention and MLP projections, five-stage joint quantization yields perplexities of 32.16 for GPT-2 Large and 12.73 for Llama-3-8B, versus full-precision baselines of 29.89 and 11.07.",
+      "watch_item": "Additional residual stages improve fidelity but increase storage; deployment should assess runtime costs and statistics overhead.",
       "hashtags": [
-        "#LLMCompression",
-        "#WeightQuantization",
+        "#LLMQuantization",
+        "#TransformerCompression",
         "#OrthogonalMixing",
-        "#ResidualCoding",
+        "#ResidualQuantization",
         "#EfficientAI"
       ],
       "model": "gpt-6.1-sol",
@@ -209,7 +209,7 @@
       "paper_title": "Orthogonally Mixed Sign Coding with Progressive Residual Refinement for Transformer Weight Compression",
       "paper_date": "2026-11-23",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-24T23:25:41",
+      "generated_at": "2026-11-25T23:04:05",
       "generator": "openai"
     }
   },
@@ -241,12 +241,12 @@
     ],
     "score": 76,
     "infographic": {
-      "key_insight": "REPA links local agent responses to system-level error propagation, revealing how errors spread through multi-agent LLM workflows.",
-      "engineering_relevance": "Modeling error propagation can help engineers target recovery interventions rather than rely only on final-answer evaluation.",
+      "key_insight": "REPA connects agents’ local responses to system-level error propagation, revealing how intermediate errors can compromise final answers.",
+      "engineering_relevance": "Modeling error propagation can help engineers target recovery interventions instead of relying only on final-answer evaluation.",
       "method": [
-        "Model error propagation across agents using REPA.",
         "Separately estimate input assembly and agent processing across multiple error channels.",
-        "Relate local modeling errors to endpoint prediction error through theoretical analysis."
+        "Connect local response measurements to system-level error predictions.",
+        "Use propagation estimates to guide targeted retrieval-augmented generation (RAG)."
       ],
       "evidence_signal": "Across three Qwen base models, six workflows, and ten ErrPropBench-10 settings, REPA achieved mean condition-level Spearman correlation of 0.84 versus 0.47 for direct regression; REPA-guided RAG improved accuracy by 19 percentage points over no retrieval with 16% additional tokens.",
       "watch_item": "Generalization beyond the tested Qwen models and workflows remains unestablished in the abstract.",
@@ -255,7 +255,7 @@
         "#LLMReliability",
         "#ErrorPropagation",
         "#RAG",
-        "#AIEngineering"
+        "#AIBenchmarking"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -263,7 +263,7 @@
       "paper_title": "From Local Errors to System Failures: Modeling and Benchmarking Error Propagation in Multi-Agent LLM Systems",
       "paper_date": "2026-11-23",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-24T23:25:43",
+      "generated_at": "2026-11-25T23:04:08",
       "generator": "openai"
     }
   },
@@ -296,21 +296,21 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "Solver-independent certificates provide guaranteed error bounds for PDE outputs, exposing errors that convergence studies can miss.",
-      "engineering_relevance": "An independent checker can verify third-party, LLM-written, and neural solver outputs against specified physics without trusting their implementations.",
+      "key_insight": "A small independent checker converts admissible potential and exactly charge-conserving current fields into guaranteed error bounds for PDE outputs from conventional solvers, LLM-written code, and neural surrogates.",
+      "engineering_relevance": "Solver-independent certificates can expose errors that convergence studies miss and provide per-prediction reliability bounds for automated simulation pipelines.",
       "method": [
-        "Return an admissible potential and an exactly charge-conserving current as a certificate.",
-        "Use a small independent checker to compute guaranteed error bounds.",
-        "Apply the same checker to finite-element solvers and neural predictions."
+        "Require solver outputs to include an admissible potential and an exactly charge-conserving current.",
+        "Check these fields against a written physics specification to bound error.",
+        "Evaluate conventional, deliberately buggy, LLM-written, and neural solvers on the same problem."
       ],
-      "evidence_signal": "The checker rejected or refuted all five bugs that passed grid-convergence tests, certified one LLM-written solver to 0.1%, and bounded reduced-basis neural predictions with intervals at most 0.0021% wide in-range.",
-      "watch_item": "Bounds apply to the stated model, not physical reality, and become informative only with energy-accurate outputs on a sufficiently resolving grid.",
+      "evidence_signal": "The checker rejected or refuted all five convergent buggy solvers; reduced-basis neural predictions received bounds at most 0.0021% wide in-range and 0.3–25% wide out-of-range, where 90% conformal intervals covered none of 14 tests.",
+      "watch_item": "Guarantees apply to the stated model, but informative bounds require energy-accurate outputs on a resolving grid; free-nodal neural outputs produced valid yet uninformative bounds.",
       "hashtags": [
         "#ScientificMachineLearning",
         "#PDESolvers",
         "#VerifiedComputing",
         "#NeuralSurrogates",
-        "#FiniteElements"
+        "#ErrorBounds"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -318,7 +318,7 @@
       "paper_title": "Verifying the Outputs of PDE Solvers: From Finite Elements to Neural Surrogates",
       "paper_date": "2026-11-23",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-24T23:25:45",
+      "generated_at": "2026-11-25T23:04:10",
       "generator": "openai"
     }
   },
@@ -349,21 +349,21 @@
     ],
     "score": 72,
     "infographic": {
-      "key_insight": "Abductive learning can reinforce incorrect concept meanings, and optimization geometry can determine which explanation training selects even under identical supervision, objectives, and initialization.",
-      "engineering_relevance": "Constraint satisfaction alone does not guarantee correct learned concepts, so ABL systems should monitor concept accuracy and sensitivity to optimizer choice.",
+      "key_insight": "Abductive learning can reinforce incorrect concept meanings, and optimization geometry can determine which explanation training selects even when supervision, objectives, initialization, and Gram-matrix spectra match.",
+      "engineering_relevance": "Correct reasoning outputs do not guarantee correct learned concepts, so ABL systems need concept-level validation and checks for optimizer-dependent explanations.",
       "method": [
-        "Analyze training dynamics in a fixed-feature binary ABL model.",
-        "Link competing explanations’ local stability to differences in their concept labels.",
-        "Prove explanation-selection and stability results, then test predictions on visual ABL tasks."
+        "Analyze explanation stability in a fixed-feature binary ABL model.",
+        "Relate competing explanations’ stability to differences in concept labels.",
+        "Derive conditional guarantees for preserving explanation selection and demonstrate incorrect attracting states."
       ],
-      "evidence_signal": "Visual ABL experiments show attraction to incorrect concepts under identifiable supervision, different explanation selection by SGD and Adam, and declining unseen-concept accuracy as training concept errors grow.",
-      "watch_item": "The formal guarantees rely on a fixed-feature binary model and specific assumptions; they should not be generalized automatically to end-to-end ABL systems.",
+      "evidence_signal": "Visual ABL experiments show incorrect attraction under identifiable supervision, different explanation choices by SGD and Adam, and lower unseen-concept accuracy as training concept errors increase.",
+      "watch_item": "The theoretical guarantees are conditional and derived for a fixed-feature binary model; they should not be assumed to hold for general end-to-end ABL systems.",
       "hashtags": [
         "#AbductiveLearning",
         "#NeuroSymbolicAI",
         "#OptimizationDynamics",
         "#ConceptLearning",
-        "#MachineLearning"
+        "#AIResearch"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -371,7 +371,7 @@
       "paper_title": "Explanation Selection in Abductive Learning",
       "paper_date": "2026-11-23",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-24T23:25:47",
+      "generated_at": "2026-11-25T23:04:13",
       "generator": "openai"
     }
   },
@@ -403,20 +403,20 @@
     "score": 71,
     "infographic": {
       "key_insight": "TideSand multiplexes sandbox resources to increase LLM-agent throughput while preserving tool-call fidelity for performance-sensitive tasks.",
-      "engineering_relevance": "Agent infrastructure can improve resource utilization without sacrificing the measurement accuracy needed for automated systems research.",
+      "engineering_relevance": "Agent platforms running system measurements can improve resource utilization without letting contention distort results.",
       "method": [
-        "Agent-aware scheduling coordinates tool calls to avoid resource contention.",
-        "Speculative swapping offloads sandbox memory during inference waits and restores it before the next tool call.",
-        "Selective rollback checkpoints chosen sandboxes during contention and restores them when machines are idle."
+        "Schedule sandbox execution at tool-call granularity to avoid resource contention.",
+        "Swap out sandbox memory during inference waits and restore it before the next tool call.",
+        "Checkpoint selected sandboxes during contention and restore them when machines are idle."
       ],
       "evidence_signal": "Across six model-workload pairs on AlgoTune, Terminal-Bench 4.0, and Terminal-Bench Science, TideSand reports 3.8–10× higher throughput than strict reservation while maintaining fidelity, or 7–44% higher fidelity than overcommit baselines at similar throughput, plus a 19× reduction in AlgoTune evaluation error.",
-      "watch_item": "Deployment should validate whether swap and checkpoint overheads remain manageable under different workloads and hardware.",
+      "watch_item": "Deployment should validate whether swapping and checkpointing overheads remain manageable for its sandbox sizes and tool-call patterns.",
       "hashtags": [
         "#LLMAgents",
-        "#ResourceScheduling",
         "#Sandboxing",
+        "#ResourceScheduling",
         "#ScientificComputing",
-        "#SystemsResearch"
+        "#PerformanceEngineering"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -424,7 +424,7 @@
       "paper_title": "TideSand: Performance-Accurate Sandbox Multiplexing for LLM Agents",
       "paper_date": "2026-11-23",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-24T23:25:49",
+      "generated_at": "2026-11-25T23:04:15",
       "generator": "openai"
     }
   },
@@ -456,21 +456,21 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "AlphaDefect reports expert-level Slay the Spire 2 performance using one PPO-trained network per character to make every decision throughout a run.",
-      "engineering_relevance": "The results highlight the importance of structured entity representations and engine-computed consequences for reinforcement learning in complex, stochastic environments.",
+      "key_insight": "AlphaDefect reports expert-level Slay the Spire 2 play using one PPO-trained network per character to handle every combat and noncombat decision.",
+      "engineering_relevance": "Structured entity representations and engine-computed consequences offer a practical design pattern for agents tackling long-horizon decisions under randomness.",
       "method": [
-        "Train one proximal policy optimization (PPO) network per character for combat and noncombat decisions.",
-        "Encode cards, relics and enemies using learned identity embeddings, game attributes and engine-computed public-information consequences.",
-        "Evaluate greedy play and test-time search on seeds excluded from training."
+        "Train one network per character with proximal policy optimization (PPO).",
+        "Encode cards, relics and enemies using learned identity embeddings, game attributes and public-information consequences.",
+        "Evaluate greedy play and test-time search on seeds not used in training."
       ],
-      "evidence_signal": "The abstract reports 62–77% greedy and 68–80% search-assisted win rates across six characters at Ascension 10 on two game versions, after 1.3–6.7 billion training decisions per character, versus 11–20% for uploaded human runs.",
-      "watch_item": "The uploaded human runs are not an expert-matched baseline, and reliance on game-engine features may complicate transfer to other environments.",
+      "evidence_signal": "The abstract reports 62–77% greedy and 68–80% search-assisted win rates across six characters at Ascension 10, after 1.3–6.7 billion training decisions per character; removing identity information yielded no wins, while removing computed consequences reduced wins by 8.3 percentage points.",
+      "watch_item": "Results depend on substantial training compute and game-engine features; the reported 11–20% human win rates come from uploaded runs across skill levels, not a controlled expert comparison.",
       "hashtags": [
         "#ReinforcementLearning",
         "#PPO",
         "#GameAI",
         "#StructuredRepresentations",
-        "#TestTimeSearch"
+        "#LongHorizonPlanning"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -478,7 +478,7 @@
       "paper_title": "AlphaDefect: Expert-Level AI for Slay the Spire 2",
       "paper_date": "2026-11-23",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-24T23:25:51",
+      "generated_at": "2026-11-25T23:04:18",
       "generator": "openai"
     }
   },
@@ -509,21 +509,21 @@
     ],
     "score": 70,
     "infographic": {
-      "key_insight": "ComputeWise finds that unaided AI research agents spend only 52% of GPU time on necessary work, while its harness removes over 80% of extra time to the answer across five models.",
-      "engineering_relevance": "Improving experiment orchestration can reduce costly GPU waste that utilization metrics alone fail to reveal.",
+      "key_insight": "ComputeWise finds that research agents spend only 52% of GPU time on necessary work, while a prompting-and-code harness removes over 80% of extra time to the answer.",
+      "engineering_relevance": "Optimizing useful GPU work—not just utilization—can reduce wasted compute in autonomous AI research.",
       "method": [
-        "Benchmark agents on research tasks using a simulated GPU that replays recorded runs.",
-        "Measure necessary computation, unnecessary computation, and idle time.",
-        "Combine prompting with deterministic orchestration code to reduce waste."
+        "Benchmark research tasks with a simulated GPU that replays recorded runs.",
+        "Measure necessary work, unnecessary work, and idle GPU time.",
+        "Combine prompting with deterministic code to reduce waste."
       ],
-      "evidence_signal": "Hundreds of simulated experiments found 52% necessary work, 22% unnecessary work, and 26% idle time; simple speed prompts, utilization prompts, and a job scheduler did not fix the waste.",
-      "watch_item": "Replay-based simulation enables broad testing, but savings on real GPUs and workloads beyond the benchmark require validation.",
+      "evidence_signal": "Hundreds of simulated experiments showed a baseline split of 52% necessary work, 22% unnecessary work, and 26% idle time; the harness reduced extra time by over 80% across five models.",
+      "watch_item": "Results rely on replay-based GPU simulation; savings should be validated on real hardware and broader workloads.",
       "hashtags": [
         "#ComputeWise",
         "#AIResearchAgents",
         "#GPUEfficiency",
-        "#ResearchAutomation",
-        "#ComputationalScience"
+        "#ComputeOptimization",
+        "#ResearchAutomation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -531,7 +531,7 @@
       "paper_title": "ComputeWise: Measuring and Fixing GPU Waste by AI Research Agents",
       "paper_date": "2026-11-23",
       "paper_category": "AI Scientists and Research Agents",
-      "generated_at": "2026-11-24T23:25:53",
+      "generated_at": "2026-11-25T23:04:20",
       "generator": "openai"
     }
   },
@@ -562,21 +562,21 @@
     ],
     "score": 66,
     "infographic": {
-      "key_insight": "Boltz-Flow improves robot action generation by replacing fixed Gaussian initialization with an observation- and instruction-conditioned Boltzmann source while leaving the base vision-language-action policy unchanged.",
-      "engineering_relevance": "The approach targets richer, coordinated action initialization without redesigning the underlying flow-matching policy.",
+      "key_insight": "Boltz-Flow improves robot action generation by replacing fixed Gaussian initialization with an observation- and instruction-conditioned Boltzmann source while keeping the base vision-language-action policy unchanged.",
+      "engineering_relevance": "Engineers can improve flow-based robot policies by adapting their initialization to task context rather than redesigning the action-generation backbone.",
       "method": [
-        "Use a conditional Boltzmann machine to assign energies to binary source states.",
-        "Train with an offline-demonstration-based listwise objective that aligns energy with action quality after frozen flow integration.",
-        "Solve the resulting Ising instance, decode its solution into continuous noise, and perform one standard flow integration."
+        "Assign energies to binary source states using a conditional Boltzmann machine.",
+        "Train with an offline-demonstration-based listwise objective that aligns source energy with action quality after frozen flow integration.",
+        "At inference, solve the resulting Ising instance, decode it into continuous noise, and run one standard flow integration."
       ],
-      "evidence_signal": "Across three benchmarks, Boltz-Flow improves π₀.₅, outperforms compared policy baselines and noise-optimization methods on LIBERO and RoboTwin 2.0, and ranks second to LEAP on LIBERO-Plus.",
-      "watch_item": "Training uses a physical coherent Ising machine; hardware accessibility and Ising-solver latency warrant assessment before deployment.",
+      "evidence_signal": "Across three benchmarks, Boltz-Flow improves π₀.₅, outperforms compared policy and noise-optimization baselines on LIBERO and RoboTwin 2.0, and ranks second to LEAP on LIBERO-Plus; additional tests show gains with SmolVLA and other adaptation settings.",
+      "watch_item": "Training uses a physical coherent Ising machine, and the abstract does not quantify solver overhead or deployment latency.",
       "hashtags": [
         "#RobotLearning",
+        "#VisionLanguageAction",
         "#FlowMatching",
         "#BoltzmannMachines",
-        "#VisionLanguageAction",
-        "#IsingOptimization"
+        "#EmbodiedAI"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -584,7 +584,7 @@
       "paper_title": "Boltz-Flow: Generating High-Quality Robot Action from Boltzmann Machine",
       "paper_date": "2026-11-23",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-24T23:25:55",
+      "generated_at": "2026-11-25T23:04:23",
       "generator": "openai"
     }
   },
@@ -615,21 +615,21 @@
     ],
     "score": 65,
     "infographic": {
-      "key_insight": "SayWhen enables early speech by releasing a task-directed act shared across plausible continuation plans and vetoing playback if new transcripts invalidate it.",
-      "engineering_relevance": "Voice agents can reduce response latency by controlling supported public commitments rather than simply predicting and speaking the most likely response.",
+      "key_insight": "SayWhen enables early speech by releasing only task-directed commitments supported across candidate continuation plans, with a persistent veto for invalidating transcript updates.",
+      "engineering_relevance": "Voice-agent designers can explicitly trade early-response coverage against semantic compatibility rather than simply speaking the most likely next response.",
       "method": [
-        "Identify a shared task-directed act across typed continuation plans.",
-        "Control speech release with a persistent transcript-based veto.",
-        "Measure regret-free early speech (RFES): supported pre-endpoint releases without scored incompatibility."
+        "Select a shared task-directed act across typed continuation plans.",
+        "Control speech release and persistently veto playback when new transcript evidence invalidates the candidate.",
+        "Measure supported pre-endpoint releases without scored incompatibility using regret-free early speech (RFES)."
       ],
-      "evidence_signal": "On 72 branching prefixes, generated plans achieved 6.0% RFES with zero observed mean regret versus 8.2% and 0.068 for Matched Top-One; separately, schema-derived candidates with cached TTS achieved task-level RFES on 21/30 simulated voice tasks.",
-      "watch_item": "Planner latency limits generated-plan deployment, while schema-based results rely on predefined structure and cached TTS in a small simulation.",
+      "evidence_signal": "On 72 branching prefixes, generated plans achieved 6.0% RFES with zero observed mean regret versus 8.2% and 0.068 regret for Matched Top-One; separately, schema-based cached-TTS speech achieved task-level RFES on 21/30 simulated voice tasks.",
+      "watch_item": "Planner latency limits generated-plan deployment, while schema-based results rely on structured candidates and cached TTS in a small simulation.",
       "hashtags": [
         "#VoiceAI",
-        "#SpeechAgents",
         "#SemanticCommitment",
-        "#LowLatencyAI",
-        "#ScientificMachineLearning"
+        "#EarlySpeech",
+        "#InferenceTimeControl",
+        "#HumanAIInteraction"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -637,7 +637,7 @@
       "paper_title": "SayWhen: Set-Valued Semantic Commitment for Low-Regret Early Speech",
       "paper_date": "2026-11-23",
       "paper_category": "Scientific Machine Learning",
-      "generated_at": "2026-11-24T23:25:57",
+      "generated_at": "2026-11-25T23:04:25",
       "generator": "openai"
     }
   },
@@ -670,21 +670,21 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "CO-GRAFT shows that RL gains in search agents depend more on reasoning, search decisions, and answer extraction than query generation, which contributes at most 15% of the total gain.",
-      "engineering_relevance": "Role-level attribution can help engineers target agent improvements rather than assume better search queries drive higher accuracy.",
+      "key_insight": "CO-GRAFT shows that RL gains in search agents depend on role interactions and pre-RL capabilities, with query generation contributing no more than 15% of the total gain.",
+      "engineering_relevance": "Role-level attribution can guide whether to prioritize reasoning, search decisions, or answer extraction rather than assuming better queries drive RL improvements.",
       "method": [
-        "Combine RL-trained and pre-RL policies in one live-retrieval trajectory, assigning each of four functional roles to one policy.",
-        "Evaluate all 16 role assignments without changing weights or retraining.",
-        "Use Shapley values to allocate RL gains and Möbius terms to quantify role interactions."
+        "Combine RL-trained and pre-RL policies in one closed-loop trajectory with live retrieval.",
+        "Evaluate all 16 assignments across reasoning, search-or-answer decisions, query generation, and answer extraction without retraining.",
+        "Use Shapley values to allocate gains and Möbius terms to measure role interactions."
       ],
-      "evidence_signal": "Evaluations span Search-R1 agents using Qwen2.5 and Llama-3.2, two model sizes, base and instruction-tuned initializations, GRPO and PPO, and NQ and HotpotQA, with RL gains up to 32 exact-match points.",
-      "watch_item": "Attributions depend on checkpoint characteristics and task-level search budgets; evaluating all 16 assignments also adds live-retrieval evaluation cost.",
+      "evidence_signal": "Evaluations of Search-R1 agents on NQ and HotpotQA span Qwen2.5 and Llama-3.2 models, two sizes, base and instruction-tuned initializations, and GRPO/PPO training, with RL gains reaching 32 exact-match points.",
+      "watch_item": "Attributions depend on checkpoint capabilities and fixed task-level search budgets, so role rankings should not be assumed to generalize across deployments.",
       "hashtags": [
         "#ReinforcementLearning",
         "#SearchAgents",
-        "#LLMAttribution",
+        "#CausalAttribution",
         "#ShapleyValues",
-        "#AgentEvaluation"
+        "#LLMEvaluation"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -692,7 +692,7 @@
       "paper_title": "CO-GRAFT: Attributing Reinforcement Learning Gains in Search Agents via Role-Level Policy Grafting",
       "paper_date": "2026-11-23",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-24T23:25:59",
+      "generated_at": "2026-11-25T23:04:27",
       "generator": "openai"
     }
   },
@@ -726,21 +726,21 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Robot reliability depends strongly on the robot-use interface: effective designs reduce unnecessary decisions while preserving essential feedback.",
-      "engineering_relevance": "Treat action abstraction and interaction design as core engineering choices, not merely wrappers around an embodied model.",
+      "key_insight": "How an agent expresses and executes robot actions can substantially change task success, even when perception and control stay fixed.",
+      "engineering_relevance": "Robot-use interfaces should reduce unnecessary agent decisions while preserving essential feedback to improve execution reliability.",
       "method": [
         "Introduce RUIBench: 30 manipulation tasks across five suites.",
-        "Build RUIKit: 13 interfaces crossing six action abstractions with two interaction forms.",
+        "Develop RUIKit: 13 interfaces spanning six action abstractions and two interaction forms.",
         "Compare interfaces under shared perception and control in simulation."
       ],
-      "evidence_signal": "Changing only the interface shifted success rates from 45% to 81% for a frontier agent and from 13% to 47% for a fine-tuned 4B model.",
-      "watch_item": "Simulation results do not establish real-world reliability, and agents frequently declared success despite observable failures, highlighting the need for task-level verification.",
+      "evidence_signal": "Changing only the interface shifted simulated success rates from 45% to 81% for a frontier agent and from 13% to 47% for a fine-tuned 4B model.",
+      "watch_item": "Agents frequently declared success despite observable failures, highlighting the need for task-level verification beyond individual actions.",
       "hashtags": [
-        "#RUIBench",
         "#Robotics",
         "#EmbodiedAI",
-        "#InterfaceDesign",
-        "#RobotReliability"
+        "#RobotInterfaces",
+        "#FoundationModels",
+        "#RUIBench"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -748,7 +748,7 @@
       "paper_title": "RUIBench: What Makes a Good Robot-Use Interface?",
       "paper_date": "2026-11-23",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-11-24T23:26:01",
+      "generated_at": "2026-11-25T23:04:29",
       "generator": "openai"
     }
   },
@@ -780,21 +780,21 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "LLM agents can infer hidden circuit behavior from pin-level experiments, but fully correct and efficient reconstructions remain rare.",
-      "engineering_relevance": "ChiProgramBench tests whether AI agents can turn experimental observations into cycle-accurate gate-level replacements while meeting power, delay, and area goals.",
+      "key_insight": "LLM agents can recover hidden circuit behavior from pin-level experiments, but reliable reconstruction and efficient implementation remain distinct challenges.",
+      "engineering_relevance": "ChiProgramBench tests whether agents can turn experimental observations of stateful hardware into functionally correct, resource-efficient gate-level replacements.",
       "method": [
-        "Probe 18 hidden, stateful circuits through simulated input and output pins.",
-        "Compare black-box discovery with function-guided reconstruction that adds circuit purpose and pin roles.",
-        "Submit netlists using public library cells; award efficiency credit only after all hidden functional tests pass."
+        "Probe hidden simulated circuits through their input and output pins across 18 hardware tasks.",
+        "Compare black-box discovery with function-guided reconstruction that reveals circuit purpose and pin roles.",
+        "Submit netlists using public library cells; evaluate cycle-by-cycle correctness before awarding power, delay, and area credit."
       ],
-      "evidence_signal": "Across 432 trials of six agent configurations, full-pass rates were 12.0% for black-box and 14.8% for function-guided tasks; only three of 58 fully passing designs improved combined power, area, and delay over the reference.",
-      "watch_item": "Higher partial functional scores do not establish cycle-accurate correctness or efficient implementation.",
+      "evidence_signal": "Across 432 trials of 6 agent configurations, full-pass rates were 12.0% for black-box and 14.8% for function-guided tasks; only 3 of 58 fully passing designs improved combined power, area, and delay over the reference.",
+      "watch_item": "Results cover 18 simulated tasks; passing hidden tests does not establish correctness for every possible input sequence.",
       "hashtags": [
         "#LLMAgents",
-        "#CircuitReconstruction",
-        "#HardwareDesign",
+        "#CircuitDesign",
+        "#HardwareReverseEngineering",
         "#ScientificDiscovery",
-        "#AIBenchmarks"
+        "#ChiProgramBench"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -802,7 +802,7 @@
       "paper_title": "ChiProgramBench: Can LLM Agents Rebuild Efficient Circuits from Pin-Level Experiments?",
       "paper_date": "2026-11-23",
       "paper_category": "Scientific Discovery",
-      "generated_at": "2026-11-24T23:26:04",
+      "generated_at": "2026-11-25T23:04:32",
       "generator": "openai"
     }
   },
@@ -834,15 +834,15 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "Tail-CRC separates budget-limited answer generation from abstention, using a single rollout to control expected wrong submissions under exchangeability.",
-      "engineering_relevance": "Teams can adjust submission-risk targets through recalibration rather than retraining, without paying for multiple inference samples.",
+      "key_insight": "Tail-CRC separates budget-constrained answer generation from abstention, using a single rollout to control expected wrong submissions under exchangeability.",
+      "engineering_relevance": "Engineers can recalibrate submission risk across targets or domains without retraining the solver or paying for multiple inference samples.",
       "method": [
-        "Adapt the solver to forced termination using binary correctness rewards, then freeze it.",
+        "Adapt the solver to budget forcing with binary correctness rewards, then freeze it.",
         "Score uncertainty using upper-tail token surprise within the generated answer.",
         "Apply conformal risk control to decide whether to submit or abstain."
       ],
-      "evidence_signal": "Across two Qwen models, 50 RL updates on 400 problems improved correct-submission rates by 15.0–29.6 percentage points on DAPO and 4.3–12.8 points on Omni-MATH; target-domain calibration reduced 8B Omni-MATH wrong submissions from 30.3% to 5.8% at 4K.",
-      "watch_item": "The guarantee controls expected wrong submissions, not error among submitted answers, and depends on exchangeability between calibration and deployment data.",
+      "evidence_signal": "Across two Qwen models, 50 RL updates on 400 problems improved correct-submission rates by 15.0–29.6 percentage points on DAPO; target-domain calibration reduced 8B Omni-MATH wrong submissions from 30.3% to 5.8% at 4K tokens.",
+      "watch_item": "The guarantee concerns expected wrong submissions under exchangeability, not error rates among submitted answers; domain shifts require careful recalibration.",
       "hashtags": [
         "#LLMReasoning",
         "#ConformalRiskControl",
@@ -856,7 +856,7 @@
       "paper_title": "Decoupling Solving from Abstention: Single-Rollout Conformal Risk Control for Hard-Budget LLM Reasoning",
       "paper_date": "2026-11-23",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-24T23:26:06",
+      "generated_at": "2026-11-25T23:04:34",
       "generator": "openai"
     }
   },
@@ -888,20 +888,20 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "LLM-generated interactions can improve long-tail recommendation accuracy and coverage while constraining overall accuracy loss.",
-      "engineering_relevance": "Engineers can tune augmentation by item-popularity group to better serve sparse-data items without sacrificing overall recommendation quality beyond a chosen tolerance.",
+      "key_insight": "Group-specific LLM-generated interactions can improve long-tail recommendation accuracy and coverage while constraining overall accuracy loss.",
+      "engineering_relevance": "Recommendation teams can tune synthetic-data augmentation by item popularity to better serve sparse-interaction items without sacrificing overall ranking quality beyond a chosen threshold.",
       "method": [
         "Partition items into groups by interaction frequency.",
-        "Optimize group-specific LLM augmentation for NDCG@20 and coverage, subject to an overall NDCG@20 degradation limit.",
-        "Test combined group strategies and ablate LLM scale and contextual richness under token constraints."
+        "Optimize LLM-generated interaction augmentation for group-specific NDCG@20 and coverage under an overall NDCG@20 degradation constraint.",
+        "Evaluate combined group strategies, LLM scales, and context configurations under token constraints."
       ],
-      "evidence_signal": "SASRec experiments report group-specific NDCG@20 gains exceeding 100% and 60% for extreme and regular long-tail items on an industrial dataset, and 40% and 25% on MovieLens-32M, with increased coverage and no significant overall degradation.",
-      "watch_item": "Individually optimal group strategies are not simply additive, and richer augmentation context increases cost, requiring joint tuning and budget-aware validation.",
+      "evidence_signal": "SASRec experiments report group-specific NDCG@20 gains of over 100% and 60% for extreme and regular long-tail items on an industrial dataset, and 40% and 25% on MovieLens-32M, with increased coverage and no significant overall degradation.",
+      "watch_item": "Individually optimal group strategies are not simply additive, and richer augmentation context increases cost, requiring joint validation and budget-aware tuning.",
       "hashtags": [
         "#RecommenderSystems",
         "#LLMAugmentation",
         "#LongTailRecommendation",
-        "#PopularityBias",
+        "#SequentialRecommendation",
         "#ConstrainedOptimization"
       ],
       "model": "gpt-6.1-sol",
@@ -910,7 +910,7 @@
       "paper_title": "From Head to Tail: LLM-Augmented Sequential Recommendation and Trade-off Optimization",
       "paper_date": "2026-11-23",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-24T23:26:08",
+      "generated_at": "2026-11-25T23:04:37",
       "generator": "openai"
     }
   },
@@ -941,21 +941,21 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "OPERAG combines retrieval with large language models to code free-text job descriptions without expert-labelled training databases, supporting large-scale occupational exposure assessment.",
-      "engineering_relevance": "Retrieving classification-specific coding information offers a flexible alternative to supervised tools restricted to occupational classifications seen during training.",
+      "key_insight": "OPERAG combines retrieval with large language models to code free-text job descriptions without expert-labelled training databases, supporting downstream occupational exposure assessment.",
+      "engineering_relevance": "Retrieving classification-specific coding information offers a way to support occupational coding systems beyond the fixed label sets of supervised models.",
       "method": [
         "Retrieve relevant occupational coding index information.",
-        "Combine retrieved information with LLM-based occupational classification.",
+        "Use a large language model to classify job descriptions with the retrieved context.",
         "Link occupational codes to Job Exposure Matrices for exposure assessment."
       ],
-      "evidence_signal": "On 36,062 AsiaLymph job descriptions, OPERAG achieved 42.6% fourth-level coding accuracy and 89.9–98.6% exposure-assessment accuracy using ALOHA+ and SHOCK.",
-      "watch_item": "Fourth-level coding accuracy remained below the reported 51–56% human inter-coder reliability, and validation on one cohort does not establish universal generalization.",
+      "evidence_signal": "On 36,062 AsiaLymph job descriptions, OPERAG achieved 42.6% fourth-level occupational coding accuracy and 89.9–98.6% exposure assessment accuracy using ALOHA+ and SHOCK.",
+      "watch_item": "Fourth-level coding accuracy remains below the reported 51–56% human inter-coder reliability, and generalization across other cohorts and classifications requires further validation.",
       "hashtags": [
         "#RetrievalAugmentedGeneration",
         "#OccupationalHealth",
-        "#OccupationalCoding",
+        "#LargeLanguageModels",
         "#ExposureAssessment",
-        "#LargeLanguageModels"
+        "#KnowledgeMining"
       ],
       "model": "gpt-6.1-sol",
       "service_tier": "ultrafast",
@@ -963,7 +963,7 @@
       "paper_title": "Automatic Occupational Coding through Retrieval-Augmented Generation",
       "paper_date": "2026-11-23",
       "paper_category": "Literature and Knowledge Mining",
-      "generated_at": "2026-11-24T23:26:10",
+      "generated_at": "2026-11-25T23:04:39",
       "generator": "openai"
     }
   },
@@ -995,14 +995,14 @@
     "score": 64,
     "infographic": {
       "key_insight": "Combining machine learning-based nitrogen planning with grower-informed, in-season AI adaptation can reduce fertiliser use while maintaining winter wheat yield and grain quality.",
-      "engineering_relevance": "Deployable decision-support systems need to adapt recommendations to weather, machinery availability and budget constraints, not just optimise fertiliser rates.",
+      "engineering_relevance": "Deployable agricultural AI must adapt recommendations to weather, machinery availability and budgets rather than optimise nitrogen rates in isolation.",
       "method": [
-        "Derive baseline fertilisation plans from a machine learning-based nitrogen-response curve.",
-        "Use a large language model to adjust schedules during the season.",
+        "Generate baseline fertilisation plans from a machine learning-derived nitrogen-response curve.",
+        "Use a large language model to adapt plans during the season.",
         "Incorporate grower input and operational constraints to keep recommendations executable."
       ],
-      "evidence_signal": "Long-term experiments showed low retrospective economic decision-loss; field trials and farm deployments matched standard-practice yields with less nitrogen, with adapted schedules also retaining grain quality standards.",
-      "watch_item": "Evidence focuses on winter wheat in England; transferability to other crops and regions requires validation.",
+      "evidence_signal": "Evaluation used long-term experiments, replicated field trials and farm deployments; baseline plans matched standard-practice yields with less nitrogen, while adapted plans also retained grain quality standards.",
+      "watch_item": "Evidence is specific to winter wheat in England; transfer to other crops and regions requires validation.",
       "hashtags": [
         "#PrecisionAgriculture",
         "#HumanInTheLoop",
@@ -1016,7 +1016,7 @@
       "paper_title": "Grower-in-the-loop AI for Deployable Precision Fertilisation in Sustainable Agriculture",
       "paper_date": "2026-11-23",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-24T23:26:12",
+      "generated_at": "2026-11-25T23:04:41",
       "generator": "openai"
     }
   },
@@ -1047,19 +1047,19 @@
     ],
     "score": 64,
     "infographic": {
-      "key_insight": "MedUIGym enables training and evaluation of clinical GUI agents, revealing persistent workflow difficulties while showing gains from task-based training.",
-      "engineering_relevance": "Its paired GUI and native-tool interfaces over identical clinical data support comparisons of interface-dependent agent performance.",
+      "key_insight": "MedUIGym turns clinical GUI workflows into a scalable training and evaluation testbed, revealing persistent agent weaknesses while enabling gains through targeted training.",
+      "engineering_relevance": "Paired screenshot-based GUI and native-tool interfaces over identical clinical data help engineers evaluate interface-dependent performance and collect training trajectories.",
       "method": [
         "Unify 15,739 tasks from 17 benchmark sources across six clinical task families.",
-        "Run agents through screenshot observations and mouse-and-keyboard actions, verifying answers and required clinical actions.",
-        "Collect parallel GUI trajectories for offline learning and support online reinforcement learning from task rewards."
+        "Support screenshot perception, mouse-and-keyboard actions, and verification of answers and required clinical actions.",
+        "Enable parallel trajectory collection, offline learning, and online reinforcement learning."
       ],
-      "evidence_signal": "Evaluation of 12 vision-language models found inconsistent gains from increased reasoning effort; both trained Qwen3.5 models improved on in-domain tasks and generalized to external-source tasks.",
-      "watch_item": "Benchmark improvements do not establish safety or reliability in live clinical EHR deployments.",
+      "evidence_signal": "Evaluation of 12 vision-language models found inconsistent gains from increased reasoning effort, while training improved both Qwen3.5 models on in-domain tasks and tasks from external sources.",
+      "watch_item": "Benchmark improvements do not establish safety or reliability in deployed clinical EHR workflows.",
       "hashtags": [
         "#MedUIGym",
-        "#ClinicalAI",
         "#GUIAgents",
+        "#ClinicalAI",
         "#VisionLanguageModels",
         "#ReinforcementLearning"
       ],
@@ -1069,7 +1069,7 @@
       "paper_title": "MedUIGym: Evaluating and Training GUI Agents for Clinical Workflows",
       "paper_date": "2026-11-23",
       "paper_category": "AI scientific research",
-      "generated_at": "2026-11-24T23:26:14",
+      "generated_at": "2026-11-25T23:04:43",
       "generator": "openai"
     }
   }

@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-24
+Generated: 2026-11-25
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Precision-Aware Learning Rate Transfer Across Block Count in LLM Post-Training

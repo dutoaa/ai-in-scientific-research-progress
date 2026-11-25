@@ -1,19 +1,19 @@
 {
   "key_insight": "TideSand multiplexes sandbox resources to increase LLM-agent throughput while preserving tool-call fidelity for performance-sensitive tasks.",
-  "engineering_relevance": "Agent infrastructure can improve resource utilization without sacrificing the measurement accuracy needed for automated systems research.",
+  "engineering_relevance": "Agent platforms running system measurements can improve resource utilization without letting contention distort results.",
   "method": [
-    "Agent-aware scheduling coordinates tool calls to avoid resource contention.",
-    "Speculative swapping offloads sandbox memory during inference waits and restores it before the next tool call.",
-    "Selective rollback checkpoints chosen sandboxes during contention and restores them when machines are idle."
+    "Schedule sandbox execution at tool-call granularity to avoid resource contention.",
+    "Swap out sandbox memory during inference waits and restore it before the next tool call.",
+    "Checkpoint selected sandboxes during contention and restore them when machines are idle."
   ],
   "evidence_signal": "Across six model-workload pairs on AlgoTune, Terminal-Bench 4.0, and Terminal-Bench Science, TideSand reports 3.8–10× higher throughput than strict reservation while maintaining fidelity, or 7–44% higher fidelity than overcommit baselines at similar throughput, plus a 19× reduction in AlgoTune evaluation error.",
-  "watch_item": "Deployment should validate whether swap and checkpoint overheads remain manageable under different workloads and hardware.",
+  "watch_item": "Deployment should validate whether swapping and checkpointing overheads remain manageable for its sandbox sizes and tool-call patterns.",
   "hashtags": [
     "#LLMAgents",
-    "#ResourceScheduling",
     "#Sandboxing",
+    "#ResourceScheduling",
     "#ScientificComputing",
-    "#SystemsResearch"
+    "#PerformanceEngineering"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "TideSand: Performance-Accurate Sandbox Multiplexing for LLM Agents",
   "paper_date": "2026-11-23",
   "paper_category": "AI Scientists and Research Agents",
-  "generated_at": "2026-11-24T23:25:49",
+  "generated_at": "2026-11-25T23:04:15",
   "generator": "openai"
 }

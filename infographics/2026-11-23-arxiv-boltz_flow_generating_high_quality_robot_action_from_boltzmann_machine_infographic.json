@@ -1,19 +1,19 @@
 {
-  "key_insight": "Boltz-Flow improves robot action generation by replacing fixed Gaussian initialization with an observation- and instruction-conditioned Boltzmann source while leaving the base vision-language-action policy unchanged.",
-  "engineering_relevance": "The approach targets richer, coordinated action initialization without redesigning the underlying flow-matching policy.",
+  "key_insight": "Boltz-Flow improves robot action generation by replacing fixed Gaussian initialization with an observation- and instruction-conditioned Boltzmann source while keeping the base vision-language-action policy unchanged.",
+  "engineering_relevance": "Engineers can improve flow-based robot policies by adapting their initialization to task context rather than redesigning the action-generation backbone.",
   "method": [
-    "Use a conditional Boltzmann machine to assign energies to binary source states.",
-    "Train with an offline-demonstration-based listwise objective that aligns energy with action quality after frozen flow integration.",
-    "Solve the resulting Ising instance, decode its solution into continuous noise, and perform one standard flow integration."
+    "Assign energies to binary source states using a conditional Boltzmann machine.",
+    "Train with an offline-demonstration-based listwise objective that aligns source energy with action quality after frozen flow integration.",
+    "At inference, solve the resulting Ising instance, decode it into continuous noise, and run one standard flow integration."
   ],
-  "evidence_signal": "Across three benchmarks, Boltz-Flow improves π₀.₅, outperforms compared policy baselines and noise-optimization methods on LIBERO and RoboTwin 2.0, and ranks second to LEAP on LIBERO-Plus.",
-  "watch_item": "Training uses a physical coherent Ising machine; hardware accessibility and Ising-solver latency warrant assessment before deployment.",
+  "evidence_signal": "Across three benchmarks, Boltz-Flow improves π₀.₅, outperforms compared policy and noise-optimization baselines on LIBERO and RoboTwin 2.0, and ranks second to LEAP on LIBERO-Plus; additional tests show gains with SmolVLA and other adaptation settings.",
+  "watch_item": "Training uses a physical coherent Ising machine, and the abstract does not quantify solver overhead or deployment latency.",
   "hashtags": [
     "#RobotLearning",
+    "#VisionLanguageAction",
     "#FlowMatching",
     "#BoltzmannMachines",
-    "#VisionLanguageAction",
-    "#IsingOptimization"
+    "#EmbodiedAI"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Boltz-Flow: Generating High-Quality Robot Action from Boltzmann Machine",
   "paper_date": "2026-11-23",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-24T23:25:55",
+  "generated_at": "2026-11-25T23:04:23",
   "generator": "openai"
 }

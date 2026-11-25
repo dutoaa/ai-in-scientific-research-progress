@@ -1,19 +1,19 @@
 {
-  "key_insight": "Solver-independent certificates provide guaranteed error bounds for PDE outputs, exposing errors that convergence studies can miss.",
-  "engineering_relevance": "An independent checker can verify third-party, LLM-written, and neural solver outputs against specified physics without trusting their implementations.",
+  "key_insight": "A small independent checker converts admissible potential and exactly charge-conserving current fields into guaranteed error bounds for PDE outputs from conventional solvers, LLM-written code, and neural surrogates.",
+  "engineering_relevance": "Solver-independent certificates can expose errors that convergence studies miss and provide per-prediction reliability bounds for automated simulation pipelines.",
   "method": [
-    "Return an admissible potential and an exactly charge-conserving current as a certificate.",
-    "Use a small independent checker to compute guaranteed error bounds.",
-    "Apply the same checker to finite-element solvers and neural predictions."
+    "Require solver outputs to include an admissible potential and an exactly charge-conserving current.",
+    "Check these fields against a written physics specification to bound error.",
+    "Evaluate conventional, deliberately buggy, LLM-written, and neural solvers on the same problem."
   ],
-  "evidence_signal": "The checker rejected or refuted all five bugs that passed grid-convergence tests, certified one LLM-written solver to 0.1%, and bounded reduced-basis neural predictions with intervals at most 0.0021% wide in-range.",
-  "watch_item": "Bounds apply to the stated model, not physical reality, and become informative only with energy-accurate outputs on a sufficiently resolving grid.",
+  "evidence_signal": "The checker rejected or refuted all five convergent buggy solvers; reduced-basis neural predictions received bounds at most 0.0021% wide in-range and 0.3–25% wide out-of-range, where 90% conformal intervals covered none of 14 tests.",
+  "watch_item": "Guarantees apply to the stated model, but informative bounds require energy-accurate outputs on a resolving grid; free-nodal neural outputs produced valid yet uninformative bounds.",
   "hashtags": [
     "#ScientificMachineLearning",
     "#PDESolvers",
     "#VerifiedComputing",
     "#NeuralSurrogates",
-    "#FiniteElements"
+    "#ErrorBounds"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Verifying the Outputs of PDE Solvers: From Finite Elements to Neural Surrogates",
   "paper_date": "2026-11-23",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-11-24T23:25:45",
+  "generated_at": "2026-11-25T23:04:10",
   "generator": "openai"
 }
