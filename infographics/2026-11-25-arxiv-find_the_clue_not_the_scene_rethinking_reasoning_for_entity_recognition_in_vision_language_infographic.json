@@ -1,13 +1,13 @@
 {
-  "key_insight": "Entity recognition—not knowledge recall—is the main bottleneck, and distinctive visual clues help VLMs identify entities better than general scene descriptions.",
-  "engineering_relevance": "Training VLMs to seek entity-specific visual clues can improve recognition and downstream reasoning without injecting new entity knowledge.",
+  "key_insight": "Entity recognition—not knowledge recall—is the main bottleneck in knowledge-based visual question answering, and distinctive visual clues help more than general scene descriptions.",
+  "engineering_relevance": "Training VLMs to seek identifying visual details can improve recognition and downstream reasoning by better using existing knowledge.",
   "method": [
-    "Identify entity-recall clues: distinctive visual details linked to an entity, such as Saint Peter’s keys.",
-    "Extend GRPO with an advantage localized to the entity-recall clue in the thinking trace.",
-    "Train on entity recognition to encourage clue-seeking behavior that transfers to other tasks."
+    "Analyze recognition versus knowledge-recall failures in thinking VLMs.",
+    "Introduce ClueRL, extending GRPO with an advantage localized to entity-recall clues in reasoning traces.",
+    "Train on entity recognition and evaluate transfer to visual question answering and multimodal reasoning."
   ],
   "evidence_signal": "Across four models on ViQuAE, misrecognition caused 76.3% of errors; ClueRL outperformed GRPO and a perception-reward baseline on three recognition benchmarks and improved Qwen3.5-4B by 4.4 and 4.0 points on MMStar’s ScienceQA and MMMU subsets.",
-  "watch_item": "The abstract does not specify how clue spans are identified or supervised, leaving the implementation cost of localized rewards unclear.",
+  "watch_item": "Implementation depends on reliably locating entity-recall clues in reasoning traces; the abstract does not specify that procedure or its cost.",
   "hashtags": [
     "#VisionLanguageModels",
     "#EntityRecognition",
@@ -21,6 +21,6 @@
   "paper_title": "Find the Clue, Not the Scene: Rethinking Reasoning for Entity Recognition in Vision-Language Models",
   "paper_date": "2026-11-25",
   "paper_category": "Literature and Knowledge Mining",
-  "generated_at": "2026-11-26T22:53:14",
+  "generated_at": "2026-11-27T22:33:39",
   "generator": "openai"
 }

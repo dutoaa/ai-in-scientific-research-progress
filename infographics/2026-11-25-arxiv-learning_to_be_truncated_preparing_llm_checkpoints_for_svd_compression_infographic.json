@@ -1,13 +1,13 @@
 {
-  "key_insight": "LLift prepares one pretrained LLM checkpoint for SVD compression at multiple ratios without separately fine-tuning each compressed model.",
-  "engineering_relevance": "A single preparation step and reusable SVD decompositions can simplify deployment across different model-compression budgets.",
+  "key_insight": "LLift prepares one pretrained checkpoint for SVD compression at multiple ratios, avoiding separate fine-tuning of each compressed model.",
+  "engineering_relevance": "A single preparation step and reusable SVD decompositions can simplify deployment across different model compression budgets.",
   "method": [
-    "Fine-tune a low-rank approximation at one compression ratio using the original model as teacher.",
+    "Fine-tune a low-rank approximation at one compression ratio using the original model as a teacher.",
     "Merge learned updates into the original weights while preserving components excluded from the training forward pass.",
-    "Decompose the prepared target matrices once and reuse their SVDs at different truncation ranks."
+    "Decompose the prepared target matrices once and truncate at different ranks."
   ],
-  "evidence_signal": "The abstract reports accuracy gains on LLaMA-7B at three compression ratios, with gains also observed across model families, sizes, and SVD compression operators.",
-  "watch_item": "The abstract does not quantify accuracy gains or preparation costs, so deployment benefits require workload-specific validation.",
+  "evidence_signal": "On LLaMA-7B, one prepared model improves accuracy across three compression ratios, with gains also reported across model families, sizes, and SVD compression operators.",
+  "watch_item": "Preparation still requires fine-tuning, and the abstract does not quantify its cost or the magnitude of accuracy gains.",
   "hashtags": [
     "#LLMCompression",
     "#SVD",
@@ -21,6 +21,6 @@
   "paper_title": "Learning to Be Truncated: Preparing LLM Checkpoints for SVD Compression",
   "paper_date": "2026-11-25",
   "paper_category": "AI scientific research",
-  "generated_at": "2026-11-26T22:53:05",
+  "generated_at": "2026-11-27T22:33:30",
   "generator": "openai"
 }

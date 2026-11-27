@@ -1,19 +1,19 @@
 {
-  "key_insight": "Hybrid quantum PINNs used 38–44% fewer parameters but ran substantially slower than a classical PINN, showing that parameter count is not a reliable proxy for computational cost.",
-  "engineering_relevance": "Benchmark wall-clock time across derivative and loss-gradient computations before choosing a quantum–classical architecture for physics-informed learning.",
+  "key_insight": "Hybrid quantum-classical PINNs had 38–44% fewer parameters but took at least 10× longer than the classical PINN at every measured stage.",
+  "engineering_relevance": "Benchmark end-to-end derivative and training costs rather than using parameter count as a proxy for computational efficiency.",
   "method": [
-    "Evaluate a 1D seawater temperature diffusion benchmark with quantum circuits simulated on a CPU.",
-    "Compare a classical PINN, four hybrid configurations, and classical controls matched to the hybrids’ classical layers.",
-    "Time four cumulative stages: forward pass, first input gradient, second input gradient, and PDE-loss parameter gradient."
+    "Tested a classical PINN, four hybrid configurations, and size-matched classical controls on 1D seawater temperature diffusion.",
+    "Timed four cumulative stages: forward pass, first and second input derivatives, and PDE-loss parameter gradients.",
+    "Varied qubit count, circuit depth, and batch size using CPU-simulated quantum circuits."
   ],
-  "evidence_signal": "Hybrids were 14–56× slower for forward passes and 10–97× slower for PDE-loss parameter gradients than the classical PINN; runtime increased approximately exponentially with qubit count over the tested range.",
-  "watch_item": "Results concern a single benchmark with CPU-simulated circuits and should not be generalized directly to quantum hardware or other execution setups.",
+  "evidence_signal": "Hybrids were 14–56× slower for forward passes and 10–97× slower for PDE-loss parameter gradients than the classical PINN, with approximately exponential runtime growth in qubit count over the tested range.",
+  "watch_item": "These results concern CPU simulation on one benchmark; they do not establish runtime performance on physical quantum hardware.",
   "hashtags": [
+    "#ScientificMachineLearning",
     "#PhysicsInformedNeuralNetworks",
     "#QuantumMachineLearning",
-    "#ScientificMachineLearning",
-    "#ComputationalCost",
-    "#PerformanceBenchmarking"
+    "#ComputationalEfficiency",
+    "#Benchmarking"
   ],
   "model": "gpt-6.1-sol",
   "service_tier": "ultrafast",
@@ -21,6 +21,6 @@
   "paper_title": "Fewer Parameters, Longer Runtimes: The Wall-Clock Cost of Hybrid Quantum Physics-Informed Neural Networks",
   "paper_date": "2026-11-25",
   "paper_category": "Scientific Machine Learning",
-  "generated_at": "2026-11-26T22:53:12",
+  "generated_at": "2026-11-27T22:33:37",
   "generator": "openai"
 }

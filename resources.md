@@ -1,6 +1,6 @@
 # AI Scientists and AI-for-Science Progress Public Resources
 
-Generated: 2026-11-26
+Generated: 2026-11-27
 Public site: https://dutoaa.github.io/ai-in-scientific-research-progress/
 
 ## 1. Do We Still Need Reinforcement Learning When We Can Read the World Model?
